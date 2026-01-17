@@ -128,37 +128,9 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
         crosses = cross_geoms.crosses
 
         if row_tour == _build_row_tour:
-            while subcrosses:
-
-                for node in cycle:
-                    cycle_to_insert = []
-                    for cross in subcrosses:
-
-                        if node in cross.corners:
-                            position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats, remove=False)
-                            # here we try to minimize "bad traveling"
-                            if cycle_to_insert:
-                                if position == "below" and not flipped or position == "above" and flipped:
-                                    node = insertion_node(crosses, node, cycle, cycle_to_insert, position, True)
-                                else:
-                                    node = insertion_node(crosses, node, cycle, cycle_to_insert, position, False)
-                                position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats, remove=True)
-                                cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-                                break
-
-                    if cycle_to_insert:
-                        break
+            cycle = _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped)
         else:
-            # for double crosses we can't reduce amount of bad travelinng
-            while subcrosses:
-                for node in cycle:
-                    cycle_to_insert = []
-                    for cross in subcrosses:
-                        if node in cross.corners:
-                            position, cycle_to_insert = row_tour(subcrosses, node, nb_repeats, remove=False)
-                            cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-                    if cycle_to_insert:
-                        break
+            cycle = _build_double_cycles(subcrosses, cycle, nb_repeats)
 
         cycle = travel + cycle
         travel = []
@@ -168,53 +140,77 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
     return eulerian_cycles
 
 
-def insertion_node(crosses, node, cycle, cycle_to_insert, position, favor_left):
+def _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped):
+    while subcrosses:
+        for node in cycle:
+            cycle_to_insert = []
 
+            for cross in subcrosses:
+                if node in cross.corners:
+                    position, cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats, remove=False)
+                    # here we try to minimize "bad traveling"
+                    if cycle_to_insert:
+                        if position == "below" and not flipped or position == "above" and flipped:
+                            node = insertion_node(crosses, node, cycle, cycle_to_insert, position, True)
+                        else:
+                            node = insertion_node(crosses, node, cycle, cycle_to_insert, position, False)
+                        position, cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats, remove=True)
+                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+                        break
+
+            if cycle_to_insert:
+                break
+    return cycle
+
+
+def _build_double_cycles(subcrosses, cycle, nb_repeats):
+    # for double crosses we can't reduce amount of bad travelinng
+    while subcrosses:
+        for node in cycle:
+            cycle_to_insert = []
+            for cross in subcrosses:
+                if node in cross.corners:
+                    position, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
+                    cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+            if cycle_to_insert:
+                break
+    return cycle
+
+
+def insertion_node(crosses, node, cycle, cycle_to_insert, position, favor_left):
+    if position == "below":
+        previous_node = insert_node_at_position(crosses, node, cycle, cycle_to_insert, favor_left, "bottom_right", "bottom_left")
+    else:
+        previous_node = insert_node_at_position(crosses, node, cycle, cycle_to_insert, favor_left, "top_right", "top_left")
+
+    return previous_node
+
+
+def insert_node_at_position(crosses, node, cycle, cycle_to_insert, favor_left, first_position, second_position):
     current_node = node
     next_node = None
     previous_node = current_node
 
-    if position == "below":
+    if favor_left:
+        cross = cross_at_position(crosses, current_node, first_position)
+        if cross:
+            next_node = cross.get(second_position)
+    else:
+        cross = cross_at_position(crosses, current_node, second_position)
+        if cross:
+            next_node = cross.get(first_position)
+    while cross and next_node in cycle and next_node in cycle_to_insert:
+        previous_node = current_node
+        current_node = next_node
         if favor_left:
-            cross = cross_at_position(crosses, current_node, "bottom_right")
+            cross = cross_at_position(crosses, current_node, first_position)
             if cross:
-                next_node = cross.bottom_left
+                next_node = cross.get(second_position)
         else:
-            cross = cross_at_position(crosses, current_node, "bottom_left")
+            cross = cross_at_position(crosses, current_node, second_position)
             if cross:
-                next_node = cross.bottom_right
-        while cross and next_node in cycle and next_node in cycle_to_insert:
-            previous_node = current_node
-            current_node = next_node
-            if favor_left:
-                cross = cross_at_position(crosses, current_node, "bottom_right")
-                if cross:
-                    next_node = cross.bottom_left
-            else:
-                cross = cross_at_position(crosses, current_node, "bottom_left")
-                if cross:
-                    next_node = cross.bottom_right
+                next_node = cross.get(first_position)
 
-    elif position == "above":
-        if favor_left:
-            cross = cross_at_position(crosses, current_node, "top_right")
-            if cross:
-                next_node = cross.top_left
-        else:
-            cross = cross_at_position(crosses, current_node, "top_left")
-            if cross:
-                next_node = cross.top_right
-        while cross and next_node in cycle and next_node in cycle_to_insert:
-            previous_node = current_node
-            current_node = next_node
-            if favor_left:
-                cross = cross_at_position(crosses, current_node, "top_right")
-                if cross:
-                    next_node = cross.top_left
-            else:
-                cross = cross_at_position(crosses, current_node, "top_left")
-                if cross:
-                    next_node = cross.top_right
     return previous_node
 
 
@@ -246,11 +242,13 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
 
 def _build_row_tour(subcrosses, starting_corner, nb_repeats, remove):
     position = "no"
-    cycle = _build_row_tour_above(subcrosses, starting_corner, nb_repeats, remove)
+    cross_order = ("top_right", "top_left", "bottom_right", "bottom_left")
+    cycle = _build_side_row_tour(subcrosses, starting_corner, nb_repeats, remove, cross_order)
     if cycle:
         position = "above"
     if not cycle:
-        cycle = _build_row_tour_below(subcrosses, starting_corner, nb_repeats, remove)
+        cross_order = ("bottom_left", "bottom_right", "top_left", "top_right")
+        cycle = _build_side_row_tour(subcrosses, starting_corner, nb_repeats, remove, cross_order)
         if cycle:
             position = "below"
     return position, cycle
@@ -300,137 +298,50 @@ def cross_at_position(crosses, node, position):
 
 def _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats):
     tour = []
-    tour += construct_left_side_below(subcrosses, starting_corner, nb_repeats)
-    tour += construct_right_side_below(subcrosses, starting_corner, nb_repeats)
+
+    cross_order = ("bottom_right", "top_left", "top_right", "bottom_left")
+    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
+
+    cross_order = ("bottom_left", "top_right", "top_left", "bottom_right")
+    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
+
     return tour
-
-
-def construct_left_side_below(subcrosses, starting_corner, nb_repeats):
-    tour = [starting_corner]
-    covered_crosses = []
-    current_node = starting_corner
-    while cross_at_position(subcrosses, current_node, "bottom_right"):
-        # reach top leftmost corner
-        cross = cross_at_position(subcrosses, current_node, "bottom_right")
-        # first diagonal
-        tour.append(cross.top_left)
-        for i in range(nb_repeats):
-            tour.append(current_node)
-            tour.append(cross.top_left)
-        tour.append(cross.center_point)
-        tour.append(cross.top_right)
-        # second diagonal
-        tour.append(cross.bottom_left)
-        for i in range(nb_repeats):
-            tour.append(cross.top_right)
-            tour.append(cross.bottom_left)
-        current_node = cross.bottom_left
-    while current_node != starting_corner:
-        # go back to starting_corner  finishing the double crosses
-        cross = cross_at_position(subcrosses, current_node, "bottom_left")
-        tour.append(cross.center_point)
-        tour.append(cross.middle_left)
-        # horizontal
-        tour.append(cross.middle_right)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_left)
-            tour.append(cross.middle_right)
-        tour.append(cross.center_point)
-        tour.append(cross.middle_top)
-        # vertical
-        tour.append(cross.middle_bottom)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_top)
-            tour.append(cross.middle_bottom)
-        tour.append(cross.center_point)
-        tour.append(cross.bottom_right)
-        current_node = cross.bottom_right
-        covered_crosses.append(cross)
-    if len(tour) > 1:
-        remove_crosses(subcrosses, covered_crosses)
-        return tour
-    else:
-        return []
-
-
-def construct_right_side_below(subcrosses, starting_corner, nb_repeats):
-    tour = [starting_corner]
-    covered_crosses = []
-    current_node = starting_corner
-
-    while cross_at_position(subcrosses, current_node, "bottom_left"):
-        cross = cross_at_position(subcrosses, current_node, "bottom_left")
-        # first diagonal
-        tour.append(cross.top_right)
-        for i in range(nb_repeats):
-            tour.append(current_node)
-            tour.append(cross.top_right)
-        tour.append(cross.center_point)
-        tour.append(cross.top_left)
-        # second diagonal
-        tour.append(cross.bottom_right)
-        for i in range(nb_repeats):
-            tour.append(cross.top_left)
-            tour.append(cross.bottom_right)
-        current_node = cross.bottom_right
-
-    while current_node != starting_corner:
-        cross = cross_at_position(subcrosses, current_node, "bottom_right")
-        tour.append(cross.center_point)
-        tour.append(cross.middle_left)
-        # horizontal
-        tour.append(cross.middle_right)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_left)
-            tour.append(cross.middle_right)
-        tour.append(cross.center_point)
-        tour.append(cross.middle_top)
-        # vertical
-        tour.append(cross.middle_bottom)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_top)
-            tour.append(cross.middle_bottom)
-        tour.append(cross.center_point)
-        tour.append(cross.bottom_left)
-        current_node = cross.bottom_left
-        covered_crosses.append(cross)
-    if len(tour) > 1:
-        remove_crosses(subcrosses, covered_crosses)
-        return tour
-    else:
-        return []
 
 
 def _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats):
     tour = []
-    tour += construct_left_side_above(subcrosses, starting_corner, nb_repeats)
-    tour += construct_right_side_above(subcrosses, starting_corner, nb_repeats)
+    cross_order = ("top_right", "bottom_left", "bottom_right", "top_left")
+    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
+
+    cross_order = ("top_left", "bottom_right", "bottom_left", "top_right")
+    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
     return tour
 
 
-def construct_left_side_above(subcrosses, starting_corner, nb_repeats):
+def construct_side(subcrosses, starting_corner, nb_repeats, cross_order):
+    pos1, pos2, pos3, pos4 = cross_order
+
     tour = [starting_corner]
     covered_crosses = []
     current_node = starting_corner
-
-    while cross_at_position(subcrosses, current_node, "top_right"):
-        cross = cross_at_position(subcrosses, current_node, "top_right")
+    while cross_at_position(subcrosses, current_node, pos1):
+        cross = cross_at_position(subcrosses, current_node, pos1)
         # first diagonal
-        tour.append(cross.bottom_left)
+        tour.append(cross.get(pos2))
         for i in range(nb_repeats):
             tour.append(current_node)
-            tour.append(cross.bottom_left)
+            tour.append(cross.get(pos2))
         tour.append(cross.center_point)
-        tour.append(cross.bottom_right)
+        tour.append(cross.get(pos3))
         # second diagonal
-        tour.append(cross.top_left)
+        tour.append(cross.get(pos4))
         for i in range(nb_repeats):
-            tour.append(cross.bottom_right)
-            tour.append(cross.top_left)
-        current_node = cross.top_left
-
+            tour.append(cross.get(pos3))
+            tour.append(cross.get(pos4))
+        current_node = cross.get(pos4)
     while current_node != starting_corner:
-        cross = cross_at_position(subcrosses, current_node, "top_left")
+        # go back to starting_corner finishing the double crosses
+        cross = cross_at_position(subcrosses, current_node, pos4)
         tour.append(cross.center_point)
         tour.append(cross.middle_left)
         # horizontal
@@ -446,10 +357,9 @@ def construct_left_side_above(subcrosses, starting_corner, nb_repeats):
             tour.append(cross.middle_top)
             tour.append(cross.middle_bottom)
         tour.append(cross.center_point)
-        tour.append(cross.top_right)
-        current_node = cross.top_right
+        tour.append(cross.get(pos1))
+        current_node = cross.get(pos1)
         covered_crosses.append(cross)
-
     if len(tour) > 1:
         remove_crosses(subcrosses, covered_crosses)
         return tour
@@ -457,90 +367,45 @@ def construct_left_side_above(subcrosses, starting_corner, nb_repeats):
         return []
 
 
-def construct_right_side_above(subcrosses, starting_corner, nb_repeats):
-    tour = [starting_corner]
-    covered_crosses = []
-    current_node = starting_corner
+def _build_side_row_tour(crosses, node, nb_repeats, remove, cross_order):
+    pos1, pos2, pos3, pos4 = cross_order
 
-    while cross_at_position(subcrosses, current_node, "top_left"):
-        cross = cross_at_position(subcrosses, current_node, "top_left")
-        # first diagonal
-        tour.append(cross.bottom_right)
-        for i in range(nb_repeats):
-            tour.append(current_node)
-            tour.append(cross.bottom_right)
-        tour.append(cross.center_point)
-        tour.append(cross.bottom_left)
-        # second diagonal
-        tour.append(cross.top_right)
-        for i in range(nb_repeats):
-            tour.append(cross.bottom_left)
-            tour.append(cross.top_right)
-        current_node = cross.top_right
-
-    while current_node != starting_corner:
-        cross = cross_at_position(subcrosses, current_node, "top_right")
-        tour.append(cross.center_point)
-        tour.append(cross.middle_left)
-        # horizontal
-        tour.append(cross.middle_right)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_left)
-            tour.append(cross.middle_right)
-        tour.append(cross.center_point)
-        tour.append(cross.middle_top)
-        # vertical
-        tour.append(cross.middle_bottom)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_top)
-            tour.append(cross.middle_bottom)
-        tour.append(cross.center_point)
-        tour.append(cross.top_left)
-        current_node = cross.top_left
-        covered_crosses.append(cross)
-
-    if len(tour) > 1:
-        remove_crosses(subcrosses, covered_crosses)
-        return tour
-    else:
-        return []
-
-
-def _build_row_tour_above(crosses, node, nb_repeats, remove):
-    """  build a tour  of the row of crosses (among param crosses) above the given node
-    ensuring that no cross is flipped,
-    adding diagonals as needed depending on the number of threads
+    """build a tour of the row of crosses (among param crosses) above or below the given node
+       ensuring that no cross is flipped,
+       adding diagonals as needed depending on the number of threads
+       remove the covered crosses from the crosses
+       return empty list if no cross below
     """
     tour = [node]
     covered_crosses = []
     current_node = node
-    while cross_at_position(crosses, current_node, "top_right"):
-        tour.append(cross_at_position(crosses, current_node, "top_right").center_point)
-        tour.append(cross_at_position(crosses, current_node, "top_right").top_left)
-        current_node = cross_at_position(crosses, current_node, "top_right").top_left
+    while cross_at_position(crosses, current_node, pos1):
+        tour.append(cross_at_position(crosses, current_node, pos1).center_point)
+        tour.append(cross_at_position(crosses, current_node, pos1).get(pos2))
+        current_node = cross_at_position(crosses, current_node, pos1).get(pos2)
         check_stop_flag()
-    while cross_at_position(crosses, current_node, "top_left"):
+    while cross_at_position(crosses, current_node, pos2):
         # add first diagonal of a cross
-        tour.append(cross_at_position(crosses, current_node, "top_left").bottom_right)
+        tour.append(cross_at_position(crosses, current_node, pos2).get(pos3))
         for i in range(nb_repeats):
             tour.append(current_node)
-            tour.append(cross_at_position(crosses, current_node, "top_left").bottom_right)
-        tour.append(cross_at_position(crosses, current_node, "top_left").center_point)
-        tour.append(cross_at_position(crosses, current_node, "top_left").bottom_left)
-        # add second diagonal of the same  cross
-        tour.append(cross_at_position(crosses, current_node, "top_left").top_right)
+            tour.append(cross_at_position(crosses, current_node, pos2).get(pos3))
+        tour.append(cross_at_position(crosses, current_node, pos2).center_point)
+        tour.append(cross_at_position(crosses, current_node, pos2).get(pos4))
+        # add second diagonal of the same cross
+        tour.append(cross_at_position(crosses, current_node, pos2).get(pos1))
         for i in range(nb_repeats):
-            tour.append(cross_at_position(crosses, current_node, "top_left").bottom_left)
-            tour.append(cross_at_position(crosses, current_node, "top_left").top_right)
-        covered_crosses.append(cross_at_position(crosses, current_node, "top_left"))
-        current_node = cross_at_position(crosses, current_node, "top_left").top_right
+            tour.append(cross_at_position(crosses, current_node, pos2).get(pos4))
+            tour.append(cross_at_position(crosses, current_node, pos2).get(pos1))
+        covered_crosses.append(cross_at_position(crosses, current_node, pos2))
+        current_node = cross_at_position(crosses, current_node, pos2).get(pos1)
         check_stop_flag()
     while current_node != node:
         # This part of the tour is "bad traveling", going through center of crosses
         # after stitching last diagonal
-        tour.append(cross_at_position(crosses, current_node, "top_right").center_point)
-        tour.append(cross_at_position(crosses, current_node, "top_right").top_left)
-        current_node = cross_at_position(crosses, current_node, "top_right").top_left
+        tour.append(cross_at_position(crosses, current_node, pos1).center_point)
+        tour.append(cross_at_position(crosses, current_node, pos1).get(pos2))
+        current_node = cross_at_position(crosses, current_node, pos1).get(pos2)
         check_stop_flag()
     if len(tour) > 1 and remove:
         remove_crosses(crosses, covered_crosses)
@@ -553,54 +418,6 @@ def _build_row_tour_above(crosses, node, nb_repeats, remove):
 def remove_crosses(crosses, covered_crosses):
     for cross in covered_crosses:
         crosses.remove(cross)
-
-
-def _build_row_tour_below(crosses, node, nb_repeats, remove):
-    """ build a tour that of the row of crosses below the given node
-    ensuring that no cross is flipped
-    adding diagonals as needed depending on the number of threads
-    remove the covered crosses from the crosses
-    return empty list if no cross below """
-
-    tour = [node]
-    covered_crosses = []
-    current_node = node
-
-    while cross_at_position(crosses, current_node, "bottom_left"):
-        tour.append(cross_at_position(crosses, current_node, "bottom_left").center_point)
-        tour.append(cross_at_position(crosses, current_node, "bottom_left").bottom_right)
-        current_node = cross_at_position(crosses, current_node, "bottom_left").bottom_right
-        check_stop_flag()
-
-    while cross_at_position(crosses, current_node, "bottom_right"):
-        # add first diagonal of a cross
-        tour.append(cross_at_position(crosses, current_node, "bottom_right").top_left)
-        for i in range(nb_repeats):
-            tour.append(current_node)
-            tour.append(cross_at_position(crosses, current_node, "bottom_right").top_left)
-        tour.append(cross_at_position(crosses, current_node, "bottom_right").center_point)
-        tour.append(cross_at_position(crosses, current_node, "bottom_right").top_right)
-        tour.append(cross_at_position(crosses, current_node, "bottom_right").bottom_left)
-        # add second diagonal of the same  cross
-        covered_crosses.append(cross_at_position(crosses, current_node, "bottom_right"))
-        for i in range(nb_repeats):
-            tour.append(cross_at_position(crosses, current_node, "bottom_right").top_right)
-            tour.append(cross_at_position(crosses, current_node, "bottom_right").bottom_left)
-        current_node = cross_at_position(crosses, current_node, "bottom_right").bottom_left
-        check_stop_flag()
-
-    while current_node != node:
-        tour.append(cross_at_position(crosses, current_node, "bottom_left").center_point)
-        tour.append(cross_at_position(crosses, current_node, "bottom_left").bottom_right)
-        current_node = cross_at_position(crosses, current_node, "bottom_left").bottom_right
-        check_stop_flag()
-
-    if len(tour) > 1 and remove:
-        remove_crosses(crosses, covered_crosses)
-    if len(tour) > 1:
-        return tour
-    else:
-        return []
 
 
 def rindex(lst, value):
