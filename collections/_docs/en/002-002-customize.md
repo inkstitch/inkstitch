@@ -11,8 +11,8 @@ You can work faster in Ink/Stitch by assigning shortcuts. These shortcuts reduce
 
 The list below describes the shortcuts included in the downloadable file. 
 
-> **Note**  
-> Several shortcuts replace Inkscape defaults. Alternative menu paths or toolbar options remain available for those actions.
+Several shortcuts replace Inkscape defaults. Alternative menu paths or toolbar options remain available for those actions.
+{: .notice--warning }
 
 | Shortcut keys | Effect | Replaces |
 |-------------|--------|----------|
@@ -36,11 +36,7 @@ The list below describes the shortcuts included in the downloadable file.
 
 The Ink/Stitch [simulator](/docs/visualize/#simulation-shortcut-keys) also provides shortcut keys.
 
-\* **Stack Up** and **Stack Down** give precise control over stitch order. This works well with the Objects panel (`Objects > Objects ...`). The stacking order determines the sequence in which items are stitched, starting at the bottom and moving upward.
-
-\*\* For satin and running stitch objects, this changes stitch direction. This works best when **Show path direction on outlines** is selected under `Edit > Preferences > Tools > Node`. When one vertex is selected in the node editor and `Ctrl + R` is pressed, Inkscape reverses a single path within an object. This helps align both rails of a satin so they point in the same direction.
-
-
+\* **Stack Up** and **Stack Down** give precise control over stitch order. This works well with the Objects panel (`Objects > Objects ...`). The stacking order determines the sequence in which items are stitched, starting at the bottom and moving upward.<br><br>** For satin and running stitch objects, this changes stitch direction. This works best when **Show path direction on outlines** is selected under `Edit > Preferences > Tools > Node`. When one vertex is selected in the node edit mode and `Ctrl+R` is pressed, Inkscape reverses a single subpath within an object. This helps align both rails of a satin so they point in the same direction.
 {: .notice--info }
 {: style="font-size: 70%" }
 

@@ -24,6 +24,7 @@ Mehrfachgeradstich oder "Bean stitch" beschreibt eine Wiederholung von Geradstic
    * Die Eingabe mehrerer durch ein Leerzeichen getrennte Werte erzeugt ein Muster (z.B ergibt der Wert `1 0` einen Wechsel von einfachen Geradstichen und Dreifachstichen: `≡-≡-≡`)
 
 ## Parameter
+
 {% include upcoming_release_params.html %}
 
 Einstellung|Beschreibung

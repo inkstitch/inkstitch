@@ -12,7 +12,7 @@ Try the following steps to learn the basic functionality of Ink/Stitch.
 ## Step 1 - Draw an Object
 
 1. Create an object, for example a circle, and confirm it has a fill color.
-2. If you do not know how to create and object or what 'fill' means, please review the [Basic Inkscape Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) 
+2. If you do not know how to create an object or what 'fill' means, please review the [Basic Inkscape Tutorial](https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html) 
 
 ![Circle with fill color](/assets/images/docs/en/basic-usage-circle-fill-color.png)
 

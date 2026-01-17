@@ -18,7 +18,7 @@ user-level:
 
 ![Preview](/assets/images/docs/zigzagmeander_grumpycat.jpg)
 
-Le corps du chat est un remplissage en méandre avec le point de zigzag activé
+Le corps du chat est un remplissage en méandre avec le point de zigzag activé. Variegated thread was used to create the color effect.
 
 ![SVG](/assets/images/tutorials/samples/grumpycat.svg)
 
