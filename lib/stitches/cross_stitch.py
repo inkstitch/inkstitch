@@ -40,9 +40,10 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number)
     cross_geoms = CrossGeometries(fill, shape, method)
     subgraphs = _build_connect_subgraphs(cross_geoms)
     if method != "double_cross":
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour)
+        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour,flipped = False)
 
         if "flipped" in method:
+            eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour,flipped = True)
             for i in range(len(eulerian_cycles)):
                 eulerian_cycles[i] = eulerian_cycles[i][::-1]
     else:
@@ -90,7 +91,7 @@ def _build_connect_subgraphs(cross_geoms):
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 
-def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, row_tour):
+def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, row_tour, flipped):
     """ We need to construct an eulerian cycle for each subgraph, but we need to make sure
     that no cross is flipped
     So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
@@ -138,7 +139,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
                         # sys.stderr.write(f"found inserable cycle at {position=}")
                         if cycle_to_insert:
                             # sys.stderr.write(f"{position =}  tentatively{cycle_to_insert =}\n")
-                            if position == "below":
+                            if position == "below" and not flipped or position =="above" and flipped:
                                 node = insertion_node(crosses, node, cycle, cycle_to_insert, position, True)
                             else:
                                 node = insertion_node(crosses, node, cycle, cycle_to_insert, position, False)
