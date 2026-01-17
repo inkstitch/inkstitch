@@ -120,7 +120,9 @@ class FontVariant(object):
             if element.tag == SVG_GROUP_TAG:
                 continue
             if element.tag == SVG_PATH_TAG:
-                path = element.path.transform(transform)
+                # It is possible, that we get paths with partly relative and aboslute values
+                # Before we apply any transforms, we need to ensure, that all subpaths are absolute, otherwise we will face chaos
+                path = element.path.to_absolute().transform(transform)
                 element.set_path(path)
                 element.attrib.pop("transform", None)
             elif element.tag == SVG_USE_TAG:
@@ -134,7 +136,7 @@ class FontVariant(object):
         for clip, transform in self.clip_transforms.items():
             for element in clip.iterdescendants():
                 if element.tag == SVG_PATH_TAG:
-                    path = element.path.transform(transform)
+                    path = element.path.to_absolute().transform(transform)
                     element.set_path(path)
                     element.attrib.pop("transform", None)
 
