@@ -353,7 +353,7 @@ jobs:
           name: inkstitch-windows64
           path: signed-artifacts
   macx86:
-    runs-on: macos-14
+    runs-on: macos-15-intel
     steps:
       - uses: actions/checkout@v6
         with:
@@ -418,7 +418,7 @@ jobs:
           name: inkstitch-mac-x86
           path: artifacts
   macarm64:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - uses: actions/checkout@v6
         with:
