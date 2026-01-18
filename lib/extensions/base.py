@@ -22,10 +22,31 @@ class InkstitchExtension(inkex.EffectExtension):
     # only be available in development installations.
     DEVELOPMENT_ONLY = False
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._skip_output = False
+
     def load(self, *args, **kwargs):
         document = super().load(*args, **kwargs)
         update_inkstitch_document(document)
         return document
+
+    def write_file(self, filename):
+        """Override write_file to skip output if _skip_output is set.
+        
+        This provides a safe way to prevent SVG output without calling sys.exit(),
+        which can cause Inkscape to crash during document cleanup.
+        """
+        if not self._skip_output:
+            super().write_file(filename)
+
+    def skip_output(self):
+        """Mark that the extension output should not be written to the SVG file.
+        
+        This is a safe alternative to sys.exit(0) that allows Inkscape to properly
+        clean up the document without crashing.
+        """
+        self._skip_output = True
 
     @classmethod
     def name(cls):

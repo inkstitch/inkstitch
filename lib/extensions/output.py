@@ -49,7 +49,8 @@ class Output(InkstitchExtension):
 
     def effect(self):
         if not self.get_elements():
-            sys.exit(0)
+            self.skip_output()
+            return
 
         self.metadata = self.get_inkstitch_metadata()
         collapse_len = self.metadata['collapse_len_mm']
@@ -81,4 +82,4 @@ class Output(InkstitchExtension):
         os.remove(temp_file.name)
 
         # don't let inkex output the SVG!
-        sys.exit(0)
+        self.skip_output()

@@ -99,7 +99,7 @@ class Zip(InkstitchExtension):
         os.rmdir(path)
 
         # don't let inkex output the SVG!
-        sys.exit(0)
+        self.skip_output()
 
     def _get_file_name(self):
         if self.options.custom_file_name:

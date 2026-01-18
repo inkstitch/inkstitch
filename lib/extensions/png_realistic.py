@@ -35,4 +35,4 @@ class PngRealistic(InkstitchExtension):
         write_png_output(self.svg, layer, self.options.dpi)
 
         # don't let inkex output the SVG!
-        sys.exit(0)
+        self.skip_output()

@@ -57,4 +57,4 @@ class SatinMulticolor(InkstitchExtension):
         if self.cancelled:
             # This prevents the superclass from outputting the SVG, because we
             # may have modified the DOM.
-            sys.exit(0)
+            self.skip_output()

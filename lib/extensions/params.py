@@ -700,7 +700,6 @@ class SettingsPanel(wx.Panel):
         self.simulator.stop()
         wx.CallAfter(self.GetTopLevelParent().cancel)
         # Do not apply changes
-        sys.exit(0)
 
     def __do_layout(self):
         # begin wxGlade: MyFrame.__do_layout
@@ -883,6 +882,6 @@ class Params(InkstitchExtension):
             if self.cancelled:
                 # This prevents the superclass from outputting the SVG, because we
                 # may have modified the DOM.
-                sys.exit(0)
+                self.skip_output()
         except NoValidObjects:
             self.no_elements_error()

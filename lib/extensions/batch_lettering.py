@@ -88,7 +88,7 @@ class BatchLettering(InkstitchExtension):
         self.generate_output_files(texts, file_formats)
 
         # don't let inkex output the SVG!
-        sys.exit(0)
+        self.skip_output()
 
     def setup_trim(self):
         self.trim = 0

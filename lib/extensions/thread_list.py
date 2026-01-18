@@ -33,7 +33,7 @@ class ThreadList(InkstitchExtension):
         sys.stdout.write(thread_list)
 
         # don't let inkex output the SVG!
-        sys.exit(0)
+        self.skip_output()
 
 
 def get_threadlist(stitch_plan, design_name):

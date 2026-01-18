@@ -102,7 +102,8 @@ class SelectElements(InkstitchExtension):
             errormsg(_("Could not detect python path. "
                        "Please insert python path manually as described in the help tab "
                        "of the select elements dialog."))
-            sys.exit(0)
+            self.skip_output()
+            return None, None
 
         return py_path, file_path
 

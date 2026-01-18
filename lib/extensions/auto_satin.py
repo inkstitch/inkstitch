@@ -34,7 +34,8 @@ class AutoSatin(CommandsExtension):
             this_command = satin.get_command(command_type)
             if command is not None and this_command:
                 inkex.errormsg(_("Please ensure that at most one start and end command is attached to the selected satin columns."))
-                sys.exit(0)
+                self.skip_output()
+                return None
             elif this_command:
                 command = this_command
 
