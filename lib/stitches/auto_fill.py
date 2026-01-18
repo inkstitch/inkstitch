@@ -468,12 +468,12 @@ def get_segments(graph):
     return segments
 
 
-def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges):
+def process_travel_edges(graph, fill_stitch_graph, shape, travel_edges, boundary_weight=3):
     """Weight the interior edges and pre-calculate intersection with fill stitch rows."""
 
     # Set the weight equal to 3x the edge length, to encourage travel()
     # to avoid them.
-    weight_edges_by_length(graph, 3)
+    weight_edges_by_length(graph, boundary_weight)
 
     segments = get_segments(fill_stitch_graph)
 
