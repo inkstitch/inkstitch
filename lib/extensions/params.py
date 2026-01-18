@@ -505,6 +505,8 @@ class ParamsTab(ScrolledPanel):
                 input = wx.TextCtrl(self, wx.ID_ANY, value=str(value))
                 input.Bind(wx.EVT_TEXT, self.changed)
 
+            input.SetToolTip(param.tooltip)
+
             self.param_name_to_input[param.name] = input
 
             if param.type == 'random_seed':
