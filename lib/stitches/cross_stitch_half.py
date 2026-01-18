@@ -20,18 +20,18 @@ from .utils.cross_stitch import CrossGeometries
 
 
 def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_repeats, original_shape=None):
-    '''Cross stitch fill type
+    ''' Half crosses in machine embroidery have unavoidably strongly visible travel stitches along the outline.
+        They behave much like an auto_fill in 45 degree angle. They only differ from auto-fill in:
+        - their pixelated outline
+        - thread count (bean stitch repeats)
+          bean stitch repeats will always return an odd thread count, opposed to the other cross stitch methods
 
-       Cross stitches are organized in a pixelated pattern. Each "cross pixel" (box) has two diagonals.
-       Traditionally cross stitches are strictly organized and each cross follows the same pattern.
-       Meaning the layering of the diagonals can't be switched during the stitch out.
-       For example all crosses start with '\' as a bottom layer and end with '/' as the top layer.
-
-        fill:           the fill element
-        shape:          shape as MultiPolygon
-        starting_point: defines where to start
-        ending_point:   defines where to end
-        original_shape: helps to define a consistent grid offset when the shape had to be split up into multiple shapes
+        fill:                   the fill element
+        shape:                  shape as MultiPolygon
+        starting_point:         defines where to start
+        ending_point:           defines where to end
+        bean_stitch_repeats:    defines the thread count (odd number)
+        original_shape:         helps to define a consistent grid offset when the shape had to be split up into multiple shapes
     '''
 
     max_stitch_length = fill.max_cross_stitch_length
@@ -134,7 +134,6 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_le
             stitches.extend(row_stitches)
 
         else:
-            # stitches.extend(travel(shape, travel_graph, edge, max_stitch_length))
             stitches.extend(travel(shape, travel_graph, edge, [max_stitch_length], 0.2, False, False))
 
     return stitches

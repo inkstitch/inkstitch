@@ -757,6 +757,19 @@ class FillStitch(EmbroideryElement):
         return self.get_param('cross_stitch_method', 'simple cross')
 
     @property
+    @param('cross_thread_count',
+           _('Thread count'),
+           tooltip=_('Defines the thread count for each stitch.\n'
+                     'Thread count must be an even number.\n'
+                     'Half crosses are stitched with an odd thread count.'),
+           type='int',
+           select_items=[('fill_method', 'cross_stitch')],
+           default=4,
+           sort_index=11)
+    def cross_thread_count(self):
+        return self.get_int_param("cross_thread_count", 4)
+
+    @property
     @param(
         'pattern_size_mm',
         _('Pattern size'),
@@ -766,7 +779,7 @@ class FillStitch(EmbroideryElement):
         unit=_('mm (x y)'),
         type='float',
         default=3,
-        sort_index=10
+        sort_index=11
     )
     @cache
     def pattern_size(self):
@@ -784,7 +797,7 @@ class FillStitch(EmbroideryElement):
         select_items=[('fill_method', 'cross_stitch')],
         type='boolean',
         default=True,
-        sort_index=11
+        sort_index=12
     )
     def canvas_grid_origin(self):
         return self.get_boolean_param('canvas_grid_origin', True)
@@ -799,7 +812,7 @@ class FillStitch(EmbroideryElement):
         unit=_('mm (x y)'),
         type='float',
         default=0,
-        sort_index=12
+        sort_index=13
     )
     @cache
     def cross_offset(self):
@@ -814,7 +827,7 @@ class FillStitch(EmbroideryElement):
         default="50",
         unit='%',
         select_items=[('fill_method', 'cross_stitch')],
-        sort_index=13
+        sort_index=14
     )
     def fill_coverage(self):
         return max(1, self.get_int_param("fill_coverage", 50))
@@ -825,25 +838,12 @@ class FillStitch(EmbroideryElement):
            tooltip=_(
                'The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row.'),
            unit='mm',
-           sort_index=22,
+           sort_index=23,
            type='float',
            select_items=[('fill_method', 'cross_stitch')],
            default=11.0)
     def max_cross_stitch_length(self):
         return max(self.get_float_param("max_cross_stitch_length_mm", 11.0), 0.1 * PIXELS_PER_MM)
-
-    @property
-    @param('cross_thread_count',
-           _('Thread count'),
-           tooltip=_('Defines the thread count for each stitch.\n'
-                     'Thread count must be an even number.\n'
-                     'Half crosses are stitched with an odd thread count.'),
-           type='int',
-           select_items=[('fill_method', 'cross_stitch')],
-           default=4,
-           sort_index=23)
-    def cross_thread_count(self):
-        return self.get_int_param("cross_thread_count", 4)
 
     @property
     @cache

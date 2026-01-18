@@ -12,16 +12,35 @@ from shapely.ops import nearest_points
 from ..stitch_plan import Stitch
 from ..utils.threading import check_stop_flag
 from .utils.cross_stitch import CrossGeometries
-from math import floor
 from .cross_stitch_half import half_cross_stitch
 
 
 def cross_stitch(fill, shape, starting_point, ending_point):
+    ''' Cross stitch fill
+
+        Cross stitches are organized in a pixelated pattern. Each "cross pixel" has two diagonals.
+        Traditionally cross stitches are strictly organized and each cross follows the same pattern.
+        Meaning the layering of the diagonals can't be switched during the stitch out.
+        For example all crosses start with '\' as a bottom layer and end with '/' as the top layer.
+
+        In machine embroidery we do not have the freedom a hand embroiderer has.
+        In order to jump from one stitch to an other, we will need to stitch at the crosses centers,
+        but we try to hide those center stitches whenever possible.
+
+        In Ink/Stitch cross stitches come in four flavours.
+        - simple cross (two diagonals) and it's reverse (flipped) variant
+        - upright cross (horizontal, vertical) and it's reverse (flipped) variant
+        - half stitches (only one diagonal) and it's reverse (flipped) variant)
+        - double crosses (combined simple and upright cross)
+    '''
     # thread count is strictly positive
     thread_count = abs(fill.cross_thread_count)
-    if fill.cross_stitch_method in ['half_cross', 'half_cross_flipped']:
-        # half stitches are more like a auto-fill stitch type, except for their blockish look
-        thread_count = floor(thread_count / 2)
+    if fill.cross_stitch_method.startswith('half'):
+        # half stitches only differ from auto-fill in
+        # - their pixelated outline
+        # - thread count option (bean stitch repeats)
+        #   bean stitch repeats will always return an odd thread count, opposed to the other cross stitch methods
+        thread_count = thread_count // 2
         return half_cross_stitch(fill, shape, starting_point, ending_point, thread_count)
     # cross stitch method only takes even thread counts
     # it starts and ends at the same position
@@ -34,6 +53,19 @@ def cross_stitch(fill, shape, starting_point, ending_point):
 
 
 def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number):
+    """ Cross stitch algorithm for all cross stitch types except for half crosses and their reverse version
+
+        Steps:
+        - Determine cross geometries from the given fill shape
+        - Get connected subgraphs (cross geometries may split the shape in narrow areas)
+        - Construct an eulerian cycle for each subgraph, by ensuring that no cross is flipped
+
+        fill:                   the fill element
+        shape:                  shape as MultiPolygon
+        starting_point:         defines where to start
+        ending_point:           defines where to end
+        thread_number:          defines the thread count (even number, otherwise rounded to the previous even integer, exception: 1 = 2)
+    """
     nb_repeats = (threads_number // 2) - 1
     method = fill.cross_stitch_method
     cross_geoms = CrossGeometries(fill, shape, method)
@@ -93,16 +125,17 @@ def _build_connect_subgraphs(cross_geoms):
 
 
 def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, row_tour, flipped):
-    """ We need to construct an eulerian cycle for each subgraph, but we need to make sure
-    that no cross is flipped
-    So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
-    and we insert those partial cycles into the eulerian cycle until all crosses are covered
+    """ We need to construct an eulerian cycle for each subgraph,
+        but we need to make sure that no cross is flipped
+        So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
+        and we insert those partial cycles into the eulerian cycle until all crosses are covered
 
-    We use a slightly different row tour, depending whether the starting point is above or below
-    the center of the first cross
+        We use a slightly different row tour, depending whether the starting point is above or below
+        the center of the first cross
 
-    diagonals will be added as many times as needed, depending on the number of threads,
-    in a bean stitch fashion """
+        diagonals will be added as many times as needed, depending on the number of threads,
+        in a bean stitch fashion
+    """
 
     eulerian_cycles = []
     centers = cross_geoms.center_points
@@ -130,7 +163,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
         if row_tour == _build_row_tour:
             cycle = _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped)
         else:
-            cycle = _build_double_cycles(subcrosses, cycle, nb_repeats)
+            cycle = _build_double_cycle(subcrosses, cycle, nb_repeats)
 
         cycle = travel + cycle
         travel = []
@@ -163,7 +196,7 @@ def _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped):
     return cycle
 
 
-def _build_double_cycles(subcrosses, cycle, nb_repeats):
+def _build_double_cycle(subcrosses, cycle, nb_repeats):
     # for double crosses we can't reduce amount of bad travelinng
     while subcrosses:
         for node in cycle:
@@ -241,7 +274,7 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
 
 
 def _build_row_tour(subcrosses, starting_corner, nb_repeats, remove):
-    position = "no"
+    position = None
     cross_order = ("top_right", "top_left", "bottom_right", "bottom_left")
     cycle = _build_side_row_tour(subcrosses, starting_corner, nb_repeats, remove, cross_order)
     if cycle:
@@ -256,7 +289,7 @@ def _build_row_tour(subcrosses, starting_corner, nb_repeats, remove):
 
 def _build_double_row_tour(subcrosses, starting_corner, nb_repeats, remove=True):
     # position is not going to used , but we need same signature as for
-    position = "no"
+    position = None
     cycle = _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats)
     if cycle:
         position = "above"
