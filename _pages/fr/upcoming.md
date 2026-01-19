@@ -333,7 +333,7 @@ Définit les paramètres globaux ou ceux du document SVG actuellement ouvert.
 
 [En savoir plus](/fr/docs/preferences/)
 
-### Détection de probblèmes
+### Détection de problèmes
 
 Signale les zones problématiques (ou potentiellement problématiques) du design.
 
