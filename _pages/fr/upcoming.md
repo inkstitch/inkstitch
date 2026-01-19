@@ -55,7 +55,10 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
   ![Magic Crosses](/assets/images/fonts/magic_crosses.png)
 * [Montecarlo](/fr/fonts/montecarlo/)
 
-  ![Neon](/assets/images/fonts/montecarlo.png)
+  ![Montecarlo](/assets/images/fonts/montecarlo.png)
+* [Nautical](/fonts/nautical/)
+
+  ![Nautical](/assets/images/fonts/nautical.png)
 * [Neon](/fr/fonts/neon/)
 
   ![Neon](/assets/images/fonts/neon.png)
