@@ -56,7 +56,10 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 
 * [Montecarlo](/fonts/montecarlo/)
 
-  ![Neon](/assets/images/fonts/montecarlo.png)
+  ![Montecarlo](/assets/images/fonts/montecarlo.png)
+* [Nautical](/fonts/nautical/)
+
+  ![Nautical](/assets/images/fonts/nautical.png)
 * [Neon](/fonts/neon/)
 
   ![Neon](/assets/images/fonts/neon.png)
