@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-13 01:52+0000\n"
-"PO-Revision-Date: 2026-01-14 02:00\n"
+"POT-Creation-Date: 2026-01-19 02:01+0000\n"
+"PO-Revision-Date: 2026-01-20 01:57\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-13 01:52+0000\n"
+"POT-Creation-Date: 2026-01-19 02:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1610,7 +1610,7 @@ msgstr "Relativement à la direction des bandes du tartan."
 msgid "Maximum fill stitch length"
 msgstr "Longueur maximale du point de remplissage"
 
-#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:826
+#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:839
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "La longueur de points dans une rangée.  Des point plus courts peuvent être utilisés au début ou à la fin d’une rangée."
 
@@ -1723,13 +1723,11 @@ msgstr "Répétitions"
 msgid "Defines how many times to run down and back along the path."
 msgstr "Définit combien de fois broder en avant et en arrière le long du chemin."
 
-#: lib/elements/fill_stitch.py:531 lib/elements/fill_stitch.py:837
-#: lib/elements/stroke.py:114
+#: lib/elements/fill_stitch.py:531 lib/elements/stroke.py:114
 msgid "Bean stitch number of repeats"
 msgstr "Nombre de répétitions pour le point multiple (bean stitch)"
 
-#: lib/elements/fill_stitch.py:532 lib/elements/fill_stitch.py:838
-#: lib/elements/stroke.py:116
+#: lib/elements/fill_stitch.py:532 lib/elements/stroke.py:116
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Repasse sur chaque point le nombre de fois indiqué. Une valeur de 1 triplera chaque point (avant, arrière, avant).\n"
@@ -1883,45 +1881,57 @@ msgstr "Croix Double"
 msgid "Cross stitch method"
 msgstr "Méthode de point de croix"
 
+#: lib/elements/fill_stitch.py:761
+msgid "Thread count"
+msgstr "Nombre de fils"
+
 #: lib/elements/fill_stitch.py:762
+msgid "Defines the thread count for each stitch.\n"
+"Thread count must be an even number.\n"
+"Half crosses are stitched with an odd thread count."
+msgstr "Défini le nombre de fils\n"
+"Ce nombre doit être pair\n"
+"Les demies croix sont brodées avec un nombre impair de fils."
+
+#: lib/elements/fill_stitch.py:775
 msgid "Pattern size"
 msgstr "Dimension des cellules"
 
-#: lib/elements/fill_stitch.py:763
+#: lib/elements/fill_stitch.py:776
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
 msgstr "Taille des cellules de point de croix en mm, deux valeurs x, y séparées par espace définissent la largeur et la hauteur de la cellule ; une seule valeur définit une cellule carrée."
 
-#: lib/elements/fill_stitch.py:766 lib/elements/fill_stitch.py:799
+#: lib/elements/fill_stitch.py:779 lib/elements/fill_stitch.py:812
 msgid "mm (x y)"
 msgstr "mm (x y)"
 
-#: lib/elements/fill_stitch.py:778
+#: lib/elements/fill_stitch.py:791
 msgid "Align grid with canvas"
 msgstr "Aligner la grille avec le canevas"
 
-#: lib/elements/fill_stitch.py:779
+#: lib/elements/fill_stitch.py:792
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
 msgstr "Cela garantit un bon alignement des zones de point de croix adjacentes, mais cela signifie également que le résultat peut varier si l'élément est déplacé hors de la grille.\n\n"
 "Désactivez cette option pour que cet élément soit brodé de la même manière, quelle que soit sa position sur le canevas."
 
-#: lib/elements/fill_stitch.py:795
+#: lib/elements/fill_stitch.py:808
 msgid "Grid Offset"
 msgstr "Décalage de la grille"
 
-#: lib/elements/fill_stitch.py:796
+#: lib/elements/fill_stitch.py:809
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
 msgstr "Décale la grille de point de croix selon les valeurs indiquées. Les valeurs X et Y sont séparées par un espace. Une seule valeur saisie décale le motif uniformément selon les axes x et y."
 
-#: lib/elements/fill_stitch.py:811
+#: lib/elements/fill_stitch.py:824
 msgid "Fill coverage"
 msgstr "Couverture du remplissage"
 
-#: lib/elements/fill_stitch.py:812
+#: lib/elements/fill_stitch.py:825
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr "Pourcentage de chevauchement de chaque croix avec la zone de remplissage"
 
-#: lib/elements/fill_stitch.py:824 lib/elements/satin_column.py:184
+#: lib/elements/fill_stitch.py:837 lib/elements/satin_column.py:184
 #: lib/elements/satin_column.py:583
 msgid "Maximum stitch length"
 msgstr "Longueur maximale du point"
@@ -2936,25 +2946,25 @@ msgstr "Stops"
 msgid "Filter stitches smaller than (mm)"
 msgstr "Filtrer les points plus petits que (mm)"
 
-#: lib/extensions/fill_to_satin.py:81
+#: lib/extensions/fill_to_satin.py:82
 msgid "The selection contains elements with both, a fill and a stroke.\n\n"
 "Rungs only have a stroke color and fill elements a fill color."
 msgstr "La sélection contient des éléments ayant un fond et un contour.\n\n"
 "Les traverses doivent avoir uniquement une couleur de contour et les remplissages seulement une couleur de fond."
 
-#: lib/extensions/fill_to_satin.py:108
+#: lib/extensions/fill_to_satin.py:109
 msgid "Satin Group"
 msgstr "Groupe de Satins"
 
-#: lib/extensions/fill_to_satin.py:129 inx/inkstitch_select_elements.inx:30
+#: lib/extensions/fill_to_satin.py:130 inx/inkstitch_select_elements.inx:30
 msgid "Satin"
 msgstr "Colonne satin"
 
-#: lib/extensions/fill_to_satin.py:142
+#: lib/extensions/fill_to_satin.py:143
 msgid "Please select a fill object and rungs."
 msgstr "Merci de sélectionner un remplissage et des traverses."
 
-#: lib/extensions/fill_to_satin.py:146 inx/inkstitch_fill_to_satin.inx:28
+#: lib/extensions/fill_to_satin.py:147 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
 msgstr "https://inkstitch.org/fr/docs/satin-tools/#fill-to-satin"
 

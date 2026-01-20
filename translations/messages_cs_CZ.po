@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-13 01:52+0000\n"
-"PO-Revision-Date: 2026-01-13 01:53\n"
+"POT-Creation-Date: 2026-01-19 02:01+0000\n"
+"PO-Revision-Date: 2026-01-19 02:02\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-13 01:52+0000\n"
+"POT-Creation-Date: 2026-01-19 02:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1607,7 +1607,7 @@ msgstr "Vzhledem ke směru tartanových pruhů."
 msgid "Maximum fill stitch length"
 msgstr "Maximální délka výplňového stehu"
 
-#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:826
+#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:839
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "Délka všech stehů v řádku. Kratší stehy mohou být použity na začátku nebo konce řádku."
 
@@ -1720,13 +1720,11 @@ msgstr "Opakování"
 msgid "Defines how many times to run down and back along the path."
 msgstr "Definuje, kolikrát se má šít vpřed a vzad podél cesty."
 
-#: lib/elements/fill_stitch.py:531 lib/elements/fill_stitch.py:837
-#: lib/elements/stroke.py:114
+#: lib/elements/fill_stitch.py:531 lib/elements/stroke.py:114
 msgid "Bean stitch number of repeats"
 msgstr "Počet opakování řetízkového stehu"
 
-#: lib/elements/fill_stitch.py:532 lib/elements/fill_stitch.py:838
-#: lib/elements/stroke.py:116
+#: lib/elements/fill_stitch.py:532 lib/elements/stroke.py:116
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Tento krok opakujte mnohokrát. Hodnota 1 by ztrojnásobila každý steh (dopředu, dozadu, dopředu). Hodnota 2 by pětinásobila každý steh atd.\n\n"
@@ -1879,44 +1877,54 @@ msgstr ""
 msgid "Cross stitch method"
 msgstr ""
 
+#: lib/elements/fill_stitch.py:761
+msgid "Thread count"
+msgstr ""
+
 #: lib/elements/fill_stitch.py:762
+msgid "Defines the thread count for each stitch.\n"
+"Thread count must be an even number.\n"
+"Half crosses are stitched with an odd thread count."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:775
 msgid "Pattern size"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:763
+#: lib/elements/fill_stitch.py:776
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:766 lib/elements/fill_stitch.py:799
+#: lib/elements/fill_stitch.py:779 lib/elements/fill_stitch.py:812
 msgid "mm (x y)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:778
+#: lib/elements/fill_stitch.py:791
 msgid "Align grid with canvas"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:779
+#: lib/elements/fill_stitch.py:792
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:795
+#: lib/elements/fill_stitch.py:808
 msgid "Grid Offset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:796
+#: lib/elements/fill_stitch.py:809
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:811
+#: lib/elements/fill_stitch.py:824
 msgid "Fill coverage"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:812
+#: lib/elements/fill_stitch.py:825
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:824 lib/elements/satin_column.py:184
+#: lib/elements/fill_stitch.py:837 lib/elements/satin_column.py:184
 #: lib/elements/satin_column.py:583
 msgid "Maximum stitch length"
 msgstr "Maximální délka stehu"
@@ -2930,25 +2938,25 @@ msgstr "Zastávky"
 msgid "Filter stitches smaller than (mm)"
 msgstr "Filtrovat stehy menší než (mm)"
 
-#: lib/extensions/fill_to_satin.py:81
+#: lib/extensions/fill_to_satin.py:82
 msgid "The selection contains elements with both, a fill and a stroke.\n\n"
 "Rungs only have a stroke color and fill elements a fill color."
 msgstr "Výběr obsahuje prvky s výplní i tahem.\n\n"
 "Příčky mají pouze barvu tahu a prvky výplně barvu výplně."
 
-#: lib/extensions/fill_to_satin.py:108
+#: lib/extensions/fill_to_satin.py:109
 msgid "Satin Group"
 msgstr "Saténová skupina"
 
-#: lib/extensions/fill_to_satin.py:129 inx/inkstitch_select_elements.inx:30
+#: lib/extensions/fill_to_satin.py:130 inx/inkstitch_select_elements.inx:30
 msgid "Satin"
 msgstr "Satén"
 
-#: lib/extensions/fill_to_satin.py:142
+#: lib/extensions/fill_to_satin.py:143
 msgid "Please select a fill object and rungs."
 msgstr "Vyberte prosím objekt výplně a příčky."
 
-#: lib/extensions/fill_to_satin.py:146 inx/inkstitch_fill_to_satin.inx:28
+#: lib/extensions/fill_to_satin.py:147 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
 msgstr ""
 
