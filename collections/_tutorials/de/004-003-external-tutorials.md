@@ -40,3 +40,5 @@ Kennt ihr deutsche Tutorials? Immer her damit. Wir setzen gerne einen Link.
 * <https://ian.umces.edu/media-library/symbols/>
 * <https://www.getty.edu/art/collection/search?open_content=true>
 * <https://pdimagearchive.org/>
+* <https://www.audubon.org/art/birds-of-america>
+* <https://www.pexels.com>

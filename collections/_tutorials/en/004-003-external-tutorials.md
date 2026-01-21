@@ -11,7 +11,7 @@ classes: wide
 
 * Fedora Magazine
    * [MAKE MORE with Inkscape - Ink/Stitch](https://fedoramagazine.org/make-more-with-inkscape-ink-stitch/)
-   * [DIY Embroidery with Inkscape and Ink/Stitch](https://fedoramagazine.org/diy-embroidery-with-inkscape-and-ink-stitch/)     
+   * [DIY Embroidery with Inkscape and Ink/Stitch](https://fedoramagazine.org/diy-embroidery-with-inkscape-and-ink-stitch/)
 
 * Tyrosinase
     * [Color sorting](https://silverseams.com/2020/07/color-sorting-with-ink-stitch/)
@@ -46,3 +46,5 @@ classes: wide
 * <https://ian.umces.edu/media-library/symbols/>
 * <https://www.getty.edu/art/collection/search?open_content=true>
 * <https://pdimagearchive.org/>
+* <https://www.audubon.org/art/birds-of-america>
+* <https://www.pexels.com>
