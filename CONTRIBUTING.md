@@ -14,3 +14,8 @@ Feel free to find something that interests you.  If you're looking for ideas, co
 * artwork
 * documentation (see [gh-pages branch](https://github.com/inkstitch/inkstitch/tree/gh-pages))
 
+
+No AI-written Pull Requests
+===========================
+
+Please don't create pull requests written entirely or in large part by LLM-based tools such as Claude, Cursor, etc.  We don't accept contributions of this sort and they will be closed without review.
