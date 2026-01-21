@@ -714,7 +714,11 @@ class Stroke(EmbroideryElement):
 
     @property
     def first_stitch(self):
-        return shgeo.Point(self.as_multi_line_string().geoms[0].coords[0])
+        try:
+            return shgeo.Point(self.as_multi_line_string().geoms[0].coords[0])
+        except IndexError:
+            # shape is invalid or completely clipped
+            return None
 
     def _get_clipped_path(self, paths):
         if self.clip_shape is None:
