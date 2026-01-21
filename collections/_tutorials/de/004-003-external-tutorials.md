@@ -42,3 +42,5 @@ Kennt ihr deutsche Tutorials? Immer her damit. Wir setzen gerne einen Link.
 * <https://pdimagearchive.org/>
 * <https://www.audubon.org/art/birds-of-america>
 * <https://www.pexels.com>
+* <https://www.biodiversitylibrary.org>
+* <https://www.openculture.com/2016/05/1-8-million-free-works-of-art-from-world-class-museums-a-meta-list.html>
