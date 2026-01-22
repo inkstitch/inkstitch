@@ -175,38 +175,50 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
 
 def _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped):
     while subcrosses:
-        for node in cycle:
-            cycle_to_insert = []
-
-            for cross in subcrosses:
-                if node in cross.corners:
-                    position, cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats, remove=False)
-                    # here we try to minimize "bad traveling"
-                    if cycle_to_insert:
-                        if position == "below" and not flipped or position == "above" and flipped:
-                            node = insertion_node(crosses, node, cycle, cycle_to_insert, position, True)
-                        else:
-                            node = insertion_node(crosses, node, cycle, cycle_to_insert, position, False)
-                        position, cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats, remove=True)
-                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-                        break
-
-            if cycle_to_insert:
+        # find a corner on the cycle that needs more crosses, so that we can enlarge the cycle
+        potential_node = None
+        for cross in subcrosses:
+            for node in cross.corners:
+                if node in cycle:
+                    potential_node = node
+                    break
+            if potential_node:
                 break
+        if potential_node is None:
+            break
+
+        # here we try to minimize "bad traveling"
+
+        # check if the insertion will be above or below
+        position, cycle_to_insert = _build_row_tour(subcrosses, potential_node, nb_repeats, remove=False)
+        # avoid bad traveling as much as possible
+        if position == "below" and not flipped or position == "above" and flipped:
+            node = insertion_node(crosses, potential_node, cycle, cycle_to_insert, position, True)
+        else:
+            node = insertion_node(crosses, potential_node, cycle, cycle_to_insert, position, False)
+
+        position, cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats, remove=True)
+        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+
     return cycle
 
 
 def _build_double_cycle(subcrosses, cycle, nb_repeats):
-    # for double crosses we can't reduce amount of bad travelinng
+    # for double crosses we can't reduce amount of bad traveling
     while subcrosses:
-        for node in cycle:
-            cycle_to_insert = []
-            for cross in subcrosses:
-                if node in cross.corners:
-                    position, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
-                    cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-            if cycle_to_insert:
+        # find a corner on the cycle that needs more crosses, so that we can enlarge the cycle
+        potential_node = None
+        for cross in subcrosses:
+            for node in cross.corners:
+                if node in cycle:
+                    potential_node = node
+                    break
+            if potential_node:
                 break
+        if potential_node is None:
+            break
+        position, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
+        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
     return cycle
 
 
