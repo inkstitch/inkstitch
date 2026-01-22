@@ -15,7 +15,7 @@ Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez quatre options
 * [Attacher des commandes à l'objet sélectionné](#attacher-des-commandes-aux-objets-sélectionnés-)
 * [Affichage](#affichage)
 
-Pour dupliquer un objet auquel sont attachées des commandes, ne pas utiliser Dupliquer, mais Copier puis Coller.
+**Need to duplicate objects with commands?** A common way to copy objects in Inkscape is duplicate. Before duplicating objects with commands, ensure that `Relink Duplicated Clones` in `Edit > Preferences > Behavior > Clones` is enabled.
 {: .notice--info }
 
 Pour déplacer une commande, déplacer le marqueur seulement, le connecteur suivra.

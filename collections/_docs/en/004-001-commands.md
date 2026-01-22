@@ -1,7 +1,7 @@
 ---
 title: "Visual Commands"
 permalink: /docs/commands/
-last_modified_at: 2025-12-31
+last_modified_at: 2026-01-22
 toc: true
 ---
 Visual commands can be used to specify additional information on how to embroider your design. They can be used e.g. to tell the machine to trim the thread after finishing a specific embroidery element or when to pause and where to stop, so you can add a fabric layer to your appliqué design more conventiently.
@@ -16,7 +16,7 @@ In `Extensions > Ink/Stitch  > Commands` you will find four options:
 * [Attach commands to selected objects](#attach-commands-to-selected-objects-)
 * [View](#view)
 
-**Need to duplicate objects with commands?** A common way to copy objects in Inkscape is duplicate. However this will break the commands. For objects with commands we recommend to use copy and paste, since this will preserve the command functionality.
+**Need to duplicate objects with commands?** A common way to copy objects in Inkscape is duplicate. Before duplicating objects with commands, ensure that `Relink Duplicated Clones` in `Edit > Preferences > Behavior > Clones` is enabled.
 {: .notice--info }
 
 **Positioning of commands** Commands in most use cases are pointers to specific positions. To position a command, just select the symbol and move it with the mouse or arrow keys. When moving with the arrow keys, you can press the Shift key for quick movement, the Alt key is used for fine adjustment.

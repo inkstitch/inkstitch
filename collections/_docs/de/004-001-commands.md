@@ -1,7 +1,7 @@
 ---
 title: "Visuelle Befehle"
 permalink: /de/docs/commands/
-last_modified_at: 2024-10-20
+last_modified_at: 2026-01-22
 toc: true
 ---
 Visuelle Befehle können genutzt werden, um zusätzliche Informationen darüber festzulegen, wie das Design gestickt werden soll. Sie können z.B. der Maschine mitteilen, dass der Faden nach einem Stickobjekt geschnitten werden soll oder definieren, wann und wo die Maschine pausieren soll, so dass man für eine Applikation bequem ein Stück Stoff hinzufügen kann.
@@ -16,7 +16,7 @@ Unter `Erweiterungen > Ink/stitch > Befehle` gibt es vier Optionen
 * [Objektbefehle...](#objektbefehle-hinzufügen-)
 * [Ansicht](#ansicht)
 
-**Befehle duplizieren?** In Inkscape ist es üblich Objekte über die Funktion duplizieren zu vervielfältigen. Das funktioniert allerdings für Objekte die Befehle angehängt haben nicht. Wir empfehlen daher, für Objekte mit Befehlen `Kopieren` und `Einfügen` zu verwenden. So bleiben die Befehle intakt.
+**Befehle duplizieren?** In Inkscape ist es üblich Objekte über die Funktion duplizieren zu vervielfältigen. Vor dem Duplizieren von Objekten mit Befehlen, sollte sichergestellt werden, dass `Duplizierte Klone neu verbinden` unter `Bearbeiten > Einstellungen > Verhalten > Klone` aktiviert ist.
 {: .notice--info }
 
 **Befehle positioneren** Befehle sind in den meisten Anwendungsfällen Zeiger auf eine bestimmte Position. Um einen Befehl zu positionieren, markiere nur das Symbol und verschiebe es mit der Maus oder den Pfeiltasten. Beim Verschieben mit den Pfeiltasten kann für schnelles Bewegen die Umschalttaste gedrückt werden, die Alt-Taste dient zur Feinjustierung.
