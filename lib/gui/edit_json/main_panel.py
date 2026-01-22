@@ -311,7 +311,7 @@ class LetteringEditJsonPanel(wx.Panel):
         # reset font_meta
         self.font_meta = defaultdict(list)
         self.font_meta['name'] = self.font.name
-        self.font_meta['description'] = self.font.metadata['description']  # untranslated description
+        self.font_meta['description'] = self.font.untranslated_description
         self.font_meta['font_license'] = self.font.font_license
         self.font_meta['text_direction'] = self.font.text_direction
         self.font_meta['keywords'] = self.font.keywords
@@ -333,7 +333,7 @@ class LetteringEditJsonPanel(wx.Panel):
 
         # update ctrl
         self.settings_panel.font_info.name.ChangeValue(self.font.name)
-        self.settings_panel.font_info.description.ChangeValue(self.font.metadata['description'])
+        self.settings_panel.font_info.description.ChangeValue(self.font.untranslated_description)
         self.settings_panel.font_info.font_license.ChangeValue(self.font.font_license)
         selection = ['ltr', 'rtl', 'ttb', 'btt'].index(self.font.json_default_variant)
         self.settings_panel.font_settings.default_variant.SetSelection(selection)
@@ -416,10 +416,11 @@ class LetteringEditJsonPanel(wx.Panel):
             glyph_list.Focus(0)
 
     def writability_warning(self):
+        path = self.font.path
         json_file = path.join(self.font.path, 'font.json')
 
-        if not path.isfile(json_file) or not path.isfile(json_file):
-            self._show_warning(_("Could not read json file."))
+        if not path.isfile(json_file):
+            self._show_warning(_("Could not find the json file for this font. Please create one with Font Management > Generate JSON"))
             return
 
         if not os.access(json_file, os.W_OK):
@@ -431,8 +432,8 @@ class LetteringEditJsonPanel(wx.Panel):
     def apply(self, event):
         json_file = path.join(self.font.path, 'font.json')
 
-        if not path.isfile(json_file) or not path.isfile(json_file):
-            errormsg(_("Could not read json file."))
+        if not path.isfile(json_file):
+            errormsg(_("Could not find a json file for this font. Please create one with Font Management > Generate JSON"))
             self.cancel()
             return
 
