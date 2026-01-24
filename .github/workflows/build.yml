@@ -58,6 +58,8 @@ jobs:
 
           python -m pip install pyinstaller
 
+          python -m pip install flake8
+
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
       - name: Tests
         shell: bash
@@ -69,6 +71,8 @@ jobs:
           python -m pip install mypy
           python -m mypy --output json | python .github/mypy-github-formatter
         continue-on-error: true
+      - name: Style check
+        run: bash -ex bin/style-check -vv .
       - shell: bash
         run: |
           make dist
