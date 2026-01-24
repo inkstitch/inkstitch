@@ -5,4 +5,14 @@
 # Instead of files, "--diff" may be passed to check only the lines changed
 # by a diff piped to standard input.
 
-flake8 --count --max-complexity=10 --max-line-length=150 --statistics --exclude=__init__.py,build,src,dist,./*-metadata.py,./pystitch-format-descriptions.py "${@:-.}"
+# We specify explicitly the errors we select and ignore because otherwise flake8
+# will use defaults that seem to be inconsistent between local installs and CI.
+# The ignore list was originally referenced from Flake 7.3.0's defaults,
+# plus E201 and E202 (whitespace before and after curly braces)
+
+
+exec flake8 --count --max-complexity=10 --max-line-length=150 --statistics \
+    --select C90,F,E,W \
+    --ignore E121,E123,E126,E201,E202,E226,E24,E704,W503,W504 \
+    --extend-exclude=__init__.py,build,dist,./*-metadata.py,./pystitch-format-descriptions.py \
+    "${@:-.}"

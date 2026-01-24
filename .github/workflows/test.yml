@@ -48,5 +48,5 @@ jobs:
         continue-on-error: true
 
       - name: Style check
-        run: bash -ex bin/style-check
+        run: bash -x bin/style-check
 
