@@ -49,7 +49,7 @@ jobs:
           python -m pip install PyGObject==3.50.0
           python -m pip install numpy --no-binary numpy
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.4-cp311-cp311-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx
