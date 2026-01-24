@@ -541,7 +541,10 @@ jobs:
           path: 'artifacts/'
         if: always()
       - name: create/update release
-        uses: softprops/action-gh-release@v2
+        # 2026-01-24: v2.5 of this action has timeout issues, see https://github.com/softprops/action-gh-release/issues/704
+        # Pinning at 2.4.2 for now, investigate updating later. An alternative suggested in that issue is to use `gh release upload`
+        # directly, which might not have been an option when we first started using this.
+        uses: softprops/action-gh-release@v2.4.2
         if: always()
         with:
           token: "${{secrets.GITHUB_TOKEN}}"
