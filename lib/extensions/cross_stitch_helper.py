@@ -41,7 +41,7 @@ class CrossStitchHelper(InkstitchExtension):
             'align_with_canvas': True,
             'nodes': False,
             'set_grid': False,
-            'grid_color': '0x00d9e5ff',
+            'grid_color': '#00d9e5',
             'remove_grids': False,
             'color_method': 0,
             'convert_bitmap': False,
@@ -49,10 +49,10 @@ class CrossStitchHelper(InkstitchExtension):
             'bitmap_quantize_method': 1,
             'bitmap_rgb_colors': '',
             'bitmap_gimp_palette': '',
-            'bitmap_color_balance': 100,
-            'bitmap_brightness': 100,
-            'bitmap_contrast': 100,
-            'bitmap_background_color': (0, 0, 0),
+            'bitmap_color_balance': 1,
+            'bitmap_brightness': 1,
+            'bitmap_contrast': 1,
+            'bitmap_background_color': '#000000',
             'bitmap_background_main_color': False,
             'bitmap_ignore_background': False
         }

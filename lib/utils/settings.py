@@ -64,7 +64,7 @@ DEFAULT_SETTINGS = {
     'cross_bitmap_color_balance': 1,
     'cross_bitmap_brightness': 1,
     'cross_bitmap_contrast': 1,
-    'cross_bitmap_background_color': (0, 0, 0),
+    'cross_bitmap_background_color': '#000000',
     'cross_bitmap_background_main_color': False,
     'cross_bitmap_ignore_background': False
 }
