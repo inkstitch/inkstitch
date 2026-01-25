@@ -128,9 +128,9 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     # create bbox polygon to calculate the length necessary to make sure that
     # the gradient splitter lines will cut the entire design
     # bounding_box returns the value in viewport units, we need to convert the length later to px
-    bbox = element.node.bounding_box()
-    bbox_polygon = shgeo.Polygon([(bbox.left, bbox.top), (bbox.right, bbox.top),
-                                  (bbox.right, bbox.bottom), (bbox.left, bbox.bottom)])
+    minx, miny, maxx, maxy = shape.bounds
+    bbox_polygon = shgeo.Polygon([(minx, miny), (maxx, miny),
+                                  (maxx, maxy), (minx, maxy)])
     # gradient stops
     offsets = gradient.stop_offsets
     stop_styles = gradient.stop_styles
@@ -143,6 +143,8 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     for i, offset in enumerate(offsets):
         shape_rest = []
         split_point = shgeo.Point(line.point_at_ratio(float(offset)))
+        import sys
+        print(bbox_polygon, split_point, file=sys.stderr)
         length = split_point.hausdorff_distance(bbox_polygon) / unit_multiplier
         split_line = shgeo.LineString([(split_point.x - length - 2, split_point.y),
                                        (split_point.x + length + 2, split_point.y)])
