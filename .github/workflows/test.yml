@@ -37,8 +37,6 @@ jobs:
           python -m pip install PyGObject==3.50.0
           python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
           python -m pip install -r requirements.txt
-          python -m pip install mypy
-          python -m pip install flake8
 
       - name: Run tests
         run: pytest

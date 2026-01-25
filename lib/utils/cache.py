@@ -7,6 +7,7 @@ import hashlib
 import os
 import pickle
 import sqlite3
+from typing import TypeVar, Callable, Any, cast
 
 import diskcache  # type: ignore[import-untyped]
 
@@ -15,10 +16,13 @@ from lib.utils.settings import global_settings
 from .paths import get_user_dir
 from functools import lru_cache
 
+# See https://mypy.readthedocs.io/en/stable/generics.html#declaring-decorators
+F = TypeVar('F', bound=Callable[..., Any])
+
 
 # simplify use of lru_cache decorator
-def cache(*args, **kwargs):
-    return lru_cache(maxsize=None)(*args, **kwargs)
+def cache(func: F) -> F:
+    return cast(F, lru_cache(maxsize=None)(func))
 
 
 __stitch_plan_cache = None
