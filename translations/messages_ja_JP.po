@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-19 02:01+0000\n"
-"PO-Revision-Date: 2026-01-19 02:02\n"
+"POT-Creation-Date: 2026-01-23 01:56+0000\n"
+"PO-Revision-Date: 2026-01-23 01:56\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-19 02:01+0000\n"
+"POT-Creation-Date: 2026-01-23 01:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2401,7 +2401,7 @@ msgstr ""
 msgid "This element renders as running stitch while it has a satin column parameter."
 msgstr ""
 
-#: lib/elements/stroke.py:49 lib/extensions/params.py:631
+#: lib/elements/stroke.py:49 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "ストローク"
@@ -2793,7 +2793,7 @@ msgstr "インク/ステッチの文字配置"
 msgid "scale"
 msgstr ""
 
-#: lib/extensions/break_apart.py:32
+#: lib/extensions/break_apart.py:34
 msgid "Please select one or more fill areas to break apart."
 msgstr "分解する1つまたは複数の塗りつぶし領域を選択してください。"
 
@@ -3237,20 +3237,20 @@ msgstr "Inkscapeオブジェクト"
 msgid "No options available"
 msgstr ""
 
-#: lib/extensions/params.py:511
+#: lib/extensions/params.py:513
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:29
 msgid "Re-roll"
 msgstr ""
 
-#: lib/extensions/params.py:540
+#: lib/extensions/params.py:542
 msgid "Click to force this parameter to be saved when you click \"Apply and Quit\""
 msgstr "適用して終了 \"をクリックしたときに、このパラメータを強制的に保存する場合は、クリックしてください。"
 
-#: lib/extensions/params.py:550
+#: lib/extensions/params.py:552
 msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "このパラメータは、\"適応して終了 \"をクリックしたときに保存されます。"
 
-#: lib/extensions/params.py:578 lib/extensions/sew_stack_editor.py:118
+#: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/cross_stitch_helper.py:138 lib/gui/edit_json/settings_panel.py:63
 #: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54
@@ -3262,16 +3262,16 @@ msgstr "このパラメータは、\"適応して終了 \"をクリックした�
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: lib/extensions/params.py:583
+#: lib/extensions/params.py:585
 msgid "Use Last Settings"
 msgstr "前回の設定を使う"
 
-#: lib/extensions/params.py:586 lib/extensions/sew_stack_editor.py:122
+#: lib/extensions/params.py:588 lib/extensions/sew_stack_editor.py:122
 #: lib/gui/lettering/main_panel.py:55
 msgid "Apply and Quit"
 msgstr "適用して終了"
 
-#: lib/extensions/params.py:870 lib/extensions/sew_stack_editor.py:552
+#: lib/extensions/params.py:872 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr "刺繍パラメータ"
 
