@@ -19,7 +19,8 @@ class CrossStitchHelperFrame(wx.Frame):
         self.widgets_and_panels()
         self.apply_global_settings()
         self.update()
-        self.update_bitmap_panel()
+        self.enable_bitmap_settings()
+        self.update_color_selection_method()
         self.Show()
 
     def apply_global_settings(self):
@@ -30,6 +31,7 @@ class CrossStitchHelperFrame(wx.Frame):
         cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_helper_cross_method']])
         self.cross_stitch_method.SetSelection(cross_method)
         self.pixelize.SetValue(global_settings['cross_helper_pixelize'])
+        self.pixelize_combined.SetValue(global_settings['cross_helper_pixelize_combined'])
         self.coverage.SetValue(global_settings['cross_helper_coverage'])
         self.grid_offset.SetValue(global_settings['cross_helper_grid_offset'])
         self.align_with_canvas.SetValue(global_settings['cross_helper_align_with_canvas'])
@@ -147,7 +149,7 @@ class CrossStitchHelperFrame(wx.Frame):
         apply_to_settings = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Apply grid settings to"))
         apply_to_settings.SetFont(font)
 
-        apply_to_grid_sizer = wx.FlexGridSizer(3, 2, 15, 20)
+        apply_to_grid_sizer = wx.FlexGridSizer(4, 2, 15, 20)
         apply_to_grid_sizer.AddGrowableCol(1)
         apply_page_grid = wx.FlexGridSizer(3, 2, 15, 20)
         apply_page_grid.AddGrowableCol(1)
@@ -160,15 +162,27 @@ class CrossStitchHelperFrame(wx.Frame):
         self.pixelize = wx.CheckBox(self.settings_panel)
         self.pixelize.Bind(wx.EVT_CHECKBOX, self.update)
 
-        node_label_text = "     " + _("Add nodes (grid width distance)")
+        pixelize_combined_label_text = "     " + _("Avoid overlapping shapes")
+        self.pixelize_combined_label = wx.StaticText(self.settings_panel, label=pixelize_combined_label_text)
+        self.pixelize_combined = wx.CheckBox(self.settings_panel)
+        pixelize_combined_tooltip = _("Inserts a new set of shapes and removes selected elements")
+        self.pixelize_combined_label.SetToolTip(pixelize_combined_tooltip)
+        self.pixelize_combined.SetToolTip(pixelize_combined_tooltip)
+
+        node_label_text = "     " + _("Add nodes")
         self.nodes_label = wx.StaticText(self.settings_panel, label=node_label_text)
         self.nodes = wx.CheckBox(self.settings_panel)
+        nodes_tooltip = _("Add nodes at the horizontal grid spacing value")
+        self.nodes_label.SetToolTip(nodes_tooltip)
+        self.nodes.SetToolTip(nodes_tooltip)
 
         apply_to_grid_sizer.AddMany([
             (apply_to_element_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.apply_to_element, 1, wx.EXPAND),
             (pixelize_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.pixelize, 1, wx.EXPAND),
+            (self.pixelize_combined_label, 0, wx.ALIGN_CENTER_VERTICAL),
+            (self.pixelize_combined, 1, wx.EXPAND),
             (self.nodes_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.nodes, 1, wx.EXPAND),
         ])
@@ -184,9 +198,12 @@ class CrossStitchHelperFrame(wx.Frame):
         self.grid_color_label = wx.StaticText(self.settings_panel, label=grid_color_label_text)
         self.grid_color = wx.ColourPickerCtrl(self.settings_panel, colour=wx.Colour('#00d9e5'))
 
-        remove_grids_label_text = "     " + _("Remove previous page grids")
+        remove_grids_label_text = "     " + _("Remove previous")
         self.remove_grids_label = wx.StaticText(self.settings_panel, label=remove_grids_label_text)
         self.remove_grids = wx.CheckBox(self.settings_panel)
+        remove_grids_tooltip = _("Remove previous cross stitch page grids")
+        self.remove_grids_label.SetToolTip(remove_grids_tooltip)
+        self.remove_grids.SetToolTip(remove_grids_tooltip)
 
         grid_settings_sizer.Add(grid_settings_label, 0, wx.EXPAND | wx.ALL, 5)
         grid_settings_sizer.Add(grid_sizer, 1, wx.EXPAND | wx.ALL, 10)
@@ -444,6 +461,8 @@ class CrossStitchHelperFrame(wx.Frame):
             self.stitch_length.Enable(True)
 
         enable = self.pixelize.GetValue()
+        self.pixelize_combined_label.Enable(enable)
+        self.pixelize_combined.Enable(enable)
         self.nodes_label.Enable(enable)
         self.nodes.Enable(enable)
 
@@ -584,6 +603,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['update_elements'] = self.apply_to_element.GetValue()
         self.settings['cross_method'] = self.get_cross_method()
         self.settings['pixelize'] = self.pixelize.GetValue()
+        self.settings['pixelize_combined'] = self.pixelize_combined.GetValue()
         self.settings['coverage'] = self.coverage.GetValue()
         self.settings['grid_offset'] = self.grid_offset.GetValue()
         self.settings['align_with_canvas'] = self.align_with_canvas.GetValue()
@@ -618,6 +638,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_helper_update_elements'] = self.apply_to_element.GetValue()
         global_settings['cross_helper_cross_method'] = self.get_cross_method()
         global_settings['cross_helper_pixelize'] = self.pixelize.GetValue()
+        global_settings['cross_helper_pixelize_combined'] = self.pixelize_combined.GetValue()
         global_settings['cross_helper_coverage'] = self.coverage.GetValue()
         global_settings['cross_helper_grid_offset'] = self.grid_offset.GetValue()
         global_settings['cross_helper_align_with_canvas'] = self.align_with_canvas.GetValue()

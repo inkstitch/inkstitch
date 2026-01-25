@@ -218,14 +218,14 @@ class BitmapToCrossStitch(object):
         height = self.settings['box_y'] * PIXELS_PER_MM
         offset = self._get_offset_value()
         geometries = CrossGeometries(
-            self.bitmap.shape, (width, height), max(51, self.settings['coverage']), 'simple_cross', offset, self.settings['align_with_canvas']
+            self.bitmap.shape, (width, height), max(75, self.settings['coverage']), 'simple_cross', offset, self.settings['align_with_canvas']
         )
 
         offset_x, offset_y, maxx, maxy = self.bitmap.original_shape.bounds
         offset_x -= offset[0]
         offset_y -= offset[1]
 
-        for i, box in enumerate(geometries.boxes):
+        for box in geometries.boxes:
             minx, miny, maxx, maxy = box.bounds
 
             crop_box = (minx - offset_x, miny - offset_y, maxx - offset_x, maxy - offset_y)

@@ -3,13 +3,15 @@
 # Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Grid, Group, Path
+from collections import defaultdict
+
+from inkex import Color, Grid, Group, Path, PathElement
 from inkex.units import convert_unit
-from shapely import make_valid, prepare, unary_union
-from shapely.affinity import scale, translate
-from shapely.geometry import Polygon
+from shapely import make_valid, unary_union
 
 from ..gui.cross_stitch_helper import CrossStitchHelperApp
+from ..i18n import _
+from ..stitches.utils.cross_stitch import CrossGeometries
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils.geometry import ensure_multi_polygon
 from .base import InkstitchExtension
@@ -33,6 +35,7 @@ class CrossStitchHelper(InkstitchExtension):
             'update_elements': False,
             'cross_method': 'simple_cross',
             'pixelize': False,
+            'pixelize_combined': True,
             'coverage': 50,
             'grid_offset': '0',
             'align_with_canvas': True,
@@ -73,26 +76,47 @@ class CrossStitchHelper(InkstitchExtension):
 
         if not settings['applied']:
             return
+        self.settings = settings
 
+        # collect image and fill elements
+        images = []
+        fills = []
         for element in self.elements:
-            is_image = False
             if element.name == "Image":
-                if not settings['convert_bitmap']:
-                    continue
-                is_image = True
-                self.process_image(element, settings, palette)
-            elif element.name != "FillStitch":
-                continue
+                images.append(element)
+            elif element.name == "FillStitch":
+                fills.append(element)
 
-            if settings['pixelize'] and not is_image:
-                self.pixelize(element, settings)
-            elif settings['update_elements'] and not is_image:
-                # Pixelize may split up elements
-                # we handle param settings in pixelize when enabled
-                # when pixelize is disabled, set params on each fill element
-                self.set_element_cross_stitch_params(element.node, settings)
+        # process elements
+        self._process_images(images, palette)
+        self._process_fills(fills)
+
+        # add grid
         if settings['set_grid']:
-            self.setup_page_grid(settings)
+            self.setup_page_grid()
+
+    def _process_images(self, images, palette):
+        if not self.settings['convert_bitmap']:
+            return
+        for image in images:
+            self.process_image(image, palette)
+
+    def _process_fills(self, fills):
+        if not fills:
+            return
+
+        if self.settings['pixelize']:
+            if self.settings['pixelize_combined']:
+                self.pixelize_combined(fills)
+            else:
+                for fill in fills:
+                    self.pixelize_single(fill)
+        elif self.settings['update_elements']:
+            # Pixelize may split up elements
+            # we handle param settings in pixelize when enabled
+            # when pixelize is disabled, set params on each fill element
+            for fill in fills:
+                self.set_element_cross_stitch_params(fill.node)
 
     def _get_stroke_palette(self):
         palette = []
@@ -111,22 +135,19 @@ class CrossStitchHelper(InkstitchExtension):
                 break
         return image
 
-    def process_image(self, element, settings, palette):
+    def process_image(self, element, palette):
         parent = element.node.getparent()
         index = parent.index(element.node)
-        bitmap_convert = BitmapToCrossStitch(self.svg, element, settings, palette)
+        bitmap_convert = BitmapToCrossStitch(self.svg, element, self.settings, palette)
         if bitmap_convert.prepared_image is None:
             return
         elements = bitmap_convert.svg_nodes()
         if elements:
             main_group = Group()
             for color in elements:
-                if settings['update_elements']:
+                if self.settings['update_elements']:
                     for path in color:
-                        # Pixelize may split up elements
-                        # we handle param settings in pixelize when enabled
-                        # when pixelize is disabled, set params on each fill element
-                        self.set_element_cross_stitch_params(path, settings)
+                        self.set_element_cross_stitch_params(path)
                 if len(elements) == 1:
                     main_group = color
                 else:
@@ -134,21 +155,72 @@ class CrossStitchHelper(InkstitchExtension):
             if elements:
                 parent.insert(index + 1, main_group)
 
-    def set_element_cross_stitch_params(self, element, settings):
-        box_x = settings['box_x']
-        box_y = settings['box_y']
+    def set_element_cross_stitch_params(self, element):
+        box_x = self.settings['box_x']
+        box_y = self.settings['box_y']
         grid_param = str(box_x)
         if box_y != box_x:
             grid_param += f' {box_y}'
         element.set('inkstitch:fill_method', 'cross_stitch')
-        element.set('inkstitch:cross_stitch_method', settings['cross_method'])
+        element.set('inkstitch:cross_stitch_method', self.settings['cross_method'])
         element.set('inkstitch:pattern_size_mm', grid_param)
         element.set('inkstitch:expand_mm', '0.1')
-        element.set('inkstitch:fill_coverage', settings['coverage'])
-        element.set('inkstitch:cross_offset_mm', settings['grid_offset'])
-        element.set('inkstitch:canvas_grid_origin', settings['align_with_canvas'])
+        element.set('inkstitch:fill_coverage', self.settings['coverage'])
+        element.set('inkstitch:cross_offset_mm', self.settings['grid_offset'])
+        element.set('inkstitch:canvas_grid_origin', self.settings['align_with_canvas'])
 
-    def pixelize(self, element, settings):
+    def pixelize_combined(self, fills):
+        colored_boxes = self._get_colored_boxes(fills)
+        if not colored_boxes:
+            return
+
+        cross_stitch_group = Group()
+        cross_stitch_group.label = _("Cross stitch group")
+
+        for color, boxes in colored_boxes.items():
+            color_group = Group()
+            color_group.label = color
+            # setup the path
+            outline = self._prepare_outline(boxes)
+            for polygon in outline.geoms:
+                path = Path(list(polygon.exterior.coords))
+                for interior in polygon.interiors:
+                    interior_path = Path(list(interior.coords))
+                    interior_path.close()
+                    path += interior_path
+                path.close()
+
+                path_element = PathElement()
+                path_element.set('d', str(path))
+                path_element.set('id', self.svg.get_unique_id('cross_stitch_'))
+                path_element.transform = get_correction_transform(fills[-1].node)
+                path_element.style['fill'] = color_group.label
+                if self.settings['update_elements']:
+                    self.set_element_cross_stitch_params(path_element)
+                color_group.append(path_element)
+            if len(color_group) > 1:
+                cross_stitch_group.append(color_group)
+            else:
+                cross_stitch_group.append(color_group[0])
+
+        parent = fills[-1].node.getparent()
+        index = parent.index(fills[-1].node)
+        parent.insert(index, cross_stitch_group)
+
+        for fill in fills:
+            node = fill.node
+            parent = node.getparent()
+            fill.node.delete()
+            self._remove_empty_group(parent)
+
+    def _remove_empty_group(self, group):
+        parent = group.getparent()
+        if len(group) == 0:
+            group.delete()
+        if len(parent) == 0:
+            self._remove_empty_group(parent)
+
+    def pixelize_single(self, element):
         node = element.node
         element_id = node.get_id()
 
@@ -161,7 +233,7 @@ class CrossStitchHelper(InkstitchExtension):
         else:
             new_path = node.duplicate()
 
-        pixelated_outline = self.pixelize_element(element, settings)
+        pixelated_outline = self.pixelize_element(element)
         for polygon in pixelated_outline.geoms:
             path = Path(list(polygon.exterior.coords))
             for interior in polygon.interiors:
@@ -174,47 +246,122 @@ class CrossStitchHelper(InkstitchExtension):
             new_element.set('d', str(path))
             new_element.set('id', self.svg.get_unique_id(f'{element_id}_'))
             new_element.transform = get_correction_transform(node)
-            if settings['update_elements']:
-                self.set_element_cross_stitch_params(new_element, settings)
+            if self.settings['update_elements']:
+                self.set_element_cross_stitch_params(new_element)
         new_path.delete()
         node.delete()
 
-    def pixelize_element(self, element, settings):
-        box_x = settings['box_x'] * PIXELS_PER_MM
-        box_y = settings['box_y'] * PIXELS_PER_MM
-        # enlarge shape just a little bit, so that barely connected areas combine
-        fill_shapes = element.shrink_or_grow_shape(element.shape, 0.1)
-        fill_shapes = list(fill_shapes.geoms)
-        boxes = []
-        for shape in fill_shapes:
-            square = Polygon([(0, 0), (box_x, 0), (box_x, box_y), (0, box_y)])
-            full_square_area = square.area
+    def pixelize_element(self, element):
+        geometries = CrossGeometries(
+            element.shrink_or_grow_shape(element.shape, 0.1),
+            (self.settings['box_x'] * PIXELS_PER_MM, self.settings['box_y'] * PIXELS_PER_MM),
+            self.settings['coverage'],
+            'simple_cross',
+            self._get_grid_offset(),
+            self.settings['align_with_canvas']
+        )
 
-            # start and end have to be a multiple of the stitch length
-            minx, miny, maxx, maxy = shape.bounds
-            adapted_minx = minx - minx % box_x
-            adapted_miny = miny - miny % box_y
-            adapted_maxx = maxx + box_x - maxx % box_x
-            adapted_maxy = maxy + box_y - maxy % box_y
-            prepare(shape)
+        outline = self._prepare_outline(geometries.boxes)
+        return outline
 
-            y = adapted_miny
-            while y <= adapted_maxy:
-                x = adapted_minx
-                while x <= adapted_maxx:
-                    box = translate(square, x, y)
-                    # scale just enough to avoid disconnected shapes
-                    box = scale(box, xfact=1.000000000000001, yfact=1.000000000000001)
-                    if shape.contains(box):
-                        boxes.append(box)
-                    elif shape.intersects(box):
-                        intersection = make_valid(box.intersection(shape))
-                        intersection_area = intersection.area
-                        if intersection_area / full_square_area * 100 >= settings['coverage']:
-                            boxes.append(box)
-                    x += box_x
-                y += box_y
+    def setup_page_grid(self):
+        namedview = self.svg.namedview
+        unit = self.svg.document_unit
 
+        # hide old grids
+        grids = self.svg.findall('.//inkscape:grid')
+        for grid in grids:
+            if grid.get_id().startswith("inkstitch_cross_stitch_grid_"):
+                if self.settings['remove_grids']:
+                    grid.delete()
+            else:
+                grid.set("enabled", "false")
+
+        grid_id = self.svg.get_unique_id("inkstitch_cross_stitch_grid_")
+
+        # insert new grid
+        svg_scale = self.svg.inkscape_scale
+        box_x = self.settings['box_x'] / svg_scale
+        box_x = convert_unit(f'{box_x}mm', unit)
+        box_y = self.settings['box_y'] / svg_scale
+        box_y = convert_unit(f'{box_y}mm', unit)
+        grid = Grid(attrib={
+            "id": grid_id,
+            "units": unit,
+            "originx": "0",
+            "originy": "0",
+            "spacingx": str(box_x),
+            "spacingy": str(box_y),
+            "empcolor": str(self.settings['grid_color']),
+            "empopacity": "0.30196078",
+            "color": str(self.settings['grid_color']),
+            "opacity": "0.14901961",
+            "empspacing": "1",
+            "enabled": "true",
+            "visible": "true",
+        })
+        namedview.append(grid)
+
+    def _get_grid_offset(self):
+        grid_offset = self.settings['grid_offset'].split(' ')
+        if len(grid_offset) == 1:
+            try:
+                grid_offset = (float(grid_offset[0]) * PIXELS_PER_MM, float(grid_offset[0] * PIXELS_PER_MM))
+            except TypeError:
+                grid_offset = (0, 0)
+        elif len(grid_offset) == 2:
+            try:
+                grid_offset = (float(grid_offset[0]) * PIXELS_PER_MM, float(grid_offset[1] * PIXELS_PER_MM))
+            except TypeError:
+                grid_offset = (0, 0)
+        if len(grid_offset) != 2:
+            grid_offset = (0, 0)
+        return grid_offset
+
+    def _get_colored_boxes(self, fills):
+        fill_areas = []
+        fill_areas_by_color = defaultdict(list)
+        for fill in reversed(fills):
+            # subtract areas already filled with a color
+            area = unary_union(fill_areas)
+            adapted_shape = fill.shape.difference(area)
+            if not adapted_shape.is_empty:
+                color = Color(fill.fill_color).to('named')
+                fill_areas_by_color[color].append(fill.shape.difference(area))
+            # add a little expand value to connect otherwise unconnected
+            fill_areas.append(fill.shrink_or_grow_shape(fill.shape, 0.1))
+
+        # combine all selected fill shape areas to generate all squares at once
+        full_area = ensure_multi_polygon(unary_union(fill_areas))
+        # get squares
+        grid_offset = self._get_grid_offset()
+        geometries = CrossGeometries(
+            full_area,
+            (self.settings['box_x'] * PIXELS_PER_MM, self.settings['box_y'] * PIXELS_PER_MM),
+            self.settings['coverage'],
+            'simple_cross',
+            grid_offset,
+            self.settings['align_with_canvas']
+        )
+
+        color_shape_dict = {}
+        for color, shapes in fill_areas_by_color.items():
+            color_shape_dict[color] = make_valid(unary_union(shapes))
+
+        colored_boxes = defaultdict(list)
+        for box in geometries.boxes:
+            current_color = None
+            highest_overlap = 0
+            for color, shape in color_shape_dict.items():
+                overlap = box.intersection(shape).area
+                if overlap > highest_overlap:
+                    current_color = color
+                    highest_overlap = overlap
+            if current_color is not None:
+                colored_boxes[current_color].append(box)
+        return colored_boxes
+
+    def _prepare_outline(self, boxes):
         outline = unary_union(boxes)
         # add a small buffer to connect otherwise unconnected elements
         outline = outline.buffer(0.001)
@@ -224,44 +371,6 @@ class CrossStitchHelper(InkstitchExtension):
         outline = make_valid(outline)
         # simplify has removed nodes at grid intersections.
         # the user chose to have some additional nodes (to pull the shape out, let's add some nodes back in
-        if settings['nodes']:
-            outline = outline.segmentize(box_x + 0.002)
+        if self.settings['nodes']:
+            outline = outline.segmentize(self.settings['box_x'] * PIXELS_PER_MM + 0.002)
         return ensure_multi_polygon(outline)
-
-    def setup_page_grid(self, settings):
-        namedview = self.svg.namedview
-        unit = self.svg.document_unit
-
-        # hide old grids
-        grids = self.svg.findall('.//inkscape:grid')
-        for grid in grids:
-            if grid.get_id().startswith("inkstitch_cross_stitch_grid_"):
-                if settings['remove_grids']:
-                    grid.delete()
-            else:
-                grid.set("enabled", "false")
-
-        grid_id = self.svg.get_unique_id("inkstitch_cross_stitch_grid_")
-
-        # insert new grid
-        scale = self.svg.inkscape_scale
-        box_x = settings['box_x'] / scale
-        box_x = convert_unit(f'{box_x}mm', unit)
-        box_y = settings['box_y'] / scale
-        box_y = convert_unit(f'{box_y}mm', unit)
-        grid = Grid(attrib={
-            "id": grid_id,
-            "units": unit,
-            "originx": "0",
-            "originy": "0",
-            "spacingx": str(box_x),
-            "spacingy": str(box_y),
-            "empcolor": str(settings['grid_color']),
-            "empopacity": "0.30196078",
-            "color": str(settings['grid_color']),
-            "opacity": "0.14901961",
-            "empspacing": "1",
-            "enabled": "true",
-            "visible": "true",
-        })
-        namedview.append(grid)
