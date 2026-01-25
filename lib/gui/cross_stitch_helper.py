@@ -609,7 +609,6 @@ class CrossStitchHelperFrame(wx.Frame):
         self.coverage.SetValue(self.default_settings['coverage'])
         self.grid_offset.SetValue(self.default_settings['grid_offset'])
         self.align_with_canvas.SetValue(self.default_settings['align_with_canvas'])
-        self.nodes.SetValue(self.default_settings['nodes'])
         self.grid_color.SetColour(wx.Colour(self.default_settings['grid_color']))
         self.num_colors.SetValue(self.default_settings['bitmap_num_colors'])
         self.quantize_method.SetSelection(self.default_settings['bitmap_quantize_method'])
