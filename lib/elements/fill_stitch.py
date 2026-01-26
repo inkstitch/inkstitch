@@ -940,7 +940,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     def first_stitch(self):
-        # Serves as a reverence point for the end point of the previous element
+        # Serves as a reference point for the end point of the previous element
         if self.get_command('starting_point'):
             return shgeo.Point(*self.get_command('starting_point').target_point)
         return None

@@ -521,7 +521,12 @@ class CloneElementTest(TestCase):
             self.assertEqual(len(elements), element_count())
             cmd_orig = original.get_command("ending_point")
             cmd_clone = elements[0].get_command("ending_point")
+            self.assertIsNotNone(cmd_orig)
             self.assertIsNotNone(cmd_clone)
+            # Typechecker doesn't understand assertIsNotNone, need these asserts to narrow
+            # the type to non-None. See https://github.com/python/mypy/issues/4063
+            assert cmd_orig is not None
+            assert cmd_clone is not None
             self.assertAlmostEqual(cmd_orig.target_point[0]+10, cmd_clone.target_point[0], 4)
             self.assertAlmostEqual(cmd_orig.target_point[1]+10, cmd_clone.target_point[1], 4)
 
@@ -548,7 +553,12 @@ class CloneElementTest(TestCase):
             self.assertEqual(len(elements), element_count())
             cmd_orig = original.get_command("ending_point")
             cmd_clone = elements[0].get_command("ending_point")
+            self.assertIsNotNone(cmd_orig)
             self.assertIsNotNone(cmd_clone)
+            # Typechecker doesn't understand assertIsNotNone, need these asserts to narrow
+            # the type to non-None. See https://github.com/python/mypy/issues/4063
+            assert cmd_orig is not None
+            assert cmd_clone is not None
             self.assertAlmostEqual(cmd_orig.target_point[0]+10, cmd_clone.target_point[0], 4)
             self.assertAlmostEqual(cmd_orig.target_point[1]+10, cmd_clone.target_point[1], 4)
 

@@ -339,6 +339,9 @@ def ensure_symbol(svg, command) -> None:
     defs = svg.defs
     if defs.find(path) is None:
         symbol = deepcopy(symbol_defs().find(path))
+        if symbol is None:
+            # We should, essentially, never get here.
+            raise ValueError(f"Unable to find {command} in Ink/Stitch symbols!")
         symbol.transform = 'scale(0.25)'
         symbol.style['opacity'] = 0.7
         defs.append(symbol)
