@@ -1,7 +1,7 @@
 ---
 title: "Barstitch"
 permalink: /fonts/barstitch_bold/
-last_modified_at: 2025-02-10
+last_modified_at: 2026-01-26
 toc: false
 preview_image:
   - url: /assets/images/fonts/barstitch_bold.png
@@ -14,12 +14,15 @@ preview_image:
     height: 45
   - url: /assets/images/fonts/barstitch_cloudy.png
     height: 45
+  - url: /assets/images/fonts/barstitch_crosses.jpg
+    height: 45
 data_title:
   - barstitch_bold
   - barstitch_regular
   - barstitch_textured
   - barstitch_mandala
   - barstitch_cloudy
+  - barstitch_crosses
 ---
 {% include font_infos.html %}
 
