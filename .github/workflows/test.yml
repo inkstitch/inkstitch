@@ -6,7 +6,10 @@ on:
   push:
     branches:
       - main
-
+  workflow_dispatch: {}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-test
+  cancel-in-progress: true
 jobs:
   test:
     runs-on: ubuntu-22.04
