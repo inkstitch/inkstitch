@@ -30,7 +30,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
   ![Apesplit](/assets/images/fonts/apesplit.jpg)
 * [Barstitch crosses](/fonts/barstitch_bold/)
 
-  ![Braille](/assets/images/fonts/barstitch_crosses.jpg)
+  ![Barstitch  crosses](/assets/images/fonts/barstitch_crosses.jpg)
  
 * [Braille](/fonts/braille/)
 
