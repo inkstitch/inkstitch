@@ -29,6 +29,9 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Apesplit](/fr/onts/apespit/)
     
   ![Apesplit](/assets/images/fonts/apesplit.jpg)
+* [Barstitch crosses](/fr/fonts/barstitch_bold/)
+
+  ![Barstitch  crosses](/assets/images/fonts/barstitch_crosses.jpg)
 * [Braille](/fonts/braille/)
 
   ![Braille](/assets/images/fonts/braille.png)
