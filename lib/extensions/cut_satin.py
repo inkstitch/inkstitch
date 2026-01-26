@@ -30,7 +30,7 @@ class CutSatin(InkstitchExtension):
                 self.index = parent.index(satin.node)
                 self.label_index = 0
 
-                commands = satin.get_command("satin_cut_point", True)
+                commands = satin.get_commands("satin_cut_point")
 
                 if commands is None:
                     # L10N will have the satin's id prepended, like this:

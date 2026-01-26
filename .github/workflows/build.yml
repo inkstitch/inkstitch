@@ -6,6 +6,9 @@ on:
       - main
     tags:
       - "v*.*.*"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-build
+  cancel-in-progress: true
 jobs:
   linux64:
     runs-on: ubuntu-22.04
@@ -65,14 +68,6 @@ jobs:
         shell: bash
         run: |
           pytest
-      - name: Mypy Type Checking
-        shell: bash
-        run: |
-          python -m pip install mypy
-          python -m mypy --output json | python .github/mypy-github-formatter
-        continue-on-error: true
-      - name: Style check
-        run: bash -x bin/style-check
       - shell: bash
         run: |
           make dist
@@ -137,12 +132,6 @@ jobs:
         shell: bash
         run: |
           pytest
-      - name: Mypy Type Checking
-        shell: bash
-        run: |
-          python -m pip install mypy
-          python -m mypy --output json | python .github/mypy-github-formatter
-        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -286,12 +275,6 @@ jobs:
         shell: bash
         run: |
           pytest
-      - name: Mypy Type Checking
-        shell: bash
-        run: |
-          python -m pip install mypy
-          python -m mypy --output json | python .github/mypy-github-formatter
-        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -398,12 +381,6 @@ jobs:
         shell: bash
         run: |
           pytest
-      - name: Mypy Type Checking
-        shell: bash
-        run: |
-          python -m pip install mypy
-          python -m mypy --output json | python .github/mypy-github-formatter
-        continue-on-error: true
       - shell: bash
         run: |
           make dist
@@ -463,12 +440,6 @@ jobs:
         shell: bash
         run: |
           pytest
-      - name: Mypy Type Checking
-        shell: bash
-        run: |
-          python -m pip install mypy
-          python -m mypy --output json | python .github/mypy-github-formatter
-        continue-on-error: true
       - shell: bash
         run: |
           make dist

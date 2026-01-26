@@ -9,7 +9,8 @@ from itertools import groupby
 
 import numpy
 from shapely.geometry import (GeometryCollection, LinearRing, LineString,
-                              MultiLineString, MultiPoint, MultiPolygon)
+                              MultiLineString, MultiPoint, MultiPolygon, Polygon)
+from shapely.geometry.base import BaseGeometry
 from shapely.geometry import Point as ShapelyPoint
 
 
@@ -138,16 +139,16 @@ def ensure_geometry_collection(thing):
     return GeometryCollection([thing])
 
 
-def ensure_multi_polygon(thing, min_size=0):
+def ensure_multi_polygon(thing: BaseGeometry, min_size=0) -> MultiPolygon:
     """Given a shapely geometry, return a MultiPolygon"""
     multi_polygon = MultiPolygon()
     if thing.is_empty:
         return multi_polygon
-    if thing.geom_type == "MultiPolygon":
+    if isinstance(thing, MultiPolygon):
         multi_polygon = thing
-    elif thing.geom_type == "Polygon":
+    elif isinstance(thing, Polygon):
         multi_polygon = MultiPolygon([thing])
-    elif thing.geom_type == "GeometryCollection":
+    elif isinstance(thing, GeometryCollection):
         multipolygon = []
         for shape in thing.geoms:
             if shape.geom_type == "MultiPolygon":

@@ -7,6 +7,7 @@ import atexit  # to save svg file on exit
 import time    # to measure time of code block, use time.monotonic() instead of time.time()
 import traceback
 from datetime import datetime
+from typing import TypeVar, Callable, Any, cast
 
 from contextlib import contextmanager  # to measure time of with block
 from pathlib import Path  # to work with paths as objects
@@ -22,6 +23,9 @@ from ..utils.paths import get_ini
 
 import logging
 logger = logging.getLogger("inkstitch.debug")   # create module logger with name 'inkstitch.debug'
+
+# See https://mypy.readthedocs.io/en/stable/generics.html#declaring-decorators
+F = TypeVar('F', bound=Callable[..., Any])
 
 # to log messages if previous debug logger is not enabled
 logger_inkstich = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
@@ -163,7 +167,7 @@ class Debug(object):
         logger.info(msg)
 
     # decorator to measure time of function
-    def time(self, func):
+    def time(self, func: F) -> F:
         def decorated(*args, **kwargs):
             if self.enabled:
                 self.raw_log("entering %s()", func.__name__)
@@ -177,7 +181,7 @@ class Debug(object):
 
             return result
 
-        return decorated
+        return cast(F, decorated)
 
     @check_enabled
     @unwrap_arguments

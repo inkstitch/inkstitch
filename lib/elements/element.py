@@ -8,7 +8,7 @@ import json
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
-from typing import List, Optional
+from typing import List, Optional, TypeVar, Callable, Any
 
 import inkex
 import numpy as np
@@ -55,13 +55,18 @@ class Param(object):
         return "Param(%s)" % vars(self)
 
 
+# See https://mypy.readthedocs.io/en/stable/generics.html#declaring-decorators
+F = TypeVar('F', bound=Callable[..., Any])
+
+
 # Decorate a member function or property with information about
 # the embroidery parameter it corresponds to
-def param(*args, **kwargs):
+def param(*args, **kwargs) -> Callable[[F], F]:
     p = Param(*args, **kwargs)
 
-    def decorator(func):
-        func.param = p
+    def decorator(func: F) -> F:
+        # Functions don't have the `param` attribute defined, but we tack it on anyway
+        func.param = p  # type:ignore[attr-defined]
         return func
 
     return decorator
@@ -522,14 +527,11 @@ class EmbroideryElement(object):
         return len(self.get_commands(command)) > 0
 
     @cache
-    def get_command(self, command: str, multiple: bool = False) -> Optional[Command]:
+    def get_command(self, command: str) -> Optional[Command]:
         commands = self.get_commands(command)
 
         if commands:
-            if multiple:
-                return commands
-            else:
-                return commands[0]
+            return commands[0]
         else:
             return None
 
