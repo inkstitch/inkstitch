@@ -14,12 +14,15 @@ preview_image:
     height: 45
   - url: /assets/images/fonts/barstitch_cloudy.png
     height: 45
+  - url: /assets/images/fonts/barstitch_crosses.jpg
+    height: 45
 data_title:
   - barstitch_bold
   - barstitch_regular
   - barstitch_textured
   - barstitch_mandala
   - barstitch_cloudy
+  - barstitch_crosses
 ---
 {% include font_infos_fr.html %}
 
