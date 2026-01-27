@@ -628,6 +628,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.apply_settings()
 
     def apply_settings(self):
+        self.settings['square'] = self.x_only_checkbox.GetValue()
         self.settings['box_x'] = self.box_x.GetValue()
         self.settings['box_y'] = self.box_y.GetValue()
         self.settings['update_elements'] = self.apply_to_element.GetValue()
