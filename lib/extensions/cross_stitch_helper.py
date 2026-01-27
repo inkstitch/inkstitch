@@ -217,7 +217,7 @@ class CrossStitchHelper(InkstitchExtension):
         parent = group.getparent()
         if len(group) == 0:
             group.delete()
-        if len(parent) == 0:
+        if parent and len(parent) == 0:
             self._remove_empty_group(parent)
 
     def pixelize_single(self, element):
