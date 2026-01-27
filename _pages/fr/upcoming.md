@@ -68,6 +68,9 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Neon blinking](/fr/fonts/neon/)
 
   ![Neon blinking](/assets/images/fonts/neon_blinking.png)
+* [Precious](/fr/fonts/precious/)
+
+  ![Precious](/assets/images/fonts/precious.jpg)
 * [Priscilla](/fr/fonts/priscillaa/)
 
   ![Priscilla](/assets/images/fonts/priscilla.png)
