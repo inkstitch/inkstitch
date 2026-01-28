@@ -9,7 +9,7 @@ preview_image:
  - url: /assets/images/fonts/animaux.png
    height: 35
  - url: /assets/images/fonts/tieralphaabet.png
-   height: 45
+   height: 35
 data_title:
   - animals
   - animaux
