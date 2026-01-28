@@ -1,5 +1,5 @@
 ---
-title: "animals"
+title: "Animals"
 permalink: /fonts/animals/
 last_modified_at: 2026-01-28
 toc: false
@@ -8,7 +8,7 @@ preview_image:
    height: 35
  - url: /assets/images/fonts/animaux.png
    height: 35
- - url: /assets/images/fonts/tieralphaabet.png
+ - url: /assets/images/fonts/tieralphabet.png
    height: 35
 data_title:
   - animals
