@@ -23,6 +23,12 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Allegria 55](/fr/fonts/allegria/)
 
   ![Allegria 55](/assets/images/fonts/allegria55.png)
+* [Animals](/fr/fonts/animals/)
+
+  ![Animals english](/assets/images/fonts/animals.png)
+  ![Animals français](/assets/images/fonts/animaux.png)
+  ![Tieralphabet](/assets/images/fonts/tieralphabet.png)
+  
 * [Apex simple small AGS](/fr/fonts/apex/)
 
   ![Apex simple small](/assets/images/fonts/apex_simple_small_AGS.png)
