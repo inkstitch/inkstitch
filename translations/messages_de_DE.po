@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-01-23 01:56+0000\n"
-"PO-Revision-Date: 2026-01-23 01:56\n"
+"PO-Revision-Date: 2026-01-28 02:00\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +70,7 @@ msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Amitaclo. Diese S
 #. description of font in fonts/apesplit
 #: inkstitch-fonts-metadata.py:18
 msgid "120 mm tall monogram font."
-msgstr ""
+msgstr "120 mm große Monogramm-Schrift."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:20
@@ -1884,13 +1884,15 @@ msgstr "Kreuzstich-Methode"
 
 #: lib/elements/fill_stitch.py:761
 msgid "Thread count"
-msgstr ""
+msgstr "Fadenanzahl"
 
 #: lib/elements/fill_stitch.py:762
 msgid "Defines the thread count for each stitch.\n"
 "Thread count must be an even number.\n"
 "Half crosses are stitched with an odd thread count."
-msgstr ""
+msgstr "Definiert die Anzahl der Fäden für jeden Stitch.\n"
+"Die Anzahl muss eine gerade Zahl sein.\n"
+"Halbe Kreuzstitche benötigen eine ungerade Fadenanzahl."
 
 #: lib/elements/fill_stitch.py:775
 msgid "Pattern size"
@@ -2460,11 +2462,11 @@ msgstr "Zickzackstiche ziehen den Stoff zusammen, was zu einer schmaleren Breite
 
 #: lib/elements/stroke.py:289
 msgid "Zig-zag angle"
-msgstr ""
+msgstr "Zick-Zack-Winkel"
 
 #: lib/elements/stroke.py:291
 msgid "Rotate zig-zag direction by this angle (degrees). Creates spoke/radial effects on curves."
-msgstr ""
+msgstr "Drehe die Zick-Zack-Richtung um diesen Winkel (Grad). Erzeugt einen Strahleneffekt bei Kurven."
 
 #: lib/elements/stroke.py:309
 msgid "Number of lines"
@@ -2560,7 +2562,7 @@ msgstr "Start- und Endpunkt vertauschen"
 
 #: lib/elements/stroke.py:481
 msgid "Reverse satin ripple rails. Default: automatically detect and fix a reversed rail."
-msgstr ""
+msgstr "Außenkonturen der Satin-Führungslinie umkehren. In der Standardeinstellung werden gegenläufig verlaufende Linien automatisch korrigiert."
 
 #: lib/elements/stroke.py:496
 msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
@@ -7729,27 +7731,27 @@ msgstr "Objektbefehle hinzufügen"
 
 #: inx/inkstitch_object_commands.inx:14
 msgid "Command position"
-msgstr ""
+msgstr "Befehlposition"
 
 #: inx/inkstitch_object_commands.inx:15
 msgid "Random"
-msgstr ""
+msgstr "Zufällig"
 
 #: inx/inkstitch_object_commands.inx:16
 msgid "Top left"
-msgstr ""
+msgstr "Oben links"
 
 #: inx/inkstitch_object_commands.inx:17
 msgid "Top right"
-msgstr ""
+msgstr "Oben rechts"
 
 #: inx/inkstitch_object_commands.inx:18
 msgid "Bottom left"
-msgstr ""
+msgstr "Unten links"
 
 #: inx/inkstitch_object_commands.inx:19
 msgid "Bottom right"
-msgstr ""
+msgstr "Unten rechts"
 
 #: inx/inkstitch_object_commands.inx:25
 msgid "Add commands which affect selected elememts"
