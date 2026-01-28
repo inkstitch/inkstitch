@@ -22,6 +22,11 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Allegria 55](/fonts/allegria/)
 
   ![Allegria 55](/assets/images/fonts/allegria55.png)
+* [Animals](/fr/fonts/animals/)
+
+  ![Animals english](/assets/images/fonts/animals.png)
+  ![Animals français](/assets/images/fonts/animaux.png)
+  ![Tieralphabet](/assets/images/fonts/tieralphabet.png)
 * [Apex simple small AGS](/fonts/apex/)
 
   ![Apex simple small](/assets/images/fonts/apex_simple_small_AGS.png)
