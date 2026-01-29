@@ -7,7 +7,7 @@ import time
 from collections import defaultdict
 from copy import copy
 from itertools import chain
-from typing import List, Optional, Tuple, cast
+from typing import List, Optional, Tuple, Union, cast
 
 from inkex import BaseElement, Group, Path, PathElement
 from networkx import MultiGraph, is_empty
@@ -212,7 +212,7 @@ class TartanSvgGroup:
         outline = LineString()
         travel_linestring = LineString()
         routed_shapes = []
-        start_distance = 0
+        start_distance = 0.0
         for edge in path:
             start, end = edge
             if edge.is_segment():
@@ -232,6 +232,7 @@ class TartanSvgGroup:
                 if travel_linestring.is_empty:
                     outline_index = which_outline(outline_shape, start)
                     outline = ensure_multi_line_string(outline_shape.boundary).geoms[outline_index]
+                    # outline.project's result will be unwrapped into a float.
                     start_distance = outline.project(Point(start))
                     travel_linestring = self._get_travel(start, end, outline)
                 else:
@@ -261,14 +262,14 @@ class TartanSvgGroup:
             Polygons are wrapped in dictionaries to preserve information about start and end point.
         """
         start, end = edge
-        routed = []
+        routed: List[Union[dict, LineString]] = []
         if geometry_type == 'polygon' and polygons is not None:
             polygon = self._find_polygon(polygons, Point(start))
             if polygon:
                 routed.append({'shape': polygon, 'start': start, 'end': end})
         elif geometry_type == 'linestring':
             try:
-                line = fill_stitch_graph[start][end]['segment'].get('geometry')
+                line = cast(LineString, fill_stitch_graph[start][end]['segment'].get('geometry'))
             except KeyError:
                 line = LineString([start, end])
             if not line.is_empty:
@@ -326,8 +327,8 @@ class TartanSvgGroup:
             for polygon in elements[0]:
                 bounding_coords = polygon.minimum_rotated_rectangle.exterior.coords
                 routing_line = LineString([bounding_coords[0], bounding_coords[2]])
-                routing_line = ensure_multi_line_string(routing_line.intersection(polygon)).geoms
-                routed[0].append(LineString([routing_line[0].coords[0], routing_line[-1].coords[-1]]))
+                routing_line_geoms = ensure_multi_line_string(routing_line.intersection(polygon)).geoms
+                routed[0].append(LineString([routing_line_geoms[0].coords[0], routing_line_geoms[-1].coords[-1]]))
             routed[1].extend(elements[1])
             routing_lines[color] = routed
         return routing_lines
