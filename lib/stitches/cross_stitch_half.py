@@ -37,7 +37,9 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     max_stitch_length = fill.max_cross_stitch_length
     cross_stitch_method = fill.cross_stitch_method
 
-    cross_geoms = CrossGeometries(fill, shape, cross_stitch_method, original_shape)
+    cross_geoms = CrossGeometries(
+        shape, fill.pattern_size, fill.fill_coverage, cross_stitch_method, fill.cross_offset, fill.canvas_grid_origin, original_shape
+    )
 
     if not cross_geoms.boxes:
         return []
