@@ -23,5 +23,5 @@ Venezia small **DOIT** être brodé avec un fil fin (60) et une aiguille fine (6
 
 
 
-{%include folder-galleries path="fonts/neon/" %}
+{%include folder-galleries path="fonts/venezia/" %}
 
