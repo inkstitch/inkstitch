@@ -32,7 +32,7 @@ class CrossStitchHelper(InkstitchExtension):
             'square': True,
             'box_x': 3,
             'box_y': 3,
-            'update_elements': False,
+            'set_params': True,
             'cross_method': 'simple_cross',
             'pixelize': False,
             'pixelize_combined': True,
@@ -111,7 +111,7 @@ class CrossStitchHelper(InkstitchExtension):
             else:
                 for fill in fills:
                     self.pixelize_single(fill)
-        elif self.settings['update_elements']:
+        elif self.settings['set_params']:
             # Pixelize may split up elements
             # we handle param settings in pixelize when enabled
             # when pixelize is disabled, set params on each fill element
@@ -145,7 +145,7 @@ class CrossStitchHelper(InkstitchExtension):
         if elements:
             main_group = Group()
             for color in elements:
-                if self.settings['update_elements']:
+                if self.settings['set_params']:
                     for path in color:
                         self.set_element_cross_stitch_params(path)
                 if len(elements) == 1:
@@ -195,7 +195,7 @@ class CrossStitchHelper(InkstitchExtension):
                 path_element.set('id', self.svg.get_unique_id('cross_stitch_'))
                 path_element.transform = get_correction_transform(fills[-1].node)
                 path_element.style['fill'] = color_group.label
-                if self.settings['update_elements']:
+                if self.settings['set_params']:
                     self.set_element_cross_stitch_params(path_element)
                 color_group.append(path_element)
             if len(color_group) > 1:
@@ -246,7 +246,7 @@ class CrossStitchHelper(InkstitchExtension):
             new_element.set('d', str(path))
             new_element.set('id', self.svg.get_unique_id(f'{element_id}_'))
             new_element.transform = get_correction_transform(node)
-            if self.settings['update_elements']:
+            if self.settings['set_params']:
                 self.set_element_cross_stitch_params(new_element)
         new_path.delete()
         node.delete()

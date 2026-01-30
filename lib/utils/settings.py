@@ -44,7 +44,7 @@ DEFAULT_SETTINGS = {
     'square': True,
     'cross_helper_box_x': 3,
     'cross_helper_box_y': 3,
-    'cross_helper_update_elements': False,
+    'cross_helper_set_params': True,
     'cross_helper_cross_method': 'simple_cross',
     'cross_helper_pixelize': False,
     'cross_helper_pixelize_combined': True,

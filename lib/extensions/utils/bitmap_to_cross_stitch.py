@@ -36,7 +36,7 @@ class BitmapToCrossStitch(object):
                                         rotations or skewing is not applied
             * self.background_color:    rgb color which appears most in the image
 
-           Input values:
+           Parameters:
            * svg:       the svg document
            * bitmap:    Ink/Stitch Image insance
            * settings:  dictionary with cross stitch settings
@@ -123,7 +123,7 @@ class BitmapToCrossStitch(object):
         # Create an image with the background color
         background = Image.new("RGBA", self.reduced_image.size, self.settings['bitmap_background_color'])
 
-        # Fill up transparent areas, some quantize methods (1) do not work on other color modes
+        # Fill up transparent areas, some quantize methods do not work on transparent color modes
         if self.reduced_image.mode != "RGB":
             # for this to work with every image mode, ensure rgba
             # add background color and composite
