@@ -22,4 +22,4 @@ data_title:
 
 
 
-{%include folder-galleries path="fonts/venezia/" %}
+{%include folder-galleries path="fonts/flowery_crosses/" %}
