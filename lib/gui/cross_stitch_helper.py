@@ -325,7 +325,10 @@ class CrossStitchHelperFrame(wx.Frame):
         self.background_color.Bind(wx.EVT_COLOURPICKER_CHANGED, self.update_bitmap_panel)
 
         self.remove_background_label = wx.StaticText(self.bitmap, label=_("Remove background"))
-        self.remove_background = wx.Choice(self.bitmap, choices=[_("Keep background"), _("Remove background color"), _("Remove most common color")])
+        self.remove_background = wx.Choice(
+            self.bitmap,
+            choices=[_("Keep background"), _("Remove nearest to background color"), _("Remove most common color")]
+        )
         remove_background_tooltip_text = _("Removes the background color.")
         self.remove_background_label.SetToolTip(remove_background_tooltip_text)
         self.remove_background.SetToolTip(remove_background_tooltip_text)
@@ -567,10 +570,6 @@ class CrossStitchHelperFrame(wx.Frame):
             return
         self.cross_bitmap.apply_color_corrections()
         cross_bitmap = self.cross_bitmap.reduced_image
-        if self.settings['bitmap_remove_background'] != 0:
-            cross_bitmap = self.cross_bitmap.add_alpha(cross_bitmap)
-        else:
-            cross_bitmap = cross_bitmap.convert("RGBA")
         cross_bitmap = self.cross_bitmap.apply_transform(cross_bitmap)
         cross_bitmap = self.cross_bitmap.apply_clip(cross_bitmap)
         width, height = cross_bitmap.size
@@ -621,7 +620,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['grid_offset'] = self.grid_offset.GetValue()
         self.settings['align_with_canvas'] = self.align_with_canvas.GetValue()
         self.settings['set_grid'] = self.setup_grid.GetValue()
-        self.settings['grid_color'] = self.grid_color.GetColour().GetRGB()
+        self.settings['grid_color'] = self.grid_color.GetColour().Get()
         self.settings['remove_grids'] = self.remove_grids.GetValue()
         self.settings['color_method'] = self.color_selection_method.GetSelection()
         self.settings['convert_bitmap'] = self.convert_bitmap.GetValue()
@@ -632,7 +631,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['bitmap_color_balance'] = self.color_balance.GetValue() / 100
         self.settings['bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
         self.settings['bitmap_gimp_palette'] = self.gimp_palette.GetPath()
-        self.settings['bitmap_background_color'] = self.background_color.GetColour().GetRGB()
+        self.settings['bitmap_background_color'] = self.background_color.GetColour().Get()
         self.settings['bitmap_remove_background'] = self.remove_background.GetSelection()
 
     def get_cross_method(self):
@@ -655,7 +654,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_helper_grid_offset'] = self.grid_offset.GetValue()
         global_settings['cross_helper_align_with_canvas'] = self.align_with_canvas.GetValue()
         global_settings['cross_helper_set_grid'] = self.setup_grid.GetValue()
-        global_settings['cross_helper_grid_color'] = self.grid_color.GetColour().GetRGB()
+        global_settings['cross_helper_grid_color'] = self.grid_color.GetColour().Get()
         global_settings['cross_helper_remove_grids'] = self.remove_grids.GetValue()
         global_settings['cross_helper_convert_bitmap'] = self.convert_bitmap.GetValue()
         global_settings['cross_helper_color_method'] = self.color_selection_method.GetSelection()
@@ -666,7 +665,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_bitmap_contrast'] = self.contrast.GetValue() / 100
         global_settings['cross_bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
         global_settings['cross_bitmap_gimp_palette'] = self.gimp_palette.GetPath()
-        global_settings['cross_bitmap_background_color'] = self.background_color.GetColour().GetRGB()
+        global_settings['cross_bitmap_background_color'] = self.background_color.GetColour().Get()
         global_settings['cross_bitmap_remove_background'] = self.remove_background.GetSelection()
 
         self.GetTopLevelParent().Close()

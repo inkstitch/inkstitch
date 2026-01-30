@@ -35,6 +35,7 @@ class BitmapToCrossStitch(object):
                                         known limitations:
                                         rotations or skewing is not applied
             * self.background_color:    rgb color or None
+            * self.initial_alpha:       a mask for the intial alpha channel
 
            Parameters:
            * svg:       the svg document
@@ -47,7 +48,7 @@ class BitmapToCrossStitch(object):
 
         self.svg = svg
         self.bitmap = bitmap
-        self.background_color = (0, 0, 0)
+        self.background_color = None
         self.settings = settings
         self.palette = palette
         self.prepared_image = None
@@ -67,9 +68,16 @@ class BitmapToCrossStitch(object):
         with Image.open(image) as img:
             self.image = img
             self.prepared_image = self.image.resize((width, height))
-            self.reduced_image = self.prepared_image
+
+        # Get initial alpha mask
+        self.prepared_image.convert("RGBA")
+        self.reduced_image = self.prepared_image
+
+        self.initial_alpha = self.reduced_image.getchannel("A")
+        self.initial_alpha = self.initial_alpha.point(lambda a: 255 if a > 0 else 0)
 
         self.apply_color_corrections()
+
         # Transform after color adaptions to avoid additional background color sections
         self.reduced_image = self.apply_transform(self.reduced_image)
 
@@ -109,7 +117,6 @@ class BitmapToCrossStitch(object):
             return
 
         self.reduced_image = self.prepared_image
-        self.reduced_image = self.reduced_image.convert("RGBA")
 
         color_balance_enhancer = ImageEnhance.Color(self.reduced_image)
         self.reduced_image = color_balance_enhancer.enhance(self.settings['bitmap_color_balance'])
@@ -120,12 +127,13 @@ class BitmapToCrossStitch(object):
         contrast_enhancer = ImageEnhance.Brightness(self.reduced_image)
         self.reduced_image = contrast_enhancer.enhance(self.settings['bitmap_contrast'])
 
-        # Create an image with the background color
-        background = Image.new("RGBA", self.reduced_image.size, self.settings['bitmap_background_color'])
-
         # Fill up transparent areas, some quantize methods do not work on transparent color modes
         if self.reduced_image.mode != "RGB":
-            # for this to work with every image mode, ensure rgba
+            # Create an image with the most prominent color (when we use the most prominent color, using this as the background color
+            # will not change the color selections
+            most_common_color = self._get_main_color(self.reduced_image, False)
+            background = Image.new("RGBA", self.reduced_image.size, most_common_color)
+
             # add background color and composite
             # convert to rgb mode
             self.reduced_image = self.reduced_image.convert("RGBA")
@@ -134,7 +142,7 @@ class BitmapToCrossStitch(object):
 
         color_palette = self._get_color_palette()
         if not color_palette:
-            # used for color_method 1 or when we couldn't get sufficient palette data for the other methods
+            # used for color_method 1 if selected or if we failed to get palette data
             num_colors = self.settings['bitmap_num_colors']
             if num_colors == 0:
                 num_colors = 1
@@ -144,32 +152,43 @@ class BitmapToCrossStitch(object):
             palette_image.putpalette(color_palette)
             self.reduced_image = self.reduced_image.quantize(palette=palette_image, dither=Image.NONE)
 
-        # Set overall background color
-        if self.settings['bitmap_remove_background'] == 0:
-            self.background = None
-        if self.settings['bitmap_remove_background'] < 2:
-            # adapt background color, it may have changed during color reduction
-            background = background.convert("RGB")
-            background = background.quantize(palette=self.reduced_image, dither=Image.NONE)
-            self.background_color = self._get_main_color(background)
-        else:
-            self.background_color = self._get_main_color(self.reduced_image)
+        # apply initial alpha mask
+        self.reduced_image = self.reduced_image.convert('RGBA')
+        self.reduced_image.putalpha(self.initial_alpha)
 
-    def add_alpha(self, image):
-        # Convert image to rgba and generate background image
-        image = image.convert("RGBA")
-        background = Image.new("RGBA", image.size, self.background_color)
+        # set background alpha (optional)
+        if self.settings['bitmap_remove_background']:
+            # update background color for most common color option now, after the initial transparent parts are transparent again
+            if self.settings['bitmap_remove_background'] == 1:
+                '''
+                background = Image.new("RGBA", self.reduced_image.size, self.settings['bitmap_background_color'])
+                self.background_color = self._nearest_color(background.getcolors()[0][1])
+                '''
+                self.background_color = self._nearest_color(self.settings['bitmap_background_color'])
+            elif self.settings['bitmap_remove_background'] == 2:
+                self.background_color = self._get_main_color(self.reduced_image, False)
 
-        # Create a mask from the difference of image and background image
-        diff = ImageChops.difference(image, background)
-        mask = diff.convert("L").point(lambda x: 255 if x else 0)
+            background = Image.new("RGBA", self.reduced_image.size, self.background_color)
+            diff = ImageChops.difference(self.reduced_image, background).convert("L")
+            background_mask = diff.point(lambda x: 255 if x else 0)
+            mask = ImageChops.multiply(self.initial_alpha, background_mask)
+            self.reduced_image.putalpha(mask)
 
-        # Apply mask to image
-        image.putalpha(mask)
+    def _nearest_color(self, target_color):
+        def distance(p):
+            r, g, b, a = p
+            return (r - target_color[0])**2 + (g - target_color[1])**2 + (b - target_color[2])**2 + (255)
 
-        return image
+        # Find the nearest RGBA color
+        img = self.reduced_image.convert("RGBA")
+        colors = img.getcolors()
+        # Filter transparent areas
+        colors = [color for count, color in colors if color[3] > 0]
+        nearest = min(colors, key=distance)
+        return nearest
 
     def apply_clip(self, image):
+        # clips the image (used in cross stitch helper gui)
         # ensure rgba mode
         image = image.convert("RGBA")
 
@@ -231,8 +250,8 @@ class BitmapToCrossStitch(object):
             crop_box = (minx - offset_x, miny - offset_y, maxx - offset_x, maxy - offset_y)
             cropped = self.reduced_image.crop(crop_box)
             main_color = self._get_main_color(cropped)
-            if main_color != self.background_color:
-                color_boxes[main_color].append(box)
+            if main_color[3] > 0:
+                color_boxes[main_color[:3]].append(box)
 
         for color, boxes in color_boxes.items():
             color_group = Group()
@@ -282,11 +301,19 @@ class BitmapToCrossStitch(object):
                 pass
         return offset_value
 
-    def _get_main_color(self, image):
+    def _get_main_color(self, image, include_alpha=True):
         '''Returns the rgb value of the most prominent color within the given image
         '''
-        rgb_image = image.convert("RGB")
-        return max(rgb_image.getcolors(), key=itemgetter(0))[1]
+        image = image.convert('RGBA')
+        if include_alpha:
+            return max(image.getcolors(), key=itemgetter(0))[1]
+        else:
+            colors = [
+                (count, (r, g, b, a))
+                for count, (r, g, b, a) in image.getcolors(image.size[0] * image.size[1])
+                if a > 0
+            ]
+            return max(colors, key=itemgetter(0))[1]
 
     def _get_color_palette(self):
         '''Catches the colors for color method 1, 2 and 3
