@@ -22,7 +22,6 @@ class CrossStitchHelperFrame(wx.Frame):
         self.update()
         self.enable_bitmap_settings()
         self.update_color_selection_method()
-        self.on_background_change()
         self.Show()
 
     def apply_global_settings(self):
@@ -51,8 +50,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.brightness.SetValue(int(global_settings['cross_bitmap_brightness'] * 100))
         self.contrast.SetValue(int(global_settings['cross_bitmap_contrast'] * 100))
         self.background_color.SetColour(wx.Colour(global_settings['cross_bitmap_background_color']))
-        self.background_main_color.SetValue(global_settings['cross_bitmap_background_main_color'])
-        self.ignore_background.SetValue(global_settings['cross_bitmap_ignore_background'])
+        self.remove_background.SetSelection(global_settings['cross_bitmap_remove_background'])
 
     def widgets_and_panels(self):
         self.main_panel = wx.Panel(self, wx.ID_ANY)
@@ -324,22 +322,14 @@ class CrossStitchHelperFrame(wx.Frame):
         self.background_color_label.SetToolTip(background_tooltip_text)
         self.background_color = wx.ColourPickerCtrl(self.bitmap, colour=wx.BLACK)
         self.background_color.SetToolTip(background_tooltip_text)
-        self.background_color.Bind(wx.EVT_COLOURPICKER_CHANGED, self.on_background_change)
-        self.background_main_color = wx.CheckBox(self.bitmap)
-        background_main_color_tooltip_text = _("Use most common color")
-        self.background_main_color.SetToolTip(background_main_color_tooltip_text)
-        self.background_main_color.Bind(wx.EVT_CHECKBOX, self.on_background_change)
-        background_color_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        background_color_sizer.Add(self.background_color, 0, wx.RIGHT, 10)
-        background_color_sizer.Add(self.background_main_color, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 0)
+        self.background_color.Bind(wx.EVT_COLOURPICKER_CHANGED, self.update_bitmap_panel)
 
-        self.ignore_background_label = wx.StaticText(self.bitmap, label=_("Remove background"))
-        self.rgb_color_list_label.SetToolTip(rgb_color_tooltip)
-        self.ignore_background = wx.CheckBox(self.bitmap)
+        self.remove_background_label = wx.StaticText(self.bitmap, label=_("Remove background"))
+        self.remove_background = wx.Choice(self.bitmap, choices=[_("Keep background"), _("Remove background color"), _("Remove most common color")])
         remove_background_tooltip_text = _("Removes the background color.")
-        self.ignore_background_label.SetToolTip(remove_background_tooltip_text)
-        self.ignore_background.SetToolTip(remove_background_tooltip_text)
-        self.ignore_background.Bind(wx.EVT_CHECKBOX, self.update_bitmap_panel)
+        self.remove_background_label.SetToolTip(remove_background_tooltip_text)
+        self.remove_background.SetToolTip(remove_background_tooltip_text)
+        self.remove_background.Bind(wx.EVT_CHOICE, self.update_bitmap_panel)
 
         bitmap_grid_sizer.AddMany([
             (convert_bitmap_label, 0, wx.ALIGN_CENTER_VERTICAL),
@@ -361,9 +351,9 @@ class CrossStitchHelperFrame(wx.Frame):
             (self.contrast_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (contrast_sizer, 1, wx.EXPAND),
             (self.background_color_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (background_color_sizer, 1, wx.EXPAND),
-            (self.ignore_background_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.ignore_background, 1, wx.EXPAND),
+            (self.background_color, 1, wx.EXPAND),
+            (self.remove_background_label, 0, wx.ALIGN_CENTER_VERTICAL),
+            (self.remove_background, 1, wx.EXPAND),
         ])
 
         bitmap_panel = wx.Panel(self.bitmap, style=wx.BORDER_THEME)
@@ -522,9 +512,8 @@ class CrossStitchHelperFrame(wx.Frame):
         self.contrast_numerical_input.Enable(convert)
         self.background_color_label.Enable(convert)
         self.background_color.Enable(convert)
-        self.background_main_color.Enable(convert)
-        self.ignore_background_label.Enable(convert)
-        self.ignore_background.Enable(convert)
+        self.remove_background_label.Enable(convert)
+        self.remove_background.Enable(convert)
 
     def update_color_selection_method(self, event=None):
         method = self.color_selection_method.GetSelection()
@@ -568,12 +557,6 @@ class CrossStitchHelperFrame(wx.Frame):
         self.bitmap.Layout()
         self.update_bitmap_panel()
 
-    def on_background_change(self, event=None):
-        self.background_color.Enable(True)
-        if not self.convert_bitmap.GetValue() or self.background_main_color.GetValue():
-            self.background_color.Enable(False)
-        self.update_bitmap_panel()
-
     def update_bitmap_panel(self, event=None):
         if self.image:
             self.apply_settings()
@@ -584,7 +567,7 @@ class CrossStitchHelperFrame(wx.Frame):
             return
         self.cross_bitmap.apply_color_corrections()
         cross_bitmap = self.cross_bitmap.reduced_image
-        if self.settings['bitmap_ignore_background']:
+        if self.settings['bitmap_remove_background'] != 0:
             cross_bitmap = self.cross_bitmap.add_alpha(cross_bitmap)
         else:
             cross_bitmap = cross_bitmap.convert("RGBA")
@@ -620,11 +603,9 @@ class CrossStitchHelperFrame(wx.Frame):
         self.rgb_color_list.SetValue(self.default_settings['bitmap_rgb_colors'])
         self.gimp_palette.SetPath(self.default_settings['bitmap_gimp_palette'])
         self.background_color.SetColour(wx.Colour(self.default_settings['bitmap_background_color']))
-        self.background_main_color.SetValue(self.default_settings['bitmap_background_main_color'])
-        self.ignore_background.SetValue(self.default_settings['bitmap_ignore_background'])
+        self.remove_background.GetSelection(self.default_settings['bitmap_remove_background'])
         self.update()
         self.update_color_selection_method()
-        self.on_background_change()
         self.apply_settings()
 
     def apply_settings(self):
@@ -652,8 +633,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
         self.settings['bitmap_gimp_palette'] = self.gimp_palette.GetPath()
         self.settings['bitmap_background_color'] = self.background_color.GetColour().GetRGB()
-        self.settings['bitmap_background_main_color'] = self.background_main_color.GetValue()
-        self.settings['bitmap_ignore_background'] = self.ignore_background.GetValue()
+        self.settings['bitmap_remove_background'] = self.remove_background.GetSelection()
 
     def get_cross_method(self):
         current_cross_method = self.cross_stitch_method.GetString(self.cross_stitch_method.GetSelection())
@@ -687,8 +667,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
         global_settings['cross_bitmap_gimp_palette'] = self.gimp_palette.GetPath()
         global_settings['cross_bitmap_background_color'] = self.background_color.GetColour().GetRGB()
-        global_settings['cross_bitmap_background_main_color'] = self.background_main_color.GetValue()
-        global_settings['cross_bitmap_ignore_background'] = self.ignore_background.GetValue()
+        global_settings['cross_bitmap_remove_background'] = self.remove_background.GetSelection()
 
         self.GetTopLevelParent().Close()
         return

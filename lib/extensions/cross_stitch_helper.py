@@ -53,8 +53,7 @@ class CrossStitchHelper(InkstitchExtension):
             'bitmap_brightness': 1,
             'bitmap_contrast': 1,
             'bitmap_background_color': '#000000',
-            'bitmap_background_main_color': False,
-            'bitmap_ignore_background': False
+            'bitmap_remove_background': 0
         }
 
         # True will not show the no elements warning

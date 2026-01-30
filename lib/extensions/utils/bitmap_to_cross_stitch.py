@@ -30,11 +30,11 @@ class BitmapToCrossStitch(object):
         It basically takes a selected image and generates the cross stitch pixels by also trying to combine as many as possible.
     '''
     def __init__(self, svg, bitmap, settings, palette=None):
-        '''Prepares the bitmap image:
+        '''Prepare the bitmap image:
             * self.reduced_image:       scaled pillow image with reduced colors
                                         known limitations:
                                         rotations or skewing is not applied
-            * self.background_color:    rgb color which appears most in the image
+            * self.background_color:    rgb color or None
 
            Parameters:
            * svg:       the svg document
@@ -145,13 +145,15 @@ class BitmapToCrossStitch(object):
             self.reduced_image = self.reduced_image.quantize(palette=palette_image, dither=Image.NONE)
 
         # Set overall background color
-        if self.settings['bitmap_background_main_color']:
-            self.background_color = self._get_main_color(self.reduced_image)
-        else:
+        if self.settings['bitmap_remove_background'] == 0:
+            self.background = None
+        if self.settings['bitmap_remove_background'] < 2:
             # adapt background color, it may have changed during color reduction
             background = background.convert("RGB")
             background = background.quantize(palette=self.reduced_image, dither=Image.NONE)
             self.background_color = self._get_main_color(background)
+        else:
+            self.background_color = self._get_main_color(self.reduced_image)
 
     def add_alpha(self, image):
         # Convert image to rgba and generate background image
@@ -164,8 +166,6 @@ class BitmapToCrossStitch(object):
 
         # Apply mask to image
         image.putalpha(mask)
-
-        image = self._crop_transparent_borders(image)
 
         return image
 
@@ -231,7 +231,7 @@ class BitmapToCrossStitch(object):
             crop_box = (minx - offset_x, miny - offset_y, maxx - offset_x, maxy - offset_y)
             cropped = self.reduced_image.crop(crop_box)
             main_color = self._get_main_color(cropped)
-            if not self.settings['bitmap_ignore_background'] or main_color != self.background_color:
+            if main_color != self.background_color:
                 color_boxes[main_color].append(box)
 
         for color, boxes in color_boxes.items():
