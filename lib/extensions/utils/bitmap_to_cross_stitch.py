@@ -160,10 +160,6 @@ class BitmapToCrossStitch(object):
         if self.settings['bitmap_remove_background']:
             # update background color for most common color option now, after the initial transparent parts are transparent again
             if self.settings['bitmap_remove_background'] == 1:
-                '''
-                background = Image.new("RGBA", self.reduced_image.size, self.settings['bitmap_background_color'])
-                self.background_color = self._nearest_color(background.getcolors()[0][1])
-                '''
                 self.background_color = self._nearest_color(self.settings['bitmap_background_color'])
             elif self.settings['bitmap_remove_background'] == 2:
                 self.background_color = self._get_main_color(self.reduced_image, False)

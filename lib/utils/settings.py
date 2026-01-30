@@ -53,7 +53,7 @@ DEFAULT_SETTINGS = {
     'cross_helper_align_with_canvas': True,
     'cross_helper_nodes': False,
     'cross_helper_set_grid': False,
-    'cross_helper_grid_color': '#00d9e5',
+    'cross_helper_grid_color': (0, 153, 229),
     'cross_helper_remove_grids': True,
     'cross_helper_convert_bitmap': False,
     'cross_helper_color_method': 0,
