@@ -46,6 +46,10 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Cyrillic](/fonts/cyrillic/)
 
   ![Cyrillic](/assets/images/fonts/cyrillic.png)
+* [Flowery Crosses](/fonts/flowery_crosses/)
+
+  ![Flowery Crosses](/assets/images/fonts/flowery_crosses.jpg)
+   ![Flowery Crosses Multicolor](/assets/images/fonts/flowery_multicolor.jpg)
 * [Handkerchief](/fonts/handkerchief/)
 
   ![Handkerchief](/assets/images/fonts/handkerchief.png)
