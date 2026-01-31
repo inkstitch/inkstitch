@@ -3,5 +3,5 @@ set -e
 mv /tmp/inkstitch/ $HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/
 echo "Inkstitch was moved!"
 chmod -R 777 $HOME/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch/
-echo ""Inkstitch permissions changed!"
+echo "Inkstitch permissions changed!"
 exit 0
