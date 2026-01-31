@@ -49,7 +49,7 @@ class CrossStitchHelper(InkstitchExtension):
             'bitmap_quantize_method': 1,
             'bitmap_rgb_colors': '',
             'bitmap_gimp_palette': '',
-            'bitmap_color_balance': 1,
+            'bitmap_saturation': 1,
             'bitmap_brightness': 1,
             'bitmap_contrast': 1,
             'bitmap_background_color': (0, 0, 0),

@@ -61,7 +61,7 @@ DEFAULT_SETTINGS = {
     'cross_bitmap_quantize_method': 1,
     'cross_bitmap_rgb_colors': '',
     'cross_bitmap_gimp_palette': '',
-    'cross_bitmap_color_balance': 1,
+    'cross_bitmap_saturation': 1,
     'cross_bitmap_brightness': 1,
     'cross_bitmap_contrast': 1,
     'cross_bitmap_background_color': (0, 0, 0),

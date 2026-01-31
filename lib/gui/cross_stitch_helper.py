@@ -46,7 +46,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.quantize_method.SetSelection(global_settings['cross_bitmap_quantize_method'])
         self.rgb_color_list.SetValue(global_settings['cross_bitmap_rgb_colors'])
         self.gimp_palette.SetPath(global_settings['cross_bitmap_gimp_palette'])
-        self.color_balance.SetValue(int(global_settings['cross_bitmap_color_balance'] * 100))
+        self.saturation.SetValue(int(global_settings['cross_bitmap_saturation'] * 100))
         self.brightness.SetValue(int(global_settings['cross_bitmap_brightness'] * 100))
         self.contrast.SetValue(int(global_settings['cross_bitmap_contrast'] * 100))
         self.background_color.SetColour(wx.Colour(global_settings['cross_bitmap_background_color']))
@@ -287,15 +287,15 @@ class CrossStitchHelperFrame(wx.Frame):
         self.quantize_method = wx.Choice(self.bitmap, choices=[_("Median cut"), _("Maxcoverage"), _("Fastoctree")])
         self.quantize_method.Bind(wx.EVT_CHOICE, self.update_bitmap_panel)
 
-        color_balance_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.color_balance_label = wx.StaticText(self.bitmap, label=_("Color balance"))
-        self.color_balance = wx.Slider(self.bitmap, value=100, minValue=0, maxValue=200, size=(300, 0))
-        self.color_balance.SetTick(100)
-        self.color_balance_numerical_input = wx.SpinCtrlDouble(self.bitmap, value='1', min=0, max=2, initial=1, inc=0.01)
-        self.color_balance.Bind(wx.EVT_SCROLL, lambda event: self.on_color_slider_change("color_balance", event))
-        self.color_balance_numerical_input.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_numerical_color_change("color_balance", event))
-        color_balance_sizer.Add(self.color_balance, 0, wx.ALL | wx.EXPAND, 5)
-        color_balance_sizer.Add(self.color_balance_numerical_input, 0, wx.ALL, 5)
+        saturation_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        self.saturation_label = wx.StaticText(self.bitmap, label=_("Saturation"))
+        self.saturation = wx.Slider(self.bitmap, value=100, minValue=0, maxValue=200, size=(300, 0))
+        self.saturation.SetTick(100)
+        self.saturation_numerical_input = wx.SpinCtrlDouble(self.bitmap, value='1', min=0, max=2, initial=1, inc=0.01)
+        self.saturation.Bind(wx.EVT_SCROLL, lambda event: self.on_color_slider_change("saturation", event))
+        self.saturation_numerical_input.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_numerical_color_change("saturation", event))
+        saturation_sizer.Add(self.saturation, 0, wx.ALL | wx.EXPAND, 5)
+        saturation_sizer.Add(self.saturation_numerical_input, 0, wx.ALL, 5)
 
         brightness_sizer = wx.BoxSizer(wx.HORIZONTAL)
         self.brightness_label = wx.StaticText(self.bitmap, label=_("Brightness"))
@@ -347,8 +347,8 @@ class CrossStitchHelperFrame(wx.Frame):
             (self.gimp_palette, 1, wx.EXPAND),
             (self.quantize_method_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.quantize_method, 1, wx.EXPAND),
-            (self.color_balance_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (color_balance_sizer, 1, wx.EXPAND),
+            (self.saturation_label, 0, wx.ALIGN_CENTER_VERTICAL),
+            (saturation_sizer, 1, wx.EXPAND),
             (self.brightness_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (brightness_sizer, 1, wx.EXPAND),
             (self.contrast_label, 0, wx.ALIGN_CENTER_VERTICAL),
@@ -472,8 +472,8 @@ class CrossStitchHelperFrame(wx.Frame):
 
     def on_color_slider_change(self, rule, event):
         # update numberical color values
-        if rule == "color_balance":
-            self.color_balance_numerical_input.SetValue(self.color_balance.GetValue() / 100)
+        if rule == "saturation":
+            self.saturation_numerical_input.SetValue(self.saturation.GetValue() / 100)
         elif rule == "brightness":
             self.brightness_numerical_input.SetValue(self.brightness.GetValue() / 100)
         elif rule == "contrast":
@@ -481,9 +481,9 @@ class CrossStitchHelperFrame(wx.Frame):
         self.update_bitmap_panel()
 
     def on_numerical_color_change(self, rule, event):
-        if rule == "color_balance":
-            color_balance = self.color_balance_numerical_input.GetValue()
-            self.color_balance.SetValue(int(color_balance * 100))
+        if rule == "saturation":
+            saturation = self.saturation_numerical_input.GetValue()
+            self.saturation.SetValue(int(saturation * 100))
         elif rule == "brightness":
             brightness = self.brightness_numerical_input.GetValue()
             self.brightness.SetValue(int(brightness * 100))
@@ -504,9 +504,9 @@ class CrossStitchHelperFrame(wx.Frame):
         self.rgb_color_list.Enable(convert)
         self.gimp_palette_label.Enable(convert)
         self.gimp_palette.Enable(convert)
-        self.color_balance_label.Enable(convert)
-        self.color_balance.Enable(convert)
-        self.color_balance_numerical_input.Enable(convert)
+        self.saturation_label.Enable(convert)
+        self.saturation.Enable(convert)
+        self.saturation_numerical_input.Enable(convert)
         self.brightness_label.Enable(convert)
         self.brightness.Enable(convert)
         self.brightness_numerical_input.Enable(convert)
@@ -598,7 +598,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.quantize_method.SetSelection(self.default_settings['bitmap_quantize_method'])
         self.brightness.SetValue(int(self.default_settings['bitmap_brightness'] * 100))
         self.contrast.SetValue(int(self.default_settings['bitmap_contrast'] * 100))
-        self.color_balance.SetValue(int(self.default_settings['bitmap_color_balance'] * 100))
+        self.saturation.SetValue(int(self.default_settings['bitmap_saturation'] * 100))
         self.rgb_color_list.SetValue(self.default_settings['bitmap_rgb_colors'])
         self.gimp_palette.SetPath(self.default_settings['bitmap_gimp_palette'])
         self.background_color.SetColour(wx.Colour(self.default_settings['bitmap_background_color']))
@@ -628,7 +628,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['bitmap_quantize_method'] = self.quantize_method.GetSelection()
         self.settings['bitmap_brightness'] = self.brightness.GetValue() / 100
         self.settings['bitmap_contrast'] = self.contrast.GetValue() / 100
-        self.settings['bitmap_color_balance'] = self.color_balance.GetValue() / 100
+        self.settings['bitmap_saturation'] = self.saturation.GetValue() / 100
         self.settings['bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
         self.settings['bitmap_gimp_palette'] = self.gimp_palette.GetPath()
         self.settings['bitmap_background_color'] = self.background_color.GetColour().Get(False)
@@ -660,7 +660,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_helper_color_method'] = self.color_selection_method.GetSelection()
         global_settings['cross_bitmap_num_colors'] = self.num_colors.GetValue()
         global_settings['cross_bitmap_quantize_method'] = self.quantize_method.GetSelection()
-        global_settings['cross_bitmap_color_balance'] = self.color_balance.GetValue() / 100
+        global_settings['cross_bitmap_saturation'] = self.saturation.GetValue() / 100
         global_settings['cross_bitmap_brightness'] = self.brightness.GetValue() / 100
         global_settings['cross_bitmap_contrast'] = self.contrast.GetValue() / 100
         global_settings['cross_bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
