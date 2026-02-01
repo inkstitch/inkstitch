@@ -31,11 +31,13 @@ class BitmapToCrossStitch(object):
     '''
     def __init__(self, svg, bitmap, settings, palette=None):
         '''Prepare the bitmap image:
-            * self.reduced_image:       scaled pillow image with reduced colors
+            * self.reduced_image        scaled pillow image with reduced colors
                                         known limitations:
                                         rotations or skewing is not applied
             * self.rgb_image            same as reduced_image, but in rgb mode
-            * self.initial_alpha:       a mask for the intial alpha channel
+            * self.initial_alpha        a mask for the intial alpha channel
+            * self.alpha_mask           will hold the total alpha mask (including background removal)
+            * self.most_common_color    the color used to fill up transparent pixels of the original image
 
            Parameters:
            * svg:       the svg document
@@ -53,8 +55,7 @@ class BitmapToCrossStitch(object):
         self.prepared_image = None
         self.reduced_image = None
         self.rgb_image = None
-        self.initial_alpha = None
-        self.alpha_mask = None
+        self.most_common_color = None
 
         image = self._get_image_byte_string(bitmap.node)
         if image is None:
@@ -77,7 +78,8 @@ class BitmapToCrossStitch(object):
 
         # Get initial alpha mask
         self.initial_alpha = self.reduced_image.getchannel("A")
-        self.initial_alpha = self.initial_alpha.point(lambda a: 255 if a > 0 else 0)
+        self.initial_alpha = self.initial_alpha.point(lambda a: 255 if a > 127 else 0)
+        self.alpha_mask = self.initial_alpha
 
         self.apply_color_corrections()
 
@@ -134,8 +136,8 @@ class BitmapToCrossStitch(object):
         # Some quantize methods will only work with rgb mode images. Means, we need to fill transparent image parts with a color.
         # To do this, we use the most prominent color from the image itself.
         # Using this color ensures, that the background will not have an impact on color selection methods.
-        most_common_color = self._get_main_color(self.reduced_image, False)
-        background = Image.new("RGBA", self.reduced_image.size, most_common_color)
+        self.most_common_color = self._get_main_color(self.reduced_image)
+        background = Image.new("RGBA", self.reduced_image.size, self.most_common_color)
         self.reduced_image = self.reduced_image.convert("RGBA")
         self.reduced_image = Image.alpha_composite(background, self.reduced_image)
         self.reduced_image = self.reduced_image.convert("RGB")
@@ -162,7 +164,7 @@ class BitmapToCrossStitch(object):
         if self.settings['bitmap_remove_background'] == 1:
             background_color = self._nearest_color(self.settings['bitmap_background_color'])
         elif self.settings['bitmap_remove_background'] == 2:
-            background_color = self._get_main_color(self.reduced_image, False)
+            background_color = self._get_main_color(self.reduced_image)
 
         if background_color is not None:
             background = Image.new("RGBA", self.reduced_image.size, background_color)
@@ -241,19 +243,26 @@ class BitmapToCrossStitch(object):
         offset_x -= offset[0]
         offset_y -= offset[1]
 
+        total_pixel_count = width * height
+
         for box in geometries.boxes:
             minx, miny, maxx, maxy = box.bounds
 
             # Find and apply the dominant color for each grid cell
-            # Images with an alpha mask seem to end up with way too many colors, therefore, we check for alpha and the actual color separately
+            # Images with an alpha mask applied seem to end up with way too many colors, therefore, find the amount of transparent pixels and
+            # reduce color count accordingly for the color used to fill up transparent pixels
             crop_box = (minx - offset_x, miny - offset_y, maxx - offset_x, maxy - offset_y)
             cropped = self.alpha_mask.crop(crop_box)
-            main_color = self._get_main_color(cropped)
-            if main_color == [0, 0, 0, 255]:
+            black_pixels = [count for count, color in cropped.getcolors() if color == 0]
+            transparent_pixel_count = 0
+            if black_pixels:
+                transparent_pixel_count = black_pixels[0]
+            if transparent_pixel_count >= total_pixel_count / 2:
+                # more than half of the pixels are transparent, skip this box
                 continue
             # This grid cell is not masked, find the most common color within the rgb mode image
-            main_color = self._get_main_color(self.rgb_image.crop(crop_box))
-            color_boxes[main_color[:3]].append(box)
+            main_color = self._get_main_color(self.rgb_image.crop(crop_box), transparent_pixel_count)
+            color_boxes[main_color].append(box)
 
         for color, boxes in color_boxes.items():
             color_group = Group()
@@ -303,18 +312,19 @@ class BitmapToCrossStitch(object):
                 pass
         return offset_value
 
-    def _get_main_color(self, image, include_alpha=True):
+    def _get_main_color(self, image, transparent_pixel_count=0):
         '''Returns the rgb value of the most prominent color within the given image
         '''
         image = image.convert('RGBA')
-        if include_alpha:
-            colors = image.getcolors()
-        else:
-            colors = [
-                (count, (r, g, b, a))
-                for count, (r, g, b, a) in image.getcolors(image.size[0] * image.size[1])
-                if a > 0
-            ]
+        colors = []
+        for count, color in image.getcolors(image.size[0] * image.size[1]):
+            r, g, b, a = color
+            if a == 0:
+                continue
+            # reduce pixel count of the transparent pixel substitute color
+            if (r, g, b) == self.most_common_color:
+                count -= transparent_pixel_count
+            colors.append((count, (r, g, b)))
         return max(colors, key=itemgetter(0))[1]
 
     def _get_color_palette(self):
