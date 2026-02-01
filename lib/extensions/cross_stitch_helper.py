@@ -138,7 +138,7 @@ class CrossStitchHelper(InkstitchExtension):
         parent = element.node.getparent()
         index = parent.index(element.node)
         bitmap_convert = BitmapToCrossStitch(self.svg, element, self.settings, palette)
-        if bitmap_convert.prepared_image is None:
+        if bitmap_convert.original_image is None:
             return
         elements = bitmap_convert.svg_nodes()
         if elements:

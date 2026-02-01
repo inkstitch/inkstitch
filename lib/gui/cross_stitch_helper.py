@@ -534,7 +534,7 @@ class CrossStitchHelperFrame(wx.Frame):
             self.update_image()
 
     def update_image(self):
-        if self.image is None or self.cross_bitmap.prepared_image is None:
+        if self.image is None or self.cross_bitmap.original_image is None:
             return
         self.cross_bitmap.apply_color_corrections()
         cross_bitmap = self.cross_bitmap.reduced_image

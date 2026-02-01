@@ -31,12 +31,13 @@ class BitmapToCrossStitch(object):
     '''
     def __init__(self, svg, bitmap, settings, palette=None):
         '''Prepare the bitmap image:
-            * self.reduced_image        scaled pillow image with reduced colors
-                                        known limitations:
-                                        rotations or skewing is not applied
-            * self.rgb_image            same as reduced_image, but in rgb mode
-            * self.initial_alpha        a mask for the intial alpha channel
-            * self.alpha_mask           will hold the total alpha mask (including background removal)
+            * self.original_image       None or original pillow image (rgba) with adapted alpha channel,
+                                        should not be altered by other methods in this class
+            * self.reduced_image        Same as prepared image,
+                                        but will be altered by methods within this class (color reduction, background removal, clipping)
+            * self.rgb_image            Same as reduced_image, but in rgb mode
+            * self.initial_alpha        A mask for the intial alpha channel
+            * self.alpha_mask           Will hold the total alpha mask (including background removal)
 
            Parameters:
            * svg:       the svg document
@@ -51,7 +52,7 @@ class BitmapToCrossStitch(object):
         self.bitmap = bitmap
         self.settings = settings
         self.palette = palette
-        self.prepared_image = None
+        self.original_image = None
         self.reduced_image = None
         self.rgb_image = None
 
@@ -68,19 +69,19 @@ class BitmapToCrossStitch(object):
 
         with Image.open(image) as img:
             self.image = img
-            self.prepared_image = self.image.resize((width, height))
+            self.original_image = self.image.resize((width, height))
 
         # ensure rgba mode
-        self.prepared_image = self.prepared_image.convert("RGBA")
-        self.reduced_image = self.prepared_image
+        self.original_image = self.original_image.convert("RGBA")
 
         # Get initial alpha mask
-        self.initial_alpha = self.reduced_image.getchannel("A")
+        self.initial_alpha = self.original_image.getchannel("A")
         self.initial_alpha = self.initial_alpha.point(lambda a: 255 if a > 127 else 0)
         self.alpha_mask = self.initial_alpha
 
         # apply alpha mask to avoid falsifying colors of only partly transparent pixels
-        self.reduced_image.putalpha(self.alpha_mask)
+        self.original_image.putalpha(self.alpha_mask)
+        self.reduced_image = self.original_image
 
         self.apply_color_corrections()
 
@@ -119,11 +120,11 @@ class BitmapToCrossStitch(object):
             - transparent images: fill background with given color
             - reduce number of colors by either a given number or palette
         """
-        if self.prepared_image is None:
+        if self.original_image is None:
             return
 
         background_color = None
-        self.reduced_image = self.prepared_image
+        self.reduced_image = self.original_image
 
         saturation_enhancer = ImageEnhance.Color(self.reduced_image)
         self.reduced_image = saturation_enhancer.enhance(self.settings['bitmap_saturation'])
@@ -139,7 +140,7 @@ class BitmapToCrossStitch(object):
         background = Image.new("RGBA", self.reduced_image.size, (255, 255, 255))
         self.reduced_image = self.reduced_image.convert("RGBA")
         self.reduced_image = Image.alpha_composite(background, self.reduced_image)
-        self.reduced_image = self.reduced_image.convert("RGB")
+        self.rgb_image = self.reduced_image.convert("RGB")
 
         color_palette = self._get_color_palette()
         if not color_palette:
@@ -147,16 +148,14 @@ class BitmapToCrossStitch(object):
             num_colors = self.settings['bitmap_num_colors']
             if num_colors == 0:
                 num_colors = 1
-            self.reduced_image = self.reduced_image.quantize(num_colors, method=self.settings['bitmap_quantize_method'], kmeans=5)
+            self.rgb_image = self.rgb_image.quantize(num_colors, method=self.settings['bitmap_quantize_method'], kmeans=5)
         else:
             palette_image = Image.new("P", (1, 1))
             palette_image.putpalette(color_palette)
-            self.reduced_image = self.reduced_image.quantize(palette=palette_image, dither=Image.NONE)
-
-        self.rgb_image = self.reduced_image
+            self.rgb_image = self.rgb_image.quantize(palette=palette_image, dither=Image.NONE)
 
         # return to rgba mode and apply initial alpha mask
-        self.reduced_image = self.reduced_image.convert('RGBA')
+        self.reduced_image = self.rgb_image.convert('RGBA')
         self.reduced_image.putalpha(self.initial_alpha)
 
         # set background to alpha (optional)
