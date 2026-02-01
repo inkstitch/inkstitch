@@ -37,7 +37,6 @@ class BitmapToCrossStitch(object):
             * self.rgb_image            same as reduced_image, but in rgb mode
             * self.initial_alpha        a mask for the intial alpha channel
             * self.alpha_mask           will hold the total alpha mask (including background removal)
-            * self.most_common_color    the color used to fill up transparent pixels of the original image
 
            Parameters:
            * svg:       the svg document
@@ -55,7 +54,6 @@ class BitmapToCrossStitch(object):
         self.prepared_image = None
         self.reduced_image = None
         self.rgb_image = None
-        self.most_common_color = None
 
         image = self._get_image_byte_string(bitmap.node)
         if image is None:
@@ -80,6 +78,9 @@ class BitmapToCrossStitch(object):
         self.initial_alpha = self.reduced_image.getchannel("A")
         self.initial_alpha = self.initial_alpha.point(lambda a: 255 if a > 127 else 0)
         self.alpha_mask = self.initial_alpha
+
+        # apply alpha mask to avoid falsifying colors of only partly transparent pixels
+        self.reduced_image.putalpha(self.alpha_mask)
 
         self.apply_color_corrections()
 
@@ -134,10 +135,8 @@ class BitmapToCrossStitch(object):
         self.reduced_image = contrast_enhancer.enhance(self.settings['bitmap_contrast'])
 
         # Some quantize methods will only work with rgb mode images. Means, we need to fill transparent image parts with a color.
-        # To do this, we use the most prominent color from the image itself.
-        # Using this color ensures, that the background will not have an impact on color selection methods.
-        self.most_common_color = self._get_main_color(self.reduced_image)
-        background = Image.new("RGBA", self.reduced_image.size, self.most_common_color)
+        # To do this, we fill up the transparent pixels with white color as it doesn't
+        background = Image.new("RGBA", self.reduced_image.size, (255, 255, 255))
         self.reduced_image = self.reduced_image.convert("RGBA")
         self.reduced_image = Image.alpha_composite(background, self.reduced_image)
         self.reduced_image = self.reduced_image.convert("RGB")
@@ -322,7 +321,7 @@ class BitmapToCrossStitch(object):
             if a == 0:
                 continue
             # reduce pixel count of the transparent pixel substitute color
-            if (r, g, b) == self.most_common_color:
+            if (r, g, b) == (255, 255, 255):
                 count -= transparent_pixel_count
             colors.append((count, (r, g, b)))
         return max(colors, key=itemgetter(0))[1]
