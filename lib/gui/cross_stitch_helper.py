@@ -29,7 +29,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.x_only_checkbox.SetValue(global_settings['square'])
         self.box_x.SetValue(global_settings['cross_helper_box_x'])
         self.box_y.SetValue(global_settings['cross_helper_box_y'])
-        self.apply_to_element.SetValue(global_settings['cross_helper_update_elements'])
+        self.set_params.SetValue(global_settings['cross_helper_set_params'])
         cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_helper_cross_method']])
         self.cross_stitch_method.SetSelection(cross_method)
         self.pixelize.SetValue(global_settings['cross_helper_pixelize'])
@@ -147,9 +147,9 @@ class CrossStitchHelperFrame(wx.Frame):
         apply_page_grid = wx.FlexGridSizer(3, 2, 15, 20)
         apply_page_grid.AddGrowableCol(1)
 
-        apply_to_element_label = wx.StaticText(self.settings_panel, label=_("Params (selected elements)"))
-        self.apply_to_element = wx.CheckBox(self.settings_panel)
-        self.apply_to_element.Bind(wx.EVT_CHECKBOX, self.update)
+        set_params_label = wx.StaticText(self.settings_panel, label=_("Params (selected elements)"))
+        self.set_params = wx.CheckBox(self.settings_panel)
+        self.set_params.Bind(wx.EVT_CHECKBOX, self.update)
 
         pixelize_label = wx.StaticText(self.settings_panel, label=_("Pixelate (selected elements)"))
         self.pixelize = wx.CheckBox(self.settings_panel)
@@ -170,8 +170,8 @@ class CrossStitchHelperFrame(wx.Frame):
         self.nodes.SetToolTip(nodes_tooltip)
 
         apply_to_grid_sizer.AddMany([
-            (apply_to_element_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.apply_to_element, 1, wx.EXPAND),
+            (set_params_label, 0, wx.ALIGN_CENTER_VERTICAL),
+            (self.set_params, 1, wx.EXPAND),
             (pixelize_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.pixelize, 1, wx.EXPAND),
             (self.pixelize_combined_label, 0, wx.ALIGN_CENTER_VERTICAL),
@@ -580,7 +580,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['square'] = self.x_only_checkbox.GetValue()
         self.settings['box_x'] = self.box_x.GetValue()
         self.settings['box_y'] = self.box_y.GetValue()
-        self.settings['update_elements'] = self.apply_to_element.GetValue()
+        self.settings['set_params'] = self.set_params.GetValue()
         self.settings['cross_method'] = self.get_cross_method()
         self.settings['pixelize'] = self.pixelize.GetValue()
         self.settings['pixelize_combined'] = self.pixelize_combined.GetValue()
@@ -614,7 +614,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['square'] = self.x_only_checkbox.GetValue()
         global_settings['cross_helper_box_x'] = self.box_x.GetValue()
         global_settings['cross_helper_box_y'] = self.box_y.GetValue()
-        global_settings['cross_helper_update_elements'] = self.apply_to_element.GetValue()
+        global_settings['cross_helper_set_params'] = self.set_params.GetValue()
         global_settings['cross_helper_cross_method'] = self.get_cross_method()
         global_settings['cross_helper_pixelize'] = self.pixelize.GetValue()
         global_settings['cross_helper_pixelize_combined'] = self.pixelize_combined.GetValue()
