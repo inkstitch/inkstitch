@@ -266,7 +266,7 @@ class BitmapToCrossStitch(object):
                 continue
             # This grid cell is not masked, find the most common color within the rgb mode image
             main_color = self._get_main_color(self.rgb_image.crop(crop_box), transparent_pixel_count)
-            if main_color == self.background_color[:3]:
+            if self.background_color is not None and main_color == self.background_color[:3]:
                 # avoid glitches with the background color still being the main color
                 continue
             color_boxes[main_color].append(box)
