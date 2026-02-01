@@ -34,6 +34,7 @@ class BitmapToCrossStitch(object):
             * self.reduced_image:       scaled pillow image with reduced colors
                                         known limitations:
                                         rotations or skewing is not applied
+            * self.rgb_image            same as reduced_image, but in rgb mode
             * self.initial_alpha:       a mask for the intial alpha channel
 
            Parameters:
@@ -51,6 +52,9 @@ class BitmapToCrossStitch(object):
         self.palette = palette
         self.prepared_image = None
         self.reduced_image = None
+        self.rgb_image = None
+        self.initial_alpha = None
+        self.alpha_mask = None
 
         image = self._get_image_byte_string(bitmap.node)
         if image is None:
@@ -148,6 +152,8 @@ class BitmapToCrossStitch(object):
             palette_image.putpalette(color_palette)
             self.reduced_image = self.reduced_image.quantize(palette=palette_image, dither=Image.NONE)
 
+        self.rgb_image = self.reduced_image
+
         # return to rgba mode and apply initial alpha mask
         self.reduced_image = self.reduced_image.convert('RGBA')
         self.reduced_image.putalpha(self.initial_alpha)
@@ -162,8 +168,8 @@ class BitmapToCrossStitch(object):
             background = Image.new("RGBA", self.reduced_image.size, background_color)
             diff = ImageChops.difference(self.reduced_image, background).convert("L")
             background_mask = diff.point(lambda x: 255 if x else 0)
-            mask = ImageChops.multiply(self.initial_alpha, background_mask)
-            self.reduced_image.putalpha(mask)
+            self.alpha_mask = ImageChops.multiply(self.initial_alpha, background_mask)
+            self.reduced_image.putalpha(self.alpha_mask)
 
     def _nearest_color(self, target_color):
         def distance(p):
@@ -238,11 +244,16 @@ class BitmapToCrossStitch(object):
         for box in geometries.boxes:
             minx, miny, maxx, maxy = box.bounds
 
+            # Find and apply the dominant color for each grid cell
+            # Images with an alpha mask seem to end up with way too many colors, therefore, we check for alpha and the actual color separately
             crop_box = (minx - offset_x, miny - offset_y, maxx - offset_x, maxy - offset_y)
-            cropped = self.reduced_image.crop(crop_box)
+            cropped = self.alpha_mask.crop(crop_box)
             main_color = self._get_main_color(cropped)
-            if main_color[3] > 0:
-                color_boxes[main_color[:3]].append(box)
+            if main_color == [0, 0, 0, 255]:
+                continue
+            # This grid cell is not masked, find the most common color within the rgb mode image
+            main_color = self._get_main_color(self.rgb_image.crop(crop_box))
+            color_boxes[main_color[:3]].append(box)
 
         for color, boxes in color_boxes.items():
             color_group = Group()
@@ -297,14 +308,14 @@ class BitmapToCrossStitch(object):
         '''
         image = image.convert('RGBA')
         if include_alpha:
-            return max(image.getcolors(), key=itemgetter(0))[1]
+            colors = image.getcolors()
         else:
             colors = [
                 (count, (r, g, b, a))
                 for count, (r, g, b, a) in image.getcolors(image.size[0] * image.size[1])
                 if a > 0
             ]
-            return max(colors, key=itemgetter(0))[1]
+        return max(colors, key=itemgetter(0))[1]
 
     def _get_color_palette(self):
         '''Catches the colors for color method 1, 2 and 3

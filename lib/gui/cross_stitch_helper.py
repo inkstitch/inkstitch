@@ -2,9 +2,10 @@ from math import sqrt
 
 import wx
 
+from ..elements.fill_stitch import FillStitch
+from ..extensions.utils.bitmap_to_cross_stitch import BitmapToCrossStitch
 from ..i18n import _
 from ..utils.settings import global_settings
-from ..extensions.utils.bitmap_to_cross_stitch import BitmapToCrossStitch
 
 
 class CrossStitchHelperFrame(wx.Frame):
@@ -113,15 +114,7 @@ class CrossStitchHelperFrame(wx.Frame):
         param_settings_sizer = wx.FlexGridSizer(4, 2, 15, 20)
         param_settings_sizer.AddGrowableCol(1)
 
-        self.cross_stitch_options = {
-            'simple_cross': _("Cross"),
-            'simple_cross_flipped': _("Cross Flipped"),
-            'half_cross': _("Half Cross"),
-            'half_cross_flipped': _("Half Cross Flipped"),
-            'upright_cross': _("Upright Cross"),
-            'upright_cross_flipped': _("Upright Cross Flipped"),
-            'double_cross': _("Double Cross")
-        }
+        self.cross_stitch_options = {p.id: p.name for p in FillStitch.cross_stitch_options}
         cross_stitch_method_label = wx.StaticText(self.settings_panel, label=_("Cross stitch method"))
         self.cross_stitch_method = wx.Choice(self.settings_panel, choices=list(self.cross_stitch_options.values()))
 
@@ -520,42 +513,17 @@ class CrossStitchHelperFrame(wx.Frame):
 
     def update_color_selection_method(self, event=None):
         method = self.color_selection_method.GetSelection()
-        if method == 0:
-            self.num_colors_label.Show(True)
-            self.num_colors.Show(True)
-            self.quantize_method_label.Show(True)
-            self.quantize_method.Show(True)
-            self.rgb_color_list_label.Show(False)
-            self.rgb_color_list.Show(False)
-            self.gimp_palette_label.Show(False)
-            self.gimp_palette.Show(False)
-        elif method == 1:
-            self.num_colors_label.Show(False)
-            self.num_colors.Show(False)
-            self.quantize_method_label.Show(False)
-            self.quantize_method.Show(False)
-            self.rgb_color_list_label.Show(False)
-            self.rgb_color_list.Show(False)
-            self.gimp_palette_label.Show(False)
-            self.gimp_palette.Show(False)
-        elif method == 2:
-            self.num_colors_label.Show(False)
-            self.num_colors.Show(False)
-            self.quantize_method_label.Show(False)
-            self.quantize_method.Show(False)
-            self.rgb_color_list_label.Show(True)
-            self.rgb_color_list.Show(True)
-            self.gimp_palette_label.Show(False)
-            self.gimp_palette.Show(False)
-        elif method == 3:
-            self.num_colors_label.Show(False)
-            self.num_colors.Show(False)
-            self.quantize_method_label.Show(False)
-            self.quantize_method.Show(False)
-            self.rgb_color_list_label.Show(False)
-            self.rgb_color_list.Show(False)
-            self.gimp_palette_label.Show(True)
-            self.gimp_palette.Show(True)
+        self.num_colors_label.Show(method == 0)
+        self.num_colors.Show(method == 0)
+        self.quantize_method_label.Show(method == 0)
+        self.quantize_method.Show(method == 0)
+
+        self.rgb_color_list_label.Show(method == 2)
+        self.rgb_color_list.Show(method == 2)
+
+        self.gimp_palette_label.Show(method == 3)
+        self.gimp_palette.Show(method == 3)
+
         self.bitmap.Fit()
         self.bitmap.Layout()
         self.update_bitmap_panel()
@@ -580,6 +548,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.staticbitmap.SetBitmap(bitmap_prev)
 
     def scale_bitmap(self, bitmap, a, b, max_size):
+        # scale bitmap and preserve aspect ratio
         if a > max_size:
             b = int(b / (a / max_size))
             a = max_size

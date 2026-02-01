@@ -303,19 +303,16 @@ class CrossStitchHelper(InkstitchExtension):
 
     def _get_grid_offset(self):
         grid_offset = self.settings['grid_offset'].split(' ')
-        if len(grid_offset) == 1:
-            try:
-                grid_offset = (float(grid_offset[0]) * PIXELS_PER_MM, float(grid_offset[0] * PIXELS_PER_MM))
-            except TypeError:
-                grid_offset = (0, 0)
-        elif len(grid_offset) == 2:
-            try:
-                grid_offset = (float(grid_offset[0]) * PIXELS_PER_MM, float(grid_offset[1] * PIXELS_PER_MM))
-            except TypeError:
-                grid_offset = (0, 0)
-        if len(grid_offset) != 2:
-            grid_offset = (0, 0)
-        return grid_offset
+        try:
+            grid_offset = self.settings['grid_offset'].split(' ')
+            if len(grid_offset) == 1:
+                offset = float(grid_offset[0]) * PIXELS_PER_MM
+                return (offset, offset)
+            elif len(grid_offset) == 2:
+                return (float(grid_offset[0]) * PIXELS_PER_MM, float(grid_offset[1] * PIXELS_PER_MM))
+        except ValueError:
+            pass
+        return (0, 0)  # Fallback
 
     def _get_colored_boxes(self, fills):
         fill_areas = []
