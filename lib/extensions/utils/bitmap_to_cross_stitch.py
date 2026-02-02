@@ -79,10 +79,9 @@ class BitmapToCrossStitch(object):
         # Get initial alpha mask
         self.initial_alpha = self.original_image.getchannel("A")
         self.initial_alpha = self.initial_alpha.point(lambda a: 255 if a > 127 else 0)
-        self.alpha_mask = self.initial_alpha
 
         # apply alpha mask to avoid falsifying colors of only partly transparent pixels
-        self.original_image.putalpha(self.alpha_mask)
+        self.original_image.putalpha(self.initial_alpha)
         self.reduced_image = self.original_image
 
         self.apply_color_corrections()
@@ -126,6 +125,7 @@ class BitmapToCrossStitch(object):
             return
 
         self.reduced_image = self.original_image
+        self.alpha_mask = self.initial_alpha
 
         saturation_enhancer = ImageEnhance.Color(self.reduced_image)
         self.reduced_image = saturation_enhancer.enhance(self.settings['bitmap_saturation'])
@@ -157,6 +157,8 @@ class BitmapToCrossStitch(object):
         self.reduced_image.putalpha(self.initial_alpha)
 
         # set background to alpha (optional)
+        if self.settings['bitmap_remove_background'] == 0:
+            self.background_color = None
         if self.settings['bitmap_remove_background'] == 1:
             self.background_color = self._nearest_color(self.settings['bitmap_background_color'])
         elif self.settings['bitmap_remove_background'] == 2:
