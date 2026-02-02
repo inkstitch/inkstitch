@@ -42,16 +42,17 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     if not cross_geoms.boxes:
         return []
 
-    # Fix outline. The outline for cross stitches is a bit delicate as it tends to be invalid in a shapely sense.
-    # We created scaled boxes to avoid a splitting up of an outline which we would be able to render in one go.
-    # But we only want to use the scaled boxes if it is really necessary.
-    # It is also possible that the cross stitch pattern is fully unconnected. In this case, we will run the stitch
-    # generation on each outline component.
-    outline = unary_union(cross_geoms.boxes)
-    if outline.geom_type == 'MultiPolygon':
-        outline = ensure_multi_polygon(unary_union(outline.buffer(0.00001)))
+    # Fix outline.
+    # The outline for cross stitches is a bit delicate as it tends to be invalid in a shapely sense.
+    # We add a small buffer to connect unconnected geometry parts at touching corners.
+    # It is possible though, that the cross stitch areas are fully unconnected. In this case, we will run the stitch
+    # generation on each outline component separately.
+    outline = ensure_multi_polygon(unary_union(cross_geoms.boxes).buffer(0.00001))
+    if len(outline.geoms) > 1:
         # we will have to run this on multiple outline shapes
-        return cross_stitch_multiple(outline, fill, starting_point, ending_point, bean_stitch_repeats, original_shape)
+        return cross_stitch_multiple(outline, fill, starting_point, ending_point, bean_stitch_repeats, shape)
+    else:
+        outline = list(outline.geoms)[0]
 
     # The cross stitch diagonals
     diagonals = ensure_multi_line_string(line_merge(MultiLineString(cross_geoms.diagonals).segmentize(max_stitch_length)))
