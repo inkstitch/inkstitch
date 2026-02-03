@@ -10,7 +10,7 @@ A manual setup will allow you to edit the code while running the extension.
 
 ## How to Install Ink/Stich Manually
 
-We recommend to use `pyenv` with python 3.8.
+We recommend to use `pyenv` with python 3.11.
 
 ### 1. Clone the extension source
 

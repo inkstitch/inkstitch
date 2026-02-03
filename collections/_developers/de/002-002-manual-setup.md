@@ -10,7 +10,7 @@ Eine manuelle Installation ermöglicht es am Quellcode zu arbeiten und die Ände
 
 ## Ink/Stitch manuell installieren
 
-Wir empfehlen die Nutung von `pyenv` mit python 3.8.
+Wir empfehlen die Nutung von `pyenv` mit python 3.11.
 
 ### 1. Ink/Stitch herunterladen
 
