@@ -12,7 +12,7 @@ Verbosity can often be preferable over brevity.  Longer, more expressive variabl
 Code Conventions
 ================
 
-For Python, we try to follow [PEP8](https://www.python.org/dev/peps/pep-0008/).  In general, try to err on the side of readability and approachability.  If PEP8 makes that harder, then thoughtfully violating it may be the right answer, but this will probably be rare.
+For Python, we try to follow [PEP8](https://www.python.org/dev/peps/pep-0008/).  For Javascript, we try to make [ESLint](https://eslint.org) happy.  In general, try to err on the side of readability and approachability.  If PEP8 and ESLint make that harder, then thoughtfully violating them may be the right answer, but this will be rare.
 
 PEP8 adherence is easy: just run `make style` in the top level directory.  You can run it on every commit, just see `bin/git-pre-commit-hook` for details.
 
