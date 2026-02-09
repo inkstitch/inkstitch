@@ -8,7 +8,7 @@ basedir = pathlib.Path(__file__).parent
 def load_texture(ctx: moderngl.Context) -> moderngl.Texture:
     img = wx.Image()
 
-    with open(basedir / "texture/normals-fixed.png", "rb") as f:
+    with open(basedir / "texture/normals-new.png", "rb") as f:
         pnghandler = wx.PNGHandler()
         pnghandler.LoadFile(img, f)
 

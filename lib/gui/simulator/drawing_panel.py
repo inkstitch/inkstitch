@@ -160,6 +160,7 @@ class DrawingPanel(glcanvas.GLCanvas):
             self.ctx = moderngl.get_context()
             if self.stitch_plan:
                 self.renderer = GLStitchPlanRenderer(self.ctx, self.stitch_plan)
+                self.renderer.mode = 0
                 size =  self.GetClientSize()
                 self.renderer.resize(size.width, size.height)
             self.init = True
@@ -169,7 +170,11 @@ class DrawingPanel(glcanvas.GLCanvas):
         fb = ctx.detect_framebuffer()
 
         fb.use()
-        desk_color = wx.Colour(self.page_specs['desk_color'])
+        if self.page_specs is not None and self.page_specs.get('desk_color'):
+            desk_color = wx.Colour(self.page_specs['desk_color'])
+        else:
+            desk_color = wx.Colour((0.0, 0.0, 0.0, 0.0))
+
         fb.clear(desk_color.Red()/255, desk_color.Green()/255, desk_color.Blue()/255, 1)
         # glClearColor(0.6, 0.7, 1.0, 1.0)
         # glClear(GL_COLOR_BUFFER_BIT)
