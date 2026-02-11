@@ -538,7 +538,6 @@ class CrossStitchHelperFrame(wx.Frame):
             return
         self.cross_bitmap.apply_color_corrections()
         cross_bitmap = self.cross_bitmap.reduced_image
-        cross_bitmap = self.cross_bitmap.apply_transform(cross_bitmap)
         cross_bitmap = self.cross_bitmap.apply_clip(cross_bitmap)
         width, height = cross_bitmap.size
         width, height = self.scale_bitmap(cross_bitmap, width, height, 400)
