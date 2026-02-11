@@ -313,7 +313,6 @@ class BitmapToCrossStitch(object):
     def _get_main_color(self, image):
         '''Returns the rgb value of the most prominent color within the given image (rgba)
         '''
-        image = image.convert('RGBA')
         colors = image.getcolors(image.size[0] * image.size[1])
         if colors:
             return max(colors, key=itemgetter(0))[1]
