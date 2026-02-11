@@ -71,9 +71,7 @@ class KnockdownFill(InkstitchExtension):
         elif element.name == "Stroke":
             if element.stroke_method == 'ripple_stitch':
                 # for ripples this is going to be a bit complicated, so let's follow the stitch plan
-                stitches = ripple_stitch(element)
-                linestring = LineString(stitches)
-                polygons.append(linestring.buffer(0.15 * PIXELS_PER_MM, cap_style='flat'))
+                polygons.extend(self._ripple_knockdown(element))
             elif element.stroke_method == 'zigzag_stitch':
                 # zigzag stitch depends on the width of the stroke and pull compensation settings
                 polygons.append(element.as_multi_line_string().buffer((element.stroke_width + element.pull_compensation) / 2, cap_style='flat'))
@@ -92,6 +90,14 @@ class KnockdownFill(InkstitchExtension):
             join_style=int(join_style),
             mitre_limit=float(max(self.options.mitre_limit, 0.1))
         )
+
+    def _ripple_knockdown(self, element):
+        polygons = []
+        stitch_groups = ripple_stitch(element)
+        for stitches in stitch_groups:
+            linestring = LineString(stitches)
+            polygons.append(linestring.buffer(0.15 * PIXELS_PER_MM, cap_style='flat'))
+        return polygons
 
     def insert_knockdown_elements(self, combined_shape):
         first = self.svg.selection.rendering_order()[0]
