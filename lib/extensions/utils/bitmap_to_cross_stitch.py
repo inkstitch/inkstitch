@@ -35,7 +35,6 @@ class BitmapToCrossStitch(object):
                                         should not be altered by other methods in this class
             * self.reduced_image        Same as prepared image,
                                         but will be altered by methods within this class (color reduction, background removal, clipping)
-            * self.rgb_image            Same as reduced_image, but in rgb mode
             * self.initial_alpha        A mask for the intial alpha channel
             * self.alpha_mask           Will hold the total alpha mask (including background removal)
             * self.background_color     None or color to remove
@@ -55,7 +54,6 @@ class BitmapToCrossStitch(object):
         self.palette = palette
         self.original_image = None
         self.reduced_image = None
-        self.rgb_image = None
         self.background_color = None
 
         image = self._get_image_byte_string(bitmap.node)
@@ -88,6 +86,7 @@ class BitmapToCrossStitch(object):
 
         # Transform after color adaptions to avoid additional background color sections
         self.reduced_image = self.apply_transform(self.reduced_image)
+        self.alpha_mask = self.apply_transform(self.alpha_mask)
 
     def _get_unclipped_dimensions(self):
         # Image bounds of the unclipped image
@@ -171,13 +170,11 @@ class BitmapToCrossStitch(object):
             self.alpha_mask = ImageChops.multiply(self.initial_alpha, background_mask)
             self.reduced_image.putalpha(self.alpha_mask)
 
-        self.rgb_image = self._convert_to_rgb(self.reduced_image)
-
     def _convert_to_rgb(self, image):
         background = Image.new("RGBA", image.size, (255, 255, 255))
         image = image.convert("RGBA")
         image = Image.alpha_composite(background, image)
-        return self.reduced_image.convert("RGB")
+        return image.convert("RGB")
 
     def _nearest_color(self, target_color):
         def distance(p):
@@ -236,6 +233,8 @@ class BitmapToCrossStitch(object):
         if self.reduced_image is None:
             return
 
+        rgb_image = self._convert_to_rgb(self.reduced_image)
+
         elements = []
         color_boxes = defaultdict(list)
         width = self.settings['box_x'] * PIXELS_PER_MM
@@ -267,7 +266,7 @@ class BitmapToCrossStitch(object):
                 # more than half of the pixels are transparent, skip this box
                 continue
             # This grid cell is not masked, find the most common color within the rgb mode image
-            main_color = self._get_main_color(self.rgb_image.crop(crop_box), transparent_pixel_count)
+            main_color = self._get_main_color(rgb_image.crop(crop_box), transparent_pixel_count)
             if self.background_color is not None and main_color == self.background_color[:3]:
                 # avoid glitches with the background color still being the main color
                 continue
