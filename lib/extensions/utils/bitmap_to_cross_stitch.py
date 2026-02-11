@@ -34,7 +34,7 @@ class BitmapToCrossStitch(object):
             * self.original_image       None or original pillow image (rgba) with adapted alpha channel,
                                         should not be altered by other methods in this class
             * self.reduced_image        Same as prepared image,
-                                        but will be altered by methods within this class (color reduction, background removal, clipping)
+                                        but will be altered by methods within this class (color reduction, background removal)
             * self.initial_alpha        A mask for the intial alpha channel
             * self.alpha_mask           Will hold the total alpha mask (including background removal)
             * self.background_color     None or color to remove
