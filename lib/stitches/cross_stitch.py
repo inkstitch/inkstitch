@@ -5,14 +5,17 @@
 
 # -*- coding: UTF-8 -*-
 
+from collections import deque
+
 import networkx as nx
-from shapely.geometry import MultiPoint, Point, LineString
+from shapely.affinity import rotate
+from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
 from ..stitch_plan import Stitch
 from ..utils.threading import check_stop_flag
-from .utils.cross_stitch import CrossGeometries
 from .cross_stitch_half import half_cross_stitch
+from .utils.cross_stitch import CrossGeometries
 
 
 def cross_stitch(fill, shape, starting_point, ending_point):
@@ -52,7 +55,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     return even_cross_stitch(fill, shape, starting_point, ending_point, thread_count)
 
 
-def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number):
+def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count):
     """ Cross stitch algorithm for all cross stitch types except for half crosses and their reverse version
 
         Steps:
@@ -66,24 +69,26 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number)
         ending_point:           defines where to end
         thread_number:          defines the thread count (even number, otherwise rounded to the previous even integer, exception: 1 = 2)
     """
-    nb_repeats = (threads_number // 2) - 1
     method = fill.cross_stitch_method
 
-    cross_geoms = CrossGeometries(shape, fill.pattern_size, fill.fill_coverage, method, fill.cross_offset, fill.canvas_grid_origin)
+    flipped = "flip" in method
+
+    if flipped:
+        # "Flip" means to swap the order that the cross stitches are sewn in.
+        # We handle that by rotating the shape and running the algorithm as
+        # usual, then rotating the resulting stitches.  That way we don't have
+        # to consider flipping in our stitch generation.
+        if starting_point:
+            starting_point = _rotate_coords(*starting_point)
+        if ending_point:
+            ending_point = _rotate_coords(*ending_point)
+        shape = rotate(shape, 90, origin=(0, 0))
+
+    cross_geoms = CrossGeometries(shape, fill.pattern_size, fill.fill_coverage, method, fill.cross_offset, fill.canvas_grid_origin, thread_count)
     subgraphs = _build_connect_subgraphs(cross_geoms)
-    if method != "double_cross":
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour, flipped=False)
+    eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms)
 
-        if "flipped" in method:
-            eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour, flipped=True)
-            for i in range(len(eulerian_cycles)):
-                eulerian_cycles[i] = eulerian_cycles[i][::-1]
-    else:
-        # flipped is not useful here but _build_eulerian_cycles requires it
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point,
-                                                 cross_geoms, nb_repeats, _build_double_row_tour, flipped=False)
-
-    stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length)
+    stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length, flipped)
     return [stitches]
 
 
@@ -91,7 +96,7 @@ def get_corner(point, subcrosses):
     '''Snap point on existing corners on our cross stitch pattern
     starting_point is not None when called
     '''
-    snap_points = MultiPoint([corner for cross in subcrosses for corner in cross.corners])
+    snap_points = MultiPoint([corner for cross in subcrosses for corner in cross.all_connection_points])
     start_point = nearest_points(snap_points, Point(point))[0]
     corner = (start_point.x, start_point.y)
     return corner
@@ -110,22 +115,23 @@ def _build_connect_subgraphs(cross_geoms):
     for cross in cross_geoms.crosses:
         center = cross.center_point
         G.add_node(center, crosses=[cross])
-        corners = cross.corners
-        for corner in corners:
-            if corner in G.nodes:
-                G.nodes[corner]['crosses'].append(cross)
+        connection_points = cross.all_connection_points
+        for point in connection_points:
+            if point in G.nodes:
+                G.nodes[point]['crosses'].append(cross)
             else:
-                G.add_node(corner, crosses=[cross])
+                G.add_node(point, crosses=[cross])
 
-        for corner in cross.corners:
-            G.add_edge(center, corner)
-        G.add_edge(corners[0], corners[2])
-        G.add_edge(corners[1], corners[3])
+        for point in cross.all_connection_points:
+            G.add_edge(center, point)
+
+        for (start, end) in cross.stitches:
+            G.add_edge(start, end)
 
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 
-def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, row_tour, flipped):
+def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms):
     """ We need to construct an eulerian cycle for each subgraph,
         but we need to make sure that no cross is flipped
         So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
@@ -139,11 +145,10 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
     """
 
     eulerian_cycles = []
-    centers = cross_geoms.center_points
     travel, starting_point, ending_point = organize(subgraphs, cross_geoms, starting_point, ending_point)
 
     for i, subgraph in enumerate(subgraphs):
-        subcrosses = find_available_crosses(subgraph, cross_geoms.crosses)
+        subcrosses = set(find_available_crosses(subgraph, cross_geoms.crosses))
         if not subcrosses:
             continue
 
@@ -153,20 +158,11 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
             starting_corner = get_corner(ending_point, subcrosses)
         else:
             # any corner will do
-            index = 0
-            while list(subgraph.nodes)[index] in centers:
-                index += 1
-            starting_corner = list(subgraph.nodes)[index]
+            # TODO: no longer true -- we need one on the shape's outline
+            cross = next(iter(subcrosses))
+            starting_corner = cross.good_points[0]
 
-        position, cycle = row_tour(subcrosses, starting_corner, nb_repeats, True)
-        crosses = cross_geoms.crosses
-
-        if row_tour == _build_row_tour:
-            cycle = _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped)
-        else:
-            cycle = _build_double_cycle(subcrosses, cycle, nb_repeats)
-
-        cycle = travel + cycle
+        cycle = travel + _build_simple_cycles(subcrosses, cross_geoms, starting_corner)
         travel = []
 
         eulerian_cycles.append(cycle)
@@ -174,90 +170,48 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
     return eulerian_cycles
 
 
-def _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped):
+def _build_simple_cycles(subcrosses, cross_geoms, starting_point):
+    possible_crosses = cross_geoms.crosses_by_good_point[starting_point] + cross_geoms.crosses_by_bad_point[starting_point]
+    cross = possible_crosses[0]
+    path = deque(cross.cycle_from_point(starting_point))
+    cross_geoms.remove_cross(cross)
+    subcrosses.remove(cross)
+
+    # possible optimization: once we've checked a section of the path for both
+    # good and bad points, we never need to check that section again
+
     while subcrosses:
-        # find a corner on the cycle that needs more crosses, so that we can enlarge the cycle
-        potential_node = None
-        for cross in subcrosses:
-            for node in cross.corners:
-                if node in cycle:
-                    potential_node = node
+        new_path = deque()
+        while path:
+            check_stop_flag()
+
+            current_point = path.popleft()
+            new_path.append(current_point)
+            for cross in list(cross_geoms.crosses_by_good_point[current_point]):
+                # must reverse because deque.extendleft() reverses the sequence
+                # when extending on the left
+                path.extendleft(reversed(cross.cycle_from_point(current_point)))
+                cross_geoms.remove_cross(cross)
+                subcrosses.remove(cross)
+        path = new_path
+
+        check_stop_flag()
+
+        if subcrosses:
+            new_path = deque()
+            while path:
+                current_point = path.popleft()
+                new_path.append(current_point)
+                if cross_geoms.crosses_by_bad_point.get(current_point):
+                    cross = cross_geoms.crosses_by_bad_point[current_point][0]
+                    new_path.extend(cross.cycle_from_point(current_point))
+                    new_path.extend(path)
+                    cross_geoms.remove_cross(cross)
+                    subcrosses.remove(cross)
                     break
-            if potential_node:
-                break
-        if potential_node is None:
-            break
+            path = new_path
 
-        # here we try to minimize "bad traveling"
-
-        # check if the insertion will be above or below
-        position, cycle_to_insert = _build_row_tour(subcrosses, potential_node, nb_repeats, remove=False)
-        # avoid bad traveling as much as possible
-        if position == "below" and not flipped or position == "above" and flipped:
-            node = insertion_node(crosses, potential_node, cycle, cycle_to_insert, position, True)
-        else:
-            node = insertion_node(crosses, potential_node, cycle, cycle_to_insert, position, False)
-
-        position, cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats, remove=True)
-        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-
-    return cycle
-
-
-def _build_double_cycle(subcrosses, cycle, nb_repeats):
-    # for double crosses we can't reduce amount of bad traveling
-    while subcrosses:
-        # find a corner on the cycle that needs more crosses, so that we can enlarge the cycle
-        potential_node = None
-        for cross in subcrosses:
-            for node in cross.corners:
-                if node in cycle:
-                    potential_node = node
-                    break
-            if potential_node:
-                break
-        if potential_node is None:
-            break
-        position, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
-        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
-    return cycle
-
-
-def insertion_node(crosses, node, cycle, cycle_to_insert, position, favor_left):
-    if position == "below":
-        previous_node = insert_node_at_position(crosses, node, cycle, cycle_to_insert, favor_left, "bottom_right", "bottom_left")
-    else:
-        previous_node = insert_node_at_position(crosses, node, cycle, cycle_to_insert, favor_left, "top_right", "top_left")
-
-    return previous_node
-
-
-def insert_node_at_position(crosses, node, cycle, cycle_to_insert, favor_left, first_position, second_position):
-    current_node = node
-    next_node = None
-    previous_node = current_node
-
-    if favor_left:
-        cross = cross_at_position(crosses, current_node, first_position)
-        if cross:
-            next_node = cross.get(second_position)
-    else:
-        cross = cross_at_position(crosses, current_node, second_position)
-        if cross:
-            next_node = cross.get(first_position)
-    while cross and next_node in cycle and next_node in cycle_to_insert:
-        previous_node = current_node
-        current_node = next_node
-        if favor_left:
-            cross = cross_at_position(crosses, current_node, first_position)
-            if cross:
-                next_node = cross.get(second_position)
-        else:
-            cross = cross_at_position(crosses, current_node, second_position)
-            if cross:
-                next_node = cross.get(first_position)
-
-    return previous_node
+    return list(path)
 
 
 def organize(subgraphs, cross_geoms, starting_point, ending_point):
@@ -286,33 +240,6 @@ def organize(subgraphs, cross_geoms, starting_point, ending_point):
     return travel, starting_point, ending_point
 
 
-def _build_row_tour(subcrosses, starting_corner, nb_repeats, remove):
-    position = None
-    cross_order = ("top_right", "top_left", "bottom_right", "bottom_left")
-    cycle = _build_side_row_tour(subcrosses, starting_corner, nb_repeats, remove, cross_order)
-    if cycle:
-        position = "above"
-    if not cycle:
-        cross_order = ("bottom_left", "bottom_right", "top_left", "top_right")
-        cycle = _build_side_row_tour(subcrosses, starting_corner, nb_repeats, remove, cross_order)
-        if cycle:
-            position = "below"
-    return position, cycle
-
-
-def _build_double_row_tour(subcrosses, starting_corner, nb_repeats, remove=True):
-    # position is not going to used , but we need same signature as for
-    position = None
-    cycle = _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats)
-    if cycle:
-        position = "above"
-    if not cycle:
-        cycle = _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats)
-        if cycle:
-            position = "below"
-    return position, cycle
-
-
 def find_index_subgraph(subgraphs, crosses, point):
     corner = get_corner(point, crosses)
     index = 0
@@ -325,7 +252,7 @@ def is_cross_in_subgraph(cross, subgraph):
 
     if cross.center_point not in list(subgraph.nodes()):
         return False
-    for corner in cross.corners:
+    for corner in cross.all_connection_points:
         if corner not in list(subgraph.nodes):
             return False
     return True
@@ -335,158 +262,25 @@ def find_available_crosses(subgraph, crosses):
     return [cross for cross in crosses if is_cross_in_subgraph(cross, subgraph)]
 
 
-def cross_at_position(crosses, node, position):
-    for cross in crosses:
-        if node == cross.get(position):
-            return cross
-    return None
+def _rotate_coords(x, y):
+    return -y, x
 
 
-def _build_double_row_tour_below(subcrosses, starting_corner, nb_repeats):
-    tour = []
-
-    cross_order = ("bottom_right", "top_left", "top_right", "bottom_left")
-    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
-
-    cross_order = ("bottom_left", "top_right", "top_left", "bottom_right")
-    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
-
-    return tour
+def _unrotate_coords(x, y):
+    return y, -x
 
 
-def _build_double_row_tour_above(subcrosses, starting_corner, nb_repeats):
-    tour = []
-    cross_order = ("top_right", "bottom_left", "bottom_right", "top_left")
-    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
-
-    cross_order = ("top_left", "bottom_right", "bottom_left", "top_right")
-    tour += construct_side(subcrosses, starting_corner, nb_repeats, cross_order)
-    return tour
-
-
-def construct_side(subcrosses, starting_corner, nb_repeats, cross_order):
-    pos1, pos2, pos3, pos4 = cross_order
-
-    tour = [starting_corner]
-    covered_crosses = []
-    current_node = starting_corner
-    while cross_at_position(subcrosses, current_node, pos1):
-        cross = cross_at_position(subcrosses, current_node, pos1)
-        # first diagonal
-        tour.append(cross.get(pos2))
-        for i in range(nb_repeats):
-            tour.append(current_node)
-            tour.append(cross.get(pos2))
-        tour.append(cross.center_point)
-        tour.append(cross.get(pos3))
-        # second diagonal
-        tour.append(cross.get(pos4))
-        for i in range(nb_repeats):
-            tour.append(cross.get(pos3))
-            tour.append(cross.get(pos4))
-        current_node = cross.get(pos4)
-    while current_node != starting_corner:
-        # go back to starting_corner finishing the double crosses
-        cross = cross_at_position(subcrosses, current_node, pos4)
-        tour.append(cross.center_point)
-        tour.append(cross.middle_left)
-        # horizontal
-        tour.append(cross.middle_right)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_left)
-            tour.append(cross.middle_right)
-        tour.append(cross.center_point)
-        tour.append(cross.middle_top)
-        # vertical
-        tour.append(cross.middle_bottom)
-        for i in range(nb_repeats):
-            tour.append(cross.middle_top)
-            tour.append(cross.middle_bottom)
-        tour.append(cross.center_point)
-        tour.append(cross.get(pos1))
-        current_node = cross.get(pos1)
-        covered_crosses.append(cross)
-    if len(tour) > 1:
-        remove_crosses(subcrosses, covered_crosses)
-        return tour
-    else:
-        return []
-
-
-def _build_side_row_tour(crosses, node, nb_repeats, remove, cross_order):
-    pos1, pos2, pos3, pos4 = cross_order
-
-    """build a tour of the row of crosses (among param crosses) above or below the given node
-       ensuring that no cross is flipped,
-       adding diagonals as needed depending on the number of threads
-       remove the covered crosses from the crosses
-       return empty list if no cross below
-    """
-    tour = [node]
-    covered_crosses = []
-    current_node = node
-    while cross_at_position(crosses, current_node, pos1):
-        tour.append(cross_at_position(crosses, current_node, pos1).center_point)
-        tour.append(cross_at_position(crosses, current_node, pos1).get(pos2))
-        current_node = cross_at_position(crosses, current_node, pos1).get(pos2)
-        check_stop_flag()
-    while cross_at_position(crosses, current_node, pos2):
-        # add first diagonal of a cross
-        tour.append(cross_at_position(crosses, current_node, pos2).get(pos3))
-        for i in range(nb_repeats):
-            tour.append(current_node)
-            tour.append(cross_at_position(crosses, current_node, pos2).get(pos3))
-        tour.append(cross_at_position(crosses, current_node, pos2).center_point)
-        tour.append(cross_at_position(crosses, current_node, pos2).get(pos4))
-        # add second diagonal of the same cross
-        tour.append(cross_at_position(crosses, current_node, pos2).get(pos1))
-        for i in range(nb_repeats):
-            tour.append(cross_at_position(crosses, current_node, pos2).get(pos4))
-            tour.append(cross_at_position(crosses, current_node, pos2).get(pos1))
-        covered_crosses.append(cross_at_position(crosses, current_node, pos2))
-        current_node = cross_at_position(crosses, current_node, pos2).get(pos1)
-        check_stop_flag()
-    while current_node != node:
-        # This part of the tour is "bad traveling", going through center of crosses
-        # after stitching last diagonal
-        tour.append(cross_at_position(crosses, current_node, pos1).center_point)
-        tour.append(cross_at_position(crosses, current_node, pos1).get(pos2))
-        current_node = cross_at_position(crosses, current_node, pos1).get(pos2)
-        check_stop_flag()
-    if len(tour) > 1 and remove:
-        remove_crosses(crosses, covered_crosses)
-    if len(tour) > 1:
-        return tour
-    else:
-        return []
-
-
-def remove_crosses(crosses, covered_crosses):
-    for cross in covered_crosses:
-        crosses.remove(cross)
-
-
-def rindex(lst, value):
-    lst.reverse()
-    i = lst.index(value)
-    lst.reverse()
-    return len(lst) - i - 1
-
-
-def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node):
-    if node in cycle_to_increase:
-        index = rindex(cycle_to_increase, node)
-        new_cycle = cycle_to_increase[:index] + cycle_to_insert + cycle_to_increase[index+1:]
-        return new_cycle
-
-
-def _cycles_to_stitches(eulerian_cycles, max_stitch_length):
+def _cycles_to_stitches(eulerian_cycles, max_stitch_length, flip):
     stitches = []
     for cycle in eulerian_cycles:
         if cycle is not None:
             last_point = cycle[0]
+            if flip:
+                last_point = _unrotate_coords(*last_point)
             stitches.append(Stitch(*last_point, tags=["cross_stitch"]))
             for point in cycle[1:]:
+                if flip:
+                    point = _unrotate_coords(*point)
                 if point == last_point:
                     continue
                 line = LineString([last_point, point]).segmentize(max_stitch_length)
