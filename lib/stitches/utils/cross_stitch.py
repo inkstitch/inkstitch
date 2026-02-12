@@ -3,11 +3,12 @@
 # Copyright (c) 2026 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from shapely.geometry import LineString, Polygon
-from shapely.affinity import translate
 from shapely import prepare
-from ...utils.threading import check_stop_flag
+from shapely.affinity import scale, translate
+from shapely.geometry import LineString, Polygon
+
 from ...utils import DotDict
+from ...utils.threading import check_stop_flag
 
 
 class CrossGeometries(object):
@@ -30,6 +31,9 @@ class CrossGeometries(object):
             cross_stitch_method:        cross stitch method as string
             original_shape (optional):  used for alignment, when shape had to be split up
         """
+        if "flip" in cross_stitch_method:
+            shape = scale(shape, xfact=-1, origin=(0, 0))
+
         self.fill = fill
         self.cross_stitch_method = cross_stitch_method
 
