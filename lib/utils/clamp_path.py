@@ -2,6 +2,7 @@ from shapely.geometry import LineString, MultiPolygon
 from shapely.geometry import Point as ShapelyPoint
 from shapely.ops import nearest_points
 from shapely.prepared import prep
+from shapely.errors import GEOSException
 
 from .geometry import (Point, ensure_geometry_collection,
                        ensure_multi_line_string)
@@ -107,7 +108,13 @@ def clamp_path_to_polygon(path, polygon, check_distance=True):
         return path
 
     # contains() checks can fail without the buffer.
-    buffered_polygon = prep(polygon.buffer(1e-9))
+    try:
+        buffered_polygon = prep(polygon.buffer(1e-9))
+    except GEOSException:
+        # Buffering seems to fail when coordinate values are very high (shape is way off from the canvas)
+        # However, the output results seem to be better, when we do not try to continue clamping
+        # For an example fle see issue https://github.com/inkstitch/inkstitch/issues/4219
+        return path
 
     if len(split_path.geoms) == 1 and buffered_polygon.contains(split_path.geoms[0]):
         # The path never intersects with the polygon, so it's entirely inside.
@@ -117,6 +124,15 @@ def clamp_path_to_polygon(path, polygon, check_distance=True):
     # start or end coincides with the polygon boundary
     split_path = [ShapelyPoint(start), *split_path.geoms, ShapelyPoint(end)]
 
+    clamped_path = _clamp_path(split_path, buffered_polygon, polygon, check_distance)
+
+    if not clamped_path:
+        return clamp_fully_external_path(path, polygon)
+
+    return segments_to_path(clamped_path)
+
+
+def _clamp_path(split_path, buffered_polygon, polygon, check_distance):
     last_point_inside = None
     was_inside = False
     result = []
@@ -165,7 +181,4 @@ def clamp_path_to_polygon(path, polygon, check_distance=True):
         else:
             was_inside = False
 
-    if not result:
-        return clamp_fully_external_path(path, polygon)
-
-    return segments_to_path(result)
+    return result
