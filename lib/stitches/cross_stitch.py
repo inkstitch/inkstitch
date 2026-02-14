@@ -210,7 +210,7 @@ def _build_double_cycle(subcrosses, cycle, nb_repeats):
             if node in corners:
                 break
         _, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
-        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node,last_occurence=False)
+        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node, last_occurence=False)
     return cycle
 
 
@@ -464,7 +464,7 @@ def rindex(lst, value):
     return len(lst) - i - 1
 
 
-def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node,last_occurence=True):
+def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node, last_occurence=True):
     if node in cycle_to_increase:
         if last_occurence:
             index = rindex(cycle_to_increase, node)
