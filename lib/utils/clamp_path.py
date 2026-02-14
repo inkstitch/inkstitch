@@ -1,8 +1,8 @@
+from shapely.errors import GEOSException
 from shapely.geometry import LineString, MultiPolygon
 from shapely.geometry import Point as ShapelyPoint
 from shapely.ops import nearest_points
 from shapely.prepared import prep
-from shapely.errors import GEOSException
 
 from .geometry import (Point, ensure_geometry_collection,
                        ensure_multi_line_string)
