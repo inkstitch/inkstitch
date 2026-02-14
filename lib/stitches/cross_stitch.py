@@ -204,21 +204,13 @@ def _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped):
 
 
 def _build_double_cycle(subcrosses, cycle, nb_repeats):
-    # for double crosses we can't reduce amount of bad traveling
     while subcrosses:
-        # find a corner on the cycle that needs more crosses, so that we can enlarge the cycle
-        potential_node = None
-        for cross in subcrosses:
-            for node in cross.corners:
-                if node in cycle:
-                    potential_node = node
-                    break
-            if potential_node:
+        corners = [node for cross in subcrosses for node in cross.corners]
+        for node in cycle:
+            if node in corners:
                 break
-        if potential_node is None:
-            break
-        position, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
-        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+        _, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
+        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node,last_occurence=False)
     return cycle
 
 
@@ -472,9 +464,12 @@ def rindex(lst, value):
     return len(lst) - i - 1
 
 
-def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node):
+def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node,last_occurence=True):
     if node in cycle_to_increase:
-        index = rindex(cycle_to_increase, node)
+        if last_occurence:
+            index = rindex(cycle_to_increase, node)
+        else:
+            index = cycle_to_increase.index(node)
         new_cycle = cycle_to_increase[:index] + cycle_to_insert + cycle_to_increase[index+1:]
         return new_cycle
 
