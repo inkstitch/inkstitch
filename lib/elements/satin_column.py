@@ -791,8 +791,17 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def min_stitch_len(self):
+        if self.min_stitch_length:
+            return self.min_stitch_length
         metadata = InkStitchMetadata(self.node.root)
         return metadata['min_stitch_len_mm'] * PIXELS_PER_MM
+
+    @property
+    def min_jump_stitch_len(self):
+        if self.min_jump_stitch_length:
+            return self.min_jump_stitch_length
+        metadata = InkStitchMetadata(self.node.root)
+        return metadata['collapse_len_mm'] * PIXELS_PER_MM
 
     @property
     @cache
@@ -1857,9 +1866,15 @@ class SatinColumn(EmbroideryElement):
         return shgeo.Point(self.line_string_rails[0].coords[0])
 
     def start_point(self, last_stitch_group):
+        # To cover possible tie ins are covered, it is best to start from the center line within the satin
         start_point = self._get_command_point('starting_point')
         if start_point is None and self.start_at_nearest_point and last_stitch_group is not None:
-            start_point = nearest_points(shgeo.Point(*last_stitch_group.stitches[-1]), self.offset_center_line)[1]
+            last_point = shgeo.Point(*last_stitch_group.stitches[-1])
+            start_point = nearest_points(last_point, self.offset_center_line)[1]
+            # if starting from the centerline will produce a jump stitch and the actual distance to the last element doesn't exceed the minimum jump
+            # stitch length, allow this satin to start from the outline
+            if last_point.distance(start_point) > self.min_jump_stitch_len and self.compensated_shape.distance(last_point) < self.min_jump_stitch_len:
+                start_point = nearest_points(self.compensated_shape, last_point)[0]
             start_point = Point(*list(start_point.coords[0]))
         return start_point
 

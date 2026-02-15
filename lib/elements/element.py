@@ -296,6 +296,7 @@ class EmbroideryElement(object):
            _('Minimum stitch length'),
            tooltip=_('Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.'),
            type='float',
+           unit="mm",
            default=None,
            sort_index=200)
     @cache
@@ -307,6 +308,7 @@ class EmbroideryElement(object):
            _('Minimum jump stitch length'),
            tooltip=_('Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.'),
            type='float',
+           unit="mm",
            default=None,
            sort_index=201)
     @cache
