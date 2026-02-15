@@ -48,8 +48,13 @@ class CrossStitchHelperFrame(wx.Frame):
         self.rgb_color_list.SetValue(global_settings['cross_bitmap_rgb_colors'])
         self.gimp_palette.SetPath(global_settings['cross_bitmap_gimp_palette'])
         self.saturation.SetValue(int(global_settings['cross_bitmap_saturation'] * 100))
+        self.saturation_numerical_input.SetValue(global_settings['cross_bitmap_saturation'])
         self.brightness.SetValue(int(global_settings['cross_bitmap_brightness'] * 100))
+        self.brightness_numerical_input.SetValue(global_settings['cross_bitmap_brightness'])
         self.contrast.SetValue(int(global_settings['cross_bitmap_contrast'] * 100))
+        self.contrast_numerical_input.SetValue(global_settings['cross_bitmap_contrast'])
+        self.transparency_threshold.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
+        self.transparency_threshold_numerical_input.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
         self.background_color.SetColour(wx.Colour(global_settings['cross_bitmap_background_color']))
         self.remove_background.SetSelection(global_settings['cross_bitmap_remove_background'])
 
@@ -235,7 +240,7 @@ class CrossStitchHelperFrame(wx.Frame):
         bitmap_headline = wx.StaticText(self.bitmap, wx.ID_ANY, _("Convert bitmaps to pixelated fill areas"))
         bitmap_headline.SetFont(font)
 
-        bitmap_grid_sizer = wx.FlexGridSizer(11, 2, 15, 20)
+        bitmap_grid_sizer = wx.FlexGridSizer(12, 2, 15, 20)
         bitmap_grid_sizer.AddGrowableCol(1)
 
         convert_bitmap_label = wx.StaticText(self.bitmap, label=_("Convert bitmaps"))
@@ -310,6 +315,22 @@ class CrossStitchHelperFrame(wx.Frame):
         contrast_sizer.Add(self.contrast, 0, wx.ALL | wx.EXPAND, 5)
         contrast_sizer.Add(self.contrast_numerical_input, 0, wx.ALL, 5)
 
+        transparency_threshold_sizer = wx.BoxSizer(wx.HORIZONTAL)
+        transparency_threshold_tooltip = _("Removes pixels with a lower transparency value than this from the original image.")
+        self.transparency_threshold_label = wx.StaticText(self.bitmap, label=_("Transparency threshold (%)"))
+        self.transparency_threshold = wx.Slider(self.bitmap, value=50, minValue=0, maxValue=99, size=(300, 0))
+        self.transparency_threshold.SetTick(50)
+        self.transparency_threshold_numerical_input = wx.SpinCtrl(self.bitmap, value='50', min=0, max=99, initial=50)
+        self.transparency_threshold.Bind(wx.EVT_SCROLL, lambda event: self.on_color_slider_change("transparency_threshold", event))
+        self.transparency_threshold_numerical_input.Bind(
+            wx.EVT_SPINCTRL, lambda event: self.on_numerical_color_change("transparency_threshold", event)
+        )
+        self.transparency_threshold_label.SetToolTip(transparency_threshold_tooltip)
+        self.transparency_threshold.SetToolTip(transparency_threshold_tooltip)
+        self.transparency_threshold_numerical_input.SetToolTip(transparency_threshold_tooltip)
+        transparency_threshold_sizer.Add(self.transparency_threshold, 0, wx.ALL | wx.EXPAND, 5)
+        transparency_threshold_sizer.Add(self.transparency_threshold_numerical_input, 0, wx.ALL, 5)
+
         background_tooltip_text = _("Background color for transparent images and background removal.")
         self.background_color_label = wx.StaticText(self.bitmap, label=_("Background color"))
         self.background_color_label.SetToolTip(background_tooltip_text)
@@ -346,6 +367,8 @@ class CrossStitchHelperFrame(wx.Frame):
             (brightness_sizer, 1, wx.EXPAND),
             (self.contrast_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (contrast_sizer, 1, wx.EXPAND),
+            (self.transparency_threshold_label, 0, wx.ALIGN_CENTER_VERTICAL),
+            (transparency_threshold_sizer, 1, wx.EXPAND),
             (self.background_color_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.background_color, 1, wx.EXPAND),
             (self.remove_background_label, 0, wx.ALIGN_CENTER_VERTICAL),
@@ -363,12 +386,12 @@ class CrossStitchHelperFrame(wx.Frame):
         else:
             no_image_info = wx.StaticText(bitmap_panel, label=_("No image selected"))
             no_image_info.SetForegroundColour(wx.RED)
-            bitmap_sizer.Add(no_image_info, 1, wx.ALL | wx.EXPAND, 20)
+            bitmap_sizer.Add(no_image_info, 0, wx.ALL | wx.EXPAND, 20)
         bitmap_panel.SetSizer(bitmap_sizer)
 
         self.bitmap_sizer.Add(bitmap_headline, 0, wx.TOP | wx.LEFT, 20)
         self.bitmap_sizer.Add(bitmap_grid_sizer, 1, wx.EXPAND | wx.ALL, 20)
-        self.bitmap_wrapper_sizer.Add(self.bitmap_sizer, 0, wx.ALL, 20)
+        self.bitmap_wrapper_sizer.Add(self.bitmap_sizer, 1, wx.ALL, 20)
         self.bitmap_wrapper_sizer.Add(bitmap_panel, 0, wx.ALL | wx.ALIGN_TOP, 20)
 
         # help
@@ -471,6 +494,8 @@ class CrossStitchHelperFrame(wx.Frame):
             self.brightness_numerical_input.SetValue(self.brightness.GetValue() / 100)
         elif rule == "contrast":
             self.contrast_numerical_input.SetValue(self.contrast.GetValue() / 100)
+        elif rule == "transparency_threshold":
+            self.transparency_threshold_numerical_input.SetValue(self.transparency_threshold.GetValue())
         self.update_bitmap_panel()
 
     def on_numerical_color_change(self, rule, event):
@@ -483,6 +508,9 @@ class CrossStitchHelperFrame(wx.Frame):
         elif rule == "contrast":
             contrast = self.contrast_numerical_input.GetValue()
             self.contrast.SetValue(int(contrast * 100))
+        elif rule == "transparency_threshold":
+            transparency_threshold = self.transparency_threshold_numerical_input.GetValue()
+            self.transparency_threshold.SetValue(int(transparency_threshold))
         self.update_bitmap_panel()
 
     def enable_bitmap_settings(self, event=None):
@@ -506,6 +534,9 @@ class CrossStitchHelperFrame(wx.Frame):
         self.contrast_label.Enable(convert)
         self.contrast.Enable(convert)
         self.contrast_numerical_input.Enable(convert)
+        self.transparency_threshold_label.Enable(convert)
+        self.transparency_threshold.Enable(convert)
+        self.transparency_threshold_numerical_input.Enable(convert)
         self.background_color_label.Enable(convert)
         self.background_color.Enable(convert)
         self.remove_background_label.Enable(convert)
@@ -564,9 +595,10 @@ class CrossStitchHelperFrame(wx.Frame):
         self.grid_color.SetColour(wx.Colour(self.default_settings['grid_color']))
         self.num_colors.SetValue(self.default_settings['bitmap_num_colors'])
         self.quantize_method.SetSelection(self.default_settings['bitmap_quantize_method'])
+        self.saturation.SetValue(int(self.default_settings['bitmap_saturation'] * 100))
         self.brightness.SetValue(int(self.default_settings['bitmap_brightness'] * 100))
         self.contrast.SetValue(int(self.default_settings['bitmap_contrast'] * 100))
-        self.saturation.SetValue(int(self.default_settings['bitmap_saturation'] * 100))
+        self.transparency_threshold.SetValue(int(self.default_settings['bitmap_transparency_threshold']))
         self.rgb_color_list.SetValue(self.default_settings['bitmap_rgb_colors'])
         self.gimp_palette.SetPath(self.default_settings['bitmap_gimp_palette'])
         self.background_color.SetColour(wx.Colour(self.default_settings['bitmap_background_color']))
@@ -594,9 +626,10 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['convert_bitmap'] = self.convert_bitmap.GetValue()
         self.settings['bitmap_num_colors'] = self.num_colors.GetValue()
         self.settings['bitmap_quantize_method'] = self.quantize_method.GetSelection()
+        self.settings['bitmap_saturation'] = self.saturation.GetValue() / 100
         self.settings['bitmap_brightness'] = self.brightness.GetValue() / 100
         self.settings['bitmap_contrast'] = self.contrast.GetValue() / 100
-        self.settings['bitmap_saturation'] = self.saturation.GetValue() / 100
+        self.settings['bitmap_transparency_threshold'] = self.transparency_threshold.GetValue()
         self.settings['bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
         self.settings['bitmap_gimp_palette'] = self.gimp_palette.GetPath()
         self.settings['bitmap_background_color'] = self.background_color.GetColour().Get(False)
@@ -631,6 +664,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_bitmap_saturation'] = self.saturation.GetValue() / 100
         global_settings['cross_bitmap_brightness'] = self.brightness.GetValue() / 100
         global_settings['cross_bitmap_contrast'] = self.contrast.GetValue() / 100
+        global_settings['cross_bitmap_transparency_threshold'] = self.transparency_threshold.GetValue()
         global_settings['cross_bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
         global_settings['cross_bitmap_gimp_palette'] = self.gimp_palette.GetPath()
         global_settings['cross_bitmap_background_color'] = self.background_color.GetColour().Get(False)

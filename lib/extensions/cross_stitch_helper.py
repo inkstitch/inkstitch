@@ -52,6 +52,7 @@ class CrossStitchHelper(InkstitchExtension):
             'bitmap_saturation': 1,
             'bitmap_brightness': 1,
             'bitmap_contrast': 1,
+            'bitmap_transparency_threshold': 50,
             'bitmap_background_color': (0, 0, 0),
             'bitmap_remove_background': 0
         }

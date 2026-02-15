@@ -64,6 +64,7 @@ DEFAULT_SETTINGS = {
     'cross_bitmap_saturation': 1,
     'cross_bitmap_brightness': 1,
     'cross_bitmap_contrast': 1,
+    'cross_bitmap_transparency_threshold': 50,
     'cross_bitmap_background_color': (0, 0, 0),
     'cross_bitmap_remove_background': 0
 }

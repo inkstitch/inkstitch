@@ -35,7 +35,6 @@ class BitmapToCrossStitch(object):
                                         should not be altered by other methods in this class
             * self.reduced_image        Same as prepared image,
                                         but will be altered by methods within this class (color reduction, background removal)
-            * self.initial_alpha        A mask for the intial alpha channel
             * self.alpha_mask           Will hold the total alpha mask (including background removal)
             * self.background_color     None or color to remove
 
@@ -68,22 +67,13 @@ class BitmapToCrossStitch(object):
             return
 
         with Image.open(image) as img:
-            self.image = img
-            self.original_image = self.image.resize((width, height))
+            self.original_image = img.resize((width, height))
 
         # ensure rgba mode
         self.original_image = self.original_image.convert("RGBA")
 
         # apply transform
         self.original_image = self.apply_transform(self.original_image)
-
-        # Get initial alpha mask
-        self.initial_alpha = self.original_image.getchannel("A")
-        self.initial_alpha = self._ensure_black_and_white_mask(self.initial_alpha, 127)
-
-        # apply alpha mask to avoid falsifying colors of only partly transparent pixels
-        self.original_image.putalpha(self.initial_alpha)
-        self.reduced_image = self.original_image
 
         # apply color corrections
         self.apply_color_corrections()
@@ -117,14 +107,19 @@ class BitmapToCrossStitch(object):
             - color balance
             - brightness
             - contrast
-            - transparent images: fill background with given color
+            - transparency threshold
             - reduce number of colors by either a given number or palette
         """
         if self.original_image is None:
             return
 
-        self.reduced_image = self.original_image
-        self.alpha_mask = self.initial_alpha
+        self.reduced_image = self.original_image.copy()
+
+        # Get initial alpha mask and apply to avoid falsifying colors of only partly transparent pixels
+        transparency_threshold = self.settings['bitmap_transparency_threshold'] * 255 // 100
+        self.alpha_mask = self.reduced_image.getchannel("A")
+        self.alpha_mask = self._ensure_black_and_white_mask(self.alpha_mask, transparency_threshold)
+        self.reduced_image.putalpha(self.alpha_mask)
 
         saturation_enhancer = ImageEnhance.Color(self.reduced_image)
         self.reduced_image = saturation_enhancer.enhance(self.settings['bitmap_saturation'])
@@ -153,7 +148,7 @@ class BitmapToCrossStitch(object):
 
         # return to rgba mode and apply initial alpha mask
         self.reduced_image = self.reduced_image.convert('RGBA')
-        self.reduced_image.putalpha(self.initial_alpha)
+        self.reduced_image.putalpha(self.alpha_mask)
 
         # set background to alpha (optional)
         if self.settings['bitmap_remove_background'] == 0:
@@ -166,7 +161,7 @@ class BitmapToCrossStitch(object):
         if self.background_color is not None:
             background = Image.new("RGBA", self.reduced_image.size, self.background_color)
             background_mask = ImageChops.difference(self.reduced_image, background).convert("L")
-            self.alpha_mask = ImageChops.multiply(self.initial_alpha, background_mask)
+            self.alpha_mask = ImageChops.multiply(self.alpha_mask, background_mask)
             self.alpha_mask = self._ensure_black_and_white_mask(self.alpha_mask)
             self.reduced_image.putalpha(self.alpha_mask)
 
@@ -200,7 +195,7 @@ class BitmapToCrossStitch(object):
         # get the clip shape and move it to canvas origin
         clip = self.bitmap.clip_shape
         if not clip:
-            return image
+            return self._crop_transparent_borders(image)
         minx, miny, maxx, maxy = self.bitmap.original_shape.bounds
         clip = translate(clip, -minx, -miny)
 
@@ -217,9 +212,8 @@ class BitmapToCrossStitch(object):
 
         # apply mask
         image.putalpha(mask)
-        image = self._crop_transparent_borders(image)
 
-        return image
+        return self._crop_transparent_borders(image)
 
     def _crop_transparent_borders(self, image):
         # crop transparent borders (only for use in cross stitch helper)
