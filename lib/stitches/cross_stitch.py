@@ -204,13 +204,15 @@ def _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped):
 
 
 def _build_double_cycle(subcrosses, cycle, nb_repeats):
+    i = 0
     while subcrosses:
         corners = [node for cross in subcrosses for node in cross.corners]
-        for node in cycle:
-            if node in corners:
-                break
+        while cycle[i] not in corners:
+            i+=1
+        node = cycle[i]
+       
         _, cycle_to_insert = _build_double_row_tour(subcrosses, node, nb_repeats, remove=False)
-        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node, last_occurence=False)
+        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node,last_occurence=False)
     return cycle
 
 
