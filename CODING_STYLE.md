@@ -5,31 +5,16 @@ General
 
 A major goal of Ink/Stitch is to create a codebase that is **fun to work on** and **easy to understand** for programmers of all skill and experience levels.  We try to write code that is expressive, easy to understand, and well-documented.  Code is a form of communication, and we try to use our code to tell a story about the problems we're trying to solve.
 
-Machine embroidery is a challenging problem space.  Many of the problems we're solving are complex, and so the code we write may also be complex.  This is often unavoidable, but when it happens, we try to organize our code to be as understandable as possible.
-your code's
-Code comments are encouraged, especially for complex stitch-related code.  If our code's purpose won't be obvious to readers with varying backgrounds, a descriptive comment can go a long way.  It's especially helpful to describe not just _what_ our code does, but _why_ it's doing that.  Feel free to include a link to issues here on GitHub to avoid having to repeat yourself.
+Machine embroidery is a challenging problem space.  Many of the problems we're solving are complex, and so the code we write may also be complex.  This is often unavoidable, but when it happens, we try to organize our code to be as understandable as possible.  Code comments are encouraged, especially for complex stitch-related code.  If our code's purpose won't be obvious to readers with varying backgrounds, a descriptive comment can go a long way.  It's especially helpful to describe not just _what_ our code does, but _why_ it's doing that.  Feel free to include a link to issues here on GitHub to avoid having to repeat yourself.
 
 Verbosity can often be preferable over brevity.  Longer, more expressive variable names can be very helpful for readability.  Splitting a complex `if` condition into multiple `if` statements, while it may seem inefficient, can make the code's story easier to understand.  Optimizing our code for speed or memory usage can be necessary at times, but we sacrifice readability only after careful consideration.  In such cases, a well-placed comment can really help.
 
 Code Conventions
 ================
 
-For Python, we try to follow [PEP8](https://www.python.org/dev/peps/pep-0008/).  For Javascript, we try to make [ESLint](https://eslint.org) happy.  In general, try to err on the side of readability and approachability.  If PEP8 and ESLint make that harder, then thoughtfully violating them may be the right answer.
+For Python, we try to follow [PEP8](https://www.python.org/dev/peps/pep-0008/).  For Javascript, we try to make [ESLint](https://eslint.org) happy.  In general, try to err on the side of readability and approachability.  If PEP8 and ESLint make that harder, then thoughtfully violating them may be the right answer, but this will be rare.
 
-PEP8 adherence is easy: just run `make style` in the top level directory.  You can run it on every commit by putting this in your `.git/hooks/pre-commit`:
-
-```bash
-#!/bin/bash
-
-cd $(dirname "$0")/../..
-
-errors=$(make style 2>&1)
-
-if [ "$?" != "0" ]; then
-    echo "$errors"
-    exit 1
-fi
-```
+PEP8 adherence is easy: just run `make style` in the top level directory.  You can run it on every commit, just see `bin/git-pre-commit-hook` for details.
 
 Type Annotations
 ================
@@ -57,12 +42,14 @@ and `profile_enable = True` options are set.
 After running Ink/Stitch command, a window will pop up telling you how to run Monkeytype and use your newly-collected type information.
 Multiple command runs will all add to the type information database.
 
-Guidance and Comments
+Guidance and Feedback
 =====================
 
-Code review is an important in our project, and we ask that all code changes be submitted as pull requests.  That said, we're not here to gatekeep!  We want to encourage your contributions, and we'll work with you to help make your code as readable and understandable as possible if we think any changes would be benficial.  We also encourage you to provide feedback on pull requests, especially as pertains to readability.  All feedback must be provided in a kind and constructive spirit, as per our [Code of Conduct](CODE_OF_CONDUCT.md).
+Code review is an important in our project, and we ask that all code changes be submitted as pull requests.  That said, we're not here to gatekeep!  We want to encourage your contributions, and we can work with you to help make your code as readable and understandable as possible if we think any changes would be beneficial.  We also encourage you to provide feedback on pull requests, especially as pertains to readability.  All feedback must be provided in a kind and constructive spirit, as per our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 When providing feedback, please keep in mind our goals of making the codebase **fun to work on** and **easy to understand**.  It may be the case that someone does something in a different way than you would have.  If it still meets these goals, then perhaps it's fine as it is.  Diversity of thought makes a codebase like ours stronger.
+
+One thing to note: please be mindful of the effort involved in providing feedback.  Do your best to structure your pull requests so as to make review easy.  That can mean including a helpful description that points reviewers in the right direction to understand what you've done.  It's also important to test your change as much as possible, and share details about your testing up front.
 
 Object-Oriented Programming
 ===========================
