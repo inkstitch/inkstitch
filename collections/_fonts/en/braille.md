@@ -9,10 +9,8 @@ preview_image:
 data_title:
 - braille
 ---
-
 {% include upcoming_release.html %}
 {% include font_infos.html %}
-
 
 ## Remarks
 
@@ -20,11 +18,6 @@ This is a font for the visually impaired with Braille key combinations according
 
 It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.
 
-
 {% include end_of_font_page.html %}
 
 {%include folder-galleries path="fonts/braille/" %}
-
-## License
-
-

@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2026-01-02
+last_modified_at: 2026-02-15
 sidebar:
   nav: pages
 toc: true
@@ -190,6 +190,7 @@ When multiple values are set, the satin column will use these to level consecuti
 ### Zigzag Stitch (Stroke)
 
 * Add bean stitch parameter option [#4127](https://github.com/inkstitch/inkstitch/pull/4127)
+* Add zigzag angle parameter [#4141](https://github.com/inkstitch/inkstitch/pull/4141)
 
 ## New extensions
 
@@ -331,6 +332,19 @@ Text module to use pre-digitized fonts.
 
 [Read more](/docs/lettering/)
 
+### Object commands
+
+* Add position option [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
+
+[Read more](/docs/commands/#attach-commands-to-selected-objects-)
+
+### Params
+
+* Display strokes, even when satin columns are enabled [#4137](https://github.com/inkstitch/inkstitch/pull/4137)
+* Show tooltips also when hovering inputs (not only for labels) [#4179](https://github.com/inkstitch/inkstitch/pull/4179)
+
+[Read more](/docs/params)
+
 ### Preferences
 
 Defines global settings or settings for the currently open SVG document.
@@ -356,6 +370,10 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Bugfixes
 
+* Satin column: start at nearest: allow to connect to outline when centerline has a greater distance than min jump stitch length [#4220](https://github.com/inkstitch/inkstitch/pull/4220)
+* Break apart: fix issue with area size value (can be negtative) [#4173](https://github.com/inkstitch/inkstitch/pull/4173)
+* Stroke: ignore invalid shapes in first_stitch [#4178](https://github.com/inkstitch/inkstitch/pull/4178)
+* Fill to satin: fix skip end segments, when there are only two rungs [#4146](https://github.com/inkstitch/inkstitch/pull/4146)
 * Fix issue with rgba thread color definitions [#4126](https://github.com/inkstitch/inkstitch/pull/4126)
 * Do not save empty embroidery files [#4125](https://github.com/inkstitch/inkstitch/pull/4125)
 * Remove embroidery settings: command param along with commands for trim and stop [#4074](https://github.com/inkstitch/inkstitch/pull/4074)
@@ -392,6 +410,8 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* Fix untyped decorator errors (and downstream type errors) [#4197](https://github.com/inkstitch/inkstitch/pull/4197)
+* CI: Added code style check, pinned action-gh-release version [#4192](https://github.com/inkstitch/inkstitch/pull/4192), [#4196](https://github.com/inkstitch/inkstitch/pull/4196)
 * Move fonts to submodule [#4061](https://github.com/inkstitch/inkstitch/pull/4061)
 * debugger vscode adaption [#3981](https://github.com/inkstitch/inkstitch/pull/3981)
 * README: add contact information (forum, chat) [#3979](https://github.com/inkstitch/inkstitch/pull/3979)

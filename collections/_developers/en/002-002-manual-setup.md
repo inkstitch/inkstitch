@@ -50,7 +50,7 @@ cd ~/.config/inkscape/extensions
 ln -s /path/to/inkstitch
 ```
 
-### 5. Configure Inkscape Python Environment (Linux only)
+### 5. Configure Inkscape Python Environment
 
 By default, Inkscape will use your system's python interpreter. On modern linux distributions, the [PEP668](https://peps.python.org/pep-0668/) standard prevents you from installing python packages directly into the system python interpreter.
 To work around this limitation, we need to tell Inkscape to use the python interpreter we installed in step 2:

@@ -317,8 +317,6 @@ Convertit les sauts de point en commandes de coupe.
 
 [En savoir plus](/fr/docs/commands/#jump-stitch-to-trim-command)
 
-
-
 ### Assise de points couchants
 
 Ajoute un remplissage sous les objets sélectionnés.
@@ -340,6 +338,19 @@ Module de texte utilisant des polices pré-numérisées.
 ![Dessinez deux textes écrits librement : un avec un espacement normal et l'autre avec un espacement adapté des lettres et des mots](/assets/images/upcoming/3.3.0/letter_spacing.jpg){: width="600px" }
 
 [En savoir plus](/fr/docs/lettering/)
+
+### Object commands
+
+* Add position option [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
+
+[Read more](/docs/commands/#attach-commands-to-selected-objects-)
+
+### Params
+
+* Display strokes, even when satin columns are enabled [#4137](https://github.com/inkstitch/inkstitch/pull/4137)
+* Show tooltips also when hovering inputs (not only for labels) [#4179](https://github.com/inkstitch/inkstitch/pull/4179)
+
+[En savoir plus](/fr/docs/troubleshoot/#element-info)
 
 ### Préférences
 
@@ -368,6 +379,10 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Corrections de bugs
 
+* Satin column: start at nearest: allow to connect to outline when centerline has a greater distance than min jump stitch length [#4220](https://github.com/inkstitch/inkstitch/pull/4220)
+* Break apart: fix issue with area size value (can be negtative) [#4173](https://github.com/inkstitch/inkstitch/pull/4173)
+* Stroke: ignore invalid shapes in first_stitch [#4178](https://github.com/inkstitch/inkstitch/pull/4178)
+* Fill to satin: fix skip end segments, when there are only two rungs [#4146](https://github.com/inkstitch/inkstitch/pull/4146)
 * Fix issue with rgba thread color definitions [#4126](https://github.com/inkstitch/inkstitch/pull/4126)
 * Do not save empty embroidery files [#4125](https://github.com/inkstitch/inkstitch/pull/4125)
 * Remove embroidery settings: command param along with commands for trim and stop [#4074](https://github.com/inkstitch/inkstitch/pull/4074)
@@ -404,6 +419,8 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* Fix untyped decorator errors (and downstream type errors) [#4197](https://github.com/inkstitch/inkstitch/pull/4197)
+* CI: Added code style check, pinned action-gh-release version [#4192](https://github.com/inkstitch/inkstitch/pull/4192), [#4196](https://github.com/inkstitch/inkstitch/pull/4196)
 * Move fonts to submodule [#4061](https://github.com/inkstitch/inkstitch/pull/4061)
 * debugger vscode adaption [#3981](https://github.com/inkstitch/inkstitch/pull/3981)
 * README: add contact information (forum, chat) [#3979](https://github.com/inkstitch/inkstitch/pull/3979)
