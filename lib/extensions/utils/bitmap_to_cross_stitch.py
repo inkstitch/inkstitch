@@ -26,21 +26,17 @@ from ...utils.geometry import ensure_multi_polygon
 
 
 class BitmapToCrossStitch(object):
-    ''' Bitmap to pixel fill, used within the cross stitch helper extension.
-        It basically takes a selected image and generates the cross stitch pixels by also trying to combine as many as possible.
+    ''' Converts a bitmap to pixelated fill elements by also trying to combine as many fill areas as possible.
+        This class is used for the cross stitch helper extension.
     '''
     def __init__(self, svg, bitmap, settings, palette=None):
         '''Prepare the bitmap image:
-            * self.original_image       None or original pillow image (rgba) with adapted alpha channel,
-                                        should not be altered by other methods in this class
-            * self.reduced_image        Same as prepared image,
-                                        but will be altered by methods within this class (color reduction, background removal)
-            * self.alpha_mask           Will hold the total alpha mask (including background removal)
-            * self.background_color     None or color to remove
+            * self.original_image       None or original pillow image (rgba), should not be altered by other methods in this class
+            * self.reduced_image        Same as original image, but will be altered by methods within this class (color reduction, background removal)
 
            Parameters:
            * svg:       the svg document
-           * bitmap:    Ink/Stitch Image insance
+           * bitmap:    Ink/Stitch Image instance
            * settings:  dictionary with cross stitch settings
            * palette:   flat list with rgb values (optional)
         '''
@@ -53,7 +49,6 @@ class BitmapToCrossStitch(object):
         self.palette = palette
         self.original_image = None
         self.reduced_image = None
-        self.background_color = None
 
         image = self._get_image_byte_string(bitmap.node)
         if image is None:
@@ -78,14 +73,50 @@ class BitmapToCrossStitch(object):
         # apply color corrections
         self.apply_color_corrections()
 
+    def _get_image_byte_string(self, image):
+        '''Gets the image byte strig, base64
+        '''
+        image_string = None
+        xlink = image.get('xlink:href', None)
+        if not xlink:
+            return None
+        # linked image
+        if xlink.startswith('file'):
+            image_string = unquote(xlink[7:])
+            if not os.path.isfile(image_string):
+                return None
+        # embedded imagae
+        elif xlink.startswith('data'):
+            image = xlink.split(',', 1)
+            image_string = BytesIO(base64.b64decode(image[1]))
+        return image_string
+
     def _get_unclipped_dimensions(self):
-        # Image bounds of the unclipped image
+        ''' Image bounds of the unclipped image
+        '''
         minx, miny, maxx, maxy = self.bitmap.original_shape.bounds
         width = int(maxx - minx)
         height = int(maxy - miny)
         return minx, miny, width, height
 
+    def get_transform_data(self, source, target):
+        '''Get the transform data to apply original image transforms
+           For reference see https://stackoverflow.com/questions/14177744
+        '''
+        matrix = []
+        for s, t in zip(source, target):
+            matrix.append([t[0], t[1], 1, 0, 0, 0, -s[0]*t[0], -s[0]*t[1]])
+            matrix.append([0, 0, 0, t[0], t[1], 1, -s[1]*t[0], -s[1]*t[1]])
+
+        a = np.matrix(matrix, dtype=float)
+        b = np.array(source).reshape(8)
+
+        res = np.dot(np.linalg.inv(a.T * a) * a.T, b)
+        return np.array(res).reshape(8)
+
     def apply_transform(self, image):
+        ''' Apply transforms from the original svg image
+        '''
         # Map original image corners on transformed image corners
         # Move original shape to the top corner
         if image is None:
@@ -151,44 +182,36 @@ class BitmapToCrossStitch(object):
         self.reduced_image.putalpha(self.alpha_mask)
 
         # set background to alpha (optional)
-        if self.settings['bitmap_remove_background'] == 0:
-            self.background_color = None
+        background_color = None
         if self.settings['bitmap_remove_background'] == 1:
-            self.background_color = self._nearest_color(self.settings['bitmap_background_color'])
+            background_color = self._nearest_color(self.settings['bitmap_background_color'])
         elif self.settings['bitmap_remove_background'] == 2:
-            self.background_color = self._get_main_color(self.reduced_image)
+            background_color = self._get_main_color(self.reduced_image)
 
-        if self.background_color is not None:
-            background = Image.new("RGBA", self.reduced_image.size, self.background_color)
+        if background_color is not None:
+            background = Image.new("RGBA", self.reduced_image.size, background_color)
             background_mask = ImageChops.difference(self.reduced_image, background).convert("L")
             self.alpha_mask = ImageChops.multiply(self.alpha_mask, background_mask)
             self.alpha_mask = self._ensure_black_and_white_mask(self.alpha_mask)
             self.reduced_image.putalpha(self.alpha_mask)
 
     def _ensure_black_and_white_mask(self, mask, threshold=0):
+        ''' Removes grayscale areas from the alpha mask using a threshold value
+        '''
         return mask.point(lambda a: 255 if a > threshold else 0)
 
     def _convert_to_rgb(self, image):
+        ''' Convert image from rgba to rgb
+            Fills transparent areas with a white color
+        '''
         background = Image.new("RGBA", image.size, (255, 255, 255))
         image = image.convert("RGBA")
         image = Image.alpha_composite(background, image)
         return image.convert("RGB")
 
-    def _nearest_color(self, target_color):
-        def distance(p):
-            r, g, b, a = p
-            return (r - target_color[0])**2 + (g - target_color[1])**2 + (b - target_color[2])**2 + (255)
-
-        # Find the nearest RGBA color
-        img = self.reduced_image.convert("RGBA")
-        colors = img.getcolors()
-        # Filter transparent areas
-        colors = [color for count, color in colors if color[3] > 0]
-        nearest = min(colors, key=distance)
-        return nearest
-
     def apply_clip(self, image):
-        # clips the image (used in cross stitch helper gui)
+        ''' clips the image (used in cross stitch helper gui)
+        '''
         # ensure rgba mode
         image = image.convert("RGBA")
 
@@ -216,11 +239,82 @@ class BitmapToCrossStitch(object):
         return self._crop_transparent_borders(image)
 
     def _crop_transparent_borders(self, image):
-        # crop transparent borders (only for use in cross stitch helper)
+        ''' Crop transparent borders
+            (only for use in cross stitch helper)
+        '''
         bbox = image.getchannel("A").getbbox()
         if bbox:
             return image.crop(bbox)
         return image
+
+    def _nearest_color(self, target_color):
+        ''' Returns the nearest existing color in self.reduced_image to the target color
+        '''
+        def distance(p):
+            r, g, b, a = p
+            return (r - target_color[0])**2 + (g - target_color[1])**2 + (b - target_color[2])**2 + (255)
+
+        # Find the nearest RGBA color
+        img = self.reduced_image.convert("RGBA")
+        colors = img.getcolors()
+        # Filter transparent areas
+        colors = [color for count, color in colors if color[3] > 0]
+        nearest = min(colors, key=distance)
+        return nearest
+
+    def _get_main_color(self, image):
+        '''Returns the rgb value of the most prominent color within the given image (rgba)
+        '''
+        colors = image.getcolors(image.size[0] * image.size[1])
+        if colors:
+            return max(colors, key=itemgetter(0))[1]
+        else:
+            return None
+
+    def _get_color_palette(self):
+        '''Catches the colors for color method 1, 2 and 3
+        '''
+        color_method = self.settings['color_method']
+        color_palette = None
+        if color_method == 1:
+            # Color method 1 reads colors from selected strokes and uses them as a palette
+            color_palette = self.palette
+        elif color_method == 2:
+            # Color method 2 is a manual input of rgb values.
+            # We don't care about the form, just read all numbers from a string into a list and make sure it is a multiple of 3 (rgb)
+            colors = self.settings['bitmap_rgb_colors']
+            color_palette = findall(r'\d+', colors)
+            color_palette = [min(255, int(color_palette[i])) for i in range(len(color_palette) - len(color_palette) % 3)]
+        elif color_method == 3:
+            # Color method 3 reads a gimp color palette and converts it into a flat list with rgb values
+            palette_path = self.settings['bitmap_gimp_palette']
+            try:
+                palette = ThreadPalette(palette_path)
+            except FileNotFoundError:
+                return None
+            color_palette = []
+            for i, color in enumerate(palette.threads):
+                if i >= 256:
+                    break
+                color_palette.extend(color.rgb)
+        return color_palette
+
+    def _get_offset_value(self):
+        '''converts the grid_offset string into a tuple with two integer values
+        '''
+        offset = self.settings['grid_offset'].split(' ')
+        offset_value = (0, 0)
+        if len(offset) == 1:
+            try:
+                offset_value = (int(offset[0]) * PIXELS_PER_MM, int(offset[0]) * PIXELS_PER_MM)
+            except (TypeError, ValueError):
+                pass
+        if len(offset) == 2:
+            try:
+                offset_value = (int(offset[0]) * PIXELS_PER_MM, int(offset[1]) * PIXELS_PER_MM)
+            except (TypeError, ValueError):
+                pass
+        return offset_value
 
     def svg_nodes(self):
         '''Converts the bitmap into path elements by respecting the given cross stitch settings
@@ -286,93 +380,3 @@ class BitmapToCrossStitch(object):
             elements.append(color_group)
         elements.sort(key=lambda group: len(group), reverse=True)
         return elements
-
-    def _get_offset_value(self):
-        '''converts the grid_offset string into a tuple with two integer values
-        '''
-        offset = self.settings['grid_offset'].split(' ')
-        offset_value = (0, 0)
-        if len(offset) == 1:
-            try:
-                offset_value = (int(offset[0]) * PIXELS_PER_MM, int(offset[0]) * PIXELS_PER_MM)
-            except (TypeError, ValueError):
-                pass
-        if len(offset) == 2:
-            try:
-                offset_value = (int(offset[0]) * PIXELS_PER_MM, int(offset[1]) * PIXELS_PER_MM)
-            except (TypeError, ValueError):
-                pass
-        return offset_value
-
-    def _get_main_color(self, image):
-        '''Returns the rgb value of the most prominent color within the given image (rgba)
-        '''
-        colors = image.getcolors(image.size[0] * image.size[1])
-        if colors:
-            return max(colors, key=itemgetter(0))[1]
-        else:
-            return None
-
-    def _get_color_palette(self):
-        '''Catches the colors for color method 1, 2 and 3
-        '''
-        color_method = self.settings['color_method']
-        color_palette = None
-        if color_method == 1:
-            # Color method 1 reads colors from selected strokes and uses them as a palette
-            color_palette = self.palette
-        elif color_method == 2:
-            # Color method 2 is a manual input of rgb values.
-            # We don't care about the form, just read all numbers from a string into a list and make sure it is a multiple of 3 (rgb)
-            colors = self.settings['bitmap_rgb_colors']
-            color_palette = findall(r'\d+', colors)
-            color_palette = [min(255, int(color_palette[i])) for i in range(len(color_palette) - len(color_palette) % 3)]
-        elif color_method == 3:
-            # Color method 3 reads a gimp color palette and converts it into a flat list with rgb values
-            palette_path = self.settings['bitmap_gimp_palette']
-            try:
-                palette = ThreadPalette(palette_path)
-            except FileNotFoundError:
-                return None
-            color_palette = []
-            for i, color in enumerate(palette.threads):
-                if i >= 256:
-                    break
-                color_palette.extend(color.rgb)
-        return color_palette
-
-    def _get_image_byte_string(self, image):
-        '''Gets the image byte strig, base64
-        '''
-        image_string = None
-        xlink = image.get('xlink:href', None)
-        if not xlink:
-            return None
-        # linked image
-        if xlink.startswith('file'):
-            image_string = unquote(xlink[7:])
-            if not os.path.isfile(image_string):
-                return None
-        # embedded imagae
-        elif xlink.startswith('data'):
-            image = xlink.split(',', 1)
-            image_string = BytesIO(base64.b64decode(image[1]))
-        return image_string
-
-    def get_transform_data(self, source, target):
-        '''Get the transform data to apply original image transforms
-           For reference see https://stackoverflow.com/questions/14177744
-        '''
-        matrix = []
-        for s, t in zip(source, target):
-            matrix.append([t[0], t[1], 1, 0, 0, 0, -s[0]*t[0], -s[0]*t[1]])
-            matrix.append([0, 0, 0, t[0], t[1], 1, -s[1]*t[0], -s[1]*t[1]])
-
-        a = np.matrix(matrix, dtype=float)
-        b = np.array(source).reshape(8)
-
-        res = np.dot(np.linalg.inv(a.T * a) * a.T, b)
-        return np.array(res).reshape(8)
-
-    def flatten_palette(self, palette):
-        pass
