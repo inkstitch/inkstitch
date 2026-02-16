@@ -316,15 +316,10 @@ class BitmapToCrossStitch(object):
                 pass
         return offset_value
 
-    def svg_nodes(self):
-        '''Converts the bitmap into path elements by respecting the given cross stitch settings
-           Returns:
-            * elements: a list of path elements grouped by color (svg groups)
-        '''
-        if self.reduced_image is None:
-            return
+    def _get_color_boxes(self):
+        # ensure rgba mode
+        self.reduced_image = self.reduced_image.convert('RGBA')
 
-        elements = []
         color_boxes = defaultdict(list)
         width = self.settings['box_x'] * PIXELS_PER_MM
         height = self.settings['box_y'] * PIXELS_PER_MM
@@ -346,9 +341,20 @@ class BitmapToCrossStitch(object):
             if main_color[3] < 255:
                 # skip transparent areas
                 continue
-            else:
-                color = main_color[:3]
             color_boxes[main_color[:3]].append(box)
+        return color_boxes
+
+    def svg_nodes(self):
+        '''Converts the bitmap into path elements by respecting the given cross stitch settings
+           Returns:
+            * elements: a list of path elements grouped by color (svg groups)
+        '''
+        if self.reduced_image is None:
+            return
+
+        elements = []
+        width = self.settings['box_x'] * PIXELS_PER_MM
+        color_boxes = self._get_color_boxes()
 
         for color, boxes in color_boxes.items():
             color_group = Group()

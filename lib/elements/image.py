@@ -62,7 +62,10 @@ class ImageObject(EmbroideryElement):
         # biggest path.
         paths = self.paths
         paths.sort(key=lambda point_list: Polygon(point_list).area, reverse=True)
-        shape = MultiPolygon([(paths[0], paths[1:])])
+        if len(paths) > 1:
+            shape = MultiPolygon([(paths[0], paths[1:])])
+        else:
+            shape = MultiPolygon([paths])
         return shape
 
     def center(self):
