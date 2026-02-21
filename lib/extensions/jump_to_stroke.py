@@ -151,10 +151,10 @@ class JumpToStroke(InkstitchExtension):
 
         # do not add a running stitch if the distance is smaller than min_jump setting
         line = DirectedLineSegment((start.x, start.y), (end.x, end.y))
-        if line.length < self.options.min_jump * PIXELS_PER_MM:
+        if line.length <= self.options.min_jump * PIXELS_PER_MM:
             return
         # do not add a running stitch if the distance is longer than max_jump setting
-        if self.options.max_jump > 0 and line.length > self.options.max_jump * PIXELS_PER_MM:
+        if self.options.max_jump > 0 and line.length >= self.options.max_jump * PIXELS_PER_MM:
             return
 
         path = Path([(start.x, start.y), (end.x, end.y)])
