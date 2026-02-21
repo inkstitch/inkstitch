@@ -102,10 +102,10 @@ class CrossGeometries(object):
                         this.left = left
                         left.right = this
 
-                    down = self._grid.get((x, y - 1))
-                    if down:
-                        this.down = down
-                        down.up = this
+                    up = self._grid.get((x, y - 1))
+                    if up:
+                        this.up = up
+                        up.down = this
 
     def _get_offset_values(self, shape, original_shape):
         self._offset_x, self._offset_y = self.fill.cross_offset
