@@ -16,9 +16,9 @@
     <param name="tab" type="notebook">
       <page name="options" gui-text="Options">
         <param name="minimum-jump-length" type="float" precision="2" min="0" max="100"
-               gui-text="Convert jumps not shorter than (mm)">3.0</param>
+               gui-text="Convert jumps longer than (mm)">3.0</param>
         <param name="maximum-jump-length" type="float" precision="2" min="0" max="10000"
-               gui-text="Convert jumps not longer than (mm)">0</param>
+               gui-text="Convert jumps shorter than (mm)">0</param>
         <param name="connect" type="optiongroup" appearance="combo" gui-text="Connect">
             <option value="all">all</option>
             <option value="layer">in same layer</option>
