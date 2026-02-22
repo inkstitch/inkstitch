@@ -194,6 +194,7 @@ def _build_simple_cycles(subcrosses, nb_repeats):
         if position is None:
             for cross in subcrosses:
                 if cross.top_left in visited_nodes:
+                    # TODO: we can probably do better than this
                     bridge_cycle = [cross.top_left, cross.center_point, cross.top_right, cross.center_point, cross.top_left]
                     cycle = insert_cycle_at_node(cycle, bridge_cycle, cross.top_left)
                     position = "below"
@@ -634,16 +635,9 @@ def remove_crosses(crosses, covered_crosses):
         crosses.remove(cross)
 
 
-def rindex(lst, value):
-    lst.reverse()
-    i = lst.index(value)
-    lst.reverse()
-    return len(lst) - i - 1
-
-
 def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node):
     if node in cycle_to_increase:
-        index = rindex(cycle_to_increase, node)
+        index = cycle_to_increase.index(node)
         new_cycle = cycle_to_increase[:index] + cycle_to_insert + cycle_to_increase[index+1:]
         return new_cycle
     else:
