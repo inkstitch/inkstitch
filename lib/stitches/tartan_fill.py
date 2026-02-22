@@ -11,6 +11,7 @@ from itertools import chain
 from math import cos, radians, sin
 from typing import TYPE_CHECKING, List, Optional, Tuple, Union
 
+from inkex import Color
 from networkx import is_empty
 from shapely import get_point, line_merge, minimum_bounding_radius, segmentize
 from shapely.affinity import rotate, scale, translate
@@ -713,6 +714,7 @@ def _get_fill_stitch_groups(
     stitch_groups: List[StitchGroup] = []
     i = 0
     for color, lines in color_lines.items():
+        inkex_color = Color(color)
         if not fill.stop_at_ending_point:
             i += 1
             if stitch_groups:
@@ -725,7 +727,7 @@ def _get_fill_stitch_groups(
         segments = [list(line.coords) for line in lines if len(line.coords) > 1]
         if len(segments) == 0:
             continue
-        stitch_group = _segments_to_stitch_group(fill, shape, segments, i, color, starting_point, ending_point)
+        stitch_group = _segments_to_stitch_group(fill, shape, segments, i, inkex_color, starting_point, ending_point)
         if stitch_group is not None:
             stitch_groups.append(stitch_group)
         check_stop_flag()
@@ -751,13 +753,14 @@ def _get_run_stitch_groups(
     """
     stitch_groups: List[StitchGroup] = []
     for color, lines in color_lines.items():
+        inkex_color = Color(color)
         if not fill.stop_at_ending_point and stitch_groups:
             starting_point = stitch_groups[-1].stitches[-1]
         # get segments and ignore lines smaller than 0.5 mm
         segments = [list(line.coords) for line in lines if line.length > 0.5 * PIXELS_PER_MM]
         if len(segments) == 0:
             continue
-        stitch_group = _segments_to_stitch_group(fill, shape, segments, 0, color, starting_point, ending_point, True)
+        stitch_group = _segments_to_stitch_group(fill, shape, segments, 0, inkex_color, starting_point, ending_point, True)
         if stitch_group is not None:
             stitch_groups.append(stitch_group)
         check_stop_flag()
