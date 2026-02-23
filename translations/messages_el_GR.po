@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-01-23 01:56+0000\n"
-"PO-Revision-Date: 2026-01-23 01:56\n"
+"POT-Creation-Date: 2026-02-23 02:29+0000\n"
+"PO-Revision-Date: 2026-02-23 02:29\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-23 01:56+0000\n"
+"POT-Creation-Date: 2026-02-23 02:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1085,21 +1085,21 @@ msgstr ""
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:365 lib/commands.py:489
+#: lib/commands.py:368 lib/commands.py:492
 msgid "Ink/Stitch Command"
 msgstr ""
 
 #. : the name of the line that connects a command to the object it applies to
-#: lib/commands.py:405
+#: lib/commands.py:408
 msgid "connector"
 msgstr ""
 
 #. : the name of a command symbol (example: scissors icon for trim command)
-#: lib/commands.py:426
+#: lib/commands.py:429
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:478
+#: lib/commands.py:481
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
@@ -1144,126 +1144,126 @@ msgstr ""
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr ""
 
-#: lib/elements/element.py:291 lib/gui/preferences.py:59
+#: lib/elements/element.py:296 lib/gui/preferences.py:59
 #: lib/gui/preferences.py:128
 msgid "Minimum stitch length"
 msgstr ""
 
-#: lib/elements/element.py:292
+#: lib/elements/element.py:297
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr ""
 
-#: lib/elements/element.py:302 lib/gui/preferences.py:41
+#: lib/elements/element.py:308 lib/gui/preferences.py:41
 msgid "Minimum jump stitch length"
 msgstr ""
 
-#: lib/elements/element.py:303
+#: lib/elements/element.py:309
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr ""
 
-#: lib/elements/element.py:313
+#: lib/elements/element.py:320
 msgid "Allow lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:314
+#: lib/elements/element.py:321
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr ""
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:319
+#: lib/elements/element.py:326
 msgid "Both"
 msgstr ""
 
-#: lib/elements/element.py:319
+#: lib/elements/element.py:326
 msgid "Before"
 msgstr "Πριν"
 
-#: lib/elements/element.py:319
+#: lib/elements/element.py:326
 msgid "After"
 msgstr "Μετά"
 
-#: lib/elements/element.py:319
+#: lib/elements/element.py:326
 msgid "Neither"
 msgstr ""
 
-#: lib/elements/element.py:328
+#: lib/elements/element.py:335
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr ""
 
-#: lib/elements/element.py:329
+#: lib/elements/element.py:336
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr ""
 
-#: lib/elements/element.py:341
+#: lib/elements/element.py:348
 msgid "Tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:342
+#: lib/elements/element.py:349
 msgid "Tack down stitch type"
 msgstr ""
 
-#: lib/elements/element.py:352 lib/elements/element.py:398
+#: lib/elements/element.py:359 lib/elements/element.py:405
 msgid "Custom path"
 msgstr "Προσαρμοσμένη διαδρομή"
 
-#: lib/elements/element.py:353
+#: lib/elements/element.py:360
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:363 lib/elements/element.py:375
+#: lib/elements/element.py:370 lib/elements/element.py:382
 msgid "Scale tack stitch"
 msgstr ""
 
-#: lib/elements/element.py:364
+#: lib/elements/element.py:371
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr ""
 
-#: lib/elements/element.py:376
+#: lib/elements/element.py:383
 msgid "Scale tack stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:387
+#: lib/elements/element.py:394
 msgid "Lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:388
+#: lib/elements/element.py:395
 msgid "Lock stitch type"
 msgstr ""
 
-#: lib/elements/element.py:399
+#: lib/elements/element.py:406
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr ""
 
-#: lib/elements/element.py:409 lib/elements/element.py:421
+#: lib/elements/element.py:416 lib/elements/element.py:428
 msgid "Scale lock stitch"
 msgstr ""
 
-#: lib/elements/element.py:410
+#: lib/elements/element.py:417
 msgid "Set length of lock stitches (mm)."
 msgstr ""
 
-#: lib/elements/element.py:422
+#: lib/elements/element.py:429
 msgid "Scale lock stitch by this percentage."
 msgstr ""
 
-#: lib/elements/element.py:434
+#: lib/elements/element.py:441
 msgid "Trim After"
 msgstr ""
 
-#: lib/elements/element.py:435
+#: lib/elements/element.py:442
 msgid "Add a TRIM command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:444
+#: lib/elements/element.py:451
 msgid "Stop After"
 msgstr ""
 
-#: lib/elements/element.py:445
+#: lib/elements/element.py:452
 msgid "Add a STOP command after stitching this object."
 msgstr ""
 
-#: lib/elements/element.py:749
+#: lib/elements/element.py:753
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr ""
 
@@ -7052,12 +7052,12 @@ msgstr ""
 msgid "Converts a jump stitch between selected elements into a running stitch"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:19 inx/inkstitch_jump_to_trim.inx:23
-msgid "Convert jumps not shorter than (mm)"
+#: inx/inkstitch_jump_to_stroke.inx:19
+msgid "Convert jumps longer than (mm)"
 msgstr ""
 
-#: inx/inkstitch_jump_to_stroke.inx:21 inx/inkstitch_jump_to_trim.inx:25
-msgid "Convert jumps not longer than (mm)"
+#: inx/inkstitch_jump_to_stroke.inx:21
+msgid "Convert jumps shorter than (mm)"
 msgstr ""
 
 #: inx/inkstitch_jump_to_stroke.inx:22
@@ -7134,6 +7134,14 @@ msgstr ""
 
 #: inx/inkstitch_jump_to_trim.inx:18
 msgid "Command"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:23
+msgid "Convert jumps not shorter than (mm)"
+msgstr ""
+
+#: inx/inkstitch_jump_to_trim.inx:25
+msgid "Convert jumps not longer than (mm)"
 msgstr ""
 
 #: inx/inkstitch_jump_to_trim.inx:29
