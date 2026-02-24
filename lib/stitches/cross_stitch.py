@@ -140,7 +140,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
     """
 
     eulerian_cycles = []
-    # centers = cross_geoms.center_points
+    centers = cross_geoms.center_points
     travel, starting_point, ending_point = organize(subgraphs, cross_geoms, starting_point, ending_point)
 
     for i, subgraph in enumerate(subgraphs):
@@ -148,22 +148,17 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
         if not subcrosses:
             continue
 
-        # if i == 0 and starting_point:
-        #     starting_corner = get_corner(starting_point, subcrosses)
-        # elif i == len(subgraphs) and ending_point:
-        #     starting_corner = get_corner(ending_point, subcrosses)
-        # else:
-        #     # any corner will do
-        #     index = 0
-        #     while list(subgraph.nodes)[index] in centers:
-        #         index += 1
-        #     starting_corner = list(subgraph.nodes)[index]
-
-        # position, cycle = row_tour(subcrosses, starting_corner, nb_repeats, True)
-        # crosses = cross_geoms.crosses
+        if i == 0 and starting_point:
+            starting_corner = get_corner(starting_point, subcrosses)
+        elif i == len(subgraphs) and ending_point:
+            starting_corner = get_corner(ending_point, subcrosses)
+        else:
+            # any corner will do
+            cross = next(iter(subcrosses))
+            starting_corner = cross.lower_left()
 
         if row_tour == _build_row_tour:
-            cycle = _build_simple_cycles(subcrosses, nb_repeats)
+            cycle = _build_simple_cycles(subcrosses, starting_corner, nb_repeats)
         else:
             cycle = _build_double_cycle(subcrosses, cycle, nb_repeats)
 
@@ -175,19 +170,19 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
     return eulerian_cycles
 
 
-def _build_simple_cycles(subcrosses, nb_repeats):
-    cross = next(iter(subcrosses))
-    cycle, covered_crosses = _build_row_tour_above(subcrosses, cross, nb_repeats)
-    subcrosses.difference_update(covered_crosses)
-
+def _build_simple_cycles(subcrosses, starting_point, nb_repeats):
+    cycle = [starting_point]
     visited_nodes = set(cycle)
     while subcrosses:
+        check_stop_flag()
+
         position = None
+
         for cross in subcrosses:
-            if cross.bottom_left in cycle:
+            if cross.bottom_left in visited_nodes:
                 position = "above"
                 break
-            elif cross.top_right in cycle:
+            if cross.top_right in visited_nodes:
                 position = "below"
                 break
 
@@ -197,18 +192,20 @@ def _build_simple_cycles(subcrosses, nb_repeats):
                     # TODO: we can probably do better than this
                     bridge_cycle = [cross.top_left, cross.center_point, cross.top_right, cross.center_point, cross.top_left]
                     cycle = insert_cycle_at_node(cycle, bridge_cycle, cross.top_left)
+                    visited_nodes.update(bridge_cycle)
                     position = "below"
                     break
                 elif cross.bottom_right in visited_nodes or cross.bottom_right in visited_nodes:
                     bridge_cycle = [cross.bottom_right, cross.center_point, cross.bottom_left, cross.center_point, cross.bottom_right]
                     cycle = insert_cycle_at_node(cycle, bridge_cycle, cross.bottom_right)
+                    visited_nodes.update(bridge_cycle)
                     position = "above"
                     break
 
         if position == "above":
             # go as far left as possible in this row while still connected to the cycle
             # to promote long, continuous rows
-            while cross.left:
+            while cross.left in subcrosses:
                 cross = cross.left
             while cross.bottom_left not in visited_nodes:
                 cross = cross.right
@@ -216,7 +213,7 @@ def _build_simple_cycles(subcrosses, nb_repeats):
             cycle_to_insert, covered_crosses = _build_row_tour_above(subcrosses, cross, nb_repeats)
             node = cross.bottom_left
         elif position == "below":
-            while cross.right:
+            while cross.right in subcrosses:
                 cross = cross.right
             while cross.top_right not in visited_nodes:
                 cross = cross.left
