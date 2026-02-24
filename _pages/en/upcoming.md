@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2026-02-15
+last_modified_at: 2026-02-24
 sidebar:
   nav: pages
 toc: true
@@ -90,6 +90,29 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Venezia small](/fonts/venezia/)
 
   ![Venezia](/assets/images/fonts/venezia_small.png)
+
+### Font renaming
+
+To comply with reserved font names in some OFL licenses, we had to rename some Ink/Stitch fonts.
+
+|Former name|New name|
+|---|---|
+|Baumans FI|Bathaus FI|
+|Marcellus SC FI|Caesarus SC FI |
+|Espresso|Caffeine KOR |
+|Espresso tiny|Caffeine KOR tiny|
+|Sortefax Initials Medium|Initials Medium|
+|Sortefax Initials XL|Initial XL|
+|Namskout AGS|Kum Tsoan AGS|
+|Namskout Relief|Kum Tsoan Relief|
+|Namskout Tartan|Kum Tsoan Tartan|
+|April en Fleur|Mai en fleur|
+|Kaushan Script MAM|MAM Script|
+|Coronaviral|Paquerette|
+|Manuskript Gothisch|Pisankris|
+|Lobster AGS| Stebor AGS|
+
+
 
 ### Font updates
 
