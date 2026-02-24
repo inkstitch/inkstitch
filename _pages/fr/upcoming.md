@@ -217,6 +217,7 @@ Lorsque plusieurs valeurs sont définies, la colonne satin les utilise alternati
 ### Point zigzag (trait)
 
 * Ajout de l'option de paramètre répétition de point multiple  [#4127](https://github.com/inkstitch/inkstitch/pull/4127)
+* Ajout du paramètre angle [#4141](https://github.com/inkstitch/inkstitch/pull/4141)
 
 ## Nouvelles extensions
 
@@ -363,16 +364,16 @@ Module de texte utilisant des polices pré-numérisées.
 
 [En savoir plus](/fr/docs/lettering/)
 
-### Object commands
+### Ajouter une commande à des objets
 
-* Add position option [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
+* Ajout d'un paramètre de position [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
 
-[Read more](/docs/commands/#attach-commands-to-selected-objects-)
+[Read more](/fr/docs/commands/#attach-commands-to-selected-objects-)
 
-### Params
+### Paramètres
 
-* Display strokes, even when satin columns are enabled [#4137](https://github.com/inkstitch/inkstitch/pull/4137)
-* Show tooltips also when hovering inputs (not only for labels) [#4179](https://github.com/inkstitch/inkstitch/pull/4179)
+* Afficher les points droits, même lorsque les colonnes satin sont activées[#4137](https://github.com/inkstitch/inkstitch/pull/4137)
+* Afficher également les infobulles lors du survol des champs de saisie (et pas seulement pour les étiquettes) [#4179](https://github.com/inkstitch/inkstitch/pull/4179)
 
 [En savoir plus](/fr/docs/troubleshoot/#element-info)
 
