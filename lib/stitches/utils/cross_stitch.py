@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from shapely import prepare
-from shapely.affinity import scale, translate
+from shapely.affinity import rotate, translate
 from shapely.geometry import LineString, Polygon
 
 from ...utils.threading import check_stop_flag
@@ -31,7 +31,7 @@ class CrossGeometries(object):
             original_shape (optional):  used for alignment, when shape had to be split up
         """
         if "flip" in cross_stitch_method:
-            shape = scale(shape, xfact=-1, origin=(0, 0))
+            shape = rotate(shape, 90, origin=(0, 0))
 
         self.fill = fill
         self.cross_stitch_method = cross_stitch_method

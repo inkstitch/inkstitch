@@ -71,9 +71,9 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number)
 
     if flipped:
         if starting_point:
-            starting_point = _mirror_coords(starting_point)
+            starting_point = _rotate_coords(*starting_point)
         if ending_point:
-            ending_point = _mirror_coords(ending_point)
+            ending_point = _rotate_coords(*ending_point)
 
     nb_repeats = (threads_number // 2) - 1
     cross_geoms = CrossGeometries(fill, shape, method)
@@ -195,8 +195,8 @@ def _build_simple_cycles(subcrosses, starting_point, nb_repeats):
 
         #random.shuffle(visited_crosses)
 
-        #for cross in visited_crosses:
-        for cross in reversed(visited_crosses):
+        for cross in visited_crosses:
+        #for cross in reversed(visited_crosses):
 
             # different order gives a quite different style of stitch path
             #for direction in ("up", "down", "left", "right"):
@@ -510,8 +510,12 @@ def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node):
         raise ValueError("node not in cycle")
 
 
-def _mirror_coords(x, y):
-    return -x, y
+def _rotate_coords(x, y):
+    return -y, x
+
+
+def _unrotate_coords(x, y):
+    return y, -x
 
 
 def _cycles_to_stitches(eulerian_cycles, max_stitch_length, flip):
@@ -520,11 +524,11 @@ def _cycles_to_stitches(eulerian_cycles, max_stitch_length, flip):
         if cycle is not None:
             last_point = cycle[0]
             if flip:
-                last_point = _mirror_coords(*last_point)
+                last_point = _unrotate_coords(*last_point)
             stitches.append(Stitch(*last_point, tags=["cross_stitch"]))
             for point in cycle[1:]:
                 if flip:
-                    point = _mirror_coords(*point)
+                    point = _unrotate_coords(*point)
                 if point == last_point:
                     continue
                 line = LineString([last_point, point]).segmentize(max_stitch_length)
