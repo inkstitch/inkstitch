@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-02-23 02:29+0000\n"
-"PO-Revision-Date: 2026-02-23 02:29\n"
+"PO-Revision-Date: 2026-02-25 02:30\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -7092,11 +7092,11 @@ msgstr "Converti un saut de fil entre les éléments sélectionnés en point dro
 
 #: inx/inkstitch_jump_to_stroke.inx:19
 msgid "Convert jumps longer than (mm)"
-msgstr ""
+msgstr "Convertir seulement les sauts de longueur supérieure à (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "Convert jumps shorter than (mm)"
-msgstr ""
+msgstr "Convertir seulement les sauts de longueur inférieure à (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:22
 msgid "Connect"
