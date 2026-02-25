@@ -186,3 +186,59 @@ class Cross:
     def get(self, attribute):
         """Temporary compatibility method"""
         return getattr(self, attribute)
+
+    def cycle_from_point(self, starting_point, nb_repeats):
+        if starting_point == self.top_left:
+            return self.cycle_from_top_left(nb_repeats)
+        elif starting_point == self.top_right:
+            return self.cycle_from_top_right(nb_repeats)
+        elif starting_point == self.bottom_left:
+            return self.cycle_from_bottom_left(nb_repeats)
+        elif starting_point == self.bottom_right:
+            return self.cycle_from_bottom_right(nb_repeats)
+
+    def cycle_from_neighbor(self, neighbor, nb_repeats):
+        if neighbor in ("left", "down"):
+            return self.cycle_from_bottom_left(nb_repeats)
+        elif neighbor in ("right", "up"):
+            return self.cycle_from_top_right(nb_repeats)
+        else:
+            raise ValueError(f"invalid neighbor direction: {neighbor}")
+
+    def cycle_from_top_left(self, nb_repeats):
+        return (
+            [self.top_left] +
+            [self.bottom_right, self.top_left] * nb_repeats +
+            [self.bottom_right, self.center_point] +
+            [self.top_right, self.bottom_left] * (nb_repeats + 1) +
+
+            # this is bad travel
+            [self.center_point, self.top_left]
+        )
+
+    def cycle_from_bottom_right(self, nb_repeats):
+        return (
+            [self.bottom_right] +
+            [self.top_left, self.bottom_right] * nb_repeats +
+            [self.top_left, self.center_point] +
+            [self.top_right, self.bottom_left] * (nb_repeats + 1) +
+
+            # this is bad travel
+            [self.center_point, self.bottom_right]
+        )
+
+    def cycle_from_top_right(self, nb_repeats):
+        return (
+            [self.top_right, self.center_point, self.top_left] +
+            [self.bottom_right, self.top_left] * nb_repeats +
+            [self.bottom_right, self.center_point] +
+            [self.bottom_left, self.top_right] * (nb_repeats + 1)
+        )
+
+    def cycle_from_bottom_left(self, nb_repeats):
+        return (
+            [self.bottom_left, self.center_point, self.bottom_right] +
+            [self.top_left, self.bottom_right] * nb_repeats +
+            [self.top_left, self.center_point] +
+            [self.top_right, self.bottom_left] * (nb_repeats + 1)
+        )
