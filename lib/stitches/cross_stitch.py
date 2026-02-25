@@ -199,8 +199,8 @@ def _build_simple_cycles(subcrosses, starting_point, nb_repeats):
         #for cross in reversed(visited_crosses):
 
             # different order gives a quite different style of stitch path
-            #for direction in ("up", "down", "left", "right"):
-            for direction in ("left", "right", "up", "down"):
+            for direction in ("up", "down", "left", "right"):
+            #for direction in ("left", "right", "up", "down"):
 
                 if cross.get(direction) in subcrosses:
                     neighbor_cross = cross.get(direction)
