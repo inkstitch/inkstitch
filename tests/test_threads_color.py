@@ -123,8 +123,8 @@ def test_tartan_colors():
     [element] = node_to_elements(root[0])
     stitch_groups = element.embroider(None)
 
-    assert stitch_groups[0].color == 'yellow'
-    assert stitch_groups[1].color == 'cyan'
+    assert stitch_groups[0].color == [255, 255, 0]
+    assert stitch_groups[1].color == [0, 255, 255]
 
     # Set second color to an invalid value. Tartan will disable the color stripe for rendering.
     rect.set(
@@ -137,5 +137,5 @@ def test_tartan_colors():
     [element] = node_to_elements(root[0])
     stitch_groups = element.embroider(None)
 
-    assert stitch_groups[0].color == 'yellow'
+    assert stitch_groups[0].color == [255, 255, 0]
     assert len(stitch_groups) == 1
