@@ -6,13 +6,13 @@
 # -*- coding: UTF-8 -*-
 
 import networkx as nx
-from shapely.geometry import MultiPoint, Point, LineString
+from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
 from ..stitch_plan import Stitch
 from ..utils.threading import check_stop_flag
-from .utils.cross_stitch import CrossGeometries
 from .cross_stitch_half import half_cross_stitch
+from .utils.cross_stitch import CrossGeometries
 
 
 def cross_stitch(fill, shape, starting_point, ending_point):
@@ -66,23 +66,25 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number)
         ending_point:           defines where to end
         thread_number:          defines the thread count (even number, otherwise rounded to the previous even integer, exception: 1 = 2)
     """
-    nb_repeats = (threads_number // 2) - 1
     method = fill.cross_stitch_method
+    flipped = "flip" in method
+
+    if flipped:
+        if starting_point:
+            starting_point = _rotate_coords(*starting_point)
+        if ending_point:
+            ending_point = _rotate_coords(*ending_point)
+
+    nb_repeats = (threads_number // 2) - 1
     cross_geoms = CrossGeometries(fill, shape, method)
     subgraphs = _build_connect_subgraphs(cross_geoms)
     if method != "double_cross":
-        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour, flipped=False)
-
-        if "flipped" in method:
-            eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour, flipped=True)
-            for i in range(len(eulerian_cycles)):
-                eulerian_cycles[i] = eulerian_cycles[i][::-1]
+        eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour)
     else:
-        # flipped is not useful here but _build_eulerian_cycles requires it
         eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point,
-                                                 cross_geoms, nb_repeats, _build_double_row_tour, flipped=False)
+                                                 cross_geoms, nb_repeats, _build_double_row_tour)
 
-    stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length)
+    stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length, flipped)
     return [stitches]
 
 
@@ -124,7 +126,7 @@ def _build_connect_subgraphs(cross_geoms):
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 
-def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, row_tour, flipped):
+def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, row_tour):
     """ We need to construct an eulerian cycle for each subgraph,
         but we need to make sure that no cross is flipped
         So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
@@ -142,7 +144,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
     travel, starting_point, ending_point = organize(subgraphs, cross_geoms, starting_point, ending_point)
 
     for i, subgraph in enumerate(subgraphs):
-        subcrosses = find_available_crosses(subgraph, cross_geoms.crosses)
+        subcrosses = set(find_available_crosses(subgraph, cross_geoms.crosses))
         if not subcrosses:
             continue
 
@@ -152,16 +154,11 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
             starting_corner = get_corner(ending_point, subcrosses)
         else:
             # any corner will do
-            index = 0
-            while list(subgraph.nodes)[index] in centers:
-                index += 1
-            starting_corner = list(subgraph.nodes)[index]
-
-        position, cycle = row_tour(subcrosses, starting_corner, nb_repeats, True)
-        crosses = cross_geoms.crosses
+            cross = next(iter(subcrosses))
+            starting_corner = cross.bottom_left
 
         if row_tour == _build_row_tour:
-            cycle = _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped)
+            cycle = _build_simple_cycles(subcrosses, starting_corner, nb_repeats)
         else:
             cycle = _build_double_cycle(subcrosses, cycle, nb_repeats)
 
@@ -172,33 +169,65 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
 
     return eulerian_cycles
 
+def opposite_direction(direction):
+    if direction == "down":
+        return "up"
+    elif direction == "up":
+        return "down"
+    elif direction == "left":
+        return "right"
+    elif direction == "right":
+        return "left"
 
-def _build_simple_cycles(crosses, subcrosses, cycle, nb_repeats, flipped):
-    while subcrosses:
-        # find a corner on the cycle that needs more crosses, so that we can enlarge the cycle
-        potential_node = None
-        for cross in subcrosses:
-            for node in cross.corners:
-                if node in cycle:
-                    potential_node = node
-                    break
-            if potential_node:
-                break
-        if potential_node is None:
+def _build_simple_cycles(subcrosses, starting_point, nb_repeats):
+    for cross in subcrosses:
+        if starting_point in cross.corners:
             break
 
-        # here we try to minimize "bad traveling"
+    cycle = cross.cycle_from_point(starting_point, nb_repeats)
+    visited_crosses = [cross]
+    subcrosses.remove(cross)
 
-        # check if the insertion will be above or below
-        position, cycle_to_insert = _build_row_tour(subcrosses, potential_node, nb_repeats, remove=False)
-        # avoid bad traveling as much as possible
-        if position == "below" and not flipped or position == "above" and flipped:
-            node = insertion_node(crosses, potential_node, cycle, cycle_to_insert, position, True)
-        else:
-            node = insertion_node(crosses, potential_node, cycle, cycle_to_insert, position, False)
+    import random
 
-        position, cycle_to_insert = _build_row_tour(subcrosses, node, nb_repeats, remove=True)
-        cycle = insert_cycle_at_node(cycle, cycle_to_insert, node)
+    while subcrosses:
+        found_one = False
+
+        #random.shuffle(visited_crosses)
+
+        for cross in visited_crosses:
+        #for cross in reversed(visited_crosses):
+
+            # different order gives a quite different style of stitch path
+            for direction in ("up", "down", "left", "right"):
+            #for direction in ("left", "right", "up", "down"):
+
+                if cross.get(direction) in subcrosses:
+                    neighbor_cross = cross.get(direction)
+                    cycle_to_insert = neighbor_cross.cycle_from_neighbor(opposite_direction(direction), nb_repeats)
+                    cycle = insert_cycle_at_node(cycle, cycle_to_insert, cycle_to_insert[0])
+
+                    #visited_crosses.insert(random.choice(range(len(visited_crosses))), neighbor_cross)
+                    visited_crosses.append(neighbor_cross)
+
+                    subcrosses.remove(neighbor_cross)
+                    found_one = True
+                    #break
+            #if found_one:
+            #    break
+
+        if not found_one:
+            for cross in subcrosses:
+                for corner in cross.corners:
+                    if corner in cycle:
+                        cycle_to_insert = cross.cycle_from_point(corner, nb_repeats)
+                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, cycle_to_insert[0])
+                        visited_crosses.append(cross)
+                        subcrosses.remove(cross)
+                        found_one = True
+                        break
+                if found_one:
+                    break
 
     return cycle
 
@@ -465,27 +494,41 @@ def remove_crosses(crosses, covered_crosses):
         crosses.remove(cross)
 
 
-def rindex(lst, value):
-    lst.reverse()
-    i = lst.index(value)
-    lst.reverse()
-    return len(lst) - i - 1
+def rindex(cycle, node):
+    for i in reversed(range(len(cycle))):
+        if cycle[i] == node:
+            return i
 
 
 def insert_cycle_at_node(cycle_to_increase, cycle_to_insert, node):
     if node in cycle_to_increase:
-        index = rindex(cycle_to_increase, node)
+        index = cycle_to_increase.index(node)
+        #index = rindex(cycle_to_increase, node)
         new_cycle = cycle_to_increase[:index] + cycle_to_insert + cycle_to_increase[index+1:]
         return new_cycle
+    else:
+        raise ValueError("node not in cycle")
 
 
-def _cycles_to_stitches(eulerian_cycles, max_stitch_length):
+def _rotate_coords(x, y):
+    return -y, x
+
+
+def _unrotate_coords(x, y):
+    return y, -x
+
+
+def _cycles_to_stitches(eulerian_cycles, max_stitch_length, flip):
     stitches = []
     for cycle in eulerian_cycles:
         if cycle is not None:
             last_point = cycle[0]
+            if flip:
+                last_point = _unrotate_coords(*last_point)
             stitches.append(Stitch(*last_point, tags=["cross_stitch"]))
             for point in cycle[1:]:
+                if flip:
+                    point = _unrotate_coords(*point)
                 if point == last_point:
                     continue
                 line = LineString([last_point, point]).segmentize(max_stitch_length)
