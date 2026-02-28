@@ -191,12 +191,24 @@ def _build_simple_cycles(subcrosses, starting_point, nb_repeats):
     import random
 
     while subcrosses:
-        found_one = False
+        if not visited_crosses:
+            found_one = False
+            for cross in subcrosses:
+                for corner in cross.corners:
+                    if corner in cycle:
+                        cycle_to_insert = cross.cycle_from_point(corner, nb_repeats)
+                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, cycle_to_insert[0])
+                        visited_crosses.append(cross)
+                        subcrosses.remove(cross)
+                        found_one = True
+                        break
+                if found_one:
+                    break
 
-        #random.shuffle(visited_crosses)
+        # TODO: instead, insert into visited_crosses at the point, and remove from it as we find crosses that have no available neighbor crosses
 
-        for cross in visited_crosses:
-        #for cross in reversed(visited_crosses):
+        while visited_crosses:
+            cross = visited_crosses.pop()
 
             # different order gives a quite different style of stitch path
             for direction in ("up", "down", "left", "right"):
@@ -211,23 +223,10 @@ def _build_simple_cycles(subcrosses, starting_point, nb_repeats):
                     visited_crosses.append(neighbor_cross)
 
                     subcrosses.remove(neighbor_cross)
-                    found_one = True
                     #break
             #if found_one:
             #    break
 
-        if not found_one:
-            for cross in subcrosses:
-                for corner in cross.corners:
-                    if corner in cycle:
-                        cycle_to_insert = cross.cycle_from_point(corner, nb_repeats)
-                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, cycle_to_insert[0])
-                        visited_crosses.append(cross)
-                        subcrosses.remove(cross)
-                        found_one = True
-                        break
-                if found_one:
-                    break
 
     return cycle
 
