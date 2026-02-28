@@ -5,10 +5,13 @@
 
 # -*- coding: UTF-8 -*-
 
+from collections import deque
+
 import networkx as nx
 from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
+from ..debug.debug import debug
 from ..stitch_plan import Stitch
 from ..utils.threading import check_stop_flag
 from .cross_stitch_half import half_cross_stitch
@@ -158,7 +161,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
             starting_corner = cross.bottom_left
 
         if row_tour == _build_row_tour:
-            cycle = _build_simple_cycles(subcrosses, starting_corner, nb_repeats)
+            cycle = _build_simple_cycles(subcrosses, cross_geoms, starting_corner, nb_repeats)
         else:
             cycle = _build_double_cycle(subcrosses, cycle, nb_repeats)
 
@@ -169,66 +172,42 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
 
     return eulerian_cycles
 
-def opposite_direction(direction):
-    if direction == "down":
-        return "up"
-    elif direction == "up":
-        return "down"
-    elif direction == "left":
-        return "right"
-    elif direction == "right":
-        return "left"
 
-def _build_simple_cycles(subcrosses, starting_point, nb_repeats):
-    for cross in subcrosses:
-        if starting_point in cross.corners:
-            break
-
-    cycle = cross.cycle_from_point(starting_point, nb_repeats)
-    visited_crosses = [cross]
+def _build_simple_cycles(subcrosses, cross_geoms, starting_point, nb_repeats):
+    possible_crosses = cross_geoms.crosses_by_good_point[starting_point] + cross_geoms.crosses_by_bad_point[starting_point]
+    cross = possible_crosses[0]
+    path = deque(cross.cycle_from_point(starting_point, nb_repeats))
+    cross_geoms.remove_cross(cross)
     subcrosses.remove(cross)
 
-    import random
-
     while subcrosses:
-        if not visited_crosses:
-            found_one = False
-            for cross in subcrosses:
-                for corner in cross.corners:
-                    if corner in cycle:
-                        cycle_to_insert = cross.cycle_from_point(corner, nb_repeats)
-                        cycle = insert_cycle_at_node(cycle, cycle_to_insert, cycle_to_insert[0])
-                        visited_crosses.append(cross)
-                        subcrosses.remove(cross)
-                        found_one = True
-                        break
-                if found_one:
+        new_path = deque()
+        while path:
+            current_point = path.popleft()
+            new_path.append(current_point)
+            for cross in list(cross_geoms.crosses_by_good_point[current_point]):
+                # must reverse because deque.extendleft() reverses the sequence
+                path.extendleft(reversed(cross.cycle_from_point(current_point, nb_repeats)))
+                #new_path.extend(cross.cycle_from_point(current_point, nb_repeats))
+                cross_geoms.remove_cross(cross)
+                subcrosses.remove(cross)
+        path = new_path
+
+        if subcrosses:
+            new_path = deque()
+            while path:
+                current_point = path.popleft()
+                new_path.append(current_point)
+                if cross_geoms.crosses_by_bad_point.get(current_point):
+                    cross = cross_geoms.crosses_by_bad_point[current_point][0]
+                    new_path.extend(cross.cycle_from_point(current_point, nb_repeats))
+                    new_path.extend(path)
+                    cross_geoms.remove_cross(cross)
+                    subcrosses.remove(cross)
                     break
+            path = new_path
 
-        # TODO: instead, insert into visited_crosses at the point, and remove from it as we find crosses that have no available neighbor crosses
-
-        while visited_crosses:
-            cross = visited_crosses.pop()
-
-            # different order gives a quite different style of stitch path
-            for direction in ("up", "down", "left", "right"):
-            #for direction in ("left", "right", "up", "down"):
-
-                if cross.get(direction) in subcrosses:
-                    neighbor_cross = cross.get(direction)
-                    cycle_to_insert = neighbor_cross.cycle_from_neighbor(opposite_direction(direction), nb_repeats)
-                    cycle = insert_cycle_at_node(cycle, cycle_to_insert, cycle_to_insert[0])
-
-                    #visited_crosses.insert(random.choice(range(len(visited_crosses))), neighbor_cross)
-                    visited_crosses.append(neighbor_cross)
-
-                    subcrosses.remove(neighbor_cross)
-                    #break
-            #if found_one:
-            #    break
-
-
-    return cycle
+    return list(path)
 
 
 def _build_double_cycle(subcrosses, cycle, nb_repeats):

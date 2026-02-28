@@ -3,6 +3,8 @@
 # Copyright (c) 2026 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from collections import defaultdict
+
 from shapely import prepare
 from shapely.affinity import rotate, translate
 from shapely.geometry import LineString, Polygon
@@ -38,14 +40,16 @@ class CrossGeometries(object):
         self._shape = shape
         self._original_shape = original_shape
         self.boxes = []
-        self.crosses = []
+        self.crosses = set()
         self.center_points = []
         self.diagonals = []
+        self.crosses_by_good_point = defaultdict(list)
+        self.crosses_by_bad_point = defaultdict(list)
 
         prepare(shape)
         self._setup_geometry()
         self._setup_crosses()
-        self._connect_neighbors()
+        self._classify_points()
 
     def _setup_geometry(self):
         self._box_x, self._box_y = self.fill.pattern_size
@@ -91,21 +95,12 @@ class CrossGeometries(object):
         self._grid_x_max = grid_x
         self._grid_y_max = grid_y
 
-    def _connect_neighbors(self):
-        # connect crosses to each other
-        for x in range(1, self._grid_x_max + 1):
-            for y in range(1, self._grid_y_max + 1):
-                this = self._grid.get((x, y))
-                if this:
-                    left = self._grid.get((x - 1, y))
-                    if left:
-                        this.left = left
-                        left.right = this
-
-                    up = self._grid.get((x, y - 1))
-                    if up:
-                        this.up = up
-                        up.down = this
+    def _classify_points(self):
+        for cross in self.crosses:
+            for point in cross.good_points:
+                self.crosses_by_good_point[point].append(cross)
+            for point in cross.bad_points:
+                self.crosses_by_bad_point[point].append(cross)
 
     def _get_offset_values(self, shape, original_shape):
         self._offset_x, self._offset_y = self.fill.cross_offset
@@ -126,7 +121,7 @@ class CrossGeometries(object):
         middle_points = list(upright_box.exterior.coords)[:4]
 
         cross = Cross(center_point, corners, middle_points)
-        self.crosses.append(cross)
+        self.crosses.add(cross)
 
         # diagnonals for half crosses
         if "flipped" in self.cross_stitch_method:
@@ -140,31 +135,21 @@ class CrossGeometries(object):
 
         return cross
 
-
-class CrossNeighborProperty:
-    """A property descriptor for cross stitch neighbor properties"""
-    def __set_name__(self, owner, name):
-        self.name = name
-
-    def __get__(self, obj, objtype=None):
-        return obj.__dict__.get(self.name)
-
-    def __set__(self, obj, value):
-        if not isinstance(value, Cross) and value is not None:
-            raise ValueError(f"setting {obj.__class__.__name__}.{self.name}: neighbor must be a Cross or None")
-        obj.__dict__[self.name] = value
+    def remove_cross(self, cross):
+        for point in cross.good_points:
+            self.crosses_by_good_point[point].remove(cross)
+        for point in cross.bad_points:
+            self.crosses_by_bad_point[point].remove(cross)
+        self.crosses.remove(cross)
 
 
 class Cross:
     """A single cross in a cross stitch fill
 
-    Has attributes for corners, middle points, center point, and neighboring crosses.
+    Has attributes for corners, middle points, and center point.  Also has
+    good_points and bad_points, which cover good and bad points from which to
+    start stitching this cross.
     """
-
-    left = CrossNeighborProperty()
-    right = CrossNeighborProperty()
-    up = CrossNeighborProperty()
-    down = CrossNeighborProperty()
 
     def __init__(self, center_point, corners, middle_points):
         self.center_point = center_point
@@ -181,7 +166,8 @@ class Cross:
         self.middle_right = middle_points[2]
         self.middle_bottom = middle_points[3]
 
-        self.left = self.right = self.up = self.down = None
+        self.good_points = (self.top_right, self.bottom_left)
+        self.bad_points = (self.top_left, self.bottom_right)
 
     def get(self, attribute):
         """Temporary compatibility method"""
@@ -197,17 +183,8 @@ class Cross:
         elif starting_point == self.bottom_right:
             return self.cycle_from_bottom_right(nb_repeats)
 
-    def cycle_from_neighbor(self, neighbor, nb_repeats):
-        if neighbor in ("left", "down"):
-            return self.cycle_from_bottom_left(nb_repeats)
-        elif neighbor in ("right", "up"):
-            return self.cycle_from_top_right(nb_repeats)
-        else:
-            raise ValueError(f"invalid neighbor direction: {neighbor}")
-
     def cycle_from_top_left(self, nb_repeats):
         return (
-            [self.top_left] +
             [self.bottom_right, self.top_left] * nb_repeats +
             [self.bottom_right, self.center_point] +
             [self.top_right, self.bottom_left] * (nb_repeats + 1) +
@@ -218,7 +195,6 @@ class Cross:
 
     def cycle_from_bottom_right(self, nb_repeats):
         return (
-            [self.bottom_right] +
             [self.top_left, self.bottom_right] * nb_repeats +
             [self.top_left, self.center_point] +
             [self.top_right, self.bottom_left] * (nb_repeats + 1) +
@@ -229,7 +205,7 @@ class Cross:
 
     def cycle_from_top_right(self, nb_repeats):
         return (
-            [self.top_right, self.center_point, self.top_left] +
+            [self.center_point, self.top_left] +
             [self.bottom_right, self.top_left] * nb_repeats +
             [self.bottom_right, self.center_point] +
             [self.bottom_left, self.top_right] * (nb_repeats + 1)
@@ -237,7 +213,7 @@ class Cross:
 
     def cycle_from_bottom_left(self, nb_repeats):
         return (
-            [self.bottom_left, self.center_point, self.bottom_right] +
+            [self.center_point, self.bottom_right] +
             [self.top_left, self.bottom_right] * nb_repeats +
             [self.top_left, self.center_point] +
             [self.top_right, self.bottom_left] * (nb_repeats + 1)
