@@ -35,6 +35,7 @@ class JumpToStroke(InkstitchExtension):
     def effect(self):
         self._set_selection()
         self.get_elements()
+        self.metadata = self.get_inkstitch_metadata()
 
         if self.options.merge_subpaths:
             # when we merge stroke elements we are going to replace original path elements
@@ -150,9 +151,16 @@ class JumpToStroke(InkstitchExtension):
         index = parent.index(node)
 
         # do not add a running stitch if the distance is smaller than min_jump setting
+        # when the extension didn't define a value, use the actual min. jump stitch length
+        min_jump = self.options.min_jump
+        if not min_jump:
+            min_jump = last_element.min_jump_stitch_length
+        if min_jump is None:
+            min_jump = self.metadata['collapse_len_mm'] * PIXELS_PER_MM
         line = DirectedLineSegment((start.x, start.y), (end.x, end.y))
-        if line.length <= self.options.min_jump * PIXELS_PER_MM:
+        if line.length <= min_jump:
             return
+
         # do not add a running stitch if the distance is longer than max_jump setting
         if self.options.max_jump > 0 and line.length >= self.options.max_jump * PIXELS_PER_MM:
             return
@@ -185,7 +193,7 @@ class JumpToStroke(InkstitchExtension):
         # add simple stroke to connect elements
         path.transform(Transform(get_correction_transform(node)), True)
         color = element.color
-        style = f'stroke:{color};stroke-width:{self.svg.viewport_to_unit("1px")};stroke-dasharray:3, 1;fill:none;'
+        style = f'stroke:{color};stroke-width:{self.svg.viewport_to_unit("1px")};fill:none;'
 
         line = PathElement(d=str(path), style=style)
         line.label = _('Running Stitch')
