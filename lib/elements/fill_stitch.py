@@ -735,7 +735,7 @@ class FillStitch(EmbroideryElement):
             # letting each instance without a specified seed get a different default.
         return seed
 
-    _cross_stitch_options = [
+    cross_stitch_options = [
         ParamOption('simple_cross', _("Cross")),
         ParamOption('simple_cross_flipped', _("Cross Flipped")),
         ParamOption('half_cross', _("Half Cross")),
@@ -750,7 +750,7 @@ class FillStitch(EmbroideryElement):
            _('Cross stitch method'),
            type='combo',
            default=0,
-           options=_cross_stitch_options,
+           options=cross_stitch_options,
            select_items=[('fill_method', 'cross_stitch')],
            sort_index=9)
     def cross_stitch_method(self):
@@ -927,8 +927,7 @@ class FillStitch(EmbroideryElement):
             if (new_shape.is_empty and not validate):
                 new_shape = shape
 
-        if not isinstance(new_shape, shgeo.MultiPolygon):
-            new_shape = shgeo.MultiPolygon([new_shape])
+        new_shape = ensure_multi_polygon(new_shape)
 
         return new_shape
 

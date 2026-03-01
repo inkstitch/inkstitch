@@ -68,7 +68,8 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number)
     """
     nb_repeats = (threads_number // 2) - 1
     method = fill.cross_stitch_method
-    cross_geoms = CrossGeometries(fill, shape, method)
+
+    cross_geoms = CrossGeometries(shape, fill.pattern_size, fill.fill_coverage, method, fill.cross_offset, fill.canvas_grid_origin)
     subgraphs = _build_connect_subgraphs(cross_geoms)
     if method != "double_cross":
         eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats, _build_row_tour, flipped=False)

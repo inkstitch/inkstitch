@@ -44,13 +44,29 @@ DEFAULT_SETTINGS = {
     'square': True,
     'cross_helper_box_x': 3,
     'cross_helper_box_y': 3,
-    'cross_helper_update_elements': False,
+    'cross_helper_set_params': True,
+    'cross_helper_cross_method': 'simple_cross',
     'cross_helper_pixelize': False,
+    'cross_helper_pixelize_combined': True,
     'cross_helper_coverage': 50,
+    'cross_helper_grid_offset': '0',
+    'cross_helper_align_with_canvas': True,
     'cross_helper_nodes': False,
     'cross_helper_set_grid': False,
-    'cross_helper_grid_color': '#00d9e5',
-    'cross_helper_remove_grids': True
+    'cross_helper_grid_color': (0, 153, 229),
+    'cross_helper_remove_grids': True,
+    'cross_helper_convert_bitmap': False,
+    'cross_helper_color_method': 0,
+    'cross_bitmap_num_colors': 5,
+    'cross_bitmap_quantize_method': 1,
+    'cross_bitmap_rgb_colors': '',
+    'cross_bitmap_gimp_palette': '',
+    'cross_bitmap_saturation': 1,
+    'cross_bitmap_brightness': 1,
+    'cross_bitmap_contrast': 1,
+    'cross_bitmap_transparency_threshold': 50,
+    'cross_bitmap_background_color': (0, 0, 0),
+    'cross_bitmap_remove_background': 0
 }
 
 
