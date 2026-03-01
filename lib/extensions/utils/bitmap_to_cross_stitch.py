@@ -31,8 +31,7 @@ class BitmapToCrossStitch(object):
     '''
     def __init__(self, svg, bitmap, settings, palette=None):
         '''Prepare the bitmap image:
-            * self.original_image       None or original pillow image (rgba), should not be altered by other methods in this class
-            * self.reduced_image        Same as original image, but will be altered by methods within this class (color reduction, background removal)
+            * self.original_image   None or original pillow image (rgba), should not be altered by other methods in this class
 
            Parameters:
            * svg:       the svg document
@@ -48,7 +47,7 @@ class BitmapToCrossStitch(object):
         self.settings = settings
         self.palette = palette
         self.original_image = None
-        self.reduced_image = None
+        self.recolored_image = None
 
         image = self._get_image_byte_string(bitmap.node)
         if image is None:
@@ -66,12 +65,8 @@ class BitmapToCrossStitch(object):
 
         # ensure rgba mode
         self.original_image = self.original_image.convert("RGBA")
-
         # apply transform
         self.original_image = self.apply_transform(self.original_image)
-
-        # apply color corrections
-        self.apply_color_corrections()
 
     def _get_image_byte_string(self, image):
         '''Gets the image byte strig, base64
@@ -133,7 +128,7 @@ class BitmapToCrossStitch(object):
         # Apply the perspective transformation
         return image.transform((width, height), Image.PERSPECTIVE, transform_data, Image.NEAREST)
 
-    def apply_color_corrections(self):
+    def apply_color_corrections(self, image):
         """ Applies color settings
             - color balance
             - brightness
@@ -141,29 +136,29 @@ class BitmapToCrossStitch(object):
             - transparency threshold
             - reduce number of colors by either a given number or palette
         """
-        if self.original_image is None:
+        if image is None:
             return
 
-        self.reduced_image = self.original_image.copy()
+        recolored_image = image.copy()
 
         # Get initial alpha mask and apply to avoid falsifying colors of only partly transparent pixels
         transparency_threshold = self.settings['bitmap_transparency_threshold'] * 255 // 100
-        self.alpha_mask = self.reduced_image.getchannel("A")
+        self.alpha_mask = recolored_image.getchannel("A")
         self.alpha_mask = self._ensure_black_and_white_mask(self.alpha_mask, transparency_threshold)
-        self.reduced_image.putalpha(self.alpha_mask)
+        recolored_image.putalpha(self.alpha_mask)
 
-        saturation_enhancer = ImageEnhance.Color(self.reduced_image)
-        self.reduced_image = saturation_enhancer.enhance(self.settings['bitmap_saturation'])
+        saturation_enhancer = ImageEnhance.Color(recolored_image)
+        recolored_image = saturation_enhancer.enhance(self.settings['bitmap_saturation'])
 
-        brightness_enhancer = ImageEnhance.Brightness(self.reduced_image)
-        self.reduced_image = brightness_enhancer.enhance(self.settings['bitmap_brightness'])
+        brightness_enhancer = ImageEnhance.Brightness(recolored_image)
+        recolored_image = brightness_enhancer.enhance(self.settings['bitmap_brightness'])
 
-        contrast_enhancer = ImageEnhance.Brightness(self.reduced_image)
-        self.reduced_image = contrast_enhancer.enhance(self.settings['bitmap_contrast'])
+        contrast_enhancer = ImageEnhance.Brightness(recolored_image)
+        recolored_image = contrast_enhancer.enhance(self.settings['bitmap_contrast'])
 
         # Some quantize methods will only work with rgb mode images. Means, we need to fill transparent image parts with a color.
         # To do this, we fill up the transparent pixels with white color as it doesn't
-        self.reduced_image = self._convert_to_rgb(self.reduced_image)
+        recolored_image = self._convert_to_rgb(recolored_image)
 
         color_palette = self._get_color_palette()
         if not color_palette:
@@ -171,29 +166,31 @@ class BitmapToCrossStitch(object):
             num_colors = self.settings['bitmap_num_colors']
             if num_colors == 0:
                 num_colors = 1
-            self.reduced_image = self.reduced_image.quantize(num_colors, method=self.settings['bitmap_quantize_method'], kmeans=5)
+            recolored_image = recolored_image.quantize(num_colors, method=self.settings['bitmap_quantize_method'], kmeans=5)
         else:
             palette_image = Image.new("P", (1, 1))
             palette_image.putpalette(color_palette)
-            self.reduced_image = self.reduced_image.quantize(palette=palette_image, dither=Image.NONE)
+            recolored_image = recolored_image.quantize(palette=palette_image, dither=Image.NONE)
 
         # return to rgba mode and apply initial alpha mask
-        self.reduced_image = self.reduced_image.convert('RGBA')
-        self.reduced_image.putalpha(self.alpha_mask)
+        recolored_image = recolored_image.convert('RGBA')
+        recolored_image.putalpha(self.alpha_mask)
 
         # set background to alpha (optional)
         background_color = None
         if self.settings['bitmap_remove_background'] == 1:
             background_color = self._nearest_color(self.settings['bitmap_background_color'])
         elif self.settings['bitmap_remove_background'] == 2:
-            background_color = self._get_main_color(self.reduced_image)
+            background_color = self._get_main_color(recolored_image)
 
         if background_color is not None:
-            background = Image.new("RGBA", self.reduced_image.size, background_color)
-            background_mask = ImageChops.difference(self.reduced_image, background).convert("L")
+            background = Image.new("RGBA", recolored_image.size, background_color)
+            background_mask = ImageChops.difference(recolored_image, background).convert("L")
             self.alpha_mask = ImageChops.multiply(self.alpha_mask, background_mask)
             self.alpha_mask = self._ensure_black_and_white_mask(self.alpha_mask)
-            self.reduced_image.putalpha(self.alpha_mask)
+            recolored_image.putalpha(self.alpha_mask)
+
+        return recolored_image
 
     def _ensure_black_and_white_mask(self, mask, threshold=0):
         ''' Removes grayscale areas from the alpha mask using a threshold value
@@ -248,14 +245,14 @@ class BitmapToCrossStitch(object):
         return image
 
     def _nearest_color(self, target_color):
-        ''' Returns the nearest existing color in self.reduced_image to the target color
+        ''' Returns the nearest existing color in self.recolored_image to the target color
         '''
         def distance(p):
             r, g, b, a = p
             return (r - target_color[0])**2 + (g - target_color[1])**2 + (b - target_color[2])**2 + (255)
 
         # Find the nearest RGBA color
-        img = self.reduced_image.convert("RGBA")
+        img = self.recolored_image.convert("RGBA")
         colors = img.getcolors()
         # Filter transparent areas
         colors = [color for count, color in colors if color[3] > 0]
@@ -318,7 +315,10 @@ class BitmapToCrossStitch(object):
 
     def _get_color_boxes(self):
         # ensure rgba mode
-        self.reduced_image = self.reduced_image.convert('RGBA')
+        # apply color corrections
+        recolored_image = self.apply_color_corrections(self.original_image)
+        if recolored_image is None:
+            return
 
         color_boxes = defaultdict(list)
         width = self.settings['box_x'] * PIXELS_PER_MM
@@ -337,7 +337,7 @@ class BitmapToCrossStitch(object):
 
             # Find and apply the dominant color for each grid cell
             crop_box = (minx - offset_x, miny - offset_y, maxx - offset_x, maxy - offset_y)
-            main_color = self._get_main_color(self.reduced_image.crop(crop_box))
+            main_color = self._get_main_color(recolored_image.crop(crop_box))
             if main_color[3] < 255:
                 # skip transparent areas
                 continue
@@ -349,12 +349,11 @@ class BitmapToCrossStitch(object):
            Returns:
             * elements: a list of path elements grouped by color (svg groups)
         '''
-        if self.reduced_image is None:
-            return
-
         elements = []
         width = self.settings['box_x'] * PIXELS_PER_MM
         color_boxes = self._get_color_boxes()
+        if not color_boxes:
+            return
 
         for color, boxes in color_boxes.items():
             color_group = Group()
