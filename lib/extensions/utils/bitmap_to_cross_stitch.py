@@ -235,6 +235,13 @@ class BitmapToCrossStitch(object):
 
         return self._crop_transparent_borders(image)
 
+    def combine_images(self, image1, image2, offset):
+        minx, miny, maxx, maxy = self.bitmap.original_shape.bounds
+        offset_x = minx - offset[0]
+        offset_y = miny - offset[1]
+        image1.paste(image2, (int(offset_x), int(offset_y)), image2)
+        return image1
+
     def _crop_transparent_borders(self, image):
         ''' Crop transparent borders
             (only for use in cross stitch helper)

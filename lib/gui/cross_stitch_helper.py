@@ -9,6 +9,7 @@ from math import sqrt
 import wx
 import wx.svg
 from inkex import Group, Path, PathElement
+from PIL import Image
 
 from ..elements.fill_stitch import FillStitch
 from ..extensions.utils.bitmap_to_cross_stitch import BitmapToCrossStitch
@@ -21,7 +22,7 @@ class CrossStitchHelperFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         self.settings = kwargs.pop("settings")
         self.default_settings = self.settings.copy()
-        self.image = kwargs.pop("images")
+        self.images = kwargs.pop("images")
         self.fills = kwargs.pop("fills")
         self.palette = kwargs.pop("palette")
 
@@ -611,9 +612,12 @@ class CrossStitchHelperFrame(wx.Frame):
         self.update_bitmap_panel()
 
     def _load_bitmap(self):
-        if not self.image:
-            return
-        self.cross_bitmap = BitmapToCrossStitch(None, self.image, self.settings, self.palette)
+        bitmaps = []
+        for image in self.images:
+            cross_bitmap = BitmapToCrossStitch(None, image, self.settings, self.palette)
+            if cross_bitmap.original_image is not None:
+                bitmaps.append(cross_bitmap)
+        self.cross_bitmaps = bitmaps
 
     def _on_debounce_timer(self, event):
         # Debounce timer fired — start a new task
@@ -637,12 +641,35 @@ class CrossStitchHelperFrame(wx.Frame):
             self._debounce_timer.Stop()
         self._debounce_timer.Start(200, oneShot=True)
 
-    def update_bitmap_image(self, task_id):
-        if self.cross_bitmap is None or self.cross_bitmap.original_image is None:
-            return
+    def _get_max_image_bounds(self):
+        minx = miny = maxx = maxy = 0
+        for bmp in self.cross_bitmaps:
+            sx, sy, mx, my = bmp.bitmap.original_shape.bounds
+            if sx < minx:
+                minx = sx
+            if sy < miny:
+                miny = sy
+            if mx > maxx:
+                maxx = mx
+            if my > maxy:
+                maxy = my
+        return minx, miny, maxx, maxy
 
-        image = self.cross_bitmap.apply_color_corrections(self.cross_bitmap.original_image)
-        image = self.cross_bitmap.apply_clip(image)
+    def update_bitmap_image(self, task_id):
+        if not self.cross_bitmaps:
+            image = Image.new('RGBA', (10, 10), (255, 255, 255, 1))
+        else:
+            minx, miny, maxx, maxy = self._get_max_image_bounds()
+            width = int(maxx - minx)
+            height = int(maxy - miny)
+
+            image = Image.new('RGBA', (width, height), (255, 255, 255, 1))
+
+            for cross_bitmap in self.cross_bitmaps:
+                recolored_image = cross_bitmap.apply_color_corrections(cross_bitmap.original_image)
+                image = cross_bitmap.combine_images(image, recolored_image, (minx, miny))
+
+            image = self.cross_bitmaps[0].apply_clip(image)
         width, height = self.scaled_size(*image.size)
         image = image.resize((width, height))
         bitmap_prev = wx.Bitmap.FromBufferRGBA(width, height, image.tobytes())
@@ -654,11 +681,11 @@ class CrossStitchHelperFrame(wx.Frame):
         self.staticbitmap.SetBitmap(bitmap_prev)
 
     def update_svg_image(self, task_id):
-        if self.cross_bitmap is not None and self.cross_bitmap.original_image is not None:
-            svg_groups = Group()
-            svg_groups.extend(self.cross_bitmap.svg_nodes())
-        elif self.fills:
-            svg_groups = Group()
+        svg_groups = Group()
+        if self.cross_bitmaps:
+            for cross_bitmap in self.cross_bitmaps:
+                svg_groups.extend(cross_bitmap.svg_nodes())
+        if self.fills:
             if self.settings['pixelize']:
                 if self.settings['pixelize_combined']:
                     svg_groups = pixelate_multiple(svg_groups, self.fills, self.settings)
@@ -814,14 +841,14 @@ class CrossStitchHelperApp(wx.App):
     def __init__(self, settings, fills, images, palette):
         self.settings = settings
         self.fills = fills
-        self.image = None
+        self.images = []
         if images:
-            self.image = images[0]
+            self.images = images
         self.palette = palette
         super().__init__()
 
     def OnInit(self):
-        frame = CrossStitchHelperFrame(settings=self.settings, images=self.image, fills=self.fills, palette=self.palette)
+        frame = CrossStitchHelperFrame(settings=self.settings, images=self.images, fills=self.fills, palette=self.palette)
         self.SetTopWindow(frame)
         frame.Show()
         return True
