@@ -6,7 +6,7 @@
 from collections import defaultdict
 
 from shapely import prepare
-from shapely.affinity import rotate, translate
+from shapely.affinity import translate
 from shapely.geometry import LineString, Polygon
 
 from ...utils.threading import check_stop_flag
@@ -32,9 +32,6 @@ class CrossGeometries(object):
             cross_stitch_method:        cross stitch method as string
             original_shape (optional):  used for alignment, when shape had to be split up
         """
-        if "flip" in cross_stitch_method:
-            shape = rotate(shape, 90, origin=(0, 0))
-
         self.fill = fill
         self.cross_stitch_method = cross_stitch_method
         self._shape = shape
@@ -47,9 +44,18 @@ class CrossGeometries(object):
         self.crosses_by_bad_point = defaultdict(list)
 
         prepare(shape)
+        self._choose_cross_class()
         self._setup_geometry()
         self._setup_crosses()
         self._classify_points()
+
+    def _choose_cross_class(self):
+        if "upright" in self.cross_stitch_method:
+            self.cross_class = UprightCross
+        elif "double" in self.cross_stitch_method:
+            self.cross_class = DoubleCross
+        else:
+            self.cross_class = Cross
 
     def _setup_geometry(self):
         self._box_x, self._box_y = self.fill.pattern_size
@@ -115,12 +121,10 @@ class CrossGeometries(object):
     def add_cross(self, box, upright_box):
         center_point = list(box.centroid.coords)[0]
 
-        if "upright" in self.cross_stitch_method:
-            box = upright_box
         corners = list(box.exterior.coords)[:4]
         middle_points = list(upright_box.exterior.coords)[:4]
 
-        cross = Cross(center_point, corners, middle_points)
+        cross = self.cross_class(center_point, corners, middle_points)
         self.crosses.add(cross)
 
         # diagnonals for half crosses
@@ -168,6 +172,8 @@ class Cross:
 
         self.good_points = (self.top_right, self.bottom_left)
         self.bad_points = (self.top_left, self.bottom_right)
+        self.all_connection_points = self.corners
+        self.stitches = (self.good_points, self.bad_points)
 
     def get(self, attribute):
         """Temporary compatibility method"""
@@ -185,9 +191,9 @@ class Cross:
 
     def cycle_from_top_left(self, nb_repeats):
         return (
-            [self.bottom_right, self.top_left] * nb_repeats +
+            [self.bottom_right, self.top_left] * (nb_repeats - 1) +
             [self.bottom_right, self.center_point] +
-            [self.top_right, self.bottom_left] * (nb_repeats + 1) +
+            [self.top_right, self.bottom_left] * nb_repeats +
 
             # this is bad travel
             [self.center_point, self.top_left]
@@ -195,9 +201,9 @@ class Cross:
 
     def cycle_from_bottom_right(self, nb_repeats):
         return (
-            [self.top_left, self.bottom_right] * nb_repeats +
+            [self.top_left, self.bottom_right] * (nb_repeats - 1) +
             [self.top_left, self.center_point] +
-            [self.top_right, self.bottom_left] * (nb_repeats + 1) +
+            [self.top_right, self.bottom_left] * nb_repeats +
 
             # this is bad travel
             [self.center_point, self.bottom_right]
@@ -205,16 +211,155 @@ class Cross:
 
     def cycle_from_top_right(self, nb_repeats):
         return (
-            [self.center_point, self.top_left] +
-            [self.bottom_right, self.top_left] * nb_repeats +
-            [self.bottom_right, self.center_point] +
-            [self.bottom_left, self.top_right] * (nb_repeats + 1)
+            [self.center_point] +
+            [self.top_left, self.bottom_right] * nb_repeats +
+            [self.center_point] +
+            [self.bottom_left, self.top_right] * nb_repeats
         )
 
     def cycle_from_bottom_left(self, nb_repeats):
         return (
-            [self.center_point, self.bottom_right] +
-            [self.top_left, self.bottom_right] * nb_repeats +
+            [self.center_point] +
+            [self.bottom_right, self.top_left] * nb_repeats +
+            [self.center_point] +
+            [self.top_right, self.bottom_left] * nb_repeats
+        )
+
+
+class UprightCross(Cross):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.good_points = [self.middle_top, self.middle_bottom]
+        self.bad_points = [self.middle_left, self.middle_right]
+        self.all_connection_points = self.good_points + self.bad_points
+        self.stitches = (self.good_points, self.bad_points)
+
+    def cycle_from_point(self, starting_point, nb_repeats):
+        if starting_point == self.middle_top:
+            return self.cycle_from_middle_top(nb_repeats)
+        elif starting_point == self.middle_bottom:
+            return self.cycle_from_middle_bottom(nb_repeats)
+        elif starting_point == self.middle_left:
+            return self.cycle_from_middle_left(nb_repeats)
+        elif starting_point == self.middle_right:
+            return self.cycle_from_middle_right(nb_repeats)
+
+    def cycle_from_middle_top(self, nb_repeats):
+        return (
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * nb_repeats +
+            [self.center_point] +
+            [self.middle_bottom, self.middle_top] * nb_repeats
+        )
+
+    def cycle_from_middle_bottom(self, nb_repeats):
+        return (
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * nb_repeats
+        )
+
+    def cycle_from_middle_left(self, nb_repeats):
+        return (
+            [self.middle_right, self.middle_left] * (nb_repeats - 1) +
+            [self.middle_right, self.center_point] +
+            [self.middle_top, self.middle_bottom] * nb_repeats +
+
+            # this is bad travel
+            [self.center_point, self.middle_left]
+        )
+
+    def cycle_from_middle_right(self, nb_repeats):
+        return (
+            [self.middle_left, self.middle_right] * (nb_repeats - 1) +
+            [self.middle_left, self.center_point] +
+            [self.middle_top, self.middle_bottom] * nb_repeats +
+
+            # this is bad travel
+            [self.center_point, self.middle_right]
+        )
+
+
+class DoubleCross(Cross):
+    # Double Cross has the same corners and diagonals as normal Cross, so no
+    # need to override __init__()
+
+    # This one sews the upright cross first and then the diagonals, but it
+    # results in the uprights being sewn early and the diagonals much later.
+    # The ones below sew each full double cross together.
+    # def __cycle_from_point(self, starting_point, nb_repeats):
+
+    #     normal_cycle = super().cycle_from_point(starting_point, nb_repeats)
+
+    #     cycle = (
+    #         [self.center_point] +
+    #         [self.middle_left, self.middle_right] * (nb_repeats + 1) +
+
+    #         [self.center_point] +
+    #         [self.middle_top, self.middle_bottom] * (nb_repeats + 1)
+    #     )
+
+    #     if normal_cycle[0] != self.center_point:
+    #         cycle.append(self.center_point)
+
+    #     cycle.extend(normal_cycle)
+
+    #     return cycle
+
+    def cycle_from_top_left(self, nb_repeats):
+        return (
+            [self.bottom_right, self.top_left] * (nb_repeats - 1) +
+            [self.bottom_right, self.center_point] +
+
+            [self.middle_left, self.middle_right] * nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * nb_repeats +
+            [self.center_point] +
+
+            [self.top_right, self.bottom_left] * nb_repeats +
+
+            # this is bad travel
+            [self.center_point, self.top_left]
+        )
+
+    def cycle_from_bottom_right(self, nb_repeats):
+        return (
+            [self.top_left, self.bottom_right] * (nb_repeats - 1) +
             [self.top_left, self.center_point] +
-            [self.top_right, self.bottom_left] * (nb_repeats + 1)
+
+            [self.middle_left, self.middle_right] * nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * nb_repeats +
+            [self.center_point] +
+
+            [self.top_right, self.bottom_left] * nb_repeats +
+
+            # this is bad travel
+            [self.center_point, self.bottom_right]
+        )
+
+    def cycle_from_top_right(self, nb_repeats):
+        return (
+            [self.center_point] +
+            [self.top_left, self.bottom_right] * nb_repeats +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * nb_repeats +
+            [self.center_point] +
+            [self.bottom_left, self.top_right] * nb_repeats
+        )
+
+    def cycle_from_bottom_left(self, nb_repeats):
+        return (
+            [self.center_point] +
+            [self.bottom_right, self.top_left] * nb_repeats +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * nb_repeats +
+            [self.center_point] +
+            [self.top_right, self.bottom_left] * nb_repeats
         )
