@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-02-26 02:23+0000\n"
-"PO-Revision-Date: 2026-02-26 02:23\n"
+"POT-Creation-Date: 2026-03-02 02:24+0000\n"
+"PO-Revision-Date: 2026-03-02 02:25\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-26 02:23+0000\n"
+"POT-Creation-Date: 2026-03-02 02:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1928,7 +1928,7 @@ msgstr ""
 msgid "Double Cross"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:750
+#: lib/elements/fill_stitch.py:750 lib/gui/cross_stitch_helper.py:123
 msgid "Cross stitch method"
 msgstr ""
 
@@ -1984,20 +1984,24 @@ msgstr ""
 msgid "Maximum stitch length"
 msgstr ""
 
-#: lib/elements/image.py:13
+#: lib/elements/image.py:18
 msgid "Image"
 msgstr ""
 
-#: lib/elements/image.py:14
+#: lib/elements/image.py:19
 msgid "Ink/Stitch can't work with objects like images."
 msgstr ""
 
-#: lib/elements/image.py:16
-msgid "* Convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
+#: lib/elements/image.py:21
+msgid "* Redraw the image with the pen (P) or bezier (B) tool"
 msgstr ""
 
-#: lib/elements/image.py:18
-msgid "* Alternatively redraw the image with the pen (P) or bezier (B) tool"
+#: lib/elements/image.py:22
+msgid "* Alternatively convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
+msgstr ""
+
+#: lib/elements/image.py:24
+msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Helper"
 msgstr ""
 
 #: lib/elements/marker.py:14
@@ -2870,6 +2874,10 @@ msgstr ""
 msgid "{num_groups_removed} groups/layers removed"
 msgstr ""
 
+#: lib/extensions/cross_stitch_helper.py:178
+msgid "Cross stitch group"
+msgstr ""
+
 #: lib/extensions/cut_satin.py:21
 msgid "Please select one or more satin columns to cut."
 msgstr ""
@@ -3304,7 +3312,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/cross_stitch_helper.py:138 lib/gui/edit_json/settings_panel.py:63
+#: lib/gui/cross_stitch_helper.py:434 lib/gui/edit_json/settings_panel.py:63
 #: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54
 #: lib/gui/simulator/simulator_preferences.py:53
@@ -3598,7 +3606,7 @@ msgid "threadlist"
 msgstr ""
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
-#: lib/gui/cross_stitch_helper.py:179 lib/gui/edit_json/help_panel.py:27
+#: lib/gui/cross_stitch_helper.py:419 lib/gui/edit_json/help_panel.py:27
 #: lib/gui/element_info.py:57 lib/gui/lettering_font_sample.py:98
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
@@ -3632,7 +3640,7 @@ msgstr ""
 msgid "Select color palette"
 msgstr ""
 
-#: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:140
+#: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:436
 #: lib/gui/edit_json/settings_panel.py:65 lib/gui/lettering_font_sample.py:72
 #: lib/gui/satin_multicolor/main_panel.py:56
 #: lib/gui/simulator/simulator_preferences.py:55
@@ -3640,7 +3648,7 @@ msgstr ""
 msgid "Apply"
 msgstr ""
 
-#: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_helper.py:160
+#: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_helper.py:399
 #: lib/gui/edit_json/main_panel.py:75 lib/gui/element_info.py:42
 #: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
@@ -3684,11 +3692,11 @@ msgstr ""
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:12
+#: lib/gui/cross_stitch_helper.py:17
 msgid "Ink/Stitch - Cross stitch"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:41 lib/gui/edit_json/main_panel.py:74
+#: lib/gui/cross_stitch_helper.py:69 lib/gui/edit_json/main_panel.py:74
 #: lib/gui/lettering_font_sample.py:40 lib/gui/simulator/view_panel.py:129
 #: print/templates/ui.html:5 print/templates/ui.html:15
 #: inx/inkstitch_lettering_generate_json.inx:90
@@ -3696,68 +3704,235 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:52
+#: lib/gui/cross_stitch_helper.py:80
 msgid "Grid Settings"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:56
+#: lib/gui/cross_stitch_helper.py:84
 msgid "Square grid"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:61
+#: lib/gui/cross_stitch_helper.py:89
 msgid "Grid horizontal spacing (mm)"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:66
+#: lib/gui/cross_stitch_helper.py:94
 msgid "Grid vertical spacing (mm)"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:71
+#: lib/gui/cross_stitch_helper.py:99
 msgid "Stitch length:"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:87
-msgid "Apply grid settings"
+#: lib/gui/cross_stitch_helper.py:116
+msgid "Params, pixelate and bitmap settings"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:93
-msgid "Selected fill elements (params)"
-msgstr ""
-
-#: lib/gui/cross_stitch_helper.py:96
-msgid "Fill element outline (pixelize)"
-msgstr ""
-
-#: lib/gui/cross_stitch_helper.py:100
+#: lib/gui/cross_stitch_helper.py:126
 msgid "Fill coverage (%)"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:104
-msgid "Add nodes (grid width distance)"
+#: lib/gui/cross_stitch_helper.py:129
+msgid "Align with canvas"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:108
+#: lib/gui/cross_stitch_helper.py:132
+msgid "Grid offset (mm) x[ y]"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:147
+msgid "Apply grid settings to"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:155
+msgid "Params (selected elements)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:159
+msgid "Pixelate (selected elements)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:163
+msgid "Avoid overlapping shapes"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:166
+msgid "Inserts a new set of shapes and removes selected elements"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:170
+msgid "Add nodes"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:173
+msgid "Add nodes at the horizontal grid spacing value"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:188
+msgid "Setup page grid"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:191
 msgid "Page grid"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:112
+#: lib/gui/cross_stitch_helper.py:195
 msgid "Grid color"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:116
-msgid "Remove previous page grids"
+#: lib/gui/cross_stitch_helper.py:199
+msgid "Remove previous"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:167
+#: lib/gui/cross_stitch_helper.py:202
+msgid "Remove previous cross stitch page grids"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:234
+msgid "Bitmap Settings"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:240
+msgid "Convert bitmaps to pixelated fill areas"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:246
+msgid "Convert bitmaps"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:251 lib/gui/cross_stitch_helper.py:260
+msgid "Number of colors"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:252
+msgid "Selected stroke colors"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:253
+msgid "List with RGB values"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:254
+msgid "GIMP color palette"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:256
+msgid "Color selection"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:262
+msgid "Reduces colors to given value.\n"
+"This may not match the final number of colors. It is possible, that colors get removed when the image gets pixelated."
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:269
+msgid "RGB value list"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:271
+msgid "A comma separated list with rgb values: r g b, r, g, b\n"
+"r,g and b can take a value from 0 - 255"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:277
+msgid "Gimp palette file"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:278
+msgid "Select a Gimp palette file"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:279
+msgid "Restricted to the first 256 colors. Please use a color reduced palette."
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:284
+msgid "Color reduction method"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:285
+msgid "Median cut"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:285
+msgid "Maxcoverage"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:285
+msgid "Fastoctree"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:289
+msgid "Saturation"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:299
+msgid "Brightness"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:309
+msgid "Contrast"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:319
+msgid "Removes pixels with a lower transparency value than this from the original image."
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:320
+msgid "Transparency threshold (%)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:334
+msgid "Background color for transparent images and background removal."
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:335
+msgid "Background color"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:341
+msgid "Remove background"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:344
+msgid "Keep background"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:344
+msgid "Remove nearest to background color"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:344
+msgid "Remove most common color"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:346
+msgid "Removes the background color."
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:384
+msgid "Preview image (not pixelated)"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:387
+msgid "No image selected"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:406
 msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
 "* Calculate stitch length for given grid spacing values\n"
 "* Apply cross stitch parameters to selected fill elements.\n"
-"* Pixelize outlines of selected fill elements.\n"
+"* Pixelate outlines of selected fill elements.\n"
+"* Generate pixelated fills from bitmaps.\n"
 "* Apply spacing values to page grid."
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:185 lib/gui/cross_stitch_helper.py:186
+#: lib/gui/cross_stitch_helper.py:425 lib/gui/cross_stitch_helper.py:426
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
+msgstr ""
+
+#: lib/gui/cross_stitch_helper.py:432
+msgid "Reset values"
 msgstr ""
 
 #: lib/gui/edit_json/help_panel.py:19
