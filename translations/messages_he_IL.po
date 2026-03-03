@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-02 02:24+0000\n"
-"PO-Revision-Date: 2026-03-02 02:25\n"
+"POT-Creation-Date: 2026-03-03 16:46+0000\n"
+"PO-Revision-Date: 2026-03-03 16:46\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-02 02:24+0000\n"
+"POT-Creation-Date: 2026-03-03 16:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,7 +74,7 @@ msgstr ""
 
 #. description of font in fonts/animaux
 #: inkstitch-fonts-metadata.py:20
-msgid "cross stitch font, each letter includes an animal with name starting with the letter"
+msgid "cross stitch font, each letter includes an animal with French name starting with the letter"
 msgstr ""
 
 #. description of font in fonts/apesplit
@@ -576,7 +576,7 @@ msgstr ""
 
 #. description of font in fonts/precious
 #: inkstitch-fonts-metadata.py:220
-msgid "Precious is a decorative satin column round cursive font. It contains  glyphs."
+msgid "Precious is a decorative satin column round cursive font."
 msgstr ""
 
 #. description of font in fonts/priscilla
