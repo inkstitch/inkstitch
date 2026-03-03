@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-02 02:24+0000\n"
-"PO-Revision-Date: 2026-03-02 02:25\n"
+"PO-Revision-Date: 2026-03-03 02:27\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -70,12 +70,12 @@ msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Amitaclo. Diese S
 #. description of font in fonts/animals
 #: inkstitch-fonts-metadata.py:18
 msgid "cross stitch font, each letter includes an animal with English name starting with the letter"
-msgstr ""
+msgstr "Kreuzstich-Schrift, jeder Buchstabe enthält ein Tier mit dem passenden englischsprachigen Anfangsbuchstaben"
 
 #. description of font in fonts/animaux
 #: inkstitch-fonts-metadata.py:20
 msgid "cross stitch font, each letter includes an animal with name starting with the letter"
-msgstr ""
+msgstr "Kreuzstich-Schrift, jeder Buchstabe enthält ein Tier mit dem passenden französischsprachigen Anfangsbuchstaben"
 
 #. description of font in fonts/apesplit
 #: inkstitch-fonts-metadata.py:22
@@ -125,7 +125,7 @@ msgstr "Dies ist eine Version von Barstitch mit Kurvenfüllung. Jedes Zeichen nu
 #. description of font in fonts/barstitch_crosses
 #: inkstitch-fonts-metadata.py:40
 msgid "This is a cross stitch version of Barstitch fill. Each letter is used to clip a group of cross  stitch  fills."
-msgstr ""
+msgstr "Die Kreuzstichvariante von Barstitch-Cloudy."
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:42
@@ -325,12 +325,12 @@ msgstr "Excalibur small ist eine abgewandelte, kleinere Form von Excalibur KOR. 
 #. description of font in fonts/flowery_crosses
 #: inkstitch-fonts-metadata.py:118
 msgid "Very large cross stitch font. "
-msgstr ""
+msgstr "Sehr große Kreuzstich-Schrift "
 
 #. description of font in fonts/flowery_multicolor
 #: inkstitch-fonts-metadata.py:120
 msgid "Very large multicolor cross stitch font. "
-msgstr ""
+msgstr "Sehr große mehrfarbige Kreuzstich-Schrift. "
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:122
@@ -360,7 +360,7 @@ msgstr "Glacial ist eine sehr kleine Schrift und erfordert die Verwendung eines 
 #. description of font in fonts/handkerchief
 #: inkstitch-fonts-metadata.py:132
 msgid "Cross stitch font. Initially intended to embroider handkerchiefs corners."
-msgstr ""
+msgstr "Kreuzstichschrift für Handtuchecken."
 
 #. description of font in fonts/hebrew_font_large
 #: inkstitch-fonts-metadata.py:134
@@ -422,7 +422,7 @@ msgstr "Invercelia ist eine moderne Zwei-Buchstaben-Monogramm-Schrift.\n"
 #. description of font in fonts/jersey_15
 #: inkstitch-fonts-metadata.py:154 inkstitch-fonts-metadata.py:156
 msgid "cross stitch font"
-msgstr ""
+msgstr "Kreuzstichschrift"
 
 #. description of font in fonts/kum_tsoan_AGS
 #: inkstitch-fonts-metadata.py:158
@@ -447,7 +447,7 @@ msgstr "Learning curve ist eine kleine Schrift aus Geradstichen."
 #. description of font in fonts/magic_crosses
 #: inkstitch-fonts-metadata.py:166
 msgid "Cross stitch font. "
-msgstr ""
+msgstr "Kreuzstichschrift. "
 
 #. description of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:168
@@ -582,12 +582,12 @@ msgstr "Pixel 10 ist eine Satin-Pixel-Schrift."
 #. description of font in fonts/precious
 #: inkstitch-fonts-metadata.py:220
 msgid "Precious is a decorative satin column round cursive font. It contains  glyphs."
-msgstr ""
+msgstr "Precious ist eine runde Kursivschrift aus Satinsäulen."
 
 #. description of font in fonts/priscilla
 #: inkstitch-fonts-metadata.py:222
 msgid "Large bicolor cross stitch font"
-msgstr ""
+msgstr "Große, zweifarbige Kreuzstichschrift"
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:224
@@ -632,7 +632,7 @@ msgstr "Eine dreifarbige Satin-Schrift."
 #. description of font in fonts/tieralphabet
 #: inkstitch-fonts-metadata.py:240
 msgid "cross stitch font, each letter includes an animal with german name starting with the letter"
-msgstr ""
+msgstr "Kreuzstich-Schrift, jeder Buchstabe enthält ein Tier mit dem passenden deutschsprachigen Anfangsbuchstaben"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:242
@@ -2003,15 +2003,15 @@ msgstr "Ink/Stitch kann mit Objekten wie Bildern nicht arbeiten."
 
 #: lib/elements/image.py:21
 msgid "* Redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "* Zeichne das Bild mit dem Stift (P) oder dem Bezier (B) Werkzeug nach"
 
 #: lib/elements/image.py:22
 msgid "* Alternatively convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr "* Alternativ kann das Bild in einen Pfad konvertiert werden: Pfad> Bitmap nachzeichnen... (Umschalt + Alt + B) (weitere Schritte sind möglicherweise erforderlich)"
 
 #: lib/elements/image.py:24
 msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Helper"
-msgstr ""
+msgstr "* Um das Bild für Kreuzstiche umzuwandeln, nutze Werkzeuge: Füllung > Kreuzstich-Helfer"
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
@@ -2890,7 +2890,7 @@ msgstr "{num_groups_removed} Gruppen/Ebenen entfernt"
 
 #: lib/extensions/cross_stitch_helper.py:178
 msgid "Cross stitch group"
-msgstr ""
+msgstr "Kreuzstich-Gruppe"
 
 #: lib/extensions/cut_satin.py:21
 msgid "Please select one or more satin columns to cut."
@@ -3748,7 +3748,7 @@ msgstr "Stichlänge:"
 
 #: lib/gui/cross_stitch_helper.py:116
 msgid "Params, pixelate and bitmap settings"
-msgstr ""
+msgstr "Parameter, verpixeln und Bitmap-Einstellungen"
 
 #: lib/gui/cross_stitch_helper.py:126
 msgid "Fill coverage (%)"
@@ -3756,43 +3756,43 @@ msgstr "Füllabdeckung (%)"
 
 #: lib/gui/cross_stitch_helper.py:129
 msgid "Align with canvas"
-msgstr ""
+msgstr "Gitter an Arbeitsfläche ausrichten"
 
 #: lib/gui/cross_stitch_helper.py:132
 msgid "Grid offset (mm) x[ y]"
-msgstr ""
+msgstr "Gitterversatz (mm) x[ y]"
 
 #: lib/gui/cross_stitch_helper.py:147
 msgid "Apply grid settings to"
-msgstr ""
+msgstr "Gittereinstellungen anwenden auf"
 
 #: lib/gui/cross_stitch_helper.py:155
 msgid "Params (selected elements)"
-msgstr ""
+msgstr "Parameter (ausgewählte Elemente)"
 
 #: lib/gui/cross_stitch_helper.py:159
 msgid "Pixelate (selected elements)"
-msgstr ""
+msgstr "Verpixeln (ausgewählte Elemente)"
 
 #: lib/gui/cross_stitch_helper.py:163
 msgid "Avoid overlapping shapes"
-msgstr ""
+msgstr "Überschneidungen vermeiden"
 
 #: lib/gui/cross_stitch_helper.py:166
 msgid "Inserts a new set of shapes and removes selected elements"
-msgstr ""
+msgstr "Ersetzt ausgewählte Elemente"
 
 #: lib/gui/cross_stitch_helper.py:170
 msgid "Add nodes"
-msgstr ""
+msgstr "Knoten hinzufügen"
 
 #: lib/gui/cross_stitch_helper.py:173
 msgid "Add nodes at the horizontal grid spacing value"
-msgstr ""
+msgstr "Knoten im horizontalen Gitterabstand hinzufügen"
 
 #: lib/gui/cross_stitch_helper.py:188
 msgid "Setup page grid"
-msgstr ""
+msgstr "Seitengitter anpassen"
 
 #: lib/gui/cross_stitch_helper.py:191
 msgid "Page grid"
@@ -3804,141 +3804,143 @@ msgstr "Gitterfarbe"
 
 #: lib/gui/cross_stitch_helper.py:199
 msgid "Remove previous"
-msgstr ""
+msgstr "Vorhandene Gitter entfernen"
 
 #: lib/gui/cross_stitch_helper.py:202
 msgid "Remove previous cross stitch page grids"
-msgstr ""
+msgstr "Vorhandene Kreuzstich-Gitter entfernen"
 
 #: lib/gui/cross_stitch_helper.py:234
 msgid "Bitmap Settings"
-msgstr ""
+msgstr "Bitmap-Einstellungen"
 
 #: lib/gui/cross_stitch_helper.py:240
 msgid "Convert bitmaps to pixelated fill areas"
-msgstr ""
+msgstr "Konvertiere Bitmaps in verpixelte Füllelemente"
 
 #: lib/gui/cross_stitch_helper.py:246
 msgid "Convert bitmaps"
-msgstr ""
+msgstr "Bitmaps konvertieren"
 
 #: lib/gui/cross_stitch_helper.py:251 lib/gui/cross_stitch_helper.py:260
 msgid "Number of colors"
-msgstr ""
+msgstr "Anzahl der Farben"
 
 #: lib/gui/cross_stitch_helper.py:252
 msgid "Selected stroke colors"
-msgstr ""
+msgstr "Ausgewählte Konturfarben"
 
 #: lib/gui/cross_stitch_helper.py:253
 msgid "List with RGB values"
-msgstr ""
+msgstr "Liste mit RGB-Werten"
 
 #: lib/gui/cross_stitch_helper.py:254
 msgid "GIMP color palette"
-msgstr ""
+msgstr "GIMP-Farbpalette"
 
 #: lib/gui/cross_stitch_helper.py:256
 msgid "Color selection"
-msgstr ""
+msgstr "Farbauswahl"
 
 #: lib/gui/cross_stitch_helper.py:262
 msgid "Reduces colors to given value.\n"
 "This may not match the final number of colors. It is possible, that colors get removed when the image gets pixelated."
-msgstr ""
+msgstr "Reduziert die Farben auf die angegebenen Anzahl.\n"
+"Farben mit zu kleinen Bereichen können durch die Verpixelung vollständig entfernt werden."
 
 #: lib/gui/cross_stitch_helper.py:269
 msgid "RGB value list"
-msgstr ""
+msgstr "Liste mit RGB-Farbwerten"
 
 #: lib/gui/cross_stitch_helper.py:271
 msgid "A comma separated list with rgb values: r g b, r, g, b\n"
 "r,g and b can take a value from 0 - 255"
-msgstr ""
+msgstr "Eine durch Kommata getrennte Liste mit Rgb-Werten: r g b, r g b\n"
+"r, g und b können Werte zwischen 0 und 255 annehmen"
 
 #: lib/gui/cross_stitch_helper.py:277
 msgid "Gimp palette file"
-msgstr ""
+msgstr "Pfad zur Gimp-Palette"
 
 #: lib/gui/cross_stitch_helper.py:278
 msgid "Select a Gimp palette file"
-msgstr ""
+msgstr "Wähle eine Gimp-Farbpaletten-Datei"
 
 #: lib/gui/cross_stitch_helper.py:279
 msgid "Restricted to the first 256 colors. Please use a color reduced palette."
-msgstr ""
+msgstr "Beschränkt auf die ersten 256 Farben. Bitte nutze eine farbreduzierte Palette."
 
 #: lib/gui/cross_stitch_helper.py:284
 msgid "Color reduction method"
-msgstr ""
+msgstr "Farbreduktionsmethode"
 
 #: lib/gui/cross_stitch_helper.py:285
 msgid "Median cut"
-msgstr ""
+msgstr "Medianschnitt"
 
 #: lib/gui/cross_stitch_helper.py:285
 msgid "Maxcoverage"
-msgstr ""
+msgstr "Maximale Abdeckung"
 
 #: lib/gui/cross_stitch_helper.py:285
 msgid "Fastoctree"
-msgstr ""
+msgstr "Fastoctree"
 
 #: lib/gui/cross_stitch_helper.py:289
 msgid "Saturation"
-msgstr ""
+msgstr "Sättigung"
 
 #: lib/gui/cross_stitch_helper.py:299
 msgid "Brightness"
-msgstr ""
+msgstr "Helligkeit"
 
 #: lib/gui/cross_stitch_helper.py:309
 msgid "Contrast"
-msgstr ""
+msgstr "Kontrast"
 
 #: lib/gui/cross_stitch_helper.py:319
 msgid "Removes pixels with a lower transparency value than this from the original image."
-msgstr ""
+msgstr "Entfernt Pixel mit einem geringeren Transparenzwert."
 
 #: lib/gui/cross_stitch_helper.py:320
 msgid "Transparency threshold (%)"
-msgstr ""
+msgstr "Transparenzschwelle (%)"
 
 #: lib/gui/cross_stitch_helper.py:334
 msgid "Background color for transparent images and background removal."
-msgstr ""
+msgstr "Für die Entfernung der Hintergrundfarbe."
 
 #: lib/gui/cross_stitch_helper.py:335
 msgid "Background color"
-msgstr ""
+msgstr "Hintergrundfarbe"
 
 #: lib/gui/cross_stitch_helper.py:341
 msgid "Remove background"
-msgstr ""
+msgstr "Hintergrund entfernen"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Keep background"
-msgstr ""
+msgstr "Hintergrund behalten"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Remove nearest to background color"
-msgstr ""
+msgstr "Hintergrundfarbe entfernen"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Remove most common color"
-msgstr ""
+msgstr "Häufigste Farbe entfernen"
 
 #: lib/gui/cross_stitch_helper.py:346
 msgid "Removes the background color."
-msgstr ""
+msgstr "Hintergrundfarbe entfernen."
 
 #: lib/gui/cross_stitch_helper.py:384
 msgid "Preview image (not pixelated)"
-msgstr ""
+msgstr "Vorschaubild"
 
 #: lib/gui/cross_stitch_helper.py:387
 msgid "No image selected"
-msgstr ""
+msgstr "Kein Bild ausgewählt"
 
 #: lib/gui/cross_stitch_helper.py:406
 msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
@@ -3947,7 +3949,12 @@ msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\
 "* Pixelate outlines of selected fill elements.\n"
 "* Generate pixelated fills from bitmaps.\n"
 "* Apply spacing values to page grid."
-msgstr ""
+msgstr "Diese Erweiterung hilft beim Erstellen von Kreuzstichen in Ink/Stitch. Sie kann:\n\n"
+"* Die Stichlänge für vorgegebene Gitterabstände berechnen.\n"
+"* Kreuzstichparameter auf ausgewählte Füllelemente anwenden.\n"
+"* Die Konturen ausgewählter Füllelemente verpixeln.\n"
+"* Verpixelte Füllungen aus Bitmaps generieren.\n"
+"* Gitterabstände auf das Seitenraster anwenden."
 
 #: lib/gui/cross_stitch_helper.py:425 lib/gui/cross_stitch_helper.py:426
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
@@ -3955,7 +3962,7 @@ msgstr "https://inkstitch.org/de/docs/tools-fill/#kreuzstich"
 
 #: lib/gui/cross_stitch_helper.py:432
 msgid "Reset values"
-msgstr ""
+msgstr "Werte zurücksetzen"
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
@@ -7320,11 +7327,11 @@ msgstr "Wandelt Sprungstiche zwischen den ausgewählten Elementen in Geradstiche
 
 #: inx/inkstitch_jump_to_stroke.inx:19
 msgid "Convert jumps longer than (mm)"
-msgstr ""
+msgstr "Konvertiere nur Sprungstiche die länger sind als (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "Convert jumps shorter than (mm)"
-msgstr ""
+msgstr "Konvertiere nur Sprungstiche die kürzer sind als (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:22
 msgid "Connect"

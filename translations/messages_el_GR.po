@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-02 02:24+0000\n"
-"PO-Revision-Date: 2026-03-02 02:25\n"
+"PO-Revision-Date: 2026-03-03 02:27\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -1139,7 +1139,7 @@ msgstr ""
 #: lib/commands.py:283
 #, python-format
 msgid "%(command)s: %(description)s"
-msgstr ""
+msgstr "%(command)s: %(description)s"
 
 #: lib/commands.py:368 lib/commands.py:492
 msgid "Ink/Stitch Command"
@@ -1161,7 +1161,7 @@ msgstr ""
 
 #: lib/elements/clone.py:29
 msgid "Clone Object"
-msgstr ""
+msgstr "Κλωνοποίηση αντικειμένου"
 
 #: lib/elements/clone.py:30
 msgid "There are one or more clone objects in this document.  Ink/Stitch can work with clones, but you are limited to set a very few parameters. "
@@ -1182,7 +1182,7 @@ msgstr ""
 #: lib/elements/clone.py:41 lib/elements/clone.py:47
 #: inx/inkstitch_select_elements.inx:74 inx/inkstitch_select_elements.inx:75
 msgid "Clone"
-msgstr ""
+msgstr "Κλωνοποίηση"
 
 #: lib/elements/clone.py:53
 msgid "Custom fill angle"
@@ -1944,7 +1944,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:775
 msgid "Pattern size"
-msgstr ""
+msgstr "Μέγεθος μοτίβου"
 
 #: lib/elements/fill_stitch.py:776
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
@@ -2218,7 +2218,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:173
 msgid "Split Method"
-msgstr ""
+msgstr "Μέθοδος διαίρεσης"
 
 #: lib/elements/satin_column.py:175
 msgid "Display needle penetration points in simulator to see the effect of each split method."
@@ -2548,7 +2548,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:348
 msgid "Pattern position"
-msgstr ""
+msgstr "Θέση μοτίβου"
 
 #: lib/elements/stroke.py:349
 msgid "Pattern position for satin guided ripples."
@@ -2823,7 +2823,7 @@ msgstr ""
 
 #: lib/extensions/batch_lettering.py:68
 msgid "Please specify a valid font name."
-msgstr ""
+msgstr "Παρακαλώ καθορίστε ένα έγκυρο όνομα γραμματοσειράς."
 
 #: lib/extensions/batch_lettering.py:69
 msgid "You can find a list with all font names on our website: https://inkstitch.org/fonts/font-library/"
@@ -2831,15 +2831,15 @@ msgstr ""
 
 #: lib/extensions/batch_lettering.py:73
 msgid "Please specify at least one output file format"
-msgstr ""
+msgstr "Παρακαλώ καθορίστε τουλάχιστον μία μορφή αρχείου εξόδου"
 
 #: lib/extensions/batch_lettering.py:79
 msgid "Please specify at least one file format supported by Ink/Stitch"
-msgstr ""
+msgstr "Παρακαλώ καθορίστε τουλάχιστον μία μορφή αρχείου που υποστηρίζεται από το Ink/Stitch"
 
 #: lib/extensions/batch_lettering.py:80
 msgid "You can find a list with all supported file formats our website: https://inkstitch.org/docs/file-formats/#writing"
-msgstr ""
+msgstr "Μπορείτε να βρείτε μια λίστα με όλες τις υποστηριζόμενες μορφές αρχείων στον ιστότοπό μας: https://inkstitch.org/docs/file-formats/#writing"
 
 #: lib/extensions/batch_lettering.py:210 lib/extensions/lettering.py:60
 #: lib/extensions/lettering.py:71
@@ -2857,22 +2857,22 @@ msgstr ""
 #: lib/extensions/cleanup.py:68
 #, python-format
 msgid "%s elements to remove:"
-msgstr ""
+msgstr "%s στοιχεία για αφαίρεση:"
 
 #: lib/extensions/cleanup.py:76
 #, python-format
 msgid "%s groups/layers to remove:"
-msgstr ""
+msgstr "%s ομάδες/επίπεδα για αφαίρεση:"
 
 #: lib/extensions/cleanup.py:84
 #, python-brace-format
 msgid "{num_elements_removed} elements removed"
-msgstr ""
+msgstr "{num_elements_removed} στοιχεία αφαιρέθηκαν"
 
 #: lib/extensions/cleanup.py:88
 #, python-brace-format
 msgid "{num_groups_removed} groups/layers removed"
-msgstr ""
+msgstr "{num_groups_removed} ομάδες/επίπεδα αφαιρέθηκαν"
 
 #: lib/extensions/cross_stitch_helper.py:178
 msgid "Cross stitch group"
@@ -3423,7 +3423,7 @@ msgstr ""
 
 #: lib/extensions/sew_stack_editor.py:201
 msgid "Preview all layers"
-msgstr ""
+msgstr "Προεπισκόπηση όλων των επιπέδων"
 
 #: lib/extensions/sew_stack_editor.py:224
 msgid "Layer Name"
@@ -3431,7 +3431,7 @@ msgstr ""
 
 #: lib/extensions/sew_stack_editor.py:374
 msgid "Are you sure you want to delete this layer?"
-msgstr ""
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το επίπεδο;"
 
 #: lib/extensions/sew_stack_editor.py:514
 msgid "Are you sure you want to quit without saving changes?"
@@ -3508,7 +3508,7 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:50
 msgid "All selected shapes are valid!"
-msgstr ""
+msgstr "Όλα τα επιλεγμένα σχήματα είναι έγκυρα!"
 
 #: lib/extensions/troubleshoot.py:52
 msgid "Checked for:\n"
@@ -3634,11 +3634,11 @@ msgstr "Άδεια χρήσης"
 
 #: lib/gui/apply_palette.py:30
 msgid "Palettes"
-msgstr ""
+msgstr "Παλέτες"
 
 #: lib/gui/apply_palette.py:33
 msgid "Select color palette"
-msgstr ""
+msgstr "Επιλογή παλέτας χρωμάτων"
 
 #: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:436
 #: lib/gui/edit_json/settings_panel.py:65 lib/gui/lettering_font_sample.py:72
@@ -3706,11 +3706,11 @@ msgstr "Ρυθμίσεις"
 
 #: lib/gui/cross_stitch_helper.py:80
 msgid "Grid Settings"
-msgstr ""
+msgstr "Ρυθμίσεις πλέγματος"
 
 #: lib/gui/cross_stitch_helper.py:84
 msgid "Square grid"
-msgstr ""
+msgstr "Τετράγωνο πλέγμα"
 
 #: lib/gui/cross_stitch_helper.py:89
 msgid "Grid horizontal spacing (mm)"
@@ -3774,11 +3774,11 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:191
 msgid "Page grid"
-msgstr ""
+msgstr "Πλέγμα σελίδας"
 
 #: lib/gui/cross_stitch_helper.py:195
 msgid "Grid color"
-msgstr ""
+msgstr "Χρώμα πλέγματος"
 
 #: lib/gui/cross_stitch_helper.py:199
 msgid "Remove previous"
@@ -3986,12 +3986,12 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:101
 msgid "Font License"
-msgstr ""
+msgstr "Άδεια χρήσης γραμματοσειράς"
 
 #: lib/gui/edit_json/settings_panel.py:108
 #: inx/inkstitch_lettering_generate_json.inx:25
 msgid "Text direction"
-msgstr ""
+msgstr "Κατεύθυνση κειμένου"
 
 #: lib/gui/edit_json/settings_panel.py:109
 msgid "Left to Right"
@@ -4143,7 +4143,7 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:21
 msgid "Glyphs"
-msgstr ""
+msgstr "Γλυφές"
 
 #: lib/gui/lettering/option_panel.py:23
 msgid "Filter fonts by available glyphs."
@@ -4171,7 +4171,7 @@ msgstr "Γραμματοσειρά"
 
 #: lib/gui/lettering/option_panel.py:83
 msgid "Align Text"
-msgstr ""
+msgstr "Στοίχιση κειμένου"
 
 #: lib/gui/lettering/option_panel.py:86 inx/inkstitch_batch_lettering.inx:36
 #: inx/inkstitch_batch_lettering.inx:59
@@ -4350,7 +4350,7 @@ msgstr "Ορισμός ως προεπιλογή"
 
 #: lib/gui/preferences.py:76
 msgid "Rotate on export"
-msgstr ""
+msgstr "Περιστροφή κατά την εξαγωγή"
 
 #: lib/gui/preferences.py:78
 msgid "Some embroidery machines don't automatically rotate files to fit into the hoop."
@@ -4411,7 +4411,7 @@ msgstr "Διαγραφή"
 
 #: lib/gui/presets.py:120
 msgid "Please enter or select a preset name first."
-msgstr ""
+msgstr "Παρακαλώ εισαγάγετε ή επιλέξτε πρώτα ένα όνομα προρύθμισης."
 
 #: lib/gui/presets.py:120 lib/gui/presets.py:126 lib/gui/presets.py:142
 msgid "Preset"
@@ -4425,22 +4425,22 @@ msgstr "Η προρύθμιση \"%s\" δε βρέθηκε."
 #: lib/gui/presets.py:142
 #, python-format
 msgid "Preset \"%s\" already exists.  Please use another name or press \"Overwrite\""
-msgstr ""
+msgstr "Η προρύθμιση \"%s\" υπάρχει ήδη.  Παρακαλώ χρησιμοποιήστε άλλο όνομα ή πατήστε \"Αντικατάσταση\""
 
 #: lib/gui/presets.py:148
 #, python-format
 msgid "Preset \"%s\" updated."
-msgstr ""
+msgstr "Η προρύθμιση \"%s\" ενημερώθηκε."
 
 #: lib/gui/presets.py:150
 #, python-format
 msgid "Preset \"%s\" added."
-msgstr ""
+msgstr "Η προρύθμιση \"%s\" προστέθηκε."
 
 #: lib/gui/presets.py:189
 #, python-format
 msgid "Preset \"%s\" deleted."
-msgstr ""
+msgstr "Η προρύθμιση \"%s\" διαγράφηκε."
 
 #: lib/gui/request_update_svg_version.py:29
 msgid "Unversioned Ink/Stitch SVG file detected.\n\n"
@@ -4458,7 +4458,7 @@ msgstr ""
 
 #: lib/gui/satin_multicolor/color_panel.py:23
 msgid "Select color"
-msgstr ""
+msgstr "Επιλογή χρώματος"
 
 #: lib/gui/satin_multicolor/color_panel.py:28
 msgid "Monochrome width. Can be changed individually when equidistance is disabled."
@@ -4699,7 +4699,7 @@ msgstr ""
 
 #: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
-msgstr ""
+msgstr "Εμφάνιση σελίδας"
 
 #: lib/gui/simulator/view_panel.py:95
 msgid "Open settings dialog"
@@ -4735,7 +4735,7 @@ msgstr ""
 
 #: lib/gui/tartan/customize_panel.py:30
 msgid "Pattern Settings"
-msgstr ""
+msgstr "Ρυθμίσεις μοτίβου"
 
 #: lib/gui/tartan/customize_panel.py:32
 msgid "Symmetrical / reflective sett"
@@ -4840,7 +4840,7 @@ msgstr "Προσαρμογή"
 
 #: lib/gui/tartan/main_panel.py:58
 msgid "Palette Code"
-msgstr ""
+msgstr "Κωδικός παλέτας"
 
 #: lib/gui/tartan/main_panel.py:61
 msgid "Embroidery Settings"
@@ -5133,7 +5133,7 @@ msgstr ""
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:339
 msgid "Undo changes"
-msgstr ""
+msgstr "Αναίρεση αλλαγών"
 
 #: lib/sew_stack/stitch_layers/stitch_layer_editor.py:349
 msgid "Reset to default"
@@ -5475,7 +5475,7 @@ msgstr "Μέγεθος εκτύπωσης"
 
 #: print/templates/ui.html:39
 msgid "Print Layouts"
-msgstr ""
+msgstr "Διατάξεις εκτύπωσης"
 
 #: print/templates/ui.html:42 print/templates/ui.html:145
 msgid "Client Overview"
@@ -5783,7 +5783,7 @@ msgstr ""
 #. description for pystitch file format: png
 #: pystitch-format-descriptions.py:86
 msgid "PNG Format, Portable Network Graphics"
-msgstr ""
+msgstr "Μορφή PNG, Portable Network Graphics"
 
 #. description for pystitch file format: txt
 #: pystitch-format-descriptions.py:88
@@ -5808,12 +5808,12 @@ msgstr ""
 #. description for pystitch file format: plt
 #: pystitch-format-descriptions.py:96
 msgid "Plt - HPGL"
-msgstr ""
+msgstr "Plt - HPGL"
 
 #. description for pystitch file format: qcc
 #: pystitch-format-descriptions.py:98
 msgid "Qcc - QuiltEZ"
-msgstr ""
+msgstr "Qcc - QuiltEZ"
 
 #. description for pystitch file format: edr
 #: pystitch-format-descriptions.py:100
@@ -5859,11 +5859,11 @@ msgstr ""
 
 #: inx/inkstitch_apply_attribute.inx:19
 msgid "Attribute"
-msgstr ""
+msgstr "Χαρακτηριστικό"
 
 #: inx/inkstitch_apply_attribute.inx:22
 msgid "Remove attribute"
-msgstr ""
+msgstr "Αφαίρεση χαρακτηριστικού"
 
 #: inx/inkstitch_apply_attribute.inx:25
 msgid "This extension sets a custom attribute to all selected elements."
@@ -5879,7 +5879,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_palette.inx:3
 msgid "Apply Palette"
-msgstr ""
+msgstr "Εφαρμογή παλέτας"
 
 #: inx/inkstitch_apply_palette.inx:9
 msgid "Matches colors of all elements in the document to a specified palette"
@@ -5916,7 +5916,7 @@ msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:13
 msgid "*Choose color palette"
-msgstr ""
+msgstr "*Επιλογή παλέτας χρωμάτων"
 
 #: inx/inkstitch_apply_threadlist.inx:92
 msgid "This extension applies colors from a color file to the objects in this document."
@@ -6076,7 +6076,7 @@ msgstr ""
 
 #: inx/inkstitch_batch_lettering.inx:19
 msgid "Font name"
-msgstr ""
+msgstr "Όνομα γραμματοσειράς"
 
 #: inx/inkstitch_batch_lettering.inx:21
 msgid "The scale value must be within the scale range of the specified font."
@@ -6113,7 +6113,7 @@ msgstr ""
 
 #: inx/inkstitch_batch_lettering.inx:67
 msgid "File formats"
-msgstr ""
+msgstr "Μορφές αρχείων"
 
 #: inx/inkstitch_batch_lettering.inx:67
 msgid "Comma separated list of file formats"
@@ -7041,7 +7041,7 @@ msgstr "Είσοδος αρχείου PLT"
 
 #: inx/inkstitch_input_PLT.inx:8
 msgid "Ink/Stitch: Plt - HPGL (.plt)"
-msgstr ""
+msgstr "Ink/Stitch: Plt - HPGL (.plt)"
 
 #: inx/inkstitch_input_PLT.inx:9
 msgid "convert PLT file to Ink/Stitch manual-stitch paths"
@@ -7065,7 +7065,7 @@ msgstr "Είσοδος αρχείου QCC"
 
 #: inx/inkstitch_input_QCC.inx:8
 msgid "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
-msgstr ""
+msgstr "Ink/Stitch: Qcc - QuiltEZ (.qcc)"
 
 #: inx/inkstitch_input_QCC.inx:9
 msgid "convert QCC file to Ink/Stitch manual-stitch paths"
@@ -7229,7 +7229,7 @@ msgstr ""
 
 #: inx/inkstitch_install.inx:12
 msgid "Install symbol libraries"
-msgstr ""
+msgstr "Εγκατάσταση βιβλιοθηκών συμβόλων"
 
 #: inx/inkstitch_install.inx:12
 msgid "Installs symbol libraries with reusable motifs for embroidery"
@@ -7241,7 +7241,7 @@ msgstr ""
 
 #: inx/inkstitch_install.inx:16
 msgid "Please restart Inkscape after the installation is complete."
-msgstr ""
+msgstr "Παρακαλώ επανεκκινήστε το Inkscape μετά την ολοκλήρωση της εγκατάστασης."
 
 #: inx/inkstitch_install.inx:19
 msgid "https://inkstitch.org/docs/install-addons"
@@ -7261,7 +7261,7 @@ msgstr ""
 
 #: inx/inkstitch_install_custom_palette.inx:10
 msgid "Restart Inkscape to use."
-msgstr ""
+msgstr "Επανεκκινήστε το Inkscape για να το χρησιμοποιήσετε."
 
 #: inx/inkstitch_install_custom_palette.inx:15
 msgid "This extension installs a custom thread palette into Inkscape."
@@ -7365,7 +7365,7 @@ msgstr ""
 
 #: inx/inkstitch_jump_to_trim.inx:18
 msgid "Command"
-msgstr ""
+msgstr "Εντολή"
 
 #: inx/inkstitch_jump_to_trim.inx:23
 msgid "Convert jumps not shorter than (mm)"
@@ -7421,15 +7421,15 @@ msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:32
 msgid "Shape"
-msgstr ""
+msgstr "Σχήμα"
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "Rectangle"
-msgstr ""
+msgstr "Ορθογώνιο"
 
 #: inx/inkstitch_knockdown_fill.inx:35
 msgid "Circle"
-msgstr ""
+msgstr "Κύκλος"
 
 #: inx/inkstitch_knockdown_fill.inx:37
 msgid "Shape offset"
@@ -7486,7 +7486,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:18
 msgid "Text position"
-msgstr ""
+msgstr "Θέση κειμένου"
 
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "This extension bends an Ink/Stitch text to a path."
@@ -7502,7 +7502,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:31
 msgid "Text position:"
-msgstr ""
+msgstr "Θέση κειμένου:"
 
 #: inx/inkstitch_lettering_along_path.inx:32
 msgid "Text can be positioned at the start, end or center of the path."
@@ -7656,7 +7656,7 @@ msgstr "Αρχείο γραμματοσειράς SVG"
 
 #: inx/inkstitch_lettering_generate_json.inx:93
 msgid "Default Glyph"
-msgstr ""
+msgstr "Προεπιλεγμένη γλυφή"
 
 #: inx/inkstitch_lettering_generate_json.inx:99
 msgid "Autoroute Satin"
@@ -7763,7 +7763,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:12
 msgid "Choose action"
-msgstr ""
+msgstr "Επιλογή ενέργειας"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:13
 msgid "Step 1 : Comma and period and hyphen"
@@ -7823,7 +7823,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_remove_kerning.inx:10
 msgid "Select Font Files"
-msgstr ""
+msgstr "Επιλογή αρχείων γραμματοσειράς"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:14
 msgid "Removes Kerning information from given SVG files"
@@ -7939,19 +7939,19 @@ msgstr ""
 
 #: inx/inkstitch_object_commands.inx:16
 msgid "Top left"
-msgstr ""
+msgstr "Πάνω αριστερά"
 
 #: inx/inkstitch_object_commands.inx:17
 msgid "Top right"
-msgstr ""
+msgstr "Πάνω δεξιά"
 
 #: inx/inkstitch_object_commands.inx:18
 msgid "Bottom left"
-msgstr ""
+msgstr "Κάτω αριστερά"
 
 #: inx/inkstitch_object_commands.inx:19
 msgid "Bottom right"
-msgstr ""
+msgstr "Κάτω δεξιά"
 
 #: inx/inkstitch_object_commands.inx:25
 msgid "Add commands which affect selected elememts"
@@ -7967,7 +7967,7 @@ msgstr "Περίγραμμα"
 
 #: inx/inkstitch_outline.inx:9
 msgid "Keep original element(s)"
-msgstr ""
+msgstr "Διατήρηση αρχικού στοιχείου(ων)"
 
 #: inx/inkstitch_outline.inx:14
 msgid "Threshold (mm²)"
@@ -8392,7 +8392,7 @@ msgstr ""
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
 #: inx/inkstitch_zip.inx:50 inx/inkstitch_zip.inx:53
 msgid "DPI"
-msgstr ""
+msgstr "DPI"
 
 #: inx/inkstitch_png_realistic.inx:18 inx/inkstitch_png_simple.inx:19
 msgid "PNG file export"
@@ -8404,7 +8404,7 @@ msgstr ""
 
 #: inx/inkstitch_png_realistic.inx:23 inx/inkstitch_png_simple.inx:24
 msgid "Read more on our website"
-msgstr ""
+msgstr "Διαβάστε περισσότερα στον ιστότοπό μας"
 
 #: inx/inkstitch_png_realistic.inx:24 inx/inkstitch_png_simple.inx:25
 msgid "https://inkstitch.org/docs/import-export/"
@@ -8456,7 +8456,7 @@ msgstr ""
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine elements"
-msgstr ""
+msgstr "Συνδυασμός στοιχείων"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Combine consecutive elements of same type"
@@ -8936,11 +8936,11 @@ msgstr ""
 
 #: inx/inkstitch_transform_elements.inx:11
 msgid "Flip horizontally"
-msgstr ""
+msgstr "Αναστροφή οριζόντια"
 
 #: inx/inkstitch_transform_elements.inx:12
 msgid "Flip vertically"
-msgstr ""
+msgstr "Αναστροφή κατακόρυφα"
 
 #: inx/inkstitch_transform_elements.inx:15
 msgid "This extension applies transformations while also adjusting the fill angles"
@@ -8972,7 +8972,7 @@ msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:19
 msgid "Size settings"
-msgstr ""
+msgstr "Ρυθμίσεις μεγέθους"
 
 #: inx/inkstitch_troubleshoot.inx:20
 msgid "Pointer size (mm)"
