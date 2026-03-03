@@ -55,7 +55,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     return even_cross_stitch(fill, shape, starting_point, ending_point, thread_count)
 
 
-def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number):
+def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count):
     """ Cross stitch algorithm for all cross stitch types except for half crosses and their reverse version
 
         Steps:
@@ -83,10 +83,9 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, threads_number)
             ending_point = _rotate_coords(*ending_point)
         shape = rotate(shape, 90, origin=(0, 0))
 
-    nb_repeats = (threads_number // 2)
-    cross_geoms = CrossGeometries(fill, shape, method)
+    cross_geoms = CrossGeometries(fill, shape, method, thread_count)
     subgraphs = _build_connect_subgraphs(cross_geoms)
-    eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats)
+    eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms)
 
     stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length, flipped)
     return [stitches]
@@ -131,7 +130,7 @@ def _build_connect_subgraphs(cross_geoms):
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
 
-def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms, nb_repeats):
+def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms):
     """ We need to construct an eulerian cycle for each subgraph,
         but we need to make sure that no cross is flipped
         So we construct partial cycles (tours) that cover rows of crosses without flipping any cross
@@ -162,7 +161,7 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
             cross = next(iter(subcrosses))
             starting_corner = cross.good_points[0]
 
-        cycle = travel + _build_simple_cycles(subcrosses, cross_geoms, starting_corner, nb_repeats)
+        cycle = travel + _build_simple_cycles(subcrosses, cross_geoms, starting_corner)
         travel = []
 
         eulerian_cycles.append(cycle)
@@ -170,10 +169,10 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms,
     return eulerian_cycles
 
 
-def _build_simple_cycles(subcrosses, cross_geoms, starting_point, nb_repeats):
+def _build_simple_cycles(subcrosses, cross_geoms, starting_point):
     possible_crosses = cross_geoms.crosses_by_good_point[starting_point] + cross_geoms.crosses_by_bad_point[starting_point]
     cross = possible_crosses[0]
-    path = deque(cross.cycle_from_point(starting_point, nb_repeats))
+    path = deque(cross.cycle_from_point(starting_point))
     cross_geoms.remove_cross(cross)
     subcrosses.remove(cross)
 
@@ -190,7 +189,7 @@ def _build_simple_cycles(subcrosses, cross_geoms, starting_point, nb_repeats):
             for cross in list(cross_geoms.crosses_by_good_point[current_point]):
                 # must reverse because deque.extendleft() reverses the sequence
                 # when extending on the left
-                path.extendleft(reversed(cross.cycle_from_point(current_point, nb_repeats)))
+                path.extendleft(reversed(cross.cycle_from_point(current_point)))
                 cross_geoms.remove_cross(cross)
                 subcrosses.remove(cross)
         path = new_path
@@ -204,7 +203,7 @@ def _build_simple_cycles(subcrosses, cross_geoms, starting_point, nb_repeats):
                 new_path.append(current_point)
                 if cross_geoms.crosses_by_bad_point.get(current_point):
                     cross = cross_geoms.crosses_by_bad_point[current_point][0]
-                    new_path.extend(cross.cycle_from_point(current_point, nb_repeats))
+                    new_path.extend(cross.cycle_from_point(current_point))
                     new_path.extend(path)
                     cross_geoms.remove_cross(cross)
                     subcrosses.remove(cross)

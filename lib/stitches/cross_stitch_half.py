@@ -10,11 +10,12 @@ from shapely.ops import nearest_points, unary_union
 
 from ..stitch_plan import Stitch
 from ..utils.geometry import Point as InkstitchPoint
-from ..utils.geometry import ensure_multi_line_string, reverse_line_string, ensure_multi_polygon
+from ..utils.geometry import (ensure_multi_line_string, ensure_multi_polygon,
+                              reverse_line_string)
 from ..utils.threading import check_stop_flag
-from .auto_fill import (fallback,
-                        find_stitch_path, graph_make_valid, build_travel_graph,
-                        build_fill_stitch_graph, travel, collapse_sequential_outline_edges)
+from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
+                        collapse_sequential_outline_edges, fallback,
+                        find_stitch_path, graph_make_valid, travel)
 from .running_stitch import bean_stitch
 from .utils.cross_stitch import CrossGeometries
 
@@ -37,7 +38,7 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     max_stitch_length = fill.max_cross_stitch_length
     cross_stitch_method = fill.cross_stitch_method
 
-    cross_geoms = CrossGeometries(fill, shape, cross_stitch_method, original_shape)
+    cross_geoms = CrossGeometries(fill, shape, cross_stitch_method, bean_stitch_repeats, original_shape)
 
     if not cross_geoms.boxes:
         return []
