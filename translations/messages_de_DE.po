@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-03 16:46+0000\n"
-"PO-Revision-Date: 2026-03-03 16:46\n"
+"PO-Revision-Date: 2026-03-04 02:14\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -75,7 +75,7 @@ msgstr "Kreuzstich-Schrift, jeder Buchstabe enthält ein Tier mit dem passenden 
 #. description of font in fonts/animaux
 #: inkstitch-fonts-metadata.py:20
 msgid "cross stitch font, each letter includes an animal with French name starting with the letter"
-msgstr ""
+msgstr "Kreuzstich-Schrift, jeder Buchstabe enthält ein Tier mit dem passenden französischsprachigen Anfangsbuchstaben"
 
 #. description of font in fonts/apesplit
 #: inkstitch-fonts-metadata.py:22
@@ -582,7 +582,7 @@ msgstr "Pixel 10 ist eine Satin-Pixel-Schrift."
 #. description of font in fonts/precious
 #: inkstitch-fonts-metadata.py:220
 msgid "Precious is a decorative satin column round cursive font."
-msgstr ""
+msgstr "Precious ist eine runde Kursivschrift aus Satinsäulen."
 
 #. description of font in fonts/priscilla
 #: inkstitch-fonts-metadata.py:222
