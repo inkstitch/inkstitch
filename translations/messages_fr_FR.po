@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-03 16:46+0000\n"
-"PO-Revision-Date: 2026-03-03 16:46\n"
+"PO-Revision-Date: 2026-03-05 02:23\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -75,7 +75,7 @@ msgstr "Police en point de croix, chaque lettre inclus un animal dont le nom ang
 #. description of font in fonts/animaux
 #: inkstitch-fonts-metadata.py:20
 msgid "cross stitch font, each letter includes an animal with French name starting with the letter"
-msgstr ""
+msgstr "Police en point de croix, chaque lettre inclus un animal dont le nom Français commence par elle"
 
 #. description of font in fonts/apesplit
 #: inkstitch-fonts-metadata.py:22
@@ -580,7 +580,7 @@ msgstr "Pixel 10 est une police pixelisée en colonne satin."
 #. description of font in fonts/precious
 #: inkstitch-fonts-metadata.py:220
 msgid "Precious is a decorative satin column round cursive font."
-msgstr ""
+msgstr "Precious est une police décorative en colonne satin."
 
 #. description of font in fonts/priscilla
 #: inkstitch-fonts-metadata.py:222
@@ -2002,15 +2002,15 @@ msgstr "Ink/Stitch ne peut pas fonctionner avec des objets comme les images."
 
 #: lib/elements/image.py:21
 msgid "* Redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "* Redessiner l'image avec l'outil crayon (P) ou courbes de Béziers (B)"
 
 #: lib/elements/image.py:22
 msgid "* Alternatively convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr ":* Alternativement, convertir votre image en chemin: Chemin > Vectoriser un objet matriciel (Maj+Alt+B) (peut requérir des étapes supplémentaires)"
 
 #: lib/elements/image.py:24
 msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Helper"
-msgstr ""
+msgstr "* Pour convertir l'image pour le point de croix, utiliser Outils : remplissage > Assistant point de croix"
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
@@ -2889,7 +2889,7 @@ msgstr "{num_groups_removed} groupes/calques supprimés"
 
 #: lib/extensions/cross_stitch_helper.py:178
 msgid "Cross stitch group"
-msgstr ""
+msgstr "Groupe de points de croix"
 
 #: lib/extensions/cut_satin.py:21
 msgid "Please select one or more satin columns to cut."
@@ -3747,7 +3747,7 @@ msgstr "Longueur de point :"
 
 #: lib/gui/cross_stitch_helper.py:116
 msgid "Params, pixelate and bitmap settings"
-msgstr ""
+msgstr "Paramètres, et réglages de la pixellisation et de l'image"
 
 #: lib/gui/cross_stitch_helper.py:126
 msgid "Fill coverage (%)"
@@ -3755,43 +3755,43 @@ msgstr "Couverture du remplissage (%)"
 
 #: lib/gui/cross_stitch_helper.py:129
 msgid "Align with canvas"
-msgstr ""
+msgstr "Aligner avec le canevas"
 
 #: lib/gui/cross_stitch_helper.py:132
 msgid "Grid offset (mm) x[ y]"
-msgstr ""
+msgstr "Décalage de la grille (mm) x[ y]"
 
 #: lib/gui/cross_stitch_helper.py:147
 msgid "Apply grid settings to"
-msgstr ""
+msgstr "Appliquer les réglages de la grille"
 
 #: lib/gui/cross_stitch_helper.py:155
 msgid "Params (selected elements)"
-msgstr ""
+msgstr "Paramètres (éléments selectionnés)"
 
 #: lib/gui/cross_stitch_helper.py:159
 msgid "Pixelate (selected elements)"
-msgstr ""
+msgstr "Pixeliser (éléments sélectionnés)"
 
 #: lib/gui/cross_stitch_helper.py:163
 msgid "Avoid overlapping shapes"
-msgstr ""
+msgstr "Éviter les superpositions"
 
 #: lib/gui/cross_stitch_helper.py:166
 msgid "Inserts a new set of shapes and removes selected elements"
-msgstr ""
+msgstr "Insert un nouvel ensemble de formes et supprime les éléments sélectionnés"
 
 #: lib/gui/cross_stitch_helper.py:170
 msgid "Add nodes"
-msgstr ""
+msgstr "Ajouter des noeuds"
 
 #: lib/gui/cross_stitch_helper.py:173
 msgid "Add nodes at the horizontal grid spacing value"
-msgstr ""
+msgstr "Ajouter des noeuds aux intersections avec la grille"
 
 #: lib/gui/cross_stitch_helper.py:188
 msgid "Setup page grid"
-msgstr ""
+msgstr "Configuration de la grille de la page"
 
 #: lib/gui/cross_stitch_helper.py:191
 msgid "Page grid"
@@ -3803,141 +3803,143 @@ msgstr "Couleur de la grille"
 
 #: lib/gui/cross_stitch_helper.py:199
 msgid "Remove previous"
-msgstr ""
+msgstr "Enlever les précédentes"
 
 #: lib/gui/cross_stitch_helper.py:202
 msgid "Remove previous cross stitch page grids"
-msgstr ""
+msgstr "Supprime les grilles de la page précédentes"
 
 #: lib/gui/cross_stitch_helper.py:234
 msgid "Bitmap Settings"
-msgstr ""
+msgstr "Paramètres de l'image matricielle"
 
 #: lib/gui/cross_stitch_helper.py:240
 msgid "Convert bitmaps to pixelated fill areas"
-msgstr ""
+msgstr "Convertit des images matricielles en remplissages pixelisés"
 
 #: lib/gui/cross_stitch_helper.py:246
 msgid "Convert bitmaps"
-msgstr ""
+msgstr "Convertir les images matricielles"
 
 #: lib/gui/cross_stitch_helper.py:251 lib/gui/cross_stitch_helper.py:260
 msgid "Number of colors"
-msgstr ""
+msgstr "Nombre de couleurs"
 
 #: lib/gui/cross_stitch_helper.py:252
 msgid "Selected stroke colors"
-msgstr ""
+msgstr "Couleurs des traits sélectionnées"
 
 #: lib/gui/cross_stitch_helper.py:253
 msgid "List with RGB values"
-msgstr ""
+msgstr "Liste de valeurs RGB"
 
 #: lib/gui/cross_stitch_helper.py:254
 msgid "GIMP color palette"
-msgstr ""
+msgstr "Palette de couleurs GIMP"
 
 #: lib/gui/cross_stitch_helper.py:256
 msgid "Color selection"
-msgstr ""
+msgstr "Selection de couleur"
 
 #: lib/gui/cross_stitch_helper.py:262
 msgid "Reduces colors to given value.\n"
 "This may not match the final number of colors. It is possible, that colors get removed when the image gets pixelated."
-msgstr ""
+msgstr "Réduit le nombre de couleurs à la valeur indiquée.\n\n"
+"Ce nombre peut différer du nombre final de couleurs. Il est possible que des couleurs soient supprimées lors de la pixellisation de l'image."
 
 #: lib/gui/cross_stitch_helper.py:269
 msgid "RGB value list"
-msgstr ""
+msgstr "Liste de valeurs RGB"
 
 #: lib/gui/cross_stitch_helper.py:271
 msgid "A comma separated list with rgb values: r g b, r, g, b\n"
 "r,g and b can take a value from 0 - 255"
-msgstr ""
+msgstr "Liste de valeurs RVB séparées par des virgules : r g b, r, g, b\n\n"
+"r, g et b peuvent prendre une valeur comprise entre 0 et 255."
 
 #: lib/gui/cross_stitch_helper.py:277
 msgid "Gimp palette file"
-msgstr ""
+msgstr "Fichier de palette GIMP"
 
 #: lib/gui/cross_stitch_helper.py:278
 msgid "Select a Gimp palette file"
-msgstr ""
+msgstr "Sélectionner un fichier de palette GIMP"
 
 #: lib/gui/cross_stitch_helper.py:279
 msgid "Restricted to the first 256 colors. Please use a color reduced palette."
-msgstr ""
+msgstr "Limité aux 256 premières couleurs. Veuillez utiliser une palette de couleurs réduite."
 
 #: lib/gui/cross_stitch_helper.py:284
 msgid "Color reduction method"
-msgstr ""
+msgstr "Méthode de reduction des couleurs"
 
 #: lib/gui/cross_stitch_helper.py:285
 msgid "Median cut"
-msgstr ""
+msgstr "Median cut"
 
 #: lib/gui/cross_stitch_helper.py:285
 msgid "Maxcoverage"
-msgstr ""
+msgstr "Maxcoverage"
 
 #: lib/gui/cross_stitch_helper.py:285
 msgid "Fastoctree"
-msgstr ""
+msgstr "Fastoctree"
 
 #: lib/gui/cross_stitch_helper.py:289
 msgid "Saturation"
-msgstr ""
+msgstr "Saturation"
 
 #: lib/gui/cross_stitch_helper.py:299
 msgid "Brightness"
-msgstr ""
+msgstr "Luminosité"
 
 #: lib/gui/cross_stitch_helper.py:309
 msgid "Contrast"
-msgstr ""
+msgstr "Contraste"
 
 #: lib/gui/cross_stitch_helper.py:319
 msgid "Removes pixels with a lower transparency value than this from the original image."
-msgstr ""
+msgstr "Supprime de l'image originale les pixels dont la valeur de transparence est inférieure à celle-ci."
 
 #: lib/gui/cross_stitch_helper.py:320
 msgid "Transparency threshold (%)"
-msgstr ""
+msgstr "Seuil de transparence (%)"
 
 #: lib/gui/cross_stitch_helper.py:334
 msgid "Background color for transparent images and background removal."
-msgstr ""
+msgstr "Couleur de fond pour les images transparentes et la suppression de l'arrière-plan."
 
 #: lib/gui/cross_stitch_helper.py:335
 msgid "Background color"
-msgstr ""
+msgstr "Couleur d'arrière-plan"
 
 #: lib/gui/cross_stitch_helper.py:341
 msgid "Remove background"
-msgstr ""
+msgstr "Supprimer l'arrière-plan"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Keep background"
-msgstr ""
+msgstr "Garder l'arrière-plan"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Remove nearest to background color"
-msgstr ""
+msgstr "Supprimer la couleur la plus proche de celle de l'arrière-plan"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Remove most common color"
-msgstr ""
+msgstr "Supprimer la couleur la plus fréquente"
 
 #: lib/gui/cross_stitch_helper.py:346
 msgid "Removes the background color."
-msgstr ""
+msgstr "Supprimer la couleur d'arrière-plan."
 
 #: lib/gui/cross_stitch_helper.py:384
 msgid "Preview image (not pixelated)"
-msgstr ""
+msgstr "Prévisualisation de l'image (non pixelisée)"
 
 #: lib/gui/cross_stitch_helper.py:387
 msgid "No image selected"
-msgstr ""
+msgstr "Aucune image n'est sélectionnée"
 
 #: lib/gui/cross_stitch_helper.py:406
 msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
@@ -3946,7 +3948,12 @@ msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\
 "* Pixelate outlines of selected fill elements.\n"
 "* Generate pixelated fills from bitmaps.\n"
 "* Apply spacing values to page grid."
-msgstr ""
+msgstr "Cette extension aide à la génération de points de croix dans Ink/Stitch. Elle peut :\n\n"
+"* Calculer la longueur des points en fonction des espacements de la grille.\n"
+"* Paramétrer en point de croix les éléments de remplissage sélectionnés\n"
+"* Pixeliser les frontières des éléments de remplissage sélectionnés.\n"
+"* Générer des formes de remplissage pixelisées à partir d'images matricielles\n"
+"* Appliquer les valeurs d'espacement à la grille du document."
 
 #: lib/gui/cross_stitch_helper.py:425 lib/gui/cross_stitch_helper.py:426
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
@@ -3954,7 +3961,7 @@ msgstr "https://inkstitch.org/fr/docs/tools-fill/#cross-stitch"
 
 #: lib/gui/cross_stitch_helper.py:432
 msgid "Reset values"
-msgstr ""
+msgstr "Réinitialiser les valeurs"
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
