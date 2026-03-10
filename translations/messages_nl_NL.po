@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-03 16:46+0000\n"
-"PO-Revision-Date: 2026-03-03 16:46\n"
+"PO-Revision-Date: 2026-03-10 02:12\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -70,12 +70,12 @@ msgstr "Dit lettertype is een aangepaste versie van Amitaclo, om een ​​grote
 #. description of font in fonts/animals
 #: inkstitch-fonts-metadata.py:18
 msgid "cross stitch font, each letter includes an animal with English name starting with the letter"
-msgstr ""
+msgstr "kruissteek lettertype, elke letter bevat een dier waarvan de Engelse naam met die letter begint"
 
 #. description of font in fonts/animaux
 #: inkstitch-fonts-metadata.py:20
 msgid "cross stitch font, each letter includes an animal with French name starting with the letter"
-msgstr ""
+msgstr "kruissteek lettertype, elke letter bevat een dier met een Franse naam die met die letter begint"
 
 #. description of font in fonts/apesplit
 #: inkstitch-fonts-metadata.py:22
@@ -125,7 +125,7 @@ msgstr "Dit is een versie van de Barstitch vulling met geleide vulling. Elke let
 #. description of font in fonts/barstitch_crosses
 #: inkstitch-fonts-metadata.py:40
 msgid "This is a cross stitch version of Barstitch fill. Each letter is used to clip a group of cross  stitch  fills."
-msgstr ""
+msgstr "Dit is een kruissteek versie van de Barstitch-vulling. Elke letter wordt gebruikt om een ​​groep kruissteek vullingen uit te knippen."
 
 #. description of font in fonts/barstitch_mandala
 #: inkstitch-fonts-metadata.py:42
@@ -325,12 +325,12 @@ msgstr "Dit lettertype is een aangepaste versie van Excalibur KOR, om een ​​
 #. description of font in fonts/flowery_crosses
 #: inkstitch-fonts-metadata.py:118
 msgid "Very large cross stitch font. "
-msgstr ""
+msgstr "Zeer groot lettertype voor kruissteek borduurwerk "
 
 #. description of font in fonts/flowery_multicolor
 #: inkstitch-fonts-metadata.py:120
 msgid "Very large multicolor cross stitch font. "
-msgstr ""
+msgstr "Zeer groot, veelkleurig kruissteek lettertype "
 
 #. description of font in fonts/fold_inkstitch
 #: inkstitch-fonts-metadata.py:122
@@ -360,7 +360,7 @@ msgstr "Glacial is een heel klein lettertype. Dunne draad (60 wt) en een dunne n
 #. description of font in fonts/handkerchief
 #: inkstitch-fonts-metadata.py:132
 msgid "Cross stitch font. Initially intended to embroider handkerchiefs corners."
-msgstr ""
+msgstr "Lettertype voor kruissteek. Oorspronkelijk bedoeld voor het borduren van de hoeken van zakdoeken."
 
 #. description of font in fonts/hebrew_font_large
 #: inkstitch-fonts-metadata.py:134
@@ -420,7 +420,7 @@ msgstr "Invercelia is een modern monogram lettertype met twee letters. Voer twee
 #. description of font in fonts/jersey_15
 #: inkstitch-fonts-metadata.py:154 inkstitch-fonts-metadata.py:156
 msgid "cross stitch font"
-msgstr ""
+msgstr "kruissteek lettertype"
 
 #. description of font in fonts/kum_tsoan_AGS
 #: inkstitch-fonts-metadata.py:158
@@ -445,7 +445,7 @@ msgstr "Learning curve is een klein script lettertype met een loop steek."
 #. description of font in fonts/magic_crosses
 #: inkstitch-fonts-metadata.py:166
 msgid "Cross stitch font. "
-msgstr ""
+msgstr "Kruissteek lettertype "
 
 #. description of font in fonts/magnolia_KOR
 #: inkstitch-fonts-metadata.py:168
@@ -2001,15 +2001,15 @@ msgstr "Ink/Stitch kan niet omgaan met objecten zoals afbeeldingen."
 
 #: lib/elements/image.py:21
 msgid "* Redraw the image with the pen (P) or bezier (B) tool"
-msgstr ""
+msgstr "*Teken de afbeelding opnieuw met het pen- (P) of Bézier gereedschap (B)"
 
 #: lib/elements/image.py:22
 msgid "* Alternatively convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) (further steps might be required)"
-msgstr ""
+msgstr "* U kunt uw afbeelding ook omzetten naar een pad: Pad > Bitmap traceren... (Shift+Alt+B) (mogelijk zijn er verdere stappen nodig)"
 
 #: lib/elements/image.py:24
 msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Helper"
-msgstr ""
+msgstr "* Om de afbeelding geschikt te maken voor kruissteek, gebruikt u Hulpmiddelen: Vullen > Kruissteek hulp"
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
@@ -2888,7 +2888,7 @@ msgstr "{num_groups_removed} groepen/lagen verwijderd"
 
 #: lib/extensions/cross_stitch_helper.py:178
 msgid "Cross stitch group"
-msgstr ""
+msgstr "Kruissteek groep"
 
 #: lib/extensions/cut_satin.py:21
 msgid "Please select one or more satin columns to cut."
@@ -3029,7 +3029,7 @@ msgstr "Selecteer een opvul object en sporten."
 
 #: lib/extensions/fill_to_satin.py:147 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
-msgstr ""
+msgstr "https://inkstitch.org/docs/satin-tools/#vulling-naar-satijn"
 
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:39
 msgid "Please select one or more fill objects to render the centerline."
@@ -3401,7 +3401,7 @@ msgstr "Selecteer ten minste twee elementen om te hergroeperen."
 #: lib/gui/satin_multicolor/help_panel.py:33
 #: lib/gui/satin_multicolor/help_panel.py:34
 msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
-msgstr ""
+msgstr "https://inkstitch.org/docs/satin-tools/#meerkleurige-satijn"
 
 #: lib/extensions/satin_multicolor.py:45
 msgid "Ink/Stitch Multicolor Satin"
@@ -3494,7 +3494,7 @@ msgstr "Om een ​​Schots ruit patroon te maken, selecteert u minimaal één e
 
 #: lib/extensions/tartan.py:67
 msgid "https://inkstitch.org/docs/fill-tools/#tartan"
-msgstr ""
+msgstr "https://inkstitch.org/docs/fill-tools/#schotse ruit"
 
 #: lib/extensions/tartan.py:77
 msgid "Ink/Stitch Tartan"
@@ -3746,7 +3746,7 @@ msgstr "Steeklengte:"
 
 #: lib/gui/cross_stitch_helper.py:116
 msgid "Params, pixelate and bitmap settings"
-msgstr ""
+msgstr "Instellingen, pixelatie en bitmap instellingen"
 
 #: lib/gui/cross_stitch_helper.py:126
 msgid "Fill coverage (%)"
@@ -3762,11 +3762,11 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:147
 msgid "Apply grid settings to"
-msgstr ""
+msgstr "Pas raster instellingen toe op"
 
 #: lib/gui/cross_stitch_helper.py:155
 msgid "Params (selected elements)"
-msgstr ""
+msgstr "Instellingen (geselecteerde elementen)"
 
 #: lib/gui/cross_stitch_helper.py:159
 msgid "Pixelate (selected elements)"
@@ -3782,15 +3782,15 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:170
 msgid "Add nodes"
-msgstr ""
+msgstr "Punten toevoegen"
 
 #: lib/gui/cross_stitch_helper.py:173
 msgid "Add nodes at the horizontal grid spacing value"
-msgstr ""
+msgstr "Voeg knooppunten toe op de horizontale raster afstand"
 
 #: lib/gui/cross_stitch_helper.py:188
 msgid "Setup page grid"
-msgstr ""
+msgstr "Pagina raster instellen"
 
 #: lib/gui/cross_stitch_helper.py:191
 msgid "Page grid"
@@ -3802,23 +3802,23 @@ msgstr "Raster kleur"
 
 #: lib/gui/cross_stitch_helper.py:199
 msgid "Remove previous"
-msgstr ""
+msgstr "Verwijder vorige"
 
 #: lib/gui/cross_stitch_helper.py:202
 msgid "Remove previous cross stitch page grids"
-msgstr ""
+msgstr "Verwijder de rasterlijnen van de vorige kruissteek pagina"
 
 #: lib/gui/cross_stitch_helper.py:234
 msgid "Bitmap Settings"
-msgstr ""
+msgstr "Bitmap instellingen"
 
 #: lib/gui/cross_stitch_helper.py:240
 msgid "Convert bitmaps to pixelated fill areas"
-msgstr ""
+msgstr "Bitmaps naar gepixelde vulgebieden omzetten"
 
 #: lib/gui/cross_stitch_helper.py:246
 msgid "Convert bitmaps"
-msgstr ""
+msgstr "Bitmap omzetten"
 
 #: lib/gui/cross_stitch_helper.py:251 lib/gui/cross_stitch_helper.py:260
 msgid "Number of colors"
@@ -3830,11 +3830,11 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:253
 msgid "List with RGB values"
-msgstr ""
+msgstr "Lijst met RGB-waarden"
 
 #: lib/gui/cross_stitch_helper.py:254
 msgid "GIMP color palette"
-msgstr ""
+msgstr "GIMP kleurenpalet"
 
 #: lib/gui/cross_stitch_helper.py:256
 msgid "Color selection"
@@ -3908,7 +3908,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:335
 msgid "Background color"
-msgstr ""
+msgstr "Achtergrondkleur"
 
 #: lib/gui/cross_stitch_helper.py:341
 msgid "Remove background"
@@ -3916,11 +3916,11 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Keep background"
-msgstr ""
+msgstr "Achtergrond bewaren"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Remove nearest to background color"
-msgstr ""
+msgstr "Verwijder de kleur die het dichtst bij de achtergrond ligt"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Remove most common color"
