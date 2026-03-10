@@ -33,7 +33,7 @@ Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement util
 
 ### ![stop position](/assets/images/docs/visual-commands-stop-position.jpg) Position d'arrêt
 
-La machine à broder déplace l'aiguille jusqu'à ce point avant chaque commande d'attêt. Cela permet entre autre de déplacer le cadre de broderie vers l'utilisateur pour faciliter les étapes d'un appliqué.
+La machine à broder déplace l'aiguille jusqu'à ce point avant chaque commande d'arrêt. Cela permet entre autre de déplacer le cadre de broderie vers l'utilisateur pour faciliter les étapes d'un appliqué.
 
 
 ## Ajouter des commandes de calque {/#add-layer-commands-}
