@@ -1,7 +1,7 @@
 ---
 title: "Commandes visuelles"
 permalink: /fr/docs/commands/
-last_modified_at: 2025-12-31
+last_modified_at: 2026-03-10
 toc: true
 ---
 Les commandes visuelles peuvent être utilisées pour spécifier des informations complémentaires sur la manière de broder. Elles peuvent par exemple être utilisées pour dire à la machine de couper le fil après avoir brodé un élément ou pour spécifier un arrêt par exemple pour ajouter le tissu d'un appliqué plus facilement.
@@ -15,13 +15,14 @@ Dans `Extensions > Ink/Stitch  > Commandes` vous trouverez quatre options
 * [Attacher des commandes à l'objet sélectionné](#attacher-des-commandes-aux-objets-sélectionnés-)
 * [Affichage](#affichage)
 
-**Need to duplicate objects with commands?** A common way to copy objects in Inkscape is duplicate. Before duplicating objects with commands, ensure that `Relink Duplicated Clones` in `Edit > Preferences > Behavior > Clones` is enabled.
+
+**Besoin de dupliquer des objets munis de commandes?** Il est courant de dupliquer des objets dans inkscape. Avant de dupliquer des objets munis de commandes visuelles, vérifier que `Relier les clones dubliqués`  est activé dans les préférences d'inkscape ` Preferences > Comportement > Clones`.
 {: .notice--info }
 
 Pour déplacer une commande, déplacer le marqueur seulement, le connecteur suivra.
 {: .notice--info }
 
-## Ajouter des Commandes ...{#add-commands-}
+## Ajouter des Commandes {#add-commands-}
 
 Ces commandes affectent l’ensemble du motif de broderie.
 
@@ -35,7 +36,7 @@ Spécifie l'origine (point (0,0)) du fichier de broderie. Particulièrement util
 La machine à broder déplace l'aiguille jusqu'à ce point avant chaque commande d'attêt. Cela permet entre autre de déplacer le cadre de broderie vers l'utilisateur pour faciliter les étapes d'un appliqué.
 
 
-## Ajouter des commandes de calque ...{/#add-layer-commands-}
+## Ajouter des commandes de calque {/#add-layer-commands-}
 
 Ces commandes seront ajoutées au calque sélectionné.
 
@@ -44,7 +45,7 @@ Ces commandes seront ajoutées au calque sélectionné.
 Aucun objet de ce calque ne sera exporté dans les fichiers de broderie. Cette commande est couramment utilisée dans les fichiers des tutoriels lorsqu'on ne veut pas que Ink/Stitch brode les textes explicatifs.
 
 
-## Attacher des commandes aux objets sélectionnés ...{#attach-commands-to-selected-objects-}
+## Attacher des commandes aux objets sélectionnés {#attach-commands-to-selected-objects-}
 
 Ces commandes seront attachées aux objets actuellement sélectionnés.
 
