@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-03 16:46+0000\n"
-"PO-Revision-Date: 2026-03-10 02:12\n"
+"PO-Revision-Date: 2026-03-11 02:11\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -485,7 +485,7 @@ msgstr "MAM Script is een satijnen script lettertype. Elk satijnen element heeft
 #. description of font in fonts/manga_impact
 #: inkstitch-fonts-metadata.py:182
 msgid "Manga Impact is a manga like satin font."
-msgstr ""
+msgstr "Manga Impact is een satijnachtig lettertype dat lijkt op manga."
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:184
@@ -580,12 +580,12 @@ msgstr "Pixel 10 is een satijn pixel lettertype."
 #. description of font in fonts/precious
 #: inkstitch-fonts-metadata.py:220
 msgid "Precious is a decorative satin column round cursive font."
-msgstr ""
+msgstr "Precious is een decoratief satijnen, rond cursief lettertype."
 
 #. description of font in fonts/priscilla
 #: inkstitch-fonts-metadata.py:222
 msgid "Large bicolor cross stitch font"
-msgstr ""
+msgstr "Groot tweekleurig lettertype voor kruissteek"
 
 #. description of font in fonts/roaring_twenties_KOR
 #: inkstitch-fonts-metadata.py:224
@@ -630,7 +630,7 @@ msgstr "3 kleurig satijn kolom lettertype"
 #. description of font in fonts/tieralphabet
 #: inkstitch-fonts-metadata.py:240
 msgid "cross stitch font, each letter includes an animal with german name starting with the letter"
-msgstr ""
+msgstr "kruissteek lettertype, elke letter bevat een dier met een Duitse naam die met die letter begint"
 
 #. description of font in fonts/tt_directors
 #: inkstitch-fonts-metadata.py:242
@@ -3754,11 +3754,11 @@ msgstr "Vul dekking (%)"
 
 #: lib/gui/cross_stitch_helper.py:129
 msgid "Align with canvas"
-msgstr ""
+msgstr "Uitlijnen met canvas"
 
 #: lib/gui/cross_stitch_helper.py:132
 msgid "Grid offset (mm) x[ y]"
-msgstr ""
+msgstr "Raster verschuiving (mm) x[ y]"
 
 #: lib/gui/cross_stitch_helper.py:147
 msgid "Apply grid settings to"
@@ -3770,15 +3770,15 @@ msgstr "Instellingen (geselecteerde elementen)"
 
 #: lib/gui/cross_stitch_helper.py:159
 msgid "Pixelate (selected elements)"
-msgstr ""
+msgstr "Pixelate (geselecteerde elementen)"
 
 #: lib/gui/cross_stitch_helper.py:163
 msgid "Avoid overlapping shapes"
-msgstr ""
+msgstr "Vermijd overlappende vormen"
 
 #: lib/gui/cross_stitch_helper.py:166
 msgid "Inserts a new set of shapes and removes selected elements"
-msgstr ""
+msgstr "Voegt een nieuwe set vormen in en verwijdert geselecteerde elementen"
 
 #: lib/gui/cross_stitch_helper.py:170
 msgid "Add nodes"
@@ -3822,11 +3822,11 @@ msgstr "Bitmap omzetten"
 
 #: lib/gui/cross_stitch_helper.py:251 lib/gui/cross_stitch_helper.py:260
 msgid "Number of colors"
-msgstr ""
+msgstr "Aantal kleuren"
 
 #: lib/gui/cross_stitch_helper.py:252
 msgid "Selected stroke colors"
-msgstr ""
+msgstr "Geselecteerde lijnkleuren"
 
 #: lib/gui/cross_stitch_helper.py:253
 msgid "List with RGB values"
@@ -3838,37 +3838,39 @@ msgstr "GIMP kleurenpalet"
 
 #: lib/gui/cross_stitch_helper.py:256
 msgid "Color selection"
-msgstr ""
+msgstr "Kleur selectie"
 
 #: lib/gui/cross_stitch_helper.py:262
 msgid "Reduces colors to given value.\n"
 "This may not match the final number of colors. It is possible, that colors get removed when the image gets pixelated."
-msgstr ""
+msgstr "Vermindert het aantal kleuren tot een bepaalde waarde.\n"
+"Dit komt mogelijk niet overeen met het uiteindelijke aantal kleuren. Het is mogelijk dat kleuren worden verwijderd wanneer de afbeelding gepixeliseerd raakt."
 
 #: lib/gui/cross_stitch_helper.py:269
 msgid "RGB value list"
-msgstr ""
+msgstr "RGB waarden lijst"
 
 #: lib/gui/cross_stitch_helper.py:271
 msgid "A comma separated list with rgb values: r g b, r, g, b\n"
 "r,g and b can take a value from 0 - 255"
-msgstr ""
+msgstr "Een door komma's gescheiden lijst met Rgb waarden: r g b, r, g, b\n"
+"r, g en b kunnen een waarde aannemen van 0 tot 255"
 
 #: lib/gui/cross_stitch_helper.py:277
 msgid "Gimp palette file"
-msgstr ""
+msgstr "Gimp palet bestand"
 
 #: lib/gui/cross_stitch_helper.py:278
 msgid "Select a Gimp palette file"
-msgstr ""
+msgstr "Selecteer een Gimp palet bestand"
 
 #: lib/gui/cross_stitch_helper.py:279
 msgid "Restricted to the first 256 colors. Please use a color reduced palette."
-msgstr ""
+msgstr "Beperkt tot de eerste 256 kleuren. Gebruik een kleuren palet met minder kleuren."
 
 #: lib/gui/cross_stitch_helper.py:284
 msgid "Color reduction method"
-msgstr ""
+msgstr "Methode voor kleur reductie"
 
 #: lib/gui/cross_stitch_helper.py:285
 msgid "Median cut"
@@ -3884,27 +3886,27 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:289
 msgid "Saturation"
-msgstr ""
+msgstr "Verzadiging"
 
 #: lib/gui/cross_stitch_helper.py:299
 msgid "Brightness"
-msgstr ""
+msgstr "Helderheid"
 
 #: lib/gui/cross_stitch_helper.py:309
 msgid "Contrast"
-msgstr ""
+msgstr "Contrast"
 
 #: lib/gui/cross_stitch_helper.py:319
 msgid "Removes pixels with a lower transparency value than this from the original image."
-msgstr ""
+msgstr "Verwijdert pixels met een lagere transparantie waarde dan deze uit de originele afbeelding."
 
 #: lib/gui/cross_stitch_helper.py:320
 msgid "Transparency threshold (%)"
-msgstr ""
+msgstr "Transparantie drempel (%)"
 
 #: lib/gui/cross_stitch_helper.py:334
 msgid "Background color for transparent images and background removal."
-msgstr ""
+msgstr "Achtergrondkleur voor transparante afbeeldingen en achtergrond verwijdering."
 
 #: lib/gui/cross_stitch_helper.py:335
 msgid "Background color"
@@ -3912,7 +3914,7 @@ msgstr "Achtergrondkleur"
 
 #: lib/gui/cross_stitch_helper.py:341
 msgid "Remove background"
-msgstr ""
+msgstr "Achtergrond verwijderen"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Keep background"
@@ -3924,19 +3926,19 @@ msgstr "Verwijder de kleur die het dichtst bij de achtergrond ligt"
 
 #: lib/gui/cross_stitch_helper.py:344
 msgid "Remove most common color"
-msgstr ""
+msgstr "Verwijder de meest voorkomende kleur"
 
 #: lib/gui/cross_stitch_helper.py:346
 msgid "Removes the background color."
-msgstr ""
+msgstr "Verwijdert de achtergrond kleur."
 
 #: lib/gui/cross_stitch_helper.py:384
 msgid "Preview image (not pixelated)"
-msgstr ""
+msgstr "Voorbeeld afbeelding (niet gepixeld)"
 
 #: lib/gui/cross_stitch_helper.py:387
 msgid "No image selected"
-msgstr ""
+msgstr "Geen afbeelding geselecteerd"
 
 #: lib/gui/cross_stitch_helper.py:406
 msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
@@ -3945,7 +3947,12 @@ msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\
 "* Pixelate outlines of selected fill elements.\n"
 "* Generate pixelated fills from bitmaps.\n"
 "* Apply spacing values to page grid."
-msgstr ""
+msgstr "Deze extensie helpt bij het genereren van kruissteek patronen in Ink/Stitch. Het kan:\n\n"
+"* De steeklengte berekenen voor gegeven raster afstanden.\n"
+"* Kruissteek instellingen toepassen op geselecteerde vul elementen.\n\n"
+"* De omtrekken van geselecteerde vul elementen pixeliseren.\n\n"
+"* Gepixelde vullingen genereren vanuit bitmaps.\n\n"
+"* Afstanden toepassen op het paginaraster."
 
 #: lib/gui/cross_stitch_helper.py:425 lib/gui/cross_stitch_helper.py:426
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
@@ -7318,11 +7325,11 @@ msgstr "Zet een sprong steek tussen geselecteerde elementen om naar een loop ste
 
 #: inx/inkstitch_jump_to_stroke.inx:19
 msgid "Convert jumps longer than (mm)"
-msgstr ""
+msgstr "Zet sprongen langer dan (mm) om"
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "Convert jumps shorter than (mm)"
-msgstr ""
+msgstr "Zet sprongen korter dan (mm) om"
 
 #: inx/inkstitch_jump_to_stroke.inx:22
 msgid "Connect"
@@ -7964,11 +7971,11 @@ msgstr "Koppel Commando's aan Geselecteerde Objecten"
 
 #: inx/inkstitch_object_commands.inx:14
 msgid "Command position"
-msgstr ""
+msgstr "Commando positie"
 
 #: inx/inkstitch_object_commands.inx:15
 msgid "Random"
-msgstr ""
+msgstr "Willekeurig"
 
 #: inx/inkstitch_object_commands.inx:16
 msgid "Top left"
