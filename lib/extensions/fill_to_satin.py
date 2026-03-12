@@ -37,8 +37,20 @@ class FillToSatin(InkstitchExtension):
             return
 
         fill_elements, selected_rungs = self._get_shapes()
-        if not fill_elements or not selected_rungs:
+        if not fill_elements and not selected_rungs:
             self.print_error()
+            return
+        if not fill_elements:
+            message = _("No fill element selected. Please select a fill element.")
+            message += "\n\n"
+            message += _("A fill element has a fill color and serves as the outline of the satin column.")
+            self.print_error(message)
+            return
+        if not selected_rungs:
+            message = _("No rungs selected. Please select rungs.")
+            message += "\n\n"
+            message += _("Rungs are elements with a stroke color. They serve as the stitch direction for a satin column.")
+            self.print_error(message)
             return
 
         settings = {
@@ -63,26 +75,30 @@ class FillToSatin(InkstitchExtension):
         nodes = []
         fill_and_stroke_elements = []
         for element in self.elements:
+            # check if the element has already been added to identify and warn about duplicates (fill and stroke color)
             if element.node in nodes:
                 fill_and_stroke_elements.append(element)
+            nodes.append(element.node)
+
             if isinstance(element, FillStitch) and element.shape.area > 0.1:
                 fill_elements.append(element)
             elif isinstance(element, Stroke):
                 selected_rungs.extend(list(element.as_multi_line_string().geoms))
             else:
                 continue
-            nodes.append(element.node)
 
         if fill_and_stroke_elements:
             elements = [f'{element.node.label} ({element.node.get_id()})' for element in fill_and_stroke_elements]
             if len(elements) > 15:
                 elements = elements[:14]
                 elements.append('...')
-            self.print_error(
-                    (_("The selection contains elements with both, a fill and a stroke.\n\n"
-                     "Rungs only have a stroke color and fill elements a fill color.") +
-                     "\n\n- " + '\n- '.join(elements))
-                )
+            self.print_error((
+                _("The selection contains elements with both, a fill and a stroke.\n"
+                  "Rungs only have a stroke color and fill elements a fill color.\n\n"
+                  "The operation will still be performed. In case of unwanted results, "
+                  "check the following elements and remove either the stroke or the fill color:") +
+                "\n\n- " + '\n- '.join(elements)
+            ))
 
         return fill_elements, selected_rungs
 
