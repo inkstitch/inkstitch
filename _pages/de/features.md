@@ -49,7 +49,7 @@ lettering:
               beispielsweise mit [Schrift entlang Pfad](/de/docs/lettering/#schrift-entlang-pfad) oder den Inkscape-[Pfadeffekte](/de/tutorials/distort/) wie Hüllenverformung."
 
 stitches:
-  - image_path: /assets/images/galleries/fonts/abril/WAbril.jpg
+  - image_path: /assets/images/galleries/fonts/mai_en_fleur/WAbril.jpg
     alt: "Gestickter Buchstabe mit verschiedenen Sticharten"
     title: "Manuelles Setzen von Stichpositionen und komplexe Stichmuster"
     excerpt: "Die in Ink/Stitch verfügbaren [Sticharten](/docs/stitch-library/) eröffnen eine Welt voller kreativer Möglichkeiten.

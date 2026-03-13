@@ -53,7 +53,7 @@ lettering:
                 Créez des résultats intéressants avec les outils d'Inkscape disponibles, par exemple [Lettrage le long du chemin](/docs/lettering/#lettering-along-path) ou la déformation d'enveloppe [effets de chemin](/tutorials/distort/).
             "
 stitches:
-  - image_path: /assets/images/galleries/fonts/abril/WAbril.jpg
+  - image_path: /assets/images/galleries/fonts/mai_en_fleur/WAbril.jpg
     alt: "Lettre brodée avec divers type de points"
     title: "Point manuel et motifs de points complexes"
     excerpt: "Explorez les [types de points](/fr/docs/stitch-library/) disponibles dans Ink/Stitch et ouvrez vous un monde de possibilités créatives.

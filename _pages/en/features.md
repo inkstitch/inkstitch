@@ -51,7 +51,7 @@ lettering:
              Create interesting results with the available tools, for example [Lettering along path](/docs/lettering/#lettering-along-path) or Inkscape [path effects](/tutorials/distort/) such as envelope deformation.
             "
 stitches:
-  - image_path: /assets/images/galleries/fonts/abril/WAbril.jpg
+  - image_path: /assets/images/galleries/fonts/mai_en_fleur/WAbril.jpg
     alt: "embroidered letter with various stitch types"
     title: "Manual Stitch Placement and Complex Stitch Patterns"
     excerpt: "Explore the [stitch types](/docs/stitch-library/) available in Ink/Stitch and open up a world of creative possibilities.
