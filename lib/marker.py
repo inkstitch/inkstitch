@@ -63,6 +63,7 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
     fills = []
     strokes = []
     satins = []
+    stroke_data = []
     # do not close marker-start:url(
     # if the marker group has been copied and pasted in Inkscape it may have been duplicated with an updated id (e.g. -4)
     xpath = "./parent::svg:g/*[contains(@style, 'marker-start:url(#inkstitch-%s-marker')]" % marker
@@ -84,12 +85,16 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
             stroke = Stroke(marker).unclipped_paths
             line_strings = [shgeo.LineString(path) for path in stroke]
             strokes.append(shgeo.MultiLineString(line_strings))
+            stroke_data.append({
+                'pattern_interval': element.get_multiple_int_param('pattern_interval', "1"),
+                'pattern_offset': element.get_int_param('pattern_offset', 0)
+            })
 
         if get_satins and stroke is not None and is_satin:
             satin = SatinColumn(marker)
             satins.append(satin)
 
-    return {'fill': fills, 'stroke': strokes, 'satin': satins}
+    return {'fill': fills, 'stroke': strokes, 'satin': satins, 'stroke_data': stroke_data}
 
 
 def get_marker_elements_cache_key_data(node, marker):

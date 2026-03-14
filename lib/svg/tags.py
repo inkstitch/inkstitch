@@ -193,7 +193,10 @@ inkstitch_attribs = [
     'grid_size',
     # sew stack
     'sew_stack_only',
-    'sew_stack'
+    'sew_stack',
+    # pattern
+    'pattern_interval',
+    'pattern_offset'
 ]
 for attrib in inkstitch_attribs:
     INKSTITCH_ATTRIBS[attrib] = inkex.addNS(attrib, 'inkstitch')
