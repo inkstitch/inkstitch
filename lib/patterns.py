@@ -22,12 +22,17 @@ def get_patterns_cache_key_data(node):
 def apply_patterns(stitch_groups, node):
     patterns = get_marker_elements(node, "pattern")
     _apply_fill_patterns(patterns['fill'], stitch_groups)
-    _apply_stroke_patterns(patterns['stroke'], stitch_groups)
+    _apply_stroke_patterns(patterns['stroke'], patterns['stroke_data'], stitch_groups)
 
 
-def _apply_stroke_patterns(patterns, stitch_groups):
-    for pattern in patterns:
+def _apply_stroke_patterns(patterns, stroke_data, stitch_groups):
+    for pattern, data in zip(patterns, stroke_data):
+        interval = data['pattern_interval']
+        offset = data['pattern_offset']
         for stitch_group in stitch_groups:
+            intersection_count = 0  # counts total of stitch group intersections
+            current_index = 0  # index of the current interval
+            interval_count = interval[current_index]  # counts iterations within the current interval, starts at the first interval
             stitch_group_points = []
             for i, stitch in enumerate(stitch_group.stitches):
                 stitch_group_points.append(stitch)
@@ -35,7 +40,18 @@ def _apply_stroke_patterns(patterns, stitch_groups):
                     continue
                 intersection_points = _get_pattern_points(stitch, stitch_group.stitches[i + 1], pattern)
                 for point in intersection_points:
-                    stitch_group_points.append(Stitch(point, tags=('pattern_point',)))
+                    intersection_count += 1
+                    if intersection_count <= offset:
+                        continue
+                    if interval_count == interval[current_index]:
+                        stitch_group_points.append(Stitch(point, tags=('pattern_point',)))
+                        # set counters
+                        interval_count = 1
+                        current_index += 1
+                        if current_index >= len(interval):
+                            current_index = 0
+                    else:
+                        interval_count += 1
             stitch_group.stitches = stitch_group_points
 
 
@@ -67,12 +83,13 @@ def _apply_fill_patterns(patterns, stitch_groups):
 
 def _get_pattern_points(first, second, pattern):
     points = []
-    intersection = shgeo.LineString([first, second]).intersection(pattern)
+    stitch = shgeo.LineString([first, second])
+    intersection = stitch.intersection(pattern)
     if isinstance(intersection, shgeo.Point):
         points.append(Point(intersection.x, intersection.y))
     if isinstance(intersection, shgeo.MultiPoint):
         for point in intersection.geoms:
             points.append(Point(point.x, point.y))
-    # sort points after their distance to first
+    # sort points in order to their distance along the stitch
     points.sort(key=lambda point: point.distance(first))
     return points
