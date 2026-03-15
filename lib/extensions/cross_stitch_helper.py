@@ -258,6 +258,7 @@ class CrossStitchHelper(InkstitchExtension):
             self.settings['coverage'],
             'simple_cross',
             self._get_grid_offset(),
+            4,
             self.settings['align_with_canvas']
         )
 
@@ -338,6 +339,7 @@ class CrossStitchHelper(InkstitchExtension):
             self.settings['coverage'],
             'simple_cross',
             grid_offset,
+            4,
             self.settings['align_with_canvas']
         )
 

@@ -34,6 +34,8 @@ class CrossGeometries(object):
         """
         self.pattern_size = pattern_size
         self.coverage = coverage
+        self.cross_offset = cross_offset
+        self.canvas_grid_origin = canvas_grid_origin
         self.cross_stitch_method = cross_stitch_method
         self.thread_count = thread_count
         self._shape = shape
@@ -64,7 +66,7 @@ class CrossGeometries(object):
             self.cross_class = Cross
 
     def _setup_geometry(self):
-        self._box_x, self._box_y = self.fill.pattern_size
+        self._box_x, self._box_y = self.pattern_size
         self._get_offset_values(self._shape, self._original_shape)
         self._square = Polygon([(0, 0), (self._box_x, 0), (self._box_x, self._box_y), (0, self._box_y)])
         self.full_square_area = self._square.area
@@ -96,7 +98,7 @@ class CrossGeometries(object):
                     self._grid[(grid_x, grid_y)] = self.add_cross(box, self._upright_box)
                 elif self._shape.intersects(box):
                     intersection = box.intersection(self._shape)
-                    if intersection.area / self.full_square_area * 100 + 0.0001 >= self.fill.fill_coverage:
+                    if intersection.area / self.full_square_area * 100 + 0.0001 >= self.coverage:
                         self._grid[(grid_x, grid_y)] = self.add_cross(box, self._upright_box)
                 x += self._box_x
                 grid_x += 1
@@ -115,9 +117,9 @@ class CrossGeometries(object):
                 self.crosses_by_bad_point[point].append(cross)
 
     def _get_offset_values(self, shape, original_shape):
-        self._offset_x, self._offset_y = self.fill.cross_offset
-        if not self.fill.canvas_grid_origin:
-            box_x, box_y = self.fill.pattern_size
+        self._offset_x, self._offset_y = self.cross_offset
+        if not self.canvas_grid_origin:
+            box_x, box_y = self.pattern_size
             bounds = shape.bounds
             if original_shape:
                 bounds = original_shape.bounds
