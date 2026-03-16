@@ -154,13 +154,17 @@ def _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms)
 
         if i == 0 and starting_point:
             starting_corner = get_corner(starting_point, subcrosses)
-        elif i == len(subgraphs) and ending_point:
+        elif i == len(subgraphs)-1 and ending_point:
             starting_corner = get_corner(ending_point, subcrosses)
         else:
-            # any corner will do
-            # TODO: no longer true -- we need one on the shape's outline
-            cross = next(iter(subcrosses))
-            starting_corner = cross.good_points[0]
+            # chose a good corner belonging to only one cross to avoid starting inside the shape
+            for cross in subcrosses:
+                starting_corner = cross.good_points[0]
+                if len(cross_geoms.crosses_by_good_point[starting_corner]) + len(cross_geoms.crosses_by_bad_point[starting_corner]) == 1:
+                    break
+                starting_corner = cross.good_points[1]
+                if len(cross_geoms.crosses_by_good_point[starting_corner]) + len(cross_geoms.crosses_by_bad_point[starting_corner]) == 1:
+                    break
 
         cycle = travel + _build_simple_cycles(subcrosses, cross_geoms, starting_corner)
         travel = []
@@ -211,7 +215,7 @@ def _build_simple_cycles(subcrosses, cross_geoms, starting_point):
                     break
             path = new_path
 
-    return list(path)
+    return [starting_point] + list(path)
 
 
 def organize(subgraphs, cross_geoms, starting_point, ending_point):
