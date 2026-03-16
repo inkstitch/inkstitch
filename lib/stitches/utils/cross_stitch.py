@@ -47,9 +47,8 @@ class CrossGeometries(object):
         self.crosses_by_good_point = defaultdict(list)
         self.crosses_by_bad_point = defaultdict(list)
 
-        self.nb_repeats = thread_count // 2
-        if self.nb_repeats % 2 == 1:
-            self.nb_repeats -= 1
+        self.nb_repeats = (thread_count ) // 2
+       
 
         prepare(shape)
         self._choose_cross_class()
