@@ -32,7 +32,8 @@ from .validation import ValidationError, ValidationWarning
 
 class NotStitchableError(ValidationError):
     name = _("Not stitchable satin column")
-    description = _("A satin column consists out of two rails and one or more rungs. This satin column may have a different setup.")
+    description = _("A satin column can be build from a single stroke or consists of two rails and one or more rungs. "
+                    "This satin column has a different setup.")
     steps_to_solve = [
         _('Make sure your satin column is not a combination of multiple satin columns.'),
         _('Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/'),
@@ -66,7 +67,7 @@ class NoRungWarning(ValidationWarning):
 
 
 class TooManyIntersectionsWarning(ValidationWarning):
-    name = _("Rungs intersects too many times")
+    name = _("Rung intersects too many times")
     description = _("Satin column: A rung intersects a rail more than once.") + " " + rung_message
 
 
