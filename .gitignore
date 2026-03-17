@@ -33,3 +33,11 @@ logs/
 /DEBUG
 /PROFILE
 /profile*
+
+# Python environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
