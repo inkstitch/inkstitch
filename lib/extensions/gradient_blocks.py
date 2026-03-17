@@ -50,6 +50,7 @@ class GradientBlocks(InkstitchExtension):
             style = element.node.style
             index = parent.index(element.node)
             fill_shapes, attributes = gradient_shapes_and_attributes(element, element.shape, self.svg.viewport_to_unit(1))
+
             # reverse order so we can always insert with the same index number
             fill_shapes.reverse()
             attributes.reverse()
@@ -62,7 +63,6 @@ class GradientBlocks(InkstitchExtension):
 
             color_block_group = Group()
             color_block_group.label = _("Color Gradient Blocks")
-            parent.insert(index, color_block_group)
 
             for i, shape in enumerate(fill_shapes):
                 if shape.area < 15:
@@ -98,6 +98,14 @@ class GradientBlocks(InkstitchExtension):
                     block.set('inkstitch:fill_underlay_row_spacing_mm', end_row_spacing)
 
                 color_block_group.append(block)
+
+            self._insert_block(parent, index, color_block_group, element)
+
+    def _insert_block(self, parent, index, color_block_group, element):
+        # when the color blocks group contains elements:
+        # add it to the svg and delete the original node
+        if len(color_block_group) > 0:
+            parent.insert(index, color_block_group)
             element.node.delete()
 
     def _element_to_path(self, shape):
@@ -128,7 +136,9 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     # create bbox polygon to calculate the length necessary to make sure that
     # the gradient splitter lines will cut the entire design
     # bounding_box returns the value in viewport units, we need to convert the length later to px
-    bbox = element.node.bounding_box()
+    # use the unclipped shape_box as opposed to bounding_box, see issue https://github.com/inkstitch/inkstitch/issues/4194
+    bbox = element.node.shape_box()
+
     bbox_polygon = shgeo.Polygon([(bbox.left, bbox.top), (bbox.right, bbox.top),
                                   (bbox.right, bbox.bottom), (bbox.left, bbox.bottom)])
     # gradient stops
