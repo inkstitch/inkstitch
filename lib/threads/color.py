@@ -29,7 +29,7 @@ class ThreadColor(object):
         if color is None:
             self.rgb = (0, 0, 0)
         elif isinstance(color, Color):
-            self.rgb = color.to('rgb')
+            self.rgb = tuple(Color(color).to('rgb'))
         elif isinstance(color, EmbThread):
             self.name = color.description
             self.number = color.catalog_number
