@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-18 02:30+0000\n"
-"PO-Revision-Date: 2026-03-18 02:31\n"
+"PO-Revision-Date: 2026-03-19 02:34\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2099,7 +2099,7 @@ msgstr "Maintenir la touche majuscule enfoncée tout en dessinant une traverse."
 
 #: lib/elements/satin_column.py:70
 msgid "Rung intersects too many times"
-msgstr ""
+msgstr "La traverse de direction coupe les rails trop de fois"
 
 #: lib/elements/satin_column.py:71
 msgid "Satin column: A rung intersects a rail more than once."
@@ -3815,7 +3815,7 @@ msgstr "Paramètres de l'image matricielle"
 
 #: lib/gui/cross_stitch_helper.py:240
 msgid "Convert bitmaps to pixelated fill areas"
-msgstr ""
+msgstr "Convertit des images matricielles en remplissages pixelisés"
 
 #: lib/gui/cross_stitch_helper.py:246
 msgid "Convert bitmaps"
@@ -7330,7 +7330,7 @@ msgstr "Convertir seulement les sauts de longueur supérieure à (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:19
 msgid "A value of 0 defaults to the actual minimum jump stitch length."
-msgstr ""
+msgstr "En cas de valeur nulle, la longueur minimum de saut est utilisée."
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "Convert jumps shorter than (mm)"
@@ -7338,7 +7338,7 @@ msgstr "Convertir seulement les sauts de longueur inférieure à (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "A value of 0 means no size limit."
-msgstr ""
+msgstr "Une valeur nulle signifie qu'il n'y a en fait pas de limite."
 
 #: inx/inkstitch_jump_to_stroke.inx:22
 msgid "Connect"
