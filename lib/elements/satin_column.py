@@ -32,7 +32,7 @@ from .validation import ValidationError, ValidationWarning
 
 class NotStitchableError(ValidationError):
     name = _("Not stitchable satin column")
-    description = _("A satin column can be build from a single stroke or consists of two rails and one or more rungs. "
+    description = _("A satin column can be build from a single stroke or consists of two rails and optional rungs. "
                     "This satin column has a different setup.")
     steps_to_solve = [
         _('Make sure your satin column is not a combination of multiple satin columns.'),
