@@ -22,17 +22,17 @@ class AbortMessageFrame(wx.Frame):
 
         main_sizer = wx.BoxSizer(wx.VERTICAL)
 
-        help_text = wx.StaticText(
+        help_text = wx.TextCtrl(
             main_panel,
             wx.ID_ANY,
             message,
-            style=wx.ALIGN_LEFT
+            style=wx.TE_MULTILINE | wx.TE_READONLY,
+            size=wx.Size(600, 300)
         )
-        help_text.Wrap(500)
-        main_sizer.Add(help_text, 0, wx.ALL, 10)
+        main_sizer.Add(help_text, 1, wx.ALL | wx.EXPAND, 10)
 
         if url is not None:
-            main_sizer.Add((10, 10), 0, 0, 0)
+            main_sizer.AddSpacer(5)
             main_sizer.Add(wx.StaticLine(main_panel), 0, wx.LEFT | wx.RIGHT | wx.EXPAND, 10)
 
             website_info = wx.StaticText(main_panel, wx.ID_ANY, _("More information on our website:"))
@@ -44,13 +44,12 @@ class AbortMessageFrame(wx.Frame):
                 url,
                 url
             )
-            main_sizer.Add(website_link, 0, wx.ALL, 10)
-        main_sizer.Add((20, 20), 0, 0, 0)
+            main_sizer.Add(website_link, 0, wx.ALL | wx.ALIGN_LEFT, 10)
+        main_sizer.AddSpacer(5)
 
-        main_panel.SetSizer(main_sizer)
-        self.SetSizeHints(main_sizer.CalcMin())
-
-        self.Layout()
+        main_panel.SetSizerAndFit(main_sizer)
+        main_panel.Layout()
+        self.Fit()
 
 
 class AbortMessageApp(wx.App):
