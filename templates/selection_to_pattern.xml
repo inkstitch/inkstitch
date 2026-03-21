@@ -3,7 +3,7 @@
     <name>Selection to pattern</name>
     <id>org.{{ id_inkstitch }}.selection_to_pattern</id>
     <param name="extension" type="string" gui-hidden="true">selection_to_pattern</param>
-    <effect>
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/pattern.svg</icon>
         <menu-tip>Marks selected elements as patterns</menu-tip>
@@ -13,29 +13,6 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="notebook" type="notebook">
-      <page name="options" gui-text="Options">
-          <label>Stroke pattern options:</label>
-          <param name="interval" type="string" gui-text="Set interval">1</param>
-          <param name="start_offset" type="int" min="0" max="100" gui-text="Start offset">0</param>
-          <spacer />
-          <separator />
-          <spacer />
-          <param name="remove_pattern_marker" type="bool" gui-text="Remove pattern marker">false</param>
-      </page>
-      <page name="help" gui-text="Help">
-          <label appearance="header">Selection to Pattern</label>
-          <label>Add or remove nodes from embroidery elements.</label>
-          <label>Targeted embroidery elements have to be in the same group with this pattern.</label>
-          <spacer />
-          <label indent="1">- Stroke patterns add nodes</label>
-          <label indent="2">A predefined interval allows stroke patterns to skip intersection points.</label>
-          <label indent="1">- Fill patterns remove nodes</label>
-          <separator />
-          <label>More info on our website:</label>
-          <label appearance="url">https://inkstitch.org/docs/stitches/patterns/</label>
-      </page>
-    </param>
     <script>
         {{ command_tag | safe }}
     </script>
