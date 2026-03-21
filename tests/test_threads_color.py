@@ -1,4 +1,4 @@
-from inkex import LinearGradient, Rectangle, Stop, SvgDocumentElement
+from inkex import Color, LinearGradient, Rectangle, Stop, SvgDocumentElement
 from inkex.tester.svg import svg
 
 from lib.elements import EmbroideryElement
@@ -14,6 +14,12 @@ def test_init_color_from_string_rgb():
 def test_init_color_from_string_hex():
     color = ThreadColor("#AABBCC")
     assert color.rgb == (170, 187, 204)
+
+
+def test_init_color_from_color_object():
+    inkex_color = Color("#AA8800")
+    color = ThreadColor(inkex_color)
+    assert color.rgb == (170, 136, 0)
 
 
 def test_init_color_from_string_hex_icc():

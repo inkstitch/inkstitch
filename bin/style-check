@@ -14,5 +14,5 @@
 exec flake8 --count --max-complexity=10 --max-line-length=150 --statistics \
     --select C90,F,E,W \
     --ignore E121,E123,E126,E201,E202,E226,E24,E704,W503,W504 \
-    --extend-exclude=__init__.py,build,dist,./*-metadata.py,./pystitch-format-descriptions.py \
+    --extend-exclude=__init__.py,build,dist,./*-metadata.py,./pystitch-format-descriptions.py,.venv \
     "${@:-.}"

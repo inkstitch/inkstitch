@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+from typing import Optional, Tuple, Union, List
 
 import colorsys
 
@@ -11,8 +12,23 @@ from pystitch.EmbThread import EmbThread
 
 
 class ThreadColor(object):
-    def __init__(self, color, name=None, number=None, manufacturer=None, description=None, chart=None):  # noqa: C901
-        self.rgb = None
+    rgb: Tuple[int, int, int]
+    name: Optional[str]
+    number: Optional[str]
+    manufacturer: Optional[str]
+    description: Optional[str]
+    chart: Optional[str]
+
+    def __init__(  # noqa: C901
+        self,
+        color: Optional[Union[str, Color, EmbThread, Tuple[int, int, int], List[int]]],
+        name: Optional[str] = None,
+        number: Optional[str] = None,
+        manufacturer: Optional[str] = None,
+        description: Optional[str] = None,
+        chart: Optional[str] = None
+    ):
+        rgb: Optional[Tuple[int, int, int]] = None
 
         if isinstance(color, str) and color.lower().startswith(('url', 'currentcolor', 'context')):
             '''
@@ -27,9 +43,9 @@ class ThreadColor(object):
                 color = color[:3]
 
         if color is None:
-            self.rgb = (0, 0, 0)
+            rgb = (0, 0, 0)
         elif isinstance(color, Color):
-            self.rgb = color.to('rgb')
+            rgb = tuple(Color(color).to('rgb'))
         elif isinstance(color, EmbThread):
             self.name = color.description
             self.number = color.catalog_number
@@ -40,19 +56,22 @@ class ThreadColor(object):
             return
         elif isinstance(color, str):
             try:
-                self.rgb = tuple(Color(color).to('rgb'))
+                rgb = tuple(Color(color).to('rgb'))
             except ColorError:
-                self.rgb = None
-        elif isinstance(color, (list, tuple)):
-            self.rgb = tuple(color)
+                rgb = None
+        elif isinstance(color, tuple):
+            rgb = color
+        elif isinstance(color, list) and len(color) == 3:
+            rgb = tuple(color)
 
-        if self.rgb is None:
+        if rgb is None:
             '''
             Instead of erroring out, we want to set everything to black at this point.
             This includes for example patterns and gradients
             '''
-            self.rgb = (0, 0, 0)
+            rgb = (0, 0, 0)
 
+        self.rgb = rgb
         self.name = name
         self.number = number
         self.manufacturer = manufacturer
