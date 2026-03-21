@@ -78,10 +78,12 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count):
         # We handle that by rotating the shape and running the algorithm as
         # usual, then rotating the resulting stitches.  That way we don't have
         # to consider flipping in our stitch generation.
+
         if starting_point:
-            starting_point = _rotate_coords(*starting_point)
+            starting_point = _rotate_coords(Point(starting_point).x, Point(starting_point).y)
+
         if ending_point:
-            ending_point = _rotate_coords(*ending_point)
+            ending_point = _rotate_coords(Point(ending_point).x, Point(ending_point).y)
         shape = rotate(shape, 90, origin=(0, 0))
 
     cross_geoms = CrossGeometries(shape, fill.pattern_size, fill.fill_coverage, method, fill.cross_offset, fill.canvas_grid_origin, thread_count)
