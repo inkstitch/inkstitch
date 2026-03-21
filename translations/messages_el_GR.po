@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-18 02:30+0000\n"
-"PO-Revision-Date: 2026-03-18 02:31\n"
+"PO-Revision-Date: 2026-03-21 02:11\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -3032,7 +3032,7 @@ msgstr ""
 
 #: lib/extensions/generate_palette.py:31
 msgid "Please specify a name for your color palette."
-msgstr ""
+msgstr "Παρακαλώ καθορίστε ένα όνομα για την παλέτα χρωμάτων σας."
 
 #: lib/extensions/generate_palette.py:36
 msgid "Unkown directory path."
@@ -3097,7 +3097,7 @@ msgstr ""
 
 #: lib/extensions/layer_commands.py:20
 msgid "Please choose one or more commands to add."
-msgstr ""
+msgstr "Παρακαλώ επιλέξτε μία ή περισσότερες εντολές για προσθήκη."
 
 #: lib/extensions/lettering.py:46
 msgid "Please select only one block of text."

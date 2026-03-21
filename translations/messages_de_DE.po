@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-18 02:30+0000\n"
-"PO-Revision-Date: 2026-03-18 02:31\n"
+"PO-Revision-Date: 2026-03-21 02:11\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2043,7 +2043,7 @@ msgstr "Nicht stickbare Satinsäule"
 
 #: lib/elements/satin_column.py:35
 msgid "A satin column can be build from a single stroke or consists of two rails and one or more rungs. This satin column has a different setup."
-msgstr ""
+msgstr "Eine Satinsäule kann entweder eine einfache Linie sein oder zwei Außenlinien mit optionalen Stichlagen. Diese Satinsäule ist anders aufgebaut."
 
 #: lib/elements/satin_column.py:38
 msgid "Make sure your satin column is not a combination of multiple satin columns."
@@ -2100,7 +2100,7 @@ msgstr "* Beim Zeichnen der Führungslinie die Umschalttaste gedrückt halten"
 
 #: lib/elements/satin_column.py:70
 msgid "Rung intersects too many times"
-msgstr ""
+msgstr "Stichlage kreuzt Außenlinie zu oft"
 
 #: lib/elements/satin_column.py:71
 msgid "Satin column: A rung intersects a rail more than once."
@@ -7331,7 +7331,7 @@ msgstr "Konvertiere nur Sprungstiche die länger sind als (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:19
 msgid "A value of 0 defaults to the actual minimum jump stitch length."
-msgstr ""
+msgstr "Ein Wert von 0 wählt die tatsächliche minimale Sprungstichlänge."
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "Convert jumps shorter than (mm)"
@@ -7339,7 +7339,7 @@ msgstr "Konvertiere nur Sprungstiche die kürzer sind als (mm)"
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "A value of 0 means no size limit."
-msgstr ""
+msgstr "Ein Wert von 0 bedeutet keine Größeneinschränkung."
 
 #: inx/inkstitch_jump_to_stroke.inx:22
 msgid "Connect"
