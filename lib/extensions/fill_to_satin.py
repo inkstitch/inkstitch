@@ -37,6 +37,7 @@ class FillToSatin(InkstitchExtension):
             return
 
         fill_elements, selected_rungs = self._get_shapes()
+
         if not fill_elements and not selected_rungs:
             self.print_error()
             return
@@ -53,6 +54,8 @@ class FillToSatin(InkstitchExtension):
             self.print_error(message)
             return
 
+        self._validate_fill_rung_intersections(fill_elements, selected_rungs)
+
         settings = {
             'skip_end_section': self.options.skip_end_section
         }
@@ -67,6 +70,17 @@ class FillToSatin(InkstitchExtension):
                 self._insert_satins(fill_element, satins)
 
         self._remove_originals()
+
+    def _validate_fill_rung_intersections(self, fills, rungs):
+        fills_with_no_rung = []
+        rungs = MultiLineString(rungs)
+        for fill in fills:
+            if not fill.shape.intersects(rungs):
+                fills_with_no_rung.append(f"{fill.node.label} ({fill.node.get_id()})")
+        if fills_with_no_rung:
+            message = _("These fill elements do not intersect with any of the selected rungs and will not be converted:")
+            message += "\n\n- " + '\n- '.join(fills_with_no_rung)
+            self.print_error(message)
 
     def _get_shapes(self):
         '''Filter selected elements. Take rungs and fills.'''
