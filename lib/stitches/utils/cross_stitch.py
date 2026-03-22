@@ -287,24 +287,6 @@ class DoubleCross(Cross):
     # This one sews the upright cross first and then the diagonals.  It
     # results in the uprights being sewn early and the diagonals much later.
     # The ones below sew each full double cross together.
-    # def __cycle_from_point(self, starting_point, nb_repeats):
-
-    #     normal_cycle = super().cycle_from_point(starting_point, nb_repeats)
-
-    #     cycle = (
-    #         [self.center_point] +
-    #         [self.middle_left, self.middle_right] * (nb_repeats + 1) +
-
-    #         [self.center_point] +
-    #         [self.middle_top, self.middle_bottom] * (nb_repeats + 1)
-    #     )
-
-    #     if normal_cycle[0] != self.center_point:
-    #         cycle.append(self.center_point)
-
-    #     cycle.extend(normal_cycle)
-
-    #     return cycle
 
     def cycle_from_top_left(self):
         return (
