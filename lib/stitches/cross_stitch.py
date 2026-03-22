@@ -217,7 +217,8 @@ def _build_simple_cycles(subcrosses, cross_geoms, starting_point):
                     break
             path = new_path
 
-    return [starting_point] + list(path)
+    path.appendleft(starting_point)
+    return list(path)
 
 
 def organize(subgraphs, cross_geoms, starting_point, ending_point):
