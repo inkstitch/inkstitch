@@ -284,8 +284,6 @@ class DoubleCross(Cross):
     # Double Cross has the same corners and diagonals as normal Cross, so no
     # need to override __init__()
 
-
-
     def cycle_from_top_left(self):
         return (
             [self.bottom_right, self.top_left] * (self.nb_repeats - 1) +
