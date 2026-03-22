@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-18 02:30+0000\n"
-"PO-Revision-Date: 2026-03-18 02:31\n"
+"POT-Creation-Date: 2026-03-22 02:31+0000\n"
+"PO-Revision-Date: 2026-03-22 02:32\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-18 02:30+0000\n"
+"POT-Creation-Date: 2026-03-22 02:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2040,7 +2040,7 @@ msgid "Not stitchable satin column"
 msgstr "Niet te stikken satijnen kolom"
 
 #: lib/elements/satin_column.py:35
-msgid "A satin column can be build from a single stroke or consists of two rails and one or more rungs. This satin column has a different setup."
+msgid "A satin column can be build from a single stroke or consists of two rails and optional rungs. This satin column has a different setup."
 msgstr ""
 
 #: lib/elements/satin_column.py:38
@@ -3009,25 +3009,45 @@ msgstr "Stop punten"
 msgid "Filter stitches smaller than (mm)"
 msgstr "Filter steken kleiner dan (mm)"
 
-#: lib/extensions/fill_to_satin.py:82
-msgid "The selection contains elements with both, a fill and a stroke.\n\n"
-"Rungs only have a stroke color and fill elements a fill color."
-msgstr "De selectie bevat elementen met zowel een vulling als een lijn.\n\n"
-"Sporten hebben alleen een lijn kleur en opvulelementen een opvulkleur."
+#: lib/extensions/fill_to_satin.py:45
+msgid "No fill element selected. Please select a fill element."
+msgstr ""
 
-#: lib/extensions/fill_to_satin.py:109
+#: lib/extensions/fill_to_satin.py:47
+msgid "A fill element has a fill color and serves as the outline of the satin column."
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:51
+msgid "No rungs selected. Please select rungs."
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:53
+msgid "Rungs are elements with a stroke color. They serve as the stitch direction for a satin column."
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:81
+msgid "These fill elements do not intersect with any of the selected rungs and will not be converted:"
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:110
+msgid "The selection contains elements with both, a fill and a stroke.\n"
+"Rungs only have a stroke color and fill elements a fill color.\n\n"
+"The operation will still be performed. In case of unwanted results, check the following elements and remove either the stroke or the fill color:"
+msgstr ""
+
+#: lib/extensions/fill_to_satin.py:139
 msgid "Satin Group"
 msgstr "Satijn groep"
 
-#: lib/extensions/fill_to_satin.py:130 inx/inkstitch_select_elements.inx:30
+#: lib/extensions/fill_to_satin.py:160 inx/inkstitch_select_elements.inx:30
 msgid "Satin"
 msgstr "Satijn"
 
-#: lib/extensions/fill_to_satin.py:143
+#: lib/extensions/fill_to_satin.py:173
 msgid "Please select a fill object and rungs."
 msgstr "Selecteer een opvul object en sporten."
 
-#: lib/extensions/fill_to_satin.py:147 inx/inkstitch_fill_to_satin.inx:28
+#: lib/extensions/fill_to_satin.py:177 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
 msgstr "https://inkstitch.org/docs/satin-tools/#vulling-naar-satijn"
 
