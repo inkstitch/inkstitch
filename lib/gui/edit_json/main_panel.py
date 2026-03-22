@@ -441,7 +441,7 @@ class LetteringEditJsonPanel(wx.Panel):
             self.cancel()
             return
 
-        with open(json_file, 'r') as font_data:
+        with open(json_file, 'r', encoding="utf8") as font_data:
             data = json.load(font_data)
 
         for key, val in self.font_meta.items():
