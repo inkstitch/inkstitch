@@ -284,9 +284,7 @@ class DoubleCross(Cross):
     # Double Cross has the same corners and diagonals as normal Cross, so no
     # need to override __init__()
 
-    # This one sews the upright cross first and then the diagonals.  It
-    # results in the uprights being sewn early and the diagonals much later.
-    # The ones below sew each full double cross together.
+
 
     def cycle_from_top_left(self):
         return (
