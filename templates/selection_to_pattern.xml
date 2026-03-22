@@ -3,7 +3,7 @@
     <name>Selection to pattern</name>
     <id>org.{{ id_inkstitch }}.selection_to_pattern</id>
     <param name="extension" type="string" gui-hidden="true">selection_to_pattern</param>
-    <effect>
+    <effect implements-custom-gui="true" show-stderr="true">
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/pattern.svg</icon>
         <menu-tip>Marks selected elements as patterns</menu-tip>
