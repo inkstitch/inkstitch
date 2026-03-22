@@ -82,30 +82,22 @@ class CrossGeometries(object):
         self._adapted_maxy = maxy + self._box_y - maxy % self._box_y
 
     def _setup_crosses(self):
-        self._grid = dict()
-        grid_x = grid_y = 0
         y = self._adapted_miny
         while y <= self._adapted_maxy:
             x = self._adapted_minx
-            grid_x = 0
             while x <= self._adapted_maxx:
                 # translate box to cross position
                 box = translate(self._square, x, y)
                 self._upright_box = translate(self._upright_square, x, y)
                 if self._shape.contains(box):
-                    self._grid[(grid_x, grid_y)] = self.add_cross(box, self._upright_box)
+                    self.add_cross(box, self._upright_box)
                 elif self._shape.intersects(box):
                     intersection = box.intersection(self._shape)
                     if intersection.area / self.full_square_area * 100 + 0.0001 >= self.coverage:
-                        self._grid[(grid_x, grid_y)] = self.add_cross(box, self._upright_box)
+                        self.add_cross(box, self._upright_box)
                 x += self._box_x
-                grid_x += 1
             y += self._box_y
-            grid_y += 1
             check_stop_flag()
-
-        self._grid_x_max = grid_x
-        self._grid_y_max = grid_y
 
     def _classify_points(self):
         for cross in self.crosses:
@@ -142,8 +134,6 @@ class CrossGeometries(object):
         self.center_points.append(cross.center_point)
         self.diagonals.append(diagonal)
         self.boxes.append(box)
-
-        return cross
 
     def remove_cross(self, cross):
         for point in cross.good_points:
