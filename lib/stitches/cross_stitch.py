@@ -280,11 +280,12 @@ def _unrotate_coords(x, y):
 def _cycles_to_stitches(eulerian_cycles, max_stitch_length, flip):
     stitches = []
     for cycle in eulerian_cycles:
+        cycle_stitches = []
         if cycle is not None:
             last_point = cycle[0]
             if flip:
                 last_point = _unrotate_coords(*last_point)
-            stitches.append(Stitch(*last_point, tags=["cross_stitch"]))
+            cycle_stitches.append(Stitch(*last_point, tags=["cross_stitch"]))
             for point in cycle[1:]:
                 if flip:
                     point = _unrotate_coords(*point)
@@ -292,6 +293,7 @@ def _cycles_to_stitches(eulerian_cycles, max_stitch_length, flip):
                     continue
                 line = LineString([last_point, point]).segmentize(max_stitch_length)
                 for coord in line.coords:
-                    stitches.append(Stitch(*coord, tags=["cross_stitch"]))
+                    cycle_stitches.append(Stitch(*coord, tags=["cross_stitch"]))
                 last_point = point
+        stitches.append(cycle_stitches)
     return stitches
