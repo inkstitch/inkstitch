@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-22 02:31+0000\n"
-"PO-Revision-Date: 2026-03-22 02:32\n"
+"POT-Creation-Date: 2026-03-23 02:32+0000\n"
+"PO-Revision-Date: 2026-03-23 02:33\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-22 02:31+0000\n"
+"POT-Creation-Date: 2026-03-23 02:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1666,7 +1666,7 @@ msgstr "Relativement à la direction des bandes du tartan."
 msgid "Maximum fill stitch length"
 msgstr "Longueur maximale du point de remplissage"
 
-#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:839
+#: lib/elements/fill_stitch.py:316 lib/elements/fill_stitch.py:840
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "La longueur de points dans une rangée.  Des point plus courts peuvent être utilisés au début ou à la fin d’une rangée."
 
@@ -1933,15 +1933,19 @@ msgstr "Croix Horizontale Retournée"
 msgid "Double Cross"
 msgstr "Croix Double"
 
-#: lib/elements/fill_stitch.py:750 lib/gui/cross_stitch_helper.py:123
+#: lib/elements/fill_stitch.py:746
+msgid "Double Cross Flipped"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:751 lib/gui/cross_stitch_helper.py:123
 msgid "Cross stitch method"
 msgstr "Méthode de point de croix"
 
-#: lib/elements/fill_stitch.py:761
+#: lib/elements/fill_stitch.py:762
 msgid "Thread count"
 msgstr "Nombre de fils"
 
-#: lib/elements/fill_stitch.py:762
+#: lib/elements/fill_stitch.py:763
 msgid "Defines the thread count for each stitch.\n"
 "Thread count must be an even number.\n"
 "Half crosses are stitched with an odd thread count."
@@ -1949,45 +1953,45 @@ msgstr "Défini le nombre de fils\n"
 "Ce nombre doit être pair\n"
 "Les demies croix sont brodées avec un nombre impair de fils."
 
-#: lib/elements/fill_stitch.py:775
+#: lib/elements/fill_stitch.py:776
 msgid "Pattern size"
 msgstr "Dimension des cellules"
 
-#: lib/elements/fill_stitch.py:776
+#: lib/elements/fill_stitch.py:777
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
 msgstr "Taille des cellules de point de croix en mm, deux valeurs x, y séparées par espace définissent la largeur et la hauteur de la cellule ; une seule valeur définit une cellule carrée."
 
-#: lib/elements/fill_stitch.py:779 lib/elements/fill_stitch.py:812
+#: lib/elements/fill_stitch.py:780 lib/elements/fill_stitch.py:813
 msgid "mm (x y)"
 msgstr "mm (x y)"
 
-#: lib/elements/fill_stitch.py:791
+#: lib/elements/fill_stitch.py:792
 msgid "Align grid with canvas"
 msgstr "Aligner la grille avec le canevas"
 
-#: lib/elements/fill_stitch.py:792
+#: lib/elements/fill_stitch.py:793
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
 msgstr "Cela garantit un bon alignement des zones de point de croix adjacentes, mais cela signifie également que le résultat peut varier si l'élément est déplacé hors de la grille.\n\n"
 "Désactivez cette option pour que cet élément soit brodé de la même manière, quelle que soit sa position sur le canevas."
 
-#: lib/elements/fill_stitch.py:808
+#: lib/elements/fill_stitch.py:809
 msgid "Grid Offset"
 msgstr "Décalage de la grille"
 
-#: lib/elements/fill_stitch.py:809
+#: lib/elements/fill_stitch.py:810
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
 msgstr "Décale la grille de point de croix selon les valeurs indiquées. Les valeurs X et Y sont séparées par un espace. Une seule valeur saisie décale le motif uniformément selon les axes x et y."
 
-#: lib/elements/fill_stitch.py:824
+#: lib/elements/fill_stitch.py:825
 msgid "Fill coverage"
 msgstr "Couverture du remplissage"
 
-#: lib/elements/fill_stitch.py:825
+#: lib/elements/fill_stitch.py:826
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr "Pourcentage de chevauchement de chaque croix avec la zone de remplissage"
 
-#: lib/elements/fill_stitch.py:837 lib/elements/satin_column.py:185
+#: lib/elements/fill_stitch.py:838 lib/elements/satin_column.py:185
 #: lib/elements/satin_column.py:584
 msgid "Maximum stitch length"
 msgstr "Longueur maximale du point"
@@ -2042,7 +2046,7 @@ msgstr "Colonne de satin non brodable"
 
 #: lib/elements/satin_column.py:35
 msgid "A satin column can be build from a single stroke or consists of two rails and optional rungs. This satin column has a different setup."
-msgstr ""
+msgstr "Une colonne satin peut être construite à partir d'un trait simple ou être constituée de deux rails avec optionnellement des traverses. Cette colonne satin a une configuration différente."
 
 #: lib/elements/satin_column.py:38
 msgid "Make sure your satin column is not a combination of multiple satin columns."
@@ -2746,6 +2750,7 @@ msgid "Include the error description and also (if possible) the svg file."
 msgstr "Incluez la description de l'erreur et (si possible) le fichier svg."
 
 #: lib/extensions/apply_attribute.py:27 lib/extensions/element_info.py:20
+#: lib/extensions/selection_to_pattern.py:25
 msgid "Please select at least one element."
 msgstr "Merci de sélectionner au moins un élément."
 
@@ -3012,29 +3017,31 @@ msgstr "Filtrer les points plus petits que (mm)"
 
 #: lib/extensions/fill_to_satin.py:45
 msgid "No fill element selected. Please select a fill element."
-msgstr ""
+msgstr "Aucun remplissage n'est sélectionné. Merci de sélectionner au moins un remplissage."
 
 #: lib/extensions/fill_to_satin.py:47
 msgid "A fill element has a fill color and serves as the outline of the satin column."
-msgstr ""
+msgstr "Un élément de remplissage possède une couleur de remplissage et sert de contour à la colonne satin."
 
 #: lib/extensions/fill_to_satin.py:51
 msgid "No rungs selected. Please select rungs."
-msgstr ""
+msgstr "Aucune traverse n'est sélectionnée. Merci de sélectionner au moins une traverse."
 
 #: lib/extensions/fill_to_satin.py:53
 msgid "Rungs are elements with a stroke color. They serve as the stitch direction for a satin column."
-msgstr ""
+msgstr "Les traverses sont des éléments comportant une couleur de contour. Ils servent à indiquer la direction des points des colonnes de satin."
 
 #: lib/extensions/fill_to_satin.py:81
 msgid "These fill elements do not intersect with any of the selected rungs and will not be converted:"
-msgstr ""
+msgstr "Ces éléments de remplissage n'intersectent aucune des traverses sélectionnées et ne seront pas convertis :"
 
 #: lib/extensions/fill_to_satin.py:110
 msgid "The selection contains elements with both, a fill and a stroke.\n"
 "Rungs only have a stroke color and fill elements a fill color.\n\n"
 "The operation will still be performed. In case of unwanted results, check the following elements and remove either the stroke or the fill color:"
-msgstr ""
+msgstr "La sélection contient des éléments avec un contour et un remplissage.\n\n"
+"Les traverses doivent avoir uniquement une couleur de contour, tandis que les éléments de remplissage ne doivent avoir qu'une couleur de remplissage.\n\n"
+"L'opération sera tout de même effectuée. En cas de résultat indésirable, vérifiez les éléments suivants et supprimez la couleur de contour ou de remplissage :"
 
 #: lib/extensions/fill_to_satin.py:139
 msgid "Satin Group"
@@ -3354,7 +3361,7 @@ msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/cross_stitch_helper.py:434 lib/gui/edit_json/settings_panel.py:63
 #: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
-#: lib/gui/satin_multicolor/main_panel.py:54
+#: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
 #: lib/gui/simulator/simulator_preferences.py:53
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
 #: print/templates/custom-page.html:27 print/templates/custom-page.html:33
@@ -3446,7 +3453,11 @@ msgstr "Merci de sélectionner au moins un objet comme ligne d'ancrage."
 msgid "Please select at least one object to be marked as a guide line."
 msgstr "Veuillez sélectionner au moins un objet à marquer comme ligne-guide."
 
-#: lib/extensions/selection_to_pattern.py:21
+#: lib/extensions/selection_to_pattern.py:50
+msgid "Please select at least one object to remove the pattern marker."
+msgstr ""
+
+#: lib/extensions/selection_to_pattern.py:55
 msgid "Please select at least one object to be marked as a pattern."
 msgstr "Veuillez sélectionner au moins un objet à marquer comme texture."
 
@@ -3649,7 +3660,8 @@ msgstr "liste de fils"
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
 #: lib/gui/cross_stitch_helper.py:419 lib/gui/edit_json/help_panel.py:27
 #: lib/gui/element_info.py:57 lib/gui/lettering_font_sample.py:98
-#: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/tartan/help_panel.py:27
+#: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/selection_to_pattern.py:74
+#: lib/gui/tartan/help_panel.py:27
 msgid "More information on our website:"
 msgstr "Plus d'information sur notre site web :"
 
@@ -3683,7 +3695,7 @@ msgstr "Sélectionner une palette de couleur"
 
 #: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:436
 #: lib/gui/edit_json/settings_panel.py:65 lib/gui/lettering_font_sample.py:72
-#: lib/gui/satin_multicolor/main_panel.py:56
+#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/selection_to_pattern.py:89
 #: lib/gui/simulator/simulator_preferences.py:55
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
@@ -3692,13 +3704,13 @@ msgstr "Appliquer"
 #: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_helper.py:399
 #: lib/gui/edit_json/main_panel.py:75 lib/gui/element_info.py:42
 #: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
-#: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/tartan/main_panel.py:64
-#: lib/gui/test_swatches.py:83 inx/inkstitch_apply_attribute.inx:24
-#: inx/inkstitch_apply_threadlist.inx:91 inx/inkstitch_auto_run.inx:25
-#: inx/inkstitch_auto_satin.inx:16 inx/inkstitch_batch_lettering.inx:72
-#: inx/inkstitch_break_apart.inx:19 inx/inkstitch_cleanup.inx:25
-#: inx/inkstitch_cutwork_segmentation.inx:44 inx/inkstitch_density_map.inx:26
-#: inx/inkstitch_display_stacking_order.inx:11
+#: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/selection_to_pattern.py:55
+#: lib/gui/tartan/main_panel.py:64 lib/gui/test_swatches.py:83
+#: inx/inkstitch_apply_attribute.inx:24 inx/inkstitch_apply_threadlist.inx:91
+#: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
+#: inx/inkstitch_batch_lettering.inx:72 inx/inkstitch_break_apart.inx:19
+#: inx/inkstitch_cleanup.inx:25 inx/inkstitch_cutwork_segmentation.inx:44
+#: inx/inkstitch_density_map.inx:26 inx/inkstitch_display_stacking_order.inx:11
 #: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
@@ -3738,9 +3750,9 @@ msgid "Ink/Stitch - Cross stitch"
 msgstr "Ink/Stitch - Point de croix"
 
 #: lib/gui/cross_stitch_helper.py:69 lib/gui/edit_json/main_panel.py:74
-#: lib/gui/lettering_font_sample.py:40 lib/gui/simulator/view_panel.py:129
-#: print/templates/ui.html:5 print/templates/ui.html:15
-#: inx/inkstitch_lettering_generate_json.inx:90
+#: lib/gui/lettering_font_sample.py:40 lib/gui/selection_to_pattern.py:24
+#: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
+#: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:90
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
 msgstr "Paramètres"
@@ -4591,6 +4603,34 @@ msgstr "Colorer"
 #: lib/gui/satin_multicolor/main_panel.py:151
 msgid "Multicolor Satin Group"
 msgstr "Groupe de satins multicolores"
+
+#: lib/gui/selection_to_pattern.py:9
+msgid "Ink/Stitch"
+msgstr ""
+
+#: lib/gui/selection_to_pattern.py:30
+msgid "Interval"
+msgstr ""
+
+#: lib/gui/selection_to_pattern.py:35
+msgid "Start offset"
+msgstr ""
+
+#: lib/gui/selection_to_pattern.py:40
+msgid "Remove pattern marker"
+msgstr ""
+
+#: lib/gui/selection_to_pattern.py:62
+msgid "Patterns add or remove nodes from embroidery elements.\n"
+"Targeted embroidery elements have to be in the same group with this pattern.\n\n"
+"- Stroke patterns add nodes\n"
+"  A predefined interval allows stroke patterns to skip intersection points\n"
+"- Fill patterns remove nodes"
+msgstr ""
+
+#: lib/gui/selection_to_pattern.py:80 lib/gui/selection_to_pattern.py:81
+msgid "https://inkstitch.org/docs/stitches/patterns/"
+msgstr ""
 
 #: lib/gui/simulator/control_panel.py:47
 msgid "Slow down (arrow down)"
