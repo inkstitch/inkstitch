@@ -62,8 +62,10 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     diagonals = ensure_multi_line_string(line_merge(MultiLineString(cross_geoms.diagonals).segmentize(max_stitch_length)))
 
     stitches = _lines_to_stitches(diagonals, outline, max_stitch_length, bean_stitch_repeats, starting_point, ending_point)
-
-    return [stitches]
+    if stitches:
+        return [stitches]
+    else:
+        return []
 
 
 def cross_stitch_multiple(outline, fill, starting_point, ending_point, bean_stitch_repeats, original_shape):
