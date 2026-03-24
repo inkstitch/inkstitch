@@ -53,6 +53,8 @@ class CrossGeometries(object):
         self._choose_cross_class()
         self._setup_geometry()
         self._setup_crosses()
+        if "dense" in self.cross_stitch_method:
+            self._setup_additional_crosses()
         self._classify_points()
 
     def _choose_cross_class(self):
@@ -98,6 +100,24 @@ class CrossGeometries(object):
                 x += self._box_x
             y += self._box_y
             check_stop_flag()
+
+    def _setup_additional_crosses(self):
+        y = self._adapted_miny + (self._box_y / 2)
+        while y <= self._adapted_maxy:
+            x = self._adapted_minx + (self._box_x / 2)
+            while x <= self._adapted_maxx:
+                # translate box to cross position
+                box = translate(self._square, x, y)
+                self._upright_box = translate(self._upright_square, x, y)
+                if self._shape.contains(box):
+                    self.add_cross(box, self._upright_box)
+                elif self._shape.intersects(box):
+                    intersection = box.intersection(self._shape)
+                    if intersection.area / self.full_square_area * 100 + 0.0001 >= self.coverage:
+                        self.add_cross(box, self._upright_box)
+                x += self._box_x
+            y += self._box_y
+        check_stop_flag()
 
     def _classify_points(self):
         for cross in self.crosses:
