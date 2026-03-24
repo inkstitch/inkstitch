@@ -62,6 +62,8 @@ class CrossGeometries(object):
             self.cross_class = UprightCross
         elif "double" in self.cross_stitch_method:
             self.cross_class = DoubleCross
+        elif "smyrna" in self.cross_stitch_method:
+            self.cross_class = SmyrnaCross
         else:
             self.cross_class = Cross
 
@@ -289,6 +291,7 @@ class UprightCross(Cross):
 
 
 class DoubleCross(Cross):
+    # Top Cross is the normal cross
     # Double Cross has the same corners and diagonals as normal Cross, so no
     # need to override __init__()
 
@@ -346,4 +349,113 @@ class DoubleCross(Cross):
             [self.middle_top, self.middle_bottom] * self.nb_repeats +
             [self.center_point] +
             [self.top_right, self.bottom_left] * self.nb_repeats
+        )
+
+
+class SmyrnaCross(Cross):
+    # Top cross is the upright cross, this is the usual handstitch order for double crosses.
+    # To avoid bad traveling, we favor connecting the cycles through the top middle points,
+    # and bottom middle points, any other connecting  point creates bad traveling.
+    # We will need to connect via diagonal point when the crosses are joined only at diagonal
+    # We do not use connection via middle left and middle right point as when they exist,
+    # the connection via diagonal is also possible.
+    # As end result, there will be exactly one bad traveled cross on each connected column of Smyrna crosses.
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.good_points = [self.middle_top, self.middle_bottom]
+        self.bad_points = [self.top_left, self.top_right, self.bottom_left, self.bottom_right]
+        self.all_connection_points = self.good_points + self.bad_points
+
+    def cycle_from_point(self, starting_point):
+        if starting_point == self.middle_top:
+            return self.cycle_from_middle_top()
+        elif starting_point == self.middle_bottom:
+            return self.cycle_from_middle_bottom()
+        elif starting_point == self.top_left:
+            return self.cycle_from_top_left()
+        elif starting_point == self.top_right:
+            return self.cycle_from_top_right()
+        elif starting_point == self.bottom_left:
+            return self.cycle_from_bottom_left()
+        elif starting_point == self.bottom_right:
+            return self.cycle_from_bottom_right()
+
+    def cycle_from_middle_top(self):
+        return (
+            [self.center_point] +
+            [self.top_left, self.bottom_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.bottom_left, self.top_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_bottom, self.middle_top] * self.nb_repeats
+        )
+
+    def cycle_from_middle_bottom(self):
+        return (
+            [self.center_point] +
+            [self.top_left, self.bottom_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.bottom_left, self.top_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * self.nb_repeats
+        )
+
+    def cycle_from_top_left(self):
+        return (
+            [self.bottom_right, self.top_left] * (self.nb_repeats - 1) +
+            [self.bottom_right, self.center_point] +
+            [self.bottom_left, self.top_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_bottom, self.middle_top] * self.nb_repeats +
+            # this is bad travel
+            [self.center_point, self.top_left]
+        )
+
+    def cycle_from_bottom_right(self):
+        return (
+            [self.top_left, self.bottom_right] * (self.nb_repeats - 1) +
+            [self.top_left, self.center_point] +
+            [self.top_right, self.bottom_left] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * self.nb_repeats +
+            # this is bad travel
+            [self.center_point, self.bottom_right]
+        )
+
+    def cycle_from_top_right(self):
+        return (
+            [self.center_point] +
+            [self.top_left, self.bottom_right] * self.nb_repeats +
+            [self.center_point, self.bottom_left] +
+            [self.top_right, self.bottom_left] * (self.nb_repeats - 1) +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * self.nb_repeats +
+            # this is bad travel
+            [self.center_point, self.top_right]
+        )
+
+    def cycle_from_bottom_left(self):
+        return (
+            [self.center_point] +
+            [self.bottom_right, self.top_left] * self.nb_repeats +
+            [self.center_point, self.top_right] +
+            [self.bottom_left, self.top_right] * (self.nb_repeats - 1) +
+            [self.center_point] +
+            [self.middle_left, self.middle_right] * self.nb_repeats +
+            [self.center_point] +
+            [self.middle_top, self.middle_bottom] * self.nb_repeats +
+            # this is bad travel
+            [self.center_point, self.bottom_left]
         )
