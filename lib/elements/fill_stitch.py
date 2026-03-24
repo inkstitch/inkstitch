@@ -1269,15 +1269,16 @@ class FillStitch(EmbroideryElement):
                 end = final_end
             stitch_lists = cross_stitch(self, shape, start, end)
             for stitch_list in stitch_lists:
-                stitch_group = StitchGroup(
-                    color=self.color,
-                    tags=("cross_stitch"),
-                    stitches=stitch_list,
-                    force_lock_stitches=self.force_lock_stitches,
-                    lock_stitches=self.lock_stitches
-                )
-                previous_stitch_group = stitch_group
-                stitch_groups.append(stitch_group)
+                for cycle in stitch_list:
+                    stitch_group = StitchGroup(
+                        color=self.color,
+                        tags=("cross_stitch"),
+                        stitches=cycle,
+                        force_lock_stitches=self.force_lock_stitches,
+                        lock_stitches=self.lock_stitches
+                    )
+                    previous_stitch_group = stitch_group
+                    stitch_groups.append(stitch_group)
         return stitch_groups
 
     def do_circular_fill(self, shape, starting_point, ending_point):
