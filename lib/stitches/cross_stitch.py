@@ -91,7 +91,10 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count):
     eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms)
 
     stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length, flipped)
-    return [stitches]
+    if stitches:
+        return [stitches]
+    else:
+        return []
 
 
 def get_corner(point, subcrosses):
