@@ -743,7 +743,7 @@ class FillStitch(EmbroideryElement):
         ParamOption('upright_cross', _("Upright Cross")),
         ParamOption('upright_cross_flipped', _("Upright Cross Flipped")),
         ParamOption('dense_upright_cross', _("Dense Upright Cross")),
-        ParamOption('dense_upright_cross_flipped', _("Dense Upright Cross Flipped"))
+        ParamOption('dense_upright_cross_flipped', _("Dense Upright Cross Flipped")),
         ParamOption('double_cross', _("Double Cross")),
         ParamOption('double_cross_flipped', _("Double Cross Flipped")),
         ParamOption('smyrna_cross', _("Smyrna Cross")),
