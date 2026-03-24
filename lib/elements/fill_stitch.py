@@ -22,6 +22,7 @@ from ..stitches import (auto_fill, circular_fill, contour_fill, cross_stitch,
                         guided_fill, legacy_fill, linear_gradient_fill,
                         meander_fill, tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
+from ..stitches.utils.cross_stitch import CrossGeometries
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..tartan.utils import get_tartan_settings, get_tartan_stripes
@@ -133,15 +134,7 @@ class DefaultTartanStripeWarning(ValidationWarning):
     ]
 
 
-class InvalidShapeError(ValidationError):
-    name = _("This shape is invalid")
-    description = _('Fill: This shape cannot be stitched out. Please try to repair it with the "Break Apart Fill Objects" extension.')
-    steps_to_solve = [
-        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
-    ]
-
-
-class CrossPatternCoverageError(ValidationError):
+class CrossPatternCoverageWarning(ValidationWarning):
     name = _("Cross stitch: shape too small")
     description = _('This shape is too small to fit a cross. Please adapt params and/or shape.')
     steps_to_solve = [
@@ -150,6 +143,14 @@ class CrossPatternCoverageError(ValidationError):
         _('* Or increase the expand value or increase shape size'),
         _('* Or increase the fill coverage value'),
         _('* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Helper, adapt settings and pixelate the shape')
+    ]
+
+
+class InvalidShapeError(ValidationError):
+    name = _("This shape is invalid")
+    description = _('Fill: This shape cannot be stitched out. Please try to repair it with the "Break Apart Fill Objects" extension.')
+    steps_to_solve = [
+        _('* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects')
     ]
 
 
@@ -1351,17 +1352,6 @@ class FillStitch(EmbroideryElement):
             message, x, y = match.groups()
             yield InvalidShapeError((x, y))
 
-        # cross stitch
-        if self.fill_method == 'cross_stitch':
-            from ..stitches.utils.cross_stitch import CrossGeometries
-            shapes = self._prepare_cross_stitch_shape(None)
-            for shape in shapes:
-                crosses = CrossGeometries(
-                    shape, self.pattern_size, self.fill_coverage, 'simple_cross', self.cross_offset, self.canvas_grid_origin, self.cross_thread_count
-                )
-                if len(crosses.boxes) == 0:
-                    yield CrossPatternCoverageError(shape.representative_point())
-
     def validation_warnings(self):  # noqa: C901
         if not self.original_shape.is_valid:
             why = explain_validity(self.original_shape)
@@ -1414,6 +1404,16 @@ class FillStitch(EmbroideryElement):
                 yield NoTartanStripeWarning(self.shape.representative_point())
             if not self.node.get('inkstitch:tartan', ''):
                 yield DefaultTartanStripeWarning(self.shape.representative_point())
+
+        # cross stitch
+        if self.fill_method == 'cross_stitch':
+            shapes = self._prepare_cross_stitch_shape(None)
+            for shape in shapes:
+                crosses = CrossGeometries(
+                    shape, self.pattern_size, self.fill_coverage, 'simple_cross', self.cross_offset, self.canvas_grid_origin, self.cross_thread_count
+                )
+                if len(crosses.boxes) == 0:
+                    yield CrossPatternCoverageWarning(shape.representative_point())
 
         for warning in super(FillStitch, self).validation_warnings():
             yield warning
