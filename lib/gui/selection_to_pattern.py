@@ -6,7 +6,7 @@ from ..i18n import _
 class SelectionToPatternFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         self.settings = kwargs.pop("settings")
-        wx.Frame.__init__(self, None, wx.ID_ANY, _("Ink/Stitch"), *args, **kwargs)
+        wx.Frame.__init__(self, None, wx.ID_ANY, "Ink/Stitch", *args, **kwargs)
 
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
