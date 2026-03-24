@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import wx
+from wx.lib.scrolledpanel import ScrolledPanel
 
 from ...i18n import _
 from ...lettering.categories import FONT_CATEGORIES
@@ -75,10 +76,11 @@ class SettingsPanel(wx.Panel):
         self.SetSizer(settings_sizer)
 
 
-class FontInfo(wx.Panel):
+class FontInfo(ScrolledPanel):
     def __init__(self, parent):
         self.parent = parent.GetParent().parent
-        wx.Panel.__init__(self, parent)
+        ScrolledPanel.__init__(self, parent)
+        self.SetupScrolling()
 
         sizer = wx.BoxSizer(wx.VERTICAL)
         grid_sizer = wx.FlexGridSizer(20, 2, 10, 10)
@@ -112,7 +114,7 @@ class FontInfo(wx.Panel):
         keywords_label = wx.StaticText(self, label=_("Keywords"))
         self.keywords = wx.ListBox(
             self,
-            size=wx.Size(10, 400),
+            size=wx.Size(10, 300),
             choices=[cat.name for cat in FONT_CATEGORIES],
             style=wx.CB_SORT | wx.LB_EXTENDED
         )
