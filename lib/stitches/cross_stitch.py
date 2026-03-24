@@ -44,7 +44,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
         # - thread count option (bean stitch repeats)
         #   bean stitch repeats will always return an odd thread count, opposed to the other cross stitch methods
         thread_count = thread_count // 2
-        return half_cross_stitch(fill, shape, starting_point, ending_point, thread_count)
+        return [half_cross_stitch(fill, shape, starting_point, ending_point, thread_count)]
     # cross stitch method only takes even thread counts
     # it starts and ends at the same position
     if starting_point is None:
