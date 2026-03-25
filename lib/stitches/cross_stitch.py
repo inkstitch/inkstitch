@@ -110,7 +110,9 @@ def get_corner(point, subcrosses):
 def _build_connect_subgraphs(cross_geoms):
     """  first build the graph
     add first the nodes: each node is either a center point or a corner of a cross
-    edges are between center point and corners, and between opposite corners
+    edges are between center point and corners,
+    the other edges are not inserted as they are not useful to find the
+    connected components
     each node carries the list of crosses it belongs to
     then add the edges
     finally extract the connected components as subgraphs """
@@ -129,9 +131,6 @@ def _build_connect_subgraphs(cross_geoms):
 
         for point in cross.all_connection_points:
             G.add_edge(center, point)
-
-        for (start, end) in cross.stitches:
-            G.add_edge(start, end)
 
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
