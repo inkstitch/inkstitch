@@ -86,15 +86,16 @@ class CrossGeometries(object):
         self._adapted_maxy = maxy + self._box_y - maxy % self._box_y
 
     def _setup_crosses(self, offset=False):
+        center = list(self._square.centroid.coords)[0]
         if offset:
-            offset_x = self._box_x / 2
-            offset_y = self._box_y / 2
+            delta_x = center[0]
+            delta_y = center[1]
         else:
-            offset_x = 0
-            offset_y = 0
-        y = self._adapted_miny + offset_y
+            delta_x = 0
+            delta_y = 0
+        y = self._adapted_miny + delta_y
         while y <= self._adapted_maxy:
-            x = self._adapted_minx + offset_x
+            x = self._adapted_minx + delta_x
             while x <= self._adapted_maxx:
                 # translate box to cross position
                 box = translate(self._square, x, y)
@@ -128,9 +129,14 @@ class CrossGeometries(object):
 
     def add_cross(self, box, upright_box):
         center_point = list(box.centroid.coords)[0]
+        center_point = (round(center_point[0],5), round(center_point[1],5))
+    
 
         corners = list(box.exterior.coords)[:4]
+     
+        corners =  [ (round(corner[0],5), round(corner[1],5) ) for corner in corners]
         middle_points = list(upright_box.exterior.coords)[:4]
+        middle_points = [(round(middle_point[0],5), round(middle_point[1],5)) for middle_point in middle_points]
 
         cross = self.cross_class(center_point, corners, middle_points, self.nb_repeats)
         self.crosses.add(cross)
