@@ -151,7 +151,6 @@ class CrossGeometries(object):
 
     def add_cross(self, box, upright_box):
         center_point = list(box.centroid.coords)[0]
-        center_point = (round(center_point[0], 5), round(center_point[1], 5))
         corners = list(box.exterior.coords)[:4]
         middle_points = list(upright_box.exterior.coords)[:4]
 
