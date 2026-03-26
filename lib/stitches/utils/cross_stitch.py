@@ -86,20 +86,28 @@ class CrossGeometries(object):
         self._adapted_maxx = maxx + self._box_x - maxx % self._box_x
         self._adapted_maxy = maxy + self._box_y - maxy % self._box_y
 
-    def _potential_corners(self):
-        potential_corners = []
+    def _potential_middle_points(self, offset=False):
+        potential_middle_points = []
         y = self._adapted_miny
         while y <= self._adapted_maxy:
             x = self._adapted_minx
             while x <= self._adapted_maxx:
-                potential_corners.append(Point(x, y))
+                potential_middle_points.append((x + (self._box_x / 2), y))
+                potential_middle_points.append((x, y + (self._box_x / 2)))
                 x += self._box_x
             y += self._box_y
 
-        return potential_corners
+        return potential_middle_points
+
+    def _snapped_box(self, box, points):
+        snap_points = MultiPoint(points)
+        snapped_coords = []
+        for point in list(box.exterior.coords)[:4]:
+            snapped_point = nearest_points(snap_points, Point(point))[0]
+            snapped_coords.append((snapped_point.x, snapped_point.y))
+        return Polygon(snapped_coords)
 
     def _setup_crosses(self, offset=False):
-        snap_points = MultiPoint(self._potential_corners())
         center = list(self._square.centroid.coords)[0]
         if offset:
             delta_x = center[0]
@@ -110,13 +118,10 @@ class CrossGeometries(object):
         y = self._adapted_miny + delta_y
         while y <= self._adapted_maxy:
             x = self._adapted_minx + delta_x
-            snap_point = nearest_points(Point(x, y), snap_points)[0]
-            x = snap_point.x
-            y = snap_point.y
             while x <= self._adapted_maxx:
                 # translate box to cross position
                 box = translate(self._square, x, y)
-                self._upright_box = translate(self._upright_square, x, y)
+                self._upright_box = self._snapped_box(translate(self._upright_square, x, y), self._potential_middle_points())
                 if self._shape.contains(box):
                     self.add_cross(box, self._upright_box)
                 elif self._shape.intersects(box):
@@ -146,8 +151,10 @@ class CrossGeometries(object):
 
     def add_cross(self, box, upright_box):
         center_point = list(box.centroid.coords)[0]
+        center_point = (round(center_point[0], 5), round(center_point[1], 5))
         corners = list(box.exterior.coords)[:4]
         middle_points = list(upright_box.exterior.coords)[:4]
+
         cross = self.cross_class(center_point, corners, middle_points, self.nb_repeats)
         self.crosses.add(cross)
 

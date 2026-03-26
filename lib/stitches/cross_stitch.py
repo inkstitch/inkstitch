@@ -87,7 +87,9 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count):
         shape = rotate(shape, 90, origin=(0, 0))
 
     cross_geoms = CrossGeometries(shape, fill.pattern_size, fill.fill_coverage, method, fill.cross_offset, fill.canvas_grid_origin, thread_count)
+
     subgraphs = _build_connect_subgraphs(cross_geoms)
+
     eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms)
 
     stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length, flipped)
