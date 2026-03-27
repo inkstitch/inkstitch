@@ -87,7 +87,9 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count):
         shape = rotate(shape, 90, origin=(0, 0))
 
     cross_geoms = CrossGeometries(shape, fill.pattern_size, fill.fill_coverage, method, fill.cross_offset, fill.canvas_grid_origin, thread_count)
+
     subgraphs = _build_connect_subgraphs(cross_geoms)
+
     eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms)
 
     stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length, flipped)
@@ -110,7 +112,9 @@ def get_corner(point, subcrosses):
 def _build_connect_subgraphs(cross_geoms):
     """  first build the graph
     add first the nodes: each node is either a center point or a corner of a cross
-    edges are between center point and corners, and between opposite corners
+    edges are between center point and corners,
+    the other edges are not inserted as they are not useful to find the
+    connected components
     each node carries the list of crosses it belongs to
     then add the edges
     finally extract the connected components as subgraphs """
@@ -129,9 +133,6 @@ def _build_connect_subgraphs(cross_geoms):
 
         for point in cross.all_connection_points:
             G.add_edge(center, point)
-
-        for (start, end) in cross.stitches:
-            G.add_edge(start, end)
 
     return [G.subgraph(c).copy() for c in nx.connected_components(G)]
 
