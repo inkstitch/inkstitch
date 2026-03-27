@@ -1,7 +1,7 @@
 ---
 title: "Point de Croix"
 permalink: /fr/docs/stitches/cross-stitch/
-last_modified_at: 2025-12-26
+last_modified_at: 2026-03-27
 toc: true
 
 feature_row:
@@ -59,7 +59,7 @@ Ink/Stitch permet l'utilisation de plusieurs méthodes de point de croix.
 
 C'est la méthode la plus courante. Deux diagonales forment une croix.
 
-Lorsque deux croix sont reliées uniquement en diagonale, ajoutez une petite valeur d'expansion au remplissage sous-jacent pour assurer une broderie combinée.
+Lorsque deux croix sont reliées uniquement en diagonale, ajoutez une petite valeur d'expansion au remplissage sous-jacent pour assurer une broderie combinée sans saut.
 
 
   ![Méthode de point de croix: Point de Croix](/assets/images/docs/cross_stitch_method_cross_stitch.jpg)
@@ -77,12 +77,27 @@ Les demi-croix ne constituent qu'un demi-point de croix (une diagonale). Les che
 Veuillez noter que cette méthode de point de croix peut présenter des sauts lorsque les zones sont reliées uniquement en diagonale.
 
   ![Méthode de point de croix: Demi-Croix](/assets/images/docs/cross_stitch_method_upright.jpg)
-* **Double Croix**
-  
-Une Combinaison de Point de Croix et de Point de Croix  Horizontal.
 
-Comme ce point inclut des croix horizontales , veuillez noter les risques de saut de fil lorsque les zones de remplissage se touchent uniquement en diagonale.
+* **Point de Croix Horizontal Dense et Point de Croix Horizontal Dense Retourné**
+
+Le remplissage en Croix Horizontales est plus dense.
+
+ La couverture est de 50% dans cet example.
+
+
+  ![Cross stitch method:  dense upright cross](/assets/images/docs/cross_stitch_method_dense_upright.jpg)
+  
+  * **Double Croix et Double Croix retournée **
+  
+Une Combinaison de Point de Croix et de Point de Croix  Horizontal, avec la croix horizontale en dessous.
+
   ![Méthode de point de croix: Double Croix](/assets/images/docs/cross_stitch_method_double_cross.jpg)
+
+  * **Smyrna cross and upright Smyrna cross**
+
+Une Combinaison de Point de Croix et de Point de Croix Horizontal, avec la croix horizontale sur le dessus.
+  
+  ![Cross stitch method:Smyrna cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
 
 ### Assistant Point de Croix
 
