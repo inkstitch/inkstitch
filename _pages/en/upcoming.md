@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2026-02-15
+last_modified_at: 2026-03-27
 sidebar:
   nav: pages
 toc: true
@@ -46,6 +46,12 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Cyrillic](/fonts/cyrillic/)
 
   ![Cyrillic](/assets/images/fonts/cyrillic.png)
+* [Egyptian](/fonts/egyptian/)
+
+  ![Egyptian](/assets/images/fonts/egyptian.png)
+* [Eloquent](/fonts/eloquent/)
+
+  ![Eloquent](/assets/images/fonts/eloquent.png)
 * [Flowery Crosses](/fonts/flowery_crosses/)
 
   ![Flowery Crosses](/assets/images/fonts/flowery_crosses.jpg)
@@ -53,9 +59,15 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Handkerchief](/fonts/handkerchief/)
 
   ![Handkerchief](/assets/images/fonts/handkerchief.png)
+* [Heavenly](/fonts/heavenly/)
+
+  ![Heavenly](/assets/images/fonts/heavenly.png)
 * [Jacquard 12](/fonts/jacquard_12/)
 
   ![Jacquard 12](/assets/images/fonts/jacquard12.png)
+* [Jacquarda Bastarda 9](/fonts/jacquarda_basttarda_9/)
+
+  ![Jacquarda Bastarda 9J](/assets/images/fonts/jacquarda_bastarda.png)
 * [Jersey 15](/fonts/jersey_15/)
 
   ![Jersey 15](/assets/images/fonts/jersey15.png)
@@ -78,6 +90,9 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Neon blinking](/fonts/neon/)
 
   ![Neon blinking](/assets/images/fonts/neon_blinking.png)
+* [Noble](/fonts/noble/)
+
+  ![Noble](/assets/images/fonts/noble.png)
 * [Precious](/fonts/precious/)
 
   ![Precious](/assets/images/fonts/precious.jpg)
