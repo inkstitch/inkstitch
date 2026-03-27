@@ -82,7 +82,7 @@ In Ink/Stitch you can choose from various cross stitch methods.
   
   ![Cross stitch method: double cross](/assets/images/docs/cross_stitch_method_double_cross.jpg)
 
-* **Smyrna cross and upright Smyrnacross**
+* **Smyrna cross and upright Smyrna cross**
 
   A combination of cross stitch and upright stitch, with upright cross on top.
   
