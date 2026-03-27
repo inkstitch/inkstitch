@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/eloquent.png
     height: 20
 data_title:
-  - noble
+  - eloquent
 ---
 {% include upcoming_release.html %}
 
