@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch"
 permalink: /fr/upcoming/
-last_modified_at: 2026-02-24
+last_modified_at: 2026-03-27
 sidebar:
   nav: pages
 toc: true
@@ -32,13 +32,13 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Apex simple small AGS](/fr/fonts/apex/)
 
   ![Apex simple small](/assets/images/fonts/apex_simple_small_AGS.png)
-* [Apesplit](/fr/onts/apespit/)
+* [Apesplit](/fr/fonts/apespit/)
     
   ![Apesplit](/assets/images/fonts/apesplit.jpg)
 * [Barstitch crosses](/fr/fonts/barstitch_bold/)
 
   ![Barstitch  crosses](/assets/images/fonts/barstitch_crosses.jpg)
-* [Braille](/fonts/braille/)
+* [Braille](/fr/fonts/braille/)
 
   ![Braille](/assets/images/fonts/braille.png)
 * [Circular 3 letters monogram](/fr/fonts/circular-3letters-monogram/)
@@ -47,42 +47,41 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Cyrillic](/fr/fonts/cyrillic/)
 
   ![Cyrillic](/assets/images/fonts/cyrillic.png)
-* [Egyptiaaan](/fr/fonts/egyptian/)
+* [Egyptian](/fr/fonts/egyptian/)
 
-  ![Cyrillic](/assets/images/fonts/egyptian.png)
+  ![Egyptian](/assets/images/fonts/egyptian.png)
 * [Eloquent](/fr/fonts/eloquent/)
 
-  ![Cyrillic](/assets/images/fonts/eloquent.png)
-* [Flowery Crosses](/fonts/flowery_crosses/)
+  ![Eloquent](/assets/images/fonts/eloquent.png)
+* [Flowery Crosses](/fr/fonts/flowery_crosses/)
 
   ![Flowery Crosses](/assets/images/fonts/flowery_crosses.jpg)
    ![Flowery Crosses Multicolor](/assets/images/fonts/flowery_multicolor.jpg)
- * [Handkerchief](/fonts/handkerchief/)
+ * [Handkerchief](/fr/onts/handkerchief/)
 
   ![Handkerchief](/assets/images/fonts/handkerchief.png)
-
-* [Heavenly](/fonts/heavenly/)
+* [Heavenly](/fr/fonts/heavenly/)
 
   ![Heavenly](/assets/images/fonts/heavenly.png)
-* [Jacquard 12](/fonts/jacquard_12/)
+* [Jacquard 12](/fr/fonts/jacquard_12/)
 
   ![Jacquard 12](/assets/images/fonts/jacquard12.png)
-* [Jacquarda Bastarda 9](/fonts/jacquarda_basttarda_9/)
+* [Jacquarda Bastarda 9](/fr/fonts/jacquarda_basttarda_9/)
 
-  ![Jacquard 12](/assets/images/fonts/jacquarda_bastarda.png)
-* [Jersey 15](/fonts/jersey_15/)
+  ![Jacquarda Bastarda 9J](/assets/images/fonts/jacquarda_bastarda.png)
+* [Jersey 15](/fr/fonts/jersey_15/)
 
   ![Jersey 15](/assets/images/fonts/jersey15.png)
-* [Ladies's present](/fonts/ladies_present/)
+* [Ladies's present](/fr/fonts/ladies_present/)
 
   ![Ladies's present](/assets/images/fonts/ladies_present.png)
-* [Magic Crosses](/fonts/magic_crosses/)
+* [Magic Crosses](/fr/fonts/magic_crosses/)
 
   ![Magic Crosses](/assets/images/fonts/magic_crosses.png)
 * [Montecarlo](/fr/fonts/montecarlo/)
 
   ![Montecarlo](/assets/images/fonts/montecarlo.png)
-* [Nautical](/fonts/nautical/)
+* [Nautical](/fr/fonts/nautical/)
 
   ![Nautical](/assets/images/fonts/nautical.png)
 * [Neon](/fr/fonts/neon/)
