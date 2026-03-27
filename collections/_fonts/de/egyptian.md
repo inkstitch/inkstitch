@@ -1,6 +1,6 @@
 ---
 title: "Egyptian"
-permalink: /de/fonts/egyptiaan
+permalink: /de/fonts/egyptian
 last_modified_at: 2026-03-27
 toc: false
 preview_image:
