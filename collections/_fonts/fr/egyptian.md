@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/egyptian.png
     height: 20
 data_title:
-  - egyptiaan
+  - egyptian
 ---
 {% include upcoming_release.html %}
 
