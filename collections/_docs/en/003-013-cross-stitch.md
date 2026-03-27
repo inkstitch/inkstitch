@@ -1,7 +1,7 @@
 ---
 title: "Cross Stitch"
 permalink: /docs/stitches/cross-stitch/
-last_modified_at: 2025-12-2
+last_modified_at: 2026-03-27
 toc: true
 
 feature_row:
@@ -86,7 +86,7 @@ In Ink/Stitch you can choose from various cross stitch methods.
 
   A combination of cross stitch and upright stitch, with upright cross on top.
   
-  ![Cross stitch method: double cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
+  ![Cross stitch method:Smyrna cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
 
 ### Cross Stitch Helper
 
