@@ -47,6 +47,12 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Cyrillic](/fr/fonts/cyrillic/)
 
   ![Cyrillic](/assets/images/fonts/cyrillic.png)
+* [Egyptiaaan](/fr/fonts/egyptian/)
+
+  ![Cyrillic](/assets/images/fonts/egyptian.png)
+* [Eloquent](/fr/fonts/eloquent/)
+
+  ![Cyrillic](/assets/images/fonts/eloquent.png)
 * [Flowery Crosses](/fonts/flowery_crosses/)
 
   ![Flowery Crosses](/assets/images/fonts/flowery_crosses.jpg)
@@ -54,9 +60,16 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
  * [Handkerchief](/fonts/handkerchief/)
 
   ![Handkerchief](/assets/images/fonts/handkerchief.png)
+
+* [Heavenly](/fonts/heavenly/)
+
+  ![Heavenly](/assets/images/fonts/heavenly.png)
 * [Jacquard 12](/fonts/jacquard_12/)
 
   ![Jacquard 12](/assets/images/fonts/jacquard12.png)
+* [Jacquarda Bastarda 9](/fonts/jacquarda_basttarda_9/)
+
+  ![Jacquard 12](/assets/images/fonts/jacquarda_bastarda.png)
 * [Jersey 15](/fonts/jersey_15/)
 
   ![Jersey 15](/assets/images/fonts/jersey15.png)
@@ -78,6 +91,9 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Neon blinking](/fr/fonts/neon/)
 
   ![Neon blinking](/assets/images/fonts/neon_blinking.png)
+* [Noble](/fr/fonts/noble/)
+
+  ![Noble](/assets/images/fonts/noble.png)
 * [Precious](/fr/fonts/precious/)
 
   ![Precious](/assets/images/fonts/precious.jpg)
