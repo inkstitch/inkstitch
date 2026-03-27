@@ -88,9 +88,9 @@ class CrossGeometries(object):
 
     def _potential_middle_points(self, offset=False):
         potential_middle_points = []
-        y = self._adapted_miny
+        y = self._adapted_miny - self._box_y
         while y <= self._adapted_maxy:
-            x = self._adapted_minx
+            x = self._adapted_minx - self._box_x
             while x <= self._adapted_maxx:
                 potential_middle_points.append((x + (self._box_x / 2), y))
                 potential_middle_points.append((x, y + (self._box_x / 2)))
@@ -115,9 +115,9 @@ class CrossGeometries(object):
         else:
             delta_x = 0
             delta_y = 0
-        y = self._adapted_miny + delta_y
+        y = self._adapted_miny - delta_y
         while y <= self._adapted_maxy:
-            x = self._adapted_minx + delta_x
+            x = self._adapted_minx - delta_x
             while x <= self._adapted_maxx:
                 # translate box to cross position
                 box = translate(self._square, x, y)
