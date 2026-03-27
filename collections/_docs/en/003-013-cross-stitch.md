@@ -67,11 +67,26 @@ In Ink/Stitch you can choose from various cross stitch methods.
   Please note, that this cross stitch method may produce jumps, when areas are connected only diagonally.
 
   ![Cross stitch method: upright cross](/assets/images/docs/cross_stitch_method_upright.jpg)
-* **Double cross**
 
-  A combination of cross stitch and upright stitch. As they include upright stitches, note possible jump stitches when areas touch diagonally only.
+* **Dense upright cross and  dense upright cross flipped**
 
+  More upright crosses are used to fill the shape.
+
+  Coverage is set to 50% in this sample.
+
+
+  ![Cross stitch method:  dense upright cross](/assets/images/docs/cross_stitch_method_dense_upright.jpg)
+* **Double cross and upright double cross**
+
+  A combination of cross stitch and upright stitch, with upright cross on bottom.
+  
   ![Cross stitch method: double cross](/assets/images/docs/cross_stitch_method_double_cross.jpg)
+
+* **Smyrna cross and upright Smyrnacross**
+
+  A combination of cross stitch and upright stitch, with upright cross on top.
+  
+  ![Cross stitch method: double cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
 
 ### Cross Stitch Helper
 
