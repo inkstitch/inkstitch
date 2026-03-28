@@ -5,10 +5,9 @@
 
 from collections import defaultdict
 
-from shapely import prepare
+from shapely import prepare, snap
 from shapely.affinity import translate
-from shapely.geometry import LineString, Polygon, Point, MultiPoint
-from shapely.ops import nearest_points
+from shapely.geometry import LineString, Polygon, MultiPoint
 
 from ...utils.threading import check_stop_flag
 
@@ -99,15 +98,8 @@ class CrossGeometries(object):
 
         return potential_middle_points
 
-    def _snapped_box(self, box, points):
-        snap_points = MultiPoint(points)
-        snapped_coords = []
-        for point in list(box.exterior.coords)[:4]:
-            snapped_point = nearest_points(snap_points, Point(point))[0]
-            snapped_coords.append((snapped_point.x, snapped_point.y))
-        return Polygon(snapped_coords)
-
     def _setup_crosses(self, offset=False):
+        snap_points = MultiPoint(self._potential_middle_points())
         center = list(self._square.centroid.coords)[0]
         if offset:
             delta_x = center[0]
@@ -121,7 +113,8 @@ class CrossGeometries(object):
             while x <= self._adapted_maxx:
                 # translate box to cross position
                 box = translate(self._square, x, y)
-                self._upright_box = self._snapped_box(translate(self._upright_square, x, y), self._potential_middle_points())
+                self._upright_box = translate(self._upright_square, x, y)
+                snap(self._upright_box, snap_points, 1)
                 if self._shape.contains(box):
                     self.add_cross(box, self._upright_box)
                 elif self._shape.intersects(box):
