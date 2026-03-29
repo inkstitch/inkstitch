@@ -93,7 +93,7 @@ class CrossGeometries(object):
             x = self._adapted_minx - self._box_x
             while x <= self._adapted_maxx + self._box_x:
                 potential_middle_points.append((x + (self._box_x / 2), y))
-                potential_middle_points.append((x, y + (self._box_x / 2)))
+                potential_middle_points.append((x, y + (self._box_y / 2)))
                 x += self._box_x
             y += self._box_y
 
