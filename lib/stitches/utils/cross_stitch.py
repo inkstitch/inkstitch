@@ -114,7 +114,7 @@ class CrossGeometries(object):
                 # translate box to cross position
                 box = translate(self._square, x, y)
                 self._upright_box = translate(self._upright_square, x, y)
-                snap(self._upright_box, snap_points, 1)
+                snap(self._upright_box, snap_points, 0.001)
                 if self._shape.contains(box):
                     self.add_cross(box, self._upright_box)
                 elif self._shape.intersects(box):
@@ -146,6 +146,8 @@ class CrossGeometries(object):
         center_point = list(box.centroid.coords)[0]
         corners = list(box.exterior.coords)[:4]
         middle_points = list(upright_box.exterior.coords)[:4]
+
+       # middle_points = [(round(middle_point[0],5), round(middle_point[1], 5)) for middle_point in middle_points]
 
         cross = self.cross_class(center_point, corners, middle_points, self.nb_repeats)
         self.crosses.add(cross)
