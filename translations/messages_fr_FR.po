@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-03-25 02:29+0000\n"
-"PO-Revision-Date: 2026-03-25 02:30\n"
+"POT-Creation-Date: 2026-03-26 02:36+0000\n"
+"PO-Revision-Date: 2026-03-28 02:30\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-25 02:29+0000\n"
+"POT-Creation-Date: 2026-03-26 02:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1489,7 +1489,7 @@ msgstr "Remplissage tartan : utilisation du motif par défaut"
 
 #: lib/elements/fill_stitch.py:132
 msgid "Go to Extensions > Ink/Stitch > Tools: Fill > Tartan and adjust stripe settings:"
-msgstr ""
+msgstr "Aller à Extensions > Ink/Stitch >Outils : Remplissage> Tartan et ajuster le paramétrage des bandes de couleurs:"
 
 #: lib/elements/fill_stitch.py:133
 msgid "* Customize your pattern"
@@ -1497,31 +1497,31 @@ msgstr "Personnaliser votre motif"
 
 #: lib/elements/fill_stitch.py:138
 msgid "Cross stitch: shape too small"
-msgstr ""
+msgstr "Point de croix : forme trop petite"
 
 #: lib/elements/fill_stitch.py:139
 msgid "This shape is too small to fit a cross. Please adapt params and/or shape."
-msgstr ""
+msgstr "Cette forme est trop petite pour contenir une croix. Merci d'adapter les paramètres et/ou la forme."
 
 #: lib/elements/fill_stitch.py:141
 msgid "* Change the pattern size"
-msgstr ""
+msgstr "* Changez la taille du motif"
 
 #: lib/elements/fill_stitch.py:142
 msgid "* Or adapt the grid offset or move the shape"
-msgstr ""
+msgstr "* Ou déplacez la forme ou modifiez le décalage de la grille"
 
 #: lib/elements/fill_stitch.py:143
 msgid "* Or increase the expand value or increase shape size"
-msgstr ""
+msgstr "* Ou augmentez la valeur \"élargir\" ou agrandir la taille de la forme"
 
 #: lib/elements/fill_stitch.py:144
-msgid "* Or increase the fill coverage value"
-msgstr ""
+msgid "* Or decrease the fill coverage value"
+msgstr "Ou diminuer la valeur de la couverture"
 
 #: lib/elements/fill_stitch.py:145
 msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Helper, adapt settings and pixelate the shape"
-msgstr ""
+msgstr "* Ou utiliser Extensions > Ink/Stitch > Outils : Remplissage> Assistant point de croix, adapter les réglages et pixeliser la forme"
 
 #: lib/elements/fill_stitch.py:150
 msgid "This shape is invalid"
@@ -1963,11 +1963,11 @@ msgstr "Croix Horizontale Retournée"
 
 #: lib/elements/fill_stitch.py:758
 msgid "Dense Upright Cross"
-msgstr ""
+msgstr "Croix Horizontale Dense"
 
 #: lib/elements/fill_stitch.py:759
 msgid "Dense Upright Cross Flipped"
-msgstr ""
+msgstr "Croix Horizontale Dense Retournée"
 
 #: lib/elements/fill_stitch.py:760
 msgid "Double Cross"
@@ -1979,11 +1979,11 @@ msgstr "Croix Double Retournée"
 
 #: lib/elements/fill_stitch.py:762
 msgid "Smyrna Cross"
-msgstr ""
+msgstr "Croix de Smyrne"
 
 #: lib/elements/fill_stitch.py:763
 msgid "Smyrna Cross Flipped"
-msgstr ""
+msgstr "Croix de Smyrne Retournée"
 
 #: lib/elements/fill_stitch.py:768 lib/gui/cross_stitch_helper.py:123
 msgid "Cross stitch method"
