@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-03-26 02:36+0000\n"
-"PO-Revision-Date: 2026-03-26 02:36\n"
+"PO-Revision-Date: 2026-03-30 02:44\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -1497,27 +1497,27 @@ msgstr "* Pas uw patroon aan"
 
 #: lib/elements/fill_stitch.py:138
 msgid "Cross stitch: shape too small"
-msgstr ""
+msgstr "Kruissteek: vorm te klein"
 
 #: lib/elements/fill_stitch.py:139
 msgid "This shape is too small to fit a cross. Please adapt params and/or shape."
-msgstr ""
+msgstr "Deze vorm is te klein voor een kruis. Pas de borduur instellingen en/of de vorm aan."
 
 #: lib/elements/fill_stitch.py:141
 msgid "* Change the pattern size"
-msgstr ""
+msgstr "* Wijzig de patroon grootte"
 
 #: lib/elements/fill_stitch.py:142
 msgid "* Or adapt the grid offset or move the shape"
-msgstr ""
+msgstr "* Of pas de raster verschuiving aan of verplaats de vorm"
 
 #: lib/elements/fill_stitch.py:143
 msgid "* Or increase the expand value or increase shape size"
-msgstr ""
+msgstr "* Of verhoog de uitbreidings-waarde of vergroot de vormgrootte"
 
 #: lib/elements/fill_stitch.py:144
 msgid "* Or decrease the fill coverage value"
-msgstr ""
+msgstr "* Of verlaag de vul dekkings-waarde"
 
 #: lib/elements/fill_stitch.py:145
 msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Helper, adapt settings and pixelate the shape"
@@ -1962,11 +1962,11 @@ msgstr "Vertikaal Gedraaid Kruis"
 
 #: lib/elements/fill_stitch.py:758
 msgid "Dense Upright Cross"
-msgstr ""
+msgstr "Dicht rechtopstaand kruis"
 
 #: lib/elements/fill_stitch.py:759
 msgid "Dense Upright Cross Flipped"
-msgstr ""
+msgstr "Dicht rechtopstaand kruis omgedraaid"
 
 #: lib/elements/fill_stitch.py:760
 msgid "Double Cross"
@@ -1974,15 +1974,15 @@ msgstr "Dubbel Kruis"
 
 #: lib/elements/fill_stitch.py:761
 msgid "Double Cross Flipped"
-msgstr ""
+msgstr "Dubbel kruis omgedraaid"
 
 #: lib/elements/fill_stitch.py:762
 msgid "Smyrna Cross"
-msgstr ""
+msgstr "Smyrna-kruis"
 
 #: lib/elements/fill_stitch.py:763
 msgid "Smyrna Cross Flipped"
-msgstr ""
+msgstr "Smyrna-kruis omgedraaid"
 
 #: lib/elements/fill_stitch.py:768 lib/gui/cross_stitch_helper.py:123
 msgid "Cross stitch method"
@@ -2093,7 +2093,7 @@ msgstr "Niet te stikken satijnen kolom"
 
 #: lib/elements/satin_column.py:35
 msgid "A satin column can be build from a single stroke or consists of two rails and optional rungs. This satin column has a different setup."
-msgstr ""
+msgstr "Een satijnen kolom kan worden opgebouwd uit één enkele slag of uit twee rails en optionele sporten. Deze satijnen kolom heeft een andere constructie."
 
 #: lib/elements/satin_column.py:38
 msgid "Make sure your satin column is not a combination of multiple satin columns."
@@ -2150,7 +2150,7 @@ msgstr "* Houdt \"Shift\" ingedrukt tijdens het tekenen van een sport."
 
 #: lib/elements/satin_column.py:70
 msgid "Rung intersects too many times"
-msgstr ""
+msgstr "De sporten kruisen elkaar te vaak"
 
 #: lib/elements/satin_column.py:71
 msgid "Satin column: A rung intersects a rail more than once."
@@ -3064,19 +3064,19 @@ msgstr "Filter steken kleiner dan (mm)"
 
 #: lib/extensions/fill_to_satin.py:45
 msgid "No fill element selected. Please select a fill element."
-msgstr ""
+msgstr "Er is geen invulelement geselecteerd. Selecteer een invulelement."
 
 #: lib/extensions/fill_to_satin.py:47
 msgid "A fill element has a fill color and serves as the outline of the satin column."
-msgstr ""
+msgstr "Een invulelement heeft een opvulkleur en dient als omtreklijn voor de satijnen kolom."
 
 #: lib/extensions/fill_to_satin.py:51
 msgid "No rungs selected. Please select rungs."
-msgstr ""
+msgstr "Geen sporten geselecteerd. Selecteer sporten."
 
 #: lib/extensions/fill_to_satin.py:53
 msgid "Rungs are elements with a stroke color. They serve as the stitch direction for a satin column."
-msgstr ""
+msgstr "De sporten zijn elementen met een gekleurde lijn. Ze dienen als steekrichting voor een satijn steek."
 
 #: lib/extensions/fill_to_satin.py:81
 msgid "These fill elements do not intersect with any of the selected rungs and will not be converted:"
@@ -3788,7 +3788,7 @@ msgstr "Met deze extensie worden de dichtst bijzijnde kleuren uit het gekozen kl
 
 #: lib/gui/apply_palette.py:70 lib/gui/apply_palette.py:71
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
-msgstr ""
+msgstr "https://inkstitch.org/docs/thread-color/#toepassing-palet"
 
 #: lib/gui/cross_stitch_helper.py:17
 msgid "Ink/Stitch - Cross stitch"
@@ -4038,7 +4038,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:432
 msgid "Reset values"
-msgstr ""
+msgstr "Waarden herzetten"
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
@@ -4651,15 +4651,15 @@ msgstr "Meer kleurige satijn groep"
 
 #: lib/gui/selection_to_pattern.py:30
 msgid "Interval"
-msgstr ""
+msgstr "Interval"
 
 #: lib/gui/selection_to_pattern.py:35
 msgid "Start offset"
-msgstr ""
+msgstr "Begin offset"
 
 #: lib/gui/selection_to_pattern.py:40
 msgid "Remove pattern marker"
-msgstr ""
+msgstr "Verwijderen patroon markering"
 
 #: lib/gui/selection_to_pattern.py:62
 msgid "Patterns add or remove nodes from embroidery elements.\n"
@@ -4667,7 +4667,11 @@ msgid "Patterns add or remove nodes from embroidery elements.\n"
 "- Stroke patterns add nodes\n"
 "  A predefined interval allows stroke patterns to skip intersection points\n"
 "- Fill patterns remove nodes"
-msgstr ""
+msgstr "Patronen voegen knooppunten toe aan of verwijderen knooppunten van borduur elementen.\n\n"
+"De beoogde borduur elementen moeten zich in dezelfde groep bevinden als dit patroon.\n\n"
+"- Lijn patronen voegen knooppunten toe\n\n"
+"Een vooraf gedefinieerd interval maakt het mogelijk om snijpunten van lijn patronen over te slaan\n"
+"- Vul patronen verwijderen knooppunten"
 
 #: lib/gui/selection_to_pattern.py:80 lib/gui/selection_to_pattern.py:81
 msgid "https://inkstitch.org/docs/stitches/patterns/"
@@ -5072,7 +5076,7 @@ msgstr "Meer informatie vindt u op onze website"
 
 #: lib/gui/test_swatches.py:106 lib/gui/test_swatches.py:107
 msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
-msgstr ""
+msgstr "https://inkstitch.org/docs/edit/#generate-test-exemplaren-van-selectie"
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
@@ -7905,7 +7909,7 @@ msgstr "Het gegenereerde bestand kan worden bijgewerkt met Extensies > Inkt/Stit
 
 #: inx/inkstitch_lettering_generate_json.inx:163
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#generate-json"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:3
 msgid "Organize Glyphs"
@@ -7961,7 +7965,7 @@ msgstr "Met deze extensie kan de lettertype digitaliseerder zijn werk in stappen
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:31
 msgid "https://inkstitch.org/docs/font-tools/#organize_glyphs"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#organiseer symbolen"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:39
 msgid "Help with composed glyphs like é,ç or ï"
@@ -7985,7 +7989,7 @@ msgstr "⚠ Zorg ervoor dat u een kopie van het originele bestand bewaart. Na he
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#verwijder spatie"
 
 #: inx/inkstitch_lettering_remove_kerning.inx:30
 msgid "Removes Kerning information from specified SVG files"
@@ -8009,7 +8013,7 @@ msgstr "Hiermee wordt de volgorde van elementen voor meerkleurige lettertypen in
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:20
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/# zet kleur sorteer index"
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:27
 msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"
@@ -8069,7 +8073,7 @@ msgstr "⚠ Nadat u deze functie hebt uitgevoerd, sleept u de basis lijn naar de
 
 #: inx/inkstitch_letters_to_font.inx:76
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
-msgstr ""
+msgstr "https://inkstitch.org/docs/font-tools/#letters-naar-lettertype"
 
 #: inx/inkstitch_letters_to_font.inx:83
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
@@ -8157,7 +8161,7 @@ msgstr "Met deze extensie kunt u een origineel object uit een steek bestand reco
 
 #: inx/inkstitch_outline.inx:29
 msgid "https://inkstitch.org/docs/stroke-tools/#outline"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools/#omlijning"
 
 #: inx/inkstitch_outline.inx:36
 msgid "Generates an outline around stitch paths"
@@ -8683,7 +8687,7 @@ msgstr "Gebruik deze extensie om de informatie te verwijderen die Ink/Stitch in 
 
 #: inx/inkstitch_remove_embroidery_settings.inx:144
 msgid "https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings"
-msgstr ""
+msgstr "https://inkstitch.org/docs/troubleshoot/#borduur instellingen verwijderen"
 
 #: inx/inkstitch_remove_embroidery_settings.inx:152
 msgid "Remove specific or all embroidery settings from the document"
@@ -8719,7 +8723,7 @@ msgstr "Converteert een satijn kolom naar een loop steek."
 
 #: inx/inkstitch_satin_to_stroke.inx:16
 msgid "https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke"
-msgstr ""
+msgstr "https://inkstitch.org/docs/stroke-tools/#satijn naar lijn omzetten"
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
