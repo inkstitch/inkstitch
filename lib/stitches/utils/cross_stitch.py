@@ -122,7 +122,9 @@ class CrossGeometries(object):
             while x <= self._adapted_maxx:
                 # translate box to cross position
                 box = translate(self._square, x, y)
-                self._upright_box = self._snapped_box(translate(self._upright_square, x, y), snap_points)
+                self._upright_box = translate(self._upright_square, x, y)
+                if "dense" in self.cross_stitch_method:
+                    self._upright_box = self._snapped_box(self._upright_box, snap_points)
                 if self._shape.contains(box):
                     self.add_cross(box, self._upright_box)
                 elif self._shape.intersects(box):
