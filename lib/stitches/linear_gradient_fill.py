@@ -27,10 +27,21 @@ from .running_stitch import random_running_stitch
 
 
 def linear_gradient_fill(fill, shape, starting_point, ending_point):
-    lines, colors, stop_color_line_indices = _get_lines_and_colors(shape, fill)
+    if fill.gradient is None:
+        lines, colors, stop_color_line_indices = _get_lines_and_colors_without_gradient(shape, fill)
+    else:
+        lines, colors, stop_color_line_indices = _get_lines_and_colors(shape, fill)
     color_lines, colors = _get_color_lines(lines, colors, stop_color_line_indices)
     stitch_groups = _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_point)
     return stitch_groups
+
+
+def _get_lines_and_colors_without_gradient(shape, fill):
+    # there is no linear gradient, let's simply space out one single color
+    lines, _ = _get_lines(fill, shape, shape.bounds, fill.angle)
+    colors = [fill.color, 'none']
+    stop_color_line_indices = [0, len(lines)]
+    return lines, colors, stop_color_line_indices
 
 
 def _get_lines_and_colors(shape, fill):
@@ -60,31 +71,23 @@ def _get_lines_and_colors(shape, fill):
 
 
 def _get_gradient_info(fill, bbox):
-    if fill.gradient is None:
-        # there is no linear gradient, let's simply space out one single color instead
-        angle = fill.angle
-        offsets = [0, 1]
-        colors = [fill.color, 'none']
-        gradient_start = (bbox[0], bbox[1])
-        gradient_end = (bbox[2], bbox[3])
-    else:
-        fill.gradient.apply_transform()
-        offsets = fill.gradient.stop_offsets
-        # get stop colors
-        # it would be easier if we just used fill.gradient.stop_styles to collect them
-        # but inkex/tinycss fails on stop color styles when it is not in the style attribute, but in it's own stop-color attribute
-        colors = []
-        for i, stop in enumerate(fill.gradient.stops):
-            try:
-                color = stop.get_computed_style('stop-color')
-            except ColorError:
-                color = Color('black')
-            opacity = stop.get_computed_style('stop-opacity')
-            if float(opacity) == 0:
-                color = 'none'
-            colors.append(color)
-        gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
-        angle = gradient_angle(fill.node, fill.gradient)
+    fill.gradient.apply_transform()
+    offsets = fill.gradient.stop_offsets
+    # get stop colors
+    # it would be easier if we just used fill.gradient.stop_styles to collect them
+    # but inkex/tinycss fails on stop color styles when it is not in the style attribute, but in it's own stop-color attribute
+    colors = []
+    for i, stop in enumerate(fill.gradient.stops):
+        try:
+            color = stop.get_computed_style('stop-color')
+        except ColorError:
+            color = Color('black')
+        opacity = stop.get_computed_style('stop-opacity')
+        if float(opacity) == 0:
+            color = 'none'
+        colors.append(color)
+    gradient_start, gradient_end = gradient_start_end(fill.node, fill.gradient)
+    angle = gradient_angle(fill.node, fill.gradient)
     return angle, colors, offsets, Point(list(gradient_start)), Point(list(gradient_end))
 
 
