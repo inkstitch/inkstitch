@@ -9,7 +9,7 @@ from collections import deque
 
 import networkx as nx
 from shapely.affinity import rotate
-from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
+from shapely.geometry import LineString, MultiPoint, Point
 from shapely.ops import nearest_points
 
 from ..stitch_plan import Stitch
@@ -45,7 +45,9 @@ def cross_stitch(fill, shape, starting_point, ending_point):
         # - thread count option (bean stitch repeats)
         #   bean stitch repeats will always return an odd thread count, opposed to the other cross stitch methods
         thread_count = thread_count // 2
-        return [half_cross_stitch(fill, shape, starting_point, ending_point, thread_count, rotation_center)]
+        stitches = half_cross_stitch(fill, shape, starting_point, ending_point, thread_count)
+        stitches = _grid_unrotate(stitches, fill.cross_rotation, rotation_center)
+        return [stitches]
     # cross stitch method only takes even thread counts
     # it starts and ends at the same position
     if starting_point is None:
@@ -53,10 +55,52 @@ def cross_stitch(fill, shape, starting_point, ending_point):
         ending_point = None
     if thread_count % 2 != 0:
         thread_count -= 1
-    return even_cross_stitch(fill, shape, starting_point, ending_point, thread_count, rotation_center)
+    stitches = even_cross_stitch(fill, shape, starting_point, ending_point, thread_count)
+    if fill.cross_rotation != 0:
+        rotated_stitches = []
+        for stitch_group in stitches:
+            rotated_stitches.append(_grid_unrotate(stitch_group, fill.cross_rotation, rotation_center))
+        stitches = rotated_stitches
+    return stitches
 
 
-def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count, rotation_center):
+def _grid_rotate(fill, shape):
+    # When we rotate a cross stitch shape (for example with lettering along path)
+    # we want to preserve the cross stitch positions of the unrotated shape
+    # It is way easier to rotate the shape and rotate it back, than trying to apply the rotations on each cross stitch area
+    # The rotation center is taken from inkscapes transform center values, so that users can actually manipulate the effect
+    if fill.cross_rotation == 0:
+        return (0, 0), shape
+
+    minx, miny, maxx, maxy = shape.bounds
+    rotation_center_x = fill.node.get('inkscape:transform-center-x', None)
+    rotation_center_y = fill.node.get('inkscape:transform-center-y', None)
+    if not fill.canvas_grid_origin and rotation_center_x and rotation_center_y:
+        center = list(LineString([(minx, miny), (maxx, maxy)]).centroid.coords[0])
+        rotation_center_x_px = fill.node.unit_to_viewport(rotation_center_x)
+        rotation_center_y_px = fill.node.unit_to_viewport(rotation_center_y)
+        x = center[0] + rotation_center_x_px
+        y = center[1] - rotation_center_y_px
+        rotation_center = (x, y)
+    elif not fill.canvas_grid_origin:
+        rotation_center = (minx, maxy)
+    else:
+        rotation_center = fill.cross_offset
+    rotated_shape = rotate(shape, -fill.cross_rotation, origin=rotation_center)
+    return rotation_center, rotated_shape
+
+
+def _grid_unrotate(stitches, angle, origin):
+    if angle == 0:
+        return stitches
+    # Reverse the rotation we have applied to the cross stitch shape (fill.cross_rotation)
+    rotated_stitches = []
+    for stitch_list in stitches:
+        rotated_stitches.append([stitch.rotate(angle, origin) for stitch in stitch_list])
+    return rotated_stitches
+
+
+def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count):
     """ Cross stitch algorithm for all cross stitch types except for half crosses and their reverse version
 
         Steps:
@@ -81,10 +125,10 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count, r
         # to consider flipping in our stitch generation.
 
         if starting_point:
-            starting_point = _flip_coords(Point(starting_point).x, Point(starting_point).y)
+            starting_point = _rotate_coords(Point(starting_point).x, Point(starting_point).y)
 
         if ending_point:
-            ending_point = _flip_coords(Point(ending_point).x, Point(ending_point).y)
+            ending_point = _rotate_coords(Point(ending_point).x, Point(ending_point).y)
         shape = rotate(shape, 90, origin=(0, 0))
 
     cross_geoms = CrossGeometries(shape, fill.pattern_size, fill.fill_coverage, method, fill.cross_offset, fill.canvas_grid_origin, thread_count)
@@ -93,46 +137,11 @@ def even_cross_stitch(fill, shape, starting_point, ending_point, thread_count, r
 
     eulerian_cycles = _build_eulerian_cycles(subgraphs, starting_point, ending_point, cross_geoms)
 
-    eulerian_cycles = _grid_unrotate_eulerian_cycles(fill, eulerian_cycles, rotation_center)
-
     stitches = _cycles_to_stitches(eulerian_cycles, fill.max_cross_stitch_length, flipped)
     if stitches:
         return [stitches]
     else:
         return []
-
-
-def _grid_rotate(fill, shape):
-    # When we rotate a cross stitch shape (for example with lettering along path)
-    # we want to preserve the cross stitch positions of the unrotated shape
-    # It is way easier to rotate the shape and rotate it back, than trying to apply the rotations on each cross stitch area
-    # The rotation center is taken from inkscapes transform center values, so that users can actually manipulate the effect
-    minx, miny, maxx, maxy = shape.bounds
-    rotation_center = (minx, maxy)
-    if fill.cross_rotation != 0:
-        rotation_center_x = fill.node.get('inkscape:transform-center-x', None)
-        rotation_center_y = fill.node.get('inkscape:transform-center-y', None)
-        if not fill.canvas_grid_origin and rotation_center_x and rotation_center_y:
-            center = list(LineString([(minx, miny), (maxx, maxy)]).centroid.coords[0])
-            rotation_center_x_px = fill.node.unit_to_viewport(rotation_center_x)
-            rotation_center_y_px = fill.node.unit_to_viewport(rotation_center_y)
-            x = center[0] + rotation_center_x_px
-            y = center[1] - rotation_center_y_px
-            rotation_center = (x, y)
-        rotated_shape = rotate(shape, -fill.cross_rotation, origin=rotation_center)
-    return rotation_center, rotated_shape
-
-
-def _grid_unrotate_eulerian_cycles(fill, eulerian_cycles, rotation_center):
-    if eulerian_cycles and fill.cross_rotation != 0:
-        # rotate back into correct position
-        cycles = []
-        multi_line = MultiLineString(eulerian_cycles)
-        rotated_line = rotate(multi_line, fill.cross_rotation, origin=rotation_center)
-        for geom in rotated_line.geoms:
-            cycles.append(list(geom.coords))
-        eulerian_cycles = cycles
-    return eulerian_cycles
 
 
 def get_corner(point, subcrosses):
@@ -309,11 +318,11 @@ def find_available_crosses(subgraph, crosses):
     return [cross for cross in crosses if is_cross_in_subgraph(cross, subgraph)]
 
 
-def _flip_coords(x, y):
+def _rotate_coords(x, y):
     return -y, x
 
 
-def _unflip_coords(x, y):
+def _unrotate_coords(x, y):
     return y, -x
 
 
@@ -324,11 +333,11 @@ def _cycles_to_stitches(eulerian_cycles, max_stitch_length, flip):
         if cycle is not None:
             last_point = cycle[0]
             if flip:
-                last_point = _unflip_coords(*last_point)
+                last_point = _unrotate_coords(*last_point)
             cycle_stitches.append(Stitch(*last_point, tags=["cross_stitch"]))
             for point in cycle[1:]:
                 if flip:
-                    point = _unflip_coords(*point)
+                    point = _unrotate_coords(*point)
                 if point == last_point:
                     continue
                 line = LineString([last_point, point]).segmentize(max_stitch_length)

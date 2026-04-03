@@ -20,7 +20,7 @@ from .running_stitch import bean_stitch
 from .utils.cross_stitch import CrossGeometries
 
 
-def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_repeats, rotation_center, original_shape=None):
+def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_repeats, original_shape=None):
     ''' Half crosses in machine embroidery have unavoidably strongly visible travel stitches along the outline.
         They behave much like an auto_fill in 45 degree angle. They only differ from auto-fill in:
         - their pixelated outline
@@ -32,7 +32,6 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
         starting_point:         defines where to start
         ending_point:           defines where to end
         bean_stitch_repeats:    defines the thread count (odd number)
-        rotation_center:        the rotation center to unrotate the grid rotation (which is already applied at this point)
         original_shape:         helps to define a consistent grid offset when the shape had to be split up into multiple shapes
     '''
 
@@ -62,9 +61,7 @@ def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_rep
     # The cross stitch diagonals
     diagonals = ensure_multi_line_string(line_merge(MultiLineString(cross_geoms.diagonals).segmentize(max_stitch_length)))
 
-    stitches = _lines_to_stitches(
-        diagonals, outline, max_stitch_length, bean_stitch_repeats, fill.cross_rotation, rotation_center, starting_point, ending_point
-    )
+    stitches = _lines_to_stitches(diagonals, outline, max_stitch_length, bean_stitch_repeats, starting_point, ending_point)
     if stitches:
         return [stitches]
     else:
@@ -92,7 +89,7 @@ def cross_stitch_multiple(outline, fill, starting_point, ending_point, bean_stit
     return stitches
 
 
-def _lines_to_stitches(line_geoms, shape, max_stitch_length, bean_stitch_repeats, cross_rotation, rotation_center, starting_point, ending_point):
+def _lines_to_stitches(line_geoms, shape, max_stitch_length, bean_stitch_repeats, starting_point, ending_point):
     segments = []
     for line in line_geoms.geoms:
         segments.append(list(line.coords))
@@ -110,7 +107,7 @@ def _lines_to_stitches(line_geoms, shape, max_stitch_length, bean_stitch_repeats
     travel_graph = build_travel_graph(fill_stitch_graph, shape, 0, False)
 
     path = find_stitch_path(fill_stitch_graph, travel_graph, starting_point, ending_point, False)
-    result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_length, cross_rotation, rotation_center)
+    result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_length)
 
     if bean_stitch_repeats >= 1:
         # add bean stitches, but ignore travel stitches
@@ -118,7 +115,7 @@ def _lines_to_stitches(line_geoms, shape, max_stitch_length, bean_stitch_repeats
     return result
 
 
-def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_length, cross_rotation, rotation_center):
+def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_length):
     ''' Convert path to stitch data
     '''
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
@@ -146,7 +143,4 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_le
         else:
             stitches.extend(travel(shape, travel_graph, edge, [max_stitch_length], 0.2, False, False))
 
-    if cross_rotation != 0:
-        # Rotate stitches back into position of the unrotated shape
-        stitches = [stitch.rotate(cross_rotation, rotation_center) for stitch in stitches]
     return stitches
