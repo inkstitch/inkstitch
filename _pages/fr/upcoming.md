@@ -234,6 +234,12 @@ Lorsque plusieurs valeurs sont définies, la colonne satin les utilise alternati
 * Ajout de l'option de paramètre répétition de point multiple  [#4127](https://github.com/inkstitch/inkstitch/pull/4127)
 * Ajout du paramètre angle [#4141](https://github.com/inkstitch/inkstitch/pull/4141)
 
+### Patterns
+
+* Patterns: add interval option for stroke patterns [#4250](https://github.com/inkstitch/inkstitch/pull/4250)
+
+  This option allows to skip intersection points on the stitch path (for example every second one)
+
 ## Nouvelles extensions
 
 ### Appliquer un attribut
@@ -349,6 +355,13 @@ Un outil permettant aux auteurs de polices d'activer automatiquement l'option de
 
 [En savoir plus](/fr/docs/font-tools/#force-lock-stitches)
 
+### Jump stitch to Stroke
+
+Value settings have been re-labeled and slightly adjusted [#4239](https://github.com/inkstitch/inkstitch/pull/4239):
+
+* Convert jumps longer than (mm): A value of 0 defaults to the actual minimum jump stitch length.
+* Convert jumps shorter than (mm): A value of 0 means no size limit.
+
 ### Conversion des sauts de point en commandes de coupe/arrêt
 
 Convertit les sauts de point en commandes de coupe.
@@ -419,6 +432,10 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Corrections de bugs
 
+* EditJson: specify encoding on json load - fixes the extension for Windows users [#4258](https://github.com/inkstitch/inkstitch/pull/4258)
+* Fill to satin: improve warnings and error messages [#4244](https://github.com/inkstitch/inkstitch/pull/4244)
+* Fix bbox for gradient blocks [#4248](https://github.com/inkstitch/inkstitch/pull/4248)
+* Skip clamping when buffering the polygon returns GEOSException [#4221](https://github.com/inkstitch/inkstitch/pull/4221)
 * Satin column: start at nearest: allow to connect to outline when centerline has a greater distance than min jump stitch length [#4220](https://github.com/inkstitch/inkstitch/pull/4220)
 * Break apart: fix issue with area size value (can be negtative) [#4173](https://github.com/inkstitch/inkstitch/pull/4173)
 * Stroke: ignore invalid shapes in first_stitch [#4178](https://github.com/inkstitch/inkstitch/pull/4178)

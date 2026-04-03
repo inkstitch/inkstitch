@@ -83,8 +83,8 @@ Ink/Stitch kennt verschiedene Kreuzstich-Methoden.
 
 * **Smyrna Kreuz und Smyrna Kreuz (gedreht)**
 
- Eine Kombination von Kreuzstichen und aufrechten Kreuzstichen. Das aufrechte Kreuz liegt oben.
-  
+  Eine Kombination von Kreuzstichen und aufrechten Kreuzstichen. Das aufrechte Kreuz liegt oben.
+
   ![Cross stitch method:Smyrna cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
 
 ### Kreuzstich-Helfer

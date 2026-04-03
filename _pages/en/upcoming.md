@@ -127,8 +127,6 @@ To comply with reserved font names in some OFL licenses, we had to rename some I
 |Manuskript Gothisch|Pisankris|
 |Lobster AGS| Stebor AGS|
 
-
-
 ### Font updates
 
 Numerous updates to existing fonts were made. Thanks to everyone involved!
@@ -229,6 +227,12 @@ When multiple values are set, the satin column will use these to level consecuti
 
 * Add bean stitch parameter option [#4127](https://github.com/inkstitch/inkstitch/pull/4127)
 * Add zigzag angle parameter [#4141](https://github.com/inkstitch/inkstitch/pull/4141)
+
+### Patterns
+
+* Patterns: add interval option for stroke patterns [#4250](https://github.com/inkstitch/inkstitch/pull/4250)
+
+  This option allows to skip intersection points on the stitch path (for example every second one)
 
 ## New extensions
 
@@ -340,6 +344,13 @@ A tool for font authors to automatically set the force lock stitch option when a
 
 [Read more](/docs/font-tools/#force-lock-stitches)
 
+### Jump stitch to Stroke
+
+Value settings have been re-labeled and slightly adjusted [#4239](https://github.com/inkstitch/inkstitch/pull/4239):
+
+* Convert jumps longer than (mm): A value of 0 defaults to the actual minimum jump stitch length.
+* Convert jumps shorter than (mm): A value of 0 means no size limit.
+
 ### Jump Stitch to Trim/Stop command
 
 Converts jumps to trim commands.
@@ -408,6 +419,10 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Bugfixes
 
+* EditJson: specify encoding on json load - fixes the extension for Windows users [#4258](https://github.com/inkstitch/inkstitch/pull/4258)
+* Fill to satin: improve warnings and error messages [#4244](https://github.com/inkstitch/inkstitch/pull/4244)
+* Fix bbox for gradient blocks [#4248](https://github.com/inkstitch/inkstitch/pull/4248)
+* Skip clamping when buffering the polygon returns GEOSException [#4221](https://github.com/inkstitch/inkstitch/pull/4221)
 * Satin column: start at nearest: allow to connect to outline when centerline has a greater distance than min jump stitch length [#4220](https://github.com/inkstitch/inkstitch/pull/4220)
 * Break apart: fix issue with area size value (can be negtative) [#4173](https://github.com/inkstitch/inkstitch/pull/4173)
 * Stroke: ignore invalid shapes in first_stitch [#4178](https://github.com/inkstitch/inkstitch/pull/4178)
