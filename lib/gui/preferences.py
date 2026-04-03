@@ -35,9 +35,10 @@ class PreferencesFrame(wx.Frame):
         # add space above and below to center sizer_2 vertically
         this_svg_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
-        this_svg_grid = wx.FlexGridSizer(3, 4, 15, 10)
+        this_svg_grid = wx.FlexGridSizer(4, 4, 15, 10)
         this_svg_margin.Add(this_svg_grid, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
 
+        # Minimum jump stitch length
         label_1 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("Minimum jump stitch length"), style=wx.ALIGN_LEFT)
         label_1.SetToolTip(_("Jump stitches smaller than this will be treated as normal stitches."))
         this_svg_grid.Add(label_1, 1, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
@@ -56,6 +57,7 @@ class PreferencesFrame(wx.Frame):
         self.button_1 = wx.Button(self.this_svg_page, wx.ID_ANY, _("Set As Default"))
         this_svg_grid.Add(self.button_1, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
+        # Minimum stitch length
         label_3 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("Minimum stitch length"))
         this_svg_grid.Add(label_3, 0, 0, 0)
 
@@ -73,6 +75,26 @@ class PreferencesFrame(wx.Frame):
         self.button_2 = wx.Button(self.this_svg_page, wx.ID_ANY, _("Set As Default"))
         this_svg_grid.Add(self.button_2, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
+        # Minimum stroke width
+        label_11 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("Minimum satin stroke width"), style=wx.ALIGN_LEFT)
+        label_11.SetToolTip(_("Strokes thinner than this value will not take a satin parameter."))
+        this_svg_grid.Add(label_11, 1, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
+
+        self.min_satin_stroke_width = wx.SpinCtrlDouble(
+            self.this_svg_page, wx.ID_ANY, inc=0.1,
+            value=str(metadata['min_satin_stroke_width_mm']) or str(global_settings['default_min_satin_stroke_width_mm']),
+            style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
+        )
+        self.min_satin_stroke_width.SetDigits(2)
+        this_svg_grid.Add(self.min_satin_stroke_width, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        label_12 = wx.StaticText(self.this_svg_page, wx.ID_ANY, _("mm"))
+        this_svg_grid.Add(label_12, 0, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
+
+        self.button_3 = wx.Button(self.this_svg_page, wx.ID_ANY, _("Set As Default"))
+        this_svg_grid.Add(self.button_3, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        # Rotate on export
         label_rotate = wx.StaticText(self.this_svg_page, label=_("Rotate on export"))
         label_rotate.SetToolTip(_(
             "Some embroidery machines don't automatically rotate files to fit into the hoop."
@@ -105,9 +127,10 @@ class PreferencesFrame(wx.Frame):
         # add space above and below to center sizer_4 vertically
         global_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
-        global_grid_sizer = wx.FlexGridSizer(3, 4, 15, 10)
+        global_grid_sizer = wx.FlexGridSizer(4, 4, 15, 10)
         global_margin.Add(global_grid_sizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
 
+        # Default minimum jump stitch length
         label_5 = wx.StaticText(self.global_page, wx.ID_ANY, _("Default minimum jump stitch length"), style=wx.ALIGN_LEFT)
         label_5.SetToolTip(_("Jump stitches smaller than this will be treated as normal stitches."))
         global_grid_sizer.Add(label_5, 1, wx.ALIGN_CENTER_VERTICAL | wx.RIGHT, 15)
@@ -125,6 +148,7 @@ class PreferencesFrame(wx.Frame):
 
         global_grid_sizer.Add((0, 0), 0, 0, 0)
 
+        # Default minimum stitch length
         label_7 = wx.StaticText(self.global_page, wx.ID_ANY, _("Minimum stitch length"))
         global_grid_sizer.Add(label_7, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
@@ -141,6 +165,24 @@ class PreferencesFrame(wx.Frame):
 
         global_grid_sizer.Add((0, 20), 0, 0, 0)
 
+        # Default minimum satin stroke width
+        label_13 = wx.StaticText(self.global_page, wx.ID_ANY, _("Minimum satin stroke width"))
+        global_grid_sizer.Add(label_13, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        self.default_min_satin_stroke_width = wx.SpinCtrlDouble(
+            self.global_page, wx.ID_ANY, inc=0.1,
+            value=str(global_settings['default_min_satin_stroke_width_mm']),
+            style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
+        )
+        self.default_min_satin_stroke_width.SetDigits(2)
+        global_grid_sizer.Add(self.default_min_satin_stroke_width, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        label_14 = wx.StaticText(self.global_page, wx.ID_ANY, _("mm"))
+        global_grid_sizer.Add(label_14, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        global_grid_sizer.Add((0, 20), 0, 0, 0)
+
+        # Stitch plan cache size
         label_9 = wx.StaticText(self.global_page, wx.ID_ANY, _("Stitch plan cache size (0 to disable cache)"), style=wx.ALIGN_LEFT)
         global_grid_sizer.Add(label_9, 1, wx.ALIGN_CENTER_VERTICAL, 0)
 
@@ -187,6 +229,7 @@ class PreferencesFrame(wx.Frame):
 
         self.Bind(wx.EVT_BUTTON, self.set_as_default_minimum_jump_stitch_length, self.button_1)
         self.Bind(wx.EVT_BUTTON, self.set_as_default_minimum_stitch_length, self.button_2)
+        self.Bind(wx.EVT_BUTTON, self.set_as_default_min_satin_stroke_width, self.button_3)
         self.Bind(wx.EVT_BUTTON, self.clear_cache, self.clear_cache_button)
         self.Bind(wx.EVT_BUTTON, self.cancel_button_clicked, self.cancel_button)
         self.Bind(wx.EVT_BUTTON, self.ok_button_clicked, self.ok_button)
@@ -197,6 +240,9 @@ class PreferencesFrame(wx.Frame):
     def set_as_default_minimum_stitch_length(self, event):
         self.default_minimum_stitch_length.SetValue(self.minimum_stitch_length.GetValue())
 
+    def set_as_default_min_satin_stroke_width(self, event):
+        self.default_min_satin_stroke_width.SetValue(self.min_satin_stroke_width.GetValue())
+
     def clear_cache(self, event):
         stitch_plan_cache = get_stitch_plan_cache()
         stitch_plan_cache.clear(retry=True)
@@ -205,10 +251,12 @@ class PreferencesFrame(wx.Frame):
         metadata = self.extension.get_inkstitch_metadata()
         metadata['min_stitch_len_mm'] = self.minimum_stitch_length.GetValue()
         metadata['collapse_len_mm'] = self.minimum_jump_stitch_length.GetValue()
+        metadata['min_satin_stroke_width_mm'] = self.min_satin_stroke_width.GetValue()
         metadata['rotate_on_export'] = self.rotate_on_export_choices[self.rotate_on_export.GetCurrentSelection()][1]
 
         global_settings['default_min_stitch_len_mm'] = self.default_minimum_stitch_length.GetValue()
         global_settings['default_collapse_len_mm'] = self.default_minimum_jump_stitch_length.GetValue()
+        global_settings['default_min_satin_stroke_width_mm'] = self.default_min_satin_stroke_width.GetValue()
         global_settings['cache_size'] = self.stitch_plan_cache_size.GetValue()
 
         # cache size may have changed
