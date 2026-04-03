@@ -838,6 +838,21 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param(
+        'cross_rotation',
+        _('Grid Rotation'),
+        tooltip=_('Rotates the cross stitch grid by the given value.'),
+        select_items=[('fill_method', 'cross_stitch')],
+        unit=_('deg'),
+        type='float',
+        default=0,
+        sort_index=14
+    )
+    @cache
+    def cross_rotation(self):
+        return self.get_float_param("cross_rotation", 0)
+
+    @property
+    @param(
         'fill_coverage',
         _("Fill coverage"),
         tooltip=_("Percentage of overlap for each cross with the fill area"),
@@ -845,7 +860,7 @@ class FillStitch(EmbroideryElement):
         default="50",
         unit='%',
         select_items=[('fill_method', 'cross_stitch')],
-        sort_index=14
+        sort_index=15
     )
     def fill_coverage(self):
         return max(1, self.get_int_param("fill_coverage", 50))
