@@ -1,7 +1,7 @@
 ---
 title: "Kreuzstich"
 permalink: /de/docs/stitches/cross-stitch/
-last_modified_at: 2026-03-26
+last_modified_at: 2026-04-03
 toc: true
 
 feature_row:
@@ -67,23 +67,23 @@ Ink/Stitch kennt verschiedene Kreuzstich-Methoden.
 
   ![Cross stitch method: upright cross](/assets/images/docs/cross_stitch_method_upright.jpg)
 
-* **Dense upright cross and  dense upright cross flipped**
+* **Kompakter aufrechter Kreuzstich und kompakter aufrechter Kreuzstich (gedreht)**
 
-  More upright crosses are used to fill the shape.
+  Ein weiterer aufrechter Kreuzstich, der ein dichteres Stickbild erzeugt.
 
-  Coverage is set to 50% in this sample.
-
+  Der Wert für die Füllabdeckung ist in diesem Beispiel 50%.
 
   ![Cross stitch method:  dense upright cross](/assets/images/docs/cross_stitch_method_dense_upright.jpg)
-* **Doppeltes Kreuz und Doppeltes Kreuz (gedreht)**
 
-  Eine Kombination von Kreuzstichen und aufrechten Kreuzstichen;  with upright cross on bottom.
+* **Doppeltes Kreuz und doppeltes Kreuz (gedreht)**
+
+  Eine Kombination von Kreuzstichen und aufrechten Kreuzstichen. Das aufrechte Kreuz liegt unten.
 
   ![Cross stitch method: double cross](/assets/images/docs/cross_stitch_method_double_cross.jpg)
 
 * **Smyrna Kreuz und Smyrna Kreuz (gedreht)**
 
- Eine Kombination von Kreuzstichen und aufrechten Kreuzstichen;  with upright cross on top.
+ Eine Kombination von Kreuzstichen und aufrechten Kreuzstichen. Das aufrechte Kreuz liegt oben.
   
   ![Cross stitch method:Smyrna cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
 
