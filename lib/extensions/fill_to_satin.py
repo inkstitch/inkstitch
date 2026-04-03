@@ -260,6 +260,8 @@ class FillElementToSatin:
     def _combined_segments_to_satin_geoms(self, combined_rails, combined_rungs, satin_segments):
         combined_satins = []
         for i, segments in combined_rails.items():
+            if not combined_rungs[i]:
+                continue
             segment_geoms = []
             for segment_index in set(segments):
                 segment_geoms.extend(list(satin_segments[segment_index].geoms))
