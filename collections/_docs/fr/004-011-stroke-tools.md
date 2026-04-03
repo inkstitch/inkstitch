@@ -80,8 +80,8 @@ Ceci créera un point droit direct entre la fin du premier élément et le débu
 
 ### Options
 
-* Convertir les sauts de longueur au moins 
-* Convertir les sauts de longueur au plus 
+* Convertir seulement les sauts de longueur supérieure à (mm): en cas de valeur nulle, la longueur minimum de saut est utilisée.
+* Convert jumps shorter than (mm): une valeur nulle signifie qu'il n'y a en fait pas de limite.
 * Connecter seulement au sein des groupes ou des calques 
 * Ne pas connecter après une coupe, un stop ou des points d'arrêt forcés.
 

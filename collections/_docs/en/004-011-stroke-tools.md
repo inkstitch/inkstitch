@@ -77,8 +77,8 @@ This will create a running stitch from the end position of the first element to 
 
 ### Options
 
-* Convert jumps no shorter than
-* Convert jumps no longer than
+* Convert jumps longer than (mm): A value of 0 defaults to the actual minimum jump stitch length.
+* Convert jumps shorter than (mm): A value of 0 means no size limit.
 * Connect only within groups or layers
 * Do not connect after trim, stop or forced lock stitches
 

@@ -86,8 +86,8 @@ Dieses Werkzeug erstellt Geradstiche von der Endposition des ersten Elements zu 
 
 ### Optionen
 
-* Konvertiere nur Sprungstitch die länger sind als der angegebene Wert
-* Konvertiere nur Sprungstitche die kürzer sind als der angegebene Wert
+* Konvertiere Stiche länger aks (mm): bei einem Wert von 0 wird die eigentliche Sprungstichlänge genutzt
+* Konvertiere nur Stiche die kürzer sind (mm): bei einem Wert von 0 ist die Stihlänge nach oben hin nicht begrenzt
 * Verbinde nur Elemente innerhalb einer Gruppe oder einer Ebene
 * Verbinde Elemente mit Fadenschnittbefehl, Stopp-Befehl oder erzwungenen Vernähstichen nicht mit nachfolgenden Elementen
 
