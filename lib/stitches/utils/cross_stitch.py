@@ -88,12 +88,12 @@ class CrossGeometries(object):
 
     def _potential_middle_points(self, offset=False):
         potential_middle_points = []
-        y = self._adapted_miny
-        while y <= self._adapted_maxy:
-            x = self._adapted_minx
-            while x <= self._adapted_maxx:
+        y = self._adapted_miny - self._box_y
+        while y <= self._adapted_maxy + self._box_y:
+            x = self._adapted_minx - self._box_x
+            while x <= self._adapted_maxx + self._box_x:
                 potential_middle_points.append((x + (self._box_x / 2), y))
-                potential_middle_points.append((x, y + (self._box_x / 2)))
+                potential_middle_points.append((x, y + (self._box_y / 2)))
                 x += self._box_x
             y += self._box_y
 
@@ -108,6 +108,7 @@ class CrossGeometries(object):
         return Polygon(snapped_coords)
 
     def _setup_crosses(self, offset=False):
+        snap_points = MultiPoint(self._potential_middle_points())
         center = list(self._square.centroid.coords)[0]
         if offset:
             delta_x = center[0]
@@ -115,13 +116,15 @@ class CrossGeometries(object):
         else:
             delta_x = 0
             delta_y = 0
-        y = self._adapted_miny + delta_y
+        y = self._adapted_miny - delta_y
         while y <= self._adapted_maxy:
-            x = self._adapted_minx + delta_x
+            x = self._adapted_minx - delta_x
             while x <= self._adapted_maxx:
                 # translate box to cross position
                 box = translate(self._square, x, y)
-                self._upright_box = self._snapped_box(translate(self._upright_square, x, y), self._potential_middle_points())
+                self._upright_box = translate(self._upright_square, x, y)
+                if "dense" in self.cross_stitch_method:
+                    self._upright_box = self._snapped_box(self._upright_box, snap_points)
                 if self._shape.contains(box):
                     self.add_cross(box, self._upright_box)
                 elif self._shape.intersects(box):
