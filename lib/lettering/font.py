@@ -13,7 +13,7 @@ from random import randint
 import inkex
 
 from ..commands import add_commands, ensure_command_symbols
-from ..elements import SatinColumn, Stroke, nodes_to_elements
+from ..elements import EmbroideryElement, SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
 from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
@@ -26,6 +26,7 @@ from ..svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                         SVG_PATH_TAG)
 from ..utils import Point
 from .font_variant import FontVariant
+from numpy import maximum
 
 
 class FontError(InkstitchException):
@@ -143,6 +144,7 @@ class Font(object):
     auto_satin = font_metadata('auto_satin', True)
     min_scale = font_metadata('min_scale', 1.0)
     max_scale = font_metadata('max_scale', 1.0)
+    scale_cross_stitch_pattern = font_metadata('scale_cross_stitch_pattern', False)
     size = font_metadata('size', 0)
     available_glyphs = font_metadata('glyphs', [])
     json_variant = font_metadata('default_variant', FontVariant.LEFT_TO_RIGHT[1])
@@ -232,7 +234,7 @@ class Font(object):
 
     def render_text(self, text, destination_group, variant=None, back_and_forth=True,  # noqa: C901
                     trim_option=0, use_trim_symbols=False, color_sort=0, text_align=0,
-                    letter_spacing=0, word_spacing=0, line_height=0):
+                    letter_spacing=0, word_spacing=0, line_height=0, scale=100):
 
         """Render text into an SVG group element."""
         self._load_variants()
@@ -257,7 +259,7 @@ class Font(object):
             if self.text_direction == "rtl":
                 line = line[::-1]
 
-            letter_group = self._render_line(destination_group, line, position, glyph_set, i, letter_spacing, word_spacing)
+            letter_group = self._render_line(destination_group, line, position, glyph_set, i, letter_spacing, word_spacing, scale)
             if ((variant in FontVariant.LEFT_TO_RIGHT and back_and_forth and self.reversible and i % 2 == 1) or
                     (variant in FontVariant.RIGHT_TO_LEFT and not (back_and_forth and self.reversible and i % 2 == 1))):
                 letter_group[:] = reversed(letter_group)
@@ -340,7 +342,7 @@ class Font(object):
     def get_variant(self, variant):
         return self.variants.get(variant, self.variants[self.default_variant])
 
-    def _render_line(self, destination_group, line, position, glyph_set, line_number, letter_spacing=0, word_spacing=0):
+    def _render_line(self, destination_group, line, position, glyph_set, line_number, letter_spacing=0, word_spacing=0, scale=100):
         """Render a line of text.
 
         An SVG XML node tree will be returned, with an svg:g at its root.  If
@@ -385,7 +387,9 @@ class Font(object):
                     position.x += self.word_spacing
                     last_character = None
                     continue
-                node = self._render_glyph(destination_group, glyph, position, glyph.name, last_character, f'{line_number}-{i}-{j}', letter_spacing)
+                node = self._render_glyph(
+                    destination_group, glyph, position, glyph.name, last_character, f'{line_number}-{i}-{j}', letter_spacing, scale
+                )
                 word_group.append(node)
                 last_character = glyph.name
             group.append(word_group)
@@ -422,7 +426,7 @@ class Font(object):
 
         return glyphs
 
-    def _render_glyph(self, destination_group, glyph, position, character, last_character, id_extension, letter_spacing=0):
+    def _render_glyph(self, destination_group, glyph, position, character, last_character, id_extension, letter_spacing=0, scale=100):
         """Render a single glyph.
 
         An SVG XML node tree will be returned, with an svg:g at its root.
@@ -469,6 +473,7 @@ class Font(object):
 
         self._update_commands(node, glyph, id_extension)
         self._update_clips(destination_group, node, glyph)
+        self._update_cross_pattern(node, scale)
 
         # this is used to recognize a glyph layer later in the process
         # because this is not unique it will be overwritten by inkscape when inserted into the document
@@ -505,6 +510,21 @@ class Font(object):
                 svg.defs.append(clip)
             el = node.find(f".//*[@id='{node_id}']")
             el.clip = clip
+
+    def _update_cross_pattern(self, glyph_node, scale):
+        if not self.scale_cross_stitch_pattern:
+            return
+        for node in glyph_node.iterdescendants(EMBROIDERABLE_TAGS):
+            element = EmbroideryElement(node)
+            if element.get_param('fill_method', 'auto_fill') != 'cross_stitch' or scale == 100:
+                continue
+            pattern_size = maximum(element.get_split_mm_param_as_px("pattern_size_mm", (3, 3)), 0.1 * PIXELS_PER_MM)
+            x = (pattern_size[0] * (scale / 100)) / PIXELS_PER_MM
+            y = (pattern_size[1] * (scale / 100)) / PIXELS_PER_MM
+            if x == y:
+                node.set('inkstitch:pattern_size_mm', f"{x} {y}")
+            else:
+                node.set('inkstitch:pattern_size_mm', f"{x}")
 
     def _add_trims(self, destination_group, text, trim_option, use_trim_symbols, back_and_forth, color_sort):
         """

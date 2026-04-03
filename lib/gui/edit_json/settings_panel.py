@@ -182,6 +182,13 @@ class FontSettings(wx.Panel):
             lambda event: self.parent.on_font_meta_value_changed("auto_satin", False, event)
         )
 
+        scale_cross_stitch_pattern_label = wx.StaticText(self, label=_("Scale cross stitch pattern"))
+        self.scale_cross_stitch_pattern = wx.CheckBox(self)
+        self.scale_cross_stitch_pattern.Bind(
+            wx.EVT_CHECKBOX,
+            lambda event: self.parent.on_font_meta_value_changed("scale_cross_stitch_pattern", False, event)
+        )
+
         letter_case_label = wx.StaticText(self, label=_("Letter case"))
         self.letter_case = wx.Choice(self, choices=[_("None"), _("Upper"), _("Lower")])
         self.letter_case.Bind(wx.EVT_CHOICE, self.parent.on_letter_case_change)
@@ -211,6 +218,8 @@ class FontSettings(wx.Panel):
             (self.default_glyph, 1, wx.ALL | wx.EXPAND, 0),
             (auto_satin_label, 0, wx.ALL, 0),
             (self.auto_satin, 1, wx.ALL | wx.EXPAND, 0),
+            (scale_cross_stitch_pattern_label, 0, wx.ALL, 0),
+            (self.scale_cross_stitch_pattern, 1, wx.ALL | wx.EXPAND, 0),
             (letter_case_label, 0, wx.ALL, 0),
             (self.letter_case, 1, wx.ALL | wx.EXPAND, 0),
             (reversible_label, 0, wx.ALL, 0),

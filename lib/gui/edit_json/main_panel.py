@@ -320,6 +320,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.font_meta['default_variant'] = self.font.json_default_variant
         self.font_meta['default_glyph'] = self.font.default_glyph
         self.font_meta['auto_satin'] = self.font.auto_satin
+        self.font_meta['scale_cross_stitch_pattern'] = self.font.scale_cross_stitch_pattern
         self.font_meta['letter_case'] = self.font.letter_case
         self.font_meta['reversible'] = self.font.reversible
         self.font_meta['sortable'] = self.font.sortable
@@ -347,6 +348,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.settings_panel.font_info.original_font_url.ChangeValue(self.font.original_font_url)
         self.settings_panel.font_settings.default_glyph.ChangeValue(self.font.default_glyph)
         self.settings_panel.font_settings.auto_satin.SetValue(self.font.auto_satin)
+        self.settings_panel.font_settings.scale_cross_stitch_pattern.SetValue(self.font.scale_cross_stitch_pattern)
         selection = list(LETTER_CASE.keys())[list(LETTER_CASE.values()).index(self.font.letter_case)]
         self.settings_panel.font_settings.letter_case.SetSelection(selection)
         self.settings_panel.font_settings.reversible.SetValue(self.font.reversible)
