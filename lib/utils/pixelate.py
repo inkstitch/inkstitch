@@ -104,7 +104,7 @@ def _get_colored_boxes(fills, settings):
         area = unary_union(fill_areas)
         adapted_shape = fill.shape.difference(area)
         if not adapted_shape.is_empty:
-            color = Color(fill.fill_color).to('named')
+            color = Color(fill.color).to('named')
             fill_areas_by_color[color].append(fill.shape.difference(area))
         # add a little expand value to connect otherwise unconnected
         fill_areas.append(fill.shrink_or_grow_shape(fill.shape, 0.1))
