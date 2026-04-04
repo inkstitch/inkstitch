@@ -155,6 +155,8 @@ class CrossStitchHelperFrame(wx.Frame):
 
         apply_to_grid_sizer = wx.FlexGridSizer(4, 2, 15, 20)
         apply_to_grid_sizer.AddGrowableCol(1)
+        element_handling_sizer = wx.FlexGridSizer(1, 2, 15, 20)
+        element_handling_sizer.AddGrowableCol(1)
         apply_page_grid = wx.FlexGridSizer(3, 2, 15, 20)
         apply_page_grid.AddGrowableCol(1)
 
@@ -163,15 +165,11 @@ class CrossStitchHelperFrame(wx.Frame):
         self.set_params.Bind(wx.EVT_CHECKBOX, self.update)
 
         pixelize_label = wx.StaticText(self.output_option_panel, label=_("Pixelate (selected elements)"))
+        pixelize_tooltip = _("Fill shapes remain unchanged when disabled.")
         self.pixelize = wx.CheckBox(self.output_option_panel)
+        pixelize_label.SetToolTip(pixelize_tooltip)
+        self.pixelize.SetToolTip(pixelize_tooltip)
         self.pixelize.Bind(wx.EVT_CHECKBOX, self.update)
-
-        pixelize_combined_label_text = "     " + _("Remove overlaps")
-        self.pixelize_combined_label = wx.StaticText(self.output_option_panel, label=pixelize_combined_label_text)
-        self.pixelize_combined = wx.CheckBox(self.output_option_panel)
-        pixelize_combined_tooltip = _("Inserts a new set of non overlapping shapes and removes selected elements")
-        self.pixelize_combined_label.SetToolTip(pixelize_combined_tooltip)
-        self.pixelize_combined.SetToolTip(pixelize_combined_tooltip)
 
         node_label_text = "     " + _("Add nodes")
         self.nodes_label = wx.StaticText(self.output_option_panel, label=node_label_text)
@@ -185,10 +183,23 @@ class CrossStitchHelperFrame(wx.Frame):
             (self.set_params, 1, wx.EXPAND),
             (pixelize_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.pixelize, 1, wx.EXPAND),
-            (self.pixelize_combined_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.pixelize_combined, 1, wx.EXPAND),
             (self.nodes_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.nodes, 1, wx.EXPAND),
+        ])
+
+        element_handling_headline = wx.StaticText(self.output_option_panel, wx.ID_ANY, _("Element handling"))
+        element_handling_headline.SetFont(font)
+
+        remove_overlaps_label_text = _("Remove overlaps")
+        remove_overlaps_label = wx.StaticText(self.output_option_panel, label=remove_overlaps_label_text)
+        self.remove_overlaps = wx.CheckBox(self.output_option_panel)
+        remove_overlaps_tooltip = _("Inserts a new set of non overlapping shapes and removes selected elements")
+        remove_overlaps_label.SetToolTip(remove_overlaps_tooltip)
+        self.remove_overlaps.SetToolTip(remove_overlaps_tooltip)
+
+        element_handling_sizer.AddMany([
+            (remove_overlaps_label, 0, wx.ALIGN_CENTER_VERTICAL),
+            (self.remove_overlaps, 1, wx.EXPAND),
         ])
 
         grid_setup_headline = wx.StaticText(self.output_option_panel, wx.ID_ANY, _("Setup page grid"))
@@ -220,6 +231,8 @@ class CrossStitchHelperFrame(wx.Frame):
 
         apply_settings_sizer.Add(apply_to_settings, 0, wx.EXPAND | wx.ALL, 5)
         apply_settings_sizer.Add(apply_to_grid_sizer, 0, wx.EXPAND | wx.ALL, 10)
+        apply_settings_sizer.Add(element_handling_headline, 0, wx.EXPAND | wx.ALL, 10)
+        apply_settings_sizer.Add(element_handling_sizer, 0, wx.ALL, 10)
         apply_settings_sizer.Add(grid_setup_headline, 0, wx.EXPAND | wx.ALL, 10)
         apply_settings_sizer.Add(apply_page_grid, 1, wx.EXPAND | wx.ALL, 10)
 
@@ -487,8 +500,6 @@ class CrossStitchHelperFrame(wx.Frame):
             self.stitch_length.Enable(True)
 
         enable = self.pixelize.GetValue()
-        self.pixelize_combined_label.Enable(enable)
-        self.pixelize_combined.Enable(enable)
         self.nodes_label.Enable(enable)
         self.nodes.Enable(enable)
 
@@ -653,7 +664,7 @@ class CrossStitchHelperFrame(wx.Frame):
                 elif self.settings['convert_bitmap']:
                     svg_groups.extend(self._get_image_nodes(element, True))
         else:
-            if self.settings['pixelize_combined']:
+            if self.settings['remove_overlaps']:
                 svg_groups = self._update_svg_image_combined(svg_groups)
             else:
                 svg_groups = self._update_svg_imgae_single(svg_groups)
@@ -762,7 +773,7 @@ class CrossStitchHelperFrame(wx.Frame):
         cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_helper_cross_method']])
         self.cross_stitch_method.SetSelection(cross_method)
         self.pixelize.SetValue(global_settings['cross_helper_pixelize'])
-        self.pixelize_combined.SetValue(global_settings['cross_helper_pixelize_combined'])
+        self.remove_overlaps.SetValue(global_settings['cross_helper_remove_overlaps'])
         self.nodes.SetValue(global_settings['cross_helper_nodes'])
         self.coverage.SetValue(global_settings['cross_helper_coverage'])
         self.grid_offset.SetValue(global_settings['cross_helper_grid_offset'])
@@ -795,11 +806,11 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['set_params'] = self.set_params.GetValue()
         self.settings['cross_method'] = self.get_cross_method()
         self.settings['pixelize'] = self.pixelize.GetValue()
-        self.settings['pixelize_combined'] = self.pixelize_combined.GetValue()
         self.settings['nodes'] = self.nodes.GetValue()
         self.settings['coverage'] = self.coverage.GetValue()
         self.settings['grid_offset'] = self.grid_offset.GetValue()
         self.settings['align_with_canvas'] = self.align_with_canvas.GetValue()
+        self.settings['remove_overlaps'] = self.remove_overlaps.GetValue()
         self.settings['set_grid'] = self.setup_grid.GetValue()
         self.settings['grid_color'] = self.grid_color.GetColour().Get(False)
         self.settings['remove_grids'] = self.remove_grids.GetValue()
@@ -832,7 +843,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_helper_set_params'] = self.set_params.GetValue()
         global_settings['cross_helper_cross_method'] = self.get_cross_method()
         global_settings['cross_helper_pixelize'] = self.pixelize.GetValue()
-        global_settings['cross_helper_pixelize_combined'] = self.pixelize_combined.GetValue()
+        global_settings['cross_helper_remove_overlaps'] = self.remove_overlaps.GetValue()
         global_settings['cross_helper_nodes'] = self.nodes.GetValue()
         global_settings['cross_helper_coverage'] = self.coverage.GetValue()
         global_settings['cross_helper_grid_offset'] = self.grid_offset.GetValue()

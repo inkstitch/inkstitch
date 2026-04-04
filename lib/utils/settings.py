@@ -48,7 +48,7 @@ DEFAULT_SETTINGS = {
     'cross_helper_set_params': True,
     'cross_helper_cross_method': 'simple_cross',
     'cross_helper_pixelize': False,
-    'cross_helper_pixelize_combined': True,
+    'cross_helper_remove_overlaps': True,
     'cross_helper_coverage': 50,
     'cross_helper_grid_offset': '0',
     'cross_helper_align_with_canvas': True,

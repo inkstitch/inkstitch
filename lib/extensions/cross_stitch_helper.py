@@ -33,7 +33,7 @@ class CrossStitchHelper(InkstitchExtension):
             'set_params': True,
             'cross_method': 'simple_cross',
             'pixelize': False,
-            'pixelize_combined': True,
+            'remove_overlaps': True,
             'coverage': 50,
             'grid_offset': '0',
             'align_with_canvas': True,
@@ -86,10 +86,11 @@ class CrossStitchHelper(InkstitchExtension):
         self.settings = settings
 
         # Pixelate and parametrize elements
-        if self.settings['pixelize_combined']:
+        if self.settings['remove_overlaps']:
             # first convert images to fills, then process everything at once
             fills = self._prepare_fills(elements, palette)
-            self.pixelize_combined(fills)
+            if fills:
+                self.pixelize_combined(fills)
         else:
             self._process_elements(elements, palette)
 
