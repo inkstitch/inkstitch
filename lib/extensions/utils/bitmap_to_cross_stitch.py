@@ -47,7 +47,6 @@ class BitmapToCrossStitch(object):
         self.settings = settings
         self.palette = palette
         self.original_image = None
-        self.recolored_image = None
 
         image = self._get_image_byte_string(bitmap.node)
         if image is None:
@@ -179,7 +178,7 @@ class BitmapToCrossStitch(object):
         # set background to alpha (optional)
         background_color = None
         if self.settings['bitmap_remove_background'] == 1:
-            background_color = self._nearest_color(self.settings['bitmap_background_color'])
+            background_color = self._nearest_color(recolored_image, self.settings['bitmap_background_color'])
         elif self.settings['bitmap_remove_background'] == 2:
             background_color = self._get_main_color(recolored_image)
 
@@ -251,15 +250,15 @@ class BitmapToCrossStitch(object):
             return image.crop(bbox)
         return image
 
-    def _nearest_color(self, target_color):
-        ''' Returns the nearest existing color in self.recolored_image to the target color
+    def _nearest_color(self, image, target_color):
+        ''' Returns the nearest existing color in image to the target color
         '''
         def distance(p):
             r, g, b, a = p
             return (r - target_color[0])**2 + (g - target_color[1])**2 + (b - target_color[2])**2 + (255)
 
         # Find the nearest RGBA color
-        img = self.recolored_image.convert("RGBA")
+        img = image.convert("RGBA")
         colors = img.getcolors()
         # Filter transparent areas
         colors = [color for count, color in colors if color[3] > 0]
