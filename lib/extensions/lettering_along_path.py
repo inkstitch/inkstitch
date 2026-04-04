@@ -196,11 +196,30 @@ class TextAlongPath:
                 correction_transform = Transform(get_correction_transform(glyph))
                 glyph.transform = correction_transform @ transform @ glyph.transform
 
+                self._set_transform_info(glyph, angle, first)
+
                 # set values for next iteration
                 distance = new_distance
                 old_bbox = transformed_bbox
 
             distance += stretch_space
+
+    def _set_transform_info(self, glyph, angle, origin):
+        # apply angle and rotation center values if the font contains cross stitch elements
+        # cross stitch will use these values to apply the rotation, this way we can make sure, that the cross stitch shapes
+        # still stitch as intended, even when we rotate the element
+        if 'crossstitch' in self.font.metadata['keywords']:
+            for element in glyph.iterdescendants(EMBROIDERABLE_TAGS):
+                if element.get_id().startswith('command_connector'):
+                    continue
+                # the rotation center in Inkscape is an offset to the center of the bounding box in document units
+                element_transform = element.composed_transform()
+                center = element.bounding_box(element_transform).center
+                rotation_center = (element.viewport_to_unit(origin.x), element.viewport_to_unit(origin.y))
+
+                element.set('inkstitch:cross_rotation', str(angle))
+                element.set('inkscape:transform-center-x', str(rotation_center[0] - center.x))
+                element.set('inkscape:transform-center-y', str(center.y - rotation_center[1]))
 
     def get_start_position(self, text_length, path_length):
         start_position = 0

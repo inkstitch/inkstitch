@@ -150,7 +150,7 @@ class CrossGeometries(object):
             if original_shape:
                 bounds = original_shape.bounds
             self._offset_x -= bounds[0] % box_x
-            self._offset_y -= bounds[1] % box_y
+            self._offset_y += bounds[1] % box_y
 
     def add_cross(self, box, upright_box):
         center_point = list(box.centroid.coords)[0]

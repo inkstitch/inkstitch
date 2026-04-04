@@ -4,7 +4,10 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from __future__ import annotations  # Needed for using the Stitch type as a constructor arg
-from typing import Dict, Type, Union, Optional, Set, Any, Iterable, overload
+
+from math import cos, radians, sin
+from typing import Any, Dict, Iterable, Optional, Set, Type, Union, overload
+
 from shapely import geometry as shgeo
 
 from ..utils.geometry import Point
@@ -191,6 +194,18 @@ class Stitch(Point):
         out = self.copy()
         out.x += offset.x
         out.y += offset.y
+        return out
+
+    def rotate(self, angle, origin):
+        angle = radians(angle)
+        out = self.copy()
+        offset_x, offset_y = origin
+        adjusted_x = (self.x - offset_x)
+        adjusted_y = (self.y - offset_y)
+        cos_rad = cos(angle)
+        sin_rad = sin(angle)
+        out.x = offset_x + cos_rad * adjusted_x - sin_rad * adjusted_y
+        out.y = offset_y + sin_rad * adjusted_x + cos_rad * adjusted_y
         return out
 
     def __json__(self) -> Dict[str, Any]:
