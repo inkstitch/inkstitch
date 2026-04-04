@@ -273,7 +273,8 @@ class FillElementToSatin:
 
             # adjust rail direction and starting points
             satin_rails = [self._adjust_rail_direction(satin_rails)]
-            satin_rails = [self._adjust_closed_path_starting_point(satin_rails, self.rungs[combined_rungs[i][0]])]
+            if combined_rungs[i]:
+                satin_rails = [self._adjust_closed_path_starting_point(satin_rails, self.rungs[combined_rungs[i][0]])]
 
             segment_geoms = []
             for rung_index in set(combined_rungs[i]):
