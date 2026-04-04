@@ -20,7 +20,8 @@ def pixelate_element(element, settings):
         settings['coverage'],
         'simple_cross',
         _get_grid_offset(settings),
-        settings['align_with_canvas']
+        settings['align_with_canvas'],
+        4
     )
 
     outline = _prepare_outline(geometries.boxes, settings)
@@ -91,8 +92,8 @@ def _get_grid_offset(settings):
 
 
 def _get_colored_boxes(fills, settings):
-    ''' Gets all fill while also removing overlaps.
-        Combines all fills and genereates a bunch of little boxes to fill the entire area.
+    ''' Pixelate all fills while also removing overlaps.
+        Combines all fills and generates a bunch of little boxes to fill the entire area.
         Then assigns most prominent color to each box.
     '''
     fill_areas = []
@@ -118,7 +119,8 @@ def _get_colored_boxes(fills, settings):
         settings['coverage'],
         'simple_cross',
         grid_offset,
-        settings['align_with_canvas']
+        settings['align_with_canvas'],
+        4
     )
 
     color_shape_dict = {}

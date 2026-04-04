@@ -22,8 +22,7 @@ class CrossStitchHelperFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         self.settings = kwargs.pop("settings")
         self.default_settings = self.settings.copy()
-        self.images = kwargs.pop("images")
-        self.fills = kwargs.pop("fills")
+        self.elements = kwargs.pop("elements")
         self.palette = kwargs.pop("palette")
 
         self.cross_bitmap = None
@@ -461,47 +460,13 @@ class CrossStitchHelperFrame(wx.Frame):
         self.Fit()
         self.Layout()
 
-    def apply_global_settings(self):
-        self.x_only_checkbox.SetValue(global_settings['square'])
-        self.box_x.SetValue(global_settings['cross_helper_box_x'])
-        self.box_y.SetValue(global_settings['cross_helper_box_y'])
-        self.set_params.SetValue(global_settings['cross_helper_set_params'])
-        cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_helper_cross_method']])
-        self.cross_stitch_method.SetSelection(cross_method)
-        self.pixelize.SetValue(global_settings['cross_helper_pixelize'])
-        self.pixelize_combined.SetValue(global_settings['cross_helper_pixelize_combined'])
-        self.nodes.SetValue(global_settings['cross_helper_nodes'])
-        self.coverage.SetValue(global_settings['cross_helper_coverage'])
-        self.grid_offset.SetValue(global_settings['cross_helper_grid_offset'])
-        self.align_with_canvas.SetValue(global_settings['cross_helper_align_with_canvas'])
-        self.setup_grid.SetValue(global_settings['cross_helper_set_grid'])
-        self.grid_color.SetColour(wx.Colour(global_settings['cross_helper_grid_color']))
-        self.remove_grids.SetValue(global_settings['cross_helper_remove_grids'])
-        self.convert_bitmap.SetValue(global_settings['cross_helper_convert_bitmap'])
-        self.color_selection_method.SetSelection(global_settings['cross_helper_color_method'])
-        self.num_colors.SetValue(global_settings['cross_bitmap_num_colors'])
-        self.quantize_method.SetSelection(global_settings['cross_bitmap_quantize_method'])
-        self.rgb_color_list.SetValue(global_settings['cross_bitmap_rgb_colors'])
-        self.gimp_palette.SetPath(global_settings['cross_bitmap_gimp_palette'])
-        self.saturation.SetValue(int(global_settings['cross_bitmap_saturation'] * 100))
-        self.saturation_numerical_input.SetValue(global_settings['cross_bitmap_saturation'])
-        self.brightness.SetValue(int(global_settings['cross_bitmap_brightness'] * 100))
-        self.brightness_numerical_input.SetValue(global_settings['cross_bitmap_brightness'])
-        self.contrast.SetValue(int(global_settings['cross_bitmap_contrast'] * 100))
-        self.contrast_numerical_input.SetValue(global_settings['cross_bitmap_contrast'])
-        self.transparency_threshold.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
-        self.transparency_threshold_numerical_input.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
-        self.background_color.SetColour(wx.Colour(global_settings['cross_bitmap_background_color']))
-        self.remove_background.SetSelection(global_settings['cross_bitmap_remove_background'])
-        self.display_svg_image.SetValue(False)  # defaults always to False to avoid longer startup times
-
     def update_by_stitch_length(self, event=None):
         stitch_length = self.stitch_length.GetValue()
         xy = stitch_length / sqrt(2)
         self.box_x.SetValue(xy)
         self.box_y.SetValue(xy)
-        if self.settings['convert_bitmap'] and self.settings['bitmap_display_svg_image']:
-            self.update_bitmap_panel()
+
+        self.update_bitmap_panel()
 
     def update(self, event=None):
         y_on = not self.x_only_checkbox.GetValue()
@@ -532,8 +497,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.remove_grids_label.Enable(self.setup_grid.GetValue())
         self.remove_grids.Enable(self.setup_grid.GetValue())
 
-        if self.settings['convert_bitmap'] and self.settings['bitmap_display_svg_image']:
-            self.update_bitmap_panel()
+        self.update_bitmap_panel()
 
     def on_color_slider_change(self, rule, event):
         # update numberical color values
@@ -591,8 +555,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.remove_background_label.Enable(convert)
         self.remove_background.Enable(convert)
 
-        if not convert:
-            self.staticbitmap.SetBitmap(wx.NullBitmap)
+        self.update_bitmap_panel()
 
     def update_color_selection_method(self, event=None):
         method = self.color_selection_method.GetSelection()
@@ -612,12 +575,14 @@ class CrossStitchHelperFrame(wx.Frame):
         self.update_bitmap_panel()
 
     def _load_bitmap(self):
-        bitmaps = []
-        for image in self.images:
-            cross_bitmap = BitmapToCrossStitch(None, image, self.settings, self.palette)
+        self.cross_bitmaps = {}
+        for element in self.elements:
+            if element.name == "FillStitch":
+                continue
+            el_id = element.node.get_id()
+            cross_bitmap = BitmapToCrossStitch(None, element, self.settings, self.palette)
             if cross_bitmap.original_image is not None:
-                bitmaps.append(cross_bitmap)
-        self.cross_bitmaps = bitmaps
+                self.cross_bitmaps[el_id] = (cross_bitmap)
 
     def _on_debounce_timer(self, event):
         # Debounce timer fired — start a new task
@@ -625,15 +590,14 @@ class CrossStitchHelperFrame(wx.Frame):
         task_id = self._current_task_id
 
         # Run image rendering in a thread
-        if self.settings['convert_bitmap'] and self.settings['bitmap_display_svg_image']:
+        if self.settings['bitmap_display_svg_image']:
             threading.Thread(target=self.update_svg_image, args=[task_id], daemon=True).start()
-        else:
+        elif self.settings['convert_bitmap']:
             threading.Thread(target=self.update_bitmap_image, args=[task_id], daemon=True).start()
+        else:
+            self.staticbitmap.SetBitmap(wx.NullBitmap)
 
     def update_bitmap_panel(self, event=None):
-        if self.cross_bitmap and self.cross_bitmap.original_image is None:
-            return
-
         self.apply_settings()
 
         # Restart debounce timer (200 ms)
@@ -643,7 +607,7 @@ class CrossStitchHelperFrame(wx.Frame):
 
     def _get_max_image_bounds(self):
         minx = miny = maxx = maxy = 0
-        for bmp in self.cross_bitmaps:
+        for bmp in self.cross_bitmaps.values():
             sx, sy, mx, my = bmp.bitmap.original_shape.bounds
             if sx < minx:
                 minx = sx
@@ -665,11 +629,11 @@ class CrossStitchHelperFrame(wx.Frame):
 
             image = Image.new('RGBA', (width, height), (255, 255, 255, 1))
 
-            for cross_bitmap in self.cross_bitmaps:
+            for cross_bitmap in self.cross_bitmaps.values():
                 recolored_image = cross_bitmap.apply_color_corrections(cross_bitmap.original_image)
+                recolored_image = cross_bitmap.apply_clip(recolored_image)
                 image = cross_bitmap.combine_images(image, recolored_image, (minx, miny))
 
-            image = self.cross_bitmaps[0].apply_clip(image)
         width, height = self.scaled_size(*image.size)
         image = image.resize((width, height))
         bitmap_prev = wx.Bitmap.FromBufferRGBA(width, height, image.tobytes())
@@ -682,29 +646,55 @@ class CrossStitchHelperFrame(wx.Frame):
 
     def update_svg_image(self, task_id):
         svg_groups = Group()
-        if self.cross_bitmaps:
-            for cross_bitmap in self.cross_bitmaps:
-                svg_groups.extend(cross_bitmap.svg_nodes())
-        if self.fills:
-            if self.settings['pixelize']:
-                if self.settings['pixelize_combined']:
-                    svg_groups = pixelate_multiple(svg_groups, self.fills, self.settings)
-                else:
-                    for fill in self.fills:
-                        pixelated_outline = pixelate_element(fill, self.settings)
-                        path = self._multipolygon_to_pathelement(pixelated_outline, fill)
-                        svg_groups.append(path)
+        if not self.settings['pixelize']:
+            for element in self.elements:
+                if element.name == "FillStitch":
+                    svg_groups.append(element.node.copy())
+                elif self.settings['convert_bitmap']:
+                    svg_groups.extend(self._get_image_nodes(element, True))
+        else:
+            if self.settings['pixelize_combined']:
+                svg_groups = self._update_svg_image_combined(svg_groups)
             else:
-                for fill in self.fills:
-                    svg_groups.append(fill.node.copy())
+                svg_groups = self._update_svg_imgae_single(svg_groups)
 
-        if svg_groups is None:
+        if not svg_groups:
             return
-        bmp = self.svg_groups_to_bmp(svg_groups)
 
+        bmp = self.svg_groups_to_bmp(svg_groups)
         if task_id == self._current_task_id:
             # no newer task has already taken over, insert the bitmap
             self.staticbitmap.SetBitmap(bmp)
+
+    def _update_svg_imgae_single(self, svg_groups):
+        for element in self.elements:
+            if element.name == "FillStitch":
+                pixelated_outline = pixelate_element(element, self.settings)
+                path = self._multipolygon_to_pathelement(pixelated_outline, element)
+                svg_groups.append(path)
+            else:
+                if self.settings['convert_bitmap']:
+                    svg_groups.extend(self._get_image_nodes(element, False))
+        return svg_groups
+
+    def _update_svg_image_combined(self, svg_groups):
+        fills = []
+        for element in self.elements:
+            if element.name == "FillStitch":
+                fills.append(element)
+            else:
+                if not self.settings['convert_bitmap']:
+                    continue
+                nodes = self._get_image_nodes(element, False)
+                for color_group in nodes:
+                    for element in color_group:
+                        fills.append(FillStitch(element))
+        return pixelate_multiple(svg_groups, fills, self.settings)
+
+    def _get_image_nodes(self, element, transform):
+        el_id = element.node.get_id()
+        cross_bitmap = self.cross_bitmaps[el_id]
+        return cross_bitmap.svg_nodes(transform)
 
     def _multipolygon_to_pathelement(self, pixelated_outline, fill):
         for polygon in pixelated_outline.geoms:
@@ -763,6 +753,40 @@ class CrossStitchHelperFrame(wx.Frame):
         self.update()
         self.update_color_selection_method()
         self.apply_settings()
+
+    def apply_global_settings(self):
+        self.x_only_checkbox.SetValue(global_settings['square'])
+        self.box_x.SetValue(global_settings['cross_helper_box_x'])
+        self.box_y.SetValue(global_settings['cross_helper_box_y'])
+        self.set_params.SetValue(global_settings['cross_helper_set_params'])
+        cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_helper_cross_method']])
+        self.cross_stitch_method.SetSelection(cross_method)
+        self.pixelize.SetValue(global_settings['cross_helper_pixelize'])
+        self.pixelize_combined.SetValue(global_settings['cross_helper_pixelize_combined'])
+        self.nodes.SetValue(global_settings['cross_helper_nodes'])
+        self.coverage.SetValue(global_settings['cross_helper_coverage'])
+        self.grid_offset.SetValue(global_settings['cross_helper_grid_offset'])
+        self.align_with_canvas.SetValue(global_settings['cross_helper_align_with_canvas'])
+        self.setup_grid.SetValue(global_settings['cross_helper_set_grid'])
+        self.grid_color.SetColour(wx.Colour(global_settings['cross_helper_grid_color']))
+        self.remove_grids.SetValue(global_settings['cross_helper_remove_grids'])
+        self.convert_bitmap.SetValue(global_settings['cross_helper_convert_bitmap'])
+        self.color_selection_method.SetSelection(global_settings['cross_helper_color_method'])
+        self.num_colors.SetValue(global_settings['cross_bitmap_num_colors'])
+        self.quantize_method.SetSelection(global_settings['cross_bitmap_quantize_method'])
+        self.rgb_color_list.SetValue(global_settings['cross_bitmap_rgb_colors'])
+        self.gimp_palette.SetPath(global_settings['cross_bitmap_gimp_palette'])
+        self.saturation.SetValue(int(global_settings['cross_bitmap_saturation'] * 100))
+        self.saturation_numerical_input.SetValue(global_settings['cross_bitmap_saturation'])
+        self.brightness.SetValue(int(global_settings['cross_bitmap_brightness'] * 100))
+        self.brightness_numerical_input.SetValue(global_settings['cross_bitmap_brightness'])
+        self.contrast.SetValue(int(global_settings['cross_bitmap_contrast'] * 100))
+        self.contrast_numerical_input.SetValue(global_settings['cross_bitmap_contrast'])
+        self.transparency_threshold.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
+        self.transparency_threshold_numerical_input.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
+        self.background_color.SetColour(wx.Colour(global_settings['cross_bitmap_background_color']))
+        self.remove_background.SetSelection(global_settings['cross_bitmap_remove_background'])
+        self.display_svg_image.SetValue(False)  # defaults always to False to avoid longer startup times
 
     def apply_settings(self):
         self.settings['square'] = self.x_only_checkbox.GetValue()
@@ -838,17 +862,14 @@ class CrossStitchHelperFrame(wx.Frame):
 
 
 class CrossStitchHelperApp(wx.App):
-    def __init__(self, settings, fills, images, palette):
+    def __init__(self, settings, elements, palette):
         self.settings = settings
-        self.fills = fills
-        self.images = []
-        if images:
-            self.images = images
+        self.elements = elements
         self.palette = palette
         super().__init__()
 
     def OnInit(self):
-        frame = CrossStitchHelperFrame(settings=self.settings, images=self.images, fills=self.fills, palette=self.palette)
+        frame = CrossStitchHelperFrame(settings=self.settings, elements=self.elements, palette=self.palette)
         self.SetTopWindow(frame)
         frame.Show()
         return True

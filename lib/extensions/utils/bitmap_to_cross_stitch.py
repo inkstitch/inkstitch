@@ -351,7 +351,7 @@ class BitmapToCrossStitch(object):
             color_boxes[main_color[:3]].append(box)
         return color_boxes
 
-    def svg_nodes(self):
+    def svg_nodes(self, apply_transform=True):
         '''Converts the bitmap into path elements by respecting the given cross stitch settings
            Returns:
             * elements: a list of path elements grouped by color (svg groups)
@@ -386,8 +386,9 @@ class BitmapToCrossStitch(object):
 
                 new_element = PathElement()
                 new_element.set('d', str(path))
-                new_element.set('style', f'fill:rgb{color}')
-                new_element.transform = get_correction_transform(self.bitmap.node)
+                new_element.set('style', f"fill:rgb{color}")
+                if apply_transform:
+                    new_element.transform = get_correction_transform(self.bitmap.node)
                 color_group.append(new_element)
             elements.append(color_group)
         elements.sort(key=lambda group: len(group), reverse=True)

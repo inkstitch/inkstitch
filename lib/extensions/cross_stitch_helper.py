@@ -6,6 +6,7 @@
 from inkex import Color, Grid, Group, Path
 from inkex.units import convert_unit
 
+from ..elements import FillStitch
 from ..gui.cross_stitch_helper import CrossStitchHelperApp
 from ..i18n import _
 from ..svg import get_correction_transform
@@ -63,54 +64,73 @@ class CrossStitchHelper(InkstitchExtension):
             # nothing was selected, keep it this way
             self.elements = []
 
-        # collect image and fill elements
-        images = []
-        fills = []
+        # Fillter to only handle image and fill elements
+        elements = []
         for element in self.elements:
-            if element.name == "Image":
-                images.append(element)
-            elif element.name == "FillStitch":
-                fills.append(element)
+            if element.name in ["Image", "FillStitch"]:
+                elements.append(element)
+
+        # Images may have been converted to fills which are not in the document
+        # therefore we define a fallback element node, so we can use it to find a got spot to include the new elements
+        self.fallback_element = None
+        if elements:
+            self.fallback_element = elements[-1]
 
         palette = self._get_stroke_palette()
 
-        app = CrossStitchHelperApp(settings=settings, fills=fills, images=images, palette=palette)
+        app = CrossStitchHelperApp(settings=settings, elements=elements, palette=palette)
         app.MainLoop()
 
         if not settings['applied']:
             return
         self.settings = settings
 
-        # process elements
-        self._process_images(images, palette)
-        self._process_fills(fills)
+        # Pixelate and parametrize elements
+        if self.settings['pixelize_combined']:
+            # first convert images to fills, then process everything at once
+            fills = self._prepare_fills(elements, palette)
+            self.pixelize_combined(fills)
+        else:
+            self._process_elements(elements, palette)
 
         # add grid
         if settings['set_grid']:
             self.setup_page_grid()
 
-    def _process_images(self, images, palette):
-        if not self.settings['convert_bitmap']:
-            return
-        for image in images:
-            self.process_image(image, palette)
-
-    def _process_fills(self, fills):
-        if not fills:
-            return
-
-        if self.settings['pixelize']:
-            if self.settings['pixelize_combined']:
-                self.pixelize_combined(fills)
+    def _prepare_fills(self, elements, palette):
+        fills = []
+        for element in elements:
+            if element.name == "FillStitch":
+                if self.settings['pixelize']:
+                    fills.append(element)
+                elif self.settings['set_params']:
+                    # when pixelize is disabled, set params on each fill element
+                    self.set_element_cross_stitch_params(element.node)
             else:
-                for fill in fills:
-                    self.pixelize_single(fill)
-        elif self.settings['set_params']:
-            # Pixelize may split up elements
-            # we handle param settings in pixelize when enabled
-            # when pixelize is disabled, set params on each fill element
-            for fill in fills:
-                self.set_element_cross_stitch_params(fill.node)
+                if not self.settings['convert_bitmap']:
+                    continue
+                bitmap_convert = BitmapToCrossStitch(self.svg, element, self.settings, palette)
+                if bitmap_convert.original_image is None:
+                    continue
+                nodes = bitmap_convert.svg_nodes(False)
+                for color_group in nodes:
+                    for el in color_group:
+                        fills.append(FillStitch(el))
+                # element.node.delete()
+        return fills
+
+    def _process_elements(self, elements, palette):
+        for element in elements:
+            if element.name == "FillStitch":
+                if self.settings['pixelize']:
+                    self.pixelize_single(element)
+                elif self.settings['set_params']:
+                    # when pixelize is disabled, set params on each fill element
+                    self.set_element_cross_stitch_params(element.node)
+            else:
+                if not self.settings['convert_bitmap']:
+                    continue
+                self._process_image(element, palette)
 
     def _get_stroke_palette(self):
         palette = []
@@ -121,7 +141,7 @@ class CrossStitchHelper(InkstitchExtension):
                     palette.extend(color.to_rgb())
         return palette
 
-    def process_image(self, element, palette):
+    def _process_image(self, element, palette):
         parent = element.node.getparent()
         index = parent.index(element.node)
         bitmap_convert = BitmapToCrossStitch(self.svg, element, self.settings, palette)
@@ -130,6 +150,7 @@ class CrossStitchHelper(InkstitchExtension):
         elements = bitmap_convert.svg_nodes()
         if elements:
             main_group = Group()
+            main_group.label = element.node.label or element.node.get_id()
             for color in elements:
                 if self.settings['set_params']:
                     for path in color:
@@ -166,15 +187,25 @@ class CrossStitchHelper(InkstitchExtension):
                 self.set_element_cross_stitch_params(path_element)
             path_element.set('id', self.svg.get_unique_id('cross_stitch_'))
 
+        node = fills[-1].node
         parent = fills[-1].node.getparent()
-        index = parent.index(fills[-1].node)
+        if fills[-1].node.getroottree().getroot().TAG == "g":
+            # use the fallback node when we hit an image
+            node = self.fallback_element.node
+            parent = node.getparent()
+            transform = get_correction_transform(node)
+            cross_stitch_group.transform = transform
+            index = parent.index(node) + 1
+        else:
+            index = parent.index(node)
         parent.insert(index, cross_stitch_group)
 
         for fill in fills:
             node = fill.node
             parent = node.getparent()
             fill.node.delete()
-            self._remove_empty_group(parent)
+            if parent:
+                self._remove_empty_group(parent)
 
     def _remove_empty_group(self, group):
         parent = group.getparent()
