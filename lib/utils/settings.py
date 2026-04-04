@@ -9,6 +9,7 @@ from .paths import get_user_dir
 DEFAULT_METADATA = {
     "min_stitch_len_mm": 0.1,
     "collapse_len_mm": 3,
+    "min_satin_stroke_width_mm": 1,
 }
 
 DEFAULT_SETTINGS = {

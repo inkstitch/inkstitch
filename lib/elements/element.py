@@ -8,7 +8,7 @@ import json
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
-from typing import List, Optional, TypeVar, Callable, Any
+from typing import Any, Callable, List, Optional, TypeVar
 
 import inkex
 import numpy as np
@@ -21,6 +21,7 @@ from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
 from ..marker import get_marker_elements_cache_key_data
+from ..metadata import InkStitchMetadata
 from ..patterns import apply_patterns, get_patterns_cache_key_data
 from ..stitch_plan import StitchGroup
 from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
@@ -236,6 +237,16 @@ class EmbroideryElement(object):
             # TODO: This will also apply to currentcolor and alike which will not render
             color = default
         return color
+
+    @cache
+    def get_inkstitch_metadata(self):
+        return InkStitchMetadata(self.node.getroottree().getroot())
+
+    @property
+    @cache
+    def satin_threshold(self):
+        metadata = self.get_inkstitch_metadata()
+        return metadata['min_satin_stroke_width_mm'] * PIXELS_PER_MM
 
     @property
     @cache
