@@ -28,6 +28,7 @@ class LetteringGenerateJson(InkstitchExtension):
         self.arg_parser.add_argument("-v", "--default_variant", type=str, default="ltr", dest="default_variant")
         self.arg_parser.add_argument("-x", "--text_direction", type=str, default="ltr", dest="text_direction")
         self.arg_parser.add_argument("-s", "--auto-satin", type=Boolean, default="true", dest="auto_satin")
+        self.arg_parser.add_argument("--scale-cross_stitch", type=Boolean, default="false", dest="scale_cross_stitch_pattern")
         self.arg_parser.add_argument("-r", "--reversible", type=Boolean, default="true", dest="reversible")
         self.arg_parser.add_argument("-o", "--combine-at-sort-indices", type=str, default="", dest="combine_at_sort_indices")
         self.arg_parser.add_argument("-t", "--sortable", type=Boolean, default="false", dest="sortable")
@@ -102,6 +103,7 @@ class LetteringGenerateJson(InkstitchExtension):
                 'original_font_url': self.options.original_font_url,
                 'leading': leading,
                 'auto_satin': self.options.auto_satin,
+                'scale_cross_stitch_pattern': self.options.scale_cross_stitch_pattern,
                 'reversible': self.options.reversible,
                 'sortable': self.options.sortable,
                 'combine_at_sort_indices': list(combine_at_sort_indices),

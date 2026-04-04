@@ -320,7 +320,8 @@ class LetteringPanel(wx.Panel):
                 self.settings.text, destination_group, back_and_forth=self.settings.back_and_forth,
                 trim_option=self.settings.trim_option, use_trim_symbols=self.settings.use_trim_symbols,
                 color_sort=self.settings.color_sort, text_align=self.settings.text_align,
-                letter_spacing=self.settings.letter_spacing, word_spacing=self.settings.word_spacing, line_height=self.settings.line_height
+                letter_spacing=self.settings.letter_spacing, word_spacing=self.settings.word_spacing, line_height=self.settings.line_height,
+                scale=self.settings.scale
             )
         except FontError as e:
             if raise_error:

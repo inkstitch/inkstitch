@@ -77,6 +77,8 @@
           <vbox>
             <param type="bool" name="auto-satin" gui-text="Autoroute Satin"
                    gui-description="Disable if you defined manual routing in your font." indent="1">true</param>
+            <param type="bool" name="scale-cross_stitch" gui-text="Scale cross stitch pattern"
+                   gui-description="Wether or not the cross stitch pattern will be scaled along with the font." indent="1">false</param>
             <param type="bool" name="reversible" gui-text="Reversible"
                   gui-description='If disabled back and forth stitching will not be possile for this font.' indent="1">true</param>
             <param type="bool" name="sortable" gui-text="Sortable"
