@@ -114,7 +114,7 @@ class CrossStitchHelperFrame(wx.Frame):
 
         coverage_label = wx.StaticText(self.settings_panel, label=_("Fill coverage (%)"))
         self.coverage = wx.SpinCtrl(self.settings_panel, wx.ID_ANY, min=0, max=100, initial=50)
-        self.coverage.Bind(wx.EVT_SPINCTRL, self.update_bitmap_image)
+        self.coverage.Bind(wx.EVT_SPINCTRL, self.update_bitmap_panel)
 
         align_with_canvas_label = wx.StaticText(self.settings_panel, label=_("Align with canvas"))
         self.align_with_canvas = wx.CheckBox(self.settings_panel)
