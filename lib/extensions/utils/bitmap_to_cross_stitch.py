@@ -214,7 +214,7 @@ class BitmapToCrossStitch(object):
         # get the clip shape and move it to canvas origin
         clip = self.bitmap.clip_shape
         if not clip:
-            return self._crop_transparent_borders(image)
+            return image
         minx, miny, maxx, maxy = self.bitmap.original_shape.bounds
         clip = translate(clip, -minx, -miny)
 
@@ -232,7 +232,7 @@ class BitmapToCrossStitch(object):
         # apply mask
         image.putalpha(mask)
 
-        return self._crop_transparent_borders(image)
+        return image
 
     def combine_images(self, image1, image2, offset):
         minx, miny, maxx, maxy = self.bitmap.original_shape.bounds

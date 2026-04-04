@@ -631,7 +631,7 @@ class CrossStitchHelperFrame(wx.Frame):
         return minx, miny, maxx, maxy
 
     def update_bitmap_image(self, task_id):
-        if not self.cross_bitmaps:
+        if not self.cross_bitmaps.values():
             image = Image.new('RGBA', (10, 10), (255, 255, 255, 1))
         else:
             minx, miny, maxx, maxy = self._get_max_image_bounds()
@@ -644,6 +644,13 @@ class CrossStitchHelperFrame(wx.Frame):
                 recolored_image = cross_bitmap.apply_color_corrections(cross_bitmap.original_image)
                 recolored_image = cross_bitmap.apply_clip(recolored_image)
                 image = cross_bitmap.combine_images(image, recolored_image, (minx, miny))
+
+        # Get bounding box of non-transparent areas
+        # and crop the image for display
+        alpha_mask = image.getchannel("A").point(lambda a: 255 if a > 1 else 0)
+        bbox = alpha_mask.getbbox()
+        if bbox:
+            image = image.crop(bbox)
 
         width, height = self.scaled_size(*image.size)
         image = image.resize((width, height))
@@ -685,7 +692,9 @@ class CrossStitchHelperFrame(wx.Frame):
                 svg_groups.append(path)
             else:
                 if self.settings['convert_bitmap']:
-                    svg_groups.extend(self._get_image_nodes(element, False))
+                    elements = self._get_image_nodes(element, False)
+                    if elements:
+                        svg_groups.extend(elements)
         return svg_groups
 
     def _update_svg_image_combined(self, svg_groups):
@@ -722,7 +731,7 @@ class CrossStitchHelperFrame(wx.Frame):
         # use a fixed size to satisfy windows
         max_width = 600
         max_height = 600
-        ratio = min(max_width / orig_width, max_height / orig_height)
+        ratio = min(max_width / max(1, orig_width), max_height / max(1, orig_height))
         return int(orig_width * ratio), int(orig_height * ratio)
 
     def svg_groups_to_bmp(self, svg_groups):
