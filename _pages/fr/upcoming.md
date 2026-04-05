@@ -108,6 +108,10 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Venezia small](/fr/fonts/venezia/)
 
   ![Venezia](/assets/images/fonts/venezia_small.png)
+*[Very crossy](/fr/fonts/very_crossy/)
+
+  ![Venezia](/assets/images/fonts/very_crossy.png)
+
 
 
   
