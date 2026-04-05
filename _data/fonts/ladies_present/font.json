@@ -20,7 +20,7 @@
     "letter_case": "upper",
     "default_glyph": "?",
     "size": 27.0,
-    "min_scale": O.9,
+    "min_scale": 0.9,
     "max_scale": 2.0,
     "horiz_adv_x_default": 0.0,
     "horiz_adv_x_space": 80.0,
