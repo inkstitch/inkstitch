@@ -6,6 +6,14 @@ on:
       - main
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+      inputs:
+          TEST_SIGNING:
+              description: 'Sign windows binaries'
+              required: true
+              type: boolean
+              default: false
+
 jobs:
   linux64:
     runs-on: ubuntu-22.04
@@ -49,7 +57,7 @@ jobs:
           python -m pip install PyGObject==3.50.0
           python -m pip install numpy --no-binary numpy
 
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
+          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.4-cp311-cp311-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
           # for networkx
@@ -276,12 +284,12 @@ jobs:
         env:
           BUILD: windows
       - name: Set siging policy to release
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         shell: bash
         run: |
           echo release_policy="release-signing" >> $GITHUB_ENV
       - name: upload-unsigned-exe
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: upload-unsigned-exe
         uses: actions/upload-artifact@v4
         with:
@@ -289,7 +297,7 @@ jobs:
           path: |
             dist/inkstitch/bin/inkstitch.exe
       - name: Sign-exe
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: Sign-exe
         uses: signpath/github-action-submit-signing-request@v1.1
         with:
@@ -301,7 +309,7 @@ jobs:
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
       - name: Copy signed exe to dist
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         shell: bash
         run: |
             mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
@@ -311,14 +319,14 @@ jobs:
         env:
           BUILD: windows
       - name: upload-unsigned-installer
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: upload-unsigned-installer
         uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows64-installer
           path: signed-artifacts
       - name: Sign-installer
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: Sign-installer
         uses: signpath/github-action-submit-signing-request@v1.1
         with:

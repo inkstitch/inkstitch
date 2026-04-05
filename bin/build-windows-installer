@@ -25,7 +25,7 @@ copyright_year="#define COPYRIGHT \""${info_year}"\""
 version_block="#define VERSION \""${VERSION}"\""
 sed -i'' -e '/;inkstitch-year/ a\'$'\n'"${copyright_year}"'' win/win_build.iss
 sed -i'' -e '/;inkstitch-version/ a\'$'\n'"${version_block}"'' win/win_build.iss
-sed -i'' -e '/;arch-allowed/ a\'$'\n'"ArchitecturesAllowed=x64 arm64"'' win/win_build.iss
+sed -i'' -e '/;arch-allowed/ a\'$'\n'"ArchitecturesAllowed=x64os arm64"'' win/win_build.iss
 
 iscc win/win_build.iss
 mv  win/inkstitch.exe ${DIRECTORY}/inkstitch-${VERSION}-${OS}-${ARCH}.exe
