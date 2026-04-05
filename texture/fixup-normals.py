@@ -7,7 +7,7 @@ import PIL.Image
 
 directory = pathlib.Path(__file__).parent
 
-image = PIL.Image.open(directory / "normals-rounded.png")
+image = PIL.Image.open(directory / "normals.png")
 px = image.load()
 assert px
 
@@ -29,5 +29,5 @@ for x in range(image.width):
     for y in range(ref+1, image.height):
         px[x,y] = val
 
-image.save(directory / "normals-rounded-fixed.png")
+image.save(directory / "normals-fixed.png")
     
