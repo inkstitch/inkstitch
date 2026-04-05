@@ -221,11 +221,12 @@ _Image ci-dessus : point ondulé avec une longueur de point de `1 1 5`_
 
 Les traits simples peuvent être utilisés directement comme colonnes satin [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
 
-* La largeur du trait doit être supérieure à 0,3 mm.
+The following rules will apply:
 
+* By default, the width of the stroke must not be smaller than 1mm (adaptable through the preferences dialog)
 * La position des nœuds peut influencer le rendu du satin :
 
-![Trait vers satin. Même chemin avec différentes configurations de nœuds](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
+  ![Trait vers satin. Même chemin avec différentes configurations de nœuds](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
 #### Niveaux d'insertion des points courts
 
@@ -247,6 +248,8 @@ Lorsque plusieurs valeurs sont définies, la colonne satin les utilise alternati
 * Patterns: add interval option for stroke patterns [#4250](https://github.com/inkstitch/inkstitch/pull/4250)
 
   This option allows to skip intersection points on the stitch path (for example every second one)
+
+[Learn more](/fr/docs/stitches/patterns/)
 
 ## Nouvelles extensions
 
@@ -276,6 +279,8 @@ Cette extension facilite la création de points de croix dans Ink/Stitch. Elle p
 * Appliquer les paramètres du point de croix aux éléments de remplissage sélectionnés.
 * Pixelliser les contours des éléments de remplissage sélectionnés.
 * Appliquer des valeurs d'espacement à la grille de la page.
+* Convert images to fill stitch elements
+* Remove overlaps
 
 [En savoir plus](/fr/docs/fill-tools/#cross-stitch-helper)
 
@@ -297,6 +302,8 @@ Un outil pour réparer et décomposer les formes de remplissage simples ou compl
 
 La fonction « Briser des objets de remplissage » supprime les éléments et les trous dont la taille est inférieure à cette valeur.
 
+[En savoir plus](/fr/docs/fill-tools/#break-apart-fill-objects)
+
 ### Informations sur les éléments
 
 Un outil pour collecter les informations de broderie.
@@ -312,6 +319,8 @@ Un outil pour collecter les informations de broderie.
 Auparavant, les noms de fichiers de polices indiquaient le sens des points par des flèches. Cela posait problème sur certains systèmes d'exploitation lors de l'installation d'Inkstitch.
 
 Désormais, les fichiers de polices peuvent être nommés ltr.svg, rtl.svg, ttb.svg, btt.svg pour définir les variantes de la police [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
+
+[En savoir plus](/fr/tutorials/font-creation/)
 
 #### Conversion d'une police SVG en calques de glyphes
 
@@ -418,6 +427,11 @@ Module de texte utilisant des polices pré-numérisées.
 Définit les paramètres globaux ou ceux du document SVG actuellement ouvert.
 
 * Ajout de l'option « Rotation à l'exportation » (affecte uniquement le fichier SVG courant) [#3840](https://github.com/inkstitch/inkstitch/pull/3840)
+* Add `minimum satin stroke width` setting [#4279](https://github.com/inkstitch/inkstitch/pull/4279)
+
+  Wether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width.
+  The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard
+  stitches, It is recommended to only use satins wider than 1mm.
 
 [En savoir plus](/fr/docs/preferences/)
 
@@ -430,13 +444,16 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 [En savoir plus](/fr/docs/troubleshoot/#troubleshoot-objects)
 
 
-
 ## Nouvelles Palettes de couleur
 
 * Magnifico thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
 * Threadart thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
 
 [Read more about color palettes](/fr/docs/thread-color/#install-palettes)
+
+## File type related updates
+
+* VP3: fix rounding error [pystitch:129](https://github.com/inkstitch/pystitch/pull/129)
 
 ## Corrections de bugs
 

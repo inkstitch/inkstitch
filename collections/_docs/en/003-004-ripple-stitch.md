@@ -13,11 +13,9 @@ Ripple stitch is part running stitch and part fill. It behaves like a running st
 
 {% include video id="e1426a71-486a-4e62-a4c7-3b2f25dd1fc0" provider="diode" %}
 
-## How to create it
-
 Closed shapes will be filled with a spiral (circular ripples). Open shapes will be stitched back and forth (linear ripples). 
 
-### Circular Ripples
+## Circular Ripples
 1. Create one closed path and apply a stroke color.
 2. Keep it as a single path only. Avoid combined paths like shapes with holes.
 3. Optional: Create target points or guides. [target point or guides](#guiding-ripples)
@@ -30,7 +28,7 @@ Closed shapes will be filled with a spiral (circular ripples). Open shapes will 
 
 [Download examples](/assets/images/docs/circular-ripple.svg){: download="circular-ripples.svg" }
 
-### Linear Ripples
+## Linear Ripples
 
 Linear ripples can be created in various ways. It can be a simple curve or it can be constructed like a satin column.
 
@@ -43,7 +41,7 @@ Linear ripples can be created in various ways. It can be a simple curve or it ca
 
 [Download examples](/assets/images/docs/linear-ripple.svg){: download="linear-ripples.svg" }
 
-### Looping ripples
+## Looping ripples
 
 Loops are allowed and welcomed in any ripple path. Use loops to achieve special nice effects.
 
@@ -51,11 +49,11 @@ Loops are allowed and welcomed in any ripple path. Use loops to achieve special 
 
 [Download examples](/assets/images/docs/ripple-loops.svg){: download="ripple-loop.svg" }
 
-###  Guiding ripples
+##  Guiding ripples
 
 Ripples with only **one subpath** (closed shape or a simple bezier curve) can be guided in either of the three following methods.
 
-### Target point
+## Target point
 
 Define a ripple target position with [visual command](/docs/commands/):
 
@@ -65,13 +63,13 @@ Define a ripple target position with [visual command](/docs/commands/):
 
 If no guiding information is provided, the center of the path is used as the target.
 
-### Guide line
+## Guide line
 
 * In the very same group (no subgroup) of the ripple stitch object create a stroke curve with the bezier tool, starting close to the ripple curve, leading away from it.
 * Select that curve and run `Extensions > Ink/Stitch > Edit > Selection to guide line`.
 * Select the ripple curve and run params. Adapt the parameters to your liking.
 
-### Satin guide
+## Satin guide
 
 With satin guides you will have the ability to lead the ripples precisely using the satin rung method. The width of the satin guide will also have an effect on the ripple width. The positioning of the original ripple shape will be ignored and it will start where the satin begins.
 
@@ -88,7 +86,18 @@ The pattern for satin guided ripples can be adjusted in its direction with the h
 
 [Download](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
+## Clipping
+
+{% include upcoming_release.html %}
+
+Ripple stitches can be clipped to form the outline.
+
+* Create the ripple stitch
+* Create the clip shape (must be on top of the ripple stitch)
+* Select both and run `Object > Clip > Set clip`
+
 ## Params
+
 {% include upcoming_release_params.html %}
 
 Params|Description

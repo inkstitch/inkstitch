@@ -84,8 +84,20 @@ Das Muster für Satinsäulen-geführte Ripples können mit Hilfe einer sogenannt
 
 [Download](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
+## Clipping
+
+{% include upcoming_release.html %}
+
+Ripple stitches can be clipped to form the outline.
+
+* Create the ripple stitch
+* Create the clip shape (must be on top of the ripple stitch)
+* Select both and run `Objekt > Ausschneidepfad > Ausschneidemaske setzen`
+
 ## Parameter
+
 {% include upcoming_release_params.html %}
+
 Parameter||Beschreibung
 ---|---|---
 Geradstich                     | ☑ | Muss aktiviert sein, damit diese Einstellungen wirksam werden.

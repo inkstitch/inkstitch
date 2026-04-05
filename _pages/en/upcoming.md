@@ -22,7 +22,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Allegria 55](/fonts/allegria/)
 
   ![Allegria 55](/assets/images/fonts/allegria55.png)
-* [Animals](/fr/fonts/animals/)
+* [Animals](/fonts/animals/)
 
   ![Animals english](/assets/images/fonts/animals.png)
   ![Animals français](/assets/images/fonts/animaux.png)
@@ -213,7 +213,10 @@ A big thank you to all translators. We've received new translations into:
 #### Stroke to satin conversion under the hood
 
 Simple strokes can be used as satin columns directly [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
-* the width of the stroke must be greater than 0.3mm
+
+The following rules will apply:
+
+* By default, the width of the stroke must not be smaller than 1mm (adaptable through the preferences dialog)
 * the position of the nodes can influence how the satin will be rendered:
 
   ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
@@ -237,6 +240,8 @@ When multiple values are set, the satin column will use these to level consecuti
 * Patterns: add interval option for stroke patterns [#4250](https://github.com/inkstitch/inkstitch/pull/4250)
 
   This option allows to skip intersection points on the stitch path (for example every second one)
+
+[Learn more](/docs/stitches/patterns/)
 
 ## New extensions
 
@@ -263,9 +268,11 @@ Helps font digitizers to organize their work in steps so that they can reuse pre
 This extension helps to generate cross stitches in Ink/Stitch. It can:
 
 * Calculate stitch length for given grid spacing values
-* Apply cross stitch parameters to selected fill elements.
-* Pixelize outlines of selected fill elements.
-* Apply spacing values to page grid.
+* Apply cross stitch parameters to selected fill elements
+* Pixelize outlines of selected fill elements
+* Apply spacing values to page grid
+* Convert images to fill stitch elements
+* Remove overlaps
 
 [Read more](/docs/fill-tools/#cross-stitch-helper)
 
@@ -287,6 +294,8 @@ A tool to repair and split up simple or complex (self overlapping) fill shapes.
 
   Break apart fill objects will remove elements and holes which are smaller than this value.
 
+[Read more](/docs/fill-tools/#break-apart-fill-objects)
+
 ### Element Info
 
 A tool to gather embroidery information.
@@ -302,6 +311,8 @@ A tool to gather embroidery information.
 Previously, font file names declared with arrows the stitch directions. This was troublesome on some operating systems when inkstitch was installed.
 
 Now font files can be named ltr.svg, rtl.svg, ttb.svg, btt.svg to define the font variants [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
+
+[Read more](/tutorials/font-creation/)
 
 #### Convert svg font to glyph layers
 
@@ -355,6 +366,8 @@ Value settings have been re-labeled and slightly adjusted [#4239](https://github
 * Convert jumps longer than (mm): A value of 0 defaults to the actual minimum jump stitch length.
 * Convert jumps shorter than (mm): A value of 0 means no size limit.
 
+[Read more](/docs/commands/#jump-stitch-to-trim-command)
+
 ### Jump Stitch to Trim/Stop command
 
 Converts jumps to trim commands.
@@ -403,6 +416,11 @@ Text module to use pre-digitized fonts.
 Defines global settings or settings for the currently open SVG document.
 
 * Add `rotate on export` setting (affects single svg file only) [#3840](https://github.com/inkstitch/inkstitch/pull/3840)
+* Add `minimum satin stroke width` setting [#4279](https://github.com/inkstitch/inkstitch/pull/4279)
+
+  Wether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width.
+  The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard
+  stitches, It is recommended to only use satins wider than 1mm.
 
 [Read more](/docs/preferences/)
 
@@ -420,6 +438,12 @@ Points to troublesome (or potentially troublesome) spots in the design.
 * Threadart thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
 
 [Read more about color palettes](/docs/thread-color/#install-palettes)
+
+## File type related updates
+
+* VP3: fix rounding error [pystitch:129](https://github.com/inkstitch/pystitch/pull/129)
+
+  **TODO before the release**: update pyembroidery!
 
 ## Bugfixes
 
