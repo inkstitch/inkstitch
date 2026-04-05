@@ -70,11 +70,9 @@ class CrossStitchHelper(InkstitchExtension):
             if element.name in ["Image", "FillStitch"]:
                 elements.append(element)
 
-        # Images may have been converted to fills which are not in the document
-        # therefore we define a fallback element node, so we can use it to find a got spot to include the new elements
-        self.fallback_element = None
-        if elements:
-            self.fallback_element = elements[-1]
+        # When elements have been combined, we need to define a place in the layering order for our new group
+        # Let's take the top most element from selection
+        self.insert_position_element = self.svg.selection.rendering_order()[-1]
 
         palette = self._get_stroke_palette()
 
@@ -117,7 +115,6 @@ class CrossStitchHelper(InkstitchExtension):
                 for color_group in nodes:
                     for el in color_group:
                         fills.append(FillStitch(el))
-                # element.node.delete()
         return fills
 
     def _process_elements(self, elements, palette):
@@ -188,31 +185,25 @@ class CrossStitchHelper(InkstitchExtension):
                 self.set_element_cross_stitch_params(path_element)
             path_element.set('id', self.svg.get_unique_id('cross_stitch_'))
 
-        node = fills[-1].node
-        parent = fills[-1].node.getparent()
-        if fills[-1].node.getroottree().getroot().TAG == "g":
-            # use the fallback node when we hit an image
-            node = self.fallback_element.node
-            parent = node.getparent()
-            transform = get_correction_transform(node)
-            cross_stitch_group.transform = transform
-            index = parent.index(node) + 1
-        else:
-            index = parent.index(node)
+        node = self.insert_position_element
+        parent = node.getparent()
+        transform = get_correction_transform(node)
+        cross_stitch_group.transform = transform
+        index = parent.index(node) + 1
         parent.insert(index, cross_stitch_group)
 
         for fill in fills:
             node = fill.node
             parent = node.getparent()
             fill.node.delete()
-            if parent:
+            if parent is not None:
                 self._remove_empty_group(parent)
 
     def _remove_empty_group(self, group):
         parent = group.getparent()
         if len(group) == 0:
             group.delete()
-        if parent and len(parent) == 0:
+        if parent is not None and len(parent) == 0:
             self._remove_empty_group(parent)
 
     def pixelize_single(self, element):

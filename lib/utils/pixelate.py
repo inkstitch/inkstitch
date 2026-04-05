@@ -7,7 +7,7 @@ from collections import defaultdict
 from inkex import Color, Group, Path, PathElement
 from shapely import make_valid, unary_union
 from ..stitches.utils.cross_stitch import CrossGeometries
-from ..svg import PIXELS_PER_MM, get_correction_transform
+from ..svg import PIXELS_PER_MM
 from .geometry import ensure_multi_polygon
 
 
@@ -51,7 +51,6 @@ def pixelate_multiple(destination_group, fills, settings):
 
             path_element = PathElement()
             path_element.set('d', str(path))
-            path_element.transform = get_correction_transform(fills[-1].node)
             path_element.style['fill'] = color_group.label
             color_group.append(path_element)
         if len(color_group) > 1:
