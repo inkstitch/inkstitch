@@ -49,3 +49,5 @@ types-shapely
 types-networkx
 types-lxml
 types-pywin32
+
+pyinstaller
