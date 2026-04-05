@@ -20,7 +20,11 @@ from .stitch_plan import StitchPlan
 
 def generate_stitch_plan(embroidery_file, import_commands="symbols"):  # noqa: C901
     validate_file_path(embroidery_file)
-    pattern = pystitch.read(embroidery_file)
+    try:
+        pattern = pystitch.read(embroidery_file)
+    except pystitch.exceptions.NoStitchesError:
+        inkex.errormsg(_("Could not open the file: no stitch information found."))
+        sys.exit(0)
     stitch_plan = StitchPlan()
     color_block = None
 
