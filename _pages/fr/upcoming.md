@@ -105,6 +105,10 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Venezia small](/fr/fonts/venezia/)
 
   ![Venezia](/assets/images/fonts/venezia_small.png)
+* [Venezia small](/fr/fonts/venezia/)
+
+  ![Venezia](/assets/images/fonts/venezia_small.png)
+
 
   
   ### Renommage
