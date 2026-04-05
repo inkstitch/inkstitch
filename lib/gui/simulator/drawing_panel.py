@@ -16,8 +16,6 @@ from ...utils.settings import global_settings
 from ..experimental.gl_renderer import GLStitchPlanRenderer
 from .gl_simulator_controls import GLSimulatorControlsFrame
 import wx.glcanvas as glcanvas
-from OpenGL.GL import *
-from OpenGL.GLUT import *
 import moderngl
 from typing import Optional
 
@@ -179,8 +177,6 @@ class DrawingPanel(glcanvas.GLCanvas):
             desk_color = wx.Colour((0.0, 0.0, 0.0, 0.0))
 
         fb.clear(desk_color.Red()/255, desk_color.Green()/255, desk_color.Blue()/255, 1)
-        # glClearColor(0.6, 0.7, 1.0, 1.0)
-        # glClear(GL_COLOR_BUFFER_BIT)
 
         if self.renderer:
             self.renderer.set_pan((self.pan[0]-self.minx*self.zoom, self.pan[1]-self.miny*self.zoom))
