@@ -24,11 +24,14 @@ class GLStitchPlanRenderer:
         self.vbo = None
 
         self.k_a = 0.2
-        self.k_d = 1.0
-        self.k_s = 1.0
-        self.specular_exponent = 20.0
+        self.k_d = 0.8
+        self.k_s = 0.5
+        self.specular_exponent = 10.0
         self.zoom = 1.0
         self.pan = glm.vec3()
+
+    def set_light_vector(self, vector):
+        self.light_vector = vector
 
     def _update_light_vector(self):
         azimuth_radians = math.radians(self.light_azimuth)
@@ -118,6 +121,9 @@ class GLStitchPlanRenderer:
                         float specular = k_s * pow(saturate(dot(normal, H)), specular_exponent);
                         float diffuse = k_d * saturate(dot(normal, normalize(light_vec))); 
                         f_color = vec4(saturate((k_a + diffuse)*v_color + vec3(specular)), normal_alpha.a);
+                    } else if (mode == 1) {
+                        vec3 normal = TBN * normalize((normal_alpha.xyz-0.5));
+                        f_color = vec4((normal.xyz+1.0)/2.0, normal_alpha.a);
                     } else {
                         vec3 normal = TBN * vec3(0.0,0.0,1.0);
                         f_color = vec4((normal.xyz+1.0)/2.0, normal_alpha.a);
@@ -162,6 +168,8 @@ class GLStitchPlanRenderer:
                     indices = np.array([
                         0, 0, 0,
                         0, 0, 0,
+                        0, 0, 0,
+                        0, 0, 0,
                     ], dtype=np.uint32)
                     ibuf.extend(indices.tobytes())
 
@@ -181,6 +189,8 @@ class GLStitchPlanRenderer:
 
                     ue = end + across * (STITCH_HEIGHT/2)
                     le = end - across * (STITCH_HEIGHT/2)
+                    um = (end + start)/2 + across * (STITCH_HEIGHT/2)
+                    lm = (end + start)/2 - across * (STITCH_HEIGHT/2)
                     us = start + across * (STITCH_HEIGHT/2)
                     ls = start - across * (STITCH_HEIGHT/2)
 
@@ -192,35 +202,45 @@ class GLStitchPlanRenderer:
                     theta = -math.atan2(along[1],along[0])
                     tbn_transform = glm.rotate(theta)
 
-                    start_tangent = glm.normalize(tbn_transform * glm.vec3(1,0,1))
+                    normal_theta = math.radians(60)
+                    sn = math.sin(normal_theta)
+                    cn = math.cos(normal_theta)
+
+                    start_tangent = glm.normalize(tbn_transform * glm.vec3(cn,0,sn))
                     start_bitangent = glm.normalize(tbn_transform * glm.vec3(0, 1, 0))
-                    start_normal = glm.normalize(tbn_transform * glm.vec3(-1,0,1))
+                    start_normal = glm.normalize(tbn_transform * glm.vec3(-sn,0,cn))
 
-                    end_tangent = glm.normalize(tbn_transform * glm.vec3(1,0,-1))
+                    mid_tangent = glm.normalize(tbn_transform * glm.vec3(1,0,0))
+                    mid_bitangent = glm.normalize(tbn_transform * glm.vec3(0, 1, 0))
+                    mid_normal = glm.normalize(tbn_transform * glm.vec3(0,0,1))
+
+                    end_tangent = glm.normalize(tbn_transform * glm.vec3(cn,0,-sn))
                     end_bitangent = glm.normalize(tbn_transform * glm.vec3(0, 1, 0))
-                    end_normal = glm.normalize(tbn_transform * glm.vec3(1,0,1))
-                    # tangent = glm.vec3(along, 0.0)
-                    # bitangent = glm.vec3(across, 0.0)
-                    # normal = glm.vec3(0.0, 0.0, 1.0)
-
+                    end_normal = glm.normalize(tbn_transform * glm.vec3(sn,0,cn))
+                    
                     repeats = length/STITCH_HEIGHT/thread_texture_aspect
                     texture_start = thread_position
+                    texture_mid = thread_position + repeats/2
                     texture_end = thread_position + repeats
                     thread_position = texture_end % 1.0
                     vertices = np.array([
-                        *ue, texture_end,   0.0, *end_tangent,   *end_bitangent,   *end_normal,   *color,
                         *us, texture_start, 0.0, *start_tangent, *start_bitangent, *start_normal, *color, 
-                        *le, texture_end,   1.0, *end_tangent,   *end_bitangent,   *end_normal,   *color,
+                        *um, texture_mid,   0.0, *mid_tangent,   *mid_bitangent,   *mid_normal,   *color,
+                        *ue, texture_end,   0.0, *end_tangent,   *end_bitangent,   *end_normal,   *color,
                         *ls, texture_start, 1.0, *start_tangent, *start_bitangent, *start_normal, *color,
+                        *lm, texture_mid,   1.0, *mid_tangent,   *mid_bitangent,   *mid_normal,   *color, 
+                        *le, texture_end,   1.0, *end_tangent,   *end_bitangent,   *end_normal,   *color,
                     ], dtype=np.float32)
                     buf.extend(vertices.tobytes())
 
                     indices = np.array([
-                        cur_index    , cur_index + 1, cur_index + 2,
-                        cur_index + 1, cur_index + 2, cur_index + 3,
+                        cur_index    , cur_index + 1, cur_index + 3,
+                        cur_index + 1, cur_index + 3, cur_index + 4,
+                        cur_index + 1, cur_index + 2, cur_index + 4,
+                        cur_index + 2, cur_index + 4, cur_index + 5,
                     ], dtype=np.uint32)
                     ibuf.extend(indices.tobytes())
-                    cur_index = cur_index + 4
+                    cur_index = cur_index + 6
 
         if self.vbo is None:
             self.vbo = ctx.buffer(buf)
@@ -257,7 +277,7 @@ class GLStitchPlanRenderer:
         ctx.blend_func = (ctx.SRC_ALPHA, ctx.ONE_MINUS_SRC_ALPHA)
 
         self.tex.use(location=0)
-        vertices = min((progress-1)*6, self.vao.vertices)
+        vertices = min((progress-1)*12, self.vao.vertices)
         # vertices = self.vao.vertices
         self.vao.render(vertices=vertices)
 

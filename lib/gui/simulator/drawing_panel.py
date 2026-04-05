@@ -14,6 +14,7 @@ from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
 
 from ..experimental.gl_renderer import GLStitchPlanRenderer
+from .gl_simulator_controls import GLSimulatorControlsFrame
 import wx.glcanvas as glcanvas
 from OpenGL.GL import *
 from OpenGL.GLUT import *
@@ -160,8 +161,10 @@ class DrawingPanel(glcanvas.GLCanvas):
             self.ctx = moderngl.get_context()
             if self.stitch_plan:
                 self.renderer = GLStitchPlanRenderer(self.ctx, self.stitch_plan)
+                self.render_controls = GLSimulatorControlsFrame(self)
+                self.render_controls.Show()
                 self.renderer.mode = 0
-                size =  self.GetClientSize()
+                size = self.GetClientSize()
                 self.renderer.resize(size.width, size.height)
             self.init = True
 
