@@ -105,6 +105,10 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Venezia small](/fonts/venezia/)
 
   ![Venezia](/assets/images/fonts/venezia_small.png)
+* [Very crossy](/fonts/very_crossy/)
+
+  ![Venezia](/assets/images/fonts/very_crossy.png)
+
 
 ### Font renaming
 
