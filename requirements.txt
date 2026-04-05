@@ -53,4 +53,5 @@ types-pywin32
 # Experimental Dependencies
 pyglm==2.8.2
 pillow==11.3.0
+moderngl
 
