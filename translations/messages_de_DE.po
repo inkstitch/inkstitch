@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-04 02:28+0000\n"
-"PO-Revision-Date: 2026-04-04 02:28\n"
+"POT-Creation-Date: 2026-04-05 02:43+0000\n"
+"PO-Revision-Date: 2026-04-05 02:43\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-04 02:28+0000\n"
+"POT-Creation-Date: 2026-04-05 02:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1228,126 +1228,126 @@ msgstr "Stichwinkel umkehren"
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "In manchen Fällen, schlägt die automatische Winkelberechnung fehl. Der Fehler kann durch diese Option in der Regel behoben werden."
 
-#: lib/elements/element.py:296 lib/gui/preferences.py:59
-#: lib/gui/preferences.py:128
+#: lib/elements/element.py:307 lib/gui/preferences.py:61
+#: lib/gui/preferences.py:152
 msgid "Minimum stitch length"
 msgstr "Minimale Stichlänge"
 
-#: lib/elements/element.py:297
+#: lib/elements/element.py:308
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr "Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche kleiner sind als dieser Wert werden entfernt."
 
-#: lib/elements/element.py:308 lib/gui/preferences.py:41
+#: lib/elements/element.py:319 lib/gui/preferences.py:42
 msgid "Minimum jump stitch length"
 msgstr "Minimale Länge für Sprungstiche"
 
-#: lib/elements/element.py:309
+#: lib/elements/element.py:320
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr "Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche."
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:331
 msgid "Allow lock stitches"
 msgstr "Vernähen erlauben"
 
-#: lib/elements/element.py:321
+#: lib/elements/element.py:332
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "Den Faden am Anfang und/oder Ende dieses Objektes vernähen. Bei manueller Stichpositionierung werden nur dann Vernähstiche eingefügt, wenn die Option Vernächstiche erzwingen aktiviert ist."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:326
+#: lib/elements/element.py:337
 msgid "Both"
 msgstr "Anfang und Ende"
 
-#: lib/elements/element.py:326
+#: lib/elements/element.py:337
 msgid "Before"
 msgstr "Anfang"
 
-#: lib/elements/element.py:326
+#: lib/elements/element.py:337
 msgid "After"
 msgstr "Ende"
 
-#: lib/elements/element.py:326
+#: lib/elements/element.py:337
 msgid "Neither"
 msgstr "Nie"
 
-#: lib/elements/element.py:335
+#: lib/elements/element.py:346
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Vernähen erzwingen"
 
-#: lib/elements/element.py:336
+#: lib/elements/element.py:347
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr "Am Ende dieses Objektes vernähen, auch wenn die Distanz zum Folgeobjekt kleiner ist, als in den Ink/Stitch Einstellungen (Minimale Länge für Sprungstiche) definiert."
 
-#: lib/elements/element.py:348
+#: lib/elements/element.py:359
 msgid "Tack stitch"
 msgstr "Anstecher"
 
-#: lib/elements/element.py:349
+#: lib/elements/element.py:360
 msgid "Tack down stitch type"
 msgstr "Anstecher Variante"
 
-#: lib/elements/element.py:359 lib/elements/element.py:405
+#: lib/elements/element.py:370 lib/elements/element.py:416
 msgid "Custom path"
 msgstr "Benutzerdefinierter Pfad"
 
-#: lib/elements/element.py:360
+#: lib/elements/element.py:371
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Bitte einen benutzerdefinierten Pfad eingeben. Bei SVG-Pfaden wird der letzte Knoten nicht gestickt, sondern bildet den ersten Stich des zugehörigen Elements ab."
 
-#: lib/elements/element.py:370 lib/elements/element.py:382
+#: lib/elements/element.py:381 lib/elements/element.py:393
 msgid "Scale tack stitch"
 msgstr "Anstecher skalieren"
 
-#: lib/elements/element.py:371
+#: lib/elements/element.py:382
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Stichlänge festlegen. Eine 1 in benutzerdefinierten Pfaden entspricht genau diesem Wert."
 
-#: lib/elements/element.py:383
+#: lib/elements/element.py:394
 msgid "Scale tack stitch by this percentage."
 msgstr "Anstecher um diesen Prozentwert skalieren."
 
-#: lib/elements/element.py:394
+#: lib/elements/element.py:405
 msgid "Lock stitch"
 msgstr "Verstecher"
 
-#: lib/elements/element.py:395
+#: lib/elements/element.py:406
 msgid "Lock stitch type"
 msgstr "Verstecher Variante"
 
-#: lib/elements/element.py:406
+#: lib/elements/element.py:417
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Bitte einen benutzerdefinierten Pfad eingeben. Bei SVG-Pfaden wird der erste Knoten nicht gestickt, sondern bildet den letzten Stich des zugehörigen Elements ab."
 
-#: lib/elements/element.py:416 lib/elements/element.py:428
+#: lib/elements/element.py:427 lib/elements/element.py:439
 msgid "Scale lock stitch"
 msgstr "Verstecher skalieren"
 
-#: lib/elements/element.py:417
+#: lib/elements/element.py:428
 msgid "Set length of lock stitches (mm)."
 msgstr "Stichlänge des Verstechers festlegen (mm)."
 
-#: lib/elements/element.py:429
+#: lib/elements/element.py:440
 msgid "Scale lock stitch by this percentage."
 msgstr "Verstecher um diesen Prozentwert skalieren."
 
-#: lib/elements/element.py:441
+#: lib/elements/element.py:452
 msgid "Trim After"
 msgstr "Fadenschnitt"
 
-#: lib/elements/element.py:442
+#: lib/elements/element.py:453
 msgid "Add a TRIM command after stitching this object."
 msgstr "Füge Fadenschnitt-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:451
+#: lib/elements/element.py:462
 msgid "Stop After"
 msgstr "Stopp"
 
-#: lib/elements/element.py:452
+#: lib/elements/element.py:463
 msgid "Add a STOP command after stitching this object."
 msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:753
+#: lib/elements/element.py:764
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
@@ -1419,15 +1419,15 @@ msgstr "Die Führungslinie dieses Objekts liegt nicht innerhalb des Objektes. F�
 msgid "* Move the guide line into the element"
 msgstr "* Bewege die Führungslinie in das Objekt"
 
-#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:29
+#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:28
 msgid "Multiple Guide Lines"
 msgstr "Mehrere Führungslinien"
 
-#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:30
+#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:29
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr "Dieses Objekt hat mehrere Führungslinien, aber nur die erste wird verwendet."
 
-#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:31
+#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:30
 msgid "* Remove all guide lines, except for one."
 msgstr "* Entferne alle Führungslinien bis auf eine."
 
@@ -1723,7 +1723,7 @@ msgstr "Relativ zur Richtung der Tartan-Streifen."
 msgid "Maximum fill stitch length"
 msgstr "Maximale Füllstichlänge"
 
-#: lib/elements/fill_stitch.py:329 lib/elements/fill_stitch.py:857
+#: lib/elements/fill_stitch.py:329 lib/elements/fill_stitch.py:872
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden."
 
@@ -2056,14 +2056,26 @@ msgid "Shifts the cross stitch grid by given values. X and Y values are separate
 msgstr "Verschiebt das Kreuzstichgitter um die angegebenen Werte. Die x- und y-Werte werden durch ein Leerzeichen getrennt. Nur ein Eingabewert verschiebt das Muster gleichmäßig in x- und y-Richtung."
 
 #: lib/elements/fill_stitch.py:842
+msgid "Grid Rotation"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:843
+msgid "Rotates the cross stitch grid by the given value."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:845
+msgid "deg"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:857
 msgid "Fill coverage"
 msgstr "Füllabdeckung"
 
-#: lib/elements/fill_stitch.py:843
+#: lib/elements/fill_stitch.py:858
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr "Prozentuale Überlappung für jeden Kreuzstich mit der Füllfläche"
 
-#: lib/elements/fill_stitch.py:855 lib/elements/satin_column.py:185
+#: lib/elements/fill_stitch.py:870 lib/elements/satin_column.py:185
 #: lib/elements/satin_column.py:584
 msgid "Maximum stitch length"
 msgstr "Maximale Stichlänge"
@@ -2201,11 +2213,11 @@ msgstr "Schmaler Satin"
 msgid "This element renders as a satin, but it is too narrow."
 msgstr "Dieses Element wird als Satinsäule ausgegeben, ist aber zu schmal."
 
-#: lib/elements/satin_column.py:87 lib/elements/stroke.py:40
+#: lib/elements/satin_column.py:87 lib/elements/stroke.py:39
 msgid "* Increase stroke width."
 msgstr "* Erhöhe die Breite der Kontur."
 
-#: lib/elements/satin_column.py:88 lib/elements/stroke.py:41
+#: lib/elements/satin_column.py:88
 msgid "Ink/Stitch will not register elements with a stroke width underneath 0.3 mm as satin, but it is recommended to stay above 1mm."
 msgstr "Ink/Stitch kann Elemente mit einer Konturbreite ab 0,3 mm als Satinsäule ausgeben, für ein gutes Stickbild wird jedoch eine Breite von mindestens 1 mm empfohlen."
 
@@ -2535,13 +2547,17 @@ msgstr "Einzug (proportional)"
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Stich unterteilen, wenn maximale Stichlänge überschritten ist"
 
-#: lib/elements/stroke.py:37
+#: lib/elements/stroke.py:36
 msgid "Too narrow satin"
 msgstr "Zu schmaler Satin"
 
-#: lib/elements/stroke.py:38
+#: lib/elements/stroke.py:37
 msgid "This element renders as running stitch while it has a satin column parameter."
 msgstr "Dieses Element wird als Geradstich ausgegeben, obwohl es als Satinsäule markiert ist."
+
+#: lib/elements/stroke.py:40
+msgid "Ink/Stitch will not register elements with a stroke width underneath minimum satin stroke width setting, but it is always recommended to stay above 1mm."
+msgstr ""
 
 #: lib/elements/stroke.py:49 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
@@ -2727,7 +2743,7 @@ msgstr "Skalieren"
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Achse für Satin-geführte Ripplestiche."
 
-#: lib/elements/stroke.py:545 lib/gui/edit_json/settings_panel.py:186
+#: lib/elements/stroke.py:545 lib/gui/edit_json/settings_panel.py:193
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
@@ -3250,7 +3266,7 @@ msgstr "Schriftart Zeichentabelle"
 msgid "The maximum value is smaller than the minimum value."
 msgstr "Der Maximalwert ist kleiner als der Minimalwert."
 
-#: lib/extensions/lettering_generate_json.py:57
+#: lib/extensions/lettering_generate_json.py:58
 msgid "Please specify a font file."
 msgstr "Bitte eine Schriftdatei auswählen."
 
@@ -3451,7 +3467,7 @@ msgstr "Letzte Einstellungen verwenden"
 msgid "Apply and Quit"
 msgstr "Anwenden und schließen"
 
-#: lib/extensions/params.py:872 lib/extensions/sew_stack_editor.py:552
+#: lib/extensions/params.py:874 lib/extensions/sew_stack_editor.py:552
 msgid "Embroidery Params"
 msgstr "Stickparameter"
 
@@ -3616,9 +3632,9 @@ msgstr "Design Details"
 msgid "Title"
 msgstr "Titel"
 
-#: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:236
+#: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:245
 #: lib/gui/lettering/option_panel.py:36
-#: inx/inkstitch_lettering_generate_json.inx:114
+#: inx/inkstitch_lettering_generate_json.inx:116
 msgid "Size"
 msgstr "Größe"
 
@@ -3791,7 +3807,7 @@ msgstr "Anwenden"
 #: inx/inkstitch_lettering_along_path.inx:25
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
-#: inx/inkstitch_lettering_generate_json.inx:158
+#: inx/inkstitch_lettering_generate_json.inx:160
 #: inx/inkstitch_lettering_organize_glyphs.inx:27
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
@@ -4072,19 +4088,19 @@ msgid "Feature to verify or update font information for an existing font."
 msgstr "Funktion zum Überprüfen oder Aktualisieren der Schriftartinformationsdatei für eine vorhandene Schriftart."
 
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
-#: inx/inkstitch_lettering_generate_json.inx:164
+#: inx/inkstitch_lettering_generate_json.inx:166
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr "https://inkstitch.org/docs/font-tools/#json-bearbeiten"
 
-#: lib/gui/edit_json/main_panel.py:432 lib/gui/edit_json/main_panel.py:445
+#: lib/gui/edit_json/main_panel.py:434 lib/gui/edit_json/main_panel.py:447
 msgid "Could not read json file."
 msgstr "JSON-Datei konnte nicht gelesen werden."
 
-#: lib/gui/edit_json/main_panel.py:436
+#: lib/gui/edit_json/main_panel.py:438
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
 msgstr "Veränderungen werden nicht gespeichert: die JSON-Datei ist nicht beschreibbar (permission denied)."
 
-#: lib/gui/edit_json/main_panel.py:450
+#: lib/gui/edit_json/main_panel.py:452
 msgid "Could not write to json file: permission denied."
 msgstr "Die JSON-Datei ist nicht beschreibbar (permission denied)."
 
@@ -4161,60 +4177,65 @@ msgid "AutoSatin"
 msgstr "AutoSatin"
 
 #: lib/gui/edit_json/settings_panel.py:185
+#: inx/inkstitch_lettering_generate_json.inx:101
+msgid "Scale cross stitch pattern"
+msgstr ""
+
+#: lib/gui/edit_json/settings_panel.py:192
 msgid "Letter case"
 msgstr "Groß-/Kleinschreibung"
 
-#: lib/gui/edit_json/settings_panel.py:186
-#: inx/inkstitch_lettering_generate_json.inx:109
+#: lib/gui/edit_json/settings_panel.py:193
+#: inx/inkstitch_lettering_generate_json.inx:111
 msgid "Upper"
 msgstr "Großbuchstaben"
 
-#: lib/gui/edit_json/settings_panel.py:186
-#: inx/inkstitch_lettering_generate_json.inx:110
+#: lib/gui/edit_json/settings_panel.py:193
+#: inx/inkstitch_lettering_generate_json.inx:112
 msgid "Lower"
 msgstr "Kleinbuchstaben"
 
-#: lib/gui/edit_json/settings_panel.py:189
-#: inx/inkstitch_lettering_generate_json.inx:101
+#: lib/gui/edit_json/settings_panel.py:196
+#: inx/inkstitch_lettering_generate_json.inx:103
 msgid "Reversible"
 msgstr "Umkehrbar"
 
-#: lib/gui/edit_json/settings_panel.py:196
-#: inx/inkstitch_lettering_generate_json.inx:104
+#: lib/gui/edit_json/settings_panel.py:203
+#: inx/inkstitch_lettering_generate_json.inx:106
 msgid "Sortable"
 msgstr "Sortierbar"
 
-#: lib/gui/edit_json/settings_panel.py:203
+#: lib/gui/edit_json/settings_panel.py:210
 msgid "Combine Indices"
 msgstr "Indizes kombinieren"
 
-#: lib/gui/edit_json/settings_panel.py:242
-#: inx/inkstitch_lettering_generate_json.inx:115
+#: lib/gui/edit_json/settings_panel.py:251
+#: inx/inkstitch_lettering_generate_json.inx:117
 msgid "Min Scale"
 msgstr "Minimale Skalierung"
 
-#: lib/gui/edit_json/settings_panel.py:249
-#: inx/inkstitch_lettering_generate_json.inx:116
+#: lib/gui/edit_json/settings_panel.py:258
+#: inx/inkstitch_lettering_generate_json.inx:118
 msgid "Max Scale"
 msgstr "Maximale Skalierung"
 
-#: lib/gui/edit_json/settings_panel.py:256
+#: lib/gui/edit_json/settings_panel.py:265
 msgid "Leading"
 msgstr "Schrifthöhe"
 
-#: lib/gui/edit_json/settings_panel.py:262
+#: lib/gui/edit_json/settings_panel.py:271
 msgid "Horizontal advance x"
 msgstr "Horizontaler Vorschub x"
 
-#: lib/gui/edit_json/settings_panel.py:268
+#: lib/gui/edit_json/settings_panel.py:277
 msgid "Glyph width"
 msgstr "Breite der Glyphen"
 
-#: lib/gui/edit_json/settings_panel.py:269
+#: lib/gui/edit_json/settings_panel.py:278
 msgid "Use the width of the individual glyphs."
 msgstr "Die Breite der einzelnen Glyphen verwenden."
 
-#: lib/gui/edit_json/settings_panel.py:274
+#: lib/gui/edit_json/settings_panel.py:283
 msgid "Horizontal advance x space"
 msgstr "Horizontaler Vorschub Leerzeichen"
 
@@ -4263,7 +4284,7 @@ msgstr "https://inkstitch.org/de/fonts/font-library/"
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Diese Schriftart hat keine verfügbare Schriftvariante. Bitte aktualisieren oder entfernen."
 
-#: lib/gui/lettering/main_panel.py:327
+#: lib/gui/lettering/main_panel.py:328
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -4471,57 +4492,67 @@ msgstr "Einstellungen"
 msgid "This SVG"
 msgstr "Dokument"
 
-#: lib/gui/preferences.py:42 lib/gui/preferences.py:112
+#: lib/gui/preferences.py:43 lib/gui/preferences.py:135
 msgid "Jump stitches smaller than this will be treated as normal stitches."
 msgstr "Sprungstiche die kleiner sind, werden als normale Stiche behandelt.\n"
 "Dies beeinflusst auch die Verwendung von Vernähstichen. Vor und nach Sprungstichen werden in der Regel Vernähstiche eingefügt. Diese entfallen, wenn der Sprungstich kleiner als dieser Wert ist. Eine individuelle Steuerung für Vernähstiche ist in den Parametereinstellungen für einzelne Objekte möglich."
 
-#: lib/gui/preferences.py:53 lib/gui/preferences.py:70
-#: lib/gui/preferences.py:123 lib/gui/preferences.py:139
+#: lib/gui/preferences.py:54 lib/gui/preferences.py:72
+#: lib/gui/preferences.py:91 lib/gui/preferences.py:146
+#: lib/gui/preferences.py:163 lib/gui/preferences.py:180
 msgid "mm"
 msgstr "mm"
 
-#: lib/gui/preferences.py:56 lib/gui/preferences.py:73
+#: lib/gui/preferences.py:57 lib/gui/preferences.py:75
+#: lib/gui/preferences.py:94
 msgid "Set As Default"
 msgstr "Als Standard definieren"
 
-#: lib/gui/preferences.py:76
+#: lib/gui/preferences.py:79 lib/gui/preferences.py:169
+msgid "Minimum satin stroke width"
+msgstr ""
+
+#: lib/gui/preferences.py:80
+msgid "Strokes thinner than this value will not take a satin parameter."
+msgstr ""
+
+#: lib/gui/preferences.py:98
 msgid "Rotate on export"
 msgstr "Rotieren und exportieren"
 
-#: lib/gui/preferences.py:78
+#: lib/gui/preferences.py:100
 msgid "Some embroidery machines don't automatically rotate files to fit into the hoop."
 msgstr "Einige Stickmaschinen drehen das Design nicht automatisch, um es in den Rahmen einzupassen."
 
-#: lib/gui/preferences.py:83
+#: lib/gui/preferences.py:105
 msgid "Don't rotate"
 msgstr "Nicht drehen"
 
-#: lib/gui/preferences.py:84
+#: lib/gui/preferences.py:106
 msgid "Rotate left"
 msgstr "Links drehen"
 
-#: lib/gui/preferences.py:85
+#: lib/gui/preferences.py:107
 msgid "Rotate right"
 msgstr "Rechts drehen"
 
-#: lib/gui/preferences.py:101
+#: lib/gui/preferences.py:123
 msgid "Global"
 msgstr "Global"
 
-#: lib/gui/preferences.py:111
+#: lib/gui/preferences.py:134
 msgid "Default minimum jump stitch length"
 msgstr "Minimale Länge für Sprungstiche"
 
-#: lib/gui/preferences.py:144
+#: lib/gui/preferences.py:186
 msgid "Stitch plan cache size (0 to disable cache)"
 msgstr "Cache Größe (0 deaktiviert den Cache)"
 
-#: lib/gui/preferences.py:155
+#: lib/gui/preferences.py:197
 msgid "MB"
 msgstr "MB"
 
-#: lib/gui/preferences.py:158
+#: lib/gui/preferences.py:200
 msgid "Clear Stitch Plan Cache"
 msgstr "Stichplan-Cache leeren"
 
@@ -5180,32 +5211,32 @@ msgstr "Schrift: Japanisch"
 msgid "Script: latin"
 msgstr "Schrift: Latein"
 
-#: lib/lettering/font.py:101
+#: lib/lettering/font.py:102
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr "Die JSON-Datei fehlt. JSON-Datei unter folgendem Pfad erwartet:"
 
-#: lib/lettering/font.py:103
+#: lib/lettering/font.py:104
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion erstellt werden:\n"
 "Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen..."
 
-#: lib/lettering/font.py:110
+#: lib/lettering/font.py:111
 msgid "Corrupt JSON file"
 msgstr "Die JSON-Datei ist beschädigt"
 
-#: lib/lettering/font.py:112
+#: lib/lettering/font.py:113
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion neu erstellt werden:\n"
 "Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON erstellen..."
 
-#: lib/lettering/font.py:202
+#: lib/lettering/font.py:204
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Die Schrift '%s' hat keine Varianten."
 
-#: lib/lettering/font.py:618
+#: lib/lettering/font.py:638
 msgid "Color Group"
 msgstr "Farbgruppe"
 
@@ -5772,7 +5803,7 @@ msgstr "Bei einer Änderung der Garnpalette  werden die Garnnamen und Bestellnum
 msgid "Yes"
 msgstr "Ja"
 
-#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:108
+#: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:110
 #: inx/inkstitch_letters_to_font.inx:57
 msgid "No"
 msgstr "Nein"
@@ -6202,7 +6233,7 @@ msgstr "Diese Erweiterung versucht, alle gewählten Satinsäulen ohne dazwischen
 #: inx/inkstitch_lettering_along_path.inx:35
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
-#: inx/inkstitch_lettering_generate_json.inx:162
+#: inx/inkstitch_lettering_generate_json.inx:164
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
@@ -7848,93 +7879,97 @@ msgid "Disable if you defined manual routing in your font."
 msgstr "Deaktiviere diese Funktion, wenn du für eine manuelle Stichführung in deiner Schriftdatei angelegt hast."
 
 #: inx/inkstitch_lettering_generate_json.inx:101
+msgid "Wether or not the cross stitch pattern will be scaled along with the font."
+msgstr ""
+
+#: inx/inkstitch_lettering_generate_json.inx:103
 msgid "If disabled back and forth stitching will not be possile for this font."
 msgstr "Wenn diese Funktion deaktiviert ist, ist die Option \"Sticke Textzeilen vor und zurück\" für diese Schrift nicht verfügbar."
 
-#: inx/inkstitch_lettering_generate_json.inx:104
+#: inx/inkstitch_lettering_generate_json.inx:106
 msgid "If disabled color sorting will be disabled for this font. Color sorting needs color_sort_index indicators within the font."
 msgstr "Wenn deaktiviert, wird die Farbsortierung für diese Schriftart deaktiviert. Die Farbsortierung erfordert Farbsortierindizes in der Schriftart."
 
-#: inx/inkstitch_lettering_generate_json.inx:106
+#: inx/inkstitch_lettering_generate_json.inx:108
 msgid "Combine indices"
 msgstr "Indizes kombinieren"
 
-#: inx/inkstitch_lettering_generate_json.inx:106
+#: inx/inkstitch_lettering_generate_json.inx:108
 msgid "When color sorting, combine elements with this color indices (comma separated)"
 msgstr "Bei der Farbsortierung Elemente mit diesen Farbindizes (durch Komma getrennt) kombinieren"
 
-#: inx/inkstitch_lettering_generate_json.inx:107
+#: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Force letter case"
 msgstr "Klein-/Großbuchstaben erzwingen"
 
-#: inx/inkstitch_lettering_generate_json.inx:121
-#: inx/inkstitch_lettering_generate_json.inx:122
+#: inx/inkstitch_lettering_generate_json.inx:123
+#: inx/inkstitch_lettering_generate_json.inx:124
 msgid "Kerning"
 msgstr "Kerning"
 
-#: inx/inkstitch_lettering_generate_json.inx:123
+#: inx/inkstitch_lettering_generate_json.inx:125
 msgid "If your font file contains kerning information, you can completely ignore the following settings (unless you want to overwrite them). If the kerning information cannot be found, these values will apply automatically."
 msgstr "Wenn deine Schriftdatei Kerning-Informationen enthält, kannst du die nächsten Einstellungen ignorieren (es sei denn, sie sollen manuell gesetzt werden). Wenn keine Kerning-Informationen gefunden werden, werden die unten stehenden Werte automatisch genutzt."
 
-#: inx/inkstitch_lettering_generate_json.inx:131
-#: inx/inkstitch_lettering_generate_json.inx:139
-#: inx/inkstitch_lettering_generate_json.inx:147
+#: inx/inkstitch_lettering_generate_json.inx:133
+#: inx/inkstitch_lettering_generate_json.inx:141
+#: inx/inkstitch_lettering_generate_json.inx:149
 msgid "Force"
 msgstr "Erzwingen"
 
-#: inx/inkstitch_lettering_generate_json.inx:131
+#: inx/inkstitch_lettering_generate_json.inx:133
 msgid "Overwrite leading information from font file."
 msgstr "Information zur Zeilenhöhe aus der Schriftdatei überschreiben."
 
-#: inx/inkstitch_lettering_generate_json.inx:133
+#: inx/inkstitch_lettering_generate_json.inx:135
 msgid "Leading (px)"
 msgstr "Zeilenhöhe (px)"
 
-#: inx/inkstitch_lettering_generate_json.inx:133
+#: inx/inkstitch_lettering_generate_json.inx:135
 msgid "Line height (default: 100)"
 msgstr "Zeilenhöhe (Standard: 100)"
 
-#: inx/inkstitch_lettering_generate_json.inx:139
+#: inx/inkstitch_lettering_generate_json.inx:141
 msgid "Overwrite word spacing information from font file."
 msgstr "Information zum Wortabstand aus der Schriftdatei überschreiben."
 
-#: inx/inkstitch_lettering_generate_json.inx:141
+#: inx/inkstitch_lettering_generate_json.inx:143
 msgid "Word spacing (px)"
 msgstr "Wortabstand (px)"
 
-#: inx/inkstitch_lettering_generate_json.inx:141
+#: inx/inkstitch_lettering_generate_json.inx:143
 msgid "Space character width (default: 20)"
 msgstr "Breite des Leerzeichens (Standard: 20)"
 
-#: inx/inkstitch_lettering_generate_json.inx:147
+#: inx/inkstitch_lettering_generate_json.inx:149
 msgid "Overwrite letter spacing information from font file."
 msgstr "Information zum Zeichenabstand aus der Schriftdatei überschreiben."
 
-#: inx/inkstitch_lettering_generate_json.inx:149
+#: inx/inkstitch_lettering_generate_json.inx:151
 msgid "Letter spacing (px)"
 msgstr "Zeichenabstand (px)"
 
-#: inx/inkstitch_lettering_generate_json.inx:149
+#: inx/inkstitch_lettering_generate_json.inx:151
 msgid "Letter spacing (default: 100)"
 msgstr "Zeichenabstand (Voreinstellung: 100)"
 
-#: inx/inkstitch_lettering_generate_json.inx:152
+#: inx/inkstitch_lettering_generate_json.inx:154
 msgid "Use glyph width"
 msgstr "Breite der Glyphen verwenden"
 
-#: inx/inkstitch_lettering_generate_json.inx:152
+#: inx/inkstitch_lettering_generate_json.inx:154
 msgid "Use glyph width to define letter spacing."
 msgstr "Definiere die Buchstabenabstände anhand der Glyphenbreite."
 
-#: inx/inkstitch_lettering_generate_json.inx:159
+#: inx/inkstitch_lettering_generate_json.inx:161
 msgid "Generates font.json which can be used by the lettering tool."
 msgstr "Erstellt die font.json-Datei, um die Schrift für das Textwerkzeug nutzbar zu machen."
 
-#: inx/inkstitch_lettering_generate_json.inx:160
+#: inx/inkstitch_lettering_generate_json.inx:162
 msgid "The generated file can be updated with Extensions > Ink/Stitch > Font Management > Edit JSON."
 msgstr "Die erstellte Datei kann über \"Erweiterungen > Ink/Stitch > Schriftverwaltung > JSON bearbeiten\" angepasst werden."
 
-#: inx/inkstitch_lettering_generate_json.inx:163
+#: inx/inkstitch_lettering_generate_json.inx:165
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
 msgstr "https://inkstitch.org/de/docs/font-tools/#json-datei-erstellen"
 
