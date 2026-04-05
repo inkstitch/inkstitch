@@ -6,6 +6,14 @@ on:
       - main
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+      inputs:
+          TEST_SIGNING:
+              description: 'Sign windows binaries'
+              required: true
+              type: boolean
+              default: false
+
 jobs:
   linux64:
     runs-on: ubuntu-22.04
@@ -294,12 +302,12 @@ jobs:
         env:
           BUILD: windows
       - name: Set siging policy to release
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         shell: bash
         run: |
           echo release_policy="release-signing" >> $GITHUB_ENV
       - name: upload-unsigned-exe
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: upload-unsigned-exe
         uses: actions/upload-artifact@v4
         with:
@@ -307,7 +315,7 @@ jobs:
           path: |
             dist/inkstitch/bin/inkstitch.exe
       - name: Sign-exe
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: Sign-exe
         uses: signpath/github-action-submit-signing-request@v1.1
         with:
@@ -319,7 +327,7 @@ jobs:
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
       - name: Copy signed exe to dist
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         shell: bash
         run: |
             mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
@@ -329,14 +337,14 @@ jobs:
         env:
           BUILD: windows
       - name: upload-unsigned-installer
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: upload-unsigned-installer
         uses: actions/upload-artifact@v4
         with:
           name: inkstitch-windows64-installer
           path: signed-artifacts
       - name: Sign-installer
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: Sign-installer
         uses: signpath/github-action-submit-signing-request@v1.1
         with:
