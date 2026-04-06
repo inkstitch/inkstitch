@@ -185,10 +185,10 @@ class DrawingPanel(glcanvas.GLCanvas):
 
         self.SwapBuffers()
 
-        # Interestingly, these graphics can be "stacked", but it seems like it's a little glitchy.
-        canvas = wx.GraphicsContext.Create(dc)
+        # # Interestingly, these graphics can be "stacked", but it seems like it's a little glitchy.
+        # canvas = wx.GraphicsContext.Create(dc)
 
-        self.draw_scale(canvas)
+        # self.draw_scale(canvas)
 
 
     def draw_page(self, canvas):
