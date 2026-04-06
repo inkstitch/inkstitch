@@ -26,6 +26,7 @@ FONT_CATEGORIES = [
     FontCategory('ripple', _('Ripple Stitch')),
     FontCategory('running_stitch', _('Running Stitch')),
     FontCategory('sans_serif', _("Sans Serif")),
+    FontCategory('satin', _("Satin")),
     FontCategory('serif', _("Serif")),
     FontCategory('tartan', _("Tartan")),
     FontCategory('tiny', _("Tiny")),
