@@ -20,12 +20,30 @@ Dans Ink/Stitch il est possible de générer des textures en ajoutant ou en supp
 
 3. Sélectionnez à la fois les éléments de broderie et les éléments de textures, faire `Ctrl+G` pour **grouper le tout**.
 
-4. **Convertissez en texture.** Sélectionnez uniquement les éléments de texture et exécutez `Extensions > Ink/Stitch > Édition > Sélection vers texture`. Ceci ajoutera un marqueur au début de l'élément de texture pour indiquer qu'il ne sera pas brodé mais qu'il sera utilisé comme élément de texture pour tous les éléments de son groupe. Des éléments appartenant à des sous-groupe de ce même groupe ne seront pas affectés.
+4. **Convertissez en texture.**
 
- ![Pattern groups](/assets/images/docs/en/pattern.png)
+  Sélectionnez uniquement les éléments de texture et exécutez `Extensions > Ink/Stitch > Édition > Sélection vers texture`. Ceci ajoutera un marqueur au début de l'élément de texture pour indiquer qu'il ne sera pas brodé mais qu'il sera utilisé comme élément de texture pour tous les éléments de son groupe. Des éléments appartenant à des sous-groupe de ce même groupe ne seront pas affectés.
+
+  ![Pattern groups](/assets/images/docs/en/pattern.png)
+
+  {% include upcoming_release.html %}
+
+  Interval: An interval can be set for patterns with a stroke color. 
+  This value determines at which pattern the addition of nodes at path intersections should be skipped.
+  Multiple values are separated by spaces.
+
+  Offset: Patterns with a stroke color only begin after this number of path intersections.
 
 ## Supprimer le marqueur de texture
+
+Remove the pattern marker by running `Extensions > Ink/Stitch > Edit > Selection to Pattern`, select the `Remove pattern marker` option.
+
+### Manual pattern marker removal
 
 Le marqueur de texture peut être supprimé dans le panneau "Fond et Contour" (`Ctrl+Shift+F`). Ouvrez l'onglet "Style de contour" et choisissez la toute première option (vide) dans le premier menu déroulant. Après suppression du marqueur, le chemin n'est plus une texture, mais un chemin ordinaire.
 
 ![Remove pattern](/assets/images/docs/fr/stitch-type-remove-pattern.png)
+
+### Samples Files Including Pattern Stitches
+
+{% include tutorials/tutorial_list key="stitch-type" value="Pattern Stitch" %}

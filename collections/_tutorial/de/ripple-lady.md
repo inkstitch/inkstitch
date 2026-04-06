@@ -10,6 +10,7 @@ tutorial-typ:
 stichart:
   - Ripplestich
   - Mehrfachgeradstich
+  - Muster
 techniken:
 schwierigkeitsgrad: 
 ---
