@@ -3,6 +3,7 @@
     "description": "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters.",
     "keywords": [
         "handwriting",
+        "satin",
         "latin"
     ],
     "font_license":"SCC-BY-SA 4.0",
