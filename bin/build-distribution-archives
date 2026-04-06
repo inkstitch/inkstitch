@@ -91,8 +91,8 @@ if [ "$BUILD" = "osx" ]; then
     7z a ../artifacts/inkstitch-${VERSION}-${OS}-${ARCH}.zip *
     cd ..
 else
-    cp -a addons palettes symbols fonts texture tiles dbus inx LICENSE VERSION dist/inkstitch
-    cp -a icons locales print dist/inkstitch/bin
+    cp -a addons palettes symbols fonts tiles dbus inx LICENSE VERSION dist/inkstitch
+    cp -a icons locales print texture dist/inkstitch/bin
 fi
 
 if [ "$BUILD" = "windows" ]; then
