@@ -2,7 +2,8 @@
     "name": "Cats",
     "description": "Cats is a silly font that makes use of satin random parameters.",
     "keywords": [
-        "latin"
+        "latin",
+        "satin"
     ],
     "font_license":"SIL Open Font License v1.1",
     "original_font": "Cat Font",
