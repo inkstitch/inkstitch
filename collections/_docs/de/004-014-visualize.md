@@ -71,13 +71,15 @@ Bildquelle: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-sv
   - **Realistisch (hohe Qualität)** Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (16-bit)
   - **Realistisch Vektor (langsam)** Vektor-Ausgabe mit realistischen Filtern
 
-
 - **Stickplan an der Seite platzieren** Der Stichplan wird rechts neben dem Canvas abgebildet.
   Ist diese Option nicht aktiviert, wird der Stichplan direkt über das Design gelegt.
   In diesem Fall ist es nützlich die Sichtbarkeit des Designs anzupassen.
 - **Nadeleinstichstellen** zeigt Punkte an den Einstichstellen
 - **Stichplan-Ebene sperren** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
 - **Zeige visuelle Befehle**
+- **Sprungstitche anzeigen**
+
+- **Ebene ignorieren Befehl einfügen**
 - **Letzten Stichplan überschreiben**
   Überschreibt den letzten Stichplan wenn aktiviert. Soll der alte Stichplan erhalten bleiben, deaktiviere diese Option.
 

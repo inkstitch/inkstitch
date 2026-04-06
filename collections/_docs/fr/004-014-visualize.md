@@ -71,12 +71,16 @@ Image source: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-
     Slow means, that it has the capability to slow down Inkscape after the rendering process and even may make it freeze.
     So use with care on complex designs and save your design before you render the stitch plan.
     {: .notice--warning }
+
 - **Move stitch plan beside the canvas**
   Displays the preview on the right side of the canvas. If not enabled,the stitch plan will be placed on top of your design.
   In that case you may want to update your design visibility to eather hidden or lower opacity.
 - **Needle points** displays needle points if enabled
 - **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
 - **Display command symbols**
+- **Render jump stitches**
+
+- **Add ignore layer command**
 - **Overide last stitch plan**
   If checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
 
