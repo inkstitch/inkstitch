@@ -54,8 +54,6 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
                     elements.append(SatinColumn(node))
                 elif not is_command(element.node):
                     elements.append(Stroke(node))
-                    if element.get_boolean_param("satin_column", False):
-                        element.set_param('satin_column', False)
             if element.get_boolean_param("stroke_first", False):
                 elements.reverse()
 
