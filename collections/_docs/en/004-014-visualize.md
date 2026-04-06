@@ -1,7 +1,7 @@
 ---
 title: "Visualize"
 permalink: /docs/visualize/
-last_modified_at: 2025-04-17
+last_modified_at: 2026-04-06
 toc: true
 ---
 ## Simulator
@@ -15,7 +15,6 @@ Then  run `Extensions > Ink/Stitch  > Visualize and Export > Simulator` and enjo
 
 ### Buttons and Shortcut Keys
 
- 
 Button  | Effect | Shortcut Keys
 -------- | -------- | --------
 **Controls**||
@@ -43,16 +42,21 @@ Button  | Effect | Shortcut Keys
 |<img src="/assets/images/docs/icons/page.png" >|Show page| 
 |<img src="/assets/images/docs/icons/settings.png" >|Open setting dialog to set speed, line width and needle point size| 
 
-
-
 It is also possible to **zoom** and **pan** the simulation with the mouse.
 
 ## Stitch Plan Preview
 
-Run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
-Instead of applying the stitch plan, you can also use the `Live preview` option. Then you don't need to undo your changes afterwards. If you apply the stitch plan, you will have the ability to inspect it and adapt your design as you wish. Use the Undo Stitch Plan extension to remove it afterwards.
+The stitch plan preview inserts a stitch plan onto the canvas. Depending on your settings, the stitch plan preview will be placed on top of the design
+or on the right side of the canvas (option: move stitch plan beside the canvas).
+
+To access the stitch plan preview run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
 
 ### Options
+
+![simple and realistic render modes](/assets/images/docs/stitch-plan-preview-modes.jpg)
+
+<i>From left to right: 1. Render mode simple, 2. Render mode simple with needle points, 3. Render mode realistic<br>
+Image source: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-svg-2530031/)</i>
 
 - **Design layer visibility** defines the visibility of the original design layer.
   - **unchanged** leave it as is
@@ -76,7 +80,16 @@ Instead of applying the stitch plan, you can also use the `Live preview` option.
 - **Overide last stitch plan**
   If checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
 
-{% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
+### Design workflow with shortcut keys
+
+Set [shortcut keys](/docs/customize/#shortcuts) for both, `stitch plan preview` and `Undo stitch plan` (see below) and it will greatfully support your designing workflow.
+
+* We recommend to set the shortcut key to the `no preference` method in the shortcut key menu.
+  The extension will then run directly (without the settings window) with the last applied settings.
+* Enable the `lock` option, so you can still acceess every path without interference with the stitch plan element(s).
+* Ensure that the `Override last stitch plan` option is enabled, otherwise you will end up with multiple stitch plans on canvas.
+
+{% include video id="vyTMwLvkkiw4vgwDcTJS6e" provider="diode" %}
 
 ## Undo Stitch Plan
 

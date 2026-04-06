@@ -15,8 +15,6 @@ Puis faites `Extensions > Ink/Stitch  > Visualiser et Exporter > Simulateur`.
 
 ### Boutons et raccourcis du simulateur 
 
-
- 
 Bouton | Effet | Raccourci
 -------- | -------- | --------
 **Contrôles**||
@@ -48,6 +46,52 @@ C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la sou
 
 ## Simulation du plan de broderie {#stitch-plan-preview}
 
+The stitch plan preview inserts a stitch plan onto the canvas. Depending on your settings, the stitch plan preview will be placed on top of the design
+or on the right side of the canvas (option: move stitch plan beside the canvas).
+
+To access the stitch plan preview run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
+
+### Options
+
+![simple and realistic render modes](/assets/images/docs/stitch-plan-preview-modes.jpg)
+
+<i>From left to right: 1. Render mode simple, 2. Render mode simple with needle points, 3. Render mode realistic<br>
+Image source: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-svg-2530031/)</i>
+
+- **Design layer visibility** defines the visibility of the original design layer.
+  - **unchanged** leave it as is
+  - **hidden** hide the original design
+  - **lower opacity** display original design with lower opacity
+- **Render Mode**
+  - **Simple**: simple line drawing
+  - **Realistic**: Realistic preview output as png image into the canvas (8-bit)
+  - **Realistic High Quality** Realistic preview output as png image into the canvas (16-bit)
+  - **Realistic vector (slow)** Vector output with realistic filters
+
+    Slow means, that it has the capability to slow down Inkscape after the rendering process and even may make it freeze.
+    So use with care on complex designs and save your design before you render the stitch plan.
+    {: .notice--warning }
+- **Move stitch plan beside the canvas**
+  Displays the preview on the right side of the canvas. If not enabled,the stitch plan will be placed on top of your design.
+  In that case you may want to update your design visibility to eather hidden or lower opacity.
+- **Needle points** displays needle points if enabled
+- **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
+- **Display command symbols**
+- **Overide last stitch plan**
+  If checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
+
+### Design workflow with shortcut keys
+
+Set [shortcut keys](/docs/customize/#shortcuts) for both, `stitch plan preview` and `Undo stitch plan` (see below) and it will greatfully support your designing workflow.
+
+* We recommend to set the shortcut key to the `no preference` method in the shortcut key menu.
+  The extension will then run directly (without the settings window) with the last applied settings.
+* Enable the `lock` option, so you can still acceess every path without interference with the stitch plan element(s).
+* Ensure that the `Override last stitch plan` option is enabled, otherwise you will end up with multiple stitch plans on canvas.
+
+{% include video id="vyTMwLvkkiw4vgwDcTJS6e" provider="diode" %}
+
+{% comment %}
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter  > Simulation du plan de broderie...`.
 
 Plutôt que d'appliquer le plan de broderie, vous pouvez aussi utilisez l'option Live preview de l'extension. 
@@ -72,12 +116,10 @@ Vous disposez des options suivantes:
 Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
 
 Si le plan est verrouillé, et le motif visible, le plan de broderie ne vous gênera pas pour modifier le motif.
-
-
-
-{% include folder-galleries path="stitch-plan/" captions="1:Positionner le plan de broderie hors du canevas;2:Visibilité du calque de conception cachée;3:Opacité du calque de conception baissée ;4:Points de l'aiguille activé | désactivé " caption="<i>Image en provenance de [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
+{% endcomment %}
 
 ## Annuler l'aperçu du plan de broderie
+
 Utiliser l'aperçu du plan de broderie au dessus d'objets de broderie cachés ou ayant une opacité amoindrie aide à se faire une idée visuelle de la broderie finale.
 
 Il est parfois utile de garder le plan de broderie de objets déjà présents pour ajouter de nouveaux objets de broderie,mais pour l'export ou pour modifier des éléments existants vous aurez besoin des objets initiaux.

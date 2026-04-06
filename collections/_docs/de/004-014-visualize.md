@@ -1,7 +1,7 @@
 ---
 title: "Visualisierung"
 permalink: /de/docs/visualize/
-last_modified_at: 2025-04-17
+last_modified_at: 2026-04-06
 toc: true
 ---
 ## Simulator
@@ -44,36 +44,55 @@ Schaltfläche  | Wirkung | Tastenkombinationen
 
 Es ist auch möglich die Simulation mit der Maus zu **zoomen** und zu **verschieben**.
 
-## Stich-Plan Vorschau
+## Stichplan Vorschau
 
-Führe den Befehl `Erweiterungen > Ink/Stitch > Visualisierung und Export > Stichplan Vorschau` aus.
-Anstatt die Vorschau einzufügen, reicht manchmal auch die Option `Live Preview`.
+Die Stichplan-Vorschau zeigt den Stichplan direkt auf der Arbeitsfläche an. Abhängig von den Einstellungen wird der Stichplan direkt über dem Design oder am
+rechten Rand der Arbeitsfläche dargestellt (Option: Stickplan an der Seite platzieren).
 
-Wird der Stickplan jedoch eingefügt, kann das Design genauer untersucht und ggf. angepasst und ergänzt werden. Es ist immer noch möglich, den Stickplan später durch die Option `Erweiterungen > Ink/Stitch > Visualisieren und Exportieren > Stich-Plan Vorschau aufheben` zu entfernen.
+Die Stichplan-Vorschau befindet sich unter dem Menüpunkt `Erweiterungen > Ink/Stitch > Visualisierung und Export > Stichplan Vorschau ...`.
 
-Es gibt die folgenden Optionen:
+### Optionen
+
+![simple and realistic render modes](/assets/images/docs/stitch-plan-preview-modes.jpg)
+
+<i>V.l.n.r.: 1. Render-Modus einfach 2. Render-Modus einfach mit Nadeleinstichstellen 3. Render-Modus realistisch<br>
+Bildquelle: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-svg-2530031/)</i>
 
 - **Design-Layer Sichtbarkeit** definiert die Sichtbarkeit, bzw. Transparenz der Design-Layer
   - **unverändert** die Design-Layer bleiben unverändert
   - **versteckt** das Original-Design wird versteckt
   - **Verrinerte Deckkraft** das Original wird mit 40%-Transparenz dargestellt
 - **Render Modus**
+  ![simple and realistic render modes](/assets/images/docs/stitch-plan-preview-modes.jpg)
+
+  <i>Original image from [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-svg-2530031/)</i>
   - **Einfach**: einfache Liniendarstellung
   - **Realistisch**: Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (8-bit)
   - **Realistisch (hohe Qualität)** Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (16-bit)
   - **Realistisch Vektor (langsam)** Vektor-Ausgabe mit realistischen Filtern
+
+
 - **Stickplan an der Seite platzieren** Der Stichplan wird rechts neben dem Canvas abgebildet.
   Ist diese Option nicht aktiviert, wird der Stichplan direkt über das Design gelegt.
   In diesem Fall ist es nützlich die Sichtbarkeit des Designs anzupassen.
 - **Nadeleinstichstellen** zeigt Punkte an den Einstichstellen
-- **Lock** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
+- **Stichplan-Ebene sperren** Stichplan reagiert nicht auf Mausinteraktionen. Das ist praktisch, wenn mit aktiviertem Stichplan das Original-Design bearbeitet werden soll
 - **Zeige visuelle Befehle**
 - **Letzten Stichplan überschreiben**
   Überschreibt den letzten Stichplan wenn aktiviert. Soll der alte Stichplan erhalten bleiben, deaktiviere diese Option.
 
-{% include folder-galleries path="stitch-plan/" captions="1:Stitch plan beside canvas;2:Layer visibility set to hidden;3:Layer visibility set to lower opacity;4:Needle points enabled | disabled" caption="<i>Example image from [OpenClipart](https://openclipart.org/detail/334596)</i>" %}
+### Verbesserter Worfklow mit Tastenkürzeln
 
-## Stich-Plan Vorschau aufheben
+Nutze [Tastenkürzel](/docs/customize/#shortcuts) für beides, `Stichplan-Vorschau` und `Stichplanvorschau aufheben` (s.u.) um deinen Workflow zu verbessern.
+
+* Wir empfehlen die Tatenkürzel auf die Methoden mit dem Zusatz `Keine Einstellungen` zu legen.
+  So wird die Funktion direkt ausgeführt (ohne das Einstellungsfenster). Dabei werden die zuletzt genutzen Einstellungen verwendet.
+* Aktiviere die Option `Stichplan-Ebene sperren` um alle Pfade ohne Interferenzen mit dem aktivierten Stichplan verändern zu können.
+* Achte darauf, dass die Option `Letzten Stichplan überschreiben` aktiviert ist. Andernfalls werden sich die Stichpläne auf der Arbeitsfläche häufen.
+
+{% include video id="vyTMwLvkkiw4vgwDcTJS6e" provider="diode" %}
+
+## Stichplan Vorschau aufheben
 
 Wird der Stichplan über dem Design mit verringerter Deckkraft angezeigt, hilft es eine visuelle Idee zu bekommen, wie das Design am Ende aussehen wird. Manchmal ist es hilfreich, in einen angezeigten Stichplan hineinzuarbeiten. Dies jedoch, kann es schwieriger machen, den Stichplan wieder zu entfernen und da auch die Deckkraft wieder zurückgesetzt werden muss. Mit dieser Erweiterung kann auch der Stichplan nach erfolgten Änderungen am Dokument einfach wieder entfernt werden.
 
