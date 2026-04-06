@@ -6,12 +6,22 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/egyptian.png
     height: 20
+  - url: /assets/images/fonts/egyptian_small.png
+    height: 10
 data_title:
   - egyptian
+  - egyptian_small
 ---
+
 {% include upcoming_release.html %}
 
 {% include font_infos.html %}
+
+## Special features
+
+Contrarily to Egyptian, Egyptian Small **MUST** be embroidered with thread and needle smaller than usual.
+A USA 8 (EUR 60) size needle, and 60WT thread **MUST** be used.
+
 
 {% include end_of_font_page.html %}
 
