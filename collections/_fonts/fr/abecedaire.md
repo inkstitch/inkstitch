@@ -6,7 +6,7 @@ toc: false
 preview_image:
   - url: /assets/images/fonts/abecedaire.jpg
     height: 20
-- url: /assets/images/fonts/abecedaire_small.jpg
+  - url: /assets/images/fonts/abecedaire_small.jpg
     height: 10
 data_title:
   - abecedaire
