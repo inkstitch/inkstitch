@@ -18,6 +18,7 @@ from inkex import Path, PathElement
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance
 from shapely import make_valid, unary_union
 from shapely.affinity import translate
+from shapely.geometry import Polygon
 
 from ...stitches.utils.cross_stitch import CrossGeometries
 from ...svg import PIXELS_PER_MM, get_correction_transform
@@ -319,6 +320,38 @@ class BitmapToCrossStitch(object):
                 pass
         return offset_value
 
+    def _get_color_boxes_from_pixels(self):
+        # scales image up, each pixel represents one cros stitch box
+        recolored_image = self.apply_color_corrections(self.original_image)
+        recolored_image = self._crop_transparent_borders(recolored_image)
+        if recolored_image is None:
+            return
+
+        color_boxes = defaultdict(list)
+        width = self.settings['box_x'] * PIXELS_PER_MM
+        height = self.settings['box_y'] * PIXELS_PER_MM
+
+        if recolored_image is None:
+            return
+
+        square = Polygon([(0, 0), (width, 0), (width, height), (0, width)])
+        minx, miny, maxx, maxy = self.bitmap.shape.bounds
+        pos_x = 0
+        pos_y = 0
+        w, h = recolored_image.size
+        pixels = recolored_image.load()
+        for y in range(h):
+            pos_x = 0
+            for x in range(w):
+                pixel = pixels[x, y]
+                if pixel[3] < 255:
+                    continue
+                box = translate(square, pos_x * width + minx, pos_y * height + miny)
+                color_boxes[pixel[:3]].append(box)
+                pos_x += 1
+            pos_y += 1
+        return color_boxes
+
     def _get_color_boxes(self):
         # ensure rgba mode
         # apply color corrections
@@ -357,7 +390,10 @@ class BitmapToCrossStitch(object):
         '''
         elements = []
         width = self.settings['box_x'] * PIXELS_PER_MM
-        color_boxes = self._get_color_boxes()
+        if self.settings['pixel_by_pixel']:
+            color_boxes = self._get_color_boxes_from_pixels()
+        else:
+            color_boxes = self._get_color_boxes()
         if not color_boxes:
             return
 

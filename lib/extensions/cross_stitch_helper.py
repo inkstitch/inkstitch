@@ -3,7 +3,7 @@
 # Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Color, Grid, Group, Path
+from inkex import Color, Grid, Group, Path, errormsg
 from inkex.units import convert_unit
 
 from ..elements import FillStitch
@@ -43,6 +43,7 @@ class CrossStitchHelper(InkstitchExtension):
             'remove_grids': False,
             'color_method': 0,
             'convert_bitmap': False,
+            'pixel_by_pixel': False,
             'bitmap_num_colors': 5,
             'bitmap_quantize_method': 1,
             'bitmap_rgb_colors': '',
@@ -69,6 +70,11 @@ class CrossStitchHelper(InkstitchExtension):
         for element in self.elements:
             if element.name in ["Image", "FillStitch"]:
                 elements.append(element)
+
+        # No elements selected, exit with an error message
+        if not elements:
+            errormsg(_("Please select at least one element with a fill color or one image."))
+            return
 
         # When elements have been combined, we need to define a place in the layering order for our new group
         # Let's take the top most element from selection

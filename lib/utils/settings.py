@@ -57,6 +57,7 @@ DEFAULT_SETTINGS = {
     'cross_helper_grid_color': (0, 153, 229),
     'cross_helper_remove_grids': True,
     'cross_helper_convert_bitmap': False,
+    'cross_helper_pixel_by_pixel': False,
     'cross_helper_color_method': 0,
     'cross_bitmap_num_colors': 5,
     'cross_bitmap_quantize_method': 1,

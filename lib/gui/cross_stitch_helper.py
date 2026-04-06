@@ -258,6 +258,13 @@ class CrossStitchHelperFrame(wx.Frame):
         self.convert_bitmap = wx.CheckBox(self.bitmap)
         self.convert_bitmap.Bind(wx.EVT_CHECKBOX, self.enable_bitmap_settings)
 
+        self.pixel_by_pixel_label = wx.StaticText(self.bitmap, label=_("One cross each pixel"))
+        self.pixel_by_pixel = wx.CheckBox(self.bitmap)
+        pixel_tooltip = _("Scales the image up by using one cross for each pixel")
+        self.pixel_by_pixel_label.SetToolTip(pixel_tooltip)
+        self.pixel_by_pixel.SetToolTip(pixel_tooltip)
+        self.pixel_by_pixel.Bind(wx.EVT_CHECKBOX, self.update_bitmap_panel)
+
         color_choices = [
             _("Number of colors"),
             _("Selected stroke colors"),
@@ -362,6 +369,8 @@ class CrossStitchHelperFrame(wx.Frame):
         bitmap_grid_sizer.AddMany([
             (convert_bitmap_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.convert_bitmap, 1, wx.EXPAND),
+            (self.pixel_by_pixel_label, 0, wx.ALIGN_CENTER_VERTICAL),
+            (self.pixel_by_pixel, 1, wx.EXPAND),
             (self.color_selection_method_label, 0, wx.ALIGN_CENTER_VERTICAL),
             (self.color_selection_method, 1, wx.EXPAND),
             (self.num_colors_label, 0, wx.ALIGN_CENTER_VERTICAL),
@@ -543,6 +552,8 @@ class CrossStitchHelperFrame(wx.Frame):
 
     def enable_bitmap_settings(self, event=None):
         convert = self.convert_bitmap.GetValue()
+        self.pixel_by_pixel_label.Enable(convert)
+        self.pixel_by_pixel.Enable(convert)
         self.color_selection_method_label.Enable(convert)
         self.color_selection_method.Enable(convert)
         self.num_colors_label.Enable(convert)
@@ -795,6 +806,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.grid_color.SetColour(wx.Colour(global_settings['cross_helper_grid_color']))
         self.remove_grids.SetValue(global_settings['cross_helper_remove_grids'])
         self.convert_bitmap.SetValue(global_settings['cross_helper_convert_bitmap'])
+        self.pixel_by_pixel.SetValue(global_settings['cross_helper_pixel_by_pixel'])
         self.color_selection_method.SetSelection(global_settings['cross_helper_color_method'])
         self.num_colors.SetValue(global_settings['cross_bitmap_num_colors'])
         self.quantize_method.SetSelection(global_settings['cross_bitmap_quantize_method'])
@@ -829,6 +841,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.settings['remove_grids'] = self.remove_grids.GetValue()
         self.settings['color_method'] = self.color_selection_method.GetSelection()
         self.settings['convert_bitmap'] = self.convert_bitmap.GetValue()
+        self.settings['pixel_by_pixel'] = self.pixel_by_pixel.GetValue()
         self.settings['bitmap_num_colors'] = self.num_colors.GetValue()
         self.settings['bitmap_quantize_method'] = self.quantize_method.GetSelection()
         self.settings['bitmap_saturation'] = self.saturation.GetValue() / 100
@@ -865,6 +878,7 @@ class CrossStitchHelperFrame(wx.Frame):
         global_settings['cross_helper_grid_color'] = self.grid_color.GetColour().Get(False)
         global_settings['cross_helper_remove_grids'] = self.remove_grids.GetValue()
         global_settings['cross_helper_convert_bitmap'] = self.convert_bitmap.GetValue()
+        global_settings['cross_helper_pixel_by_pixel'] = self.pixel_by_pixel.GetValue()
         global_settings['cross_helper_color_method'] = self.color_selection_method.GetSelection()
         global_settings['cross_bitmap_num_colors'] = self.num_colors.GetValue()
         global_settings['cross_bitmap_quantize_method'] = self.quantize_method.GetSelection()
