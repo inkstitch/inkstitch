@@ -160,13 +160,16 @@ class CrossStitchHelperFrame(wx.Frame):
         apply_page_grid = wx.FlexGridSizer(3, 2, 15, 20)
         apply_page_grid.AddGrowableCol(1)
 
-        set_params_label = wx.StaticText(self.output_option_panel, label=_("Params (selected elements)"))
+        set_params_label = wx.StaticText(self.output_option_panel, label=_("Params"))
         self.set_params = wx.CheckBox(self.output_option_panel)
+        params_tooltip = _("Defines whether params for all selected elements should be updated or not.")
+        set_params_label.SetToolTip(params_tooltip)
+        self.set_params.SetToolTip(params_tooltip)
         self.set_params.Bind(wx.EVT_CHECKBOX, self.update)
 
-        pixelize_label = wx.StaticText(self.output_option_panel, label=_("Pixelate (selected elements)"))
-        pixelize_tooltip = _("Fill shapes remain unchanged when disabled.")
+        pixelize_label = wx.StaticText(self.output_option_panel, label=_("Pixelate"))
         self.pixelize = wx.CheckBox(self.output_option_panel)
+        pixelize_tooltip = _("Defines whether the outlines of selected fill shapes should be pixelated or not.")
         pixelize_label.SetToolTip(pixelize_tooltip)
         self.pixelize.SetToolTip(pixelize_tooltip)
         self.pixelize.Bind(wx.EVT_CHECKBOX, self.update)
@@ -193,7 +196,7 @@ class CrossStitchHelperFrame(wx.Frame):
         remove_overlaps_label_text = _("Remove overlaps")
         remove_overlaps_label = wx.StaticText(self.output_option_panel, label=remove_overlaps_label_text)
         self.remove_overlaps = wx.CheckBox(self.output_option_panel)
-        remove_overlaps_tooltip = _("Inserts a new set of non overlapping shapes and removes selected elements")
+        remove_overlaps_tooltip = _("Inserts a new set of non-overlapping shapes and removes selected fill elements")
         remove_overlaps_label.SetToolTip(remove_overlaps_tooltip)
         self.remove_overlaps.SetToolTip(remove_overlaps_tooltip)
 
