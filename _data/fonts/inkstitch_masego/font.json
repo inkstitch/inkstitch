@@ -1,6 +1,11 @@
 {
     "name": "Ink/Stitch Masego",
     "description": "Masego is a display san-serif typeface.",
+    "keywords": [
+        "sans_serif",
+        "satin",
+        "latin"
+    ],
     "leading": 100,
     "font_license":"SIL Open Font License v1.1",
     "original_font": "Masego",
