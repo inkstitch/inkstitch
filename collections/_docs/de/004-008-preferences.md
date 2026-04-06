@@ -1,7 +1,7 @@
 ---
 title: "Einstellungen"
 permalink: /de/docs/preferences/
-last_modified_at: 2024-05-22
+last_modified_at: 2026-04-06
 toc: true
 ---
 Die Einstellungen können über `Erweiterungen > Ink/Stitch > Einstellungen` abgerufen werden.
@@ -53,6 +53,15 @@ Die minimale Stichlänge kann sich dementsprechend auch auf **Satinsäulen** aus
 1        |![ink_stitch_1](/assets/images/docs/preference_ink_small_1.png)|![glacial_1](/assets/images/docs/preference_glacial_1.png)
 
 Stiche mit **manueller Stichpositionierung** werden ebenfalls entsprechend dieser Einstellung angepasst. Dies kann von Nutzen sein, wenn die Stiche versehentlich zu eng gesetzt wurden.
+
+### Minimale Satinsäulenbreite für Linien
+
+{% include upcoming_release.html %}
+
+Ob eine einfache Linie als Satinsäule ausgegeben werden kann, hängt von der Konturbreite der Linie und dem Wert für die minimale Satinsäulenbreite für Linien ab.
+Die Konturbreite der Linie muss breiter sein als dieser Wert, ansonsten wird das Element als Geradstich verwertet.
+
+Zur Vermeidung von harten Stichen wird empfohlen, diesen Wert nicht unter die 1mm-Marke zu senken. Die Verwendung von dünnem Faden stellt hier eine Ausnahme dar.
 
 ### Rotiere bei Export (nur dokumentbezogen)
 

@@ -66,11 +66,23 @@ Les  **points manuels** sont eux aussi affectés  par *Longueur minimum de point
  **Si vous utilisez une W6 machine:** Réglez votre longueur minimum de point global à au moins 0.3mm, sinon vous risquez des points manquants à des endroits inattendus.
 {: .notice--warning }
 
+### Minimum satin stroke width
+
+{% include upcoming_release.html %}
+
+Wether or not a a stroke can be rendered as a satin, depends on the stroke width and this preference value for the minimum satin stroke width.
+The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch.
+To not produce hard stitches, It is recommended to only use satins wider than 1mm.
+
+To not produce hard stitches, it is recommended to only use satins wider than 1mm. The usage of thin threads is an exception to this rule.
+
 ### Seulement pour le document courant : Tourner à l'export
+
 {% include upcoming_release.html %}
 Cette option permet de tourner le motif de 90°. Utile pour les brodeuses qui ne tournent pas automatiquement un motif qui nécessite une rotation pour tenir dans le cadre
 
 ### Seulement en global: Taille du cache (mb)
+
 Elle définit la taille maximum occupée sur votre disque dur par les plans de broderie mis en cache. 
 
 Plus cette valeur est grande, plus il sera possible de possible de stocker des plans de broderie. 

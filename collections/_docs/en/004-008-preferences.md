@@ -1,7 +1,7 @@
 ---
 title: "Preferences"
 permalink: /docs/preferences/
-last_modified_at: 2025-12-29
+last_modified_at: 2026-04-06
 toc: true
 ---
 The preferences are found in `Extensions > Ink/Stitch > Preferences`.
@@ -57,8 +57,19 @@ It also affects **Satin stiches** and threfore lettering fonts. You do not want 
 **W6 machine owners:** Set your global minimum stitch length value at least to 0.3 mm, otherwise your stitch out may have missing stitches where you wouldn't expect them.
 {: .notice--warning }
 
-### For this document only : Rotate on export
+### Minimum satin stroke width
+
 {% include upcoming_release.html %}
+
+Wether or not a a stroke can be rendered as a satin, depends on the stroke width and this preference value for the minimum satin stroke width.
+The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch.
+
+To not produce hard stitches, it is recommended to only use satins wider than 1mm. The usage of thin threads is an exception to this rule.
+
+### For this document only : Rotate on export
+
+{% include upcoming_release.html %}
+
 This option rotates the embroidery 90°. Is useful when the embroidery  machine does not automatically rotate to fit the hoop.
 
 ### Global only: Cache size (mb)
