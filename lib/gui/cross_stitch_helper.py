@@ -401,11 +401,12 @@ class CrossStitchHelperFrame(wx.Frame):
             self.help,
             wx.ID_ANY,
             _("This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
-              "* Calculate stitch length for given grid spacing values\n"
-              "* Apply cross stitch parameters to selected fill elements.\n"
+              "* Define the grid size by either the maximum stitch length or grid spacing values\n"
+              "* Apply cross stitch parameters.\n"
               "* Pixelate outlines of selected fill elements.\n"
               "* Generate pixelated fills from bitmaps.\n"
-              "* Apply spacing values to page grid."),
+              "* Remove overlaps.\n"
+              "* Setup a page grid."),
             style=wx.ALIGN_LEFT
         )
         help_text.Wrap(500)
