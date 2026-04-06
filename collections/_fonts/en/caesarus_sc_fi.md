@@ -7,7 +7,7 @@ preview_image:
   - url: /assets/images/fonts/caesarus_sc_fi.png
     height: 29
 data_title:
-  - caesarus_SC_FI
+  - caesarus_sc_fi
 ---
 {% include font_infos.html %}
 
