@@ -16,6 +16,7 @@
     <option value="multicolor">{{ site.data.ui-text[page.lang].font_filter_category_multicolor | default: "Multicolor" }}</option>
     <option value="ripple">{{ site.data.ui-text[page.lang].font_filter_category_ripple | default: "Ripple Stitch" }}</option>
     <option value="running_stitch">{{ site.data.ui-text[page.lang].font_filter_category_running | default: "Running Stitch" }}</option>
+    <option value="satin">{{ site.data.ui-text[page.lang].font_filter_category_running | default: "Satin Column" }}</option>
     <option value="sans_serif">{{ site.data.ui-text[page.lang].font_filter_category_sans_serif | default: "Sans Serif }}</option>
     <option value="serif">{{ site.data.ui-text[page.lang].font_filter_category_serif | default: "Serif" }}</option>
     <option value="tartan">{{ site.data.ui-text[page.lang].font_filter_category_tartan | default: "Tartan" }}</option>
