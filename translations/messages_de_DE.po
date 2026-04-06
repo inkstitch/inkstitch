@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-05 02:43+0000\n"
-"PO-Revision-Date: 2026-04-05 02:43\n"
+"PO-Revision-Date: 2026-04-06 02:45\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -283,12 +283,12 @@ msgstr "Eine Satin-Schrift."
 #: inkstitch-fonts-metadata.py:100 inkstitch-fonts-metadata.py:138
 #: inkstitch-fonts-metadata.py:212
 msgid "small cross stitch font"
-msgstr ""
+msgstr "Kleine Kreuzstichschrift"
 
 #. description of font in fonts/eloquent
 #: inkstitch-fonts-metadata.py:102
 msgid "small cursive crosstitch font"
-msgstr ""
+msgstr "Kleine, kursive Kreuzstichschrift"
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:104
@@ -440,7 +440,7 @@ msgstr "Kreuzstichschrift"
 #. description of font in fonts/jaquarda_bastarda_9
 #: inkstitch-fonts-metadata.py:162
 msgid "small cross stitch font derived from a victorian needlepoint alphabet"
-msgstr ""
+msgstr "Kleine Kreuzstichschrift, die an eine viktorianische Alphabet-Stickerei angelehnt ist"
 
 #. description of font in fonts/kum_tsoan_AGS
 #: inkstitch-fonts-metadata.py:166
@@ -540,7 +540,7 @@ msgstr "Montecarlo ist eine Satin-Schriftart im Script-Stil mit vielen Alternati
 #. description of font in fonts/nautical
 #: inkstitch-fonts-metadata.py:204
 msgid "Cross Stitch Nautical Flag Alphabet"
-msgstr ""
+msgstr "Kreuzstich-Alphabet mit nautischen Flaggen"
 
 #. description of font in fonts/neon
 #: inkstitch-fonts-metadata.py:206
@@ -1450,7 +1450,7 @@ msgstr "Pfadüberschneidung"
 
 #: lib/elements/fill_stitch.py:93
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
-msgstr "Füllstich: Der Pfad dieses Objektes überschneidet sich selbst. Das kann zu unzusammenhängenden Objekten führen. Bitte den Pfad zerlegen, um die Stickreihenfolge der Einzelelemente zu definieren (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte aufspalten)."
+msgstr "Füllstich: Der Pfad dieses Objektes überschneidet sich selbst. Das kann zu unzusammenhängenden Objekten führen. Bitte den Pfad zerlegen, um die Stickreihenfolge der Einzelelemente zu definieren (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte zerlegen)."
 
 #: lib/elements/fill_stitch.py:101
 msgid "Fill and Stroke color"
@@ -1554,7 +1554,7 @@ msgstr "Diese Form ist ungültig"
 
 #: lib/elements/fill_stitch.py:151
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
-msgstr "Füllstich: Diese Form kann nicht gestickt werden. Versuche sie mit der Option \"Füllstiche aufspalten\" (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte aufspalten) zu reparieren."
+msgstr "Füllstich: Diese Form kann nicht gestickt werden. Versuche sie mit der Option \"Füllstiche aufspalten\" (Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Füllobjekte zerlegen) zu reparieren."
 
 #: lib/elements/fill_stitch.py:159
 msgid "FillStitch"
@@ -1599,7 +1599,7 @@ msgstr "Tartanfüllung"
 #: lib/elements/fill_stitch.py:174 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
-msgstr "Veraltete Füllung"
+msgstr "Manuelle Füllung"
 
 #: lib/elements/fill_stitch.py:178
 msgid "Fill method"
@@ -2057,15 +2057,15 @@ msgstr "Verschiebt das Kreuzstichgitter um die angegebenen Werte. Die x- und y-W
 
 #: lib/elements/fill_stitch.py:842
 msgid "Grid Rotation"
-msgstr ""
+msgstr "Gitter-Rotation"
 
 #: lib/elements/fill_stitch.py:843
 msgid "Rotates the cross stitch grid by the given value."
-msgstr ""
+msgstr "Rotiert das Kreuzstich-Gitter um den angegebenen Wert."
 
 #: lib/elements/fill_stitch.py:845
 msgid "deg"
-msgstr ""
+msgstr "Grad"
 
 #: lib/elements/fill_stitch.py:857
 msgid "Fill coverage"
@@ -2557,7 +2557,7 @@ msgstr "Dieses Element wird als Geradstich ausgegeben, obwohl es als Satinsäule
 
 #: lib/elements/stroke.py:40
 msgid "Ink/Stitch will not register elements with a stroke width underneath minimum satin stroke width setting, but it is always recommended to stay above 1mm."
-msgstr ""
+msgstr "Elemente mit einer schmaleren Konturbreite als dem Wert für die minimale Satinsäulenbreite für Linien können nicht als Satinsäule ausgegeben werden. Es wird empfohlen einen Wert von 1mm für Satinsäulen nicht zu unterschreiten."
 
 #: lib/elements/stroke.py:49 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
@@ -4179,7 +4179,7 @@ msgstr "AutoSatin"
 #: lib/gui/edit_json/settings_panel.py:185
 #: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Scale cross stitch pattern"
-msgstr ""
+msgstr "Kreuzstichmuster skalieren"
 
 #: lib/gui/edit_json/settings_panel.py:192
 msgid "Letter case"
@@ -4510,11 +4510,11 @@ msgstr "Als Standard definieren"
 
 #: lib/gui/preferences.py:79 lib/gui/preferences.py:169
 msgid "Minimum satin stroke width"
-msgstr ""
+msgstr "Minimale Satinsäulenbreite für Linien"
 
 #: lib/gui/preferences.py:80
 msgid "Strokes thinner than this value will not take a satin parameter."
-msgstr ""
+msgstr "Linien die schmaler sind als dieser Wert können nicht als Satinsäulen ausgegeben werden."
 
 #: lib/gui/preferences.py:98
 msgid "Rotate on export"
@@ -6345,7 +6345,7 @@ msgstr "Erstelle mit Ink/Stitch eine Zip-Datei, die mehrere Dateien mit stickbar
 
 #: inx/inkstitch_break_apart.inx:3
 msgid "Break Apart Fill Objects"
-msgstr "Füllobjekte aufspalten"
+msgstr "Füllobjekte zerlegen"
 
 #: inx/inkstitch_break_apart.inx:11
 msgid "Complex"
@@ -7880,7 +7880,7 @@ msgstr "Deaktiviere diese Funktion, wenn du für eine manuelle Stichführung in 
 
 #: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Wether or not the cross stitch pattern will be scaled along with the font."
-msgstr ""
+msgstr "Bestimmt, ob das Kreuzstichmuster mit der Schrift skaliert werden soll."
 
 #: inx/inkstitch_lettering_generate_json.inx:103
 msgid "If disabled back and forth stitching will not be possile for this font."

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-05 02:43+0000\n"
-"PO-Revision-Date: 2026-04-05 02:43\n"
+"PO-Revision-Date: 2026-04-06 02:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2056,15 +2056,15 @@ msgstr "Décale la grille de point de croix selon les valeurs indiquées. Les va
 
 #: lib/elements/fill_stitch.py:842
 msgid "Grid Rotation"
-msgstr ""
+msgstr "Rotation de la grille"
 
 #: lib/elements/fill_stitch.py:843
 msgid "Rotates the cross stitch grid by the given value."
-msgstr ""
+msgstr "Tourne la grille du point de croix de cette valeur."
 
 #: lib/elements/fill_stitch.py:845
 msgid "deg"
-msgstr ""
+msgstr "deg"
 
 #: lib/elements/fill_stitch.py:857
 msgid "Fill coverage"
@@ -4178,7 +4178,7 @@ msgstr "Arrangement automatique des colonnes satin"
 #: lib/gui/edit_json/settings_panel.py:185
 #: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Scale cross stitch pattern"
-msgstr ""
+msgstr "Redimensionner la taille des cellules du point de croix"
 
 #: lib/gui/edit_json/settings_panel.py:192
 msgid "Letter case"
@@ -4508,11 +4508,11 @@ msgstr "Utiliser comme valeur par défaut"
 
 #: lib/gui/preferences.py:79 lib/gui/preferences.py:169
 msgid "Minimum satin stroke width"
-msgstr ""
+msgstr "Seuil d'auto-conversion trait en satin"
 
 #: lib/gui/preferences.py:80
 msgid "Strokes thinner than this value will not take a satin parameter."
-msgstr ""
+msgstr "Des traits plus fins que cette valeur ne peuvent pas être paramétrés comme des colonnes satin."
 
 #: lib/gui/preferences.py:98
 msgid "Rotate on export"
@@ -7879,7 +7879,7 @@ msgstr "Désactivez si vous avez défini manuellement l'agencement des colonnes 
 
 #: inx/inkstitch_lettering_generate_json.inx:101
 msgid "Wether or not the cross stitch pattern will be scaled along with the font."
-msgstr ""
+msgstr "Décide si la taille de la cellule des points de croix est redimensionnée avec la fonte."
 
 #: inx/inkstitch_lettering_generate_json.inx:103
 msgid "If disabled back and forth stitching will not be possile for this font."
