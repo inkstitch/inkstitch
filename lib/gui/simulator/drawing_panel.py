@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import time
 import math
+import sys
 
 import wx
 from numpy import split
@@ -47,7 +48,8 @@ class DrawingPanel(glcanvas.GLCanvas):
         self.stitch_plan = kwargs.pop('stitch_plan', None)
         kwargs['style'] = wx.BORDER_SUNKEN
 
-        glcanvas.GLCanvas.__init__(self, parent, *args, **kwargs)
+        attribList = (glcanvas.WX_GL_CORE_PROFILE, glcanvas.WX_GL_RGBA, glcanvas.WX_GL_DOUBLEBUFFER, glcanvas.WX_GL_DEPTH_SIZE, 24)
+        glcanvas.GLCanvas.__init__(self, parent, *args, **kwargs, attribList=attribList)
         self.context = glcanvas.GLContext(self)
         self.init = False # Copying this pattern from the other wxwidgets OpenGL Demo, is it needed, or can I do init now?
         self.renderer: Optional[GLStitchPlanRenderer] = None
@@ -95,7 +97,10 @@ class DrawingPanel(glcanvas.GLCanvas):
             wx.CallLater(50, self.load, self.stitch_plan)
 
     def on_resize(self, event):
-        
+        # if self.renderer is not None:
+        #     size = self.GetClientSize()*self.GetContentScaleFactor()
+        #     self.renderer.resize(size.width, size.height)
+
         self.choose_zoom_and_pan()
         self.Refresh()
 
@@ -157,13 +162,17 @@ class DrawingPanel(glcanvas.GLCanvas):
         self.SetCurrent(self.context)
         if not self.init:
             self.ctx = moderngl.get_context()
+            for k, v in self.ctx.info.items():
+                print(k, v, file=sys.stderr)
+        
             if self.stitch_plan:
                 self.renderer = GLStitchPlanRenderer(self.ctx, self.stitch_plan)
                 self.render_controls = GLSimulatorControlsFrame(self)
                 self.render_controls.Show()
                 self.renderer.mode = 0
-                size = self.GetClientSize()
+                size = self.GetClientSize()*self.GetContentScaleFactor()
                 self.renderer.resize(size.width, size.height)
+                self.ctx.viewport = (0, 0, size.width, size.height)
             self.init = True
 
         ctx = self.ctx
@@ -389,7 +398,7 @@ class DrawingPanel(glcanvas.GLCanvas):
         if not self.width and not self.height and event is not None:
             return
 
-        panel_width, panel_height = self.GetClientSize()
+        panel_width, panel_height = self.GetClientSize()*self.GetContentScaleFactor()
 
         # add some padding to make stitches at the edge more visible
         width_ratio = panel_width / float(self.width + 10)

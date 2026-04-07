@@ -24,9 +24,9 @@ class LightPointer(wx.Panel):
 
     def OnPaint(self, e: wx.PaintEvent) -> None:
         dc = wx.PaintDC(self)
-        w,h = self.GetClientSize()
-        center = (w//2, h//2)
-        minor_radius = min(w,h)//2
+        size = self.GetClientSize()
+        center = (size.width//2, size.height//2)
+        minor_radius = min(size.width,size.height)//2
 
         dc.Clear()
 
@@ -54,9 +54,9 @@ class LightPointer(wx.Panel):
         self.Unbind(wx.EVT_LEFT_UP)
 
     def _position(self, position: wx.Point) -> None:
-        w,h = self.GetClientSize()
-        center = (w//2, h//2)
-        minor_radius = min(w,h)//2
+        size = self.GetClientSize()
+        center = (size.width//2, size.height//2)
+        minor_radius = min(size.width,size.height)//2
 
         x,y = position
         lx = (x-center[0])/minor_radius
