@@ -345,6 +345,7 @@ class BitmapToCrossStitch(object):
             for x in range(w):
                 pixel = pixels[x, y]
                 if pixel[3] < 255:
+                    pos_x += 1
                     continue
                 box = translate(square, pos_x * width + minx, pos_y * height + miny)
                 color_boxes[pixel[:3]].append(box)
