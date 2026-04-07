@@ -753,8 +753,6 @@ class Params(InkstitchExtension):
                 if element.stroke_color is not None:
                     if len(element.path) > 1 or element.stroke_width >= element.satin_threshold:
                         classes.append(SatinColumn)
-                    else:
-                        element.set_param('satin_column', False)
                     classes.append(Stroke)
         return classes
 
