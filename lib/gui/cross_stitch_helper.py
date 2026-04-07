@@ -732,6 +732,7 @@ class CrossStitchHelperFrame(wx.Frame):
         return cross_bitmap.svg_nodes(transform)
 
     def _multipolygon_to_pathelement(self, pixelated_outline, fill):
+        path = ''
         for polygon in pixelated_outline.geoms:
             path = Path(list(polygon.exterior.coords))
             for interior in polygon.interiors:

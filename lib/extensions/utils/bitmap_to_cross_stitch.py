@@ -422,7 +422,9 @@ class BitmapToCrossStitch(object):
 
                 new_element = PathElement()
                 new_element.set('d', str(path))
-                new_element.set('style', f"fill:rgb{color}")
+                # We could just insert the color as f"fill:rgb({color})"
+                # but inkex (computed_style) seems to have a problem with reading some rgb colors, so let's use the named version for now
+                new_element.set('style', f"fill:{Color(color).to('named')}")
                 if apply_transform:
                     new_element.transform = get_correction_transform(self.bitmap.node)
                 color_group.append(new_element)

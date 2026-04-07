@@ -138,7 +138,7 @@ class CrossStitchHelper(InkstitchExtension):
             if element.name == "Stroke":
                 color = element.stroke_color
                 if color:
-                    palette.extend(color.to_rgb())
+                    palette.extend(color.to('rgb'))
         return palette
 
     def _process_image(self, element, palette):
