@@ -61,12 +61,15 @@ class BitmapToCrossStitch(object):
             return
 
         with Image.open(image) as img:
-            self.original_image = img.resize((width, height))
+            if self.settings['pixel_by_pixel']:
+                self.original_image = img.resize((width, height))
+            else:
+                self.original_image = img.resize((width, height))
 
-        # ensure rgba mode
-        self.original_image = self.original_image.convert("RGBA")
-        # apply transform
-        self.original_image = self.apply_transform(self.original_image)
+            # ensure rgba mode
+            self.original_image = self.original_image.convert("RGBA")
+            # apply transform
+            self.original_image = self.apply_transform(self.original_image)
 
     def _get_image_byte_string(self, image):
         '''Gets the image byte strig, base64
