@@ -3,7 +3,7 @@
 # Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import Color, Grid, Group, Path, errormsg
+from inkex import Color, Grid, Group, Path
 from inkex.units import convert_unit
 
 from ..elements import FillStitch
@@ -71,15 +71,6 @@ class CrossStitchHelper(InkstitchExtension):
             if element.name in ["Image", "FillStitch"]:
                 elements.append(element)
 
-        # No elements selected, exit with an error message
-        if not elements:
-            errormsg(_("Please select at least one element with a fill color or one image."))
-            return
-
-        # When elements have been combined, we need to define a place in the layering order for our new group
-        # Let's take the top most element from selection
-        self.insert_position_element = self.svg.selection.rendering_order()[-1]
-
         palette = self._get_stroke_palette()
 
         app = CrossStitchHelperApp(settings=settings, elements=elements, palette=palette)
@@ -89,6 +80,15 @@ class CrossStitchHelper(InkstitchExtension):
             return
         self.settings = settings
 
+        # add grid
+        if settings['set_grid']:
+            self.setup_page_grid()
+
+        # the following operations will need selected elements
+        # if we cannot find any, return early
+        if not elements:
+            return
+
         # Pixelate and parametrize elements
         if self.settings['remove_overlaps']:
             # first convert images to fills, then process everything at once
@@ -97,10 +97,6 @@ class CrossStitchHelper(InkstitchExtension):
                 self.pixelize_combined(fills)
         else:
             self._process_elements(elements, palette)
-
-        # add grid
-        if settings['set_grid']:
-            self.setup_page_grid()
 
     def _prepare_fills(self, elements, palette):
         fills = []
@@ -191,7 +187,8 @@ class CrossStitchHelper(InkstitchExtension):
                 self.set_element_cross_stitch_params(path_element)
             path_element.set('id', self.svg.get_unique_id('cross_stitch_'))
 
-        node = self.insert_position_element
+        # Let's take the top most element from selection and insert everything here
+        node = self.svg.selection.rendering_order()[-1]
         parent = node.getparent()
         transform = get_correction_transform(node)
         cross_stitch_group.transform = transform
@@ -199,7 +196,6 @@ class CrossStitchHelper(InkstitchExtension):
         parent.insert(index, cross_stitch_group)
 
         for fill in fills:
-            node = fill.node
             parent = node.getparent()
             fill.node.delete()
             if parent is not None:
