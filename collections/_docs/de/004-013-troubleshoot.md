@@ -1,7 +1,7 @@
 ---
-title: "Troubleshoot Objects"
+title: "Fehlerbehebung an Objekten"
 permalink: /de/docs/troubleshoot/
-last_modified_at: 2024-05-09
+last_modified_at: 2026-04-08
 toc: true
 ---
 ## Fehlerbehebung
