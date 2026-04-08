@@ -1,7 +1,7 @@
 ---
 title: "Schnelleinstieg"
 permalink: /de/docs/basic-usage/
-last_modified_at: 2019-03-30
+last_modified_at: 2026-04-08
 toc: true
 ---
 Probiere die folgenden Schritte aus, um die Erweiterung zu testen und die Grundfunktionen kennenzulernen.

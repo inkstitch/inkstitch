@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Windows"
 permalink: /de/docs/install-windows/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2025-04-13
+last_modified_at: 2026-04-08
 toc: true
 ---
 {% comment %}
@@ -26,7 +26,7 @@ Lade die neueste Ink/Stitch Version herunter.
 Kostenloses code signing durch [SignPath.io](https://about.signpath.io) Zertifikat von [SignPath Foundation](https://signpath.org).<br>Siehe unsere [Code signing policy](/de/code-signing-policy/)
 {: .notice--info }
 
-### Download mit Microsoft Edge
+### Tipps zum Herunterladen mit Microsoft Edge
 
 Wenn du den Microsoft Edge Browser benutzt, kann es beim Download der Installationsdatei Probleme geben. Hier sind die Schritte gelistet, die nötig sind, den Browser dennoch zum Download zu bewegen.
 Die Übersetzung ist aus einem englischsprachigen Betriebssystem heraus entstanden. Daher kann es sein, dass manche Begriffe leicht abweichen.

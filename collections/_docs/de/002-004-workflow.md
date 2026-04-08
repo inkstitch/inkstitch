@@ -1,7 +1,7 @@
 ---
 title: "Arbeitsablauf"
 permalink: /de/docs/workflow/
-last_modified_at: 2025-03-13
+last_modified_at: 2026-04-08
 toc: true
 ---
 ![Ink/Stitch workflow](/assets/images/docs/en/workflow-chart.svg)
@@ -58,7 +58,7 @@ Darüber hinaus bietet Ink/Stitch inzwischen fertige Schriftarten an. Sie könne
 
 An diesem Punkt hast du bereits eine Vektorgrafik deines Bildes. Als nächstes müssen die Vektoren so angepasst werden, dass Ink/Stitch sie auch versteht.
 
-### Objekte-Dialog
+### Ebenen und Objekte-Dialog
 
 Wir empfehlen mit Ebenen und Gruppen zu arbeiten. Im Objekt-Dialog (`Objekte > Objekte...` oder `Strg + Umschalt + O`) kannst du Ebenen, Gruppen und Objekte verwalten.
 
@@ -136,12 +136,12 @@ Ink/Stitch unterstützt drei Wege um sich ein Bild des entstehenden Designs zu m
 
 Ist die Stickreihenfolge festgelegt, [exportiere](/de/docs/import-export/) dein Design über `Datei > Kopie speichern...` in das richtige Dateiformat für deine Stickmaschine. Die meisten Maschinen unterstützen DST, zusätzlich gibt es aber meistens noch ein weiteres Format. Brother Maschinen z.B. bevorzugen PES. Vergiss nicht die Datei auch im SVG-Format abzuspeichern. Sonst wird es später schwierig, das Motiv im Nachhinein weiter zu bearbeiten und kleine Details anzupassen.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Schritt 7: Test-Sticken
+## ![Create Icon](/assets/images/docs/workflow-icon-testsew.png) Schritt 6: Test-Sticken
 
 Es gibt immer Raum für Verbesserung! Um dein Design zu testen, benutze am Besten ein Stück Stoff, dass dem Material so weit wie möglich ähnelt, für das du dein Motiv vorgesehen hast. Nutze auch das gleiche Stickvlies.
 
 Beobachte deine Maschine, während sie stickt. Achte dabei auf Lücken zwischen den Objekten die auf Stoffverzerrungen hindeuten. Suche auch nach Stellen, an denen die Stiche zu eng sind und der Maschine Probleme bereiten.
 
-## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Schritt 8+: Optimieren
+## ![Create Icon](/assets/images/docs/workflow-icon-optimize.png) Schritt 7+: Optimieren
 
 Gehe anschließend zurück an die Bearbeitung des Designs. Es kann mehrere Anläufe benötigen, bis alles glatt läuft. Aber die Mühe lohnt sich und du erreichst am Ende eine gute Qualität.

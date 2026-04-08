@@ -1,7 +1,7 @@
 ---
 title: "Sticharten-Bibliothek"
 permalink: /de/docs/stitch-library/
-last_modified_at: 2024-12-02
+last_modified_at: 2026-04-08
 toc: true
 ---
 Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
@@ -18,9 +18,9 @@ Der Geradstich produziert eine Serie von kleinen Stichen entlang eines Pfades.
 
 [Mehr lesen](/de/docs/stitches/running-stitch/){: .btn .btn--primary}
 
-### Bohnenstich
+### Mehrfachgeradstich
 
-“Bean stitch” beschreibt eine Wiederholung von Geradstichen (vor und zurück). Durch die Wiederholungen wird der Faden dicker und die Linie deutlicher.
+Mehrfachgeradstich beschreibt eine Wiederholung von Geradstichen (vor und zurück). Durch die Wiederholungen wird der Faden dicker und die Linie deutlicher.
 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
@@ -34,14 +34,14 @@ Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. 
 
 [Mehr lesen](/de/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
-### Ripple Stich
+### Ripple-Stich
 Ripple-Stich vielseitiger Stichtyp, der sich in Spiralen, Reihen oder sogar Gittern über eine Fläche erstreckt.
 
 ![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
 
 [Mehr lesen](/de/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
-### Zick-Zack Stich
+### Zick-Zack-Stich
 
 Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empfehlen sie nur für gerade Linien zu nutzen, da sie sich nicht schön um eine Kurve legen. In den meisten Fällen ist eine Satinsäule zu bevorzugen.
 
@@ -95,7 +95,7 @@ Füllstich wird benutzt, um große Bereiche mit einer Farbe zu füllen.
 
 [Mehr lesen](/de/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
-### Circular Fill
+### Spialfüllung
 
 Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
 
