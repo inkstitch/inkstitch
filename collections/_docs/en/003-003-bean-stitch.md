@@ -16,9 +16,9 @@ Bean stitch creates a thicker line by stitching forward and backward over the sa
 1. Select a stroke and open `Extensions > Ink/Stitch  > Params`.
 
 2. Set the number of repeats when in [running stitch mode](/docs/stitches/running-stitch).
-  * A value of '0' does not repeat the stitch (normal stitch)
-  * A value of '1' repeats each stitch once (forward, back, forward).
-  * A value of '2' repeats the stitch twice.
+  * A value of `0` does not repeat the stitch (normal stitch)
+  * A value of `1` repeats each stitch once (forward, back, forward).
+  * A value of `2` repeats the stitch twice.
   * By entering multiple numbers, it is possible to define a custom repeat pattern. For instance `0 1` will create alternating single and triple stitches (`≡-≡-≡`).
 
 ## Parameters
@@ -44,7 +44,6 @@ Tack stitch                   |Determines the type of tack stitch.  Tack stitche
 Lock stitch                   |Determines the type of lock stitch. Lock stitches are small stitches at the end of stitch.  They help to secure the end of the thread.  [favorite style](/docs/stitches/lock-stitches/)
 Trim After                    |Determines if the thread is trimmed after sewing this object.
 Stop After                    |Determines if the machine is stopped after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-{: .params-table }
 
 ## Sample Files Including Bean Stitch
 

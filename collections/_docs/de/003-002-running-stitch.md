@@ -1,7 +1,7 @@
 ---
 title: "Geradstich"
 permalink: /de/docs/stitches/running-stitch/
-last_modified_at: 2024-05-07
+last_modified_at: 2026-04-08
 toc: true
 ---
 ## Beschreibung

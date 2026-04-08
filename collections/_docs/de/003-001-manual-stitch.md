@@ -1,7 +1,7 @@
 ---
 title: "Manuelle Stichplatzierung"
 permalink: /de/docs/stitches/manual-stitch/
-last_modified_at: 2024-04-28
+last_modified_at: 2026-04-08
 toc: true
 ---
 ## Beschreibung

@@ -1,7 +1,7 @@
 ---
 title: "Mehrfachgeradstich"
 permalink: /de/docs/stitches/bean-stitch/
-last_modified_at: 2024-05-07
+last_modified_at: 2026-04-08
 toc: true
 ---
 ## Beschreibung
@@ -15,12 +15,14 @@ Mehrfachgeradstich oder "Bean stitch" beschreibt eine Wiederholung von Geradstic
 
 1. Markiere eine Linie und öffne `Erweiterungen > Ink/Stitch  > Parameter`.
 
-2. Im [Geradstich-Modus](/de/docs/stitches/running-stitch) gibt es die Option `Geradstich Anzahl der Wiederholungen`. Wird eine Zahl gesetzt, aktiviert dies gleichzeitig den Mehrfach-Geradstich-Modus.
+2. Im [Geradstich-Modus](/de/docs/stitches/running-stitch) gibt es die Option `Geradstich Anzahl der Wiederholungen`.
+   Wird eine Zahl gesetzt, aktiviert dies den Mehrfach-Geradstich.
 
    ![Bean Stitch Params](/assets/images/docs/en/params-bean-stitch.jpg)
 
-   * Ein Wert von 1 verdreifacht jeden Stich (vor, zurück, vor), es entsteht ein Dreifach-Geradstich.
-   * Ein Wert von 2 verfünfacht jeden Stich (vor, zurück, vor, zurück, vor), es entsteht ein Fünffach-Geradstich, etc.
+   * Ein Wert von `0` wiederholt den Stich nicht, er wird einal gestickt. 
+   * Ein Wert von `1` wiederholt jeden Stich einmal (vor, zurück, vor), es entsteht ein Dreifach-Geradstich.
+   * Ein Wert von `2` wiederholt jeden Stich zweimal (vor, zurück, vor, zurück, vor), es entsteht ein Fünffach-Geradstich, etc.
    * Die Eingabe mehrerer durch ein Leerzeichen getrennte Werte erzeugt ein Muster (z.B ergibt der Wert `1 0` einen Wechsel von einfachen Geradstichen und Dreifachstichen: `≡-≡-≡`)
 
 ## Parameter

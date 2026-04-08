@@ -40,7 +40,6 @@ Allow lock stitches           |Usually manual stitches to not add lock stitches 
 Force lock stitches           |Enables lock stitches for manual stitches.
 Trim After                    |Trim the thread after sewing this object.
 Stop After                    |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-{: .params-table }
 
 ## Sample Files Including Manual Stitch
 
