@@ -2,7 +2,7 @@
 title: "Install Ink/Stitch"
 permalink: /docs/install/
 excerpt: "How to quickly install Ink/Stitch."
-last_modified_at: 2025-11-19
+last_modified_at: 2026-04-08
 toc: false
 classes:
     - wide
@@ -17,8 +17,5 @@ classes:
 
 ## Manual Setup
 
-It is possible to install Ink/Stitch manually, but this is not recommended for most users. Manual installation is primarily intended for those who want to contribute to the development of the extension.
-
-If you’d like to set up a development environment, please refer to the 
-[developer documentation](/developers/inkstitch/manual-setup/)
+If you'd like to help developing Ink/Stitch, install the plugin using the [manual install](/developers/inkstitch/manual-setup/) instructions.
 

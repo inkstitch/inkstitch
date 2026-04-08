@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch"
 permalink: /de/docs/install/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2025-06-09
+last_modified_at: 2026-04-08
 toc: false
 classes:
     - wide
@@ -17,6 +17,5 @@ classes:
 
 ## Manuelle Installation
 
-Es ist auch möglich Ink/Stitch manuell zu installieren. Es wird jedoch nicht empfohlen - es sei denn, man möchte bei der Entwicklung der Erweiterung helfen.
-In diesem Fall lies den Abschnitt [Manuelle Installation](/de/developers/inkstitch/manual-setup/).
+Wenn du helfen möchtest, Ink/Stitch weiter zu entwickeln, nutze die Anleitung für die [manuelle Installation](/de/developers/inkstitch/manual-setup/).
 

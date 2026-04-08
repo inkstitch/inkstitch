@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2025-04-15
+last_modified_at: 2026-04-08
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -56,7 +56,7 @@ Diese Option schneidet eine Satinsäule an einem vordefiniertem Punkt. Alle Para
 ### Funktionsweise
 
 1. Wähle eine Satinsäule an (eine Zick-Zack-Linie funktioniert hier nicht)
-2. Füge über `Erweiterungen > Ink/Stitch  > Befehle > Befehle mit gewählten Objekten verknüpfen > Satin cut point` einen "Satin-Schnittstelle"-Befehl ein
+2. Füge über `Erweiterungen > Ink/Stitch  > Befehle > Befehle mit gewählten Objekten verknüpfen > Satin-Schnittpunkt` einen oder mehrere "Satin-Schnittstellen"-Befehl ein
 3. Bewege das Symbol zur gewünschten Stelle. Der Zeiger muss genau auf die Stelle treffen, wo die Satinsäule geschnitten werden soll
 4. Wähle die Satinsäule erneut an
 5. Führe `Erweiterungen > Ink/Stitch  > Satin Tools > Satinsäule schneiden` aus

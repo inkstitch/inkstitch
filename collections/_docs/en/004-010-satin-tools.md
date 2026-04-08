@@ -1,7 +1,7 @@
 ---
 title: "Tools: Satin"
 permalink: /docs/satin-tools/
-last_modified_at: 2025-12-29
+last_modified_at: 2026-04-08
 toc: true
 ---
 `Extensions > Ink/Stitch  > Tools: Satin` include a number of useful helpers, making it easy to work with [satin columns](/docs/stitches/satin-column/).
@@ -55,7 +55,7 @@ Split a satin column at a specified point. The split happens at a stitch boundar
 ### Usage
 
 1. Select a satin column (simple satin doesn't work)
-2. Attach the "Satin split point" command using `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
+2. Attach one or more "Satin split point" commands using `Extensions > Ink/Stitch  > Commands > Attach Commands to Selected Objects`.
 3. Move the symbol (or just the connector line's endpoint) to point to the exact spot you want the satin to be split at.
 4. Select the satin column again.
 5. Run `Extensions > Ink/Stitch  > Tools: Satin > Split Satin Column`.
