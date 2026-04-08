@@ -2,7 +2,8 @@ from collections import defaultdict
 from math import atan2, ceil
 
 import numpy as np
-from networkx import connected_components, is_empty
+from networkx import (NetworkXNoPath, connected_components, is_empty,
+                      shortest_path)
 from shapely import prepare
 from shapely.affinity import rotate, scale, translate
 from shapely.geometry import LineString, Point, Polygon
@@ -17,7 +18,7 @@ from ..utils.geometry import (ensure_multi_line_string,
 from ..utils.threading import check_stop_flag
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
-                        graph_make_valid, travel)
+                        graph_make_valid)
 from .guided_fill import apply_stitches
 from .running_stitch import even_running_stitch, running_stitch
 
@@ -155,7 +156,7 @@ def _auto_route_segments(clip, stroke, segments, starting_point, ending_point, s
         path = find_stitch_path(ripple_graph, travel_graph, starting_point, ending_point, True)
         stitches = path_to_stitches(
             clip, segments, path, travel_graph, ripple_graph,
-            stroke.running_stitch_length, stroke.running_stitch_tolerance, False, False)
+            stroke.running_stitch_length, stroke.running_stitch_tolerance, False)
         result.append(stitches)
     return result
 
@@ -183,7 +184,7 @@ def _prepare_line_segments(clip, clipped_strings):
     return segments
 
 
-def path_to_stitches(shape, segments, path, travel_graph, fill_stitch_graph, running_stitch_length, running_stitch_tolerance, skip_last, underpath):
+def path_to_stitches(shape, segments, path, travel_graph, fill_stitch_graph, running_stitch_length, running_stitch_tolerance, skip_last):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -210,9 +211,54 @@ def path_to_stitches(shape, segments, path, travel_graph, fill_stitch_graph, run
 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last, underpath, False))
+            travel_stitches = travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last)
+            stitches.extend(travel_stitches)
 
     return stitches
+
+
+def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last):
+    """Create stitches to get from one point on an outline of the shape to another.
+       See auto_fill travel. This distinguishes in that it removes the stitched path to the endpoint,
+       in case it ended up to be somewhere within the shape.
+    """
+
+    start, end = edge
+    try:
+        path = shortest_path(travel_graph, start, end, weight='weight')
+    except NetworkXNoPath:
+        # This may not look good, but it prevents the fill from failing (which hopefully never happens)
+        path = [start, end]
+
+    path = [InkstitchPoint.from_tuple(point) for point in path]
+    if not path:
+        # This may happen on very small shapes.
+        # Simply return nothing as we do not want to error out
+        return []
+
+    # we may have added travel points towards the end point in the center. We do not actually want to stitch them
+    travel_path = [point for point in path if Point(point).distance(shape.boundary) < 1]
+
+    points = even_running_stitch(travel_path, running_stitch_length, running_stitch_tolerance)
+    stitches = [Stitch(point) for point in points]
+
+    for stitch in stitches:
+        stitch.add_tag('auto_fill_travel')
+
+    # The path's first stitch will start at the end of a row of stitches.  We
+    # don't want to double that last stitch, so we'd like to skip it.
+    if skip_last and not edge.is_outline():
+        # However, we don't want to skip it if we've had to do any actual
+        # travel in the interior of the shape.  The reason is that we can
+        # potentially cut a corner and stitch outside the shape.
+        #
+        # If the path is longer than two nodes, then it is not a simple
+        # transition from one row to the next, so we'll keep the stitch.
+        return stitches
+    else:
+        # Just a normal transition from one row to the next, so skip the first
+        # stitch.
+        return stitches[1:]
 
 
 def _get_stitches(stroke, is_linear, lines, skip_start):
