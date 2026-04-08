@@ -1,14 +1,14 @@
 ---
-title: "Satin Stitch"
+title: "Satin Column"
 permalink: /docs/stitches/satin-column/
-last_modified_at: 2025-12-29
+last_modified_at: 2026-04-08
 toc: true
 ---
 ## What it is
 
-Satin stitch is used for borders, letters or small fill areas.
+Satin column are used for borders, letters or small fill areas.
 
-![Stitch Types - Satin Stitch](/assets/images/docs/stitch-type-satincolumn.jpg)
+![Stitch Types - Satin column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
 ## How to create
 
@@ -22,22 +22,35 @@ Ink/Stitch offers several option to create satin columns. Methods 1 to 4 create 
 4. [Fill to Satin](#4-fill-to-satin): create satin columns from fills
 5. [Manual Satin Column](#5-manual-satin-column): take full control over every part of the satin column
 
-### Method 1 - Stroke to Satin
-This method takes a stroke or a path and converts it to a satin column.   
+### Method 1 - Generate a satin column using a stroke
+
+These methods takes a path with a contour color (stroke) and converts it to a satin column. They are most useful for even width satin columns.
 
 #### Option 1
-Using this option, a contour is added to stroke/path using the offset function.  The countor creates a new path around the outside of the line. The contour can be set to the width of the desired satin column. Using `Extensions > Ink/Stitch > Satin Tools > Convert Stroke to Satin`, the satin columns will be created, including the rungs, which can be adjusted. Optionally, use autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
 
-
-Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
 {% include upcoming_release.html %}
-#### Option 2
-Using this option, a contour is added to stroke/path using the offset function.  The contour creates a new path around the outside of the line. The contour can be set to the width of the desired satin column. Using `Extensions > Ink/Stitch > Params, open the Satin Column Tab and activate Custom Satin Columns.
-  
-With Option 2, the position of the nodes can influence how the satin will be rendered:
+
+This option uses strokes with a contour color directly as a satin and is therefore the most easy one to create and adapt.
+
+* Add a contour color to a path object (with no fill).
+* Set contour width to the size of the desired satin stitch
+  (the value should be larger than 1mm, see [preferences](/docs/preferences/#minimum-satin-stroke-width) for a deeper insight of the minimum satin width value)
+* Run `Extensions > Ink/Stitch > Params
+* Open the Satin Column Tab and activate Custom Satin Columns
+
+With Option 1, the position of the nodes can influence how the satin will be rendered:
+
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
+#### Option 2
 
+* Add a contour color to a path object (with no fill).
+* Set contour width to the size of the desired satin stitch.
+* Run `Extensions > Ink/Stitch > Satin Tools > Convert Stroke to Satin`
+* Optionally run autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
+* Use as-is or customize rungs and/or rails
+
+Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
 
 ### Method 2 - Stroke to Live Path Effect Satin
 
@@ -55,7 +68,7 @@ Get more information about [Zigzag to Satin](/docs/satin-tools/#zigzag-line-to-s
 
 ### Method 4 - Fill to Satin
 
-Fill to Satin can be used to convert a fill into a satin stitch. It is a semi-automatic function and requires additional manual work.
+Fill to Satin can be used to convert a fill into a satin column. It is a semi-automatic function and requires additional manual work.
 
 Get more information about [Fill to Satin](/docs/satin-tools/#fill-to-satin)
 
@@ -195,7 +208,7 @@ Inset distance (proportional |Shrink the outline by a proportion of the column w
 
 ### Zig-Zag Underlay
 
-This is essentially a lower-density satin stitch sewn to the end of the column and back to the start. Added with contour underlay, you get the "German Underlay" mentioned in [this article](https://www.mrxstitch.com/underlay/). For wide columns or challenging fabrics, you can use all three underlay types together.
+This is essentially a lower-density satin column sewn to the end of the column and back to the start. Added with contour underlay, you get the "German Underlay" mentioned in [this article](https://www.mrxstitch.com/underlay/). For wide columns or challenging fabrics, you can use all three underlay types together.
 
 ![Params - Zig-Zag Underlay Example](/assets/images/docs/params-zigzag-underlay-example.jpg)
 

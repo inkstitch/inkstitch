@@ -1,7 +1,7 @@
 ---
 title: "Satinsäule"
 permalink: /de/docs/stitches/satin-column/
-last_modified_at: 2025-04-12
+last_modified_at: 2026-04-08
 toc: true
 ---
 ## Beschreibung
@@ -24,19 +24,14 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 
 ### 1. Linie zu Satin
 
+Diese Methoden eignen sich für Satinsäulen mit gleichbleibender Breite.
+
 #### Methode 1
 
-* Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
-* Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht
-* Führe die Funktion unter `Erweiterungen > Ink/Stitch Werkzeuge: Satin > Linie zu Satinsäule` aus
-* Optional kann anschließend die Funktion `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Automatisch geführter Satinstich...` auf mehrere Satinsäulen angewendet werden, um die Stickreihenfolge zu optimieren
-* Die nun erstellte Satinsäule kann nun genutzt oder nach Belieben modifiziert werden
-
-Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
-
-#### Methode 2
-
 {% include upcoming_release.html %}
+
+Mit dieser Methode kann eine Linie mit Konturfarbe direkt und ohne Umwandlung als Satinsäule genutzt werden.
+Daher ist diese Methode die einfachste Methode zur Erstellung und Anpassung von Satinsäulen.
 
 * Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
 * Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht. Sie muss unbedgint breiter als 0.3 mm sein (Satinsäulen sollten im Regelfall eine Breite von 1mm nocht unterschreiten).
@@ -46,6 +41,16 @@ Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
 Bei dieser Methode hat die Positionierung der Pfad-Knoten einen Einfluss auf das Ergebnis:
 
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
+
+#### Methode 2
+
+* Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
+* Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht
+* Führe die Funktion unter `Erweiterungen > Ink/Stitch Werkzeuge: Satin > Linie zu Satinsäule` aus
+* Optional kann anschließend die Funktion `Erweiterungen > Ink/Stitch > Werkzeuge: Satin > Automatisch geführter Satinstich...` auf mehrere Satinsäulen angewendet werden, um die Stickreihenfolge zu optimieren
+* Die nun erstellte Satinsäule kann nun genutzt oder nach Belieben modifiziert werden
+
+Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
 
 ### 2. Linie zu Pfadeffekt-Satin
 

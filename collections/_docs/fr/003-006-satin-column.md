@@ -23,7 +23,26 @@ Ink/Stitch offre plusieurs options pour créer des colonnes satin. Les quatre pr
 5. [Création manuelle de Colonne Satin ](#5-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
 ### 1. Trait en Satin
+
+These methods takes a path with a contour color (stroke) and converts it to a satin column. They are most useful for even width satin columns.
+
 ####  Méthode 1
+
+{% include upcoming_release.html %}
+
+This option uses strokes with a contour color directly as a satin and is therefore the most easy one to create and adapt.
+
+* Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
+* Définissez la largeur du contour à la taille souhaitée pour votre point satin (ou à une largeur supérieure à 0,3, mais vous devrez également ajouter une compensation d'étirement importante pour obtenir une largeur correcte).
+* Exécutez `Extensions > Ink/Stitch > Paramétres`.
+* Ouvrez l'onglet « Colonne  satin » et activez l'option « Colonnes de satin personnalisée ».
+
+Avec cette seconnde méthode, la position des nœuds peut influencer le rendu du point satin.
+
+![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
+
+#### Méthode 2
+
 * Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
 * Définissez l'épaisseur du contour à  la largeur souhaitée pour votre colonne satin.
 * Lancer `Extensions > Ink/Stitch > Outils : Satin > Convertir Ligne en Satin`
@@ -36,23 +55,6 @@ Vous obtenez un chemin composite composé de
 
 * En option lancer `Extensions > Ink/Stitch > Outils : Satin > Agencement automatique de colonnes satin...` après avoir sélectionné une ou plusieurs colonnes satins
 Plus d'informations sur [Convertir ligne en satin](/fr/docs/satin-tools/#convertir-ligne-en-satin)
-
-{% include upcoming_release.html %}
-#### Méthode 2
-* Choisir un trait (un objet avec une couleur de contour, mais pas de couleur de remplissage)
-
-* Définissez la largeur du contour à la taille souhaitée pour votre point satin (ou à une largeur supérieure à 0,3, mais vous devrez également ajouter une compensation d'étirement importante pour obtenir une largeur correcte).
-
-* Exécutez `Extensions > Ink/Stitch > Paramétres`.
-
-* Ouvrez l'onglet « Colonne  satin » et activez l'option « Colonnes de satin personnalisée ».
-
-Avec cette seconnde méthode, la position des nœuds peut influencer le rendu du point satin.
-
-![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
-
-
-
 
 ### 2. Trait en Effet de Chemin Satin
 
