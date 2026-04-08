@@ -25,6 +25,9 @@ def generate_stitch_plan(embroidery_file, import_commands="symbols"):  # noqa: C
     except pystitch.exceptions.NoStitchesError:
         inkex.errormsg(_("Could not open the file: no stitch information found."))
         sys.exit(0)
+    if pattern.count_stitches() < 2:
+        inkex.errormsg(_("Could not open the file: no stitch information found."))
+        sys.exit(0)
     stitch_plan = StitchPlan()
     color_block = None
 
