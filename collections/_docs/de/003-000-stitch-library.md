@@ -35,6 +35,7 @@ Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. 
 [Mehr lesen](/de/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
 ### Ripple-Stich
+
 Ripple-Stich vielseitiger Stichtyp, der sich in Spiralen, Reihen oder sogar Gittern über eine Fläche erstreckt.
 
 ![Ripple Stitch](/assets/images/docs/ripplefly.jpg)

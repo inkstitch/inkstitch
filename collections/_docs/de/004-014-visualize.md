@@ -63,8 +63,6 @@ Bildquelle: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-sv
   - **versteckt** das Original-Design wird versteckt
   - **Verrinerte Deckkraft** das Original wird mit 40%-Transparenz dargestellt
 - **Render Modus**
-  ![simple and realistic render modes](/assets/images/docs/stitch-plan-preview-modes.jpg)
-
   <i>Original image from [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-svg-2530031/)</i>
   - **Einfach**: einfache Liniendarstellung
   - **Realistisch**: Realistische Vorschau als in Inkscape eingebundene PNG-Bilddatei (8-bit)
