@@ -382,7 +382,7 @@ Convertit les sauts de point en commandes de coupe.
 
 * Ajout d'une option pour convertir en commande de coupe ou d'arrêt [#4038](https://github.com/inkstitch/inkstitch/pull/4038)
 
-[En savoir plus](/fr/docs/commands/#jump-stitch-to-trim-command)
+[En savoir plus](/fr/docs/stroke-tools/#jump-to-stroke)
 
 ### Assise de points couchants
 

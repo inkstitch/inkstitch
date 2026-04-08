@@ -366,7 +366,7 @@ Value settings have been re-labeled and slightly adjusted [#4239](https://github
 * Convert jumps longer than (mm): A value of 0 defaults to the actual minimum jump stitch length.
 * Convert jumps shorter than (mm): A value of 0 means no size limit.
 
-[Read more](/docs/commands/#jump-stitch-to-trim-command)
+[Read more](/docs/stroke-tools/#jump-to-stroke)
 
 ### Jump Stitch to Trim/Stop command
 
