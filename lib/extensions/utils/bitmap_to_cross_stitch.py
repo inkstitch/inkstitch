@@ -61,15 +61,12 @@ class BitmapToCrossStitch(object):
             return
 
         with Image.open(image) as img:
-            if self.settings['pixel_by_pixel']:
-                self.original_image = img.resize((width, height))
-            else:
-                self.original_image = img.resize((width, height))
+            self.original_image = img.resize((width, height))
 
-            # ensure rgba mode
-            self.original_image = self.original_image.convert("RGBA")
-            # apply transform
-            self.original_image = self.apply_transform(self.original_image)
+        # ensure rgba mode
+        self.original_image = self.original_image.convert("RGBA")
+        # apply transform
+        self.original_image = self.apply_transform(self.original_image)
 
     def _get_image_byte_string(self, image):
         '''Gets the image byte strig, base64
@@ -210,7 +207,7 @@ class BitmapToCrossStitch(object):
         return image.convert("RGB")
 
     def apply_clip(self, image):
-        ''' clips the image (used in cross stitch helper gui)
+        ''' clips the image
         '''
         # ensure rgba mode
         image = image.convert("RGBA")
@@ -326,6 +323,7 @@ class BitmapToCrossStitch(object):
     def _get_color_boxes_from_pixels(self):
         # scales image up, each pixel represents one cros stitch box
         recolored_image = self.apply_color_corrections(self.original_image)
+        recolored_image = self.apply_clip(recolored_image)
         recolored_image = self._crop_transparent_borders(recolored_image)
         if recolored_image is None:
             return
