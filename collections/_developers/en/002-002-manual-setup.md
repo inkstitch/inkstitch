@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup for Linux and macOS"
 permalink: /developers/inkstitch/manual-setup/
-last_modified_at: 2026-02-09
+last_modified_at: 2026-04-08
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -16,7 +16,7 @@ We recommend using `pyenv` to manage your Python virtual environmentm but any ot
 ### 1. Clone the extension source
 
 ```
-git clone https://github.com/inkstitch/inkstitch
+git clone --recurse-submodules https://github.com/inkstitch/inkstitch
 ```
 
 ### 2. Python Dependencies

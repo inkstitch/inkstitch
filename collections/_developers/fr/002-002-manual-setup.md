@@ -1,7 +1,7 @@
 ---
 title: "Manual Setup"
 permalink: /fr/developers/inkstitch/manual-setup/
-last_modified_at: 2025-10-19
+last_modified_at: 2026-04-09
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -15,7 +15,7 @@ We recommend to use `pyenv` with python 3.11.
 ### 1. Clone the extension source
 
 ```
-git clone https://github.com/inkstitch/inkstitch
+git clone --recurse-submodules https://github.com/inkstitch/inkstitch
 ```
 
 ### 2. Python Dependencies

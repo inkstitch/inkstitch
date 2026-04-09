@@ -15,7 +15,7 @@ Wir empfehlen die Nutung von `pyenv` mit python 3.11.
 ### 1. Ink/Stitch herunterladen
 
 ```
-git clone https://github.com/inkstitch/inkstitch
+git clone --recurse-submodules https://github.com/inkstitch/inkstitch
 ```
 
 ### 2. Installiere Python Abhängigkeiten

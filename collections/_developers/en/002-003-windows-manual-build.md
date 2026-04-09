@@ -1,7 +1,7 @@
 ---
 title: "Windows Manual Install and Manual Build"
 permalink: /developers/inkstitch/windows-manual-build/
-last_modified_at: 2024-08-19
+last_modified_at: 2026-04-09
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -11,28 +11,20 @@ after_footer_scripts:
 
 ## Requirements
 
-Install these dependancies to build a local build of inkstitch for windows.
+Install these dependancies for local build or a manual install of Ink/Stitch.
 
-* [Python](https://www.python.org/downloads/release/python-398/)
+* [Python](https://www.python.org/downloads/release/python-31313/)
+  * Install **Python version 3.11 or higher** and **64bit only**.
+  * Check `Add Python x.xx to PATH`. This allows the bash enviroment to find python.
+  * Then click on `Install now`
 
-  Depending on your target arch, select either 32bit or 64 bit version and run the installer.
-  Check "Add Python x.xx to PATH".
-  This for the bash enviroment to find python.
-  ![Add python to path](/assets/images/developers/windows-manual-build/Python.png)
-  Then click on "Install now"
-* [Git for windows](https://gitforwindows.org/)
+* [Git for windows](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)
 
-  This installs git as well as providing a terminal emulator to run build scripts.
-
-  Download 
-  Use the default settings during installation.
-* [nodejs](https://nodejs.org/en/download/)
-
-  Install LTS 32bit or 64bit version (depending on your target arch). Install with default settings.
+  This installs git as well as providing a terminal emulator to download Ink/Stitch source code and run build scripts.
 
 * [Inno setup](https://jrsoftware.org/isdl.php)
 
-  This provides the compiler to build the windows installer.
+  This provides the compiler to build the windows installer, only needed to create the Ink/Stitch installer and not required for the manual install.
   Use the default settings.
 * [make](https://sourceforge.net/projects/mingw-w64/files/External%20binary%20packages%20%28Win64%20hosted%29/make/)
 
@@ -46,7 +38,7 @@ Install these dependancies to build a local build of inkstitch for windows.
 
 ## PATHS
 
-The bash environment needs some paths for the installed software. So let's set it up.
+The bash environment requires the path of software to create a build or manual install to be set. So let's set it up.
 
 * Open Windows settings > System > About > Advanced system settings 
 
@@ -68,6 +60,7 @@ The bash environment needs some paths for the installed software. So let's set i
   C:\Make\bin
   C:\Program Files (x86)\Inno Setup 6
   ```
+  Make is required for both maunal install and local build. Inno Setup is only required when building the Inkstitch installer.
 * Now it should look like this:
 
   ![Environment Variables](/assets/images/developers/windows-manual-build/Final-paths.png)
@@ -89,14 +82,14 @@ The bash environment needs some paths for the installed software. So let's set i
 ## Download Ink/Stitch
 
 * If you already have an Ink/Stitch version installed [uninstall](/docs/install-windows/#uninstall-inkstitch)
-  it first to avoid double menu entries in Inkscape.
+  in order to avoid double menu entries in Inkscape extensions menu.
 
 * Go to `Edit > Preferences > System` and open your extensions folder.
 
   ![Inkscape extensions folder](/assets/images/docs/en/extensions-folder-location-win.jpg)
 
-  If you do not aim for manual install but want to install a build version **do not follow this step**, but choose any other
-  directory to where you want to save the project files
+  If you are not aiming for manual install but want to build both Ink/Stitch and it's installer **do not follow this step**, but choose any other
+  directory to save the Inkstitch source code
   {: .notice--warning }
 
 * Right click into the file browser and click on `Git Bash Here` to download Ink/Stitch into the extensions folder
@@ -105,25 +98,14 @@ The bash environment needs some paths for the installed software. So let's set i
 * Run the following commands in the terminal emulator:
 
   ```
-  git clone https://github.com/inkstitch/inkstitch
-  git clone https://github.com/inkstitch/pyembroidery
+  git clone --recurse-submodules https://github.com/inkstitch/inkstitch
   ```
 
 ## Setup Python
 
-* For **32bit** run the following commands in the terminal emulator:
+* Run the following commands in the terminal emulator:
   ```
   python -m pip install --upgrade pip
-  python -m pip install wheel
-  python -m pip install pillow==9.5.0
-  python -m pip install numpy==1.23.1
-  python -m pip install scipy==1.9.0
-  pip install wxPython
-  ```
-* For **64bit** run the following commands in the terminal emulator:
-  ```
-  python -m pip install --upgrade pip
-  python -m pip install wheel
   ```
 * Now we are ready to install the rest of the requirements through the Ink/Stitch requirements file
   ```
@@ -136,7 +118,7 @@ The bash environment needs some paths for the installed software. So let's set i
 
 ## Manual Install for developing Ink/Stitch
 
-* We prepared everything to finally setup Ink/Stitch itself. In your terminal emulator run:
+* We prepared everything to finally setup Ink/Stitch manual install itself. Go to Ink/Stitch folder located in extensions folder and run the terminal emulator:
   ```
   cd inkstitch
   make manual
@@ -150,14 +132,13 @@ The bash environment needs some paths for the installed software. So let's set i
 
 ## Generate a build to test run your update on other Windows systems
 
-* To build Ink/Stitch you'll need to install pyinstaller.
+* To build Ink/Stitch you'll need to install pyinstaller pip package.
   ```
-  python -m pip install pyinstaller==5.13.2
+  python -m pip install pyinstaller
   ```
 
 * Ink/Stitch uses [7-zip](https://7-zip.org/) to zip up the build file. So you need to install it as well.
-  Add it to PATHS as described above as `C:\Program Files\7-Zip` (64bit) or `C:\Program Files (x86)\7-Zip` (32bit)
-
+  Add it to PATHS as described above as `C:\Program Files\7-Zip`
 * In the terminal emulator run:
 
   ```
@@ -172,13 +153,13 @@ The bash environment needs some paths for the installed software. So let's set i
 
 ## Troubleshooting missing Python modules
 
-If when trying to open Inkstitch, you encounter errors about missing Python modules: `ModuleNotFoundError: No module named 'diskcache'` 
+If when trying to open Ink/Stitch, you encounter errors about missing Python modules: `ModuleNotFoundError: No module named 'diskcache'` 
 
-Most likely you will need to tell, Inkscape to use your Python version:
+Most likely you will need to manually set Python version in the preferences.xml of Inkscape:
 
 * Within Inkscape, Go to Edit > Preferences > System > User preferences and click on Open.
 *  In your user preferences folder, locate `preferences.xml`
 *  Close Inkscape
 *  Open `preferences.xml` with a text editor
 *  Search for `<group id="extensions"`
-*  Add this attribute `python-interpreter="C:\Program Files\Python39\python.exe"`. Substitute the path with yours. You can find the path by running `where python` in a command prompt
+*  Add this attribute `python-interpreter="C:\Program Files\Python311\python.exe"`. Substitute the path with the version of Python. You can find the path by running `where python` in a command prompt
