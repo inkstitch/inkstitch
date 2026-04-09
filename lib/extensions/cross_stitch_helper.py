@@ -196,17 +196,14 @@ class CrossStitchHelper(InkstitchExtension):
         parent.insert(index, cross_stitch_group)
 
         for fill in fills:
-            parent = node.getparent()
-            fill.node.delete()
-            if parent is not None:
-                self._remove_empty_group(parent)
+            self._remove_empty(fill.node)
 
-    def _remove_empty_group(self, group):
-        parent = group.getparent()
-        if len(group) == 0:
-            group.delete()
+    def _remove_empty(self, group_or_element):
+        parent = group_or_element.getparent()
+        if group_or_element.TAG != 'g' or len(group_or_element) == 0:
+            group_or_element.delete()
         if parent is not None and len(parent) == 0:
-            self._remove_empty_group(parent)
+            self._remove_empty(parent)
 
     def pixelize_single(self, element):
         node = element.node
