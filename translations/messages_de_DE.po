@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-08 02:39+0000\n"
-"PO-Revision-Date: 2026-04-08 02:40\n"
+"PO-Revision-Date: 2026-04-09 02:35\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -30,12 +30,12 @@ msgstr ""
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:2
 msgid "Abécédaire AGS is a cross stitch font."
-msgstr ""
+msgstr "Abécédaire AGS ist eine Kreuzstich-Schrift."
 
 #. description of font in fonts/abecedaire_small
 #: inkstitch-fonts-metadata.py:4
 msgid "This font is an altered version of Abécédaire AGS, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Abécédaire AGS. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:6
@@ -293,7 +293,7 @@ msgstr "Kleine Kreuzstichschrift"
 #. description of font in fonts/egyptian_small
 #: inkstitch-fonts-metadata.py:104
 msgid "This font is an altered version of Egyptian, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Egyptian. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/eloquent
 #: inkstitch-fonts-metadata.py:106
@@ -303,7 +303,7 @@ msgstr "Kleine, kursive Kreuzstichschrift"
 #. description of font in fonts/eloquent_small
 #: inkstitch-fonts-metadata.py:108
 msgid "This font is an altered version of Eloquent, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Eloquent. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:110
@@ -393,7 +393,7 @@ msgstr "Kreuzstichschrift für Handtuchecken."
 #. description of font in fonts/heavenly_small
 #: inkstitch-fonts-metadata.py:146
 msgid "This font is an altered version of Heavenly, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Heavenly. Diese Schrift erfordert die Verwendung eines dünnen Fadens (60) und einer dünnen Nadel (60)."
 
 #. description of font in fonts/hebrew_font_large
 #: inkstitch-fonts-metadata.py:148
@@ -480,7 +480,7 @@ msgstr "Kum Tsoan Tartan ist eine große Schrift mit Tartanmustern. Sie enthält
 #. description of font in fonts/ladies_present
 #: inkstitch-fonts-metadata.py:180
 msgid "A  rectangular crosses font"
-msgstr ""
+msgstr "Eine rechteckige Kreuzstich-Schrift"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:182
@@ -705,7 +705,7 @@ msgstr "Venezia small ist eine abgewandelte, kleinere Form von Venezia. Diese Sc
 #. description of font in fonts/very_crossy
 #: inkstitch-fonts-metadata.py:272
 msgid "Medium size cross stitch font"
-msgstr ""
+msgstr "Eine Kreuzstich-Schrift in mittlerer Größe"
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:274
@@ -2587,7 +2587,7 @@ msgstr "Dieses Element wird als Geradstich ausgegeben, obwohl es als Satinsäule
 
 #: lib/elements/stroke.py:40
 msgid "Wether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
-msgstr ""
+msgstr "Ob eine Linie als Satinstich dargestellt werden kann, hängt von der Konturbreite und dem Wert für die minimale Satinbreite für Linien ab. Die Konturbreite muss größer als dieser Wert sein, andernfalls wird das Element als Geradstich behandelt. Um harte Stiche zu vermeiden, empfiehlt es sich, nur Satinstiche mit einer Breite von mehr als 1 mm zu verwenden."
 
 #: lib/elements/stroke.py:50 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
