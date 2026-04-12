@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-08 02:39+0000\n"
-"PO-Revision-Date: 2026-04-08 02:40\n"
+"PO-Revision-Date: 2026-04-12 02:50\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr ""
 #. description of font in fonts/allegria55
 #: inkstitch-fonts-metadata.py:12
 msgid "Satin font"
-msgstr ""
+msgstr "Fonte acetinada"
 
 #. description of font in fonts/ambigue
 #: inkstitch-fonts-metadata.py:14
@@ -85,7 +85,7 @@ msgstr ""
 #. description of font in fonts/apesplit
 #: inkstitch-fonts-metadata.py:24
 msgid "120 mm tall monogram font."
-msgstr ""
+msgstr "Fonte de monograma com 120 mm de altura."
 
 #. description of font in fonts/apex_lake
 #: inkstitch-fonts-metadata.py:26
@@ -228,12 +228,14 @@ msgstr ""
 msgid "Enter 3 letters to get a circular three letters monogram. You can add a frame, by adding one of the following :(){,[];.<>\n"
 "For instance enter {ABC.\n"
 "Please use exactly 3 letters, no less, no more, or you could get some unexpected result."
-msgstr ""
+msgstr "Digite 3 letras para obter um monograma circular de três letras. Você pode adicionar uma moldura, adicionando um dos seguintes símbolos :(){,[];.<>\n"
+"Por exemplo, digite {ABC.\n"
+"Use exatamente 3 letras, nem mais, nem menos, ou poderá obter um resultado inesperado."
 
 #. description of font in fonts/cogs_KOR
 #: inkstitch-fonts-metadata.py:82
 msgid "Cogs KOR is a Steampunk  satin font."
-msgstr ""
+msgstr "Cogs KOR é um tipo de fonte Steampunk acetinada."
 
 #. description of font in fonts/colorful
 #: inkstitch-fonts-metadata.py:84
