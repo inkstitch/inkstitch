@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-08 02:39+0000\n"
-"PO-Revision-Date: 2026-04-08 02:40\n"
+"PO-Revision-Date: 2026-04-14 02:48\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2586,7 +2586,7 @@ msgstr "Cet élément est rendu comme point droit alors qu'il a un paramétrage 
 
 #: lib/elements/stroke.py:40
 msgid "Wether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
-msgstr ""
+msgstr "Un trait peut ou non être rendu comme un satin selon son épaisseur et la valeur de la préférence pour le Seuil d'auto-conversion trait en satin. L'épaisseur du trait doit être supérieure à la valeur de la préférence, faute de quoi le trait est traité comme un point droit. Il est par ailleurs recommandé de ne pas produire de colonne satin de largeur inférieure à 1 mm."
 
 #: lib/elements/stroke.py:50 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
