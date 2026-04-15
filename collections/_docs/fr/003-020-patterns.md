@@ -1,7 +1,7 @@
 ---
 title: "Textures"
 permalink: /fr/docs/stitches/patterns/
-last_modified_at: 2022-01-18
+last_modified_at: 2026-04-15
 toc: true
 ---
 Il est possible de créer des textures en forçant la position de certains points.
@@ -28,22 +28,23 @@ Dans Ink/Stitch il est possible de générer des textures en ajoutant ou en supp
 
   {% include upcoming_release.html %}
 
-  Interval: An interval can be set for patterns with a stroke color. 
-  This value determines at which pattern the addition of nodes at path intersections should be skipped.
-  Multiple values are separated by spaces.
+  **Intervalle** : Un intervalle peut être défini pour les textures avec une couleur de contour.
+  Cette valeur détermine quand l’ajout de nœuds aux intersections  doit être ignoré. Un intervalle de 2, ignorera la texture une fois sur deux.
 
-  Offset: Patterns with a stroke color only begin after this number of path intersections.
+  Il est possible d'entrer plusieurs valeurs,séparées par des espaces.
 
-## Supprimer le marqueur de texture
+  **Décalage** : Les textures avec une couleur de contour ne commencent qu’après ce nombre d’intersections de chemins.
 
-Remove the pattern marker by running `Extensions > Ink/Stitch > Edit > Selection to Pattern`, select the `Remove pattern marker` option.
 
-### Manual pattern marker removal
+## Retirer le marqueur de texture
 
+Supprimez le marqueur de texture en exécutant `Extensions > Ink/Stitch > Edition > Selection vers texture`, puis sélectionnez l'option `Retirer le marqueur de texture`.
+
+### Suppression manuelle du marqueur de texture
 Le marqueur de texture peut être supprimé dans le panneau "Fond et Contour" (`Ctrl+Shift+F`). Ouvrez l'onglet "Style de contour" et choisissez la toute première option (vide) dans le premier menu déroulant. Après suppression du marqueur, le chemin n'est plus une texture, mais un chemin ordinaire.
 
 ![Remove pattern](/assets/images/docs/fr/stitch-type-remove-pattern.png)
 
-### Samples Files Including Pattern Stitches
+### Fichiers d'example incluant des textures 
 
 {% include tutorials/tutorial_list key="stitch-type" value="Pattern Stitch" %}
