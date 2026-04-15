@@ -17,4 +17,4 @@ classes:
 
 ## Installation manuelle
 
-If you'd like to help developing Ink/Stitch, install the plugin using the [manual install](/developers/inkstitch/manual-setup/) instructions.
+Si vous souhaitez aider au développement d'Ink/Stitch, installez le plugin en utilisant les instructions d'[installation manuelle](/developers/inkstitch/manual-setup/).
