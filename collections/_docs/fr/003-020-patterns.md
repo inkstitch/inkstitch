@@ -45,6 +45,6 @@ Le marqueur de texture peut être supprimé dans le panneau "Fond et Contour" (`
 
 ![Remove pattern](/assets/images/docs/fr/stitch-type-remove-pattern.png)
 
-### Fichiers d'example incluant des textures 
+### Fichiers d'exemple incluant des textures 
 
 {% include tutorials/tutorial_list key="stitch-type" value="Pattern Stitch" %}
