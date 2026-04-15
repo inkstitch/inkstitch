@@ -1,7 +1,7 @@
 ---
 title: "Simulation"
 permalink: /fr/docs/visualize/
-last_modified_at: 2025-04-19
+last_modified_at: 2026-04-15
 toc: true
 ---
 ## Simulateur
@@ -45,53 +45,58 @@ Bouton | Effet | Raccourci
 C'est aussi possible de **zoomer** et de **déplacer** la simulation avec la souris.
 
 ## Simulation du plan de broderie {#stitch-plan-preview}
+La prévisualisation du plan de broderie insert un plan de broderie sur le canevas. Selon vos réglages, ce plan sera placé au dessus de votre dessin ou sur le coté droit du canevas (option : positionner le plan de broderie hors du canevas)
 
-The stitch plan preview inserts a stitch plan onto the canvas. Depending on your settings, the stitch plan preview will be placed on top of the design
-or on the right side of the canvas (option: move stitch plan beside the canvas).
-
-To access the stitch plan preview run `Extensions > Ink/Stitch > Visualize and Export > Stitch Plan Preview...`.
+Pour y accéder faire 
+ `Extensions > Ink/Stitch > Visualiser et Exporter > Prévisualisation du plan de broderie...`.
 
 ### Options
 
-![simple and realistic render modes](/assets/images/docs/stitch-plan-preview-modes.jpg)
+![Modes de rendu simple et realistes](/assets/images/docs/stitch-plan-preview-modes.jpg)
 
-<i>From left to right: 1. Render mode simple, 2. Render mode simple with needle points, 3. Render mode realistic<br>
-Image source: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-svg-2530031/)</i>
+<i>De gauche à droite: 1. Rendu simple, 2. Rendu simple avec les points de l'aiguille, 3. Rendu réaliste<br>
+Source de l'image: [Pixabay](https://pixabay.com/vectors/fox-red-fox-creature-mammal-svg-2530031/)</i>
 
-- **Design layer visibility** defines the visibility of the original design layer.
-  - **unchanged** leave it as is
-  - **hidden** hide the original design
-  - **lower opacity** display original design with lower opacity
-- **Render Mode**
-  - **Simple**: simple line drawing
-  - **Realistic**: Realistic preview output as png image into the canvas (8-bit)
-  - **Realistic High Quality** Realistic preview output as png image into the canvas (16-bit)
-  - **Realistic vector (slow)** Vector output with realistic filters
 
-    Slow means, that it has the capability to slow down Inkscape after the rendering process and even may make it freeze.
-    So use with care on complex designs and save your design before you render the stitch plan.
-    {: .notice--warning }
+- **Visibilité du calque de conception** : définit la visibilité du calque de conception du momtif.
+  - **Inchangé** : laisse tel quel.
+  - **Caché** : masque le motif original.
+  - **Baisser l'opacité** : affiche le motif original avec une opacité réduite.
+- **Mode de rendu**
+  - **Simple** : dessin au trait simple.
+  - **Réaliste** : aperçu réaliste au format PNG (8 bits) intégré au canevas.
+  - **Réaliste haute qualité** : aperçu réaliste au format PNG (16 bits) intégré au canevas.
+  - **Vecteur réaliste (lent)** : rendu vectoriel avec filtres réalistes.
 
-- **Move stitch plan beside the canvas**
-  Displays the preview on the right side of the canvas. If not enabled,the stitch plan will be placed on top of your design.
-  In that case you may want to update your design visibility to eather hidden or lower opacity.
-- **Needle points** displays needle points if enabled
-- **Lock** make stitch plan insensitive to mouse interactions (makes it easier to work on the actual design while the stitch plan is active)
-- **Display command symbols**
-- **Render jump stitches**
+Lent signifie que ce mode peut ralentir Inkscape après le rendu, voire le bloquer.
 
-- **Add ignore layer command**
-- **Overide last stitch plan**
-  If checked the new stitch plan will replace the previous one, uncheck if you wish to keep the previous stitch plan
+À utiliser avec précaution pour les motifs complexes et enregistrez votre motif avant de lancer le rendu du plan de broderie.
 
-### Design workflow with shortcut keys
+{: .notice--warning }
 
-Set [shortcut keys](/docs/customize/#shortcuts) for both, `stitch plan preview` and `Undo stitch plan` (see below) and it will greatfully support your designing workflow.
+- **Positionner le plan de broderie hors du canevas**
+  Affiche l'aperçu à droite de la zone de travail. Si cette option est désactivée, le plan de broderie sera placé au-dessus de votre motif.
+  Dans ce cas, vous pouvez masquer votre motif ou réduire son opacité.
+- **Points de l'aiguille** : affiche les points de pénétration de l'aiguille si cette option est activée.
+- **Verrouiller** : rend le plan de broderie insensible aux interactions de la souris (facilite le travail sur le motif principal lorsque le plan de broderie est visible).
+- **Montrer les symboles de commande**
+- **Montrer les sauts**
 
-* We recommend to set the shortcut key to the `no preference` method in the shortcut key menu.
-  The extension will then run directly (without the settings window) with the last applied settings.
-* Enable the `lock` option, so you can still acceess every path without interference with the stitch plan element(s).
-* Ensure that the `Override last stitch plan` option is enabled, otherwise you will end up with multiple stitch plans on canvas.
+- **Ajouter la commande « Ignorer le calque »**
+- **Écraser le dernier plan de broderie**
+
+Si cette option est cochée, le nouveau plan de broderie remplacera le précédent. Décochez-la si vous souhaitez conserver le plan de broderie précédent.
+
+### Optimisation du flux de travail avec les raccourcis clavier
+
+Configurez des [raccourcis clavier](/docs/customize/#shortcuts) pour l'aperçu du plan de broderie et l'annulation du plan de broderie (voir ci-dessous) afin d'optimiser votre flux de travail.
+
+* Nous vous recommandons de choisir l'option « Aucune préférence » dans le menu des raccourcis clavier.
+
+L'extension s'exécutera alors directement (sans passer par la fenêtre de paramètres) avec les derniers paramètres appliqués.
+
+* Activez l'option « Verrouiller » pour pouvoir accéder à tous les tracés sans interférence avec les éléments du plan de broderie.
+* Assurez-vous que l'option « Remplacer le dernier plan de broderie » est activée, sinon plusieurs plans de broderie s'afficheront sur la zone de travail.
 
 {% include video id="vyTMwLvkkiw4vgwDcTJS6e" provider="diode" %}
 
@@ -106,20 +111,6 @@ En revanche,si vous appliquez le plan de broderie, vous aurez la possibilité de
 
 Utilisez l'extension "Annuler l'aperçu du plan de broderie" si vous souhaitez le supprimer.
 
-Vous disposez des options suivantes:
-* **Positionner le plan de broderie hors du canevas** Positionne le plan de broderie  à la droite du canevas. Si la case n'est pas cochée, le plan de broderie sera placé au dessus de vos objets. Dans ce cas vous pouvez choisir de modifier la visibilité de vos objets, soit en les cachant soit en modifiant l'opacité.
-* **Visibilité du calque de conception** permet de choisir la visibilité du calque originel de conception.
-  * **Inchangé** laisse l'opacité du calque de conception telle quelle
-  * **Caché** cache le calque de conception
-  * **Baisser l'opacité** montre le cache de conception avec une opacité amoindrie
- 
-* **Points de l'aiguille** si coché, montre les points de l'aiguille
-* **Verrouiller** rend le plan de broderie insensible aux interactions de la souris, facilitant le travail sur les objets de broderie quand le plan de broderie est actif.
-
-* **Écraser le dernier plan de broderie** si l'option est cochée, le nouveau plan de broderie écrase le précédent, décochez si vous souhaitez garder le plan de broderie précédent.
-Utiliser un plan de broderie verrouillé superposé au motif (rendu invisible ou avec visibilité abaissée) aidera à avoir une meilleure idée du rendu final.
-
-Si le plan est verrouillé, et le motif visible, le plan de broderie ne vous gênera pas pour modifier le motif.
 {% endcomment %}
 
 ## Annuler l'aperçu du plan de broderie
