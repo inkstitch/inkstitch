@@ -397,7 +397,7 @@ class BitmapToCrossStitch(object):
         else:
             color_boxes = self._get_color_boxes()
         if not color_boxes:
-            return
+            return elements
 
         for color, boxes in color_boxes.items():
             color_group = Group()

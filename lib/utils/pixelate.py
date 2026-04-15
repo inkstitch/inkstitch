@@ -58,6 +58,7 @@ def pixelate_multiple(destination_group, fills, settings):
         else:
             destination_group.append(color_group[0])
 
+    destination_group[:] = sorted(destination_group, key=lambda group: len(group), reverse=True)
     return destination_group
 
 

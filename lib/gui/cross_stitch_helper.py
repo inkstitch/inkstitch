@@ -689,17 +689,17 @@ class CrossStitchHelperFrame(wx.Frame):
             if self.settings['remove_overlaps']:
                 svg_groups = self._update_svg_image_combined(svg_groups)
             else:
-                svg_groups = self._update_svg_imgae_single(svg_groups)
+                svg_groups = self._update_svg_image_single(svg_groups)
 
         if not svg_groups:
-            return
+            self.staticbitmap.SetBitmap(wx.NullImage)
 
         bmp = self.svg_groups_to_bmp(svg_groups)
         if task_id == self._current_task_id:
             # no newer task has already taken over, insert the bitmap
             self.staticbitmap.SetBitmap(bmp)
 
-    def _update_svg_imgae_single(self, svg_groups):
+    def _update_svg_image_single(self, svg_groups):
         for element in self.elements:
             if element.name == "FillStitch":
                 pixelated_outline = pixelate_element(element, self.settings)
@@ -761,7 +761,7 @@ class CrossStitchHelperFrame(wx.Frame):
 
         bbox = svg_groups.bounding_box()
         if bbox is None:
-            return
+            return wx.NullBitmap
         width, height = int(bbox.width), int(bbox.height)
         width, height = self.scaled_size(width, height)
 
