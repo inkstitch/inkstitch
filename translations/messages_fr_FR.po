@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-08 02:39+0000\n"
-"PO-Revision-Date: 2026-04-14 02:48\n"
+"POT-Creation-Date: 2026-04-15 02:46+0000\n"
+"PO-Revision-Date: 2026-04-16 02:52\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-08 02:39+0000\n"
+"POT-Creation-Date: 2026-04-15 02:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3481,7 +3481,7 @@ msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et
 #: lib/gui/cross_stitch_helper.py:434 lib/gui/edit_json/settings_panel.py:64
 #: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
-#: lib/gui/simulator/simulator_preferences.py:53
+#: lib/gui/simulator/simulator_preferences.py:73
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
 #: print/templates/custom-page.html:27 print/templates/custom-page.html:33
 #: print/templates/ui.html:101 print/templates/ui.html:105
@@ -3815,7 +3815,7 @@ msgstr "Sélectionner une palette de couleur"
 #: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:436
 #: lib/gui/edit_json/settings_panel.py:66 lib/gui/lettering_font_sample.py:72
 #: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/selection_to_pattern.py:89
-#: lib/gui/simulator/simulator_preferences.py:55
+#: lib/gui/simulator/simulator_preferences.py:75
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Appliquer"
@@ -4861,33 +4861,45 @@ msgstr "STOP"
 msgid "COLOR CHANGE"
 msgstr "CHANGEMENT COULEUR"
 
-#: lib/gui/simulator/drawing_panel.py:304
+#: lib/gui/simulator/drawing_panel.py:305
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Dimensions: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:450
+#: lib/gui/simulator/drawing_panel.py:451
 #, python-format
 msgid "Command: %s"
 msgstr "Commande : %s"
 
-#: lib/gui/simulator/simulator_preferences.py:30
+#: lib/gui/simulator/simulator_preferences.py:33
 msgid "Adapt speed to stitch count"
 msgstr "Adapter la vitesse au nombre de points"
 
-#: lib/gui/simulator/simulator_preferences.py:32
+#: lib/gui/simulator/simulator_preferences.py:35
 msgid "When enabled simulation speed adapts itself to the stitch count."
 msgstr "Si activé, la vitesse de la simulation s'adapte au nombre de points."
 
-#: lib/gui/simulator/simulator_preferences.py:35
+#: lib/gui/simulator/simulator_preferences.py:38
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
 #: inx/inkstitch_zip.inx:52
 msgid "Line width (mm)"
 msgstr "Largeur du trait (mm)"
 
-#: lib/gui/simulator/simulator_preferences.py:40
+#: lib/gui/simulator/simulator_preferences.py:43
 msgid "Needle penetration point size (mm)"
 msgstr "Taille du point de pénétration de l'aiguille (mm)"
+
+#: lib/gui/simulator/simulator_preferences.py:54
+msgid "Crosshair radius (px)"
+msgstr "Rayon de la croix (px)"
+
+#: lib/gui/simulator/simulator_preferences.py:58
+msgid "Crosshair thickness (px)"
+msgstr "Épaisseur de la croix (px)"
+
+#: lib/gui/simulator/simulator_preferences.py:66
+msgid "Crosshair colour"
+msgstr "Couleur de la croix"
 
 #: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
