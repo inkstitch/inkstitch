@@ -93,15 +93,14 @@ Avec un guidage satin, il est aussi possible d'ajuster  la direction des réplic
 
 [Télécharger](/assets/images/docs/ripple_satin_guide.svg){: download="satin_guided_ripples.svg" }
 
-## Clipping
+## Découpes
 
 {% include upcoming_release.html %}
+La broderie ondulée peut être limitée à une zone donnée en utilisant une découpe.
 
-Ripple stitches can be clipped to form the outline.
-
-* Create the ripple stitch
-* Create the clip shape (must be on top of the ripple stitch)
-* Select both and run `Object > Clip > Set clip`
+* Créez la broderie ondulée.
+* Créez la forme de découpage (elle doit se trouver au-dessus de la broderie ondulée).
+* Sélectionnez les deux et exécutez `Objet > Découper > Définir une découpe`.
 
 ## Paramétrage
 
