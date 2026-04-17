@@ -17,7 +17,7 @@ Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](
 
 ![Paramètres Satin Colonne.jpg](/assets/images/docs/en/params-e-stitch.jpg)
 
-**Astuce** Si vos points ne sont pas tournés du bon côté utilisez ["Intervertir les rails satin"](/fr/docs/satin-tools/#intrevertir-les-rails-des-colonnes-satin) .
+**Astuce** Si vos points ne sont pas tournés du bon côté utilisez ["Outils Satin : Intervertir les rails satin"](/fr/docs/satin-tools/#intrevertir-les-rails-des-colonnes-satin) ou cochez "Echanger les  rails " dans les paramètres.
 {: .notice--info }
 
 ## Paramétres
