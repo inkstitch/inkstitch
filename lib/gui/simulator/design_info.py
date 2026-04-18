@@ -6,18 +6,17 @@
 import wx
 
 from ...i18n import _
+from ...stitch_plan import StitchPlan
+from typing import Optional
 
 
 class DesignInfoDialog(wx.Dialog):
     """A dialog to show design info
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, stitch_plan: Optional[StitchPlan] = None, **kwargs) -> None:
         super(DesignInfoDialog, self).__init__(*args, **kwargs)
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
-
-        self.view_panel = self.GetParent()
-        self.drawing_panel = self.view_panel.drawing_panel
 
         sizer = wx.BoxSizer(wx.VERTICAL)
         info_sizer = wx.FlexGridSizer(6, 2, 5, 5)
@@ -55,15 +54,16 @@ class DesignInfoDialog(wx.Dialog):
 
         sizer.Add(info_sizer, 1, wx.ALL, 10)
         self.SetSizerAndFit(sizer)
-        self.update()
+        self.set_stitch_plan(stitch_plan)
 
-    def update(self):
-        if not self.drawing_panel.loaded:
+    def set_stitch_plan(self, stitch_plan: Optional[StitchPlan]) -> None:
+        if stitch_plan is None:
             return
-        self.dimensions.SetLabel("{:.2f} x {:.2f}".format(self.drawing_panel.dimensions_mm[0], self.drawing_panel.dimensions_mm[1]))
-        self.num_stitches.SetLabel(f"{self.drawing_panel.num_stitches}")
-        self.num_color_changes.SetLabel(f"{self.drawing_panel.num_color_changes}")
-        self.num_jumps.SetLabel(f"{self.drawing_panel.num_jumps}")
-        self.num_trims.SetLabel(f"{self.drawing_panel.num_trims}")
-        self.num_stops.SetLabel(f"{self.drawing_panel.num_stops}")
+
+        self.dimensions.SetLabel("{:.2f} x {:.2f}".format(stitch_plan.dimensions_mm[0], stitch_plan.dimensions_mm[1]))
+        self.num_stitches.SetLabel(f"{stitch_plan.num_stitches}")
+        self.num_color_changes.SetLabel(f"{stitch_plan.num_color_blocks-1}")
+        self.num_jumps.SetLabel(f"{stitch_plan.num_jumps-1}")
+        self.num_trims.SetLabel(f"{stitch_plan.num_trims}")
+        self.num_stops.SetLabel(f"{stitch_plan.num_stops}")
         self.Fit()
