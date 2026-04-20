@@ -429,8 +429,9 @@ class LetteringEditJsonPanel(wx.Panel):
 
     def writability_warning(self):
         json_file = path.join(self.font.path, 'font.json')
+        json_gz_file = path.join(self.font.path, 'font.json.gz')
 
-        if not path.isfile(json_file) or not path.isfile(json_file):
+        if not path.isfile(json_file) and not path.isfile(json_gz_file):
             self._show_warning(_("Could not read json file."))
             return
 

@@ -6,6 +6,8 @@
 import os
 from collections import defaultdict
 from unicodedata import normalize, category
+from typing import List, Dict, Optional
+import gzip
 
 import inkex
 
@@ -41,7 +43,7 @@ class FontVariant(object):
     LEGACY_VARIANT_CONVERSION_DICT = {"ltr": "→", "rtl": "←", "ttb": "↓", "btt": "↑"}
 
     @classmethod
-    def reversed_variant(cls, variant):
+    def reversed_variant(cls, variant: str) -> Optional[str]:
         if variant in cls.LEFT_TO_RIGHT:
             return cls.RIGHT_TO_LEFT[1]
         elif variant in cls.RIGHT_TO_LEFT:
@@ -53,7 +55,7 @@ class FontVariant(object):
         else:
             return None
 
-    def __init__(self, font_path, variant, default_glyph=None):
+    def __init__(self, font_path, variant, default_glyph=None) -> None:
         # If the font variant file does not exist, this constructor will
         # raise an exception.  The caller should catch it and decide
         # what to do.
@@ -61,16 +63,22 @@ class FontVariant(object):
         self.path = font_path
         self.variant = variant
         self.default_glyph = default_glyph
-        self.glyphs = {}
+        self.glyphs: Dict[str, Glyph] = {}
         self._load_glyphs()
 
-    def _load_glyphs(self):
+    def _load_glyphs(self) -> None:
         variant_file_paths = self._get_variant_file_paths()
         if not variant_file_paths:
             # need to check for legacy file names
             variant_file_paths = self._get_variant_file_paths(True)
         for svg_path in variant_file_paths:
-            document = inkex.load_svg(svg_path)
+
+            if svg_path.endswith(".svgz"):
+                with gzip.open(svg_path, "rb") as compressed_stream:
+                    document = inkex.load_svg(compressed_stream)
+            else:
+                document = inkex.load_svg(svg_path)
+
             update_inkstitch_document(document, warn_unversioned=False)
             svg = document.getroot()
             svg = self._apply_transforms(svg)
@@ -85,18 +93,21 @@ class FontVariant(object):
                 except (AttributeError, ValueError):
                     pass
 
-    def _get_variant_file_paths(self, legacy=False):
+    def _get_variant_file_paths(self, legacy=False) -> List[str]:
         variant = self.variant
         if legacy:
             variant = self.LEGACY_VARIANT_CONVERSION_DICT[variant]
 
         file_paths = []
         direct_path = os.path.join(self.path, "%s.svg" % variant)
+        direct_path_compressed = os.path.join(self.path, "%s.svgz" % variant)
         if os.path.isfile(direct_path):
             file_paths.append(direct_path)
-        elif os.path.isdir(os.path.join(self.path, "%s" % variant)):
-            path = os.path.join(self.path, "%s" % self.variant)
-            file_paths.extend([os.path.join(path, svg) for svg in os.listdir(path) if svg.endswith('.svg')])
+        if os.path.isfile(direct_path_compressed):
+            file_paths.append(direct_path_compressed)
+        elif os.path.isdir(os.path.join(self.path, variant)):
+            path = os.path.join(self.path, self.variant)
+            file_paths.extend([os.path.join(path, f) for f in os.listdir(path) if f.endswith(('.svg', '.svgz'))])
         return file_paths
 
     def _clean_group(self, group):

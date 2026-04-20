@@ -9,6 +9,7 @@ import unicodedata
 from collections import defaultdict
 from copy import deepcopy
 from random import randint
+import gzip
 
 import inkex
 
@@ -93,23 +94,49 @@ class Font(object):
 
     def _load_metadata(self, show_font_path_warning=True):
         try:
-            with open(os.path.join(self.path, "font.json"), encoding="utf-8-sig") as metadata_file:
+            # First try to read the uncompressed version, that way any local, human-readable changes
+            # "override" the compressed, distributed version.
+            # As a bonus this means that using the "generate json" command can remediate a corrupted .json.gz
+            # (not that that should ever happen in the first place...)
+            try:
+                metadata_path = os.path.join(self.path, "font.json")
+                with open(metadata_path, encoding="utf-8-sig") as metadata_file:
+                    self.metadata = json.load(metadata_file)
+                    return
+            except FileNotFoundError:
+                pass
+
+            # Try to load the compressed, distributed version
+            metadata_path = os.path.join(self.path, "font.json.gz")
+            with gzip.open(metadata_path, "rt", encoding="utf-8-sig") as metadata_file:
                 self.metadata = json.load(metadata_file)
-        except IOError:
+                return
+        except FileNotFoundError:
             if not show_font_path_warning:
                 return
+
+            # This message is technically wrong because it doesn't mention that we also tried to read the .json.gz,
+            # but we don't expect users to be compressing their files (yet?) so we don't really have to tell them.
             path = os.path.join(self.path, "font.json")
             msg = _("JSON file missing. Expected a JSON file at the following location:")
             msg += f"\n{path}\n\n"
             msg += _("Generate the JSON file through:\nExtensions > Ink/Stitch > Font Management > Generate JSON...")
             msg += '\n\n'
             inkex.errormsg(msg)
+        except IOError as exception:
+            if not show_font_path_warning:
+                return
+
+            msg = _("Failed to read the JSON file ({exception}):").format(exception=exception)
+            msg += f"\n{metadata_path}\n\n"
+            msg += _("Generate the JSON file through:\nExtensions > Ink/Stitch > Font Management > Generate JSON...")
+            msg += '\n\n'
+            inkex.errormsg(msg)
         except json.decoder.JSONDecodeError as exception:
             if not show_font_path_warning:
                 return
-            path = os.path.join(self.path, "font.json")
             msg = _("Corrupt JSON file")
-            msg += f" ({exception}):\n{path}\n\n"
+            msg += f" ({exception}):\n{metadata_path}\n\n"
             msg += _("Regenerate the JSON file through:\nExtensions > Ink/Stitch > Font Management > Generate JSON...")
             msg += '\n\n'
             inkex.errormsg(msg)
@@ -204,10 +231,12 @@ class Font(object):
             raise FontError(_("The font '%s' has no variants.") % self.name)
         return font_variants
 
-    def _has_variant(self, variant):
-        if (os.path.isfile(os.path.join(self.path, "%s.svg" % variant)) or (
-                os.path.isdir(os.path.join(self.path, "%s" % variant)) and
-                [svg for svg in os.listdir(os.path.join(self.path, "%s" % variant)) if svg.endswith('.svg')])):
+    def _has_variant(self, variant: str) -> bool:
+        if (os.path.isfile(os.path.join(self.path, "%s.svg" % variant)) or
+           os.path.isfile(os.path.join(self.path, "%s.svgz" % variant))):
+            return True
+        elif (os.path.isdir(os.path.join(self.path, variant)) and
+                [svg for svg in os.listdir(os.path.join(self.path, variant)) if svg.endswith(('.svg', '.svgz'))]):
             return True
         else:
             return False
