@@ -52,6 +52,10 @@ fi
 if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
     pyinstaller_args+="--windowed "
 fi
+# Include our custom hooks so PyInstaller finds lazy-loaded modules
+# (pystitch reader/writer modules and lib.extensions classes all use
+# importlib.import_module() and are invisible to static analysis)
+pyinstaller_args+="--additional-hooks-dir pyinstaller_hooks "
 # Run command to build the inkstich program
 python -m PyInstaller $pyinstaller_args inkstitch.py
 
@@ -59,8 +63,17 @@ python -m PyInstaller $pyinstaller_args inkstitch.py
 # to put some more user-accessible stuff like examples and palettes in
 # folders under inkstitch/ (see ../Makefile) so let's move the pyinstaller
 # stuff into its own dir.
+# Note: use Python shutil instead of bash mv to avoid Windows permission errors
+# when antivirus holds handles on freshly-written DLLs/directories (e.g. trimesh).
 shopt -s dotglob
 mkdir dist/bin
-mv dist/inkstitch/* dist/bin
-mv dist/bin dist/inkstitch
+python -c "
+import shutil, os
+src = 'dist/inkstitch'
+dst = 'dist/bin'
+for name in os.listdir(src):
+    shutil.move(os.path.join(src, name), os.path.join(dst, name))
+os.rmdir(src)
+shutil.move(dst, src)
+"
 mkdir artifacts

@@ -20,7 +20,8 @@
 # in specific positions or settings, also allows scaling.Changes: see git history
 """Extension for converting svg fonts to layers"""
 
-from inkex import Layer, PathElement, errormsg
+from inkex import Layer, PathElement
+from inkex.utils import errormsg
 
 from .base import InkstitchExtension
 
@@ -152,7 +153,7 @@ class LetteringSvgFontToLayers(InkstitchExtension):
 
         return baseline
 
-    def convert_glyph_to_layer(self, glyph, emsize, baseline, scale_by, hide_layer):  # noqa C901
+    def convert_glyph_to_layer(self, glyph, emsize, baseline, scale_by, hide_layer):
         """
         Converts a single glyph into a new SVG layer, applying scaling and coordinate transformation.
         """

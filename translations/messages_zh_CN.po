@@ -166,7 +166,7 @@ msgstr "由 Syafrizal（又名 Khurasan）设计。100% 尺寸下缎面宽度为
 #. description of font in fonts/braille
 #: inkstitch-fonts-metadata.py:56
 msgid "Font for the visually impaired with Braille key combinations according to DT 2024 INSEI specifications for French 6 dots Braille. It is also possible to use Unicode Braille. In this case, it is convenient to use one of the web's Braille translators to create a text in Braille unicode.\n"
-msgstr "专为视障人士设计的字体，采用符合 2024 年 DT INSEI 法国六点盲文标准的盲文组合。也可使用 Unicode 盲文，此时建议借助网络盲文翻译工具生成 Unicode 盲文文本"
+msgstr "专为视障人士设计的字体，采用符合 2024 年 DT INSEI 法国六点盲文标准的盲文组合。也可使用 Unicode 盲文，此时建议借助网络盲文翻译工具生成 Unicode 盲文文本\n"
 
 #. description of font in fonts/caesarus_SC_FI
 #: inkstitch-fonts-metadata.py:58

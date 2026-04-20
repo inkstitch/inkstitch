@@ -6,13 +6,18 @@
 import os
 
 import inkex
+from inkex.utils import errormsg
 
-from ..elements import iterate_nodes, nodes_to_elements
 from ..i18n import _
 from ..metadata import InkStitchMetadata
 from ..svg import generate_unique_id
 from ..svg.tags import INKSCAPE_GROUPMODE, SVG_GROUP_TAG
 from ..update import update_inkstitch_document
+
+
+def _extension_name(name: str) -> str:
+    """Convert CamelCase class name to snake_case extension name."""
+    return name[0].lower() + ''.join([x if x.islower() else f'_{x.lower()}' for x in name[1:]])
 
 
 class InkstitchExtension(inkex.EffectExtension):
@@ -27,14 +32,8 @@ class InkstitchExtension(inkex.EffectExtension):
         update_inkstitch_document(document)
         return document
 
-    @classmethod
-    def name(cls):
-        # Convert CamelCase to snake_case
-        return cls.__name__[0].lower() + ''.join([x if x.islower() else f'_{x.lower()}'
-                                                  for x in cls.__name__[1:]])
-
     def hide_all_layers(self):
-        for g in self.document.getroot().findall(SVG_GROUP_TAG):
+        for g in self.svg.findall(SVG_GROUP_TAG):
             if g.get(INKSCAPE_GROUPMODE) == "layer":
                 g.set("style", "display:none")
 
@@ -42,9 +41,9 @@ class InkstitchExtension(inkex.EffectExtension):
         # if no layer is selected, inkex defaults to the root, which isn't
         # particularly useful
         current_layer = self.svg.get_current_layer()
-        if current_layer is self.document.getroot():
+        if current_layer is self.svg:
             try:
-                current_layer = self.document.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
+                current_layer = self.svg.xpath(".//svg:g[@inkscape:groupmode='layer']", namespaces=inkex.NSS)[0]
             except IndexError:
                 # No layers at all??  Fine, we'll stick with the default.
                 pass
@@ -53,24 +52,28 @@ class InkstitchExtension(inkex.EffectExtension):
     def no_elements_error(self):
         if self.svg.selection:
             # l10n This was previously: "No embroiderable paths selected."
-            inkex.errormsg(_("Ink/Stitch doesn't know how to work with any of the objects you've selected. "
+            errormsg(_("Ink/Stitch doesn't know how to work with any of the objects you've selected. "
                              "Please check if selected elements are visible.") + "\n")
         else:
-            inkex.errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
+            errormsg(_("There are no objects in the entire document that Ink/Stitch knows how to work with.") + "\n")
 
-        inkex.errormsg(_("Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects") + "\n")
+        errormsg(_("Tip: Run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects") + "\n")
 
     def get_nodes(self, troubleshoot=False):
         # Postorder traversal of selected nodes and their descendants.
         # Returns all nodes if there is no selection.
+        from ..elements import iterate_nodes
+
         if self.svg.selection:
             selection = list(self.svg.selection)
         else:
             selection = None
 
-        return iterate_nodes(self.document.getroot(), selection=selection, troubleshoot=troubleshoot)
+        return iterate_nodes(self.svg, selection=selection, troubleshoot=troubleshoot)
 
     def get_elements(self, troubleshoot=False):
+        from ..elements import nodes_to_elements
+
         self.elements = nodes_to_elements(self.get_nodes(troubleshoot))
         if self.elements:
             return True
@@ -97,9 +100,9 @@ class InkstitchExtension(inkex.EffectExtension):
         return InkStitchMetadata(self.svg)
 
     def get_base_file_name(self):
-        svg_filename = self.document.getroot().get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
+        svg_filename = self.svg.get(inkex.addNS('docname', 'sodipodi'), "embroidery.svg")
 
-        return os.path.splitext(svg_filename)[0]
+        return os.path.splitext(svg_filename or "embroidery.svg")[0]
 
     def uniqueId(self, prefix, make_new_id=True):
         """Override inkex.Effect.uniqueId with a nicer naming scheme."""

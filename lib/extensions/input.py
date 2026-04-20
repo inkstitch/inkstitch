@@ -6,17 +6,16 @@
 from html import unescape
 from sys import exit, platform
 
-from inkex import errormsg
-from lxml import etree
-
-from ..i18n import _
-from ..metadata import InkStitchMetadata
-from ..stitch_plan import generate_stitch_plan
-from ..update import INKSTITCH_SVG_VERSION
-
 
 class Input(object):
     def run(self, args):
+        from inkex.utils import errormsg
+        from lxml import etree
+        from ..i18n import _
+        from ..metadata import InkStitchMetadata
+        from ..stitch_plan.generate_stitch_plan import generate_stitch_plan
+        from ..update import INKSTITCH_SVG_VERSION
+
         embroidery_file = args[0]
         if args[0].endswith(('edr', 'col', 'inf')):
             msg = _("Ink/Stitch cannot import color formats directly. But you can open the embroidery file and apply the color with "
@@ -29,8 +28,9 @@ class Input(object):
         metadata = InkStitchMetadata(stitch_plan)
         metadata['inkstitch_svg_version'] = INKSTITCH_SVG_VERSION
 
-        out = etree.tostring(stitch_plan).decode('utf-8')
+        out = etree.tostring(stitch_plan).decode('utf-8') if stitch_plan is not None else ''
         if platform == "win32":
             print(out)
         else:
             print(unescape(out))
+

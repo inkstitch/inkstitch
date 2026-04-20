@@ -67,9 +67,9 @@ def split_segment_stagger_phase(
     a,
     b,
     segment_length: float,
-    num_staggers: int,
+    num_staggers: float,
     this_segment_num: int,
-    min_val=0,
+    min_val: float = 0.0,
     max_val=None,
 ) -> typing.List[shgeo.Point]:
     """Split a segment with staggered phase for pattern alignment."""
@@ -225,13 +225,15 @@ def take_stitch(
     if idx >= len(points):
         return None, None
 
-    sleeve = AngleInterval.all_angles()
+    sleeve: AngleInterval = AngleInterval.all_angles()
     last = start
     for i in range(idx, len(points)):
         p = points[i]
         if sleeve.contains_point(p - start):
             if start.distance(p) < stitch_length:
-                sleeve = sleeve.intersect(AngleInterval.from_ball(p - start, tolerance))
+                intersected = sleeve.intersect(AngleInterval.from_ball(p - start, tolerance))
+                if intersected is not None:
+                    sleeve = intersected
                 last = p
                 continue
             else:
@@ -239,6 +241,8 @@ def take_stitch(
                 return cut, i
         else:
             cut = sleeve.cut_segment(start, last, p)
+            if cut is None:
+                return last, i
             if start.distance(cut) > stitch_length:
                 cut = cut_segment_with_circle(start, stitch_length, last, p)
             return cut, i
@@ -376,7 +380,7 @@ def even_running_stitch(points, stitch_length, tolerance):
     tends to produce ugly moiré effects. Use random_running_stitch instead.
     """
     if not points:
-        return
+        return []
     stitches = [points[0]]
     last_stitch_length_pos = 0
     for curve in path_to_curves(points, 2 * tolerance):
@@ -394,7 +398,7 @@ def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma,
     the path. This is suitable for tightly-spaced parallel curves.
     """
     if not points:
-        return
+        return []
     stitches = [points[0]]
     last_stitch_length_pos = 0
     for i, curve in enumerate(path_to_curves(points, 2 * tolerance)):
@@ -456,7 +460,7 @@ def bean_stitch(stitches, repeats, tags_to_ignore=None):
     return new_stitches
 
 
-def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle=0):  # noqa: C901
+def zigzag_stitch(stitches, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle: float = 0):
     """Create a zigzag stitch pattern from a set of stitches.
 
     Moves points left and right perpendicular to the path, alternating to

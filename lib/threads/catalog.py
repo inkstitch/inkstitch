@@ -38,7 +38,7 @@ class _ThreadCatalog(Sequence):
                     palette = ThreadPalette(palette_file)
                     if not palette.is_gimp_palette:
                         continue
-                    self.palettes.append(ThreadPalette(palette_file))
+                    self.palettes.append(palette)
                     palettes.append(palette_basename)
 
     def palette_names(self):

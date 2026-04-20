@@ -10,8 +10,9 @@ import pystitch
 from ..commands import (COMMANDS, GLOBAL_COMMANDS, LAYER_COMMANDS,
                         OBJECT_COMMANDS)
 from ..extensions import Input, Output, extensions
+from ..extensions.base import _extension_name
 from ..lettering.categories import FONT_CATEGORIES
-from ..threads import ThreadCatalog
+from ..threads.catalog import ThreadCatalog
 from .outputs import pystitch_output_formats
 from .utils import build_environment, write_inx_file
 
@@ -52,7 +53,7 @@ def generate_extension_inx_files(alter_data):
         if extension.DEVELOPMENT_ONLY and 'BUILD' in os.environ:
             continue
 
-        name = extension.name()
+        name = _extension_name(extension.__name__)
         template = env.get_template(f'{name}.xml')
         write_inx_file(name, template.render(alter_data,
                                              formats=pystitch_output_formats(),

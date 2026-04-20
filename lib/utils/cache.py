@@ -9,8 +9,6 @@ import pickle
 import sqlite3
 from typing import TypeVar, Callable, Any, cast
 
-import diskcache  # type: ignore[import-untyped]
-
 from lib.utils.settings import global_settings
 
 from .paths import get_user_dir
@@ -35,6 +33,7 @@ def get_stitch_plan_cache():
         cache_dir = get_user_dir('cache')
         stitch_plan_dir = os.path.join(cache_dir, 'stitch_plan')
         size_limit = global_settings['cache_size'] * 1024 * 1024
+        import diskcache  # type: ignore[import-untyped]
         try:
             __stitch_plan_cache = diskcache.Cache(stitch_plan_dir, size=size_limit)
         except (sqlite3.DatabaseError, sqlite3.OperationalError):
@@ -43,7 +42,8 @@ def get_stitch_plan_cache():
             if os.path.exists(cache_file):
                 os.remove(cache_file)
                 __stitch_plan_cache = diskcache.Cache(stitch_plan_dir, size=size_limit)
-        __stitch_plan_cache.size_limit = size_limit
+        assert __stitch_plan_cache is not None
+        setattr(__stitch_plan_cache, 'size_limit', size_limit)
 
         # reset cache if warnings appear within the files
         warnings = __stitch_plan_cache.check()

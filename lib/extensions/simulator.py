@@ -3,12 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import wx
-
-from ..gui.simulator import SimulatorWindow
-from ..stitch_plan import stitch_groups_to_stitch_plan
-from ..svg import convert_length
-from ..utils.svg_data import get_pagecolor
 from .base import InkstitchExtension
 
 
@@ -17,6 +11,12 @@ class Simulator(InkstitchExtension):
         InkstitchExtension.__init__(self)
 
     def effect(self):
+        import wx
+
+        from ..gui.simulator import SimulatorWindow
+        from ..stitch_plan import stitch_groups_to_stitch_plan
+        from ..utils.svg_data import get_pagecolor
+
         if not self.get_elements():
             return
 
@@ -24,7 +24,7 @@ class Simulator(InkstitchExtension):
         collapse_len = metadata['collapse_len_mm']
         min_stitch_len = metadata['min_stitch_len_mm']
         stitch_groups = self.elements_to_stitch_groups(self.elements)
-        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
+        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=float(min_stitch_len) if min_stitch_len is not None else 0.0)
         background_color = get_pagecolor(self.svg.namedview)
 
         app = wx.App()
@@ -43,7 +43,9 @@ class Simulator(InkstitchExtension):
         app.MainLoop()
 
     def get_page_specs(self, stitch_plan):
-        svg = self.document.getroot()
+        from ..svg import convert_length
+
+        svg = self.svg
         width = svg.get('width', 0)
         height = svg.get('height', 0)
         page_color = "white"

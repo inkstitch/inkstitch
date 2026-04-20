@@ -7,9 +7,6 @@ import os
 import sys
 import tempfile
 
-from ..output import write_embroidery_file
-from ..stitch_plan import stitch_groups_to_stitch_plan
-from ..threads import ThreadCatalog
 from .base import InkstitchExtension
 
 
@@ -48,6 +45,10 @@ class Output(InkstitchExtension):
         InkstitchExtension.parse_arguments(self, extra_args)
 
     def effect(self):
+        from ..output import write_embroidery_file
+        from ..stitch_plan import stitch_groups_to_stitch_plan
+        from ..threads.catalog import ThreadCatalog
+
         if not self.get_elements():
             sys.exit(0)
 
@@ -56,8 +57,10 @@ class Output(InkstitchExtension):
         min_stitch_len = self.metadata['min_stitch_len_mm']
         stitch_groups = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, disable_ties=self.settings.get('laser_mode', False),
-                                                   min_stitch_len=min_stitch_len)
-        ThreadCatalog().match_and_apply_palette(stitch_plan, self.metadata['thread-palette'])
+                                                   min_stitch_len=float(min_stitch_len) if min_stitch_len is not None else 0.0)
+        catalog = ThreadCatalog()
+        assert catalog is not None
+        catalog.match_and_apply_palette(stitch_plan, self.metadata['thread-palette'])
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
 
@@ -65,7 +68,7 @@ class Output(InkstitchExtension):
         temp_file.close()
 
         self.settings['rotate'] = self.metadata.get("rotate_on_export", 0)
-        write_embroidery_file(temp_file.name, stitch_plan, self.document.getroot(), self.settings)
+        write_embroidery_file(temp_file.name, stitch_plan, self.svg, self.settings)
 
         if sys.platform == "win32":
             import msvcrt

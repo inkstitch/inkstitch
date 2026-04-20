@@ -3,15 +3,45 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import math
-import typing
-from itertools import groupby
+from __future__ import annotations
 
-import numpy
-from shapely.geometry import (GeometryCollection, LinearRing, LineString,
-                              MultiLineString, MultiPoint, MultiPolygon, Polygon)
-from shapely.geometry.base import BaseGeometry
-from shapely.geometry import Point as ShapelyPoint
+import math
+from itertools import groupby
+from typing import TYPE_CHECKING, Any, Union, overload
+
+if TYPE_CHECKING:
+    from shapely.geometry import (
+        GeometryCollection, LinearRing, LineString, MultiLineString,
+        MultiPoint, MultiPolygon, Polygon
+    )
+
+
+def _ensure_shapely():
+    """Lazy import of shapely and numpy, cached after first call."""
+    global numpy, GeometryCollection, LinearRing, LineString
+    global MultiLineString, MultiPoint, MultiPolygon, Polygon
+    global BaseGeometry, ShapelyPoint
+    import numpy as _numpy
+    from shapely.geometry import (GeometryCollection as _GC, LinearRing as _LR, LineString as _LS,
+                                  MultiLineString as _MLS, MultiPoint as _MP, MultiPolygon as _MPoly,
+                                  Polygon as _Poly)
+    from shapely.geometry.base import BaseGeometry as _BG
+    from shapely.geometry import Point as _SP
+    numpy = _numpy
+    GeometryCollection = _GC
+    LinearRing = _LR
+    LineString = _LS
+    MultiLineString = _MLS
+    MultiPoint = _MP
+    MultiPolygon = _MPoly
+    Polygon = _Poly
+    BaseGeometry = _BG
+    ShapelyPoint = _SP
+    # Replace ourselves with a no-op after first call
+    global _ensure_shapely
+
+    def _ensure_shapely():
+        pass
 
 
 def cut(line, distance, normalized=False):
@@ -19,6 +49,7 @@ def cut(line, distance, normalized=False):
 
     This is an example in the Shapely documentation.
     """
+    _ensure_shapely()
     if normalized:
         distance *= line.length
 
@@ -42,6 +73,7 @@ def cut(line, distance, normalized=False):
             return [
                 LineString(coords[:i] + [(cp.x, cp.y)]),
                 LineString([(cp.x, cp.y)] + coords[i:])]
+    return [line, None]
 
 
 def cut_multiple(line, distances, normalized=False):
@@ -85,6 +117,7 @@ def roll_linear_ring(ring, distance, normalized=False):
 
     Same linear ring, different ordering of the coordinates.
     """
+    _ensure_shapely()
 
     if not isinstance(ring, LinearRing):
         # In case they handed us a LineString
@@ -92,7 +125,7 @@ def roll_linear_ring(ring, distance, normalized=False):
 
     pieces = cut(LinearRing(ring), distance, normalized=False)
 
-    if None in pieces:
+    if pieces[0] is None or pieces[1] is None:
         # We cut exactly at the start or end.
         return ring
 
@@ -102,11 +135,13 @@ def roll_linear_ring(ring, distance, normalized=False):
 
 
 def reverse_line_string(line_string):
+    _ensure_shapely()
     return LineString(line_string.coords[::-1])
 
 
 def ensure_multi_line_string(thing, min_size=0):
     """Given a shapely geometry, return a MultiLineString"""
+    _ensure_shapely()
     multi_line_string = MultiLineString()
     if thing.is_empty:
         return multi_line_string
@@ -129,6 +164,7 @@ def ensure_multi_line_string(thing, min_size=0):
 
 def ensure_geometry_collection(thing):
     """Given a shapely geometry, return a GeometryCollection"""
+    _ensure_shapely()
     if thing.is_empty:
         return GeometryCollection()
     if thing.geom_type == "GeometryCollection":
@@ -139,8 +175,9 @@ def ensure_geometry_collection(thing):
     return GeometryCollection([thing])
 
 
-def ensure_multi_polygon(thing: BaseGeometry, min_size=0) -> MultiPolygon:
+def ensure_multi_polygon(thing: Any, min_size=0) -> Any:
     """Given a shapely geometry, return a MultiPolygon"""
+    _ensure_shapely()
     multi_polygon = MultiPolygon()
     if thing.is_empty:
         return multi_polygon
@@ -163,6 +200,7 @@ def ensure_multi_polygon(thing: BaseGeometry, min_size=0) -> MultiPolygon:
 
 def ensure_multi_point(thing):
     """Given a shapely geometry, return a MultiPoint"""
+    _ensure_shapely()
     multi_point = MultiPoint()
     if thing.is_empty:
         return multi_point
@@ -203,6 +241,7 @@ def cut_path(points, length):
 
     If the original path isn't that long, just return it as is.
     """
+    _ensure_shapely()
 
     if len(points) < 2:
         return points
@@ -210,6 +249,8 @@ def cut_path(points, length):
     path = LineString(points)
     subpath, rest = cut(path, length)
 
+    if subpath is None:
+        return points
     return [Point(*point) for point in subpath.coords]
 
 
@@ -250,7 +291,9 @@ def remove_duplicate_points(path):
 
 
 class Point:
-    def __init__(self, x: typing.Union[float, numpy.float64], y: typing.Union[float, numpy.float64]):
+    __slots__ = ('x', 'y')
+
+    def __init__(self, x: float, y: float):
         self.x = float(x)
         self.y = float(y)
 
@@ -263,7 +306,7 @@ class Point:
         return cls(point[0], point[1])
 
     def __json__(self):
-        return vars(self)
+        return {'x': self.x, 'y': self.y}
 
     def __add__(self, other):
         return self.__class__(self.x + other.x, self.y + other.y)
@@ -274,7 +317,11 @@ class Point:
     def mul(self, scalar):
         return self.__class__(self.x * scalar, self.y * scalar)
 
-    def __mul__(self, other):
+    @overload
+    def __mul__(self, other: 'Point') -> float: ...
+    @overload
+    def __mul__(self, other: Union[int, float]) -> 'Point': ...
+    def __mul__(self, other: 'Union[Point, int, float]') -> 'Union[float, Point]':
         if isinstance(other, Point):
             # dot product
             return self.x * other.x + self.y * other.y
@@ -286,7 +333,7 @@ class Point:
     def __neg__(self):
         return self * -1
 
-    def __rmul__(self, other):
+    def __rmul__(self, other: Union[int, float]) -> 'Point':
         if isinstance(other, (int, float)):
             return self.__mul__(other)
         else:

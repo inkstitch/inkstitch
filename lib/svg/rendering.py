@@ -4,13 +4,17 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import math
-from math import pi
+from math import pi, sqrt
+from random import random
 
 import inkex
+from inkex.paths import Path
 
 from ..i18n import _
-from ..utils import Point, cache
-from .tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL, INKSTITCH_ATTRIBS
+from ..utils import Point
+from ..utils.cache import cache
+from .tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
+                   INKSCAPE_GROUPMODE, INKSCAPE_LABEL, INKSTITCH_ATTRIBS, XLINK_HREF)
 from .units import PIXELS_PER_MM, get_viewbox_transform
 
 # The stitch vector path looks like this:
@@ -130,25 +134,32 @@ def realistic_stitch(start, end):
     )
 
     # create the path by filling in the length in the template, and transforming it as above
-    path = inkex.Path(stitch_path % stitch_length).transform(transform, True)
+    path = Path(stitch_path % stitch_length).transform(transform, True)
 
     return str(path)
 
 
 def color_block_to_point_lists(color_block, render_jumps=True):
     point_lists = [[]]
+    current = point_lists[0]
+    _append = current.append
 
     for stitch in color_block:
-        if stitch.trim:
-            if point_lists[-1]:
-                point_lists.append([])
+        if stitch._flags:
+            if stitch.trim:
+                if current:
+                    current = []
+                    point_lists.append(current)
+                    _append = current.append
+                    continue
+            if stitch.jump:
+                if not render_jumps and current:
+                    current = []
+                    point_lists.append(current)
+                    _append = current.append
                 continue
-        if stitch.jump and not render_jumps and point_lists[-1]:
-            point_lists.append([])
             continue
-
-        if not stitch.jump and not stitch.color_change and not stitch.stop:
-            point_lists[-1].append(stitch.as_tuple())
+        _append((stitch.x, stitch.y))
 
     # filter out empty point lists
     point_lists = [p for p in point_lists if len(p) > 1]
@@ -180,44 +191,163 @@ def color_block_to_realistic_stitches(color_block, svg, destination, render_jump
 
 
 def color_block_to_paths(color_block, svg, destination, visual_commands, line_width, render_jumps=True):
-    # If we try to import these above, we get into a mess of circular
-    # imports.
-    from ..commands import add_commands
-    from ..elements.stroke import Stroke
+    from ..commands import ensure_symbol, get_command_description
+    from ..svg import generate_unique_id, get_correction_transform as get_node_correction_transform
 
-    # We could emit just a single path with one subpath per point list, but
-    # emitting multiple paths makes it easier for the user to manipulate them.
+    stitches = color_block.stitches
+    n = len(stitches)
+
+    # Fast path: if no special stitches in block, use list comprehension (C-level loop)
+    if n > 1 and not any(s._flags for s in stitches):
+        _round = round
+        d = "M" + " ".join([f"{_round(s.x)} {_round(s.y)}" for s in stitches])
+        s_prev = stitches[-2]
+        s_last = stitches[-1]
+        segments = [(d, ((s_prev.x, s_prev.y), (s_last.x, s_last.y)))]
+    else:
+        # Slow path: handle trims/jumps/etc with per-stitch flag checks
+        segments = []
+        coord_strs = []
+        _coord_append = coord_strs.append
+        last_x = last_y = prev_x = prev_y = 0.0
+        count = 0
+
+        for stitch in stitches:
+            if stitch._flags:
+                if stitch.trim:
+                    if count > 1:
+                        segments.append(("M" + " ".join(coord_strs), ((prev_x, prev_y), (last_x, last_y))))
+                    coord_strs = []
+                    _coord_append = coord_strs.append
+                    count = 0
+                    continue
+                if stitch.jump:
+                    if not render_jumps and count > 0:
+                        if count > 1:
+                            segments.append(("M" + " ".join(coord_strs), ((prev_x, prev_y), (last_x, last_y))))
+                        coord_strs = []
+                        _coord_append = coord_strs.append
+                        count = 0
+                    continue
+                continue
+            prev_x, prev_y = last_x, last_y
+            last_x = stitch.x
+            last_y = stitch.y
+            _coord_append(f"{last_x} {last_y}")
+            count += 1
+
+        if count > 1:
+            segments.append(("M" + " ".join(coord_strs), ((prev_x, prev_y), (last_x, last_y))))
+
+    # Build SVG paths from segments
     first = True
     path = None
-    for point_list in color_block_to_point_lists(color_block, render_jumps):
+    prev_last_points = None
+    color = color_block.color.visible_on_white.to_hex_str()
+    correction_transform = get_correction_transform(svg)
+    style = f"stroke: {color}; stroke-width: {line_width}; fill: none;stroke-linejoin: round;stroke-linecap: round;"
+    _stroke_method = INKSTITCH_ATTRIBS['stroke_method']
+
+    for d_string, last_points in segments:
         if first:
             first = False
         elif visual_commands:
-            add_commands(Stroke(destination[-1]), ["trim"])
+            _add_command_fast(svg, path, prev_last_points, "trim",
+                              ensure_symbol, get_command_description, generate_unique_id, get_node_correction_transform)
         else:
+            assert path is not None
             path.set(INKSTITCH_ATTRIBS['trim_after'], 'true')
 
-        color = color_block.color.visible_on_white.to_hex_str()
         path = inkex.PathElement(attrib={
             'id': svg.get_unique_id("object"),
-            'style': f"stroke: {color}; stroke-width: {line_width}; fill: none;stroke-linejoin: round;stroke-linecap: round;",
-            'd': "M" + " ".join(" ".join(str(coord) for coord in point) for point in point_list),
-            'transform': get_correction_transform(svg),
-            INKSTITCH_ATTRIBS['stroke_method']: 'manual_stitch'
+            'style': style,
+            'd': d_string,
+            'transform': correction_transform,
+            _stroke_method: 'manual_stitch'
         })
         destination.append(path)
+        prev_last_points = last_points
 
     if path is not None and color_block.trim_after:
         if visual_commands:
-            add_commands(Stroke(path), ["trim"])
+            _add_command_fast(svg, path, prev_last_points, "trim",
+                              ensure_symbol, get_command_description, generate_unique_id, get_node_correction_transform)
         else:
             path.set(INKSTITCH_ATTRIBS['trim_after'], 'true')
 
     if path is not None and color_block.stop_after:
         if visual_commands:
-            add_commands(Stroke(path), ["stop"])
+            _add_command_fast(svg, path, prev_last_points, "stop",
+                              ensure_symbol, get_command_description, generate_unique_id, get_node_correction_transform)
         else:
             path.set(INKSTITCH_ATTRIBS['stop_after'], 'true')
+
+
+def _add_command_fast(svg, path_node, last_points, command,
+                      ensure_symbol, get_command_description, generate_unique_id, get_node_correction_transform):
+    """Lightweight version of add_commands for paths with known point data.
+
+    Avoids creating Stroke elements and the expensive Shapely/bezier chain.
+    Produces the same SVG structure: group containing a symbol and connector.
+    last_points is ((prev_x, prev_y), (last_x, last_y)) - the last two points of the segment.
+    """
+    ensure_symbol(svg, command)
+
+    # Compute position near the end of the path, offset perpendicular by 10 units
+    distance = 10
+    prev = last_points[0]
+    last = last_points[1]
+    dx = last[0] - prev[0]
+    dy = last[1] - prev[1]
+    length = sqrt(dx * dx + dy * dy) or 1.0
+    # Perpendicular offset + slight randomness to avoid stacking
+    perp_x = -dy / length * distance
+    perp_y = dx / length * distance
+    jitter = random() * 0.05 * distance
+    pos_x = last[0] + perp_x + jitter
+    pos_y = last[1] + perp_y + jitter
+
+    # Use midpoint of last two points as approximate centroid
+    centroid_x = (prev[0] + last[0]) / 2
+    centroid_y = (prev[1] + last[1]) / 2
+
+    # Create group
+    parent = path_node.getparent()
+    description = _(get_command_description(command))
+    group = inkex.Group(attrib={
+        "id": generate_unique_id(svg, "command_group"),
+        INKSCAPE_LABEL: _("Ink/Stitch Command") + f": {description}",
+        "transform": get_node_correction_transform(path_node)
+    })
+    parent.insert(parent.index(path_node) + 1, group)
+
+    # Create symbol
+    symbol = inkex.Use(attrib={
+        "id": svg.get_unique_id("command_use"),
+        XLINK_HREF: "#inkstitch_%s" % command,
+        "height": "100%",
+        "width": "100%",
+        "x": str(pos_x),
+        "y": str(pos_y),
+        INKSCAPE_LABEL: _("command marker"),
+    })
+    group.append(symbol)
+
+    # Ensure path has an id for connector reference
+    if path_node.get('id') is None:
+        path_node.set('id', svg.get_unique_id("object"))
+
+    # Create connector line from symbol to centroid
+    connector = inkex.PathElement(attrib={
+        "id": generate_unique_id(svg, "command_connector"),
+        "d": f"M {pos_x},{pos_y} {centroid_x},{centroid_y}",
+        "style": "fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;vector-effect: non-scaling-stroke;-inkscape-stroke: hairline;",
+        CONNECTION_START: f"#{symbol.get('id')}",
+        CONNECTION_END: f"#{path_node.get('id')}",
+        INKSCAPE_LABEL: _("connector"),
+        CONNECTOR_TYPE: "polyline",
+    })
+    group.insert(0, connector)
 
 
 def render_stitch_plan(svg, stitch_plan, realistic=False, visual_commands=True, render_jumps=True, line_width=0.4) -> inkex.Group:

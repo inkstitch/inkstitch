@@ -28,12 +28,12 @@ VSVersionInfo(
         [StringStruct(u'Comments', u'Published under the GNU GPL'),
         StringStruct(u'CompanyName', u'Ink/Stitch project'),
         StringStruct(u'FileDescription', u'An open-source machine embroidery design platform based on Inkscape.'),
-        StringStruct(u'FileVersion', u'1.1.1'),
+        StringStruct(u'FileVersion', u'local-build'),
         StringStruct(u'InternalName', u'Inkstitch '),
-        StringStruct(u'LegalCopyright', u'© 1234 Inkstitch Open Source Community'),
+        StringStruct(u'LegalCopyright', u'© 2026 Inkstitch Open Source Community'),
         StringStruct(u'OriginalFilename', u'inkstitch.exe'),
         StringStruct(u'ProductName', u'Inkstitch'),
-        StringStruct(u'ProductVersion', u'1.1.1')])
+        StringStruct(u'ProductVersion', u'local-build')])
       ]), 
     VarFileInfo([VarStruct(u'Translation', [1033, 1252])])
   ]

@@ -156,7 +156,7 @@ class FontVariant(object):
 
         non_binding_char = ['ا', 'أ', 'ﺇ', 'آ', 'ٱ', 'د', 'ذ', 'ر', 'ز', 'و', 'ؤ']
         normalized_non_binding_char = [normalize('NFC', letter) for letter in non_binding_char]
-        return not (character in normalized_non_binding_char)
+        return character not in normalized_non_binding_char
 
     def is_mark(self, character):
         # this category includes all the combining diacritics.

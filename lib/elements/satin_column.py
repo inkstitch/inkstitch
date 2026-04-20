@@ -7,12 +7,14 @@ import itertools
 import typing
 from copy import deepcopy
 from itertools import chain
+from typing import Any, List, Tuple
 
 import numpy as np
-from inkex import Path
+from inkex.paths import Path
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely import set_precision
+from shapely.geometry import LineString
 from shapely.ops import nearest_points, substring
 
 from ..debug.debug import debug
@@ -22,7 +24,8 @@ from ..stitch_plan import Stitch, StitchGroup
 from ..stitches import running_stitch
 from ..svg import line_strings_to_coordinate_lists
 from ..svg.styles import get_join_style_args
-from ..utils import Point, cache, cut, cut_multiple, offset_points, prng
+from ..utils import Point, cut, cut_multiple, offset_points, prng
+from ..utils.cache import cache
 from ..utils.param import ParamOption
 from ..utils.threading import check_stop_flag
 from .element import PIXELS_PER_MM, EmbroideryElement, param
@@ -657,7 +660,7 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
-    def line_string_rails(self):
+    def line_string_rails(self) -> Tuple[LineString, ...]:
         """The rails, as LineStrings."""
         paths = [set_precision(shgeo.LineString(rail), 0.00001) for rail in self.rails]
 
@@ -795,14 +798,14 @@ class SatinColumn(EmbroideryElement):
         if self.min_stitch_length:
             return self.min_stitch_length
         metadata = InkStitchMetadata(self.node.root)
-        return metadata['min_stitch_len_mm'] * PIXELS_PER_MM
+        return float(metadata['min_stitch_len_mm'] or 0) * PIXELS_PER_MM
 
     @property
     def min_jump_stitch_len(self):
         if self.min_jump_stitch_length:
             return self.min_jump_stitch_length
         metadata = InkStitchMetadata(self.node.root)
-        return metadata['collapse_len_mm'] * PIXELS_PER_MM
+        return float(metadata['collapse_len_mm'] or 0) * PIXELS_PER_MM
 
     @property
     @cache
@@ -824,7 +827,8 @@ class SatinColumn(EmbroideryElement):
         for i, rail in enumerate(rails):
             rails[i] = cut_multiple(rail, cut_points[i])
 
-        for rail in rails:
+        processed_rails: List[Any] = rails
+        for rail in processed_rails:
             for i in range(len(rail)):
                 if rail[i] is not None:
                     rail[i] = [Point(*coord) for coord in rail[i].coords]
@@ -845,7 +849,7 @@ class SatinColumn(EmbroideryElement):
 
         return sections
 
-    def validation_warnings(self):  # noqa: C901
+    def validation_warnings(self):
         paths = self.node.get_path()
         if any([path.letter == 'Z' for path in paths]):
             yield ClosedPathWarning(self.line_string_rails[0].coords[0])
@@ -962,7 +966,7 @@ class SatinColumn(EmbroideryElement):
         path_lists = self._cut_rails(cut_points)
 
         # prevent error when split points lies at the start or end of the satin column
-        cleaned_path_lists = path_lists
+        cleaned_path_lists: List[Any] = list(path_lists)
         for i, path_list in enumerate(path_lists):
             if None in path_list:
                 cleaned_path_lists[i] = None
@@ -1126,7 +1130,7 @@ class SatinColumn(EmbroideryElement):
         filtered_rungs = []
         for rung in shgeo.MultiLineString(rungs).geoms:
             intersection = rung.intersection(rails)
-            if intersection.geom_type == "MultiPoint" and len(intersection.geoms) == 2:
+            if isinstance(intersection, shgeo.MultiPoint) and len(intersection.geoms) == 2:
                 filtered_rungs.append(list(rung.coords))
         return filtered_rungs
 
@@ -1194,6 +1198,10 @@ class SatinColumn(EmbroideryElement):
         processor = SatinProcessor(self, offset_px, offset_proportional, use_random)
 
         pairs = []
+        old_pos0: Point = Point(0, 0)
+        old_pos1: Point = Point(0, 0)
+        section0: typing.List[Point] = []
+        section1: typing.List[Point] = []
 
         for i, (section0, section1) in enumerate(self.flattened_sections):
             check_stop_flag()
@@ -1317,7 +1325,7 @@ class SatinColumn(EmbroideryElement):
 
         start_path = substring(connector, start, end)
 
-        stitches = [Stitch(*coord) for coord in start_path.coords]
+        stitches = [Stitch(coord[0], coord[1]) for coord in start_path.coords]
         stitch_group = StitchGroup(
             color=self.color,
             stitches=stitches
@@ -1352,7 +1360,7 @@ class SatinColumn(EmbroideryElement):
         return StitchGroup(
                 color=self.color,
                 tags=tags,
-                stitches=[Stitch(*coord) for coord in linestring.coords]
+                stitches=[Stitch(coord[0], coord[1]) for coord in linestring.coords]
             )
 
     def do_contour_underlay(self, end_point):
@@ -1472,8 +1480,8 @@ class SatinColumn(EmbroideryElement):
                 points.append(points[0])
             zigzag_line = shgeo.LineString(points)
             start, end = self._split_linestring_at_end_point(zigzag_line, end_point)
-            start_groups.append(self._generate_zigzag_stitch_group([Stitch(*point) for point in start.coords]))
-            end_groups.append(self._generate_zigzag_stitch_group([Stitch(*point) for point in end.coords]))
+            start_groups.append(self._generate_zigzag_stitch_group([Stitch(point[0], point[1]) for point in start.coords]))
+            end_groups.append(self._generate_zigzag_stitch_group([Stitch(point[0], point[1]) for point in end.coords]))
         if start_groups:
             stitch_groups.append(self.connect_and_add(start_groups[0], end_groups[-1]))
             stitch_groups.append(self.connect_and_add(start_groups[-1], end_groups[0]))
@@ -1525,9 +1533,9 @@ class SatinColumn(EmbroideryElement):
         top_layer = shgeo.LineString(stitch_group.stitches)
         start, end = self._split_linestring_at_end_point(top_layer, end_point)
         stitch_group2 = deepcopy(stitch_group)
-        stitch_group2.stitches = [Stitch(*point) for point in end.reverse().coords]
+        stitch_group2.stitches = [Stitch(point[0], point[1]) for point in end.reverse().coords]
         stitch_group1 = stitch_group
-        stitch_group1.stitches = [Stitch(*point) for point in start.coords]
+        stitch_group1.stitches = [Stitch(point[0], point[1]) for point in start.coords]
         top_layer_stitch_groups = [stitch_group1, stitch_group2]
         return top_layer_stitch_groups
 
@@ -1745,6 +1753,8 @@ class SatinColumn(EmbroideryElement):
             return self._get_split_points_simple(*args, **kwargs), None
         elif self.split_method == "staggered":
             return self._get_split_points_staggered(*args, **kwargs), None
+        else:
+            return ([], None)
 
     def _get_split_points_default(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
                                   seed=None, row_num=0, from_end=None):
@@ -1756,7 +1766,7 @@ class SatinColumn(EmbroideryElement):
         if distance <= min_split_length:
             return ([], 1)
         if random_phase:
-            points = running_stitch.split_segment_random_phase(a_short, b_short, length, length_sigma, seed)
+            points = running_stitch.split_segment_random_phase(a_short, b_short, length, length_sigma, seed or "")
             # avoid hard stitches: do not insert split stitches near the end points
             if len(points) > 1 and points[0].distance(shgeo.Point(a)) <= self.min_stitch_len:
                 del points[0]

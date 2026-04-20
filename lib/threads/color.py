@@ -2,13 +2,26 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-from typing import Optional, Tuple, Union, List
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, Optional, Tuple, Union, List, cast
 
 import colorsys
 
 from inkex import Color, ColorError
 
-from pystitch.EmbThread import EmbThread
+if TYPE_CHECKING:
+    from pystitch.EmbThread import EmbThread
+
+_EmbThread = None
+
+
+def _get_EmbThread():
+    global _EmbThread
+    if _EmbThread is None:
+        from pystitch.EmbThread import EmbThread as _ET
+        _EmbThread = _ET
+    return _EmbThread
 
 
 class ThreadColor(object):
@@ -19,7 +32,7 @@ class ThreadColor(object):
     description: Optional[str]
     chart: Optional[str]
 
-    def __init__(  # noqa: C901
+    def __init__(
         self,
         color: Optional[Union[str, Color, EmbThread, Tuple[int, int, int], List[int]]],
         name: Optional[str] = None,
@@ -37,16 +50,17 @@ class ThreadColor(object):
             '''
             color = None
         elif isinstance(color, str) and color.startswith('rgb'):
-            color = tuple(int(value) for value in color[4:-1].split(','))
+            _parts = [int(value) for value in color[4:-1].split(',')]
             # remove alpha channel
-            if len(color) == 4:
-                color = color[:3]
+            if len(_parts) == 4:
+                _parts = _parts[:3]
+            color = (_parts[0], _parts[1], _parts[2])
 
         if color is None:
             rgb = (0, 0, 0)
         elif isinstance(color, Color):
             rgb = tuple(Color(color).to('rgb'))
-        elif isinstance(color, EmbThread):
+        elif isinstance(color, _get_EmbThread()):
             self.name = color.description
             self.number = color.catalog_number
             self.manufacturer = color.brand
@@ -62,7 +76,7 @@ class ThreadColor(object):
         elif isinstance(color, tuple):
             rgb = color
         elif isinstance(color, list) and len(color) == 3:
-            rgb = tuple(color)
+            rgb = (color[0], color[1], color[2])
 
         if rgb is None:
             '''
@@ -84,7 +98,7 @@ class ThreadColor(object):
 
         return jsonified
 
-    def _as_dict(self):
+    def _as_dict(self) -> dict:
         return dict(name=self.name,
                     number=self.number,
                     manufacturer=self.manufacturer,
@@ -164,7 +178,7 @@ class ThreadColor(object):
         # convert back to values in the range of 0-255
         color = tuple(value * 255 for value in color)
 
-        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer, description=self.description, chart=self.chart)
+        return ThreadColor(cast(Tuple[int, int, int], color), name=self.name, number=self.number, manufacturer=self.manufacturer, description=self.description, chart=self.chart)
 
     def visible_on_background(self, background_color):
         """A ThreadColor similar to this one but visible on given background color.
@@ -189,7 +203,7 @@ class ThreadColor(object):
             # convert back to values in the range of 0-255
             color = tuple(value * 255 for value in color)
 
-            return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer,
+            return ThreadColor(cast(Tuple[int, int, int], color), name=self.name, number=self.number, manufacturer=self.manufacturer,
                                description=self.description, chart=self.chart)
 
         return self
@@ -207,4 +221,4 @@ class ThreadColor(object):
         # convert back to values in the range of 0-255
         color = tuple(value * 255 for value in color)
 
-        return ThreadColor(color, name=self.name, number=self.number, manufacturer=self.manufacturer, description=self.description, chart=self.chart)
+        return ThreadColor(cast(Tuple[int, int, int], color), name=self.name, number=self.number, manufacturer=self.manufacturer, description=self.description, chart=self.chart)

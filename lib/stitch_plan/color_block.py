@@ -120,24 +120,31 @@ class ColorBlock(object):
 
         if min_stitch_len is None:
             min_stitch_len = 0.1
-        min_stitch_len *= PIXELS_PER_MM
+        min_stitch_len_px = min_stitch_len * PIXELS_PER_MM
+        # Pre-square for distance comparison without sqrt
+        min_sq = min_stitch_len_px * min_stitch_len_px
 
         stitches = [self.stitches[0]]
+        _append = stitches.append
+        prev = self.stitches[0]
         for stitch in self.stitches[1:]:
-            if stitches[-1].jump or stitch.stop or stitch.trim or stitch.color_change:
-                # Don't consider jumps, stops, color changes, or trims as candidates for filtering
+            if prev.jump or stitch.stop or stitch.trim or stitch.color_change:
                 pass
             elif 'lock_stitch' in stitch.tags:
-                # do not filter specific stitches
                 pass
             else:
-                length = (stitch - stitches[-1]).length()
-                min_length = stitch.min_stitch_length or min_stitch_len
-                if length <= min_length:
-                    # duplicate stitch, skip this one
+                dx = stitch.x - prev.x
+                dy = stitch.y - prev.y
+                dist_sq = dx * dx + dy * dy
+                ml = stitch.min_stitch_length
+                if ml:
+                    if dist_sq <= ml * ml:
+                        continue
+                elif dist_sq <= min_sq:
                     continue
 
-            stitches.append(stitch)
+            _append(stitch)
+            prev = stitch
 
         self.stitches = stitches
 
@@ -150,7 +157,9 @@ class ColorBlock(object):
             else:
                 raise ValueError("internal error: can't add a command to an empty stitch block")
             self.stitches.append(Stitch(*args, **kwargs))
-        if isinstance(args[0], Stitch):
+        elif isinstance(args[0], Stitch) and not kwargs:
+            self.stitches.append(args[0])
+        elif isinstance(args[0], Stitch):
             self.stitches.append(Stitch(*args, **kwargs))
         elif isinstance(args[0], Point):
             self.stitches.append(Stitch(args[0].x, args[0].y, *args[1:], **kwargs))
@@ -167,11 +176,23 @@ class ColorBlock(object):
 
     @property
     def bounding_box(self):
-        minx = min(stitch.x for stitch in self)
-        miny = min(stitch.y for stitch in self)
-        maxx = max(stitch.x for stitch in self)
-        maxy = max(stitch.y for stitch in self)
-
+        stitches = self.stitches
+        if not stitches:
+            return 0, 0, 0, 0
+        s = stitches[0]
+        minx = maxx = s.x
+        miny = maxy = s.y
+        for s in stitches:
+            sx = s.x
+            sy = s.y
+            if sx < minx:
+                minx = sx
+            elif sx > maxx:
+                maxx = sx
+            if sy < miny:
+                miny = sy
+            elif sy > maxy:
+                maxy = sy
         return minx, miny, maxx, maxy
 
     def make_offsets(self, offsets: List[Point]):

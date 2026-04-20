@@ -3,15 +3,15 @@ from math import ceil
 
 import inkex
 import json
-import lxml
-import networkx as nx
+from lxml import etree
 from shapely.geometry import LineString, MultiLineString
 from shapely.prepared import prep
 
 from .debug.debug import debug
 from .i18n import _
 from .svg import apply_transforms
-from .utils import Point, cache, get_bundled_dir, guess_inkscape_config_path
+from .utils import Point, get_bundled_dir, guess_inkscape_config_path
+from .utils.cache import cache
 from .utils.threading import check_stop_flag
 
 
@@ -112,6 +112,9 @@ class Tile:
         return translated_tile
 
     def _scale_and_rotate(self, x_scale, y_scale, angle):
+        assert self.shift0 is not None
+        assert self.shift1 is not None
+        assert self.tile is not None
         transformed_shift0 = self.shift0.scale(x_scale, y_scale).rotate(angle)
         transformed_shift1 = self.shift1.scale(x_scale, y_scale).rotate(angle)
 
@@ -143,6 +146,7 @@ class Tile:
 
     @debug.time
     def _generate_graph(self, shape, shape_center, shape_width, shape_height, shift0, shift1, tile):
+        import networkx as nx
         graph = nx.Graph()
 
         shape_diagonal = Point(shape_width, shape_height).length()
@@ -176,6 +180,7 @@ class Tile:
 
     @debug.time
     def _remove_dead_ends(self, graph):
+        import networkx as nx
         graph.remove_edges_from(nx.selfloop_edges(graph))
         while True:
             dead_end_nodes = [node for node, degree in graph.degree() if degree <= 1]
@@ -199,7 +204,7 @@ def all_tiles():
             for tile_dir in sorted(os.listdir(tiles_path)):
                 try:
                     tiles.append(Tile(os.path.join(tiles_path, tile_dir)))
-                except (OSError, lxml.etree.XMLSyntaxError, json.JSONDecodeError, KeyError) as exc:
+                except (OSError, etree.XMLSyntaxError, json.JSONDecodeError, KeyError) as exc:
                     debug.log(f"error loading tile {tiles_path}/{tile_dir}: {exc}")
                 except Exception as exc:
                     debug.log(f"unexpected error loading tile {tiles_path}/{tile_dir}: {exc}")

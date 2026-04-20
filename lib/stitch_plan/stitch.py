@@ -6,15 +6,27 @@
 from __future__ import annotations  # Needed for using the Stitch type as a constructor arg
 
 from math import cos, radians, sin
-from typing import Any, Dict, Iterable, Optional, Set, Type, Union, overload
-
-from shapely import geometry as shgeo
+from typing import TYPE_CHECKING, Any, Dict, Iterable, Optional, Set, Union, overload
 
 from ..utils.geometry import Point
+
+if TYPE_CHECKING:
+    from shapely import geometry as shgeo
+
+_shgeo = None
+
+
+def _get_shgeo():
+    global _shgeo
+    if _shgeo is None:
+        from shapely import geometry
+        _shgeo = geometry
+    return _shgeo
 
 
 class Stitch(Point):
     """A stitch is a Point with extra information telling how to sew it."""
+    __slots__ = ('color', 'jump', 'stop', 'trim', 'color_change', 'min_stitch_length', 'tags', '_flags')
     x: float
     y: float
     color: Any  # Todo: What is this
@@ -95,6 +107,22 @@ class Stitch(Point):
         # loaded and create objects without those properties defined, because
         # unpickling does not call __init__()!
 
+        if y is not None:
+            # Fast path: (float, float) — most common case
+            self.x = float(x)
+            self.y = float(y)
+            self.color = color
+            self.jump = jump
+            self.trim = trim
+            self.stop = stop
+            self.color_change = color_change
+            self.min_stitch_length = min_stitch_length
+            self._flags = (1 if jump else 0) | (2 if trim else 0) | (4 if stop else 0) | (8 if color_change else 0)
+            self.tags = set()
+            if tags:
+                self.add_tags(tags)
+            return
+
         base_stitch = None
         if isinstance(x, Stitch):
             # Allow creating a Stitch from another Stitch.  Attributes passed as
@@ -102,14 +130,13 @@ class Stitch(Point):
             base_stitch = x
             self.x = base_stitch.x
             self.y = base_stitch.y
-        elif isinstance(x, (Point, shgeo.Point)):
+        elif isinstance(x, (Point, _get_shgeo().Point)):
             # Allow creating a Stitch from a Point
             point = x
             self.x = point.x
             self.y = point.y
         else:
-            assert y is not None, "Bad stitch constructor use: No y component?"
-            Point.__init__(self, x, y)
+            assert False, "Bad stitch constructor use: No y component?"
 
         self._set('color', color, base_stitch)
         self._set('jump', jump, base_stitch)
@@ -122,13 +149,10 @@ class Stitch(Point):
         self.add_tags(tags or [])
         if base_stitch is not None:
             self.add_tags(base_stitch.tags)
+        self._flags = (1 if self.jump else 0) | (2 if self.trim else 0) | (4 if self.stop else 0) | (8 if self.color_change else 0)
 
-    def __new__(cls: Type[Stitch], *args, **kwargs) -> Stitch:
-        instance = super().__new__(cls)
-
-        # Set default values for any new attributes here (see note in __init__() above)
-        # instance.foo = None
-
+    def __new__(cls, *args, **kwargs):
+        instance = object.__new__(cls)
         return instance
 
     def __repr__(self):
@@ -209,15 +233,27 @@ class Stitch(Point):
         return out
 
     def __json__(self) -> Dict[str, Any]:
-        attributes = dict(vars(self))
-        attributes['tags'] = list(attributes['tags'])
-        return attributes
+        return {
+            'x': self.x, 'y': self.y, 'color': self.color,
+            'jump': self.jump, 'trim': self.trim, 'stop': self.stop,
+            'color_change': self.color_change,
+            'min_stitch_length': self.min_stitch_length,
+            'tags': list(self.tags),
+        }
 
-    def __getstate__(self) -> Dict[str, Any]:
-        # This is used by pickle.  We want to sort the tag list so that the
-        # pickled representation is stable, since it's used to generate cache
-        # keys.
-        state = self.__json__()
-        state['tags'].sort()
+    def __getstate__(self):
+        # Tuple state is much faster to pickle than dict state
+        return (self.x, self.y, self.color, self.jump, self.trim, self.stop,
+                self.color_change, self.min_stitch_length, tuple(sorted(self.tags)))
 
-        return state
+    def __setstate__(self, state):
+        if isinstance(state, dict):
+            # Backward compat with old cache format
+            for key, value in state.items():
+                setattr(self, key, value)
+            if isinstance(self.tags, list):
+                self.tags = set(self.tags)
+        else:
+            (self.x, self.y, self.color, self.jump, self.trim, self.stop,
+             self.color_change, self.min_stitch_length, tags) = state
+            self.tags = set(tags)

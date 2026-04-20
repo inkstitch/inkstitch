@@ -7,7 +7,7 @@ import os
 import re
 import sys
 
-import inkex
+from inkex.utils import errormsg
 from pystitch.exceptions import TooManyColorChangesError
 
 import pystitch
@@ -65,16 +65,36 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
 
     stitch = Stitch(0, 0)
 
+    _JUMP = pystitch.JUMP
+    _TRIM = pystitch.TRIM
+    _COLOR_CHANGE = pystitch.COLOR_CHANGE
+    _STOP = pystitch.STOP
+    _NEEDLE_AT = pystitch.NEEDLE_AT
+    _stitches = pattern.stitches
+    _append = _stitches.append
+
     for color_block in stitch_plan:
         pattern.add_thread(color_block.color.pystitch_thread)
 
-        for stitch in color_block:
-            if stitch.stop:
-                jump_to_stop_point(pattern, svg)
-            command = get_command(stitch)
-            pattern.add_stitch_absolute(command, stitch.x, stitch.y)
+        for stitch in color_block.stitches:
+            # Fast path: vast majority of stitches are plain NEEDLE_AT
+            # (no jump/trim/stop/color_change flags set)
+            if not stitch._flags:
+                _append([stitch.x, stitch.y, _NEEDLE_AT])
+            elif stitch.jump:
+                if stitch.stop:
+                    jump_to_stop_point(pattern, svg)
+                _append([stitch.x, stitch.y, _JUMP])
+            elif stitch.trim:
+                _append([stitch.x, stitch.y, _TRIM])
+            elif stitch.color_change:
+                _append([stitch.x, stitch.y, _COLOR_CHANGE])
+            else:
+                if stitch.stop:
+                    jump_to_stop_point(pattern, svg)
+                _append([stitch.x, stitch.y, _STOP])
 
-    pattern.add_stitch_absolute(pystitch.END, stitch.x, stitch.y)
+    _append([stitch.x, stitch.y, pystitch.END])
 
     settings.update({
         # correct for the origin
@@ -109,16 +129,16 @@ def write_embroidery_file(file_path, stitch_plan, svg, settings={}):
         # L10N low-level file error.  %(error)s is (hopefully?) translated by
         # the user's system automatically.
         msg = _("Error writing to %(path)s: %(error)s") % dict(path=file_path, error=e.strerror)
-        inkex.errormsg(msg)
+        errormsg(msg)
         sys.exit(1)
     except TooManyColorChangesError as e:
-        num_color_changes = re.search("d+", str(e)).group()
+        match = re.search(r"d+", str(e))
+        num_color_changes = match.group() if match else "unknown"
         msg = _("Couldn't save embrodiery file.")
         msg += '\n\n'
         msg += _("There are {num_color_changes} color changes in your design. This is way too many.").format(num_color_changes=num_color_changes)
         msg += '\n'
         msg += _("Please reduce color changes. Find more information on our website:")
         msg += '\n\n'
-        msg += _("https://inkstitch.org/docs/faq/#too-many-color-changes")
-        inkex.errormsg(msg)
+        errormsg(msg)
         sys.exit(1)

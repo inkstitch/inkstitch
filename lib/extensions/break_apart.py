@@ -6,7 +6,8 @@
 from copy import copy
 from typing import List, Tuple, Union
 
-from inkex import Path, errormsg
+from inkex.paths import Path
+from inkex.utils import errormsg
 from shapely import make_valid
 from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
@@ -29,7 +30,7 @@ class BreakApart(InkstitchExtension):
         self.arg_parser.add_argument("-m", "--method", type=int, default=1, dest="method")
         self.arg_parser.add_argument("-t", "--threshold", type=float, default=1, dest="threshold")
 
-    def effect(self) -> None:  # noqa: C901
+    def effect(self) -> None:
         if not self.svg.selection:
             errormsg(_("Please select one or more fill areas to break apart."))
             return

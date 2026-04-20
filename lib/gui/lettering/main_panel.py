@@ -7,7 +7,7 @@ import json
 from base64 import b64decode
 
 import inkex
-import wx
+from inkex.utils import errormsg
 import wx.adv
 
 from ...elements import iterate_nodes, nodes_to_elements
@@ -16,7 +16,8 @@ from ...lettering import FontError, get_font_list
 from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import INKSTITCH_LETTERING
-from ...utils import DotDict, cache
+from ...utils import DotDict
+from ...utils.cache import cache
 from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
 from .. import PresetsPanel, PreviewRenderer, info_dialog
@@ -187,7 +188,10 @@ class LetteringPanel(wx.Panel):
         try:
             font = self.fonts_by_id[font_id].marked_custom_font_name
         except KeyError:
-            font = self.default_font.marked_custom_font_name
+            default = self.default_font
+            if default is None:
+                return
+            font = default.marked_custom_font_name
         self.options_panel.font_chooser.SetValue(font)
 
         self.on_font_changed()
@@ -197,7 +201,9 @@ class LetteringPanel(wx.Panel):
         try:
             return self.fonts[global_settings['last_font']]
         except KeyError:
-            return list(self.fonts.values())[0]
+            if self.fonts:
+                return list(self.fonts.values())[0]
+            return None
 
     def on_change(self, attribute, event):
         value = event.GetEventObject().GetValue()
@@ -216,6 +222,8 @@ class LetteringPanel(wx.Panel):
         self.update_preview()
 
     def on_choice_change(self, attribute, event=None):
+        if event is None:
+            return
         value = event.GetEventObject().GetCurrentSelection()
         self.settings[attribute] = value
         if attribute == 'trim_option':
@@ -226,6 +234,8 @@ class LetteringPanel(wx.Panel):
 
     def on_font_changed(self, event=None):
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
+        if font is None:
+            return
         self.settings.font = font.marked_custom_font_id
         global_settings['last_font'] = font.marked_custom_font_name
 
@@ -245,7 +255,7 @@ class LetteringPanel(wx.Panel):
         color = wx.NullColour
         description = font.description
         if len(font_variants) == 0:
-            color = (255, 0, 0)
+            color = wx.Colour(255, 0, 0)
             description = _('This font has no available font variant. Please update or remove the font.')
         self.options_panel.font_description.SetLabel(description)
         self.options_panel.font_description.SetForegroundColour(color)
@@ -286,6 +296,8 @@ class LetteringPanel(wx.Panel):
         previous_font = self.options_panel.font_chooser.GetValue()
         self.set_font_list()
         font = self.fonts.get(previous_font, self.default_font)
+        if font is None:
+            return
         self.options_panel.font_chooser.SetValue(font.marked_custom_font_name)
         if font.marked_custom_font_name != previous_font:
             self.on_font_changed()
@@ -314,6 +326,8 @@ class LetteringPanel(wx.Panel):
         self.group.append(destination_group)
 
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
+        if font is None:
+            return
         destination_group.label = f"{font.name} {_('scale')} {self.settings.scale}%"
         try:
             font.render_text(
@@ -325,7 +339,7 @@ class LetteringPanel(wx.Panel):
             )
         except FontError as e:
             if raise_error:
-                inkex.errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)
+                errormsg(_("Error: Text cannot be applied to the document.\n%s") % e)
                 return
             else:
                 pass
@@ -399,8 +413,8 @@ class LetteringPanel(wx.Panel):
 
     def close(self):
         self.simulator.stop()
-        wx.CallAfter(self.GetTopLevelParent().close)
+        wx.CallAfter(getattr(self.GetTopLevelParent(), 'close'))
 
     def cancel(self, event):
         self.simulator.stop()
-        wx.CallAfter(self.GetTopLevelParent().cancel)
+        wx.CallAfter(getattr(self.GetTopLevelParent(), 'cancel'))

@@ -191,7 +191,7 @@ def add_path_attribs(path):
     return path
 
 
-def path_to_elements(graph, path, trim, parent=None):  # noqa: C901
+def path_to_elements(graph, path, trim, parent=None):
     element_list = []
     original_parents = []
     trims = []
@@ -254,12 +254,13 @@ def path_to_elements(graph, path, trim, parent=None):  # noqa: C901
 
     if d:
         element_list.append(create_element(d, position, path_direction, el, parent))
+    assert el is not None
     original_parents.append(el.node.getparent())
 
     return element_list, trims, original_parents
 
 
-def create_element(path, position, direction, element, parent=None):  # noqa: C901
+def create_element(path, position, direction, element, parent=None):
     if not path:
         return
 

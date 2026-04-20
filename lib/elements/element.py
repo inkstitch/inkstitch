@@ -5,10 +5,11 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
-from typing import Any, Callable, List, Optional, TypeVar
+from typing import Any, Callable, cast, Iterable, List, Optional, TypeVar, overload
 
 import inkex
 import numpy as np
@@ -26,12 +27,12 @@ from ..patterns import apply_patterns, get_patterns_cache_key_data
 from ..stitch_plan import StitchGroup
 from ..stitch_plan.lock_stitch import (LOCK_DEFAULTS, AbsoluteLock, CustomLock,
                                        LockStitch, SVGLock)
-from ..svg import (PIXELS_PER_MM, apply_transforms, convert_length,
+from ..svg import (PIXELS_PER_MM, convert_length,
                    get_node_transform)
 from ..svg.clip import get_clip_path
 from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
-from ..utils import DotDict, Point, cache
-from ..utils.cache import (CacheKeyGenerator, get_stitch_plan_cache,
+from ..utils import DotDict, Point
+from ..utils.cache import (CacheKeyGenerator, cache, get_stitch_plan_cache,
                            is_cache_disabled)
 
 
@@ -90,14 +91,18 @@ class EmbroideryElement(object):
                 # The 'param' attribute is set by the 'param' decorator defined above.
                 fget = prop.fget
                 if fget is not None and hasattr(fget, 'param'):
-                    params.append(fget.param)
+                    params.append(getattr(fget, 'param'))
         return params
 
     @cache
     def get_param(self, param, default):
-        value = self.node.get(INKSTITCH_ATTRIBS[param], "").strip()
+        value = (self.node.get(INKSTITCH_ATTRIBS[param], "") or "").strip()
         return value or default
 
+    @overload
+    def get_boolean_param(self, param: str, default: None = ...) -> bool | None: ...
+    @overload
+    def get_boolean_param(self, param: str, default: bool) -> bool: ...
     @cache
     def get_boolean_param(self, param, default=None):
         value = self.get_param(param, default)
@@ -107,6 +112,10 @@ class EmbroideryElement(object):
         else:
             return value and (value.lower() in ('yes', 'y', 'true', 't', '1'))
 
+    @overload
+    def get_float_param(self, param: str, default: None = ...) -> float | None: ...
+    @overload
+    def get_float_param(self, param: str, default: float) -> float: ...
     @cache
     def get_float_param(self, param, default=None):
         try:
@@ -122,6 +131,10 @@ class EmbroideryElement(object):
 
         return value
 
+    @overload
+    def get_int_param(self, param: str, default: None = ...) -> int | None: ...
+    @overload
+    def get_int_param(self, param: str, default: int) -> int: ...
     @cache
     def get_int_param(self, param, default=None):
         try:
@@ -246,7 +259,7 @@ class EmbroideryElement(object):
     @cache
     def satin_threshold(self):
         metadata = self.get_inkstitch_metadata()
-        return metadata['min_satin_stroke_width_mm'] * PIXELS_PER_MM
+        return float(metadata['min_satin_stroke_width_mm'] or 0) * PIXELS_PER_MM
 
     @property
     @cache
@@ -501,19 +514,140 @@ class EmbroideryElement(object):
         else:
             d = self.node.get("d", "")
 
-        return inkex.Path(d).to_superpath()
+        return inkex.paths.Path(d).to_superpath()
 
     @property
     def is_closed_path(self):
         return isinstance(self.node.get_path()[-1], inkex.paths.ZoneClose)
 
+    # Regex to detect non-M/L/Z path commands (curves, arcs, etc.)
+    _NON_ML_PATH_RE = re.compile(r'[CcSsQqTtAaHhVvml]')
+
     @cache
     def parse_path(self):
-        return apply_transforms(self.path, self.node)
+        # Fast path for polyline/polygon elements
+        points_str = self.node.get("points")
+        if points_str is not None:
+            return self._fast_parse_points(points_str)
+
+        # Fast path for M/L-only SVG paths (e.g. imported stitch files)
+        d = self.node.get("d")
+        if d is not None and not self._NON_ML_PATH_RE.search(d):
+            result = self._fast_parse_ml_path(d)
+            if result is not None:
+                return result
+
+        # Standard path: get CSP and apply numpy transform
+        csp = self.path
+        transform = get_node_transform(self.node)
+        mat = np.array(transform.matrix, dtype=np.float64)  # (2, 3)
+        result = []
+        for subpath in csp:
+            if not subpath:
+                result.append([])
+                continue
+            arr = np.array(subpath, dtype=np.float64)
+            flat = arr.reshape(-1, 2)
+            ones = np.ones((flat.shape[0], 1), dtype=np.float64)
+            transformed = (mat @ np.hstack([flat, ones]).T).T
+            result.append(transformed.reshape(-1, 3, 2).tolist())
+        return result
+
+    def _fast_parse_ml_path(self, d):
+        """Fast parse absolute M/L/Z-only SVG path to transformed CSP."""
+        transform = get_node_transform(self.node)
+        mat = np.array(transform.matrix, dtype=np.float64)
+        # Split on M for subpaths, remove L/Z commands
+        cleaned = d.replace('Z', '').replace('L', ' ')
+        parts = cleaned.split('M')
+        result = []
+        for part in parts:
+            part = part.strip()
+            if not part:
+                continue
+            coords = np.fromstring(part.replace(',', ' '), dtype=np.float64, sep=' ')
+            if len(coords) < 4:
+                continue
+            coords = coords.reshape(-1, 2)
+            ones = np.ones((coords.shape[0], 1), dtype=np.float64)
+            transformed = (mat @ np.hstack([coords, ones]).T).T
+            n = transformed.shape[0]
+            csp = np.empty((n, 3, 2), dtype=np.float64)
+            csp[:, 0, :] = transformed
+            csp[:, 1, :] = transformed
+            csp[:, 2, :] = transformed
+            result.append(csp.tolist())
+        return result if result else None
+
+    def _fast_flatten_ml_path(self, d):
+        """Parse M/L/Z-only SVG path directly to flattened coordinate lists.
+
+        Skips CSP creation, flatten(), and LineString - goes straight to [[x,y],...].
+        """
+        transform = get_node_transform(self.node)
+        mat = np.array(transform.matrix, dtype=np.float64)
+        cleaned = d.replace('Z', '').replace('L', ' ')
+        parts = cleaned.split('M')
+        result = []
+        for part in parts:
+            part = part.strip()
+            if not part:
+                continue
+            coords = np.fromstring(part.replace(',', ' '), dtype=np.float64, sep=' ')
+            if len(coords) < 4:
+                continue
+            coords = coords.reshape(-1, 2)
+            ones = np.ones((coords.shape[0], 1), dtype=np.float64)
+            transformed = (mat @ np.hstack([coords, ones]).T).T
+            result.append(transformed.tolist())
+        return result if result else None
+
+    def _fast_parse_points(self, points_str):
+        """Parse polyline/polygon points and apply transform using numpy."""
+        coords = np.fromstring(points_str.replace(',', ' '), dtype=np.float64, sep=' ')
+        if len(coords) < 4:
+            return []
+        coords = coords.reshape(-1, 2)
+        transform = get_node_transform(self.node)
+        mat = np.array(transform.matrix, dtype=np.float64)
+        ones = np.ones((coords.shape[0], 1), dtype=np.float64)
+        transformed = (mat @ np.hstack([coords, ones]).T).T
+        n = transformed.shape[0]
+        csp = np.empty((n, 3, 2), dtype=np.float64)
+        csp[:, 0, :] = transformed
+        csp[:, 1, :] = transformed
+        csp[:, 2, :] = transformed
+        return [csp.tolist()]
+
+    @cache
+    def _path_hash_for_cache(self):
+        """Return bytes identifying path geometry (avoids expensive CSP serialization)."""
+        parts = []
+        d = self.node.get("d")
+        if d is not None:
+            parts.append(d.encode())
+        else:
+            pts = self.node.get("points")
+            if pts is not None:
+                parts.append(pts.encode())
+            elif getattr(self.node, "get_path", None):
+                parts.append(str(self.node.get_path()).encode())
+        node = self.node
+        while node is not None:
+            t = node.get("transform")
+            if t:
+                parts.append(t.encode())
+            node = node.getparent()
+        root = self.node.getroottree().getroot()
+        for attr in ("viewBox", "width", "height"):
+            val = root.get(attr)
+            if val:
+                parts.append(val.encode())
+        return b"|".join(parts)
 
     @property
     @cache
-    def paths(self):
+    def paths(self) -> List[Any]:
         return self.flatten(self.parse_path())
 
     @property
@@ -554,10 +688,24 @@ class EmbroideryElement(object):
     def flatten(self, path):
         """approximate a path containing beziers with a series of points"""
 
-        path = deepcopy(path)
-        bezier.cspsubdiv(path, 0.1)
-
-        return [self.strip_control_points(subpath) for subpath in path]
+        result = []
+        for subpath in path:
+            if not subpath:
+                continue
+            arr = np.array(subpath, dtype=np.float64)
+            points = arr[:, 1, :]  # actual points (n, 2)
+            cb = arr[:, 0, :]      # control_before
+            ca = arr[:, 2, :]      # control_after
+            # For straight-line segments, control points equal the actual point
+            if (np.allclose(cb, points, atol=1e-10) and
+                    np.allclose(ca, points, atol=1e-10)):
+                result.append(points.tolist())
+            else:
+                # Has bezier curves - fall back to subdivision
+                sp = [deepcopy(subpath)]
+                bezier.cspsubdiv(sp, 0.1)
+                result.append([pt for _, pt, _ in sp[0]])
+        return result
 
     @property
     @cache
@@ -585,7 +733,7 @@ class EmbroideryElement(object):
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     @debug.time
-    def _load_cached_stitch_groups(self, previous_stitch, next_element):
+    def _load_cached_stitch_groups(self, previous_stitch, next_element) -> Optional[List[StitchGroup]]:
         if is_cache_disabled():
             return None
 
@@ -594,7 +742,7 @@ class EmbroideryElement(object):
             previous_stitch = None
 
         cache_key = self.get_cache_key(previous_stitch, next_element)
-        stitch_groups = get_stitch_plan_cache().get(cache_key)
+        stitch_groups = cast(Optional[List[StitchGroup]], get_stitch_plan_cache().get(cache_key))
 
         if stitch_groups:
             debug.log(f"used cache for {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
@@ -622,21 +770,31 @@ class EmbroideryElement(object):
         if is_cache_disabled():
             return
 
-        stitch_plan_cache = get_stitch_plan_cache()
-        cache_key = self.get_cache_key(previous_stitch, next_element)
-        if cache_key not in stitch_plan_cache:
-            # fix up colors for cache
-            for stitch_group in stitch_groups:
-                if not isinstance(stitch_group.color, Color):
-                    stitch_group.color = "black"
-            stitch_plan_cache[cache_key] = stitch_groups
+        import threading
 
+        # Precompute cache keys on main thread
+        cache_key = self.get_cache_key(previous_stitch, next_element)
+        additional_key = None
         if previous_stitch is not None:
-            # Also store it with None as the previous stitch, so that it can be used next time
-            # if we don't care about the previous stitch
-            cache_key = self.get_cache_key(None, None)
-            if cache_key not in stitch_plan_cache:
-                stitch_plan_cache[cache_key] = stitch_groups
+            additional_key = self.get_cache_key(None, None)
+
+        # Fix up colors for cache
+        for stitch_group in stitch_groups:
+            if not isinstance(stitch_group.color, Color):
+                stitch_group.color = "black"
+
+        def _write():
+            try:
+                stitch_plan_cache = get_stitch_plan_cache()
+                if cache_key not in stitch_plan_cache:
+                    stitch_plan_cache[cache_key] = stitch_groups
+                if additional_key is not None and additional_key not in stitch_plan_cache:
+                    stitch_plan_cache[additional_key] = stitch_groups
+            except Exception:
+                pass
+
+        thread = threading.Thread(target=_write, daemon=True)
+        thread.start()
 
     def get_params_and_values(self):
         params = {}
@@ -659,12 +817,13 @@ class EmbroideryElement(object):
 
     def _get_gradient_cache_key_data(self):
         gradient = {}
-        if hasattr(self, 'gradient') and self.gradient is not None:
+        gradient_obj = getattr(self, 'gradient', None)
+        if gradient_obj is not None:
             # prevent issue with color parsing: https://github.com/inkstitch/inkstitch/issues/3742
             try:
-                gradient['stops'] = self.gradient.stop_offsets
-                gradient['orientation'] = [self.gradient.x1(), self.gradient.x2(), self.gradient.y1(), self.gradient.y2()]
-                gradient['styles'] = [(stop.style('stop-color'), stop.style('stop-opacity')) for stop in self.gradient.stops]
+                gradient['stops'] = gradient_obj.stop_offsets
+                gradient['orientation'] = [gradient_obj.x1(), gradient_obj.x2(), gradient_obj.y1(), gradient_obj.y2()]
+                gradient['styles'] = [(stop.style('stop-color'), stop.style('stop-opacity')) for stop in gradient_obj.stops]
             except ValueError:
                 pass
         return gradient
@@ -679,7 +838,7 @@ class EmbroideryElement(object):
         cache_key_generator = CacheKeyGenerator()
         cache_key_generator.update(self.__class__.__name__)
         cache_key_generator.update(self.get_params_and_values())
-        cache_key_generator.update(self.parse_path())
+        cache_key_generator.update(self._path_hash_for_cache())
         cache_key_generator.update(self.clip_shape)
         cache_key_generator.update(list(self._get_specified_style().items()))
         cache_key_generator.update(self._get_gradient_cache_key_data())
@@ -718,8 +877,8 @@ class EmbroideryElement(object):
                 if stitch_groups:
                     # In some cases (clones) the last stitch group may have trim_after or stop_after already set,
                     # and we shouldn't override that with this element's values, hence the use of or-equals
-                    stitch_groups[-1].trim_after |= self.has_command("trim") or self.trim_after
-                    stitch_groups[-1].stop_after |= self.has_command("stop") or self.stop_after
+                    stitch_groups[-1].trim_after |= bool(self.has_command("trim") or self.trim_after)
+                    stitch_groups[-1].stop_after |= bool(self.has_command("stop") or self.stop_after)
 
                 for stitch_group in stitch_groups:
                     stitch_group.min_jump_stitch_length = self.min_jump_stitch_length
@@ -781,7 +940,7 @@ class EmbroideryElement(object):
 
             raise InkstitchException(format_uncaught_exception())
 
-    def validation_errors(self):
+    def validation_errors(self) -> Iterable[Any]:
         """Return a list of errors with this Element.
 
         Validation errors will prevent the Element from being stitched.
@@ -790,7 +949,7 @@ class EmbroideryElement(object):
         """
         return []
 
-    def validation_warnings(self):
+    def validation_warnings(self) -> Iterable[Any]:
         """Return a list of warnings about this Element.
 
         Validation warnings don't prevent the Element from being stitched but

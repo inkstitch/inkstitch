@@ -4,8 +4,11 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from collections import defaultdict
+from typing import cast
 
-from inkex import Boolean, Group, Path, PathElement
+from inkex import Group, PathElement
+from inkex.paths import Path
+from inkex.utils import Boolean
 from shapely.affinity import scale
 from shapely.geometry import LineString, MultiLineString, MultiPoint, Point
 from shapely.ops import linemerge, snap, split, substring
@@ -324,9 +327,10 @@ class FillElementToSatin:
             # Case 2: check for segments with only one adjacent rung
             intersection = self._fix_single_rail_issue_rung_excluded(satin_segments, segments, combined_rungs)
         if intersection.geom_type == 'MultiPoint':
-            position = satin_rails.project(intersection.geoms[0])
+            mp = cast(MultiPoint, intersection)
+            position = satin_rails.project(mp.geoms[0])
             satin_rails = LineString(roll_linear_ring(satin_rails.geoms[0], position))
-            return ensure_multi_line_string(split(satin_rails, intersection))
+            return ensure_multi_line_string(split(satin_rails, mp))
         return None
 
     def _fix_single_rail_issue_rung_included(self, satin_rails, combined_rungs):
@@ -360,7 +364,7 @@ class FillElementToSatin:
             return MultiPoint(points[0]).intersection(MultiPoint(points[1]))
         return Point()
 
-    def _get_segments(self, intersection_points):  # noqa: C901
+    def _get_segments(self, intersection_points):
         '''Combine line sections to satin segments (find the rails that belong together)'''
         line_section_multi = MultiLineString(self.line_sections)
         rung_segments = defaultdict(list)

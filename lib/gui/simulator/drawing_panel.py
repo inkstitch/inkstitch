@@ -66,10 +66,17 @@ class DrawingPanel(wx.Panel):
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
 
+        # Bitmap cache for completed stitch blocks (avoid redrawing every frame)
+        self._stitch_cache_bmp = None
+        self._stitch_cache_n_blocks = 0
+        self._stitch_cache_state = None
+
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
         self.num_stitches = 1
-        self.commands = [None]
+        self.commands: list[int | None] = [None]
+        self.zoom: float = 1.0
+        self.pan: tuple[float, float] = (0.0, 0.0)
 
         # desired simulation speed in stitches per second
         self.speed = global_settings['simulator_speed']
@@ -153,7 +160,7 @@ class DrawingPanel(wx.Panel):
         with debug.log_exceptions():
             border_color = wx.Colour(self.page_specs['border_color'])
             if self.page_specs['show_page_shadow']:
-                canvas.SetPen(wx.TRANSPARENT_PEN)
+                canvas.SetPen(getattr(wx, 'TRANSPARENT_PEN'))
                 canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(border_color.Red(), border_color.Green(), border_color.Blue(), alpha=65))))
                 canvas.DrawRoundedRectangle(
                     (-self.page_specs['x'] + 4) * self.PIXEL_DENSITY, (-self.page_specs['y'] + 4) * self.PIXEL_DENSITY,
@@ -175,36 +182,129 @@ class DrawingPanel(wx.Panel):
     def draw_stitches(self, canvas):
         canvas.BeginLayer(1)
 
-        transform = canvas.GetTransform()
-        transform.Translate(*self.pan)
-        transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
-        canvas.SetTransform(transform)
+        _sz = self.GetClientSize()
+        panel_w, panel_h = _sz.GetWidth(), _sz.GetHeight()
+        if panel_w <= 0 or panel_h <= 0:
+            canvas.EndLayer()
+            return
 
-        self.draw_page(canvas)
-
+        # Determine how many blocks are fully completed
         stitch = 0
+        n_complete = 0
         last_stitch = None
 
-        for pen, stitches, jumps in zip(self.pens, self.stitch_blocks, self.jumps):
-            canvas.SetPen(pen)
-            if stitch + len(stitches) < self.current_stitch:
-                stitch += len(stitches)
-                if len(stitches) > 1:
-                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
-                    self.draw_needle_penetration_points(canvas, pen, stitches)
+        for i, stitches in enumerate(self.stitch_blocks):
+            n = len(stitches)
+            if stitch + n < self.current_stitch:
+                stitch += n
+                n_complete = i + 1
+                if n > 0:
                     last_stitch = stitches[-1]
             else:
-                stitches = stitches[:int(self.current_stitch) - stitch]
-                if len(stitches) > 1:
-                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
-                    self.draw_needle_penetration_points(canvas, pen, stitches)
-                    last_stitch = stitches[-1]
                 break
 
+        # Current rendering options
+        npp_on = self.view_panel.btnNpp.GetValue()
+        jump_on = self.view_panel.btnJump.GetValue()
+        line_width = global_settings['simulator_line_width']
+        bg_colour = str(self.GetBackgroundColour())
+
+        cache_state = (self.zoom, self.pan, (panel_w, panel_h), npp_on, jump_on,
+                       self.background_color, self.show_page, line_width, bg_colour)
+
+        # Check if bitmap cache of completed blocks is still valid
+        cache_valid = (
+            self._stitch_cache_bmp is not None
+            and self._stitch_cache_state == cache_state
+            and n_complete >= self._stitch_cache_n_blocks
+        )
+
+        if not cache_valid:
+            # Full rebuild of cache bitmap
+            bmp = wx.Bitmap(panel_w, panel_h)
+            mdc = wx.MemoryDC(bmp)
+            mdc.SetBackground(wx.Brush(self.GetBackgroundColour()))
+            mdc.Clear()
+            gc = wx.GraphicsContext.Create(mdc)
+            t = gc.CreateMatrix()
+            t.Translate(*self.pan)
+            t.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
+            gc.SetTransform(t)
+            self.draw_page(gc)
+            self._draw_block_range(gc, 0, n_complete, jump_on, npp_on)
+            del gc
+            mdc.SelectObject(wx.NullBitmap)
+            self._stitch_cache_bmp = bmp
+            self._stitch_cache_state = cache_state
+            self._stitch_cache_n_blocks = n_complete
+        elif n_complete > self._stitch_cache_n_blocks:
+            # Incrementally add newly completed blocks to existing cache
+            mdc = wx.MemoryDC(self._stitch_cache_bmp)
+            gc = wx.GraphicsContext.Create(mdc)
+            t = gc.CreateMatrix()
+            t.Translate(*self.pan)
+            t.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
+            gc.SetTransform(t)
+            self._draw_block_range(gc, self._stitch_cache_n_blocks, n_complete, jump_on, npp_on)
+            del gc
+            mdc.SelectObject(wx.NullBitmap)
+            self._stitch_cache_n_blocks = n_complete
+
+        # Blit cached completed blocks to screen
+        canvas.SetTransform(canvas.CreateMatrix())
+        canvas.DrawBitmap(
+            canvas.CreateBitmap(self._stitch_cache_bmp),
+            0, 0, panel_w, panel_h
+        )
+
+        # Draw the partial (currently animating) block directly
+        if n_complete < len(self.stitch_blocks):
+            partial_stitches = self.stitch_blocks[n_complete][:int(self.current_stitch) - stitch]
+            if len(partial_stitches) > 1:
+                transform = canvas.CreateMatrix()
+                transform.Translate(*self.pan)
+                transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
+                canvas.SetTransform(transform)
+                pen = self.pens[n_complete]
+                jumps = [j for j in self.jumps[n_complete] if j < len(partial_stitches)]
+                canvas.SetPen(pen)
+                self.draw_stitch_lines(canvas, pen, partial_stitches, jumps)
+                self.draw_needle_penetration_points(canvas, pen, partial_stitches)
+                last_stitch = partial_stitches[-1]
+
         if last_stitch and self.view_panel.btnCursor.GetValue():
+            transform = canvas.CreateMatrix()
+            transform.Translate(*self.pan)
+            transform.Scale(self.zoom / self.PIXEL_DENSITY, self.zoom / self.PIXEL_DENSITY)
+            canvas.SetTransform(transform)
             self.draw_crosshair(last_stitch[0], last_stitch[1], canvas, transform)
 
         canvas.EndLayer()
+
+    def _draw_block_range(self, gc, start, end, render_jumps, render_npp):
+        """Draw stitch blocks [start, end) onto the given GraphicsContext."""
+        for i in range(start, end):
+            pen = self.pens[i]
+            stitches = self.stitch_blocks[i]
+            jumps = self.jumps[i]
+            gc.SetPen(pen)
+            if len(stitches) > 1:
+                if render_jumps or not jumps:
+                    gc.StrokeLines(stitches)
+                else:
+                    stitch_blocks = split(stitches, jumps)
+                    for block in stitch_blocks:
+                        if len(block) > 1:
+                            gc.StrokeLines(block)
+                if render_npp:
+                    npp_size = global_settings['simulator_npp_size'] * PIXELS_PER_MM * self.PIXEL_DENSITY
+                    npp_pen = wx.Pen(pen.GetColour(), width=int(npp_size))
+                    gc.SetPen(npp_pen)
+                    if hasattr(self, 'npp_offsets'):
+                        gc.StrokeLineSegments(stitches, self.npp_offsets[i])
+                    else:
+                        gc.StrokeLineSegments(stitches, [(s[0] + 0.001, s[1]) for s in stitches])
+                    gc.SetPen(pen)
 
     def draw_crosshair(self, x, y, canvas, transform):
         x, y = transform.TransformPoint(float(x), float(y))
@@ -219,7 +319,8 @@ class DrawingPanel(wx.Panel):
         canvas.SetTransform(canvas.CreateMatrix())
         canvas.BeginLayer(1)
 
-        canvas_width, canvas_height = self.GetClientSize()
+        _sz = self.GetClientSize()
+        canvas_width, canvas_height = _sz.GetWidth(), _sz.GetHeight()
 
         one_mm = PIXELS_PER_MM * self.zoom
         scale_width = one_mm
@@ -300,7 +401,7 @@ class DrawingPanel(wx.Panel):
         self.parse_stitch_plan(stitch_plan)
         self.choose_zoom_and_pan()
         self.set_current_stitch(0)
-        statusbar = self.GetTopLevelParent().statusbar
+        statusbar = getattr(self.GetTopLevelParent(), 'statusbar')
         statusbar.SetStatusText(
             _("Dimensions: {:.2f} x {:.2f}").format(
                 stitch_plan.dimensions_mm[0],
@@ -339,7 +440,8 @@ class DrawingPanel(wx.Panel):
         if not self.width and not self.height and event is not None:
             return
 
-        panel_width, panel_height = self.GetClientSize()
+        _sz = self.GetClientSize()
+        panel_width, panel_height = _sz.GetWidth(), _sz.GetHeight()
 
         # add some padding to make stitches at the edge more visible
         width_ratio = panel_width / float(self.width + 10)
@@ -426,6 +528,17 @@ class DrawingPanel(wx.Panel):
                 self.stitch_blocks.append(stitch_block)
                 self.jumps.append(jumps)
 
+        # Pre-compute NPP offset points (avoids list comprehension per frame)
+        self.npp_offsets = [
+            [(s[0] + 0.001, s[1]) for s in block]
+            for block in self.stitch_blocks
+        ]
+
+        # Invalidate bitmap cache
+        self._stitch_cache_bmp = None
+        self._stitch_cache_n_blocks = 0
+        self._stitch_cache_state = None
+
     def set_speed(self, speed):
         self.speed = speed
         global_settings['simulator_speed'] = speed
@@ -446,8 +559,10 @@ class DrawingPanel(wx.Panel):
         except IndexError:
             # no stitch plan loaded yet, do nothing for now
             return
+        if command is None:
+            return
         self.control_panel.on_current_stitch(int(self.current_stitch), command)
-        statusbar = self.GetTopLevelParent().statusbar
+        statusbar = getattr(self.GetTopLevelParent(), 'statusbar')
         statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()
         self.Refresh()

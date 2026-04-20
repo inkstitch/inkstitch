@@ -59,6 +59,6 @@ class PreviewRenderer(Thread):
                 wx.CallAfter(self.rendering_completed_hook, stitch_plan)
         except ExitThread:
             raise
-        except:  # noqa: E722
+        except Exception:
             import traceback
             debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())

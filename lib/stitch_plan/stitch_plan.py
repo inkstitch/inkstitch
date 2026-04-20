@@ -6,7 +6,7 @@
 from sys import exit
 from typing import List
 
-from inkex import errormsg
+from inkex.utils import errormsg
 
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
@@ -15,7 +15,7 @@ from ..utils.threading import check_stop_flag
 from .color_block import ColorBlock
 
 
-def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_len=0.1, disable_ties=False):  # noqa: C901
+def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_len=0.1, disable_ties=False):
 
     """Convert a collection of StitchGroups to a StitchPlan.
 
@@ -48,6 +48,7 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
         if color_block.color != stitch_group.color:
             # add a lock stitch to the last element of the previous group
             if not need_tie_in:
+                assert previous_stitch_group is not None
                 lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
                 if lock_stitches:
                     color_block.add_stitches(stitches=lock_stitches)
@@ -61,6 +62,7 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
         else:
             add_lock = False
             if len(color_block) and not need_tie_in:
+                assert previous_stitch_group is not None
                 distance_to_previous_stitch = (stitch_group.stitches[0] - color_block.stitches[-1]).length()
                 if previous_stitch_group.force_lock_stitches:
                     add_lock = True
@@ -104,7 +106,8 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
 
     if not need_tie_in:
         # tie off at the end if we haven't already
-        lock_stitches = stitch_group.get_lock_stitches("end", disable_ties)
+        assert previous_stitch_group is not None
+        lock_stitches = previous_stitch_group.get_lock_stitches("end", disable_ties)
         if lock_stitches:
             color_block.add_stitches(stitches=lock_stitches)
 

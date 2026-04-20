@@ -5,6 +5,7 @@
 
 import math
 import re
+from typing import Any, List, Optional
 
 import numpy as np
 from inkex import Color, ColorError, LinearGradient
@@ -18,15 +19,10 @@ from .. import tiles
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import (auto_fill, circular_fill, contour_fill, cross_stitch,
-                        guided_fill, legacy_fill, linear_gradient_fill,
-                        meander_fill, tartan_fill)
-from ..stitches.linear_gradient_fill import gradient_angle
-from ..stitches.utils.cross_stitch import CrossGeometries
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
 from ..tartan.utils import get_tartan_settings, get_tartan_stripes
-from ..utils import cache
+from ..utils.cache import cache
 from ..utils.geometry import ensure_multi_polygon
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
@@ -663,7 +659,9 @@ class FillStitch(EmbroideryElement):
             except (TypeError, ValueError):
                 return default_value
         elif self.fill_method == 'linear_gradient_fill' and self.gradient is not None:
-            return [-gradient_angle(self.node, self.gradient)]
+            from ..stitches.linear_gradient_fill import gradient_angle
+            angle = gradient_angle(self.node, self.gradient)
+            return [-angle] if angle is not None else default_value
         else:
             underlay_angles = default_value
 
@@ -973,24 +971,27 @@ class FillStitch(EmbroideryElement):
     @property
     def first_stitch(self):
         # Serves as a reference point for the end point of the previous element
-        if self.get_command('starting_point'):
-            return shgeo.Point(*self.get_command('starting_point').target_point)
+        cmd = self.get_command('starting_point')
+        if cmd:
+            return shgeo.Point(*cmd.target_point)
         return None
 
     def get_starting_point(self, previous_stitch_group):
         # If there is a "starting_point" Command, then use that; otherwise pick
         # the point closest to the end of the last stitch_group.
 
-        if self.get_command('starting_point'):
-            return self.get_command('starting_point').target_point
+        cmd = self.get_command('starting_point')
+        if cmd:
+            return cmd.target_point
         elif previous_stitch_group:
             return previous_stitch_group.stitches[-1]
         else:
             return None
 
     def get_ending_point(self, next_stitch):
-        if self.get_command('ending_point'):
-            return self.get_command('ending_point').target_point
+        cmd = self.get_command('ending_point')
+        if cmd:
+            return cmd.target_point
         elif next_stitch:
             return next_stitch.coords
         else:
@@ -1008,24 +1009,25 @@ class FillStitch(EmbroideryElement):
         else:
             return True
 
-    def to_stitch_groups(self, previous_stitch_group, next_element=None):  # noqa: C901
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
         # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
-        stitch_groups = []
+        stitch_groups: List[StitchGroup] = []
 
         # start and end points
-        start = self.get_starting_point(previous_stitch_group)
+        start = self.get_starting_point(last_stitch_group)
         final_end = self.get_ending_point(self.next_stitch(next_element))
 
         if self.fill_method == 'cross_stitch':
             # for cross stitch we can expand the shape before the fact,
             # as we can say for sure that there is not going to a mess up with the underlay shapes
             # and different expand values
-            stitch_groups.extend(self.do_cross_stitch(previous_stitch_group, start, final_end))
+            stitch_groups.extend(self.do_cross_stitch(last_stitch_group, start, final_end))
 
         # sort shapes to get a nicer routing
         shapes = list(self.shape.geoms)
-        if start:
-            shapes.sort(key=lambda shape: shape.distance(shgeo.Point(start)))
+        if start is not None:
+            start_pt = shgeo.Point(float(start[0]), float(start[1]))
+            shapes.sort(key=lambda shape: shape.distance(start_pt))
         else:
             shapes.sort(key=lambda shape: shape.bounds[0])
 
@@ -1034,7 +1036,7 @@ class FillStitch(EmbroideryElement):
                 # we already created the cross stitch at this point
                 break
 
-            start = self.get_starting_point(previous_stitch_group)
+            start = self.get_starting_point(last_stitch_group)
             if i < len(shapes) - 1:
                 end = nearest_points(shape, shapes[i+1])[0].coords
             else:
@@ -1066,7 +1068,7 @@ class FillStitch(EmbroideryElement):
                     # auto_fill
                     stitch_groups.extend(self.do_auto_fill(fill_shape, start, end))
                 if stitch_groups:
-                    previous_stitch_group = stitch_groups[-1]
+                    last_stitch_group = stitch_groups[-1]
 
         # sort colors of linear gradient
         if len(shapes) > 1 and self.fill_method == 'linear_gradient_fill':
@@ -1093,6 +1095,7 @@ class FillStitch(EmbroideryElement):
         stitch_groups.sort(key=lambda group: colors.index(group.color))
 
     def do_legacy_fill(self, fill_shape):
+        from ..stitches.fill import legacy_fill
         stitch_lists = legacy_fill(
             fill_shape,
             self.angle,
@@ -1113,6 +1116,7 @@ class FillStitch(EmbroideryElement):
         ) for stitch_list in stitch_lists]
 
     def do_underlay(self, shape, starting_point):
+        from ..stitches.auto_fill import auto_fill
         color = self.color
         if self.gradient is not None and self.fill_method == 'linear_gradient_fill':
             try:
@@ -1145,6 +1149,7 @@ class FillStitch(EmbroideryElement):
         return [stitch_groups, starting_point]
 
     def do_auto_fill(self, shape, starting_point, ending_point):
+        from ..stitches.auto_fill import auto_fill
         stitch_group = StitchGroup(
             color=self.color,
             tags=("auto_fill", "auto_fill_top"),
@@ -1174,6 +1179,7 @@ class FillStitch(EmbroideryElement):
         return [stitch_group]
 
     def do_contour_fill(self, polygon, starting_point):
+        from ..stitches import contour_fill
         if not starting_point:
             starting_point = (0, 0)
         starting_point = shgeo.Point(starting_point)
@@ -1228,6 +1234,7 @@ class FillStitch(EmbroideryElement):
         return stitch_groups
 
     def do_guided_fill(self, shape, starting_point, ending_point):
+        from ..stitches.guided_fill import guided_fill
         guide_line = self._get_guide_lines()
 
         # No guide line: fallback to normal autofill
@@ -1261,7 +1268,7 @@ class FillStitch(EmbroideryElement):
         return [stitch_group]
 
     @cache
-    def _get_guide_lines(self, multiple=False):
+    def _get_guide_lines(self, multiple=False) -> Optional[Any]:
         guide_lines = get_marker_elements(self.node, "guide-line", False, True)
         # No or empty guide line
         if not guide_lines or not guide_lines['stroke']:
@@ -1273,6 +1280,7 @@ class FillStitch(EmbroideryElement):
             return guide_lines['stroke'][0]
 
     def do_meander_fill(self, shape, original_shape, i, starting_point, ending_point):
+        from ..stitches.meander_fill import meander_fill
         stitch_group = StitchGroup(
             color=self.color,
             tags=("meander_fill", "meander_fill_top"),
@@ -1283,6 +1291,7 @@ class FillStitch(EmbroideryElement):
         return [stitch_group]
 
     def do_cross_stitch(self, previous_stitch_group, start, end):
+        from ..stitches.cross_stitch import cross_stitch
         fill_shapes = self._prepare_cross_stitch_shape(start)
         final_end = end
 
@@ -1318,6 +1327,7 @@ class FillStitch(EmbroideryElement):
         return fill_shapes
 
     def do_circular_fill(self, shape, starting_point, ending_point):
+        from ..stitches.circular_fill import circular_fill
         # get target position
         command = self.get_command('target_point')
         if command:
@@ -1354,9 +1364,11 @@ class FillStitch(EmbroideryElement):
         return [stitch_group]
 
     def do_linear_gradient_fill(self, shape, start, end):
+        from ..stitches.linear_gradient_fill import linear_gradient_fill
         return linear_gradient_fill(self, shape, start, end)
 
     def do_tartan_fill(self, shape, start, end):
+        from ..stitches.tartan_fill import tartan_fill
         return tartan_fill(self, shape, start, end)
 
     def validation_errors(self):
@@ -1367,7 +1379,7 @@ class FillStitch(EmbroideryElement):
             message, x, y = match.groups()
             yield InvalidShapeError((x, y))
 
-    def validation_warnings(self):  # noqa: C901
+    def validation_warnings(self):
         if not self.original_shape.is_valid:
             why = explain_validity(self.original_shape)
             match = re.match(r"(?P<message>.+)\[(?P<x>.+)\s(?P<y>.+)\]", why)
@@ -1380,7 +1392,7 @@ class FillStitch(EmbroideryElement):
 
         for shape in self.shape.geoms:
             if self.shape.area < 20:
-                label = self.node.get(INKSCAPE_LABEL) or self.node.get("id")
+                label = (self.node.get(INKSCAPE_LABEL) or self.node.get("id")) or ""
                 yield SmallShapeWarning(shape.centroid, label)
 
             if self.shrink_or_grow_shape(shape, self.expand, True).is_empty:
@@ -1424,6 +1436,7 @@ class FillStitch(EmbroideryElement):
         if self.fill_method == 'cross_stitch':
             shapes = self._prepare_cross_stitch_shape(None)
             for shape in shapes:
+                from ..stitches.utils.cross_stitch import CrossGeometries
                 crosses = CrossGeometries(
                     shape, self.pattern_size, self.fill_coverage, 'simple_cross', self.cross_offset, self.canvas_grid_origin, self.cross_thread_count
                 )

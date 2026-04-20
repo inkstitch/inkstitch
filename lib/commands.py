@@ -7,9 +7,10 @@ import os
 import sys
 from copy import deepcopy
 from random import random
-from typing import List, Optional, cast
+from typing import Any, List, Optional, cast
 
 import inkex
+from inkex.utils import errormsg
 from shapely import geometry as shgeo
 from shapely import get_coordinates
 
@@ -19,7 +20,8 @@ from .svg import (apply_transforms, generate_unique_id,
 from .svg.svg import copy_no_children, point_upwards
 from .svg.tags import (CONNECTION_END, CONNECTION_START, CONNECTOR_TYPE,
                        INKSCAPE_LABEL, SVG_SYMBOL_TAG, SVG_USE_TAG, XLINK_HREF)
-from .utils import Point, cache, get_bundled_dir
+from .utils import Point, get_bundled_dir
+from .utils.cache import cache
 from .utils.geometry import ensure_multi_polygon
 
 COMMANDS = {
@@ -73,6 +75,10 @@ class CommandParseError(Exception):
 
 
 class BaseCommand(object):
+    symbol: Any
+    command: str
+    svg: Any
+
     @property
     @cache
     def description(self):
@@ -116,8 +122,8 @@ class Command(BaseCommand):
 
         self.parse_command()
 
-    def parse_connector_path(self) -> inkex.Path:
-        path = inkex.paths.Path(self.connector.get('d')).to_superpath()
+    def parse_connector_path(self) -> Any:
+        path: Any = inkex.paths.Path(self.connector.get('d')).to_superpath()
         return apply_transforms(path, self.connector)
 
     def parse_command(self) -> None:
@@ -306,9 +312,9 @@ def is_command(node: inkex.BaseElement) -> bool:
 
 def is_command_symbol(node: inkex.BaseElement) -> bool:
     symbol = None
-    xlink = node.get(XLINK_HREF, "")
+    xlink = node.get(XLINK_HREF) or ""
     if xlink.startswith("#inkstitch_"):
-        symbol = node.get(XLINK_HREF)[11:]
+        symbol = xlink[11:]
     return symbol in COMMANDS
 
 
@@ -318,7 +324,7 @@ def symbols_path() -> str:
 
 
 @cache
-def symbols_svg() -> inkex.BaseElement:
+def symbols_svg() -> Any:
     with open(symbols_path()) as symbols_file:
         return inkex.load_svg(symbols_file).getroot()
 
@@ -433,7 +439,7 @@ def add_symbol(document, group, command, pos):
     return symbol
 
 
-def get_command_pos(element, index, total, distance=10):
+def get_command_pos(element, index, total, distance: float = 10):
     # Put command symbols on the outline of the shape, spaced evenly around it.
 
     if element.name == "Stroke":
@@ -478,7 +484,7 @@ def add_layer_commands(layer, commands):
         # No layer selected while trying to include only layer commands: return a error message and exit
         # Since global and layer commands will not be inserted at the same time, we can check the first command only
         if commands[0] in LAYER_COMMANDS:
-            inkex.errormsg(_('Please select a layer to include layer commands.'))
+            errormsg(_('Please select a layer to include layer commands.'))
             sys.exit(1)
 
         # global commands do not necesarrily need a layer

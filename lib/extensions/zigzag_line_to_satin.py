@@ -4,6 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import inkex
+from inkex import bezier
+from inkex.paths import Path
+from inkex.utils import Boolean, errormsg
 
 from ..i18n import _
 from .base import InkstitchExtension
@@ -17,15 +20,15 @@ class ZigzagLineToSatin(InkstitchExtension):
         self.arg_parser.add_argument("--options", type=str, default=None)
         self.arg_parser.add_argument("--info", type=str, default=None)
 
-        self.arg_parser.add_argument("-s", "--smoothing", type=inkex.Boolean, default=True, dest="smoothing")
+        self.arg_parser.add_argument("-s", "--smoothing", type=Boolean, default=True, dest="smoothing")
         self.arg_parser.add_argument("-p", "--pattern", type=str, default="square", dest="pattern")
-        self.arg_parser.add_argument("-r", "--rungs", type=inkex.Boolean, default=True, dest="rungs")
-        self.arg_parser.add_argument("-l", "--reduce-rungs", type=inkex.Boolean, default=False, dest="reduce_rungs")
+        self.arg_parser.add_argument("-r", "--rungs", type=Boolean, default=True, dest="rungs")
+        self.arg_parser.add_argument("-l", "--reduce-rungs", type=Boolean, default=False, dest="reduce_rungs")
 
     def effect(self):
         nodes = self.get_selection(self.svg.selection)
         if not nodes:
-            inkex.errormsg(_("Please select at least one stroke to convert to a satin column."))
+            errormsg(_("Please select at least one stroke to convert to a satin column."))
             return
 
         for node in nodes:
@@ -73,7 +76,8 @@ class ZigzagLineToSatin(InkstitchExtension):
             if inkex.DirectedLineSegment(p0, p1).length < 0.3:
                 sharp_edges.append(p0)
                 skip = True
-        points.append(p1)
+        if point_list:
+            points.append(point_list[-1])
         return points, sharp_edges
 
     def _get_rails_and_rungs(self, point_list):
@@ -120,12 +124,13 @@ class ZigzagLineToSatin(InkstitchExtension):
                 rungs.extend([[points[0], points[1]], [points[2], points[3]]])
             return rails, rungs
 
-    def _smooth_path(self, rails, rungs, sharp_edges):  # noqa: C901
+    def _smooth_path(self, rails, rungs, sharp_edges):
         path_commands = []
         new_rungs = []
         k = [1, 0]
         smoothing = 0.4
         has_equal_rail_point_count = len(rails[0]) == len(rails[1])
+        r: list = []
         for j, rail in enumerate(rails):
             r = rungs[j:len(rungs):2]
             for i, point in enumerate(rail):
@@ -171,14 +176,14 @@ class ZigzagLineToSatin(InkstitchExtension):
 
                         point0 = line.point_at_length(-50)
                         point1 = line.point_at_length(line.length + 50)
-                        new_point = inkex.bezier.linebezierintersect((point0, point1), [prev, handle_position_start, handle_position_end, point])
+                        new_point = bezier.linebezierintersect((point0, point1), [prev, handle_position_start, handle_position_end, point])
                         if new_point:
                             new_rungs.append((rung[k[j]], new_point[0]))
                         else:
                             new_rungs.append(rung)
 
         rungs = self._update_rungs(new_rungs, rungs, r, has_equal_rail_point_count)
-        return str(inkex.Path(path_commands)), rungs
+        return str(Path(path_commands)), rungs
 
     def _get_handle_position(self, point, segment, sharp_edges, length):
         if point in sharp_edges:

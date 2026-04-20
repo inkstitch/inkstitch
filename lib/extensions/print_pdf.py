@@ -13,6 +13,7 @@ from contextlib import closing
 from copy import deepcopy
 from datetime import date
 from threading import Thread
+from typing import Any
 
 import wx
 from flask import Flask, Response, jsonify, request, send_from_directory
@@ -25,7 +26,7 @@ from ..i18n import _, get_languages
 from ..i18n import translation as inkstitch_translation
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from ..svg import render_stitch_plan
-from ..threads import ThreadCatalog
+from ..threads.catalog import ThreadCatalog
 from ..utils import get_resource_dir, get_user_dir
 from .base import InkstitchExtension
 
@@ -108,12 +109,12 @@ class PrintPreviewServer(Thread):
     def __set_resources_path(self):
         self.resources_path = os.path.join(get_resource_dir('print'), 'resources')
 
-    def __setup_app(self):  # noqa: C901
+    def __setup_app(self):
         self.__set_resources_path()
 
         # Disable warning about using a development server in a production environment
         cli = sys.modules['flask.cli']
-        cli.show_server_banner = lambda *x: None
+        setattr(cli, 'show_server_banner', lambda *x: None)
 
         self.app = Flask(__name__)
 
@@ -169,6 +170,7 @@ class PrintPreviewServer(Thread):
         def set_palette():
             name = request.json['name']
             catalog = ThreadCatalog()
+            assert catalog is not None
             palette = catalog.get_palette_by_name(name)
             catalog.apply_palette(self.stitch_plan, palette)
 
@@ -215,6 +217,8 @@ class PrintPreviewServer(Thread):
             return "OK"
 
     def stop(self):
+        assert self.flask_server is not None
+        assert self.server_thread is not None
         self.flask_server.shutdown()
         self.server_thread.join()
 
@@ -282,7 +286,7 @@ class PrintInfoFrame(wx.Frame):
         panel.SetSizer(sizer)
         panel.Layout()
 
-        self.timer = wx.PyTimer(self.__watcher)
+        self.timer = getattr(wx, 'PyTimer')(self.__watcher)
         self.timer.Start(250)
 
     def resize(self, event=None):
@@ -295,7 +299,8 @@ class PrintInfoFrame(wx.Frame):
 
     def __watcher(self):
         if self.print_server.started and not self.print_server.is_alive():
-            self.timer.Stop()
+            if self.timer is not None:
+                self.timer.Stop()
             self.timer = None
             self.Destroy()
 
@@ -305,7 +310,7 @@ class Print(InkstitchExtension):
         print_dir = get_resource_dir('print')
         template_dir = os.path.join(print_dir, "templates")
 
-        env = Environment(
+        env: Any = Environment(
             loader=FileSystemLoader(template_dir),
             autoescape=select_autoescape(['html', 'xml']),
             extensions=['jinja2.ext.i18n']
@@ -331,7 +336,7 @@ class Print(InkstitchExtension):
                 element.tag = element.tag[element.tag.index('}', 1) + 1:]
 
     def render_svgs(self, stitch_plan, realistic=False):
-        svg = deepcopy(self.document).getroot()
+        svg = deepcopy(self.svg)
         render_stitch_plan(svg, stitch_plan, realistic, visual_commands=False)
 
         self.strip_namespaces(svg)
@@ -343,6 +348,7 @@ class Print(InkstitchExtension):
 
         layers_and_groups = svg.xpath("./g|./path|./circle|./ellipse|./rect|./text")
         stitch_plan_layer = svg.findone(".//*[@id='__inkstitch_stitch_plan__']")
+        assert stitch_plan_layer is not None
 
         # Make sure there is no leftover translation from stitch plan preview
         stitch_plan_layer.pop('transform')
@@ -377,6 +383,9 @@ class Print(InkstitchExtension):
     def render_html(self, stitch_plan, overview_svg, selected_palette):
         env = self.build_environment()
         template = env.get_template('index.html')
+        _thread_catalog = ThreadCatalog()
+        assert _thread_catalog is not None
+        palette_names = _thread_catalog.palette_names()
 
         return template.render(
             view={
@@ -403,7 +412,7 @@ class Print(InkstitchExtension):
             },
             svg_overview=overview_svg,
             color_blocks=stitch_plan.color_blocks,
-            palettes=ThreadCatalog().palette_names(),
+            palettes=palette_names,
             selected_palette=selected_palette,
             languages=env.languages
         )
@@ -422,8 +431,10 @@ class Print(InkstitchExtension):
         collapse_len = self.metadata['collapse_len_mm']
         min_stitch_len = self.metadata['min_stitch_len_mm']
         stitch_groups = self.elements_to_stitch_groups(self.elements)
-        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
-        palette = ThreadCatalog().match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
+        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=float(min_stitch_len) if min_stitch_len is not None else 0.1)
+        _catalog = ThreadCatalog()
+        assert _catalog is not None
+        palette = _catalog.match_and_apply_palette(stitch_plan, self.get_inkstitch_metadata()['thread-palette'])
 
         overview_svg, color_block_svgs = self.render_svgs(stitch_plan, realistic=False)
         realistic_overview_svg, realistic_color_block_svgs = self.render_svgs(stitch_plan, realistic=True)

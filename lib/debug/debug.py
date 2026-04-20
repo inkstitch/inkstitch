@@ -12,14 +12,7 @@ from typing import TypeVar, Callable, Any, cast
 from contextlib import contextmanager  # to measure time of with block
 from pathlib import Path  # to work with paths as objects
 
-import inkex
-from lxml import etree   # to create svg file
-
-from ..svg import line_strings_to_path
-from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
-
 from .utils import safe_get
-from ..utils.paths import get_ini
 
 import logging
 logger = logging.getLogger("inkstitch.debug")   # create module logger with name 'inkstitch.debug'
@@ -30,7 +23,19 @@ F = TypeVar('F', bound=Callable[..., Any])
 # to log messages if previous debug logger is not enabled
 logger_inkstich = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
 
-sew_stack_enabled = safe_get(get_ini(), "DEBUG", "enable_sew_stack", default=False)
+_sew_stack_enabled = None
+
+def _get_sew_stack_enabled():
+    global _sew_stack_enabled
+    if _sew_stack_enabled is None:
+        from ..utils.paths import get_ini
+        _sew_stack_enabled = safe_get(get_ini(), "DEBUG", "enable_sew_stack", default=False)
+    return _sew_stack_enabled
+
+def __getattr__(name):
+    if name == 'sew_stack_enabled':
+        return _get_sew_stack_enabled()
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
 
 # --------------------------------------------------------------------------------------------
@@ -112,13 +117,21 @@ class Debug(object):
             logger_inkstich.info("No handlers in logger, cannot enable logging and svg file creation")
 
     def init_svg(self):
+        import inkex
+        from lxml import etree
+        from ..svg.tags import INKSCAPE_GROUPMODE, INKSCAPE_LABEL
+        # Store references for use by other methods
+        self._inkex = inkex
+        self._etree = etree
+        self._INKSCAPE_GROUPMODE = INKSCAPE_GROUPMODE
+        self._INKSCAPE_LABEL = INKSCAPE_LABEL
         self.svg = etree.Element("svg", nsmap=inkex.NSS)
         atexit.register(self.save_svg)
 
     def save_svg(self):
         if self.enabled and self.svg_filename is not None:
             self.log(f"Writing svg file: {self.svg_filename}")
-            tree = etree.ElementTree(self.svg)
+            tree = self._etree.ElementTree(self.svg)
             tree.write(str(self.svg_filename))    # lxml <5.0.0 does not support Path objects, requires string
         else:
             # use alternative logger to log message if logger has no handlers
@@ -127,9 +140,9 @@ class Debug(object):
     @check_enabled
     @unwrap_arguments
     def add_layer(self, name="Debug"):
-        layer = etree.Element("g", {
-            INKSCAPE_GROUPMODE: "layer",
-            INKSCAPE_LABEL: name,
+        layer = self._etree.Element("g", {
+            self._INKSCAPE_GROUPMODE: "layer",
+            self._INKSCAPE_LABEL: name,
             "style": "display: none"
         })
         self.svg.append(layer)
@@ -138,8 +151,8 @@ class Debug(object):
     @check_enabled
     @unwrap_arguments
     def open_group(self, name="Group"):
-        group = etree.Element("g", {
-            INKSCAPE_LABEL: name
+        group = self._etree.Element("g", {
+            self._INKSCAPE_LABEL: name
         })
 
         self.log_svg_element(group)
@@ -203,31 +216,32 @@ class Debug(object):
     @check_enabled
     @unwrap_arguments
     def log_line_strings(self, line_strings, name=None, color=None):
+        from ..svg import line_strings_to_path
         path = line_strings_to_path(line_strings)
-        path.set('style', str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})))
+        path.set('style', str(self._inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})))
 
         if name is not None:
-            path.set(INKSCAPE_LABEL, name)
+            path.set(self._INKSCAPE_LABEL, name)
 
         self.log_svg_element(path)
 
     @check_enabled
     @unwrap_arguments
     def log_line(self, start, end, name="line", color=None):
-        self.log_svg_element(etree.Element("path", {
+        self.log_svg_element(self._etree.Element("path", {
             "d": "M%s,%s %s,%s" % (start + end),
-            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})),
-            INKSCAPE_LABEL: name
+            "style": str(self._inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})),
+            self._INKSCAPE_LABEL: name
         }))
 
     @check_enabled
     @unwrap_arguments
     def log_point(self, point, name="point", color=None):
-        self.log_svg_element(etree.Element("circle", {
+        self.log_svg_element(self._etree.Element("circle", {
             "cx": str(point.x),
             "cy": str(point.y),
             "r": "1",
-            "style": str(inkex.Style({"fill": "#000000"})),
+            "style": str(self._inkex.Style({"fill": "#000000"})),
         }))
 
     @check_enabled
@@ -238,10 +252,10 @@ class Debug(object):
         for edge in graph.edges:
             d += "M%s,%s %s,%s" % (edge[0] + edge[1])
 
-        self.log_svg_element(etree.Element("path", {
+        self.log_svg_element(self._etree.Element("path", {
             "d": d,
-            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})),
-            INKSCAPE_LABEL: name
+            "style": str(self._inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})),
+            self._INKSCAPE_LABEL: name
         }))
 
     # decorator to measure time of with block

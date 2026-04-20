@@ -3,17 +3,12 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from inkex import errormsg
+from inkex.utils import errormsg
 
-from .commands import add_commands, ensure_symbol
-from .elements import EmbroideryElement, Stroke
-from .gui.request_update_svg_version import RequestUpdate
 from .i18n import _
 from .metadata import InkStitchMetadata
-from .svg import PIXELS_PER_MM
 from .svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                        INKSTITCH_ATTRIBS, SVG_USE_TAG)
-from .utils import Point as InkstitchPoint
 
 INKSTITCH_SVG_VERSION = 3
 
@@ -52,6 +47,7 @@ def update_inkstitch_document(svg, selection=None, warn_unversioned=True):
         # update elements
         if selection is not None:
             # the updater extension might want to only update selected elements
+            from .elements import EmbroideryElement
             for element in selection:
                 update_legacy_params(document, EmbroideryElement(element), file_version, INKSTITCH_SVG_VERSION)
         else:
@@ -65,11 +61,13 @@ def automatic_version_update(document, file_version, INKSTITCH_SVG_VERSION, warn
     # make sure the user really wants to update
     if file_version == 0:
         if warn_unversioned:
+            from .gui.request_update_svg_version import RequestUpdate
             do_update = RequestUpdate()
             if do_update.cancelled is True:
                 return
     # well then, let's update legeacy params
     # oddly we have to convert this into a list, otherwise a bunch of elements is missing
+    from .elements import EmbroideryElement
     for node in list(document.iterdescendants(EMBROIDERABLE_TAGS)):
         update_legacy_params(document, EmbroideryElement(node), file_version, INKSTITCH_SVG_VERSION)
 
@@ -122,7 +120,7 @@ def _update_to_two(element):
         element.set_param('stroke_method', 'manual_stitch')
 
 
-def _update_to_one(element):  # noqa: C901
+def _update_to_one(element):
     # update legacy embroider_ attributes to namespaced attributes
     legacy_attribs = False
     for attrib in element.node.attrib:
@@ -189,6 +187,7 @@ def _update_to_one(element):  # noqa: C901
         # grid_size was supposed to be mm, but it was in pixels
         grid_size = element.get_float_param('grid_size', None)
         if grid_size:
+            from .svg import PIXELS_PER_MM
             size = grid_size / PIXELS_PER_MM
             size = "{:.2f}".format(size)
             element.set_param('grid_size_mm', size)
@@ -255,6 +254,9 @@ def reposition_legacy_command(command):
 
     # instead of calculating the transform for the new position, we take the easy route and remove
     # the old commands and set new ones
+    from .commands import add_commands
+    from .elements import Stroke
+    from .utils import Point as InkstitchPoint
     add_commands(Stroke(element), [command_name], InkstitchPoint(*target_point))
     command_group.delete()
 
@@ -263,6 +265,7 @@ def _rename_command(document, symbol, old_name, new_name):
     symbol_id = symbol.get_id()
     if symbol_id.startswith(old_name):
         symbol.delete()
+        from .commands import ensure_symbol
         ensure_symbol(document, new_name)
         _update_command(document, symbol_id, new_name)
 

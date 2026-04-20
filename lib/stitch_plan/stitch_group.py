@@ -38,7 +38,7 @@ class StitchGroup:
         self.stop_after = stop_after
         self.lock_stitches = lock_stitches
         self.force_lock_stitches = force_lock_stitches
-        self.min_jump_stitch_length = min_jump_stitch_length
+        self.min_jump_stitch_length: float | bool | None = min_jump_stitch_length
         self.stitches = []
 
         if stitches:
@@ -73,8 +73,50 @@ class StitchGroup:
             stitch.min_stitch_length = min_stitch_length
 
     def add_stitches(self, stitches, tags=None):
-        for stitch in stitches:
-            self.add_stitch(stitch, tags=tags)
+        if not stitches:
+            return
+        first = stitches[0]
+        if isinstance(first, Stitch):
+            self.stitches.extend(stitches)
+            return
+        # Fast batch creation from raw coordinate lists/tuples [[x,y], ...]
+        if isinstance(first, (list, tuple)):
+            _Stitch = Stitch
+            _new = _Stitch.__new__
+            _append = self.stitches.append
+            tag_set = set(tags) if tags else None
+            for xy in stitches:
+                s = _new(_Stitch)
+                s.x = xy[0]
+                s.y = xy[1]
+                s.color = None
+                s.jump = False
+                s.trim = False
+                s.stop = False
+                s.color_change = False
+                s.min_stitch_length = None
+                s._flags = 0
+                s.tags = tag_set.copy() if tag_set else set()
+                _append(s)
+            return
+        # Point objects
+        _Stitch = Stitch
+        _new = _Stitch.__new__
+        _append = self.stitches.append
+        tag_set = set(tags) if tags else None
+        for pt in stitches:
+            s = _new(_Stitch)
+            s.x = float(pt.x)
+            s.y = float(pt.y)
+            s.color = None
+            s.jump = False
+            s.trim = False
+            s.stop = False
+            s.color_change = False
+            s.min_stitch_length = None
+            s._flags = 0
+            s.tags = tag_set.copy() if tag_set else set()
+            _append(s)
 
     def add_stitch(self, stitch, tags=None):
         if not isinstance(stitch, Stitch):

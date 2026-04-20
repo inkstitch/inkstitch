@@ -11,6 +11,7 @@ from copy import deepcopy
 from random import randint
 
 import inkex
+from inkex.utils import errormsg
 
 from ..commands import add_commands, ensure_command_symbols
 from ..elements import EmbroideryElement, SatinColumn, Stroke, nodes_to_elements
@@ -103,7 +104,7 @@ class Font(object):
             msg += f"\n{path}\n\n"
             msg += _("Generate the JSON file through:\nExtensions > Ink/Stitch > Font Management > Generate JSON...")
             msg += '\n\n'
-            inkex.errormsg(msg)
+            errormsg(msg)
         except json.decoder.JSONDecodeError as exception:
             if not show_font_path_warning:
                 return
@@ -112,7 +113,7 @@ class Font(object):
             msg += f" ({exception}):\n{path}\n\n"
             msg += _("Regenerate the JSON file through:\nExtensions > Ink/Stitch > Font Management > Generate JSON...")
             msg += '\n\n'
-            inkex.errormsg(msg)
+            errormsg(msg)
 
     def _load_license(self):
         try:
@@ -232,7 +233,7 @@ class Font(object):
             return False
         return custom_dir in self.path
 
-    def render_text(self, text, destination_group, variant=None, back_and_forth=True,  # noqa: C901
+    def render_text(self, text, destination_group, variant=None, back_and_forth=True,
                     trim_option=0, use_trim_symbols=False, color_sort=0, text_align=0,
                     letter_spacing=0, word_spacing=0, line_height=0, scale=100):
 
@@ -288,10 +289,10 @@ class Font(object):
             # text_align 0: left (default)
             if text_align == 1:
                 # 1: align center
-                letter_group.transform = f'translate({-line_width/2}, 0)'
+                letter_group.transform = inkex.Transform(f'translate({-line_width/2}, 0)')
             if text_align == 2:
                 # 2: align right
-                letter_group.transform = f'translate({-line_width}, 0)'
+                letter_group.transform = inkex.Transform(f'translate({-line_width}, 0)')
 
         if text_align in [3, 4]:
             # 3: Block (default) 4: Block (letterspacing)
@@ -663,7 +664,7 @@ class Font(object):
 
             group.append(color_group)
 
-    def _get_color_sorted_elements(self, group, transform_key):  # noqa: C901
+    def _get_color_sorted_elements(self, group, transform_key):
         elements_by_color = defaultdict(list)
         last_parent = None
 
@@ -714,7 +715,7 @@ class Font(object):
                 continue
 
             parent = element.getparent()
-            if element.clip is None and parent.clip is not None:
+            if element.clip is None and parent is not None and parent.clip is not None:
                 element.clip = parent.clip
             if last_parent != parent or int(sort_index) not in elements_by_color or not is_grouped_with_marker(element):
                 elements_by_color[int(sort_index)].append([element])

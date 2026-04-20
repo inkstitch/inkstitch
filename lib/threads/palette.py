@@ -22,6 +22,7 @@ class ThreadPalette(Set):
 
     def __init__(self, palette_file):
         self.threads = dict()
+        self._lab_colors = None
         self.parse_palette_file(palette_file)
 
     def parse_palette_file(self, palette_file):
@@ -64,12 +65,18 @@ class ThreadPalette(Set):
             for line in palette:
                 try:
                     fields = line.split(None, 3)
-                    thread_color = [int(field) for field in fields[:3]]
+                    thread_color = (int(fields[0]), int(fields[1]), int(fields[2]))
                     thread_name, thread_number = fields[3].strip().rsplit(" ", 1)
                     thread_name = thread_name.strip()
 
-                    thread = ThreadColor(thread_color, thread_name, thread_number, manufacturer=self.name, description=thread_name)
-                    self.threads[thread] = convert_color(sRGBColor(*thread_color, is_upscaled=True), LabColor)
+                    thread = ThreadColor.__new__(ThreadColor)
+                    thread.rgb = thread_color
+                    thread.name = thread_name
+                    thread.number = thread_number
+                    thread.manufacturer = self.name
+                    thread.description = thread_name
+                    thread.chart = None
+                    self.threads[thread] = thread_color
                 except (ValueError, IndexError):
                     continue
 
@@ -82,12 +89,22 @@ class ThreadPalette(Set):
     def __len__(self):
         return len(self.threads)
 
+    def _ensure_lab_colors(self):
+        if self._lab_colors is None:
+            self._lab_colors = {
+                thread: convert_color(sRGBColor(*rgb, is_upscaled=True), LabColor)
+                for thread, rgb in self.threads.items()
+            }
+
     def nearest_color(self, color):
         """Find the thread in this palette that looks the most like the specified color."""
 
         if isinstance(color, ThreadColor):
             color = color.rgb
 
+        self._ensure_lab_colors()
+        assert self._lab_colors is not None
+        lab_colors = self._lab_colors
         color = convert_color(sRGBColor(*color, is_upscaled=True), LabColor)
 
-        return min(self, key=lambda thread: compare_thread_colors(self.threads[thread], color))
+        return min(self, key=lambda thread: compare_thread_colors(lab_colors[thread], color))

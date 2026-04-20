@@ -6,17 +6,18 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from math import ceil
+from typing import Any, List
 
+import inkex
 import shapely.geometry as shgeo
 from shapely.errors import GEOSException
 
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches.ripple_stitch import ripple_stitch
-from ..stitches.running_stitch import bean_stitch, running_stitch, zigzag_stitch
 from ..threads import ThreadColor
-from ..utils import Point, cache
+from ..utils import Point
+from ..utils.cache import cache
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
 from .validation import ValidationWarning
@@ -60,7 +61,8 @@ class Stroke(EmbroideryElement):
         """Return the color of the stroke."""
         color = self.stroke_color
         if self.cutwork_needle is not None:
-            color = ThreadColor(color, description=self.cutwork_needle, chart=self.cutwork_needle)
+            tc_color = color if not isinstance(color, inkex.LinearGradient) else None
+            color = ThreadColor(tc_color, description=self.cutwork_needle, chart=self.cutwork_needle)
         return color
 
     @property
@@ -660,8 +662,8 @@ class Stroke(EmbroideryElement):
         return self._is_closed()
 
     @property
-    def paths(self):
-        return self._get_paths()
+    def paths(self) -> List[Any]:
+        return self._get_paths() or []
 
     @property
     def unclipped_paths(self):
@@ -669,6 +671,15 @@ class Stroke(EmbroideryElement):
         return self._get_paths(False)
 
     def _get_paths(self, clipped=True):
+        # Fast path: M/L-only manual stitch skips CSP, flatten, and LineString
+        d = self.node.get("d")
+        if (self.stroke_method == "manual_stitch" and d is not None
+                and not self._NON_ML_PATH_RE.search(d)):
+            coords = self._fast_flatten_ml_path(d)
+            if coords and clipped:
+                coords = self._get_clipped_path(coords)
+            return coords or []
+
         path = self.parse_path()
         flattened = self.flatten(path)
         if clipped:
@@ -688,7 +699,7 @@ class Stroke(EmbroideryElement):
         if self.stroke_method == "manual_stitch":
             coords = [shgeo.LineString(self.strip_control_points(subpath)).coords for subpath in path]
             coords = self._get_clipped_path(coords)
-            return coords
+            return coords or []
         else:
             return flattened
 
@@ -752,8 +763,9 @@ class Stroke(EmbroideryElement):
         else:
             return self.unclipped_shape.centroid
 
-    def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle=0):
+    def simple_satin(self, path, zigzag_spacing, stroke_width, pull_compensation, zigzag_angle: float = 0):
         """Generate zig-zag along the path at the specified spacing and width.
+
 
         Applies zigzag to a single pass first, then handles repeats manually.
         This ensures stitch points align perfectly across all passes.
@@ -763,6 +775,7 @@ class Stroke(EmbroideryElement):
         # that length:
         spacing = [value / 2 for value in zigzag_spacing]
 
+        from ..stitches.running_stitch import running_stitch, zigzag_stitch
         # Generate running stitches for a SINGLE pass (no repeats)
         single_pass_stitches = running_stitch(
             path,
@@ -825,6 +838,7 @@ class Stroke(EmbroideryElement):
         random_seed,
     ):
         """Generate running stitch with repeats."""
+        from ..stitches.running_stitch import running_stitch
         # running stitch with repeats
         stitches = running_stitch(
             path,
@@ -833,7 +847,7 @@ class Stroke(EmbroideryElement):
             enable_random_stitch_length,
             random_sigma,
             random_seed,
-        )
+        ) or []
 
         repeated_stitches = []
         # go back and forth along the path as specified by self.repeats
@@ -860,7 +874,7 @@ class Stroke(EmbroideryElement):
         for points in zip(path[:-1], path[1:]):
             line = shgeo.LineString(points)
             dist = line.length
-            if dist > self.max_stitch_length:
+            if self.max_stitch_length is not None and dist > self.max_stitch_length:
                 num_subsections = ceil(dist / self.max_stitch_length)
                 additional_points = [
                     Point(coord.x, coord.y)
@@ -872,6 +886,7 @@ class Stroke(EmbroideryElement):
 
     def ripple_stitch(self):
         """Generate ripple stitches."""
+        from ..stitches.ripple_stitch import ripple_stitch
         ripple_stitches = ripple_stitch(self)
         stitch_groups = []
         for stitches in ripple_stitches:
@@ -889,10 +904,11 @@ class Stroke(EmbroideryElement):
     def do_bean_repeats(self, stitches):
         """Apply bean repeats if any are specified."""
         if any(self.bean_stitch_repeats):
+            from ..stitches.running_stitch import bean_stitch
             return bean_stitch(stitches, self.bean_stitch_repeats)
         return stitches
 
-    def to_stitch_groups(self, last_stitch_group, next_element=None):  # noqa: C901
+    def to_stitch_groups(self, last_stitch_group, next_element=None):
         """Convert stroke to stitch groups."""
         stitch_groups = []
 
@@ -901,11 +917,13 @@ class Stroke(EmbroideryElement):
             stitch_groups.extend(self.ripple_stitch())
         else:
             for path in self.paths:
-                path = [Point(x, y) for x, y in path]
                 # manual stitch
                 if self.stroke_method == "manual_stitch":
                     if self.max_stitch_length:
+                        # Need Point objects for apply_max_stitch_length
+                        path = [Point(x, y) for x, y in path]
                         path = self.apply_max_stitch_length(path)
+                    # else: path is raw [[x,y],...] coords - add_stitches handles both
 
                     if self.force_lock_stitches:
                         lock_stitches = self.lock_stitches
@@ -922,6 +940,7 @@ class Stroke(EmbroideryElement):
                     stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # simple satin
                 elif self.stroke_method == "zigzag_stitch":
+                    path = [Point(x, y) for x, y in path]
                     stitch_group = self.simple_satin(
                         path,
                         self.zigzag_spacing,
@@ -934,6 +953,7 @@ class Stroke(EmbroideryElement):
                         stitch_group.stitches = self.do_bean_repeats(stitch_group.stitches)
                 # running stitch
                 else:
+                    path = [Point(x, y) for x, y in path]
                     stitch_group = self.running_stitch(
                         path,
                         self.running_stitch_length,
@@ -984,7 +1004,10 @@ class Stroke(EmbroideryElement):
             coords = list(self.shape.coords)
         except NotImplementedError:
             # linear rings to not have a coordinate sequence
-            coords = list(self.shape.exterior.coords)
+            if isinstance(self.shape, shgeo.Polygon):
+                coords = list(self.shape.exterior.coords)
+            else:
+                coords = []
         return coords[int(len(coords) / 2)]
 
     def validation_warnings(self):

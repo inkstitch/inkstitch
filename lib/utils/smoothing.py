@@ -16,7 +16,7 @@ def _remove_duplicate_coordinates(coords_array):
 
     differences = np.diff(coords_array, axis=0)
     zero_differences = np.isclose(differences, 0)
-    keepers = np.r_[True, np.any(zero_differences == False, axis=1)]  # noqa: E712
+    keepers = np.r_[True, np.any(~zero_differences, axis=1)]
 
     return coords_array[keepers]
 

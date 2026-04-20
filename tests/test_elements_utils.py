@@ -17,7 +17,7 @@ class ElementsUtilsTest(TestCase):
             "width": "10",
             "height": "10"
         }))
-        hidden_rect = g.add(Rectangle(attrib={  # noqa: F841
+        _hidden_rect = g.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
             "style": "display:none"
@@ -25,7 +25,7 @@ class ElementsUtilsTest(TestCase):
         hidden_group = g.add(Group(attrib={
             "style": "display:none"
         }))
-        child_of_hidden = hidden_group.add(Rectangle(attrib={  # noqa: F841
+        _child_of_hidden = hidden_group.add(Rectangle(attrib={
             "width": "10",
             "height": "10",
         }))

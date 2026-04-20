@@ -6,6 +6,7 @@
 import textwrap
 
 import inkex
+from inkex.utils import Boolean, errormsg
 
 from ..commands import add_layer_commands
 from ..elements.validation import (ObjectTypeWarning, ValidationError,
@@ -26,9 +27,9 @@ class Troubleshoot(InkstitchExtension):
         self.arg_parser.add_argument("-p", "--pointer-size", type=float, default=5, dest="pointer_size_mm")
         self.arg_parser.add_argument("-f", "--font-size", type=float, default=2, dest="font_size_mm")
 
-        self.arg_parser.add_argument("-e", "--show-errors", type=inkex.Boolean, default=True, dest="show_errors")
-        self.arg_parser.add_argument("-w", "--show-warnings", type=inkex.Boolean, default=True, dest="show_warnings")
-        self.arg_parser.add_argument("-o", "--show-type-warning", type=inkex.Boolean, default=True, dest="show_type_warning")
+        self.arg_parser.add_argument("-e", "--show-errors", type=Boolean, default=True, dest="show_errors")
+        self.arg_parser.add_argument("-w", "--show-warnings", type=Boolean, default=True, dest="show_warnings")
+        self.arg_parser.add_argument("-o", "--show-type-warning", type=Boolean, default=True, dest="show_type_warning")
 
     def effect(self):
         self.create_troubleshoot_layer()
@@ -61,7 +62,7 @@ class Troubleshoot(InkstitchExtension):
                              "check if it is in a layer with an ignore command.")
             else:
                 message = _("No warnings found for selected shapes!")
-            inkex.errormsg(message)
+            errormsg(message)
 
     def _get_and_insert_problems(self):
         problem_types = {'error': set(), 'warning': set(), 'type_warning': set()}
@@ -94,6 +95,8 @@ class Troubleshoot(InkstitchExtension):
         elif isinstance(problem, ObjectTypeWarning):
             fill_color = "#ff9900"
             layer = self.type_warning_group
+        else:
+            raise ValueError(f"Unexpected problem type: {type(problem)}")
 
         group = self._get_or_create_group(layer, problem.name)
 
@@ -123,7 +126,7 @@ class Troubleshoot(InkstitchExtension):
         tspan = inkex.Tspan()
         tspan.text = problem.name
         if problem.label:
-            tspan.text += " (%s)" % problem.label
+            tspan.text = (tspan.text or "") + " (%s)" % problem.label
         text.append(tspan)
 
     def _get_or_create_group(self, layer, label):
@@ -139,7 +142,7 @@ class Troubleshoot(InkstitchExtension):
         return group
 
     def create_troubleshoot_layer(self):
-        svg = self.document.getroot()
+        svg = self.svg
         layer = svg.find(".//*[@id='__validation_layer__']")
 
         if layer is not None:
@@ -180,13 +183,13 @@ class Troubleshoot(InkstitchExtension):
         self.warning_group = warning_group
         self.type_warning_group = type_warning_group
 
-    def add_descriptions(self, problem_types):  # noqa: C901
-        svg = self.document.getroot()
+    def add_descriptions(self, problem_types):
+        svg = self.svg
 
         # We could use svg.viewport_width, but then we would need to do unit conversions,
         # so let's stay with parsing the viewbox by ourselves
         # viewbox values are either separated through white space or commas
-        text_x = str(float(svg.get('viewBox', '0 0 800 0').replace(",", " ").split()[2]) + 5.0)
+        text_x = str(float((svg.get('viewBox', '0 0 800 0') or '0 0 800 0').replace(",", " ").split()[2]) + 5.0)
 
         group = inkex.Group()
         group.label = _("Problem descriptions")
@@ -203,6 +206,9 @@ class Troubleshoot(InkstitchExtension):
             ["", ""]
         ]
 
+        text_color = "#000000"
+        problem_type_header = ""
+        problem_type_description = ""
         for problem_type, problems in list(problem_types.items()):
             if problem_type == "error":
                 text_color = "#ff0000"

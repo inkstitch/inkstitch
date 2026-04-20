@@ -5,6 +5,7 @@
 
 from typing import Iterable, List, Optional
 
+import inkex
 from inkex import BaseElement
 from lxml.etree import Comment
 
@@ -14,7 +15,7 @@ from ...marker import has_marker
 from ...svg.tags import (CONNECTOR_TYPE, EMBROIDERABLE_TAGS,
                          INKSCAPE_GROUPMODE, NOT_EMBROIDERABLE_TAGS,
                          SVG_CLIPPATH_TAG, SVG_DEFS_TAG, SVG_GROUP_TAG,
-                         SVG_IMAGE_TAG, SVG_MASK_TAG, SVG_TEXT_TAG)
+                         SVG_IMAGE_TAG, SVG_MASK_TAG, SVG_PATH_TAG, SVG_TEXT_TAG)
 from ..clone import Clone, is_clone
 from ..element import EmbroideryElement
 from ..empty_d_object import EmptyDObject
@@ -26,14 +27,16 @@ from ..stroke import Stroke
 from ..text import TextObject
 
 
-def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  # noqa: C901
+def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:
     if node.style('display') == 'none':
         return []
     if is_clone(node) and not clone_to_element:
         # clone_to_element: get an actual embroiderable element once a clone has been defined as a clone
         return [Clone(node)]
 
-    elif node.tag in EMBROIDERABLE_TAGS and not node.get_path():
+    elif node.tag in EMBROIDERABLE_TAGS and (
+            (node.tag == SVG_PATH_TAG and not node.get('d', '').strip()) or
+            (node.tag != SVG_PATH_TAG and not node.get_path())):
         return [EmptyDObject(node)]
 
     elif has_marker(node):
@@ -80,11 +83,23 @@ def nodes_to_elements(nodes: Iterable[BaseElement]) -> List[EmbroideryElement]:
     return elements
 
 
-def iterate_nodes(node: BaseElement,  # noqa: C901
+def iterate_nodes(node: BaseElement,
                   selection: Optional[List[BaseElement]] = None,
                   troubleshoot=False) -> List[BaseElement]:
     # Postorder traversal of selected nodes and their descendants.
     # Returns all nodes if there is no selection.
+
+    # Pre-check: are there any connectors in the document?
+    # This avoids per-node XPath queries in find_commands when there are none.
+    root = node.getroottree().getroot()
+    _has_connectors = bool(root.xpath(
+        ".//*[@inkscape:connection-start or @inkscape:connection-end]",
+        namespaces=inkex.NSS
+    ))
+
+    # Pre-convert list to set for O(1) lookup
+    _skip_tags = {SVG_DEFS_TAG, SVG_MASK_TAG, SVG_CLIPPATH_TAG}
+
     def walk(node: BaseElement, selected: bool) -> List[BaseElement]:
         nodes = []
 
@@ -92,26 +107,36 @@ def iterate_nodes(node: BaseElement,  # noqa: C901
         if node.tag is Comment:  # type:ignore[comparison-overlap]
             return []
 
-        element = EmbroideryElement(node)
-
-        if element.has_command('ignore_object'):
-            return []
-
-        if node.tag == SVG_GROUP_TAG and node.get(INKSCAPE_GROUPMODE) == "layer":
-            if len(list(layer_commands(node, "ignore_layer"))):
-                return []
-
-        if (node.tag in EMBROIDERABLE_TAGS or node.tag == SVG_GROUP_TAG) and element.get_style('display', 'inline') is None:
-            return []
-
         # defs, masks and clippaths can contain embroiderable elements
         # but should never be rendered directly.
-        if node.tag in [SVG_DEFS_TAG, SVG_MASK_TAG, SVG_CLIPPATH_TAG]:
+        if node.tag in _skip_tags:
             return []
 
         # command connectors with a fill color set, will glitch into the elements list
         if is_command(node) or node.get(CONNECTOR_TYPE):
             return []
+
+        _is_embroiderable_or_group = node.tag in EMBROIDERABLE_TAGS or node.tag == SVG_GROUP_TAG
+
+        # Only create EmbroideryElement when needed (for commands or style checks)
+        if _has_connectors and _is_embroiderable_or_group:
+            element = EmbroideryElement(node)
+            if element.has_command('ignore_object'):
+                return []
+            if node.tag == SVG_GROUP_TAG and node.get(INKSCAPE_GROUPMODE) == "layer":
+                if len(list(layer_commands(node, "ignore_layer"))):
+                    return []
+            # Display check with full CSS parsing
+            raw_style = node.get('style') or ''
+            if 'display' in raw_style and element.get_style('display', 'inline') is None:
+                return []
+        elif _is_embroiderable_or_group:
+            # Fast display check: only do full CSS parsing if 'display' appears in inline style
+            raw_style = node.get('style') or ''
+            if 'display' in raw_style:
+                element = EmbroideryElement(node)
+                if element.get_style('display', 'inline') is None:
+                    return []
 
         if not selected:
             if selection:
