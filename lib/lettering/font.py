@@ -13,10 +13,10 @@ import lzma
 
 import inkex
 
+from .paths import get_custom_font_dir
 from ..commands import add_commands, ensure_command_symbols
 from ..elements import EmbroideryElement, SatinColumn, Stroke, nodes_to_elements
 from ..exceptions import InkstitchException
-from ..extensions.lettering_custom_font_dir import get_custom_font_dir
 from ..i18n import _, get_languages
 from ..marker import ensure_marker_symbols, has_marker, is_grouped_with_marker
 from ..stitches.auto_satin import auto_satin

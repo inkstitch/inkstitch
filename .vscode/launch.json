@@ -2,11 +2,20 @@
   "configurations": [
     {
       "name": "Python: Ink/Stitch",
-      "type": "python",
+      "type": "debugpy",
       "request": "attach",
       "listen": {
         "port": 5678
       }
+    },
+    {
+      "name": "Unit Tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "tests/lettering/test_font.py"
+      ]
     }
   ]
 }

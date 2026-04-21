@@ -9,8 +9,8 @@ import os
 from inkex import errormsg
 
 from ..i18n import _
-from ..utils import get_user_dir
 from .base import InkstitchExtension
+from ..lettering.paths import get_custom_font_cfg_file
 
 
 class LetteringCustomFontDir(InkstitchExtension):
@@ -30,13 +30,13 @@ class LetteringCustomFontDir(InkstitchExtension):
 
         data = {'custom_font_dir': '%s' % path}
 
-        config_path = get_user_dir('custom_dirs.json')
+        config_path = get_custom_font_cfg_file()
         with open(config_path, 'w', encoding="utf8") as font_data:
             json.dump(data, font_data, indent=4, ensure_ascii=False)
 
 
 def get_custom_font_dir():
-    custom_font_dir_path = get_user_dir('custom_dirs.json')
+    custom_font_dir_path = get_custom_font_cfg_file()
     try:
         with open(custom_font_dir_path, 'r') as custom_dirs:
             custom_dir = json.load(custom_dirs)
