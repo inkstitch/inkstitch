@@ -9,6 +9,7 @@ from collections import defaultdict
 from copy import deepcopy
 from itertools import combinations_with_replacement
 from os import path
+import lzma
 
 import wx
 import wx.adv
@@ -435,7 +436,9 @@ class LetteringEditJsonPanel(wx.Panel):
             self._show_warning(_("Could not read json file."))
             return
 
-        if not os.access(json_file, os.W_OK):
+        # If we can't write to the json file (as it may not exist, as in the case of font.json.xz w/ no font.json),
+        # check if we can create files in the font directory instead.
+        if not os.access(json_file, os.W_OK) and not os.access(self.font.path, os.W_OK):
             self._show_warning(_("Changes will not be saved: cannot write to json file (permission denied)."))
             return
 
@@ -443,19 +446,26 @@ class LetteringEditJsonPanel(wx.Panel):
 
     def apply(self, event):
         json_file = path.join(self.font.path, 'font.json')
+        json_xz_file = path.join(self.font.path, 'font.json.xz')
 
         if not path.isfile(json_file) or not path.isfile(json_file):
             errormsg(_("Could not read json file."))
             self.cancel()
             return
 
-        if not os.access(json_file, os.W_OK):
+        # If we can't write to the json file (as it may not exist, as in the case of font.json.xz w/ no font.json),
+        # check if we can create files in the font directory instead.
+        if not os.access(json_file, os.W_OK) and not os.access(self.font.path, os.W_OK):
             errormsg(_("Could not write to json file: permission denied."))
             self.cancel()
             return
 
-        with open(json_file, 'r', encoding="utf8") as font_data:
-            data = json.load(font_data)
+        try:
+            with open(json_file, 'r', encoding="utf8") as font_data:
+                data = json.load(font_data)
+        except FileNotFoundError:
+            with lzma.open(json_xz_file, 'r', encoding="utf8") as font_data:
+                data = json.load(font_data)
 
         for key, val in self.font_meta.items():
             data[key] = val

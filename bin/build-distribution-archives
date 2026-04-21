@@ -6,7 +6,7 @@ ARCH="$(uname -m)"
 
 if [ "$BUILD" = "osx" ]; then
     cp -a addons icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
-    bin/compress-fonts dist/inkstitch.app/Contents/Resources/fonts/src
+    time bin/compress-fonts dist/inkstitch.app/Contents/Resources/fonts/src
 
     # adding version to Info.plist
     plutil -replace CFBundleShortVersionString -string ${VERSION} dist/inkstitch.app/Contents/Info.plist
@@ -97,7 +97,7 @@ if [ "$BUILD" = "osx" ]; then
 else
     cp -a addons palettes symbols fonts tiles dbus inx LICENSE VERSION dist/inkstitch
     cp -a icons locales print dist/inkstitch/bin
-    bin/compress-fonts dist/inkstitch/fonts/src
+    time bin/compress-fonts dist/inkstitch/fonts/src
 fi
 
 if [ "$BUILD" = "windows" ]; then
