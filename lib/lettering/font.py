@@ -9,7 +9,7 @@ import unicodedata
 from collections import defaultdict
 from copy import deepcopy
 from random import randint
-import gzip
+import lzma
 
 import inkex
 
@@ -96,7 +96,7 @@ class Font(object):
         try:
             # First try to read the uncompressed version, that way any local, human-readable changes
             # "override" the compressed, distributed version.
-            # As a bonus this means that using the "generate json" command can remediate a corrupted .json.gz
+            # As a bonus this means that using the "generate json" command can remediate a corrupted .json.xz
             # (not that that should ever happen in the first place...)
             try:
                 metadata_path = os.path.join(self.path, "font.json")
@@ -107,15 +107,15 @@ class Font(object):
                 pass
 
             # Try to load the compressed, distributed version
-            metadata_path = os.path.join(self.path, "font.json.gz")
-            with gzip.open(metadata_path, "rt", encoding="utf-8-sig") as metadata_file:
+            metadata_path = os.path.join(self.path, "font.json.xz")
+            with lzma.open(metadata_path, "rt", encoding="utf-8-sig") as metadata_file:
                 self.metadata = json.load(metadata_file)
                 return
         except FileNotFoundError:
             if not show_font_path_warning:
                 return
 
-            # This message is technically wrong because it doesn't mention that we also tried to read the .json.gz,
+            # This message is technically wrong because it doesn't mention that we also tried to read the .json.xz,
             # but we don't expect users to be compressing their files (yet?) so we don't really have to tell them.
             path = os.path.join(self.path, "font.json")
             msg = _("JSON file missing. Expected a JSON file at the following location:")
@@ -233,10 +233,10 @@ class Font(object):
 
     def _has_variant(self, variant: str) -> bool:
         if (os.path.isfile(os.path.join(self.path, "%s.svg" % variant)) or
-           os.path.isfile(os.path.join(self.path, "%s.svgz" % variant))):
+           os.path.isfile(os.path.join(self.path, "%s.svg.xz" % variant))):
             return True
         elif (os.path.isdir(os.path.join(self.path, variant)) and
-                [svg for svg in os.listdir(os.path.join(self.path, variant)) if svg.endswith(('.svg', '.svgz'))]):
+                [svg for svg in os.listdir(os.path.join(self.path, variant)) if svg.endswith(('.svg', '.svg.xz'))]):
             return True
         else:
             return False

@@ -7,7 +7,7 @@ import os
 from collections import defaultdict
 from unicodedata import normalize, category
 from typing import List, Dict, Optional
-import gzip
+import lzma
 
 import inkex
 
@@ -73,8 +73,8 @@ class FontVariant(object):
             variant_file_paths = self._get_variant_file_paths(True)
         for svg_path in variant_file_paths:
 
-            if svg_path.endswith(".svgz"):
-                with gzip.open(svg_path, "rb") as compressed_stream:
+            if svg_path.endswith(".svg.xz"):
+                with lzma.open(svg_path, "rb") as compressed_stream:
                     document = inkex.load_svg(compressed_stream)
             else:
                 document = inkex.load_svg(svg_path)
@@ -100,14 +100,14 @@ class FontVariant(object):
 
         file_paths = []
         direct_path = os.path.join(self.path, "%s.svg" % variant)
-        direct_path_compressed = os.path.join(self.path, "%s.svgz" % variant)
+        direct_path_compressed = os.path.join(self.path, "%s.svg.xz" % variant)
         if os.path.isfile(direct_path):
             file_paths.append(direct_path)
         if os.path.isfile(direct_path_compressed):
             file_paths.append(direct_path_compressed)
         elif os.path.isdir(os.path.join(self.path, variant)):
             path = os.path.join(self.path, self.variant)
-            file_paths.extend([os.path.join(path, f) for f in os.listdir(path) if f.endswith(('.svg', '.svgz'))])
+            file_paths.extend([os.path.join(path, f) for f in os.listdir(path) if f.endswith(('.svg', '.svg.xz'))])
         return file_paths
 
     def _clean_group(self, group):
