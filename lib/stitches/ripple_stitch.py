@@ -19,7 +19,6 @@ from ..utils.threading import check_stop_flag
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
                         graph_make_valid)
-from .guided_fill import apply_stitches
 from .running_stitch import even_running_stitch, running_stitch
 
 
@@ -54,6 +53,7 @@ def ripple_stitch(stroke):
     remove_end_travel = True
     if stroke.grid_size != 0:
         remove_end_travel = False
+
     stitch_groups = _route_clipped_stitches(stroke, stitches, True, remove_end_travel)
 
     if stroke.repeats > 1:
@@ -331,13 +331,9 @@ def _get_staggered_stitches(stroke, lines, skip_start):
 
 
 def _stagger_line(line, stitch_length, staggers, i, tolerance, is_random, length_sigma, random, should_reverse, flip_copies):
-    if len(stitch_length) > 1:
-        points = list(
-            apply_stagger(line, stitch_length, staggers, i, tolerance, is_random, length_sigma, random).coords
-        )
-    else:
-        # uses the guided fill alforithm to stagger rows of stitches
-        points = list(apply_stitches(LineString(line), stitch_length, staggers, 0.5, i, tolerance).coords)
+    points = list(
+        apply_stagger(line, stitch_length, staggers, i, tolerance, is_random, length_sigma, random).coords
+    )
 
     # simplifying the path in apply_stitches could have removed the start or end point
     # we can simply add it again, the minimum stitch length value will take care to remove possible duplicates
