@@ -159,6 +159,7 @@ inkstitch_attribs = [
     'contour_underlay_stitch_tolerance_mm',
     'contour_underlay_inset_mm',
     'contour_underlay_inset_percent',
+    'push_compensation_mm',
     'zigzag_underlay',
     'zigzag_spacing_mm',
     'zigzag_underlay_inset_mm',

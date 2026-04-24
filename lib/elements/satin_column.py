@@ -4,9 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import itertools
-import typing
 from copy import deepcopy
 from itertools import chain
+from typing import List, Tuple
 
 import numpy as np
 from inkex import Path
@@ -310,6 +310,17 @@ class SatinColumn(EmbroideryElement):
                               ParamOption('second', _('Reverse second rail')),
                               ParamOption('both', _('Reverse both rails'))
                               ]
+
+    @property
+    @param('push_compensation_mm',
+           _('Push compensation'),
+           tooltip=_('Shrinks the column at start and/or end.'),
+           unit=_('mm (each side)'), type='float', default=0,
+           sort_index=8)
+    @cache
+    def push_compensation_px(self):
+        # how far inside the edge of the column to stitch the underlay
+        return self.get_split_mm_param_as_px("push_compensation_mm", (0, 0))
 
     @property
     @param(
@@ -655,6 +666,19 @@ class SatinColumn(EmbroideryElement):
         else:
             return rails
 
+    def _get_compensated_line_string_rails(self, start: float, end: float) -> List[shgeo.Point | shgeo.LineString]:
+        """Apply push compensation on rails"""
+        return [self._apply_push_comp(rail, start, end) for rail in self.line_string_rails]
+
+    def _apply_push_comp(self, linestring: shgeo.LineString, start: float, end: float) -> shgeo.Point | shgeo.LineString:
+        if not start and not end:
+            return linestring
+        if start + end >= linestring.length:
+            return linestring
+        if end == 0:
+            end = 0.00000001
+        return substring(linestring, start, -end)
+
     @property
     @cache
     def line_string_rails(self):
@@ -808,8 +832,7 @@ class SatinColumn(EmbroideryElement):
     @cache
     def flattened_sections(self):
         """Flatten the rails, cut with the rungs, and return the sections in pairs."""
-
-        rails = list(self.line_string_rails)
+        rails = self._get_compensated_line_string_rails(*self.push_compensation_px)
         rungs = list(self.line_string_rungs)
         cut_points = [[], []]
         for rung in rungs:
@@ -1186,7 +1209,7 @@ class SatinColumn(EmbroideryElement):
 
     @debug.time
     def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False,
-                             ) -> typing.List[typing.Tuple[Point, Point]]:
+                             ) -> List[Tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().
@@ -1333,13 +1356,13 @@ class SatinColumn(EmbroideryElement):
             stitches=[Point(*end_point)]
         )
 
-    def _do_underlay_stitch_groups(self, end_point):
+    def _do_underlay_stitch_groups(self, top_layer, end_point):
         stitch_groups = []
         if self.center_walk_underlay:
             stitch_groups.extend(self.do_center_walk(end_point))
 
         if self.contour_underlay:
-            stitch_groups.extend(self.do_contour_underlay(end_point))
+            stitch_groups.extend(self.do_contour_underlay(top_layer, end_point))
 
         if self.zigzag_underlay:
             stitch_groups.extend(self.do_zigzag_underlay(end_point))
@@ -1355,7 +1378,7 @@ class SatinColumn(EmbroideryElement):
                 stitches=[Stitch(*coord) for coord in linestring.coords]
             )
 
-    def do_contour_underlay(self, end_point):
+    def do_contour_underlay(self, top_layer, end_point):
         # "contour walk" underlay: do stitches up one side and down the
         # other. if the two sides are far away, adding a running stitch to travel
         # in between avoids a long jump or a trim.
@@ -1377,6 +1400,20 @@ class SatinColumn(EmbroideryElement):
             [self.contour_underlay_stitch_length],
             self.contour_underlay_stitch_tolerance
         )
+        if self.satin_method == 'zigzag':
+            top_layer_stitches = top_layer.stitches
+            first = None
+            second = None
+            if len(top_layer_stitches) >= 2:
+                for stitch in reversed(top_layer_stitches):
+                    if first is None and "peak_a" in stitch.tags:
+                        first = stitch
+                    if second is None and "peak_b" in stitch.tags:
+                        second = stitch
+                    if all((first, second)):
+                        break
+            first_side = self._shorten_contour_underlay_for_zigzag(first_side, first)
+            second_side = self._shorten_contour_underlay_for_zigzag(second_side, second)
 
         if self._center_walk_is_odd():
             first_side.reverse()
@@ -1405,6 +1442,13 @@ class SatinColumn(EmbroideryElement):
         self.add_running_stitches(first_side[-1], second_side[0], stitch_group)
         stitch_group.stitches += second_side
         return [stitch_group]
+
+    def _shorten_contour_underlay_for_zigzag(self, rail, end_point):
+        if not end_point:
+            return rail
+        line = shgeo.LineString(rail)
+        end = -line.project(shgeo.Point(end_point))
+        return [Point(*point) for point in self._apply_push_comp(line, 0, end).coords]
 
     def do_center_walk(self, end_point):
         # Center walk underlay is just a running stitch down and back on the
@@ -1721,14 +1765,14 @@ class SatinColumn(EmbroideryElement):
                     length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=2 * i, from_end=True)
                 stitch_group.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
 
-            stitch_group.add_stitch(a_short)
+            stitch_group.add_stitch(a_short, ("satin_column", "peak_a", "peak_stitch"))
 
             split_points, _ = self.get_split_points(
                 a, b, a_short, b_short, max_stitch_length, None,
                 length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1), row_num=2 * i + 1)
             stitch_group.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
 
-            stitch_group.add_stitch(b_short)
+            stitch_group.add_stitch(b_short,  ("satin_column", "peak_b", "peak_stitch"))
 
             last_point = b
             last_point_short = b_short
@@ -1926,11 +1970,12 @@ class SatinColumn(EmbroideryElement):
         end_point = self.end_point(self.next_stitch(next_element))
         stitch_groups = []
 
-        # underlays
-        stitch_groups.extend(self._do_underlay_stitch_groups(end_point))
-
         # top layer
         top_layer_group = self._do_top_layer_stitch_group()
+
+        # underlays
+        stitch_groups.extend(self._do_underlay_stitch_groups(top_layer_group, end_point))
+
         if end_point:
             stitch_groups.extend(self._split_top_layer(top_layer_group, end_point))
         else:
