@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING, List, cast
 import wx
 from inkex import Color, ColorError
 
+from ..threads import ThreadColor, ThreadPalette
 from .colors import string_to_color
 
 if TYPE_CHECKING:
@@ -125,6 +126,16 @@ class Palette:
         if not self.symmetry:
             code_str = f'...{code}...'
         self.palette_code = code_str
+
+    def apply_palette(self, palette: ThreadPalette) -> None:
+        """Adapt stripe colors to match nearest colors of a given thread palette
+
+        :param palette: the thread palette to match stripe colors to
+        """
+        for direction in self.palette_stripes:
+            for stripe in direction:
+                stripe['color'] = palette.nearest_color(ThreadColor(stripe['color'])).to_hex_str()
+        self.update_code()
 
     def parse_simple_code(self, code: str) -> None:
         """Example code:
