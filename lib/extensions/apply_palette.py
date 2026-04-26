@@ -3,10 +3,14 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+from json import dumps
+
 from ..elements import Clone, FillStitch
 from ..gui.abort_message import AbortMessageApp
 from ..gui.apply_palette import ApplyPaletteApp
 from ..i18n import _
+from ..tartan.palette import Palette
+from ..tartan.utils import get_tartan_settings
 from ..threads import ThreadCatalog, ThreadColor
 from .base import InkstitchExtension
 
@@ -50,6 +54,15 @@ class ApplyPalette(InkstitchExtension):
             nearest_color = palette.nearest_color(ThreadColor(element.color))
             if isinstance(element, FillStitch):
                 element.node.style['fill'] = nearest_color.to_hex_str()
+
+                # Apply palette to tartan color palette
+                if element.node.get('inkstitch:tartan', None):
+                    settings = get_tartan_settings(element.node)
+                    tartan_palette = Palette()
+                    tartan_palette.update_from_code(settings['palette'])
+                    tartan_palette.apply_palette(palette)
+                    settings['palette'] = tartan_palette.palette_code
+                    element.node.set('inkstitch:tartan', dumps(settings))
             else:
                 element.node.style['stroke'] = nearest_color.to_hex_str()
 
