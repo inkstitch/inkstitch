@@ -5,7 +5,7 @@ import numpy as np
 import shapely.prepared
 from networkx import is_empty
 from shapely import geometry as shgeo
-from shapely.affinity import translate
+from shapely.affinity import scale, translate
 from shapely.ops import linemerge, nearest_points, unary_union
 
 from lib.utils import prng
@@ -16,10 +16,10 @@ from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_geometry_collection,
                               ensure_multi_line_string, reverse_line_string)
 from ..utils.threading import check_stop_flag
-from .running_stitch import random_running_stitch
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
                         graph_make_valid, travel)
+from .running_stitch import random_running_stitch
 
 
 def guided_fill(shape,
@@ -251,6 +251,9 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
     shape_envelope = shapely.prepared.prep(shape.convex_hull)
 
+    if num_staggers == 0:
+        num_staggers = 1  # sanity check to avoid division by zero.
+
     start_row = _get_start_row(line, shape, row_spacing, translate_direction)
     row = start_row
     direction = 1
@@ -260,9 +263,11 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
         check_stop_flag()
 
         if strategy == 0:
+            # Copy
             translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
         elif strategy == 1:
+            # parallel offset
             offset = row * row_spacing
             if offset == 0:
                 # this is needed for macOS builds
@@ -275,10 +280,20 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         if enable_random_stitch_length:
             points = [InkstitchPoint(*x) for x in offset_line.coords]
+
+            # stagger rows
+            start = ((row / num_staggers) % 1) * max_stitch_length
+            first_segment = shgeo.LineString(points[:2])
+            segment_length = max(first_segment.length, 0.1)
+            target_length = segment_length + 2 * start
+            scale_factor = target_length / segment_length
+            extended_line = scale(first_segment, scale_factor, scale_factor)
+            points = [InkstitchPoint(*extended_line.coords[0])] + points
+
             stitched_line = shgeo.LineString(random_running_stitch(
                 points, [max_stitch_length], tolerance, random_sigma, prng.join_args(random_seed, row)))
         else:
-            stitched_line = apply_stitches(offset_line, [max_stitch_length], num_staggers, row_spacing, row)
+            stitched_line = apply_stitches(offset_line, [max_stitch_length], num_staggers, row_spacing, row, tolerance)
         intersection = shape.intersection(stitched_line)
 
         if not intersection.is_empty and shape_envelope.intersects(stitched_line):
