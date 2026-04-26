@@ -335,10 +335,6 @@ def _stagger_line(line, stitch_length, staggers, i, tolerance, is_random, length
         apply_stagger(line, stitch_length, staggers, i, tolerance, is_random, length_sigma, random).coords
     )
 
-    # simplifying the path in apply_stitches could have removed the start or end point
-    # we can simply add it again, the minimum stitch length value will take care to remove possible duplicates
-    points = [line[0]] + points + [line[-1]]
-
     stitched_line = [InkstitchPoint(*point) for point in points]
     if should_reverse and flip_copies:
         stitched_line.reverse()
