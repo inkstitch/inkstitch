@@ -10,22 +10,27 @@ from ...i18n import _
 from . import SimulatorPreferenceDialog
 from . import DesignInfoDialog
 from ...utils.settings import global_settings
+from ...stitch_plan import StitchPlan
+from typing import Optional
 
 
 class ViewPanel(ScrolledPanel):
     """"""
 
     @debug.time
-    def __init__(self, parent, detach_callback):
+    def __init__(self, parent, detach_callback, stitch_plan: Optional[StitchPlan] = None):
         """"""
         self.parent = parent
         self.detach_callback = detach_callback
         ScrolledPanel.__init__(self, parent)
         self.SetupScrolling(scroll_y=True, scroll_x=False)
 
+        self.stitch_plan: Optional[StitchPlan] = stitch_plan
+
         self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
 
         self.control_panel = parent.cp
+        self.info_panel: Optional[DesignInfoDialog] = None
 
         self.npp_button_status = global_settings['npp_button_status']
         self.jump_button_status = global_settings['jump_button_status']
@@ -142,6 +147,11 @@ class ViewPanel(ScrolledPanel):
 
         self.SetSizerAndFit(outer_sizer)
 
+    def load(self, stitch_plan: Optional[StitchPlan]) -> None:
+        self.stitch_plan = stitch_plan
+        if self.info_panel is not None:
+            self.info_panel.set_stitch_plan(stitch_plan)
+
     def set_drawing_panel(self, drawing_panel):
         self.drawing_panel = drawing_panel
 
@@ -159,26 +169,27 @@ class ViewPanel(ScrolledPanel):
         self.toggle_npp(event)
 
     def toggle_npp(self, event):
-        self.drawing_panel.Refresh()
         global_settings['npp_button_status'] = self.btnNpp.GetValue()
+        self.drawing_panel.Refresh()
 
     def on_cursor_button(self, event):
-        self.drawing_panel.Refresh()
         global_settings['display_crosshair'] = self.btnCursor.GetValue()
+        self.drawing_panel.Refresh()
 
     def toggle_page(self, event):
         debug.log("toggle page")
         value = self.btnPage.GetValue()
         self.drawing_panel.set_show_page(value)
-        self.drawing_panel.Refresh()
         global_settings['toggle_page_button_status'] = value
+        self.drawing_panel.Refresh()
 
     def on_marker_button(self, marker_type, event):
         value = event.GetEventObject().GetValue()
         self.control_panel.slider.enable_marker_list(marker_type, value)
+        global_settings[f'{marker_type}_button_status'] = value
+        # Toggling jump toggles whether jump stitches are drawn by the drawing panel, too...
         if marker_type == 'jump':
             self.drawing_panel.Refresh()
-        global_settings[f'{marker_type}_button_status'] = value
 
     def on_settings_button(self, event):
         if event.GetEventObject().GetValue():
@@ -190,7 +201,7 @@ class ViewPanel(ScrolledPanel):
 
     def on_info_button(self, event):
         if event.GetEventObject().GetValue():
-            self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
+            self.info_panel = DesignInfoDialog(self, title=_('Design Info'), stitch_plan=self.stitch_plan)
             self.info_panel.Bind(wx.EVT_CLOSE, self.info_panel_closed)
             self.info_panel.Show()
         else:

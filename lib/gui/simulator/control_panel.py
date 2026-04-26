@@ -13,15 +13,21 @@ from ...i18n import _
 from ...utils import get_resource_dir
 from ...utils.settings import global_settings
 from . import SimulatorSlider
+from typing import cast, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from .simulator_panel import SimulatorPanel
 
 
 class ControlPanel(wx.Panel):
     """"""
 
     @debug.time
-    def __init__(self, parent, *args, **kwargs):
+    def __init__(self, parent: "SimulatorPanel", *args, **kwargs) -> None:
         """"""
         self.parent = parent
+        # Todo: Decouple control panel from its parent simulator panel?
+        self.simulator_panel: "SimulatorPanel" = parent
         self.stitch_plan = kwargs.pop('stitch_plan', None)
         self.detach_callback = kwargs.pop('detach_callback', None)
         self.target_stitches_per_second = kwargs.pop('stitches_per_second')
@@ -29,7 +35,6 @@ class ControlPanel(wx.Panel):
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
-        self.drawing_panel = None
         self.num_stitches = 0
         self.current_stitch = 0
         self.speed = global_settings['simulator_speed']
@@ -39,7 +44,8 @@ class ControlPanel(wx.Panel):
         self.icons_dir = get_resource_dir("icons")
 
         # Widgets
-        self.button_size = self.GetTextExtent("M").y * 2
+        # Redundant cast to make Mypy happy, wxwidgets types are't perfect...
+        self.button_size = cast(wx.Size, self.GetTextExtent("M")).y * 2
         self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
         self.btnMinus = wx.Button(self, -1, style=self.button_style)
         self.btnMinus.Bind(wx.EVT_BUTTON, self.animation_slow_down)
@@ -145,10 +151,6 @@ class ControlPanel(wx.Panel):
         if self.stitch_plan:
             wx.CallLater(50, self.load, self.stitch_plan)
 
-    def set_drawing_panel(self, drawing_panel):
-        self.drawing_panel = drawing_panel
-        self.drawing_panel.set_speed(self.speed)
-
     def _set_num_stitches(self, num_stitches):
         if num_stitches < 2:
             # otherwise the slider and intctrl get mad
@@ -217,12 +219,12 @@ class ControlPanel(wx.Panel):
             self.set_speed(self.target_stitches_per_second)
 
     def animation_forward(self, event=None):
-        self.drawing_panel.forward()
+        self.simulator_panel.forward()
         self.direction = 1
         self.update_speed_text()
 
     def animation_reverse(self, event=None):
-        self.drawing_panel.reverse()
+        self.simulator_panel.reverse()
         self.direction = -1
         self.update_speed_text()
 
@@ -237,8 +239,8 @@ class ControlPanel(wx.Panel):
         self.speed = int(max(speed, 1))
         self.update_speed_text()
 
-        if self.drawing_panel:
-            self.drawing_panel.set_speed(self.speed)
+        if self.simulator_panel:
+            self.simulator_panel.set_speed(self.speed)
 
     def format_speed_text(self, speed):
         return _('%d stitches/sec') % speed
@@ -251,12 +253,12 @@ class ControlPanel(wx.Panel):
         stitch = event.GetEventObject().GetValue()
         self.stitchBox.SetValue(stitch)
 
-        if self.drawing_panel:
-            self.drawing_panel.set_current_stitch(stitch)
+        if self.simulator_panel:
+            self.simulator_panel.set_current_stitch(stitch)
 
         self.parent.SetFocus()
 
-    def on_current_stitch(self, stitch, command):
+    def on_current_stitch(self, stitch):
         if self.current_stitch != stitch:
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
@@ -283,8 +285,8 @@ class ControlPanel(wx.Panel):
 
         self.slider.SetValue(stitch)
 
-        if self.drawing_panel:
-            self.drawing_panel.set_current_stitch(stitch)
+        if self.simulator_panel:
+            self.simulator_panel.set_current_stitch(stitch)
         event.Skip()
 
     def animation_slow_down(self, event):
@@ -296,10 +298,10 @@ class ControlPanel(wx.Panel):
         self.set_speed(self.speed * 2.0)
 
     def animation_pause(self, event=None):
-        self.drawing_panel.stop()
+        self.simulator_panel.stop()
 
     def animation_start(self, event=None):
-        self.drawing_panel.go()
+        self.simulator_panel.go()
 
     def on_start(self):
         self.btnPlay.SetValue(True)
@@ -315,18 +317,18 @@ class ControlPanel(wx.Panel):
             self.animation_pause()
 
     def play_or_pause(self, event):
-        if self.drawing_panel.animating:
+        if self.simulator_panel.animating:
             self.animation_pause()
         else:
             self.animation_start()
 
     def animation_one_stitch_forward(self, event):
         self.animation_pause()
-        self.drawing_panel.one_stitch_forward()
+        self.simulator_panel.one_stitch_forward()
 
     def animation_one_stitch_backward(self, event):
         self.animation_pause()
-        self.drawing_panel.one_stitch_backward()
+        self.simulator_panel.one_stitch_backward()
 
     def animation_one_command_backward(self, event):
         self.animation_pause()
@@ -337,7 +339,7 @@ class ControlPanel(wx.Panel):
             if stitch.jump or stitch.trim or stitch.stop or stitch.color_change:
                 break
             stitch_number -= 1
-        self.drawing_panel.set_current_stitch(stitch_number)
+        self.simulator_panel.set_current_stitch(stitch_number)
 
     def animation_one_command_forward(self, event):
         self.animation_pause()
@@ -348,7 +350,7 @@ class ControlPanel(wx.Panel):
             if stitch.jump or stitch.trim or stitch.stop or stitch.color_change:
                 break
             stitch_number += 1
-        self.drawing_panel.set_current_stitch(stitch_number)
+        self.simulator_panel.set_current_stitch(stitch_number)
 
     def animation_restart(self, event):
-        self.drawing_panel.restart()
+        self.simulator_panel.restart()
