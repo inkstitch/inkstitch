@@ -13,9 +13,6 @@
       "type": "debugpy",
       "request": "launch",
       "module": "pytest",
-      "args": [
-        "tests/lettering/test_font.py"
-      ]
     }
   ]
 }
