@@ -60,9 +60,6 @@ jobs:
           python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.4-cp311-cp311-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
-          # for networkx
-          python -m pip install pandas
-          python -m pip install pyarrow
 
           python -m pip install pyinstaller
 
@@ -124,9 +121,6 @@ jobs:
           python -m pip install numpy --no-binary numpy
 
           python -m pip install -r requirements.txt
-          # for networkx
-          python -m pip install pandas
-          python -m pip install pyarrow
 
           python -m pip install pyinstaller
 
@@ -267,9 +261,6 @@ jobs:
           python -m pip install wheel
           pip install wxPython
           python -m pip install -r requirements.txt
-          # for networkx
-          python -m pip install pandas
-          python -m pip install pyarrow
 
           python -m pip install pyinstaller
 
@@ -373,9 +364,6 @@ jobs:
           pip install PyGObject
           pip install wxPython
           pip install -r requirements.txt
-          # for networkx
-          pip install pandas
-          pip install pyarrow
 
           pip install pyinstaller
 
@@ -432,9 +420,6 @@ jobs:
           pip install PyGObject
           pip install wxPython
           pip install -r requirements.txt
-          # for networkx
-          pip install pandas
-          pip install pyarrow
 
           pip install pyinstaller
 
