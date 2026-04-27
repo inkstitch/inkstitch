@@ -3,8 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from html import unescape
-from sys import exit, platform
+from sys import exit
 
 from inkex import errormsg
 from lxml import etree
@@ -30,7 +29,4 @@ class Input(object):
         metadata['inkstitch_svg_version'] = INKSTITCH_SVG_VERSION
 
         out = etree.tostring(stitch_plan).decode('utf-8')
-        if platform == "win32":
-            print(out)
-        else:
-            print(unescape(out))
+        print(out)
