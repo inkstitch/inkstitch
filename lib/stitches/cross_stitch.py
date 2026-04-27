@@ -85,7 +85,7 @@ def _grid_rotate(fill, shape):
     elif not fill.canvas_grid_origin:
         rotation_center = (minx, maxy)
     else:
-        rotation_center = fill.cross_offset
+        rotation_center = tuple(fill.cross_offset)
     rotated_shape = rotate(shape, -fill.cross_rotation, origin=rotation_center)
     return rotation_center, rotated_shape
 

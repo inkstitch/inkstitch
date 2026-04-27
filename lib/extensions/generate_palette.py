@@ -68,7 +68,7 @@ class GeneratePalette(InkstitchExtension):
             if 'fill' not in element.style.keys() or not isinstance(element, inkex.TextElement):
                 continue
 
-            color = inkex.Color(element.style['fill']).to_rgb()
+            color = inkex.Color(element.style['fill']).to('rgb')
             color_name = element.get_text().split(' ')
             if len(color_name) > 1 and color_name[-1].isdigit():
                 number = color_name[-1]
