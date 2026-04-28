@@ -95,7 +95,7 @@ The bash environment requires the path of software to create a build or manual i
 * Right click into the file browser and click on `Git Bash Here` to download Ink/Stitch into the extensions folder
 
   ![Right click menu](/assets/images/developers/windows-manual-build/GIT.png)
-* Run the following commands in the terminal emulator:
+* Run the following command in the terminal emulator:
 
   ```
   git clone --recurse-submodules https://github.com/inkstitch/inkstitch

@@ -16,7 +16,7 @@ Ink/Stitch offers several option to create satin columns. Methods 1 to 4 create 
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
-1. [Stroke to Satin](#1-line-to-satin): for equal width satin columns
+1. [Stroke to Satin](#1-line-to-satin): for even width satin columns
 2. [Stroke to Live Path Effect Satin](#2-line-to-live-path-effect-satin): modifiable satin column with optional patterned outline
 3. [Zigzag to Satin](#3-zigzag-line-to-satin): satin column creation for graphic tablets and touch screens
 4. [Fill to Satin](#4-fill-to-satin): create satin columns from fills
@@ -24,7 +24,7 @@ Ink/Stitch offers several option to create satin columns. Methods 1 to 4 create 
 
 ### Method 1 - Generate a satin column using a stroke
 
-These methods takes a path with a contour color (stroke) and converts it to a satin column. They are most useful for even width satin columns.
+These methods take a path with a contour color (stroke) and convert it to a satin column. They are most useful for even width satin columns.
 
 #### Option 1
 

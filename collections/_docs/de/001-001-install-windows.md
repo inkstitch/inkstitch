@@ -187,24 +187,6 @@ PYTHONPATH = (not set)
 
 Installiere Inkscape erneut. Stelle sicher, dass die Checkbox "Zu Pfad hinzufügen" (Add to path) aktiviert ist, wenn die Frage nach PYTHONPATH während der Installation auftaucht.
 
-### Windows 7: Fehlermeldung
-
-Wenn du die folgende Fehlermeldung erhälst, installiere bitte die Microsoft Windows Sicherheitsupdates auf deinem Computer.
-
-```
-Traceback (most recent call last):
-File "Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_multiprocessing.py", line 12, in
-File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
-File "multiprocessing_init_.py", line 16, in
-File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
-File "multiprocessing\context.py", line 6, in
-File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
-File "multiprocessing\reduction.py", line 16, in
-File "PyInstaller\loader\pyimod03_importers.py", line 495, in exec_module
-File "socket.py", line 49, in
-ImportError: DLL load failed while importing _socket: Paramètre incorrect.
-```
-
 ### Windows 8: Fehlermeldung
 
 ![The program can't start because api-ms-win-crt-math-l1-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem](/assets/images/docs/en/windows-install/win8.png)
