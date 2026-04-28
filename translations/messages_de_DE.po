@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-28 03:29+0000\n"
-"PO-Revision-Date: 2026-04-28 03:29\n"
+"PO-Revision-Date: 2026-04-28 07:32\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -3915,7 +3915,7 @@ msgstr "Gitterversatz (mm) x[ y]"
 
 #: lib/gui/cross_stitch_helper.py:148
 msgid "Output options"
-msgstr ""
+msgstr "Ausgabe Optionen"
 
 #: lib/gui/cross_stitch_helper.py:153
 msgid "Apply grid settings to"
@@ -3927,15 +3927,15 @@ msgstr "Parameter"
 
 #: lib/gui/cross_stitch_helper.py:165
 msgid "Defines whether params for all selected elements should be updated or not."
-msgstr ""
+msgstr "Legt fest, ob Parametereinstellungen für die ausgewählten Elemente aktualisiert werden sollen."
 
 #: lib/gui/cross_stitch_helper.py:170
 msgid "Pixelate"
-msgstr ""
+msgstr "Verpixeln"
 
 #: lib/gui/cross_stitch_helper.py:172
 msgid "Defines whether the outlines of selected fill shapes should be pixelated or not."
-msgstr ""
+msgstr "Legt fest, ob die Form der ausgewählten Füllelemente verpixelt wird."
 
 #: lib/gui/cross_stitch_helper.py:177
 msgid "Add nodes"
@@ -3947,15 +3947,15 @@ msgstr "Knoten im horizontalen Gitterabstand hinzufügen"
 
 #: lib/gui/cross_stitch_helper.py:193
 msgid "Element handling"
-msgstr ""
+msgstr "Elemente"
 
 #: lib/gui/cross_stitch_helper.py:196
 msgid "Remove overlaps"
-msgstr ""
+msgstr "Überlappungen entfernen"
 
 #: lib/gui/cross_stitch_helper.py:199
 msgid "Inserts a new set of non-overlapping shapes and removes selected fill elements"
-msgstr ""
+msgstr "Entfernt ausgewählte Füllelemente und fügt eine neue Gruppe mit sich nicht überlappenden Elementen ein"
 
 #: lib/gui/cross_stitch_helper.py:208
 msgid "Setup page grid"
@@ -3991,11 +3991,11 @@ msgstr "Bitmaps konvertieren"
 
 #: lib/gui/cross_stitch_helper.py:261
 msgid "One cross each pixel"
-msgstr ""
+msgstr "Ein Kreuz pro Pixel"
 
 #: lib/gui/cross_stitch_helper.py:263
 msgid "Scales the image up by using one cross for each pixel"
-msgstr ""
+msgstr "Diese Option vergrößert das Design signifikant. Jeder Pixel ergibt ein Feld des Kreuzstichmusters"
 
 #: lib/gui/cross_stitch_helper.py:269 lib/gui/cross_stitch_helper.py:278
 msgid "Number of colors"
@@ -4117,7 +4117,13 @@ msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\
 "* Generate pixelated fills from bitmaps.\n"
 "* Remove overlaps.\n"
 "* Setup a page grid."
-msgstr ""
+msgstr "Diese Erweiterung hilft, Kreuzstichmuster für Ink/Stitch vorzubereiten. Sie kann:\n\n"
+"* Gittergröße direkt oder über die maximale Stichlänge festlegen\n"
+"* Kreuzstichparameter anwenden\n"
+"* Elemente verpixeln\n"
+"* Rastergrafiken in verpixelte Füllelemente umwandeln\n"
+"* Überlappungen entfernen\n"
+"* Seitengitter setzen."
 
 #: lib/gui/cross_stitch_helper.py:432 lib/gui/cross_stitch_helper.py:433
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
@@ -4125,11 +4131,11 @@ msgstr "https://inkstitch.org/de/docs/fill-tools/#kreuzstich-helfer"
 
 #: lib/gui/cross_stitch_helper.py:443
 msgid "Preview image (if applicable)"
-msgstr ""
+msgstr "Vorschaubild (wenn vorhanden)"
 
 #: lib/gui/cross_stitch_helper.py:449
 msgid "SVG Preview (slow)"
-msgstr ""
+msgstr "SVG Vorschau (langsam)"
 
 #: lib/gui/cross_stitch_helper.py:466
 msgid "Reset values"
@@ -4913,15 +4919,15 @@ msgstr "Punktgröße für Nadeleinstichstellen (mm)"
 
 #: lib/gui/simulator/simulator_preferences.py:54
 msgid "Crosshair radius (px)"
-msgstr ""
+msgstr "Fadenkreuz-Radius (px)"
 
 #: lib/gui/simulator/simulator_preferences.py:58
 msgid "Crosshair thickness (px)"
-msgstr ""
+msgstr "Fadenkreuz-Linienbreite (px)"
 
 #: lib/gui/simulator/simulator_preferences.py:66
 msgid "Crosshair colour"
-msgstr ""
+msgstr "Fadenkreuz-Farbe"
 
 #: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
