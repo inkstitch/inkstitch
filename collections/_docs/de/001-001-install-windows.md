@@ -13,7 +13,9 @@ Wir stellen Anfänger-Tutorials auf unserem <i class="fab fa-youtube"></i> [YouT
 
 ## Vorraussetzung
 
-Ink/Stitch ist eine Inkscape Erweiterung. Installiere [Inkscape](https://inkscape.org/release/) Version 1.0.2 oder höher, bevor du Ink/Stitch installierst.
+Ink/Stitch ist eine Inkscape Erweiterung. Daher muss vor der Installation eine aktuelle [Inkscape](https://inkscape.org/release/) Version (mindestens 1.0.2) installiert werden. Lade Inkscape am Besten von der Webseite herunter. Die Windows-App Store Version im speziellen könnte bei der Ink/Stitch-Installation Probleme hervorrufen.
+
+Inkscape muss ebenfalls mindestens einmal geöffnet und geschlossen worden sein. Inkscape erstellt dann die erforderliche Dateistruktur für Erweiterungen.
 
 ## Herunterladen
 
@@ -141,6 +143,19 @@ Abonniere den News-Feed-Kanal um über Ink/Stitch updates informiert zu werden.
 
 ## Fehlerbehebung
 
+### Error: Inkscape Extensions folder not found!
+
+Wenn die Installation nicht erfolgreich war und mit der Fehlermeldung `Error: Inkscape Extensions folder not found! Install and then run Inkscape to create the extension folder.` endet:
+
+* Überprüfe, dass Inkscape tatsächlich installiert ist und mindestens einmal genutzt wurde.
+
+Ist dies geschehen und die Fehlermeldung wird noch immer angezeigt, befindet sich der Ordner für Inkscape-Erweiterungen möglicherweise nicht dort, wo Ink/Stitch dies erwartet. Dies ist immer der Fall, wenn Inkscape durch den Windows App Store installiert wurde.
+
+* Lade Inkscape von der [Inkscape website](https://inkscape.org/release/) (and run it at least once) herunter, installiere es, öffne und schließe das Programm, bevor du einen erneuten Installationsversuch unternimmst
+* oder lade die [Ink/Stitch zip Datei]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.zip) herunter und extrahiere sie in den Inkscape Ordner für Nutzererweiterungen.
+
+  Den Ordner findest du, indem du Inkscape öffnest. In Inkscape klicke auf `Bearbeiten > Einstellungen > System`. Hier werden die Systempfade angezeigt. In der Reihe mit den `Benutzererweiterungen` klicke auf `Öffnen`
+
 ### Ink/Stitch startet nicht / Menüpunkte sind grau
 
 **Ink/Stitch-Version überprüfen**
@@ -170,11 +185,6 @@ startupinfo)
 WindowsError: [Error 2] The system cannot find the file specified
 ```
 
-**Installationspfad überprüfen**
-
-Überprüfe, ob die Dateien evtl. in einen *Unterordner* extrahiert wurden.
-Es ist wichtig, dass die Ink/Stitch-Dateien **direkt** in dem Ordner "Benutzererweiterungen" sind.
-
 ### PYTHONPATH
 
 Es gab einige Bericht über Fehlermeldungen die so wie diese hier beginnen:
@@ -202,7 +212,6 @@ Wenn diese beiden Fehlermeldungen bei einer Windows 8 installation auftauchen, b
 
 Es möglich, dass die Übersetzung unvollständig ist. Das erkennt man daran, dass in einem Fenster sowohl englische, als auch anderssprachige Texte erscheinen.
 Wenn du helfen willst, die Übersetzung zu vervollständigen, lese unsere [Beschreibung für Übersetzer](/de/developers/localize/).
-
 
 **Spracheinstellungen**
 

@@ -15,8 +15,9 @@ Nous fournissons aussi aux débutants des tutoriels vidéo sur notre <i class="f
 
 ## Prérequis
 
-Ink/Stitch est une extension pour Inkscape.
-Vous devez **Télécharger et installer  [Inkscape](https://inkscape.org/release/) Version 1.0.2 ou supérieure** avant d'installer Ink/Stitch. 
+Ink/Stitch est une extension pour Inkscape. Par conséquent, une version récente d'[Inkscape](https://inkscape.org/release/) (au moins la version 1.0.2) doit être installée avant l'installation.
+
+Il est préférable de télécharger Inkscape depuis son site web. La version du Microsoft Store, en particulier, peut causer des problèmes lors de l'installation d'Ink/Stitch.
 
 ## Télécharger
 
@@ -146,9 +147,23 @@ Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch.
 
 ## Problèmes d'Installation Ink/Stitch
 
+### Error: Inkscape Extensions folder not found!
+
+When your installation doesn't succeed and ends with the message `Error: Inkscape Extensions folder not found! Install and then run Inkscape to create the extension folder.`:
+
+* Ensure, that you actually have Inkscape installed and opened and closed it at least once
+
+If this message is still showing up, your Inkscape extensions folder might be at an uncommon location (or you are using the Windows App Store version of Inkscape).
+
+* Download and install Inkscape from the [Inkscape website](https://inkscape.org/release/) (and run it at least once) before you try again
+* or download the [Ink/Stitch zip file]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.zip) and extract it to the Inkscape extensions folder
+
+  You can find the extensions folder by opening Inkscape. Within Inkscape go to `Edit > Preferences > System`. This will show the system paths. In the line of `User extensions` click `open`.
+
 ### Ink/Stitch ne fonctionne pas!
 
 **Windows Anti-Virus**
+
 C'est le cas le plus probable sous Windows, car python est compressé dans un exécutable, et des rapports de logiciels antivirus utilisant des méthodes heuristiques peuvent marquer l'extension comme un faux positif.
 Dans ce cas, la solution consiste à ajouter le dossier d’extensions Ink/Stitch à la liste des exceptions de l'antivirus. Puis réinstaller l’extension et réessayer.
 
@@ -169,19 +184,9 @@ Traceback (most recent call last):
 WindowsError: [Error 2] The system cannot find the file specified
 ```
 
-**Vérifiez la version d'Ink/Stitch **
-
-Vérifiez que vous avez bien téléchargé Ink/Stitch pour Windows ([Téléchargement](#download))
-
-**Confirmer le chemin d'installation**
-
-Vérifiez si vous avez bien installé Ink/Stitch dans le bon dossier.  Si le  dossier `Extensions utilisateur` ne fonctionne pas correctement, vous pouvez aussi essayer d'installer dans le dossier `extensions Inkscape`.
-Vous pouvez trouver leur localisation dans  `Edition > Préferences > Système`.
-
 ### PYTHONPATH
+
 On nous a rapporté des messages d'erreur qui commencent comme ça :
-
-
 
 ```
 Python path configuration:

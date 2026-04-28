@@ -13,7 +13,9 @@ We also provide beginner tutorial videos on our <i class="fab fa-youtube"></i> [
 
 ## Requirements
 
-Ink/Stitch is an Inkscape extension. You will need to download and install [Inkscape](https://inkscape.org/release/) version 1.0.2 or higher before you install Ink/Stitch.
+Ink/Stitch is an Inkscape extension. Therefore, a current version of [Inkscape](https://inkscape.org/release/) (at least 1.0.2) must be installed before installation.
+
+It's best to download Inkscape from the website. The Windows App Store version, in particular, might cause problems during the Ink/Stitch installation.
 
 ## Download
 
@@ -134,8 +136,21 @@ You can follow Ink/Stitch updates through our news feed or through the release f
 <p>You can view project activity on GitHub if you want to stay updated on changes and development progress. <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=inkstitch&repo=inkstitch&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe></p>
 
 ## Troubleshoot
+
 This section covers common issues you may see when Ink/Stitch does not appear, when files are blocked by antivirus software, or when Inkscape cannot locate the correct folder. It also describes how to address Python path problems, Windows update issues, Windows 8 DLL messages, and language display problems.
 
+### Error: Inkscape Extensions folder not found!
+
+When your installation doesn't succeed and ends with the message `Error: Inkscape Extensions folder not found! Install and then run Inkscape to create the extension folder.`:
+
+* Ensure, that you actually have Inkscape installed and opened and closed it at least once
+
+If this message is still showing up, your Inkscape extensions folder might be at an uncommon location (or you are using the Windows App Store version of Inkscape).
+
+* Download and install Inkscape from the [Inkscape website](https://inkscape.org/release/) (and run it at least once) before you try again
+* or download the [Ink/Stitch zip file]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.zip) and extract it to the Inkscape extensions folder
+
+  You can find the extensions folder by opening Inkscape. Within Inkscape go to `Edit > Preferences > System`. This will show the system paths. In the line of `User extensions` click `open`.
 
 ### Ink/Stitch does not appear in the extension menu or is greyed out
 
@@ -157,15 +172,6 @@ Traceback (most recent call last):
   File "C:\Program Files\Inkscape\lib\python2.7/subprocess.py", line 575, in _execute_child startupinfo)
 WindowsError: [Error 2] The system cannot find the file specified
 ```
-
-**Confirm Ink/Stitch version**
-
-Verify that you downloaded Ink/Stitch for Windows ([Download](#download))
-
-**Confirm installation path**
-
-Check that you extracted Ink/Stitch into the correct folder. If the `User extensions folder` does not work out correctly, you can also try to install into the `Inkscape extensions folder`.
-You can also look it up under `Edit > Preferences > System`.
 
 ### PYTHONPATH
 
