@@ -147,18 +147,20 @@ Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch.
 
 ## Problèmes d'Installation Ink/Stitch
 
-### Error: Inkscape Extensions folder not found!
+### Erreur : Dossier des extensions Inkscape introuvable !
 
-When your installation doesn't succeed and ends with the message `Error: Inkscape Extensions folder not found! Install and then run Inkscape to create the extension folder.`:
+Si votre installation échoue et affiche le message « Erreur : Dossier des extensions Inkscape introuvable ! Installez puis exécutez Inkscape pour créer le dossier des extensions. » :
 
-* Ensure, that you actually have Inkscape installed and opened and closed it at least once
+* Assurez-vous d’avoir bien installé Inkscape et de l’avoir ouvert et fermé au moins une fois.
 
-If this message is still showing up, your Inkscape extensions folder might be at an uncommon location (or you are using the Windows App Store version of Inkscape).
+Si ce message persiste, il se peut que votre dossier des extensions Inkscape se trouve à un emplacement inhabituel (ou que vous utilisiez la version d’Inkscape du Microsoft Store).
 
-* Download and install Inkscape from the [Inkscape website](https://inkscape.org/release/) (and run it at least once) before you try again
-* or download the [Ink/Stitch zip file]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.zip) and extract it to the Inkscape extensions folder
+* Téléchargez et installez Inkscape depuis le [site web d'Inkscape](https://inkscape.org/release/) (et exécutez-le au moins une fois) avant de réessayer.
 
-  You can find the extensions folder by opening Inkscape. Within Inkscape go to `Edit > Preferences > System`. This will show the system paths. In the line of `User extensions` click `open`.
+* Ou téléchargez le [fichier zip Ink/Stitch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.zip) et extrayez-le dans le dossier des extensions d'Inkscape.
+
+Vous trouverez le dossier des extensions en ouvrant Inkscape. Dans Inkscape, allez dans `Édition > Préférences > Système`. Sur la ligne `Extensions utilisateur`, cliquez sur `Ouvrir`.
+
 
 ### Ink/Stitch ne fonctionne pas!
 
