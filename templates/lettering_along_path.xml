@@ -21,6 +21,11 @@
            <option value="right">Right</option>
            <option value="stretch">Stretch</option>
         </param>
+        <param name="vertical-alignment" type="optiongroup" appearance="combo" gui-text="Vertical alignment">
+           <option value="top">Top</option>
+           <option value="baseline" default="true">Baseline</option>
+           <option value="bottom">Bottom</option>
+        </param>
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">This extension bends an Ink/Stitch text to a path.</label>

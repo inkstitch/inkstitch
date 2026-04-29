@@ -27,6 +27,7 @@ class LetteringAlongPath(InkstitchExtension):
         InkstitchExtension.__init__(self, *args, **kwargs)
         self.arg_parser.add_argument("--notebook")
         self.arg_parser.add_argument("-p", "--text-position", type=str, default='left', dest="text_position")
+        self.arg_parser.add_argument("-v", "--vertical-alignment", type=str, default='left', dest="vertical_alignment")
 
     def effect(self):
         # we ignore everything but the first path/text
@@ -35,7 +36,7 @@ class LetteringAlongPath(InkstitchExtension):
             errormsg(_("Please select one path and one Ink/Stitch lettering group."))
             return
 
-        TextAlongPath(self.svg, text, path, self.options.text_position)
+        TextAlongPath(self.svg, text, path, self.options.text_position, self.options.vertical_alignment)
 
     def get_selection(self):
         groups = list()
@@ -67,11 +68,12 @@ class TextAlongPath:
     '''
     Aligns an Ink/Stitch Lettering group along a path
     '''
-    def __init__(self, svg, text, path, text_position):
+    def __init__(self, svg, text, path, text_position, vertical_alignment):
         self.svg = svg
         self.text = text
         self.path = Stroke(path).as_multi_line_string().geoms[0]
         self.text_position = text_position
+        self.vertical_alignment = vertical_alignment
         self.glyphs = []
 
         self.load_settings()
@@ -134,13 +136,22 @@ class TextAlongPath:
             self.transform_glyphs(path, text_line, i)
 
             # offset path for the next line
-            line_offset = self.font.leading * self.font_scale
+            line_offset = (self.font.leading + self.settings.line_height ) * self.font_scale
             path = path.offset_curve(line_offset)
 
     def transform_glyphs(self, path, line, iterator):
         text_width = line.bounding_box().width
-        text_baseline = line.bounding_box().bottom
         backwards = self.settings.back_and_forth and iterator % 1 == 1
+
+        if self.vertical_alignment == 'bottom':
+            # text is below the line
+            text_baseline = line.bounding_box().top
+        elif self.vertical_alignment == 'baseline':
+            # the baseline of the text is aligned with the line
+            text_baseline = (self.font.leading + self.settings.line_height) * iterator * self.font_scale
+        else:
+            # text is on top of the line
+            text_baseline = line.bounding_box().bottom
 
         if self.text_position == 'stretch':
             num_spaces = len(line) - 1
