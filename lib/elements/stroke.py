@@ -686,7 +686,7 @@ class Stroke(EmbroideryElement):
             ]
 
         if self.stroke_method == "manual_stitch":
-            coords = [shgeo.LineString(self.strip_control_points(subpath)).coords for subpath in path]
+            coords = [shgeo.LineString(self.strip_control_points(subpath)).coords for subpath in path if len(self.strip_control_points(subpath)) > 1]
             coords = self._get_clipped_path(coords)
             return coords
         else:
