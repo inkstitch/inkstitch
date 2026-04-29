@@ -4,7 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import inkex
+from shapely.geometry import Polygon
 
+from ..utils.geometry import ensure_multi_line_string
 from .tags import SVG_GROUP_TAG, SVG_LINK_TAG
 from .units import get_viewbox_transform
 
@@ -132,3 +134,9 @@ def line_strings_to_path(line_strings):
     return inkex.PathElement(attrib={
         "d": str(inkex.paths.CubicSuperPath(csp))
     })
+
+
+def polygon_to_path(polygon: Polygon) -> str:
+    lines = ensure_multi_line_string(polygon.boundary)
+    csp = line_strings_to_csp(lines)
+    return str(inkex.paths.CubicSuperPath(csp))

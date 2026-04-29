@@ -7,7 +7,7 @@ import threading
 from math import sqrt
 
 import wx
-import wx.svg
+import wx.svg  # type: ignore[import-untyped]
 from inkex import Group, Path, PathElement
 from PIL import Image
 
