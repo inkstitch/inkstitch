@@ -142,16 +142,7 @@ class TextAlongPath:
     def transform_glyphs(self, path, line, iterator):
         text_width = line.bounding_box().width
         backwards = self.settings.back_and_forth and iterator % 1 == 1
-
-        if self.vertical_alignment == 'bottom':
-            # text is below the line
-            text_baseline = line.bounding_box().top
-        elif self.vertical_alignment == 'baseline':
-            # the baseline of the text is aligned with the line
-            text_baseline = (self.font.leading + self.settings.line_height) * iterator * self.font_scale
-        else:
-            # text is on top of the line
-            text_baseline = line.bounding_box().bottom
+        text_baseline = self._get_baseline(line, iterator)
 
         if self.text_position == 'stretch':
             num_spaces = len(line) - 1
@@ -214,6 +205,17 @@ class TextAlongPath:
                 old_bbox = transformed_bbox
 
             distance += stretch_space
+
+    def _get_baseline(self, line, iterator):
+        if self.vertical_alignment == 'bottom':
+            # text is below the line
+            return line.bounding_box().top
+        elif self.vertical_alignment == 'baseline':
+            # the baseline of the text is aligned with the line
+            return (self.font.leading + self.settings.line_height) * iterator * self.font_scale
+        else:
+            # text is on top of the line
+            return line.bounding_box().bottom
 
     def _set_transform_info(self, glyph, angle, origin):
         # apply angle and rotation center values if the font contains cross stitch elements
