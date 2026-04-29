@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30mm"
+   height="40mm"
+   viewBox="0 0 30 40"
+   version="1.1"
+   id="svg11804"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="ltr.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
+  <metadata
+     id="metadata17732">
+    <inkstitch:min_stitch_len_mm>0.1</inkstitch:min_stitch_len_mm>
+    <inkstitch:collapse_len_mm>5.0</inkstitch:collapse_len_mm>
+    <inkstitch:min_satin_stroke_width_mm>1</inkstitch:min_satin_stroke_width_mm>
+    <inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
+  </metadata>
+  <sodipodi:namedview
+     id="namedview11806"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="1.7915157"
+     inkscape:cx="-3.907306"
+     inkscape:cy="123.35923"
+     inkscape:window-width="1920"
+     inkscape:window-height="885"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,1"
+       id="guide16690"
+       inkscape:locked="false"
+       inkscape:label="baseline"
+       inkscape:color="rgb(0,134,229)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs11801" />
+  <g
+     inkscape:label="GlyphLayer-A"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       id="path17279"
+       style="fill:none;stroke:#000000;stroke-width:0.264583"
+       d="m 7.5,19.999999 h 15 m -22.5,20 L 15,0 30,39.999999"
+       inkscape:label="PathA" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="GlyphLayer-B"
+     style="display:none">
+    <path
+       id="path17694"
+       style="fill:none;stroke:#000000;stroke-width:0.264583"
+       d="m 0,19.999999 h 30 m -30,20 V 0 H 14.269089 L 30,13.161696 V 29.849683 L 15,39.999999 0,40"
+       inkscape:label="PathB" />
+  </g>
+</svg>

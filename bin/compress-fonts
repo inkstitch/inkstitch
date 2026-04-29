@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 FONT_DIR"
+    exit 1
+fi
+
+FONT_DIR=$1
+find $FONT_DIR -name *.json -exec xz -e {} \;
+find $FONT_DIR -name *.svg -exec xz -e {} \;
