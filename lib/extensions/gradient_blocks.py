@@ -6,7 +6,7 @@
 from math import degrees, pi
 
 from inkex import (Color, ColorError, DirectedLineSegment, Group,
-                   LinearGradient, Path, PathElement, Transform, errormsg)
+                   LinearGradient, PathElement, Transform, errormsg)
 from shapely import geometry as shgeo
 from shapely.affinity import rotate
 from shapely.ops import split
@@ -14,6 +14,7 @@ from shapely.ops import split
 from ..elements import FillStitch
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
+from ..svg.path import polygon_to_path
 from ..svg.tags import INKSTITCH_ATTRIBS
 from .base import InkstitchExtension
 from .duplicate_params import get_inkstitch_attributes
@@ -49,7 +50,7 @@ class GradientBlocks(InkstitchExtension):
             correction_transform = get_correction_transform(element.node)
             style = element.node.style
             index = parent.index(element.node)
-            fill_shapes, attributes = gradient_shapes_and_attributes(element, element.shape, self.svg.viewport_to_unit(1))
+            fill_shapes, attributes = gradient_shapes_and_attributes(element)
 
             # reverse order so we can always insert with the same index number
             fill_shapes.reverse()
@@ -72,7 +73,7 @@ class GradientBlocks(InkstitchExtension):
                 is_gradient = attributes[i]['is_gradient']
                 angle = degrees(attributes[i]['angle'])
                 angle = f'{angle: .2f}'
-                d = self._element_to_path(shape)
+                d = str(polygon_to_path(shape))
                 block = PathElement(attrib={
                     "id": self.uniqueId("path"),
                     "style": str(style),
@@ -108,16 +109,9 @@ class GradientBlocks(InkstitchExtension):
             parent.insert(index, color_block_group)
             element.node.delete()
 
-    def _element_to_path(self, shape):
-        coords = list(shape.exterior.coords)
-        for interior in shape.interiors:
-            coords.extend(interior.coords)
-        path = Path(coords)
-        path.close()
-        return str(path)
 
-
-def gradient_shapes_and_attributes(element, shape, unit_multiplier):
+def gradient_shapes_and_attributes(element):
+    shape = element.shape
     # e.g. url(#linearGradient872) -> linearGradient872
     gradient = element.gradient
     gradient.apply_transform()
@@ -133,17 +127,14 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     # Ink/Stitch somehow turns the stitch angle
     stitch_angle = angle * -1
 
-    # create bbox polygon to calculate the length necessary to make sure that
-    # the gradient splitter lines will cut the entire design
-    # bounding_box returns the value in viewport units, we need to convert the length later to px
     # use the unclipped shape_box as opposed to bounding_box, see issue https://github.com/inkstitch/inkstitch/issues/4194
-    bbox = element.node.shape_box()
+    minx, miny, maxx, maxy = element.original_shape.bounds
+    bbox_polygon = shgeo.Polygon([(minx, miny), (maxx, miny), (maxx, maxy), (minx, maxy)])
 
-    bbox_polygon = shgeo.Polygon([(bbox.left, bbox.top), (bbox.right, bbox.top),
-                                  (bbox.right, bbox.bottom), (bbox.left, bbox.bottom)])
     # gradient stops
     offsets = gradient.stop_offsets
     stop_styles = gradient.stop_styles
+
     # now split the shape according to the gradient stops
     polygons = []
     colors = []
@@ -153,7 +144,7 @@ def gradient_shapes_and_attributes(element, shape, unit_multiplier):
     for i, offset in enumerate(offsets):
         shape_rest = []
         split_point = shgeo.Point(line.point_at_ratio(float(offset)))
-        length = split_point.hausdorff_distance(bbox_polygon) / unit_multiplier
+        length = split_point.hausdorff_distance(bbox_polygon)
         split_line = shgeo.LineString([(split_point.x - length - 2, split_point.y),
                                        (split_point.x + length + 2, split_point.y)])
         split_line = rotate(split_line, angle, origin=split_point, use_radians=True)
