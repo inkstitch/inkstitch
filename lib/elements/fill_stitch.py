@@ -336,9 +336,9 @@ class FillStitch(EmbroideryElement):
                          ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'tartan_fill'),
                          ('fill_method', 'legacy_fill')],
-           default=3.0)
+           default=4.0)
     def max_stitch_length(self):
-        return max(self.get_float_param("max_stitch_length_mm", 3.0), 0.1 * PIXELS_PER_MM)
+        return max(self.get_float_param("max_stitch_length_mm", 4.0), 0.1 * PIXELS_PER_MM)
 
     @property
     @param('row_spacing_mm',

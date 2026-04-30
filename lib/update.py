@@ -15,7 +15,7 @@ from .svg.tags import (CONNECTION_END, CONNECTION_START, EMBROIDERABLE_TAGS,
                        INKSTITCH_ATTRIBS, SVG_USE_TAG)
 from .utils import Point as InkstitchPoint
 
-INKSTITCH_SVG_VERSION = 3
+INKSTITCH_SVG_VERSION = 4
 
 
 def update_inkstitch_document(svg, selection=None, warn_unversioned=True):
@@ -92,6 +92,14 @@ def _update_to(document, version, element):
         _update_to_two(element)
     elif version == 3:
         _update_to_three(document, element)
+    elif version == 4:
+        _update_to_four(document, element)
+
+
+def _update_to_four(document, element):
+    if element.fill_color is not None and not element.get_float_param('max_stitch_length_mm', None):
+        # Updated the default fill stitch length from 3 to 4
+        element.set_param('max_stitch_length_mm', 3)
 
 
 def _update_to_three(document, element):
