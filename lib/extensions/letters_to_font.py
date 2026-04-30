@@ -30,7 +30,7 @@ class LettersToFont(InkstitchExtension):
         self.arg_parser.add_argument("-f", "--file-format", type=str, default="", dest="file_format")
         self.arg_parser.add_argument("-c", "--import-commands", type=str, default="params", dest="import_commands")
 
-    def effect(self):
+    def effect(self) -> None:
         font_dir = self.options.font_dir
         file_format = self.options.file_format
 
@@ -41,10 +41,14 @@ class LettersToFont(InkstitchExtension):
         if not glyphs:
             glyphs = list(Path(font_dir).rglob(file_format.lower()))
 
-        document = self.document.getroot()
+        document = self.document.getroot()  # type: ignore
+        unit_multiplier = self.svg.viewport_to_unit(1)
+        page_bbox = self.svg.get_page_bbox()
         group = None
         for glyph in glyphs:
             letter = self.get_glyph_element(glyph)
+            if not letter:
+                continue
             label = unescape(letter.get(INKSCAPE_LABEL, ' ')).split('.')[0][-1]
             label = f"GlyphLayer-{ label }"
             group = inkex.Group(attrib={
@@ -62,6 +66,14 @@ class LettersToFont(InkstitchExtension):
                 group.insert(0, letter)
 
             document.insert(0, group)
+
+            # move letter to the bottom left of the page
+            bbox = group.bounding_box()
+            if bbox is not None:
+                translate_x = (page_bbox.left - bbox.left) / unit_multiplier
+                translate_y = (page_bbox.bottom - bbox.bottom) / unit_multiplier
+                group.transform @= inkex.Transform(f'translate({translate_x}, {translate_y})')
+
             group.set('style', 'display:none')
 
         # We found no glyphs, no need to proceed
@@ -77,9 +89,9 @@ class LettersToFont(InkstitchExtension):
             # Let's make sure the trim symbol exists in the defs section
             ensure_symbol(document, 'trim')
 
-        self.insert_baseline()
+        self.insert_baseline(page_bbox.bottom)
 
-    def get_glyph_element(self, glyph):
+    def get_glyph_element(self, glyph: Path) -> inkex.Group:
         label = os.path.basename(glyph)
         if self.options.file_format.endswith('SVG'):
             stitch_plan = self.get_svg_elements(glyph)
@@ -93,7 +105,7 @@ class LettersToFont(InkstitchExtension):
         stitch_plan.label = label
         return stitch_plan
 
-    def get_svg_elements(self, glyph):
+    def get_svg_elements(self, glyph: Path) -> inkex.Group:
         glyph_svg = self.load(glyph).getroot()
         glyph_group = inkex.Group()
         # move all embroiderable child elements and groups of the svg file into a group
@@ -101,5 +113,5 @@ class LettersToFont(InkstitchExtension):
             glyph_group.add(child)
         return glyph_group
 
-    def insert_baseline(self):
-        self.svg.namedview.add_guide(position=0.0, name="baseline")
+    def insert_baseline(self, page_bottom: float) -> None:
+        self.svg.namedview.add_guide(position=page_bottom, name="baseline")
