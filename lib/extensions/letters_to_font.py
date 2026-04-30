@@ -44,6 +44,7 @@ class LettersToFont(InkstitchExtension):
         document = self.document.getroot()  # type: ignore
         unit_multiplier = self.svg.viewport_to_unit(1)
         page_bbox = self.svg.get_page_bbox()
+        container_group = inkex.Group()
         group = None
         for glyph in glyphs:
             letter = self.get_glyph_element(glyph)
@@ -61,11 +62,11 @@ class LettersToFont(InkstitchExtension):
             # there will only be one object per color block anyway
             if self.options.import_commands == "none":
                 for element in letter.iter(SVG_PATH_TAG):
-                    group.insert(0, element)
+                    group.append(element)
             else:
-                group.insert(0, letter)
+                group.append(letter)
 
-            document.insert(0, group)
+            container_group.append(group)
 
             # move letter to the bottom left of the page
             bbox = group.bounding_box()
@@ -80,15 +81,15 @@ class LettersToFont(InkstitchExtension):
         if group is None:
             return
 
-        # users may be confused if they get an empty document
-        # make last letter visible again
-        group.set('style', None)
-
         if self.options.import_commands == "symbols":
             # In most cases trims are inserted with the imported letters.
             # Let's make sure the trim symbol exists in the defs section
             ensure_symbol(document, 'trim')
 
+        # insert sorted glyph list
+        self.insert_sorted_glyphs_to_document(document, container_group)
+
+        # insert baseline
         self.insert_baseline(page_bbox.bottom)
 
     def get_glyph_element(self, glyph: Path) -> inkex.Group:
@@ -115,3 +116,11 @@ class LettersToFont(InkstitchExtension):
 
     def insert_baseline(self, page_bottom: float) -> None:
         self.svg.namedview.add_guide(position=page_bottom, name="baseline")
+
+    def insert_sorted_glyphs_to_document(self, document: inkex.Group, container_group: inkex.Group) -> None:
+        container_group[:] = sorted(container_group, key=lambda glyph: glyph.label, reverse=True)
+        for group in container_group:
+            document.append(group)
+        # users may be confused if they get an empty document
+        # make last letter visible
+        group.set('style', None)
