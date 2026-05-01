@@ -23,18 +23,28 @@ class SettingsPanel(wx.Panel):
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.parent.on_font_changed)
 
         text_before_label = wx.StaticText(self, label=_("Text before"))
-        text_before = wx.TextCtrl(self)
-        text_before.Bind(wx.EVT_TEXT, self.parent.on_text_before_changed)
+        self.text_before = wx.TextCtrl(self)
+        self.text_before.Bind(wx.EVT_TEXT, self.parent.on_text_changed)
+
         text_after_label = wx.StaticText(self, label=_("Text after"))
-        text_after = wx.TextCtrl(self)
-        text_after.Bind(wx.EVT_TEXT, self.parent.on_text_after_changed)
-        grid_text_sizer = wx.FlexGridSizer(2, 2, 10, 10)
+        self.text_after = wx.TextCtrl(self)
+        self.text_after.Bind(wx.EVT_TEXT, self.parent.on_text_changed)
+
+        text_multiline_label = wx.StaticText(self, label=_("Second line"))
+        self.text_multiline = wx.TextCtrl(self)
+        self.text_multiline.Bind(wx.EVT_TEXT, self.parent.on_text_changed)
+
+        grid_text_sizer = wx.FlexGridSizer(1, 6, 10, 10)
         grid_text_sizer.AddGrowableCol(1)
+        grid_text_sizer.AddGrowableCol(3)
+        grid_text_sizer.AddGrowableCol(5)
         grid_text_sizer.AddMany([
-            (text_before_label, 1, wx.ALL, 0),
-            (text_before, 1, wx.EXPAND, 0),
-            (text_after_label, 1, wx.ALL, 0),
-            (text_after, 1, wx.EXPAND, 0)
+            (text_before_label, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 0),
+            (self.text_before, 1, wx.ALL | wx.EXPAND, 0),
+            (text_after_label, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 0),
+            (self.text_after, 1, wx.ALL | wx.EXPAND, 0),
+            (text_multiline_label, 0, wx.ALL | wx.ALIGN_CENTER_VERTICAL, 0),
+            (self.text_multiline, 1, wx.ALL | wx.EXPAND, 0)
         ])
 
         notebook_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -266,7 +276,7 @@ class GeneralKerning(wx.Panel):
         self.leading = wx.SpinCtrlDouble(self, min=0, max=10000, inc=1, initial=0, style=wx.SP_WRAP)
         self.leading.Bind(
             wx.EVT_SPINCTRLDOUBLE,
-            lambda event: self.parent.on_font_meta_value_changed("leading", False, event)
+            lambda event: self.parent.on_font_meta_value_changed("leading", True, event)
         )
         horiz_adv_x_default_label = wx.StaticText(self, label=_("Horizontal advance x"))
         self.horiz_adv_x_default = wx.SpinCtrlDouble(self, min=0, max=10000, inc=0.1, initial=50, style=wx.SP_WRAP)
