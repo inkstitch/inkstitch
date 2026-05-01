@@ -13,6 +13,8 @@
             </param>
             <param type="path" name="font-dir" gui-text="Font directory" mode="folder" filetypes="svg"/>
             <spacer />
+            <param type="float" name="margin-left" gui-text="Margin left (mm)"
+                   gui-description='With "Use glyph width" enabled in the json, the margin to the left page border defines the distance between glyphs'>0</param>
             <param name="import-commands" type="optiongroup" appearance="combo" gui-text="Import commands">
                  <option value="params">As param</option>
                  <option value="symbols">As symbol</option>
