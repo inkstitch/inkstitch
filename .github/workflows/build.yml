@@ -77,14 +77,14 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-linux64
           path: artifacts
   linuxarm64:
     runs-on: ubuntu-22.04-arm
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
       - uses: actions/setup-python@v6
@@ -141,29 +141,35 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-linuxarm64
           path: artifacts
   linux32:
     # Node required for actions, install follows 
     # https://github.com/actions/upload-artifact/issues/616
+    # 2026-04-28: Github is deprecating Node 20 as it's going EoL. We can't update node on this runner easily because
+    # unofficial-builds.nodejs.org stops providing x86 binaries after 21.x due to "toolchain incomaptibilities".
+    # (Indeed, node.js dropped official builds for x86 with 10.x, long ago...)
+    # That may become a problem when Github fully deprecates Node 20 in 2026, or maybe not because we're providing our own anyway?
+    # We can't update the actions for this one because newer versions expect to use Node 24 at `/__e/node24/bin/node`.
+    # Perhaps this will need to be replaced with an x64 image that builds this with an x86 toolchain with x86 python?
     runs-on: ubuntu-latest
     container:
       image: linuxmintd/lmde6-i386
       volumes:
       - ${{ github.workspace }}:/__e/node20
     steps:
-      - name: Checkout repository
+      - name: Replace `node` with an i386 version
         shell: bash
         run: |
+          apt-get install -y curl
           ls -lar /__e/node20 &&
-          apt-get update &&
-          apt-get install -y curl &&
           curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
           cd /__e/node20 &&
           tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       # Permissions problem that prevents caching
@@ -173,6 +179,7 @@ jobs:
       - name: Replace `node` with an i386 version
         shell: bash
         run: |
+          apt-get install -y curl
           ls -lar /__e/node20 &&
           curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
           cd /__e/node20 &&
@@ -187,6 +194,7 @@ jobs:
       - name: install os dependencies
         shell: bash
         run: |
+          apt-get update -y
           apt-get install -y python3-dev python3-pip pipx ruby-full
           gem install fpm
           apt-get install -y python3-wheel
@@ -232,14 +240,16 @@ jobs:
         env:
           BUILD: linux32
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Upload artifact
+      - name: Replace `node` with an i386 version
         shell: bash
         run: |
+          apt-get install -y curl
           ls -lar /__e/node20 &&
           curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
           cd /__e/node20 &&
           tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: inkstitch-linux32
           path: artifacts
@@ -254,9 +264,9 @@ jobs:
           python-version: '3.11.x'
           architecture: 'x64'
           cache: 'pip'
-      - uses: microsoft/setup-msbuild@v2
+      - uses: microsoft/setup-msbuild@v3
       - name: Setup Git for Windows SDK
-        uses: git-for-windows/setup-git-for-windows-sdk@v1.11.0
+        uses: git-for-windows/setup-git-for-windows-sdk@v2
         with:
           flavor: build-installers
       - name: install dependencies
@@ -291,7 +301,7 @@ jobs:
       - name: upload-unsigned-exe
         if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: upload-unsigned-exe
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: inkstitch-windows64-exe
           path: |
@@ -321,7 +331,7 @@ jobs:
       - name: upload-unsigned-installer
         if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: upload-unsigned-installer
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: inkstitch-windows64-installer
           path: signed-artifacts
@@ -338,7 +348,7 @@ jobs:
           github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
           wait-for-completion: true
           output-artifact-directory: 'signed-artifacts'
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-windows64
           path: signed-artifacts
@@ -397,7 +407,7 @@ jobs:
           NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-mac-x86
           path: artifacts
@@ -456,7 +466,7 @@ jobs:
           NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-mac-arm64
           path: artifacts
@@ -482,43 +492,40 @@ jobs:
             echo "title=development build of $branch" >> $GITHUB_ENV
           fi
       - name: download linux64
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           name: 'inkstitch-linux64'
           path: 'artifacts/'
       - name: download linuxarm64
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           name: 'inkstitch-linuxarm64'
           path: 'artifacts/'
       - name: download linux32
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           name: 'inkstitch-linux32'
           path: 'artifacts/'
       - name: download windows64
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           name: 'inkstitch-windows64'
           path: 'signed-artifacts/'
         if: always()
       - name: download macx86
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           name: 'inkstitch-mac-x86'
           path: 'artifacts/'
         if: always()
       - name: download macarm64
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           name: 'inkstitch-mac-arm64'
           path: 'artifacts/'
         if: always()
       - name: create/update release
-        # 2026-01-24: v2.5 of this action has timeout issues, see https://github.com/softprops/action-gh-release/issues/704
-        # Pinning at 2.4.2 for now, investigate updating later. An alternative suggested in that issue is to use `gh release upload`
-        # directly, which might not have been an option when we first started using this.
-        uses: softprops/action-gh-release@v2.4.2
+        uses: softprops/action-gh-release@v3
         if: always()
         with:
           token: "${{secrets.GITHUB_TOKEN}}"
