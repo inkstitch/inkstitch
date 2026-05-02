@@ -11,6 +11,9 @@ import os
 import sys
 from pathlib import Path  # to work with paths as objects
 import logging
+from typing import List, TYPE_CHECKING
+if TYPE_CHECKING:
+    from ..extensions.base import InkstitchExtension
 
 logger = logging.getLogger("inkstitch")
 
@@ -31,7 +34,7 @@ def safe_get(dictionary: dict, *keys, default=None):
     return dictionary
 
 
-def write_offline_debug_script(debug_script_dir: Path, ini: dict):
+def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
     '''
     prepare Bash script for offline debugging from console
         arguments:
@@ -109,7 +112,7 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict):
     bash_file.chmod(0o0755)  # make file executable, hopefully ignored on Windows
 
 
-def bash_parser():
+def bash_parser() -> str:
     return r'''
 set -e   #  exit on error
 
@@ -139,7 +142,7 @@ done
 '''
 
 
-def reorder_sys_path():
+def reorder_sys_path() -> None:
     '''
     change sys.path to prefer pip installed inkex over inkscape bundled inkex
     '''
@@ -164,7 +167,7 @@ def reorder_sys_path():
 
 # -----------------------------------------------------------------------------
 # try to resolve debugger type from ini file or cmd line of bash
-def resolve_debug_type(ini: dict):
+def resolve_debug_type(ini: dict) -> str:
     # enable/disable debugger from bash: -d
     if os.environ.get('INKSTITCH_DEBUG_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
         debug_enable = True
@@ -179,7 +182,7 @@ def resolve_debug_type(ini: dict):
 
 
 # try to resolve profiler type from ini file or cmd line of bash
-def resolve_profiler_type(ini: dict):
+def resolve_profiler_type(ini: dict) -> str:
     # enable/disable profiling from bash: -p
     if os.environ.get('INKSTITCH_PROFILE_ENABLE', '').lower() in ['true', '1', 'yes', 'y']:
         profile_enable = True
@@ -202,9 +205,9 @@ def resolve_profiler_type(ini: dict):
 # - pyinstrument - profiler with nice html output
 
 
-def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_args):
+def profile(profiler_type, profile_dir: Path, ini: dict, extension: 'InkstitchExtension', remaining_args: List[str]) -> None:
     '''
-    profile with cProfile, profile or pyinstrument
+    profile with a profiler (e.g. cProfile, profile or pyinstrument)
     '''
     profile_file_base = safe_get(ini, "PROFILE", "profile_file_base", default="debug_profile")
     profile_file_path = profile_dir / profile_file_base  # Path object
@@ -221,13 +224,15 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension, remaining_ar
         with_profile(extension, remaining_args, profile_file_path)
     elif profiler_type == 'pyinstrument':
         with_pyinstrument(extension, remaining_args, profile_file_path)
+    elif profiler_type == 'time':
+        with_time(extension, remaining_args, profile_file_path)
     elif profiler_type == 'monkeytype':
         with_monkeytype(extension, remaining_args, profile_file_path)
     else:
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
 
-def with_cprofile(extension, remaining_args, profile_file_path: Path):
+def with_cprofile(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path):
     '''
     profile with cProfile
     '''
@@ -236,19 +241,21 @@ def with_cprofile(extension, remaining_args, profile_file_path: Path):
     profiler = cProfile.Profile()
 
     profiler.enable()
-    extension.run(args=remaining_args)
-    profiler.disable()
+    try:
+        extension.run(args=remaining_args)
+    finally:
+        profiler.disable()
 
-    profiler.dump_stats(profile_file_path.with_suffix(".prof"))  # can be read by 'snakeviz -s' or 'pyprof2calltree'
-    with open(profile_file_path, 'w') as stats_file:
-        stats = pstats.Stats(profiler, stream=stats_file)
-        stats.sort_stats(pstats.SortKey.CUMULATIVE)
-        stats.print_stats()
-    print(f"Profiler: cprofile, stats written to '{profile_file_path.name}' and '{profile_file_path.name}.prof'. Use snakeviz to see it.",
-          file=sys.stderr)
+        profiler.dump_stats(profile_file_path.with_suffix(".prof"))  # can be read by 'snakeviz -s' or 'pyprof2calltree'
+        with open(profile_file_path, 'w') as stats_file:
+            stats = pstats.Stats(profiler, stream=stats_file)
+            stats.sort_stats(pstats.SortKey.CUMULATIVE)
+            stats.print_stats()
+        print(f"Profiler: cprofile, stats written to '{profile_file_path.name}' and '{profile_file_path.name}.prof'. Use snakeviz to see it.",
+              file=sys.stderr)
 
 
-def with_profile(extension, remaining_args, profile_file_path: Path):
+def with_profile(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
     '''
     profile with profile
     '''
@@ -256,18 +263,19 @@ def with_profile(extension, remaining_args, profile_file_path: Path):
     import pstats
     profiler = profile.Profile()
 
-    profiler.run('extension.run(args=remaining_args)')
+    try:
+        profiler.run('extension.run(args=remaining_args)')
+    finally:
+        profiler.dump_stats(profile_file_path.with_suffix(".prof"))  # can be read by 'snakeviz' or 'pyprof2calltree' - seems broken
+        with open(profile_file_path, 'w') as stats_file:
+            stats = pstats.Stats(profiler, stream=stats_file)
+            stats.sort_stats(pstats.SortKey.CUMULATIVE)
+            stats.print_stats()
+        print(f"'Profiler: profile, stats written to '{profile_file_path.name}' and '{profile_file_path.name}.prof'. Use of snakeviz is broken.",
+              file=sys.stderr)
 
-    profiler.dump_stats(profile_file_path.with_suffix(".prof"))  # can be read by 'snakeviz' or 'pyprof2calltree' - seems broken
-    with open(profile_file_path, 'w') as stats_file:
-        stats = pstats.Stats(profiler, stream=stats_file)
-        stats.sort_stats(pstats.SortKey.CUMULATIVE)
-        stats.print_stats()
-    print(f"'Profiler: profile, stats written to '{profile_file_path.name}' and '{profile_file_path.name}.prof'. Use of snakeviz is broken.",
-          file=sys.stderr)
 
-
-def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
+def with_pyinstrument(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
     '''
     profile with pyinstrument
     '''
@@ -275,16 +283,34 @@ def with_pyinstrument(extension, remaining_args, profile_file_path: Path):
     profiler = pyinstrument.Profiler()
 
     profiler.start()
-    extension.run(args=remaining_args)
-    profiler.stop()
+    try:
+        extension.run(args=remaining_args)
+    finally:
+        profiler.stop()
 
-    profile_file_path = profile_file_path.with_suffix(".html")
-    with open(profile_file_path, 'w') as stats_file:
-        stats_file.write(profiler.output_html())
-    print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
+        profile_file_path = profile_file_path.with_suffix(".html")
+        with open(profile_file_path, 'w') as stats_file:
+            stats_file.write(profiler.output_html())
+        print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
 
 
-def with_monkeytype(extension, remaining_args, profile_file_path: Path) -> None:
+def with_time(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+    """
+    A simple profiler that gives you similar information to running `time`.
+    Low overhead, but of course only provides a high-level picture.
+    """
+    from time import monotonic, process_time
+    wall_start = monotonic()
+    proc_start = process_time()
+    try:
+        extension.run(args=remaining_args)
+    finally:
+        proc = process_time() - proc_start
+        wall = monotonic() - wall_start
+        print(f"Profiler: Time: real: {wall:.2f}s, proc (user+sys): {proc:.2f}s", file=sys.stderr)
+
+
+def with_monkeytype(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
     '''
     'profile' with monkeytype to get type information. This may be handy for anyone who wants to
     add type annotations to older parts of our code that don't have them.
