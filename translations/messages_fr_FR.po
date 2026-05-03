@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-28 03:29+0000\n"
-"PO-Revision-Date: 2026-04-28 03:29\n"
+"POT-Creation-Date: 2026-05-03 03:30+0000\n"
+"PO-Revision-Date: 2026-05-03 03:30\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-28 03:29+0000\n"
+"POT-Creation-Date: 2026-05-03 03:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2772,7 +2772,7 @@ msgstr "Mettre à l'échelle sur l'axe"
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Axe de mise à l'échelle pour les ondulations guidées."
 
-#: lib/elements/stroke.py:546 lib/gui/edit_json/settings_panel.py:193
+#: lib/elements/stroke.py:546 lib/gui/edit_json/settings_panel.py:203
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
@@ -3212,11 +3212,11 @@ msgstr "Aucun élément n'a été choisi.\n\n"
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr "Nous n'avons pas trouvé de couleurs de remplissage sur vos éléments de texte. Veuillez lire les instructions sur notre site Web."
 
-#: lib/extensions/gradient_blocks.py:36 lib/extensions/gradient_blocks.py:44
+#: lib/extensions/gradient_blocks.py:37 lib/extensions/gradient_blocks.py:45
 msgid "Please select at least one object with a gradient fill."
 msgstr "Merci de sélectionner au moins un objet avec un remplissage en dégradé."
 
-#: lib/extensions/gradient_blocks.py:65
+#: lib/extensions/gradient_blocks.py:66
 msgid "Color Gradient Blocks"
 msgstr "Blocs de couleurs de dégradé"
 
@@ -3270,15 +3270,15 @@ msgstr "Veuillez ne sélectionner qu’un seul bloc de texte."
 msgid "https://inkstitch.org/docs/lettering/#lettering-tool"
 msgstr "https://inkstitch.org/fr/docs/lettering/#lettering-tool"
 
-#: lib/extensions/lettering_along_path.py:35
+#: lib/extensions/lettering_along_path.py:36
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr "Merci de sélectionner un chemin et un groupe de lettrage Ink/Stitch."
 
-#: lib/extensions/lettering_along_path.py:80
+#: lib/extensions/lettering_along_path.py:82
 msgid "Couldn't identify the font specified in the lettering group."
 msgstr "Impossible d'identifier la fonte spécifiée dans le groupe de lettrage."
 
-#: lib/extensions/lettering_along_path.py:87
+#: lib/extensions/lettering_along_path.py:89
 msgid "The text doesn't contain any glyphs."
 msgstr "Ce texte ne contient aucun glyphe."
 
@@ -3382,7 +3382,7 @@ msgstr "Lettres en deux parties"
 msgid "Other composed letters"
 msgstr "Autres lettres composées"
 
-#: lib/extensions/letters_to_font.py:38
+#: lib/extensions/letters_to_font.py:40
 msgid "Font directory not found. Please specify an existing directory."
 msgstr "Répertoire de polices non trouvé. Veuillez spécifier un répertoire existant."
 
@@ -3478,7 +3478,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et quitter »"
 
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/cross_stitch_helper.py:468 lib/gui/edit_json/settings_panel.py:64
+#: lib/gui/cross_stitch_helper.py:468 lib/gui/edit_json/settings_panel.py:74
 #: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
 #: lib/gui/simulator/simulator_preferences.py:73
@@ -3663,7 +3663,7 @@ msgstr "Détails du dessin"
 msgid "Title"
 msgstr "Titre"
 
-#: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:245
+#: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:255
 #: lib/gui/lettering/option_panel.py:36
 #: inx/inkstitch_lettering_generate_json.inx:119
 msgid "Size"
@@ -3709,7 +3709,7 @@ msgstr "Aucun avertissement pour les formes sélectionnées !"
 msgid "Invalid Pointer"
 msgstr "Pointeur invalide"
 
-#: lib/extensions/troubleshoot.py:120 lib/gui/edit_json/settings_panel.py:96
+#: lib/extensions/troubleshoot.py:120 lib/gui/edit_json/settings_panel.py:106
 #: inx/inkstitch_lettering_generate_json.inx:22
 msgid "Description"
 msgstr "Description"
@@ -3813,7 +3813,7 @@ msgid "Select color palette"
 msgstr "Sélectionner une palette de couleur"
 
 #: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:470
-#: lib/gui/edit_json/settings_panel.py:66 lib/gui/lettering_font_sample.py:72
+#: lib/gui/edit_json/settings_panel.py:76 lib/gui/lettering_font_sample.py:72
 #: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/selection_to_pattern.py:89
 #: lib/gui/simulator/simulator_preferences.py:75
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
@@ -3821,7 +3821,7 @@ msgid "Apply"
 msgstr "Appliquer"
 
 #: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_helper.py:405
-#: lib/gui/edit_json/main_panel.py:75 lib/gui/element_info.py:42
+#: lib/gui/edit_json/main_panel.py:77 lib/gui/element_info.py:42
 #: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/selection_to_pattern.py:55
 #: lib/gui/tartan/main_panel.py:64 lib/gui/test_swatches.py:83
@@ -3835,14 +3835,14 @@ msgstr "Appliquer"
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:31
 #: inx/inkstitch_knockdown_fill.inx:44
-#: inx/inkstitch_lettering_along_path.inx:25
+#: inx/inkstitch_lettering_along_path.inx:30
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_generate_json.inx:163
 #: inx/inkstitch_lettering_organize_glyphs.inx:27
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
-#: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
+#: inx/inkstitch_letters_to_font.inx:62 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
 #: inx/inkstitch_remove_duplicated_points.inx:14
@@ -3868,7 +3868,7 @@ msgstr "https://inkstitch.org/docs/fr/thread-color/#apply-palette"
 msgid "Ink/Stitch - Cross stitch"
 msgstr "Ink/Stitch - Point de croix"
 
-#: lib/gui/cross_stitch_helper.py:61 lib/gui/edit_json/main_panel.py:74
+#: lib/gui/cross_stitch_helper.py:61 lib/gui/edit_json/main_panel.py:76
 #: lib/gui/lettering_font_sample.py:40 lib/gui/selection_to_pattern.py:24
 #: lib/gui/simulator/view_panel.py:134 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:93
@@ -3914,7 +3914,7 @@ msgstr "Décalage de la grille (mm) x[ y]"
 
 #: lib/gui/cross_stitch_helper.py:148
 msgid "Output options"
-msgstr ""
+msgstr "Options de sortie"
 
 #: lib/gui/cross_stitch_helper.py:153
 msgid "Apply grid settings to"
@@ -3926,15 +3926,15 @@ msgstr "Paramètres"
 
 #: lib/gui/cross_stitch_helper.py:165
 msgid "Defines whether params for all selected elements should be updated or not."
-msgstr ""
+msgstr "Définit si les paramètres de tous les éléments sélectionnés doivent être mis à jour ou non."
 
 #: lib/gui/cross_stitch_helper.py:170
 msgid "Pixelate"
-msgstr ""
+msgstr "Pixeliser"
 
 #: lib/gui/cross_stitch_helper.py:172
 msgid "Defines whether the outlines of selected fill shapes should be pixelated or not."
-msgstr ""
+msgstr "Définit si les contours des formes de remplissage sélectionnées doivent être pixelisés ou non."
 
 #: lib/gui/cross_stitch_helper.py:177
 msgid "Add nodes"
@@ -3946,15 +3946,15 @@ msgstr "Ajouter des noeuds aux intersections avec la grille"
 
 #: lib/gui/cross_stitch_helper.py:193
 msgid "Element handling"
-msgstr ""
+msgstr "Gestion des éléments"
 
 #: lib/gui/cross_stitch_helper.py:196
 msgid "Remove overlaps"
-msgstr ""
+msgstr "Supprimer les superpositions"
 
 #: lib/gui/cross_stitch_helper.py:199
 msgid "Inserts a new set of non-overlapping shapes and removes selected fill elements"
-msgstr ""
+msgstr "Insère un nouvel ensemble de formes sans superpositions et supprime les éléments de remplissage sélectionnés"
 
 #: lib/gui/cross_stitch_helper.py:208
 msgid "Setup page grid"
@@ -3990,11 +3990,11 @@ msgstr "Convertir les images matricielles"
 
 #: lib/gui/cross_stitch_helper.py:261
 msgid "One cross each pixel"
-msgstr ""
+msgstr "Une croix par pixel"
 
 #: lib/gui/cross_stitch_helper.py:263
 msgid "Scales the image up by using one cross for each pixel"
-msgstr ""
+msgstr "Agrandit l'image en utilisant une croix pour chaque pixel"
 
 #: lib/gui/cross_stitch_helper.py:269 lib/gui/cross_stitch_helper.py:278
 msgid "Number of colors"
@@ -4116,7 +4116,13 @@ msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\
 "* Generate pixelated fills from bitmaps.\n"
 "* Remove overlaps.\n"
 "* Setup a page grid."
-msgstr ""
+msgstr "Cette extension permet de générer des points de croix dans Ink/Stitch. Elle permet de :\n\n"
+"* Définir la taille de la grille en utilisant la longueur maximale des points ou l'espacement de la grille.\n"
+"* Appliquer les paramètres de point de croix.\n"
+"* Pixeliser les contours des éléments de remplissage sélectionnés.\n"
+"* Générer des remplissages pixelisés à partir d'images bitmap.\n"
+"* Supprimer les superpositions.\n"
+"* Configurer une grille sur la page."
 
 #: lib/gui/cross_stitch_helper.py:432 lib/gui/cross_stitch_helper.py:433
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
@@ -4124,11 +4130,11 @@ msgstr "https://inkstitch.org/fr/docs/tools-fill/#cross-stitch"
 
 #: lib/gui/cross_stitch_helper.py:443
 msgid "Preview image (if applicable)"
-msgstr ""
+msgstr "Image d'aperçu (le cas échéant)"
 
 #: lib/gui/cross_stitch_helper.py:449
 msgid "SVG Preview (slow)"
-msgstr ""
+msgstr "Aperçu du SVG (lent)"
 
 #: lib/gui/cross_stitch_helper.py:466
 msgid "Reset values"
@@ -4143,15 +4149,15 @@ msgstr "Permet de vérifier ou de mettre à jour les informations sur une police
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr "https://inkstitch.org/fr/docs/font-tools/#edit-json"
 
-#: lib/gui/edit_json/main_panel.py:434 lib/gui/edit_json/main_panel.py:447
+#: lib/gui/edit_json/main_panel.py:435 lib/gui/edit_json/main_panel.py:451
 msgid "Could not read json file."
 msgstr "Impossible de lire le fichier json."
 
-#: lib/gui/edit_json/main_panel.py:438
+#: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
 msgstr "Les changements ne peuvent pas être sauvegardés : impossible d'écrire dans le fichier json (permission denied)."
 
-#: lib/gui/edit_json/main_panel.py:452
+#: lib/gui/edit_json/main_panel.py:458
 msgid "Could not write to json file: permission denied."
 msgstr "Impossible d'écrire dans le fichier json."
 
@@ -4159,134 +4165,138 @@ msgstr "Impossible d'écrire dans le fichier json."
 msgid "Text before"
 msgstr "Texte avant"
 
-#: lib/gui/edit_json/settings_panel.py:28
+#: lib/gui/edit_json/settings_panel.py:29
 msgid "Text after"
 msgstr "Texte après"
 
-#: lib/gui/edit_json/settings_panel.py:46
+#: lib/gui/edit_json/settings_panel.py:33
+msgid "Second line"
+msgstr ""
+
+#: lib/gui/edit_json/settings_panel.py:56
 msgid "Font Info"
 msgstr "Information sur la police"
 
-#: lib/gui/edit_json/settings_panel.py:49
+#: lib/gui/edit_json/settings_panel.py:59
 msgid "Font Settings"
 msgstr "Paramètres de la police"
 
-#: lib/gui/edit_json/settings_panel.py:52
+#: lib/gui/edit_json/settings_panel.py:62
 msgid "General Kerning"
 msgstr "Crénage général"
 
-#: lib/gui/edit_json/settings_panel.py:55
+#: lib/gui/edit_json/settings_panel.py:65
 msgid "Horizontal advance"
 msgstr "Avancée horizontale"
 
-#: lib/gui/edit_json/settings_panel.py:59
+#: lib/gui/edit_json/settings_panel.py:69
 msgid "Kerning pairs"
 msgstr "Paires de crénage"
 
-#: lib/gui/edit_json/settings_panel.py:103
+#: lib/gui/edit_json/settings_panel.py:113
 msgid "Font License"
 msgstr "Licence de la fonte"
 
-#: lib/gui/edit_json/settings_panel.py:110
+#: lib/gui/edit_json/settings_panel.py:120
 #: inx/inkstitch_lettering_generate_json.inx:25
 msgid "Text direction"
 msgstr "Direction du texte"
 
-#: lib/gui/edit_json/settings_panel.py:111
+#: lib/gui/edit_json/settings_panel.py:121
 msgid "Left to Right"
 msgstr "De gauche à droite"
 
-#: lib/gui/edit_json/settings_panel.py:111
+#: lib/gui/edit_json/settings_panel.py:121
 msgid "Right to Left"
 msgstr "De droite à gauche"
 
-#: lib/gui/edit_json/settings_panel.py:114
+#: lib/gui/edit_json/settings_panel.py:124
 #: inx/inkstitch_lettering_generate_json.inx:57
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: lib/gui/edit_json/settings_panel.py:123
+#: lib/gui/edit_json/settings_panel.py:133
 #: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Original Font Name"
 msgstr "Nom de la fonte de départ"
 
-#: lib/gui/edit_json/settings_panel.py:130
+#: lib/gui/edit_json/settings_panel.py:140
 #: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Original Font URL"
 msgstr "URL de la fonte de départ"
 
-#: lib/gui/edit_json/settings_panel.py:167
+#: lib/gui/edit_json/settings_panel.py:177
 msgid "Default Variant"
 msgstr "Variante par défaut"
 
-#: lib/gui/edit_json/settings_panel.py:171
+#: lib/gui/edit_json/settings_panel.py:181
 msgid "Default glyph"
 msgstr "Glyphe par défaut"
 
-#: lib/gui/edit_json/settings_panel.py:178
+#: lib/gui/edit_json/settings_panel.py:188
 msgid "AutoSatin"
 msgstr "Arrangement automatique des colonnes satin"
 
-#: lib/gui/edit_json/settings_panel.py:185
+#: lib/gui/edit_json/settings_panel.py:195
 #: inx/inkstitch_lettering_generate_json.inx:104
 msgid "Scale cross stitch pattern"
 msgstr "Redimensionner la taille des cellules du point de croix"
 
-#: lib/gui/edit_json/settings_panel.py:192
+#: lib/gui/edit_json/settings_panel.py:202
 msgid "Letter case"
 msgstr "Casse"
 
-#: lib/gui/edit_json/settings_panel.py:193
+#: lib/gui/edit_json/settings_panel.py:203
 #: inx/inkstitch_lettering_generate_json.inx:114
 msgid "Upper"
 msgstr "Majuscule"
 
-#: lib/gui/edit_json/settings_panel.py:193
+#: lib/gui/edit_json/settings_panel.py:203
 #: inx/inkstitch_lettering_generate_json.inx:115
 msgid "Lower"
 msgstr "Minuscule"
 
-#: lib/gui/edit_json/settings_panel.py:196
+#: lib/gui/edit_json/settings_panel.py:206
 #: inx/inkstitch_lettering_generate_json.inx:106
 msgid "Reversible"
 msgstr "Réversible"
 
-#: lib/gui/edit_json/settings_panel.py:203
+#: lib/gui/edit_json/settings_panel.py:213
 #: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Sortable"
 msgstr "Triable"
 
-#: lib/gui/edit_json/settings_panel.py:210
+#: lib/gui/edit_json/settings_panel.py:220
 msgid "Combine Indices"
 msgstr "Combiner les indices"
 
-#: lib/gui/edit_json/settings_panel.py:251
+#: lib/gui/edit_json/settings_panel.py:261
 #: inx/inkstitch_lettering_generate_json.inx:120
 msgid "Min Scale"
 msgstr "Échelle minimum"
 
-#: lib/gui/edit_json/settings_panel.py:258
+#: lib/gui/edit_json/settings_panel.py:268
 #: inx/inkstitch_lettering_generate_json.inx:121
 msgid "Max Scale"
 msgstr "Échelle maximum"
 
-#: lib/gui/edit_json/settings_panel.py:265
+#: lib/gui/edit_json/settings_panel.py:275
 msgid "Leading"
 msgstr "Interligne"
 
-#: lib/gui/edit_json/settings_panel.py:271
+#: lib/gui/edit_json/settings_panel.py:281
 msgid "Horizontal advance x"
 msgstr "Avancée horizontale x"
 
-#: lib/gui/edit_json/settings_panel.py:277
+#: lib/gui/edit_json/settings_panel.py:287
 msgid "Glyph width"
 msgstr "Largeur de glyphe"
 
-#: lib/gui/edit_json/settings_panel.py:278
+#: lib/gui/edit_json/settings_panel.py:288
 msgid "Use the width of the individual glyphs."
 msgstr "Utiliser la largeur de chaque glyphe."
 
-#: lib/gui/edit_json/settings_panel.py:283
+#: lib/gui/edit_json/settings_panel.py:293
 msgid "Horizontal advance x space"
 msgstr "Avancée horizontale de l'espace"
 
@@ -4298,7 +4308,7 @@ msgstr "Information sur l'élément"
 msgid "Info"
 msgstr "Information"
 
-#: lib/gui/edit_json/settings_panel.py:89 lib/gui/element_info.py:34
+#: lib/gui/edit_json/settings_panel.py:99 lib/gui/element_info.py:34
 #: inx/inkstitch_lettering_generate_json.inx:21
 msgid "Name"
 msgstr "Nom"
@@ -5273,32 +5283,37 @@ msgstr "Écriture : japonais"
 msgid "Script: latin"
 msgstr "Écriture : latin"
 
-#: lib/lettering/font.py:102
+#: lib/lettering/font.py:121
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr "Il manque le fichier JSON. Un fichier JSON est attendu à cet endroit :"
 
-#: lib/lettering/font.py:104
+#: lib/lettering/font.py:123 lib/lettering/font.py:132
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Générez le fichier JSON avec\n"
 "Extensions > Ink/Stitch >Gestion des polices > Générer JSON..."
 
-#: lib/lettering/font.py:111
+#: lib/lettering/font.py:130
+#, python-brace-format
+msgid "Failed to read the JSON file ({exception}):"
+msgstr "Impossible de lire le fichier JSON ({exception}) :"
+
+#: lib/lettering/font.py:138
 msgid "Corrupt JSON file"
 msgstr "Fichier JSON corrompu"
 
-#: lib/lettering/font.py:113
+#: lib/lettering/font.py:140
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr "Re-générez le fichier JSON avec\n"
 "Extensions > Ink/Stitch >Gestion des polices > Générer JSON..."
 
-#: lib/lettering/font.py:204
+#: lib/lettering/font.py:231
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Aucun fichier variant trouvé pour la police '%s'."
 
-#: lib/lettering/font.py:638
+#: lib/lettering/font.py:667
 msgid "Color Group"
 msgstr "Groupe de couleur"
 
@@ -5867,7 +5882,7 @@ msgid "Yes"
 msgstr "Oui"
 
 #: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:113
-#: inx/inkstitch_letters_to_font.inx:57
+#: inx/inkstitch_letters_to_font.inx:59
 msgid "No"
 msgstr "Non"
 
@@ -6293,13 +6308,13 @@ msgstr "Cette extension tente de créer un chemin de broderie unique qui parcour
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:50
-#: inx/inkstitch_lettering_along_path.inx:35
+#: inx/inkstitch_lettering_along_path.inx:40
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
 #: inx/inkstitch_lettering_generate_json.inx:167
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
-#: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_letters_to_font.inx:77 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45
@@ -7742,14 +7757,17 @@ msgstr "Les commandes s’ajouteront au calque sélectionné."
 msgid "Add commands which affect the containing layer"
 msgstr "Ajoute des commandes qui affecte tous les éléments du calque"
 
-#: inx/inkstitch_lettering.inx:3 inx/inkstitch_lettering.inx:12
-#: inx/inkstitch_lettering_along_path.inx:12
-msgid "Lettering"
-msgstr "Lettrage"
+#: inx/inkstitch_lettering.inx:3
+msgid "Lettering Tool"
+msgstr ""
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
 msgstr "Insert un texte prêt à être brodé dans le document"
+
+#: inx/inkstitch_lettering.inx:12 inx/inkstitch_lettering_along_path.inx:12
+msgid "Lettering"
+msgstr "Lettrage"
 
 #: inx/inkstitch_lettering_along_path.inx:3
 msgid "Lettering along path"
@@ -7763,31 +7781,47 @@ msgstr "Fait suivre un chemin à un texte"
 msgid "Text position"
 msgstr "Position du texte"
 
+#: inx/inkstitch_lettering_along_path.inx:24
+msgid "Vertical alignment"
+msgstr "Alignement vertical"
+
+#: inx/inkstitch_lettering_along_path.inx:25
+msgid "Top"
+msgstr "Au dessus"
+
 #: inx/inkstitch_lettering_along_path.inx:26
+msgid "Baseline"
+msgstr "Ligne de référence"
+
+#: inx/inkstitch_lettering_along_path.inx:27
+msgid "Bottom"
+msgstr "Au dessous"
+
+#: inx/inkstitch_lettering_along_path.inx:31
 msgid "This extension bends an Ink/Stitch text to a path."
 msgstr "Cette extension courbe un texte Ink/Stitch le long d'un chemin."
 
-#: inx/inkstitch_lettering_along_path.inx:27
+#: inx/inkstitch_lettering_along_path.inx:32
 msgid "Select Ink/Stitch text and a path before running this extension."
 msgstr "Sélectionner un texte Ink/Stitch et un chemin avant d'exécuter cette extension."
 
-#: inx/inkstitch_lettering_along_path.inx:29
+#: inx/inkstitch_lettering_along_path.inx:34
 msgid "⚠ The text width should not be longer than the path ⚠"
 msgstr "⚠ La longueur du texte doit être inférieure à celle du chemin ⚠"
 
-#: inx/inkstitch_lettering_along_path.inx:31
+#: inx/inkstitch_lettering_along_path.inx:36
 msgid "Text position:"
 msgstr "Position du texte :"
 
-#: inx/inkstitch_lettering_along_path.inx:32
+#: inx/inkstitch_lettering_along_path.inx:37
 msgid "Text can be positioned at the start, end or center of the path."
 msgstr "Le texte peut être positionné au début, à la fin ou au centre du chemin."
 
-#: inx/inkstitch_lettering_along_path.inx:33
+#: inx/inkstitch_lettering_along_path.inx:38
 msgid "When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
 msgstr "Lorsque Étendre est sélectionné, les espaces entre les glyphes sont étendus afin que le texte occupe la totalité du chemin."
 
-#: inx/inkstitch_lettering_along_path.inx:36
+#: inx/inkstitch_lettering_along_path.inx:41
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
 msgstr "https://inkstitch.org/fr/docs/lettering/#lettering-along-path"
 
@@ -7821,7 +7855,7 @@ msgstr "Définit un répertoire pour les fontes personnes de l'outil de lettrage
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:14
-#: inx/inkstitch_letters_to_font.inx:86
+#: inx/inkstitch_letters_to_font.inx:88
 msgid "Font Management"
 msgstr "Gestion des polices"
 
@@ -8172,35 +8206,43 @@ msgstr "Format de fichier"
 msgid "Font directory"
 msgstr "Répertoire contenant les lettres"
 
-#: inx/inkstitch_letters_to_font.inx:54
+#: inx/inkstitch_letters_to_font.inx:55
+msgid "Margin left (mm)"
+msgstr "Marge gauche (mm)"
+
+#: inx/inkstitch_letters_to_font.inx:55
+msgid "With \"Use glyph width\" enabled in the json, the margin to the left page border defines the distance between glyphs"
+msgstr "Lorsque l'option « Utiliser la largeur des glyphes » est activée dans le fichier JSON, la marge par rapport au bord gauche de la page définit la distance entre les glyphes"
+
+#: inx/inkstitch_letters_to_font.inx:56
 msgid "Import commands"
 msgstr "Importer des commandes"
 
-#: inx/inkstitch_letters_to_font.inx:55
+#: inx/inkstitch_letters_to_font.inx:57
 msgid "As param"
 msgstr "Comme paramètre"
 
-#: inx/inkstitch_letters_to_font.inx:56
+#: inx/inkstitch_letters_to_font.inx:58
 msgid "As symbol"
 msgstr "Comme symbole"
 
-#: inx/inkstitch_letters_to_font.inx:61
+#: inx/inkstitch_letters_to_font.inx:63
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
 msgstr "Inclus toutes les lettres d'une fonte de broderie prédigitalisée (un fichier par lettre) pour la rendre disponible dans l'outil de lettrage d'Ink/Stich."
 
-#: inx/inkstitch_letters_to_font.inx:64
+#: inx/inkstitch_letters_to_font.inx:66
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
 msgstr "Les noms des fichiers de broderie doivent avoir le nom de la lettre juste avant leur extension. Par exemple A.dst ou Example_Font_A.dst seront reconnus comme la lettre A."
 
-#: inx/inkstitch_letters_to_font.inx:69
+#: inx/inkstitch_letters_to_font.inx:71
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
 msgstr "⚠ Après avoir lancé cette extension, faire glisser la \"baseline\" jusqu'à la position désirée et placer les lettres relativement à elle. Sauvez votre fonte dans son propre répertoire, puis générer le fichier json (désactivez Agencement automatique de colonne satin)."
 
-#: inx/inkstitch_letters_to_font.inx:76
+#: inx/inkstitch_letters_to_font.inx:78
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr "https://inkstitch.org/fr/docs/font-tools/#letters-to-font"
 
-#: inx/inkstitch_letters_to_font.inx:83
+#: inx/inkstitch_letters_to_font.inx:85
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
 msgstr "Insert tous les glyphes d'une fonte pré digitalisée dans le document pour rendre la fonte disponible dans l'outil de lettrage"
 

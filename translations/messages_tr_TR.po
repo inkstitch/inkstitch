@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-28 03:29+0000\n"
-"PO-Revision-Date: 2026-04-28 03:29\n"
+"POT-Creation-Date: 2026-05-03 03:30+0000\n"
+"PO-Revision-Date: 2026-05-03 03:30\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-28 03:29+0000\n"
+"POT-Creation-Date: 2026-05-03 03:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2763,7 +2763,7 @@ msgstr ""
 msgid "Scale axis for satin guided ripple stitches."
 msgstr ""
 
-#: lib/elements/stroke.py:546 lib/gui/edit_json/settings_panel.py:193
+#: lib/elements/stroke.py:546 lib/gui/edit_json/settings_panel.py:203
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
@@ -3196,11 +3196,11 @@ msgstr ""
 msgid "We couldn't find any fill colors on your text elements. Please read the instructions on our website."
 msgstr ""
 
-#: lib/extensions/gradient_blocks.py:36 lib/extensions/gradient_blocks.py:44
+#: lib/extensions/gradient_blocks.py:37 lib/extensions/gradient_blocks.py:45
 msgid "Please select at least one object with a gradient fill."
 msgstr ""
 
-#: lib/extensions/gradient_blocks.py:65
+#: lib/extensions/gradient_blocks.py:66
 msgid "Color Gradient Blocks"
 msgstr ""
 
@@ -3253,15 +3253,15 @@ msgstr "Lütfen sadece tek blok yazı seçiniz."
 msgid "https://inkstitch.org/docs/lettering/#lettering-tool"
 msgstr ""
 
-#: lib/extensions/lettering_along_path.py:35
+#: lib/extensions/lettering_along_path.py:36
 msgid "Please select one path and one Ink/Stitch lettering group."
 msgstr ""
 
-#: lib/extensions/lettering_along_path.py:80
+#: lib/extensions/lettering_along_path.py:82
 msgid "Couldn't identify the font specified in the lettering group."
 msgstr ""
 
-#: lib/extensions/lettering_along_path.py:87
+#: lib/extensions/lettering_along_path.py:89
 msgid "The text doesn't contain any glyphs."
 msgstr ""
 
@@ -3363,7 +3363,7 @@ msgstr ""
 msgid "Other composed letters"
 msgstr ""
 
-#: lib/extensions/letters_to_font.py:38
+#: lib/extensions/letters_to_font.py:40
 msgid "Font directory not found. Please specify an existing directory."
 msgstr ""
 
@@ -3457,7 +3457,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr ""
 
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/cross_stitch_helper.py:468 lib/gui/edit_json/settings_panel.py:64
+#: lib/gui/cross_stitch_helper.py:468 lib/gui/edit_json/settings_panel.py:74
 #: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
 #: lib/gui/simulator/simulator_preferences.py:73
@@ -3641,7 +3641,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:245
+#: lib/extensions/thread_list.py:51 lib/gui/edit_json/settings_panel.py:255
 #: lib/gui/lettering/option_panel.py:36
 #: inx/inkstitch_lettering_generate_json.inx:119
 msgid "Size"
@@ -3687,7 +3687,7 @@ msgstr ""
 msgid "Invalid Pointer"
 msgstr ""
 
-#: lib/extensions/troubleshoot.py:120 lib/gui/edit_json/settings_panel.py:96
+#: lib/extensions/troubleshoot.py:120 lib/gui/edit_json/settings_panel.py:106
 #: inx/inkstitch_lettering_generate_json.inx:22
 msgid "Description"
 msgstr ""
@@ -3791,7 +3791,7 @@ msgid "Select color palette"
 msgstr ""
 
 #: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:470
-#: lib/gui/edit_json/settings_panel.py:66 lib/gui/lettering_font_sample.py:72
+#: lib/gui/edit_json/settings_panel.py:76 lib/gui/lettering_font_sample.py:72
 #: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/selection_to_pattern.py:89
 #: lib/gui/simulator/simulator_preferences.py:75
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
@@ -3799,7 +3799,7 @@ msgid "Apply"
 msgstr ""
 
 #: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_helper.py:405
-#: lib/gui/edit_json/main_panel.py:75 lib/gui/element_info.py:42
+#: lib/gui/edit_json/main_panel.py:77 lib/gui/element_info.py:42
 #: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/selection_to_pattern.py:55
 #: lib/gui/tartan/main_panel.py:64 lib/gui/test_swatches.py:83
@@ -3813,14 +3813,14 @@ msgstr ""
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:31
 #: inx/inkstitch_knockdown_fill.inx:44
-#: inx/inkstitch_lettering_along_path.inx:25
+#: inx/inkstitch_lettering_along_path.inx:30
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
 #: inx/inkstitch_lettering_generate_json.inx:163
 #: inx/inkstitch_lettering_organize_glyphs.inx:27
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
-#: inx/inkstitch_letters_to_font.inx:60 inx/inkstitch_outline.inx:25
+#: inx/inkstitch_letters_to_font.inx:62 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
 #: inx/inkstitch_remove_duplicated_points.inx:14
@@ -3846,7 +3846,7 @@ msgstr ""
 msgid "Ink/Stitch - Cross stitch"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:61 lib/gui/edit_json/main_panel.py:74
+#: lib/gui/cross_stitch_helper.py:61 lib/gui/edit_json/main_panel.py:76
 #: lib/gui/lettering_font_sample.py:40 lib/gui/selection_to_pattern.py:24
 #: lib/gui/simulator/view_panel.py:134 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:93
@@ -4119,15 +4119,15 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr ""
 
-#: lib/gui/edit_json/main_panel.py:434 lib/gui/edit_json/main_panel.py:447
+#: lib/gui/edit_json/main_panel.py:435 lib/gui/edit_json/main_panel.py:451
 msgid "Could not read json file."
 msgstr ""
 
-#: lib/gui/edit_json/main_panel.py:438
+#: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
 msgstr ""
 
-#: lib/gui/edit_json/main_panel.py:452
+#: lib/gui/edit_json/main_panel.py:458
 msgid "Could not write to json file: permission denied."
 msgstr ""
 
@@ -4135,134 +4135,138 @@ msgstr ""
 msgid "Text before"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:28
+#: lib/gui/edit_json/settings_panel.py:29
 msgid "Text after"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:46
+#: lib/gui/edit_json/settings_panel.py:33
+msgid "Second line"
+msgstr ""
+
+#: lib/gui/edit_json/settings_panel.py:56
 msgid "Font Info"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:49
+#: lib/gui/edit_json/settings_panel.py:59
 msgid "Font Settings"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:52
+#: lib/gui/edit_json/settings_panel.py:62
 msgid "General Kerning"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:55
+#: lib/gui/edit_json/settings_panel.py:65
 msgid "Horizontal advance"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:59
+#: lib/gui/edit_json/settings_panel.py:69
 msgid "Kerning pairs"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:103
+#: lib/gui/edit_json/settings_panel.py:113
 msgid "Font License"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:110
+#: lib/gui/edit_json/settings_panel.py:120
 #: inx/inkstitch_lettering_generate_json.inx:25
 msgid "Text direction"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:111
+#: lib/gui/edit_json/settings_panel.py:121
 msgid "Left to Right"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:111
+#: lib/gui/edit_json/settings_panel.py:121
 msgid "Right to Left"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:114
+#: lib/gui/edit_json/settings_panel.py:124
 #: inx/inkstitch_lettering_generate_json.inx:57
 msgid "Keywords"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:123
+#: lib/gui/edit_json/settings_panel.py:133
 #: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Original Font Name"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:130
+#: lib/gui/edit_json/settings_panel.py:140
 #: inx/inkstitch_lettering_generate_json.inx:44
 msgid "Original Font URL"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:167
+#: lib/gui/edit_json/settings_panel.py:177
 msgid "Default Variant"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:171
+#: lib/gui/edit_json/settings_panel.py:181
 msgid "Default glyph"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:178
+#: lib/gui/edit_json/settings_panel.py:188
 msgid "AutoSatin"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:185
+#: lib/gui/edit_json/settings_panel.py:195
 #: inx/inkstitch_lettering_generate_json.inx:104
 msgid "Scale cross stitch pattern"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:192
+#: lib/gui/edit_json/settings_panel.py:202
 msgid "Letter case"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:193
+#: lib/gui/edit_json/settings_panel.py:203
 #: inx/inkstitch_lettering_generate_json.inx:114
 msgid "Upper"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:193
+#: lib/gui/edit_json/settings_panel.py:203
 #: inx/inkstitch_lettering_generate_json.inx:115
 msgid "Lower"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:196
+#: lib/gui/edit_json/settings_panel.py:206
 #: inx/inkstitch_lettering_generate_json.inx:106
 msgid "Reversible"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:203
+#: lib/gui/edit_json/settings_panel.py:213
 #: inx/inkstitch_lettering_generate_json.inx:109
 msgid "Sortable"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:210
+#: lib/gui/edit_json/settings_panel.py:220
 msgid "Combine Indices"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:251
+#: lib/gui/edit_json/settings_panel.py:261
 #: inx/inkstitch_lettering_generate_json.inx:120
 msgid "Min Scale"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:258
+#: lib/gui/edit_json/settings_panel.py:268
 #: inx/inkstitch_lettering_generate_json.inx:121
 msgid "Max Scale"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:265
+#: lib/gui/edit_json/settings_panel.py:275
 msgid "Leading"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:271
+#: lib/gui/edit_json/settings_panel.py:281
 msgid "Horizontal advance x"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:277
+#: lib/gui/edit_json/settings_panel.py:287
 msgid "Glyph width"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:278
+#: lib/gui/edit_json/settings_panel.py:288
 msgid "Use the width of the individual glyphs."
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:283
+#: lib/gui/edit_json/settings_panel.py:293
 msgid "Horizontal advance x space"
 msgstr ""
 
@@ -4274,7 +4278,7 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: lib/gui/edit_json/settings_panel.py:89 lib/gui/element_info.py:34
+#: lib/gui/edit_json/settings_panel.py:99 lib/gui/element_info.py:34
 #: inx/inkstitch_lettering_generate_json.inx:21
 msgid "Name"
 msgstr ""
@@ -5237,30 +5241,35 @@ msgstr ""
 msgid "Script: latin"
 msgstr ""
 
-#: lib/lettering/font.py:102
+#: lib/lettering/font.py:121
 msgid "JSON file missing. Expected a JSON file at the following location:"
 msgstr ""
 
-#: lib/lettering/font.py:104
+#: lib/lettering/font.py:123 lib/lettering/font.py:132
 msgid "Generate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr ""
 
-#: lib/lettering/font.py:111
+#: lib/lettering/font.py:130
+#, python-brace-format
+msgid "Failed to read the JSON file ({exception}):"
+msgstr ""
+
+#: lib/lettering/font.py:138
 msgid "Corrupt JSON file"
 msgstr ""
 
-#: lib/lettering/font.py:113
+#: lib/lettering/font.py:140
 msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr ""
 
-#: lib/lettering/font.py:204
+#: lib/lettering/font.py:231
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr ""
 
-#: lib/lettering/font.py:638
+#: lib/lettering/font.py:667
 msgid "Color Group"
 msgstr ""
 
@@ -5826,7 +5835,7 @@ msgid "Yes"
 msgstr "Evet"
 
 #: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:113
-#: inx/inkstitch_letters_to_font.inx:57
+#: inx/inkstitch_letters_to_font.inx:59
 msgid "No"
 msgstr "Hayır"
 
@@ -6252,13 +6261,13 @@ msgstr ""
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:50
-#: inx/inkstitch_lettering_along_path.inx:35
+#: inx/inkstitch_lettering_along_path.inx:40
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
 #: inx/inkstitch_lettering_generate_json.inx:167
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
-#: inx/inkstitch_letters_to_font.inx:75 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_letters_to_font.inx:77 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45
@@ -7701,13 +7710,16 @@ msgstr ""
 msgid "Add commands which affect the containing layer"
 msgstr ""
 
-#: inx/inkstitch_lettering.inx:3 inx/inkstitch_lettering.inx:12
-#: inx/inkstitch_lettering_along_path.inx:12
-msgid "Lettering"
+#: inx/inkstitch_lettering.inx:3
+msgid "Lettering Tool"
 msgstr ""
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
+msgstr ""
+
+#: inx/inkstitch_lettering.inx:12 inx/inkstitch_lettering_along_path.inx:12
+msgid "Lettering"
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:3
@@ -7722,31 +7734,47 @@ msgstr ""
 msgid "Text position"
 msgstr ""
 
+#: inx/inkstitch_lettering_along_path.inx:24
+msgid "Vertical alignment"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:25
+msgid "Top"
+msgstr ""
+
 #: inx/inkstitch_lettering_along_path.inx:26
-msgid "This extension bends an Ink/Stitch text to a path."
+msgid "Baseline"
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:27
-msgid "Select Ink/Stitch text and a path before running this extension."
-msgstr ""
-
-#: inx/inkstitch_lettering_along_path.inx:29
-msgid "⚠ The text width should not be longer than the path ⚠"
+msgid "Bottom"
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:31
-msgid "Text position:"
+msgid "This extension bends an Ink/Stitch text to a path."
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:32
-msgid "Text can be positioned at the start, end or center of the path."
+msgid "Select Ink/Stitch text and a path before running this extension."
 msgstr ""
 
-#: inx/inkstitch_lettering_along_path.inx:33
-msgid "When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
+#: inx/inkstitch_lettering_along_path.inx:34
+msgid "⚠ The text width should not be longer than the path ⚠"
 msgstr ""
 
 #: inx/inkstitch_lettering_along_path.inx:36
+msgid "Text position:"
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:37
+msgid "Text can be positioned at the start, end or center of the path."
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:38
+msgid "When stretch is selected, the spaces between the glyphs will be expanded, so that the text stretches over the entire path."
+msgstr ""
+
+#: inx/inkstitch_lettering_along_path.inx:41
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
 msgstr ""
 
@@ -7780,7 +7808,7 @@ msgstr ""
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:14
-#: inx/inkstitch_letters_to_font.inx:86
+#: inx/inkstitch_letters_to_font.inx:88
 msgid "Font Management"
 msgstr ""
 
@@ -8131,35 +8159,43 @@ msgstr ""
 msgid "Font directory"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:54
-msgid "Import commands"
+#: inx/inkstitch_letters_to_font.inx:55
+msgid "Margin left (mm)"
 msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:55
-msgid "As param"
+msgid "With \"Use glyph width\" enabled in the json, the margin to the left page border defines the distance between glyphs"
 msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:56
+msgid "Import commands"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:57
+msgid "As param"
+msgstr ""
+
+#: inx/inkstitch_letters_to_font.inx:58
 msgid "As symbol"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:61
+#: inx/inkstitch_letters_to_font.inx:63
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:64
+#: inx/inkstitch_letters_to_font.inx:66
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:69
+#: inx/inkstitch_letters_to_font.inx:71
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:76
+#: inx/inkstitch_letters_to_font.inx:78
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:83
+#: inx/inkstitch_letters_to_font.inx:85
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
 msgstr ""
 
