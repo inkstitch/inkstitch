@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-05-03 03:30+0000\n"
-"PO-Revision-Date: 2026-05-03 03:30\n"
+"PO-Revision-Date: 2026-05-04 03:28\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -4171,7 +4171,7 @@ msgstr "Texte après"
 
 #: lib/gui/edit_json/settings_panel.py:33
 msgid "Second line"
-msgstr ""
+msgstr "Seconde ligne"
 
 #: lib/gui/edit_json/settings_panel.py:56
 msgid "Font Info"
@@ -7759,7 +7759,7 @@ msgstr "Ajoute des commandes qui affecte tous les éléments du calque"
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering Tool"
-msgstr ""
+msgstr "Module de lettrage"
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
