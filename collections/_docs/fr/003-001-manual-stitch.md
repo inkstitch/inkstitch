@@ -6,24 +6,28 @@ toc: true
 ---
 ## Description
 [![Fleurs en point manuel](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
-En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés.
+En mode point manuel Ink / Stitch utilise chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés, ni plus, ni moins.
 ![Detail de point manuel](/assets/images/docs/manual-stitch-detail.png)
 
 Si vous ouvrez un fichier de broderie machine, vous y trouverez des points manuels.  Lorsque vous concevrez un fichier de broderie en svg, vous utiliserez très rarement les points manuels.
 ## Création
 
-1. Créez un chemin. Le style de trait ou la largeur ne sont pas pertinents.
-2. Ouvrez `Extensions > Ink/Stitch  > Paramètres`.
+1. Créer un chemin. Le style de trait ou la largeur ne sont pas pertinents.
+2. Ouvrer `Extensions > Ink/Stitch  > Paramètres`.
 3. Choisir le type `Point manuel` comme méthode.
 
 
-Chaque nœud d'un chemin représente un point de pénétration de l'aiguille. Ça ne va pas suivre les courbes.
+Les nœuds du chemin sont les points de pénétration de l'aiguille. 
+
 
 ![Manual Stitch Placement](/assets/images/docs/manual-stitch-placement.png)
 
-Une représentation nette de votre chemin de point manuel peut être obtenue comme suit:
+Même si le chemin a des courbes (par exemple s'il s'agit d'un cercle ou d'une courbe de Bézier) la broderie ira directement (en ligne droite) d'un point à un autre.
+
+Si nécessaire, une représentation de votre chemin de point manuel conforme à la broderie peut être obtenue comme suit:
+
 1. Sélectionner tous les noeuds (`F2` puis `Ctrl`+`A`)
-2. Cliquer sur ![Rendre durs les noeuds sélectionnés](/assets/images/docs/tool-controls-corner.jpg){: title="Make selected nodes corner" } in the `Tool Controls Bar`.
+2. Cliquer sur ![Rendre durs les noeuds sélectionnés](/assets/images/docs/tool-controls-corner.jpg){: title="Make selected nodes corner" } dans la barre de contrôle des outils.
 
 ## Paramétres
 
