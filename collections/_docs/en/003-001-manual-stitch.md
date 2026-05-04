@@ -4,13 +4,13 @@ permalink: /docs/stitches/manual-stitch/
 last_modified_at: 2026-01-03
 toc: true
 ---
-## What it is
+## Description
 [![Manual Stitch Flowers](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
 Manual stitches are create by using each node of a path as a needle penetration point.
 
 ![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
 
-## How to Create
+## Creation
 
 1. Create a path. The line style or width are not used in the creation of a manual stitch. 
 2. Open `Extensions > Ink/Stitch  > Params`.
@@ -24,7 +24,7 @@ A clean representation of your manual stitch path can be achieved as follows:
 1. Select all nodes (`F2` then `Ctrl`+`A`)
 2. Click on ![Make selected nodes corner](/assets/images/docs/tool-controls-corner.jpg){: title="Make selected nodes corner" } in the `Tool Controls Bar`.
 
-## Params
+## Parameters
 
 Open `Extensions > Ink/Stitch  > Params` to change parameters to your needs.
 
