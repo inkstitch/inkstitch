@@ -4,14 +4,14 @@ permalink: /docs/stitches/bean-stitch/
 last_modified_at: 2025-12-29
 toc: true
 ---
-## What is it
+## Description
 
 [![Bean Stitch Dog](/assets/images/docs/bean-stitch-example.jpg){: width="200x"}](/assets/images/docs/bean-stitch.svg){: title="Download SVG File" .align-left download="bean-stitch.svg" }
 Bean stitch creates a thicker line by stitching forward and backward over the same path. This repeats each stitch multiple times, which increases coverage and makes the line stand out more than a running stitch.  
 
 ![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
 
-## How to create it
+## Creation
 
 1. Select a stroke and open `Extensions > Ink/Stitch  > Params`.
 
@@ -39,7 +39,7 @@ Random Seed| Rolling the dice or setting a new value will change the random stit
 Minimum stitch length         |Overwrites the global minimum stitch length setting. Stitches small than this value will be removed.
 Minimum  jump stitch  length  |Overwrites the global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
 Allow lock stitches           |Enables lock stitches in only desired positions
-Force lock stitches           |Determines if lock stitches are sewn after this element, even if the distance to the next object is smaller than defined in the Collapse Length value in the Ink/Stitch preferences.
+Force lock stitches           |Determines that lock stitches are sewn after this element, regardless of minimum jump stitch length value.
 Tack stitch                   |Determines the type of tack stitch.  Tack stitches are small stitches at the beginning of a stitch. They help to secure the beginning of the thread. [favorite style](/docs/stitches/lock-stitches/)
 Lock stitch                   |Determines the type of lock stitch. Lock stitches are small stitches at the end of stitch.  They help to secure the end of the thread.  [favorite style](/docs/stitches/lock-stitches/)
 Trim After                    |Determines if the thread is trimmed after sewing this object.
