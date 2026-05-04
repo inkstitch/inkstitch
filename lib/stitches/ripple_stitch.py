@@ -329,6 +329,8 @@ def _get_staggered_stitches(stroke, lines, skip_start):
                 line, stitch_length, stroke.staggers, i, tolerance, is_random, length_sigma, prng.join_args(random_seed, i),
                 should_reverse, stroke.flip_copies
             )
+        if not stitched_line:
+            continue
 
         stitched_line = connector + stitched_line
 
