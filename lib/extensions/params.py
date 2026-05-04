@@ -488,7 +488,7 @@ class ParamsTab(ScrolledPanel):
                         image = wx.NullBitmap
                     input.Append(option.name, image, option)
                 if not param.options:
-                    input.Append(_('No options available'), ParamOption('not_available'))
+                    input.Append(_('No options available'), wx.NullBitmap, ParamOption('not_available'))
                 value = self.get_combo_value_index(param.values[0], param.options, param.default or 0)
                 input.SetSelection(value)
                 input.Bind(wx.EVT_COMBOBOX, self.changed)
