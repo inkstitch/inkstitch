@@ -43,9 +43,9 @@ Zuffalszahl                           | Zufallswert für randomisierte Attribute
 Minimale Stichlänge                   | Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
 Minimale Länge für Sprungstiche       | Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
 Vernähen erlauben                     | Vernäht bei Bedarf an den ausgewählten Positionen
-Vernähen erzwingen                    | Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
-Anstecher                             | Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
-Verstecher                            | Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
+Vernähen erzwingen                    | Vernäht den Faden nach diesem Element, unabhängig vom Wert für die Minimale Länge für Sprungstiche 
+Anstecher                             | Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang)
+Verstecher                            | Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende)
 Fadenschnitt                          | Schneidet den Faden nachdem dieses Objekt genäht wurde
 Stopp                                 | Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
 
