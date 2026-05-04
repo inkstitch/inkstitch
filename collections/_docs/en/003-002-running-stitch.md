@@ -4,7 +4,7 @@ permalink: /docs/stitches/running-stitch/
 last_modified_at: 2025-12-29
 toc: true
 ---
-## What is it?
+## Description
 
 [![Running Stitch Butterfly](/assets/images/docs/running-stitch.jpg){: width="200x"}](/assets/images/docs/running-stitch.svg){: title="Download SVG File" .align-left download="running-stitch.svg" }
 
@@ -12,7 +12,7 @@ Running stitch produces a series of small stitches following a line or curve.
 
 ![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
 
-## How to create it
+## Creation
 
 Running stitch is created from a path with a stroke color.
 
