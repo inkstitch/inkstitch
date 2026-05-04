@@ -16,7 +16,7 @@ Running stitch produces a series of small stitches following a line or curve.
 
 Running stitch is created from a path with a stroke color.
 
-The stitch direction is impacted by the [path direction](/docs/customize/#enabling-path-outlines--direction). If you want to change the starting and ending point of your running stitch, use  `Path > Reverse`.
+The stitch direction is impacted by the [path direction](/docs/customize/#enabling-path-outlines--direction). If you want to swap the start and end points of your running stitch, use  `Path > Reverse`.
 
 If an object consists of multiple paths, they will be stitched in order with a jump between each.
 
@@ -34,13 +34,13 @@ Repeats                       |Defines how many times to stitch  along the path<
 Bean stitch number of repeats |Determines the number of times to repeat each stitch.<br />◦ A value of '0' does not repeat the stitch (normal stitch)<br/>◦ A value of '1' repeats each stitch three times (forward, back, forward).<br />◦ A value of '2' repeats the stitch six times. <br />◦ See [Bean Stitch Mode](/docs/stitches/bean-stitch/) for more information<br />
 Running stitch length         |Determines the length of stitches. By entering multiple values, it is possible to define a custom stitch length pattern. For instance  `2 4`  will create stitches of length alternatively 2 and 4 mm.
 Running stitch tolerance      |Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
-Randomize stitch length       |Allows for randomize stitch length. This is recommended for closely-spaced curved fills to avoid Moiré artefacts. 
+Randomize stitch length       |Allows for randomize stitch length. 
 Random stitch length jitter   |Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
 Random Seed| Rolling the dice or setting a new value will change the random stitches
 Minimum stitch length         |Overwrites the global minimum stitch length setting. Stitches small than this value will be removed.
 Minimum  jump stitch  length  |Overwrites the global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
 Allow lock stitches           |Enables lock stitches in only desired positions
-Force lock stitches           |Determines if lock stitches are sewn after this element, even if the distance to the next object is smaller than defined in the Collapse Length value in the Ink/Stitch preferences.
+Force lock stitches           |Determines if lock stitches are sewn after this element,regardless of the minimum jump stitch length value.
 Tack stitch                   |Determines the type of tack stitch.  Tack stitches are small stitches at the beginning of a stitch. They help to secure the beginning of the thread. [favorite style](/docs/stitches/lock-stitches/)
 Lock stitch                   |Determines the type of lock stitch. Lock stitches are small stitches at the end of stitch.  They help to secure the end of the thread.  [favorite style](/docs/stitches/lock-stitches/)
 Trim After                    |Determines if the thread is trimmed after sewing this object.
@@ -48,7 +48,7 @@ Stop After                    |Determines if the machine is stopped after sewing
 
 ## Routing
 
-For better stitch routing try the extensions `Autoroute Running Stitch` and `Redwork` in the [stroke tools](/docs/stroke-tools/).
+For better stitch routing of consecutives running stitches, try the extensions `Autoroute Running Stitch` and `Redwork` in the [stroke tools](/docs/stroke-tools/).
 
 ## Patterned Running Stitch
 
