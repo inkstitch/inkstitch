@@ -4,13 +4,13 @@ permalink: /fr/docs/stitches/manual-stitch/
 last_modified_at: 2026-01-06
 toc: true
 ---
-## De quoi s'agit-il
+## Description
 [![Fleurs en point manuel](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
 En mode point manuel Ink / Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés.
 ![Detail de point manuel](/assets/images/docs/manual-stitch-detail.png)
 
 Si vous ouvrez un fichier de broderie machine, vous y trouverez des points manuels.  Lorsque vous concevrez un fichier de broderie en svg, vous utiliserez très rarement les points manuels.
-## Comment le créer
+## Création
 
 1. Créez un chemin. Le style de trait ou la largeur ne sont pas pertinents.
 2. Ouvrez `Extensions > Ink/Stitch  > Paramètres`.
