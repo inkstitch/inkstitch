@@ -35,7 +35,7 @@ Method                        |Choose manual stitch
 Bean stitch number of repeats |◦ Enable [Bean Stitch Mode](/docs/stitches/bean-stitch/)<br />◦ Backtrack each stitch this many times.<br />◦ A value of 1 would triple each stitch (forward, back, forward).<br />◦ A value of 2 would quintuple each stitch, etc.
 Max stitch length             |Stitches longer than this will be subdivided. Leave empty for no subdivision. 
 Minimum stitch length         |Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
-Minimum  jump stitch  length  |Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
+Minimum  jump stitch  length  |Overwrite global minimum jump stitch length setting. If the object is at shorter distance to the next object there will be no lock stitches.
 Allow lock stitches           |Usually manual stitches to not add lock stitches automatically and you have to include them directly into your path. But you can enable them through the setting `force lock stitches`.
 Force lock stitches           |Enables lock stitches for manual stitches.
 Trim After                    |Trim the thread after sewing this object.
