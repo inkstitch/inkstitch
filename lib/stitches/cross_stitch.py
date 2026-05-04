@@ -38,7 +38,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     '''
     # thread count is strictly positive
     thread_count = abs(fill.cross_thread_count)
-    rotation_center, shape = _grid_rotate(fill, shape)
+    rotation_center, shape, starting_point, ending_point = _grid_rotate(fill, shape, starting_point, ending_point)
     if fill.cross_stitch_method.startswith('half'):
         # half stitches only differ from auto-fill in
         # - their pixelated outline
@@ -64,13 +64,13 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     return stitches
 
 
-def _grid_rotate(fill, shape):
+def _grid_rotate(fill, shape, starting_point, ending_point):
     # When we rotate a cross stitch shape (for example with lettering along path)
     # we want to preserve the cross stitch positions of the unrotated shape
     # It is way easier to rotate the shape and rotate it back, than trying to apply the rotations on each cross stitch area
     # The rotation center is taken from inkscapes transform center values, so that users can actually manipulate the effect
     if fill.cross_rotation == 0:
-        return (0, 0), shape
+        return (0, 0), shape, starting_point, ending_point
 
     minx, miny, maxx, maxy = shape.bounds
     rotation_center_x = fill.node.get('inkscape:transform-center-x', None)
@@ -87,7 +87,12 @@ def _grid_rotate(fill, shape):
     else:
         rotation_center = tuple(fill.cross_offset)
     rotated_shape = rotate(shape, -fill.cross_rotation, origin=rotation_center)
-    return rotation_center, rotated_shape
+    if starting_point is not None:
+        starting_point = rotate(Point(starting_point), -fill.cross_rotation, origin=rotation_center)
+    if ending_point is not None:
+        ending_point = rotate(Point(ending_point), -fill.cross_rotation, origin=rotation_center)
+
+    return rotation_center, rotated_shape, starting_point, ending_point
 
 
 def _grid_unrotate(stitches, angle, origin):

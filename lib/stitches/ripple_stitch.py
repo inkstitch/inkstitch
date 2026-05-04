@@ -50,6 +50,10 @@ def ripple_stitch(stroke):
     if stroke.reverse:
         stitches.reverse()
 
+    return _get_stitch_groups(stroke, stitches, grid_lines, skip_start, skip_end, is_linear)
+
+
+def _get_stitch_groups(stroke, stitches, grid_lines, skip_start, skip_end, is_linear):
     remove_end_travel = True
     if stroke.grid_size != 0:
         remove_end_travel = False
@@ -76,6 +80,9 @@ def ripple_stitch(stroke):
 
 
 def _route_clipped_stitches(stroke, stitches, remove_start_travel=True, remove_end_travel=True, starting_point=None):
+    if not stitches:
+        return []
+
     if stroke.clip_shape is None:
         return [stitches]
 
@@ -458,7 +465,7 @@ def _get_satin_ripple_helper_lines(stroke, grid=False):
         length = stroke.running_stitch_tolerance
     # use satin column points for satin like build ripple stitches
     rail_pairs = SatinColumn(stroke.node).plot_points_on_rails(length)
-    count = _get_satin_line_count(stroke, rail_pairs)
+    count = max(2, _get_satin_line_count(stroke, rail_pairs))
 
     steps = _get_steps(count, exponent=stroke.exponent, flip=stroke.flip_exponent)
 
