@@ -14,7 +14,7 @@ def path_to_segments(path):
         yield LineString((start, end))
 
 
-def segments_to_path(segments):
+def segments_to_path(segments, max_stitch_length=0):
     """Convert a list of contiguous LineStrings into a list of Points."""
     if not segments:
         return []
@@ -22,6 +22,8 @@ def segments_to_path(segments):
     coords = [segments[0].coords[0]]
 
     for segment in segments:
+        if max_stitch_length > 0:
+            segment = segment.segmentize(max_stitch_length)
         coords.extend(segment.coords[1:])
 
     return [Point(x, y) for x, y in coords]
@@ -89,7 +91,7 @@ def clamp_fully_external_path(path, polygon):
     return adjust_line_end(shorter, start)
 
 
-def clamp_path_to_polygon(path, polygon, check_distance=True):
+def clamp_path_to_polygon(path, polygon, max_stitch_length=0, check_distance=True):
     """Constrain a path to a Polygon.
 
     The path is expected to have at least some part inside the Polygon.
@@ -129,7 +131,7 @@ def clamp_path_to_polygon(path, polygon, check_distance=True):
     if not clamped_path:
         return clamp_fully_external_path(path, polygon)
 
-    return segments_to_path(clamped_path)
+    return segments_to_path(clamped_path, max_stitch_length)
 
 
 def _clamp_path(split_path, buffered_polygon, polygon, check_distance):
