@@ -4,89 +4,85 @@ permalink: /docs/stitches/satin-column/
 last_modified_at: 2026-04-08
 toc: true
 ---
-## What it is
+## Description
 
 Satin column are used for borders, letters or small fill areas.
 
 ![Stitch Types - Satin column](/assets/images/docs/stitch-type-satincolumn.jpg)
 
-## How to create
+## Creation
 
-Ink/Stitch offers several option to create satin columns. Methods 1 to 4 create convert to a manual satin column which then can be modified as necessary. Method 5 allows for more customization. 
+Ink/Stitch offers several methods to create satin columns. Methods 2 to 5 convert to a manual satin column which can then be modified as necessary. Method 5 allows for more customization. Method 1 does no conversion but render a stroke as a satin.
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
-1. [Stroke to Satin](#1-line-to-satin): for even width satin columns
-2. [Stroke to Live Path Effect Satin](#2-line-to-live-path-effect-satin): modifiable satin column with optional patterned outline
-3. [Zigzag to Satin](#3-zigzag-line-to-satin): satin column creation for graphic tablets and touch screens
-4. [Fill to Satin](#4-fill-to-satin): create satin columns from fills
-5. [Manual Satin Column](#5-manual-satin-column): take full control over every part of the satin column
+1. [Stroke rendered as Satin](#1-render-stroke-as-satin): for even width satin columns
+2. [Stroke to Satin](#2-stroke-to-satin): for even width satin columns
+3. [Stroke to Live Path Effect Satin](#3-stroke-to-live-path-effect-satin): modifiable satin column with optional patterned outline
+4. [Zigzag to Satin](#4-zigzag-line-to-satin): satin column creation for graphic tablets and touch screens
+5. [Fill to Satin](#5-fill-to-satin): create satin columns from fills
+6. [Manual Satin Column](#6-manual-satin-column): take full control over every part of the satin column
 
-### Method 1 - Generate a satin column using a stroke
-
-These methods take a path with a contour color (stroke) and convert it to a satin column. They are most useful for even width satin columns.
-
-#### Option 1
+### 1 - Render a stroke as satin
 
 {% include upcoming_release.html %}
 
-This option uses strokes with a contour color directly as a satin and is therefore the most easy one to create and adapt.
+This method renders paths with an stroke color directly as satins and is therefore the easiest one to create uniform width satin columns.
 
-* Add a contour color to a path object (with no fill).
+* Add a stroke color to a path object (with no fill).
 * Set contour width to the size of the desired satin stitch
-  (the value should be larger than 1mm, see [preferences](/docs/preferences/#minimum-satin-stroke-width) for a deeper insight of the minimum satin width value)
+  (the value should be larger than 1.5 mm, see [preferences](/docs/preferences/#minimum-satin-stroke-width) for a deeper insight of the minimum satin width value)
 * Run `Extensions > Ink/Stitch > Params
 * Open the Satin Column Tab and activate Custom Satin Columns
 
-With Option 1, the position of the nodes can influence how the satin will be rendered:
+The position of the nodes can influence how the satin is rendered:
 
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
-#### Option 2
+####  2 - Stroke to Satin
 
-* Add a contour color to a path object (with no fill).
-* Set contour width to the size of the desired satin stitch.
+* Add a stroke color to a path object (with no fill).
+* Set stroke width to the width of the desired satin stitch.
 * Run `Extensions > Ink/Stitch > Satin Tools > Convert Stroke to Satin`
-* Optionally run autoroute to optimize `Extensions > Ink/stitch > Satin Tools > Auto-route Satin...`
 * Use as-is or customize rungs and/or rails
 
 Get more information about [Stroke to Satin](/docs/satin-tools/#convert-line-to-satin)
 
-### Method 2 - Stroke to Live Path Effect Satin
+### 3 - Stroke to Live Path Effect Satin
 
-This can be used to create a satin which can either have a patterned outline or to create a satin which is more easily to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
+This can be used to create a satin which can either have a patterned outline or to create a satin which is easier to adapt in width. Please note, that once you use auto-routing on this type of satin, the live path effect will be applied and the path can only be adapted manually afterwards.
 
 Use `Path > Object to path` to convert this to a standard satin column.
 
 Get more information about [Live Path Effect Satins](/docs/satin-tools/#stroke-to-live-path-effect-satin)
 
-### Method 3 - Zigzag Line to Satin
+### 4 - Zigzag Line to Satin
 
 This method is convenient when you use a a touch screen or graphic tablet.
 
 Get more information about [Zigzag to Satin](/docs/satin-tools/#zigzag-line-to-satin)
 
-### Method 4 - Fill to Satin
+### 5 - Fill to Satin
 
 Fill to Satin can be used to convert a fill into a satin column. It is a semi-automatic function and requires additional manual work.
 
 Get more information about [Fill to Satin](/docs/satin-tools/#fill-to-satin)
 
-### Method 5 - Manual Satin Column
+### 6- Manual Satin Column
 
 A satin column is defined by a shape made of **two mostly-parallel lines**. Ink/Stitch will draw zig-zags back and forth between the two lines. The thickness of the column will be based on the distance between the two lines. 
 
 * Combine two strokes with `Path > Combine` or hit `Ctrl+K`.
-* [Check path directions](/docs/customize/#enabling-path-outlines--direction). For the satin column to work, they have to be equal.
-
-  If they are not equal, select one point of one subpath with the *Node Editor Tool* (`N`) and run `Path > Reverse`. This will reverse only the selected subpath.
+* [Check path directions](/docs/customize/#enabling-path-outlines--direction).Both rails  should run in the same direction. If not, Ink/stitch by default will automatically reverse one of them, but you will have better control if you reverse one of them, which is done by selecting one point of one rail with the *Node Editor Tool* (`N`) and run `Path > Reverse`. This will reverse only the selected rail.
 * Use node or rung method as described below.
 * Then select your satin column and run params through `Extensions > Ink/Stitch  > Params` or a [custom shortcut key](/docs/customize/).
+
+### Stitch direction control
 
 #### Node Method
 
 [![Satin Column Boat](/assets/images/docs/satin-column.jpg){: width="200x"}](/assets/images/docs/satin-column.svg){: title="Download SVG File" .align-left download="satin-column.svg" }
-Depending on the complexity of your design, this method might be time consuming, because the two paths must have the **same number of points**. This means that each path will be made up of an equal number of Bezier curves. Each pair of points acts as a "checkpoint": Ink/Stitch will ensure that a "zag" ends up going from one point to the other.
+Depending on the complexity of your design, this method might be time consuming, because the two paths must have the **same number of points**. This means that each path will be made up of an equal number of Bezier curves. Each pair of points  (one on each rail) acts as a "checkpoint": Ink/Stitch will ensure that a "zag" ends up going from one point to the other.
 
 #### Rung Method
 
@@ -98,7 +94,7 @@ The rung method will give you more control over the way the satin column is rend
 * Special situations where you want the stitch directions to be weird
 {: style="clear: both;" }
 
-**Manual adding of rungs**
+**Manual addition of rungs**
 
 * Make sure the existing satin column path (with the two subpaths) is selected with the Node Editor tool.
 * Press `P` or select the Pencil Tool.
@@ -122,7 +118,7 @@ To disable this behavior open the [params dialog](/docs/params/) and disable one
 
 Alternatively add a start or end point manually by attaching a [command](/docs/commands/#attach-commands-to-selected-objects-) to the satin column.
 
-## Params
+## Parameters
 
 Running `Extensions > Ink/Stitch  > Params` will give you the possibility to fine-tune your satin column and to use underlay.
 
