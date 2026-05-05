@@ -8,7 +8,7 @@ toc: true
 
 **Exemple:**
 * Créer un chemin à l'aide de l'outil courbes de Bézier (`B`)
-* Faire [Ligne en Satin](#ligne-en-satin)
+* Faire [Trait en Satin](#trait-en-satin)
 * Utiliser le [Dialogue de Paramétrage](/fr/docs/params/#paramètres-satin) pour choisir une sous-couche
 * Lancer [Agencement automatique des colonnes satin](#agencement-automatique-de-colonnes-satin) pour obtenir des colonnes de satin bien organisées
 
@@ -51,7 +51,8 @@ Cette extension convertira un trait en une (ou plusieurs) colonne satin avec une
 
 ## Scinder une colonne Satin
 
-Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient cousus exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
+Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'un point pour que les deux satins résultants soient brodés exactement comme l'original. Tous les paramètres définis sur le satin d'origine restent sur les deux nouveaux satins et toutes les traverses sont conservées. Si l'un des satins n'a plus de traverse, de nouvelles sont ajoutées.
+
 
 ### Usage
 
@@ -60,9 +61,9 @@ Scinder une colonne Satin à un point précis. La coupure a lieu à la limite d'
 3. Déplacez le symbole (ou simplement l'extrémité de la ligne de connexion) pour pointer sur l'endroit exact où vous souhaitez diviser le satin.
 4. Sélectionnez à nouveau la colonne satin.
 5. Faire `Extensions > Ink/Stitch > Outils de Satin > Scinder colonne Satin`.
-6. La commande de point de partage et la ligne de connexion disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
+6. La ou les commandes de point de partage  disparaissent et il semble que rien ne s'être passé. Sélectionnez votre satin et vous verrez qu'il a été divisé.
 {% include upcoming_release.html %}
-Vous pouvez utiliser plusieurs commandes sur la même colonne de satin pour la diviser en plusieurs morceaux en une seule action.
+Vous pouvez utiliser plusieurs commandes sur la même colonne de satin pour la diviser en plus de deux morceaux en une seule action.
 
 ## Remplissage en Satin {#fill-to-satin}
 
