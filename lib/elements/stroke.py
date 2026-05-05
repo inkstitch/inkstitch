@@ -37,7 +37,7 @@ class TooNarrowSatinWarning(ValidationWarning):
     description = _("This element renders as running stitch while it has a satin column parameter.")
     steps_to_solve = [
         _("* Increase stroke width."),
-        _("Wether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke "
+        _("Whether or not a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke "
           "width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not "
           "produce hard stitches, it is recommended to only use satins wider than 1mm."),
     ]
