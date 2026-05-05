@@ -88,7 +88,7 @@ Si ce n'est pas le cas, ink/stitch essaye d'inverser automatiquement un des deux
 
 * Ensuite, sélectionnez votre colonne satin et lancez les paramètres avec `Extensions > Ink/Stitch > Paramètres` ou un [raccourci clavier personnalisé](/fr/docs/customize/).
 
-## Contrôle de la direction des points
+### Contrôle de la direction des points
 
 #### Méthode des noeuds
 
