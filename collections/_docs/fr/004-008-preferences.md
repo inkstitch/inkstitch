@@ -71,7 +71,7 @@ Les  **points manuels** sont eux aussi affectés  par *Longueur minimum de point
 
 La possibilité de rendre un trait en point satin dépend de sa largeur et de la valeur du seuil d'auto-conversion.
 
-La largeur du trait doit être supérieure à la valeurdu seuil ; sinon, le trait est traité comme un point droit.
+La largeur du trait doit être supérieure à la valeur du seuil ; sinon, le trait est traité comme un point droit.
 
 Pour éviter les points trop serrés, il est recommandé d'utiliser uniquement des satins d'une largeur supérieure à 1 mm.
 L'utilisation de fils fins constitue une exception à cette règle.
