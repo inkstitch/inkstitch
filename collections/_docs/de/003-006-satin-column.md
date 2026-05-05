@@ -16,17 +16,15 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
-1. [Linie zu Satin](#1-linie-zu-satin): für Satinsäule mit einheitlicher Breite
-2. [Linie zu Pfadeffekt-Satin](#2-linie-zu-pfadeffekt-satin): leicht modifizierbare Satinsäule mit optionalem Muster
-3. [Zickzack-Linie zu Satin](#3-zickzack-linie-zu-satin): für die einfache Erstellung mit Grafiktablets oder Touchscreens
-4. [Füllung zu Satin](#4-füllung-linie-zu-satin): erstelle durch hinzufügen von Richtungsvektoren eine Satinsäule aus einer Füllung
-5. [Manuelle Satinsäule](#5-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
 
-### 1. Linie zu Satin
+1. [Linie als Satinstich](#1-linie-als-satinstitch): für Satinsäule mit einheitlicher Breite
+2. [Linie zu Satin](#2-linie-zu-satin): für Satinsäule mit einheitlicher Breite
+3. [Linie zu Pfadeffekt-Satin](#3-linie-zu-pfadeffekt-satin): leicht modifizierbare Satinsäule mit optionalem Muster
+4. [Zickzack-Linie zu Satin](#4-zickzack-linie-zu-satin): für die einfache Erstellung mit Grafiktablets oder Touchscreens
+5. [Füllung zu Satin](#5-füllung-linie-zu-satin): erstelle durch hinzufügen von Richtungsvektoren eine Satinsäule aus einer Füllung
+6. [Manuelle Satinsäule](#6-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
 
-Diese Methoden eignen sich für Satinsäulen mit gleichbleibender Breite.
-
-#### Methode 1
+### 1. Linie als satinstitch
 
 {% include upcoming_release.html %}
 
@@ -34,7 +32,7 @@ Mit dieser Methode kann eine Linie mit Konturfarbe direkt und ohne Umwandlung al
 Daher ist diese Methode die einfachste Methode zur Erstellung und Anpassung von Satinsäulen.
 
 * Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
-* Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht. Sie muss unbedgint breiter als 0.3 mm sein (Satinsäulen sollten im Regelfall eine Breite von 1mm nocht unterschreiten).
+* Set stroke width to the size of the desired satin stitch (the value should be larger than minimum satin width value see [preferences](/docs/preferences/#minimum-satin-stroke-width) for a deeper insight of the minimum satin width value)
 * Öffne den Parameterdialog: `Erweiterungen > Ink/Stitch > Parameter
 * Öffne den Tab `Satinsäule` und aktiviere `Benutzerdefinierte Satinsäule`
 
@@ -42,7 +40,7 @@ Bei dieser Methode hat die Positionierung der Pfad-Knoten einen Einfluss auf das
 
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
-#### Methode 2
+### 2. Linie zu satin
 
 * Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
 * Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht
@@ -52,7 +50,7 @@ Bei dieser Methode hat die Positionierung der Pfad-Knoten einen Einfluss auf das
 
 Mehr Informationen über [Linie zu Satin](/de/docs/satin-tools/#linie-zu-satin)
 
-### 2. Linie zu Pfadeffekt-Satin
+### 3. Linie zu Pfadeffekt-Satin
 
 Diese Erweiterung dient dazu schnell und einfach eine Satinsäule mit gemusterter oder einheitlicher Kante zu erstellen.
 
@@ -62,19 +60,19 @@ Um einen Pfadeffekt-Satin in eine normale Satinsäule umzuwandeln, nutze die Fun
 
 Mehr Informationen über [Pfadeffekt-Satins](/de/docs/satin-tools/#linie-zu-pfadeffekt-satin)
 
-### 3. Zickzack-Linie zu Satin
+### 4. Zickzack-Linie zu Satin
 
 Diese Methode zur Erstellung von Satinsäulen ist besonders für Grafik-Tablets oder Touch-Screens interessant.
 
 Mehr Informationen über [Zickzack-Linie zu Satin](/de/docs/satin-tools/#zickzack-line-zu-satin)
 
-### 4. Füllung zu Satin
+### 5. Füllung zu Satin
 
 Füllung zu Satin hilft bei der Umwandlung von Füllflächen zu Satinsäulen. Es ist eine halbautomatische Funktion und benötigt ein wenig Handarbeit.
 
 Mehr Informationen über [Füllung zu Satin](/de/docs/satin-tools/#füllung-line-zu-satin)
 
-### 5. Manuelle Satinsäule
+### 6. Manuelle Satinsäule
 
 Eine Satinsäule wird aus zwei **meist parallel verlaufenden Linien** gebildet. Ink/Stitch zeichnet ein Zick-Zack Muster zwischen den beiden Linien hin und her. Die Breite der Säule kann beliebig variiert werden.
 
@@ -82,6 +80,7 @@ Eine Satinsäule wird aus zwei **meist parallel verlaufenden Linien** gebildet. 
 * [Überprüfe die Pfad-Richtungen](/docs/customize/#enabling-path-outlines--direction). Damit die Satinsäule erzeugt werden kann, müssen sie gleich sein.<br />Wenn dies nicht der Fall ist, wähle mit dem *Knoten-Werkzeug* (`N`) einen Punkt eines Unterpfads und führe ein `Pfad -> Richtung umkehren` durch. Dadurch wird nur der ausgewählte Unterpfad umgekehrt.
 * Benutze die Knoten- oder die Sprossenmethode wie unten beschrieben.
 * Wähle dann die Satinsäule und führe `Erweiterungen > Ink/Stitch > Paramter`, oder eine [Benutzerdefinierte Tastenkombination](/docs/customize/) aus.
+
 
 #### Die Knoten Methode
 
@@ -175,7 +174,7 @@ Zufallszahl                         | |Zufallswert für randomisierte Attribute.
 Minimale Stichlänge                 | |Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche die kleiner sind als dieser Wert werden entfernt.
 Minimale Länge für Sprungstiche     | |Überschreibt die globale Einstellung für die minimale Sprungstichlänge. Kleiner Enterfnungen zum nächsten Objekt werden nicht vernäht.
 Vernähen erlauben                   | |Vernäht bei Bedarf an den ausgewählten Positionen
-Vernähen erzwingen                  | |Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Vernähen erzwingen                  | |Vernäht den Faden nach diesem Element, unabhängig vom Wert für die Minimale Länge für Sprungstiche 
 Anstecher                           | |Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
 Verstecher                          | |Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt                        | |Schneidet den Faden nachdem dieses Objekt genäht wurde
