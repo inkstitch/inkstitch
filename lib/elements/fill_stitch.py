@@ -549,6 +549,7 @@ class FillStitch(EmbroideryElement):
            type='str',
            select_items=[('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
+                         ('fill_method', 'guided_fill'),
                          ('fill_method', 'tartan_fill')],
            default=0,
            sort_index=51)
@@ -1245,6 +1246,7 @@ class FillStitch(EmbroideryElement):
                 self.angle,
                 self.row_spacing,
                 self.staggers,
+                self.bean_stitch_repeats,
                 self.max_stitch_length,
                 self.running_stitch_length,
                 self.running_stitch_tolerance,

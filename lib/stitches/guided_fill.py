@@ -16,10 +16,10 @@ from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_geometry_collection,
                               ensure_multi_line_string, reverse_line_string)
 from ..utils.threading import check_stop_flag
-from .running_stitch import random_running_stitch
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
                         graph_make_valid, travel)
+from .running_stitch import bean_stitch, random_running_stitch
 
 
 def guided_fill(shape,
@@ -27,6 +27,7 @@ def guided_fill(shape,
                 angle,
                 row_spacing,
                 num_staggers,
+                bean_stitch_repeats,
                 max_stitch_length,
                 running_stitch_length,
                 running_stitch_tolerance,
@@ -57,6 +58,10 @@ def guided_fill(shape,
     result = path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
                               max_stitch_length, running_stitch_length, running_stitch_tolerance, skip_last,
                               underpath)
+
+    if any(bean_stitch_repeats):
+        # add bean stitches, but ignore travel stitches
+        result = bean_stitch(result, bean_stitch_repeats, ['auto_fill_travel', 'fill_row_start'])
 
     return result
 
@@ -91,12 +96,14 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
             if edge[0] != path_geometry.coords[0]:
                 path_geometry = reverse_line_string(path_geometry)
 
-            new_stitches = [Stitch(*point) for point in path_geometry.coords]
-
-            # need to tag stitches
+            new_stitches = [Stitch(*point, tags=['guided_fill', 'fill_row']) for point in path_geometry.coords]
 
             if skip_last:
                 del new_stitches[-1]
+
+            if new_stitches:
+                new_stitches[0].add_tag('fill_row_start')
+                new_stitches[-1].add_tag('fill_row_end')
 
             stitches.extend(new_stitches)
 
