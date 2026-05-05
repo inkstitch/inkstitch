@@ -39,7 +39,7 @@ The position of the nodes can influence how the satin is rendered:
 
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
-####  2 - Stroke to Satin
+###  2 - Stroke to Satin
 
 * Add a stroke color to a path object (with no fill).
 * Set stroke width to the width of the desired satin stitch.
