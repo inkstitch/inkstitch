@@ -4,13 +4,13 @@ permalink: /fr/docs/stitches/zigzag-satin-stitch/
 last_modified_at: 2024-05-02
 toc: true
 ---
-## Qu'est-ce que c'est
+## Description
 
 Le satin en  "zigzag" est une colonne satin avec un air de zigzag
 
 ![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
 
-## Comment le créer
+## Création
 
 Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/fr/docs/stitches/satin-column). 
 Mais dans les paramètres choisissez la méthode `Zigzag`.
