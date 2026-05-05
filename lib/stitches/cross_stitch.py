@@ -88,9 +88,9 @@ def _grid_rotate(fill, shape, starting_point, ending_point):
         rotation_center = tuple(fill.cross_offset)
     rotated_shape = rotate(shape, -fill.cross_rotation, origin=rotation_center)
     if starting_point is not None:
-        starting_point = rotate(Point(starting_point), -fill.cross_rotation, origin=rotation_center)
+        starting_point = rotate(Point(starting_point), -fill.cross_rotation, origin=rotation_center).coords
     if ending_point is not None:
-        ending_point = rotate(Point(ending_point), -fill.cross_rotation, origin=rotation_center)
+        ending_point = rotate(Point(ending_point), -fill.cross_rotation, origin=rotation_center).coords
 
     return rotation_center, rotated_shape, starting_point, ending_point
 
