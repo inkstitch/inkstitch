@@ -12,7 +12,7 @@ Satin column are used for borders, letters or small fill areas.
 
 ## Creation
 
-Ink/Stitch offers several methods to create satin columns. Methods 2 to 5 convert to a manual satin column which can then be modified as necessary. Method 5 allows for more customization. Method 1 does no conversion but render a stroke as a satin.
+Ink/Stitch offers several methods to create satin columns. Method 1 does no conversion but render a stroke as a satin. Methods 2 to 5 convert to a manual satin column which can then be modified as necessary. Method 5 allows for more customization. 
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
@@ -27,7 +27,7 @@ Ink/Stitch offers several methods to create satin columns. Methods 2 to 5 conver
 
 {% include upcoming_release.html %}
 
-This method renders paths with an stroke color directly as satins and is therefore the easiest one to create uniform width satin columns.
+This method renders paths with a stroke color directly as satins and is therefore the easiest one to create uniform width satin columns.
 
 * Add a stroke color to a path object (with no fill).
 * Set contour width to the size of the desired satin stitch
@@ -168,7 +168,7 @@ Random seed           | | Use a specific seed to compute stitch plan. If empty, 
 Minimum stitch length | |Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
 Minimum  jump stitch  length             ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
 Allow lock stitches   |☑ |Enables lock stitches in only desired positions
-Force lock stitches   |☑ | Sew lock stitches after sewing this element, even if the distance to the next object is smaller than defined in the collapse length value value in the Ink/Stitch prefreneces.
+Force lock stitches   |☑ | If checked, sew lock stitches after sewing this element, regardless of minimum jump stich length value.
 Tack stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Lock stitch           | |Chose your [favorite style](/docs/stitches/lock-stitches/)
 Stop After            |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
