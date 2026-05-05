@@ -29,7 +29,7 @@ Zugausgleich                        |![Pull compensation example](/assets/images
 Konturlinien umkehren               |![Reverse Rung](/assets/images/docs/satin-reverse-rung.png) | Optionen:<br /> ◦ Automatisch, die Standardeinstellung dreht eigenständig gegenläufige Außenkonturen<br />◦ Nicht umkehren, deaktiviert automatisches drehen<br />◦ Erste Konturlinie umkehren<br />◦ Zweite Konturlinie umkehren <br />◦ Beide Konturlinien umkehren
 Seiten umkehren                     | | Kehrt die Seiten der Satinsäule um (links und rechts). Dies beeinflusst z.B. an welcher Seite der Faden startet und endet. Aber auch jede andere seitenbezogene Einstellung ist hiervon betroffen.
 Vernähen erlauben                   | |Vernäht bei Bedarf an den ausgewählten Positionen
-Vernähen erzwingen                  | |Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
+Vernähen erzwingen                  | |Vernäht den Faden nach diesem Element, unabhängig vom Wert für die Minimale Länge für Sprungstiche 
 Anstecher                           | |Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
 Verstecher                          | |Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
 Fadenschnitt                        | |Schneidet den Faden nachdem dieses Objekt genäht wurde
