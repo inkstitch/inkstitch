@@ -68,7 +68,7 @@ Cette méthode est particulièrement adaptée aux écrans tactiles et aux tablet
 
 Plus d'information sur [Convertir "ligne en zigzag" en satin](/fr/docs/satin-tools/#zigzag-line-to-satin)
 
-### 5. "Remplissage" en Satin
+### 5. Remplissage en Satin
 
 Remplissage en satin peut être utilisé pour convertir un remplissage en satin. C'est une fonction semi-automatique qui nécessite un peu de travail manuel.
 
