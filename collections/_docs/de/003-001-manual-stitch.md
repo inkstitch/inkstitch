@@ -22,7 +22,7 @@ Für eine genaue Planung macht es deshalb Sinn, schon beim Zeichnen Kurven direk
 1. Wähle alle Knotenpunkte an (`F2` dann `Ctrl`+`A`)
 2. Klicke auf ![Die gewählten Knoten in Ecken umwandeln](/assets/images/docs/tool-controls-corner.jpg){: title="Die gewählten Knoten in Ecken umwandeln" } in der `Werkzeugeinstellungsleiste`.g
 
-## Params
+## Parameter
 
 Einstellung|Beschreibung
 ---|---
