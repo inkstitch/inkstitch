@@ -501,7 +501,26 @@ class EmbroideryElement(object):
         else:
             d = self.node.get("d", "")
 
-        return inkex.Path(d).to_superpath()
+        path = inkex.Path(d)
+        try:
+            superpath = path.to_superpath()
+        except ZeroDivisionError:
+            # a common cause are very small radius settings on a rectangle (see #4335)
+            # let's try to fix those arcs by replacing them with a simple line
+            arc_tolerance = 0.00001
+            commands = []
+            for cmd in path:
+                if cmd.letter == 'A':
+                    rx, ry = cmd.rx, cmd.ry
+                    if abs(rx) < arc_tolerance or abs(ry) < arc_tolerance:
+                        commands.append(['L', [cmd.x, cmd.y]])
+                    else:
+                        commands.append(cmd)
+                else:
+                    commands.append(cmd)
+            superpath = inkex.Path(commands).to_superpath()
+
+        return superpath
 
     @property
     def is_closed_path(self):
