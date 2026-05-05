@@ -1063,7 +1063,7 @@ class SatinColumn(EmbroideryElement):
         Case #1: If the split point is between the end and the last rung, then
         one of the satins will have no rungs.  It will be treated as an old-style
         satin, but it may not have an equal number of points in each rail.  Adding
-        a rung will make it stitch properly.
+        three rungs will make it stitch properly.
 
         Case #2: If one of the satins ends up with exactly two rungs, it's
         ambiguous which of the subpaths are rails and which are rungs.  Adding
@@ -1079,8 +1079,8 @@ class SatinColumn(EmbroideryElement):
                 # Add the rung just after the start of the satin.
                 # If the rails have opposite directions it may end up at the end of the satin.
                 self._add_rung(path_list, 0.3)
-            # When rails are intersecting, add two more rung to prevent bad rail detection
-            if num_paths == 2 and path_list[0].intersects(path_list[1]):
+            # Add two more rung to prevent bad rail detection
+            if num_paths == 2:
                 self._add_rung(path_list, 0.5, True)
                 self._add_rung(path_list, -0.3)
 
