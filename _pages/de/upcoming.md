@@ -136,12 +136,15 @@ Fast alle Schriften wurden überarbeitet und liegen nun in einer verbesserten Ve
 Ein großes Dankeschön geht auch an alle, die an Übersetzungen mitgewirkt haben.
 Neue Übersetzungen in den folgenden Sprachen wurden uns zur Verfügung gestellt:
 
+* Chinesisch (Simplified)
 * Tschechisch
 * Holländisch
 * Französisch
 * Deutsch
 * Griechisch
 * Ungarisch
+* Japanisch
+* Polnisch
 * Portugisisch (Brasilien)
 * Spanisch
 

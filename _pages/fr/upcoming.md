@@ -143,12 +143,15 @@ De nombreuses mises à jour ont été apportées aux polices existantes. Merci �
 
 Un grand merci à tous les traducteurs. Nous avons reçu de nouvelles traductions en :
 
+* Chinese Simplified
 * Tchèque
 * Néerlandais
 * Français
 * Allemand
 * Grec
 * Hongrois
+* Japanese
+* Polish
 * Portugais (Brésil)
 * Espagnol
 

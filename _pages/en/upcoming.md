@@ -139,12 +139,15 @@ Numerous updates to existing fonts were made. Thanks to everyone involved!
 
 A big thank you to all translators. We've received new translations into:
 
+* Chinese Simplified
 * Czech
 * Dutch
 * French
 * German
 * Greek
 * Hungarian
+* Japanese
+* Polish
 * Portuguese, Brazilian
 * Spanish
 
