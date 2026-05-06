@@ -155,11 +155,6 @@ A big thank you to all translators. We've received new translations into:
 
 ## New Stitch Types
 
-### Fill stitches
-
-Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 to 4.
-Old files will be automatically updated to keep the previous setting.
-
 ### Cross Stitch
 
 ![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
@@ -167,6 +162,11 @@ Old files will be automatically updated to keep the previous setting.
 [Read more about cross stitch](/docs/stitches/cross-stitch)
 
 ## Stitch Type Related Updates
+
+### Fill stitches
+
+Changed default for all fill stitches with the parameter `maximum fill stitch length` from 3 to 4.
+Old files will be automatically updated to keep the previous setting.
 
 ### Guided Fill
 

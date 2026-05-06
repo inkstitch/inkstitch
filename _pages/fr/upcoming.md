@@ -159,11 +159,6 @@ Un grand merci à tous les traducteurs. Nous avons reçu de nouvelles traduction
 
 ## Nouveaux types de points
 
-### Fill stitches
-
-Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 to 4.
-Old files will be automatically updated to keep the previous setting.
-
 ### Point de croix
 
 ![Grenouille au point de croix](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
@@ -171,6 +166,11 @@ Old files will be automatically updated to keep the previous setting.
 [En savoir plus sur le point de croix](/fr/docs/stitches/cross-stitch)
 
 ## Mises à jour relatives aux types de points
+
+### Fill stitches
+
+Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 to 4.
+Old files will be automatically updated to keep the previous setting.
 
 ### Guided Fill
 

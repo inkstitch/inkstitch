@@ -152,11 +152,6 @@ Neue Übersetzungen in den folgenden Sprachen wurden uns zur Verfügung gestellt
 
 ## Neue Sticharten
 
-### Fill stitches
-
-Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 mm to 4 mm.
-Old files will be automatically updated to keep the previous setting ([#4280](https://github.com/inkstitch/inkstitch/pull/4280)).
-
 ### Kreuzstich
 
 ![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
@@ -164,6 +159,11 @@ Old files will be automatically updated to keep the previous setting ([#4280](ht
 [Mehr erfahren](/docs/stitches/cross-stitch)
 
 ## Stichart-Aktualisierungen
+
+### Fill stitches
+
+Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 mm to 4 mm.
+Old files will be automatically updated to keep the previous setting ([#4280](https://github.com/inkstitch/inkstitch/pull/4280)).
 
 ### Kurvenfüllung
 
