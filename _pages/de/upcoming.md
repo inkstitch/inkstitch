@@ -1,7 +1,7 @@
 ---
 title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch Version"
 permalink: /de/upcoming/
-last_modified_at: 2025-06-07
+last_modified_at: 2025-05-06
 sidebar:
   nav: pages
 toc: true
@@ -149,6 +149,11 @@ Neue Übersetzungen in den folgenden Sprachen wurden uns zur Verfügung gestellt
 
 ## Neue Sticharten
 
+### Fill stitches
+
+Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 mm to 4 mm.
+Old files will be automatically updated to keep the previous setting ([#4280](https://github.com/inkstitch/inkstitch/pull/4280)).
+
 ### Kreuzstich
 
 ![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
@@ -156,6 +161,10 @@ Neue Übersetzungen in den folgenden Sprachen wurden uns zur Verfügung gestellt
 [Mehr erfahren](/docs/stitches/cross-stitch)
 
 ## Stichart-Aktualisierungen
+
+### Kurvenfüllung
+
+* Füge Option für den Mehrfachgeradstich hinzu [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
 
 ### Manuelle Füllung
 
@@ -279,6 +288,7 @@ Diese Erweiterung assistiert bei der Erstellung von Kreuzstichen in Ink/Stitch. 
 Ein Werkzeug um Satinsäulen an vordefinierten Stellen zu schneiden.
 
 * Es ist nun möglich Satinsäulen an mehreren Stellen gleichzeitig aufzuspalten [#4015](https://github.com/inkstitch/inkstitch/pull/4015)
+* Satinsälen können nun auch mit Hilfe von Linien geschnitten werden [#4350](https://github.com/inkstitch/inkstitch/pull/4350)
 
 [Mehr erfahren](/de/docs/satin-tools/#satinsäule-schneiden)
 
@@ -310,6 +320,14 @@ benannt [#4087](https://github.com/inkstitch/inkstitch/pull/4087)
 
 [Mehr erfahren](/de/tutorials/font-creation/)
 
+#### Letters to Font
+
+* Eingefügte Glyphen werden nun am linken unteren Rand der Arbeitsfläche positioniert [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* Die `baseline` wird ebenfalls am unteren Rand der Arbeitsfläche positiniert [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* Der Abstand zum linken Rand der Arbeitsfläche kann über die Erweiterung definiert werden [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+
+[Mehr erfahren](/de/docs/font-tools/#buchstaben-zu-schrift)
+
 #### SVG-Schriftart zu Glyphenebenen konvertieren
 
 Diese Erweiterung ist für die Schriftart-Digitalisierung.
@@ -328,7 +346,7 @@ Diese Erweiterung ist für die Schriftart-Digitalisierung. Schriftarten-Autoren 
 * `0` ist nun ein gültiger Wert für den horizontalen Vorschub (`horiz_adv_x_default`).
   Bei diesem Wert nutzt Ink/Stitch die jeweilige tatsächliche Glyphenbreite [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
 * Neue Eingabefelder zur Definition der Ursprungsschrift und Lizensierung [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
-* Neue Optionn zur Gitter-Skalierung/Nichtskalierung von Kreuzstichschriften [#4281](https://github.com/inkstitch/inkstitch/pull/4281)
+* Neue Option zur Gitter-Skalierung von Kreuzstichschriften [#4281](https://github.com/inkstitch/inkstitch/pull/4281)
 
 [Mehr erfahren](/de/docs/font-tools/#edit-json)
 
@@ -336,7 +354,9 @@ Diese Erweiterung ist für die Schriftart-Digitalisierung. Schriftarten-Autoren 
 
 Diese Erweiterung ist für die Schriftart-Digitalisierung. Schriftarten-Autoren können Schrift- und Kerninginformationen erstellen und abspeichern.
 
-* Neue Eingabefelder zur Definition der Ursprungsschrift [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+* Neue Eingabefelder
+  * Definition der Ursprungsschrift [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+  * Kreuzstichmusterskalierung [#4281](https://github.com/inkstitch/inkstitch/pull/4281)
 
 [Mehr erfahren](/de/docs/font-tools/#json-datei-erstellen)
 
@@ -356,6 +376,14 @@ Ein Werkzeug für die Schriftarten-Digitaliserung. Es setzt automatisch den Vern
 * Füge Option hinzu, um Vernähstiche auf das jeweils letzte Element einer Gruppe anzuwenden [#3875](https://github.com/inkstitch/inkstitch/pull/3875)
 
 [Mehr erfahren](/de/docs/font-tools/#vernähstiche-erzwingen)
+
+### Addons for Inkscape installiere
+
+Nee Symbol-Bibliothek für Füllstitchmuster hinzugefügt
+
+Added new Library for fill-stitch-patterns [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
+
+[Read more](/de/docs/install-addons/)
 
 ### Sprungstich zu Linie
 
@@ -396,6 +424,16 @@ Das Ink/Stitch Textmodul für vordigitalisierte Schriftarten.
 
 [Mehr erfahren](/de/docs/lettering/)
 
+### Text entlang Pfad
+
+* Funktioniert auch mit Kreuzstich-Schriften (Kreuze werden gedreht) [#4277](https://github.com/inkstitch/inkstitch/pull/4277)
+* Optionen für die vertikale Textposition zum gewählten Pfad [#4329](https://github.com/inkstitch/inkstitch/pull/4329):
+  * Top: text is entirely on top of the path, including pgq, etc.
+  * Baseline: the baseline of the text sits on the path
+  * Bottom: the text is entirely below the path
+
+[Mehr erfahren](/de/docs/lettering/#schrift-entlang-pfad)
+
 ### Objektbefehle
 
 * Neue Option für die automatische Positionierung [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
@@ -422,6 +460,12 @@ Definiert globale Einstellungen oder Einstellungen für das geöffnete SVG-Dokum
 
 [Mehr erfahren](/de/docs/preferences/)
 
+### Simulator
+
+* Option um das Aussehen des Fadenkreuzes anzupassen [#4299](https://github.com/inkstitch/inkstitch/pull/4299)
+
+[Read more](/docs/simulator/)
+
 ### Fehlerbehebung an Objekten
 
 Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
@@ -443,6 +487,12 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Bugfixes
 
+* Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
+* Fix editjson sample text glyph distance between text parts [#4339](https://github.com/inkstitch/inkstitch/pull/4339)
+* Manual stitch: skip (sub)paths with a single node [#4328](https://github.com/inkstitch/inkstitch/pull/4328)
+* Gradient blocks: fix path output for shapes with holes [#4325](https://github.com/inkstitch/inkstitch/pull/4325)
+* Apply thread palette: match tartan palette colors [#4320](https://github.com/inkstitch/inkstitch/pull/4320)
+* Fill to satin: skip when there is no combinable rung [#4282](https://github.com/inkstitch/inkstitch/pull/4282)
 * EditJson: specify encoding on json load - fixes the extension for Windows users [#4258](https://github.com/inkstitch/inkstitch/pull/4258)
 * Fill to satin: improve warnings and error messages [#4244](https://github.com/inkstitch/inkstitch/pull/4244)
 * Fix bbox for gradient blocks [#4248](https://github.com/inkstitch/inkstitch/pull/4248)
@@ -487,6 +537,9 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* Fixed profilers when exiting early, added time profiler [#4331](https://github.com/inkstitch/inkstitch/pull/4331)
+* Distributed font files are now compressed with lzma [#4313](https://github.com/inkstitch/inkstitch/pull/4313)
+* Update contributing and code style documents and add pull request template [#4170](https://github.com/inkstitch/inkstitch/pull/4170)
 * Fix untyped decorator errors (and downstream type errors) [#4197](https://github.com/inkstitch/inkstitch/pull/4197)
 * CI: Added code style check, pinned action-gh-release version [#4192](https://github.com/inkstitch/inkstitch/pull/4192), [#4196](https://github.com/inkstitch/inkstitch/pull/4196)
 * Move fonts to submodule [#4061](https://github.com/inkstitch/inkstitch/pull/4061)

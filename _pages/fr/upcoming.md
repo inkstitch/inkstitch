@@ -156,6 +156,11 @@ Un grand merci à tous les traducteurs. Nous avons reçu de nouvelles traduction
 
 ## Nouveaux types de points
 
+### Fill stitches
+
+Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 to 4.
+Old files will be automatically updated to keep the previous setting.
+
 ### Point de croix
 
 ![Grenouille au point de croix](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
@@ -163,6 +168,10 @@ Un grand merci à tous les traducteurs. Nous avons reçu de nouvelles traduction
 [En savoir plus sur le point de croix](/fr/docs/stitches/cross-stitch)
 
 ## Mises à jour relatives aux types de points
+
+### Guided Fill
+
+* Add bean stitch option [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
 
 ### Remplissage Legacy
 
@@ -288,6 +297,7 @@ Cette extension facilite la création de points de croix dans Ink/Stitch. Elle p
 Un outil pour découper le satin à des endroits précis.
 
 * Il est désormais possible de découper un satin à plusieurs endroits simultanément. [#4015](https://github.com/inkstitch/inkstitch/pull/4015)
+* Enable cutting with strokes [#4350](https://github.com/inkstitch/inkstitch/pull/4350)
 
 [En savoir plus](/fr/docs/satin-tools/#cut-satin-column)
 
@@ -319,6 +329,14 @@ Désormais, les fichiers de polices peuvent être nommés ltr.svg, rtl.svg, ttb.
 
 [En savoir plus](/fr/tutorials/font-creation/)
 
+#### Letters to Font
+
+* Included glyph are now positioned at the bottom left of the page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* The baseline is positioned at the bottom of the page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* Option to define the default distance to the left page border [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+
+[En savoir plus](/fr/docs/font-tools/#letters-to-font)
+
 #### Conversion d'une police SVG en calques de glyphes
 
 Il s'agit d'une extension pour la numérisation de polices de broderie.
@@ -347,7 +365,9 @@ Un outil pour les numériseurs de polices. Il permet aux auteurs de polices de m
 
 Outil destiné aux numériseurs de polices pour la création initiale du fichier JSON. Ce fichier contient toutes les informations relatives à la police.
 
-* Nouveaux champs de saisie pour : police d'origine, URL de la police d'origine et licence de la police [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+* Nouveaux champs de saisie pour:
+  * police d'origine, URL de la police d'origine et licence de la police [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+  * Scale cross stitch pattern [#4281](https://github.com/inkstitch/inkstitch/pull/4281)
 
 [En savoir plus](/fr/docs/font-tools/#generate-json)
 
@@ -375,6 +395,12 @@ Value settings have been re-labeled and slightly adjusted [#4239](https://github
 
 * Convert jumps longer than (mm): A value of 0 defaults to the actual minimum jump stitch length.
 * Convert jumps shorter than (mm): A value of 0 means no size limit.
+
+### Install Addons for Inkscape
+
+Added new symbol-library for fill-stitch-patterns [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
+
+[Read more](/fr/docs/install-addons/)
 
 ### Conversion des sauts de point en commandes de coupe/arrêt
 
@@ -406,6 +432,16 @@ Module de texte utilisant des polices pré-numérisées.
 
 [En savoir plus](/fr/docs/lettering/)
 
+### Lettering along Path
+
+* Works also with cross stitch fonts by rotating the crosses [#4277](https://github.com/inkstitch/inkstitch/pull/4277)
+* Options for vertical positioning [#4329](https://github.com/inkstitch/inkstitch/pull/4329):
+  * Top: text is entirely on top of the path, including pgq, etc.
+  * Baseline: the baseline of the text sits on the path
+  * Bottom: the text is entirely below the path
+
+[En savoir plus](/fr/docs/lettering/#lettering-along-path)
+
 ### Ajouter une commande à des objets
 
 * Ajout d'un paramètre de position [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
@@ -432,6 +468,12 @@ Définit les paramètres globaux ou ceux du document SVG actuellement ouvert.
 
 [En savoir plus](/fr/docs/preferences/)
 
+### Simulator
+
+* Options to adapt colour size and thickness of simulator crosshair[#4299](https://github.com/inkstitch/inkstitch/pull/4299)
+
+[Read more](/fr/docs/simulator/)
+
 ### Détection de problèmes
 
 Signale les zones problématiques (ou potentiellement problématiques) du design.
@@ -454,6 +496,12 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Corrections de bugs
 
+* Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
+* Fix editjson sample text glyph distance between text parts [#4339](https://github.com/inkstitch/inkstitch/pull/4339)
+* Manual stitch: skip (sub)paths with a single node [#4328](https://github.com/inkstitch/inkstitch/pull/4328)
+* Gradient blocks: fix path output for shapes with holes [#4325](https://github.com/inkstitch/inkstitch/pull/4325)
+* Apply thread palette: match tartan palette colors [#4320](https://github.com/inkstitch/inkstitch/pull/4320)
+* Fill to satin: skip when there is no combinable rung [#4282](https://github.com/inkstitch/inkstitch/pull/4282)
 * EditJson: specify encoding on json load - fixes the extension for Windows users [#4258](https://github.com/inkstitch/inkstitch/pull/4258)
 * Fill to satin: improve warnings and error messages [#4244](https://github.com/inkstitch/inkstitch/pull/4244)
 * Fix bbox for gradient blocks [#4248](https://github.com/inkstitch/inkstitch/pull/4248)
@@ -498,6 +546,10 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* Fixed profilers when exiting early, added time profiler [#4331](https://github.com/inkstitch/inkstitch/pull/4331)
+* Chore: Bumped CI action versions to get rid of deprecation warnings [#4330](https://github.com/inkstitch/inkstitch/pull/4330)
+* Refactored non-drawing code out of DrawingPanel [#4305](https://github.com/inkstitch/inkstitch/pull/4305)
+* Update contributing and code style documents and add pull request template [#4170](https://github.com/inkstitch/inkstitch/pull/4170)
 * Fix untyped decorator errors (and downstream type errors) [#4197](https://github.com/inkstitch/inkstitch/pull/4197)
 * CI: Added code style check, pinned action-gh-release version [#4192](https://github.com/inkstitch/inkstitch/pull/4192), [#4196](https://github.com/inkstitch/inkstitch/pull/4196)
 * Move fonts to submodule [#4061](https://github.com/inkstitch/inkstitch/pull/4061)

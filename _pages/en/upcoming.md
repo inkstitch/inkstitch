@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2026-03-27
+last_modified_at: 2026-05-06
 sidebar:
   nav: pages
 toc: true
@@ -152,6 +152,11 @@ A big thank you to all translators. We've received new translations into:
 
 ## New Stitch Types
 
+### Fill stitches
+
+Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 to 4.
+Old files will be automatically updated to keep the previous setting.
+
 ### Cross Stitch
 
 ![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
@@ -159,6 +164,10 @@ A big thank you to all translators. We've received new translations into:
 [Read more about cross stitch](/docs/stitches/cross-stitch)
 
 ## Stitch Type Related Updates
+
+### Guided Fill
+
+* Add bean stitch option [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
 
 ### Legacy Fill
 
@@ -283,6 +292,7 @@ This extension helps to generate cross stitches in Ink/Stitch. It can:
 A tool to cut satins at specified spots.
 
 * It is now possible to cut a satin at multiple positions at once. [#4015](https://github.com/inkstitch/inkstitch/pull/4015)
+* Enable cutting with strokes [#4350](https://github.com/inkstitch/inkstitch/pull/4350)
 
 [Read more](/docs/satin-tools/#cut-satin-column)
 
@@ -325,12 +335,22 @@ This is an extension for embroidery font digitizers.
 
 [Read more](/docs/font-tools/#convert-svg-font-to-glyph-layers)
 
+#### Letters to Font
+
+* Included glyph are now positioned at the bottom left of the page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* The baseline is positioned at the bottom of the page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* Option to define the default distance to the left page border [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+
+[Read more](/docs/font-tools/#letters-to-font)
+
 #### Edit JSON
 
 A tool for font digitizers. It let's font authors edit font and kerning information.
 
 * It is now possible to set `0` as a value for `horiz_adv_x_default`. This is make Ink/Stitch use the width of the individual glyphs  [#3965](https://github.com/inkstitch/inkstitch/pull/3965)
-* New input fields for: original font, original font url and the font license [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+* New input fields for:
+  * original font, original font url and the font license [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
+  * Scale cross stitch pattern [#4281](https://github.com/inkstitch/inkstitch/pull/4281)
 
 [Read more](/docs/font-tools/#edit-json)
 
@@ -358,6 +378,12 @@ A tool for font authors to automatically set the force lock stitch option when a
 * add option to apply forced lock stitches on the last element of each selected group [#3875](https://github.com/inkstitch/inkstitch/pull/3875)
 
 [Read more](/docs/font-tools/#force-lock-stitches)
+
+### Install Addons for Inkscape
+
+Added new symbol-lbrary for fill-stitch-patterns [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
+
+[Read more](/docs/install-addons/)
 
 ### Jump stitch to Stroke
 
@@ -398,6 +424,16 @@ Text module to use pre-digitized fonts.
 
 [Read more](/docs/lettering/)
 
+### Lettering along Path
+
+* Works also with cross stitch fonts by rotating the crosses [#4277](https://github.com/inkstitch/inkstitch/pull/4277)
+* Options for vertical positioning [#4329](https://github.com/inkstitch/inkstitch/pull/4329):
+  * Top: text is entirely on top of the path, including pgq, etc.
+  * Baseline: the baseline of the text sits on the path
+  * Bottom: the text is entirely below the path
+
+[Read more](/docs/lettering/#lettering-along-path)
+
 ### Object commands
 
 * Add position option [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
@@ -418,11 +454,17 @@ Defines global settings or settings for the currently open SVG document.
 * Add `rotate on export` setting (affects single svg file only) [#3840](https://github.com/inkstitch/inkstitch/pull/3840)
 * Add `minimum satin stroke width` setting [#4279](https://github.com/inkstitch/inkstitch/pull/4279)
 
-  Wether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width.
+  Whether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width.
   The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard
   stitches, It is recommended to only use satins wider than 1mm.
 
 [Read more](/docs/preferences/)
+
+### Simulator
+
+* Options to adapt colour size and thickness of simulator crosshair[#4299](https://github.com/inkstitch/inkstitch/pull/4299)
+
+[Read more](/docs/simulator/)
 
 ### Troubleshoot Objects
 
@@ -447,6 +489,12 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Bugfixes
 
+* Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
+* Fix editjson sample text glyph distance between text parts [#4339](https://github.com/inkstitch/inkstitch/pull/4339)
+* Manual stitch: skip (sub)paths with a single node [#4328](https://github.com/inkstitch/inkstitch/pull/4328)
+* Gradient blocks: fix path output for shapes with holes [#4325](https://github.com/inkstitch/inkstitch/pull/4325)
+* Apply thread palette: match tartan palette colors [#4320](https://github.com/inkstitch/inkstitch/pull/4320)
+* Fill to satin: skip when there is no combinable rung [#4282](https://github.com/inkstitch/inkstitch/pull/4282)
 * EditJson: specify encoding on json load - fixes the extension for Windows users [#4258](https://github.com/inkstitch/inkstitch/pull/4258)
 * Fill to satin: improve warnings and error messages [#4244](https://github.com/inkstitch/inkstitch/pull/4244)
 * Fix bbox for gradient blocks [#4248](https://github.com/inkstitch/inkstitch/pull/4248)
@@ -491,6 +539,8 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* Fixed profilers when exiting early, added time profiler [#4331](https://github.com/inkstitch/inkstitch/pull/4331)
+* Update contributing and code style documents and add pull request template [#4170](https://github.com/inkstitch/inkstitch/pull/4170)
 * Fix untyped decorator errors (and downstream type errors) [#4197](https://github.com/inkstitch/inkstitch/pull/4197)
 * CI: Added code style check, pinned action-gh-release version [#4192](https://github.com/inkstitch/inkstitch/pull/4192), [#4196](https://github.com/inkstitch/inkstitch/pull/4196)
 * Move fonts to submodule [#4061](https://github.com/inkstitch/inkstitch/pull/4061)

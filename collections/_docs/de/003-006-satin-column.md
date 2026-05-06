@@ -16,7 +16,6 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 
 ![Methods](/assets/images/docs/satin_methods.svg)
 
-
 1. [Linie als Satinstich](#1-linie-als-satinstitch): für Satinsäule mit einheitlicher Breite
 2. [Linie zu Satin](#2-linie-zu-satin): für Satinsäule mit einheitlicher Breite
 3. [Linie zu Pfadeffekt-Satin](#3-linie-zu-pfadeffekt-satin): leicht modifizierbare Satinsäule mit optionalem Muster
@@ -24,7 +23,7 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 5. [Füllung zu Satin](#5-füllung-linie-zu-satin): erstelle durch hinzufügen von Richtungsvektoren eine Satinsäule aus einer Füllung
 6. [Manuelle Satinsäule](#6-manuelle-satinsäule): volle Kontrolle über jeden Teil der Satinsäule
 
-### 1. Linie als satinstitch
+### 1. Linie als Satinsäule
 
 {% include upcoming_release.html %}
 
@@ -32,7 +31,7 @@ Mit dieser Methode kann eine Linie mit Konturfarbe direkt und ohne Umwandlung al
 Daher ist diese Methode die einfachste Methode zur Erstellung und Anpassung von Satinsäulen.
 
 * Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
-* Set stroke width to the size of the desired satin stitch (the value should be larger than minimum satin width value see [preferences](/docs/preferences/#minimum-satin-stroke-width) for a deeper insight of the minimum satin width value)
+* Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht. Der Wert sollte größer sein, als die in den [Einstellungen](/docs/preferences/##minimale-satinsäulenbreite-für-linien) festgelegte minimale Breite für Satinsäulen.
 * Öffne den Parameterdialog: `Erweiterungen > Ink/Stitch > Parameter
 * Öffne den Tab `Satinsäule` und aktiviere `Benutzerdefinierte Satinsäule`
 
@@ -40,7 +39,7 @@ Bei dieser Methode hat die Positionierung der Pfad-Knoten einen Einfluss auf das
 
 ![Stroke to satin. Same path with different node setups](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
 
-### 2. Linie zu satin
+### 2. Linie zu Satin
 
 * Erstelle einen Pfad mit einer Konturfarbe (keine Füllung)
 * Lege die Breite der Kontur so fest, dass sie der Breite der zukünftigen Satinsäule entspricht
@@ -80,7 +79,6 @@ Eine Satinsäule wird aus zwei **meist parallel verlaufenden Linien** gebildet. 
 * [Überprüfe die Pfad-Richtungen](/docs/customize/#enabling-path-outlines--direction). Damit die Satinsäule erzeugt werden kann, müssen sie gleich sein.<br />Wenn dies nicht der Fall ist, wähle mit dem *Knoten-Werkzeug* (`N`) einen Punkt eines Unterpfads und führe ein `Pfad -> Richtung umkehren` durch. Dadurch wird nur der ausgewählte Unterpfad umgekehrt.
 * Benutze die Knoten- oder die Sprossenmethode wie unten beschrieben.
 * Wähle dann die Satinsäule und führe `Erweiterungen > Ink/Stitch > Paramter`, oder eine [Benutzerdefinierte Tastenkombination](/docs/customize/) aus.
-
 
 #### Die Knoten Methode
 
