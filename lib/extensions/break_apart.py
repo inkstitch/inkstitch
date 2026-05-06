@@ -59,7 +59,7 @@ class BreakApart(InkstitchExtension):
                 if valid_polygon.area < self.minimum_size:
                     element.node.delete()
                     continue
-            except ValueError:
+            except (ValueError, IndexError):
                 pass
 
             polygons = self.break_apart_paths(paths)
