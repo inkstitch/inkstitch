@@ -447,7 +447,7 @@ class LetteringEditJsonPanel(wx.Panel):
         json_file = path.join(self.font.path, 'font.json')
         json_xz_file = path.join(self.font.path, 'font.json.xz')
 
-        if not path.isfile(json_file):
+        if not path.isfile(json_file) and not path.isfile(json_xz_file):
             errormsg(_("Could not find a json file for this font. Please create one with Font Management > Generate JSON"))
             self.cancel()
             return
