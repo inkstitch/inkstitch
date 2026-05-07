@@ -2,14 +2,15 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-import wx
 import time
-
-from . import ControlPanel, DrawingPanel, ViewPanel
-from ...stitch_plan import StitchPlan
 from typing import List, Optional, cast
-from ...utils.settings import global_settings
+
+import wx
+
 from ...i18n import _
+from ...stitch_plan import StitchPlan
+from ...utils.settings import global_settings
+from . import ControlPanel, DrawingPanel, ViewPanel
 
 # L10N command label at bottom of simulator window
 COMMAND_NAMES = [_("STITCH"), _("JUMP"), _("TRIM"), _("STOP"), _("COLOR CHANGE")]
@@ -40,7 +41,7 @@ class SimulatorPanel(wx.Panel):
         self.animating = False
         self.timer = wx.Timer(self)
         self.last_frame_start = 0.0
-        self.direction: float = 1
+        self.direction: int = 1
         self.current_stitch: int = 0
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
@@ -237,12 +238,13 @@ class SimulatorPanel(wx.Panel):
             frame_time = now - self.last_frame_start
         else:
             frame_time = self.TARGET_FRAME_PERIOD
-        self.last_frame_start = now
 
-        stitch_increment = self.speed * frame_time
-        self.set_current_stitch(int(self.current_stitch + self.direction * stitch_increment))
+        stitch_increment = int(self.speed * frame_time)
+        if self.last_frame_start == 0 or stitch_increment > 0:
+            self.last_frame_start = now
+            self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
 
-        self.stop_if_at_end()
+            self.stop_if_at_end()
 
     def set_current_stitch(self, current_stitch: int) -> None:
         # Clamp current stitch value
