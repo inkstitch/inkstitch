@@ -42,7 +42,7 @@ class FontSampleFrame(wx.Frame):
         # settings
         settings_sizer = wx.BoxSizer(wx.VERTICAL)
 
-        self.font_chooser = wx.adv.BitmapComboBox(self.settings, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT, size=((800, 20)))
+        self.font_chooser = wx.adv.BitmapComboBox(self.settings, wx.ID_ANY, style=wx.CB_READONLY | wx.CB_SORT)
         self.font_chooser.Bind(wx.EVT_COMBOBOX, self.on_font_changed)
 
         grid_settings_sizer = wx.FlexGridSizer(7, 2, 5, 5)
@@ -74,9 +74,9 @@ class FontSampleFrame(wx.Frame):
         apply_sizer.Add(self.cancel_button, 0, wx.RIGHT | wx.BOTTOM, 5)
         apply_sizer.Add(self.apply_button, 0, wx.RIGHT | wx.BOTTOM, 10)
 
-        settings_sizer.Add(self.font_chooser, 1, wx.ALL | wx.EXPAND, 10)
+        settings_sizer.Add(self.font_chooser, 0, wx.ALL | wx.EXPAND, 10)
         settings_sizer.Add(grid_settings_sizer, 1, wx.ALL | wx.EXPAND, 10)
-        settings_sizer.Add(apply_sizer, 1, wx.ALIGN_RIGHT | wx.ALL, 10)
+        settings_sizer.Add(apply_sizer, 0, wx.ALIGN_RIGHT | wx.ALL, 10)
 
         # help
         self.help = wx.Panel(self.notebook, wx.ID_ANY)
