@@ -381,7 +381,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython
+          pip install wxPython --no-binary wxPython
           pip install -r requirements.txt
           # for networkx
           pip install pandas
@@ -440,7 +440,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython
+          pip install wxPython --no-binary wxPython
           pip install -r requirements.txt
           # for networkx
           pip install pandas
