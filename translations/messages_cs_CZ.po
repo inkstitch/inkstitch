@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
-"PO-Revision-Date: 2026-05-06 03:25\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
+"PO-Revision-Date: 2026-05-07 03:26\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4123,13 +4123,17 @@ msgstr "Funkce pro ověření nebo aktualizaci informací o existujícím písmu
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr "https://inkstitch.org/docs/font-tools/#edit-json"
 
-#: lib/gui/edit_json/main_panel.py:435 lib/gui/edit_json/main_panel.py:451
-msgid "Could not read json file."
-msgstr "Nelze načíst soubor json."
+#: lib/gui/edit_json/main_panel.py:435
+msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
+msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
 msgstr "Změny nebudou uloženy: nelze zapisovat do souboru json (přístup odepřen)."
+
+#: lib/gui/edit_json/main_panel.py:451
+msgid "Could not find a json file for this font. Please create one with Font Management > Generate JSON"
+msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:458
 msgid "Could not write to json file: permission denied."
@@ -5277,12 +5281,12 @@ msgid "Regenerate the JSON file through:\n"
 msgstr "Znovu vygenerujte soubor JSON pomocí:\n"
 "Rozšíření > Ink/Stitch > Správa písem > Generovat JSON..."
 
-#: lib/lettering/font.py:231
+#: lib/lettering/font.py:232
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Písmo '%s' nemá žádné varianty."
 
-#: lib/lettering/font.py:667
+#: lib/lettering/font.py:668
 msgid "Color Group"
 msgstr "Skupina barev"
 

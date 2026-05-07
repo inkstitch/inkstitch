@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
-"PO-Revision-Date: 2026-05-06 03:25\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
+"PO-Revision-Date: 2026-05-07 03:26\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4118,12 +4118,16 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr ""
 
-#: lib/gui/edit_json/main_panel.py:435 lib/gui/edit_json/main_panel.py:451
-msgid "Could not read json file."
-msgstr "Impossibile leggere file json."
+#: lib/gui/edit_json/main_panel.py:435
+msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
+msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:451
+msgid "Could not find a json file for this font. Please create one with Font Management > Generate JSON"
 msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:458
@@ -5264,12 +5268,12 @@ msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr ""
 
-#: lib/lettering/font.py:231
+#: lib/lettering/font.py:232
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr ""
 
-#: lib/lettering/font.py:667
+#: lib/lettering/font.py:668
 msgid "Color Group"
 msgstr "Gruppo Colori"
 

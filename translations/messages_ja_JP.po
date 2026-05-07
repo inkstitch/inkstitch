@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
-"PO-Revision-Date: 2026-05-06 03:25\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
+"PO-Revision-Date: 2026-05-07 03:26\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1671,7 +1671,7 @@ msgstr ""
 #: lib/elements/fill_stitch.py:203 inx/inkstitch_knockdown_fill.inx:22
 #: inx/inkstitch_knockdown_fill.inx:39
 msgid "Round"
-msgstr ""
+msgstr "ラウンド"
 
 #: lib/elements/fill_stitch.py:203
 msgid "Mitered"
@@ -1764,7 +1764,7 @@ msgstr "ステッチの列間の距離"
 
 #: lib/elements/fill_stitch.py:363 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
-msgstr ""
+msgstr "終端の行間隔"
 
 #: lib/elements/fill_stitch.py:364
 msgid "Increases or decreases the row spacing towards the end."
@@ -2804,7 +2804,7 @@ msgstr ""
 #: lib/elements/stroke.py:602 inx/inkstitch_knockdown_fill.inx:21
 #: inx/inkstitch_knockdown_fill.inx:38
 msgid "Join style"
-msgstr ""
+msgstr "結合スタイル"
 
 #: lib/elements/stroke.py:603
 msgid "Join style for non circular ripples."
@@ -4118,12 +4118,16 @@ msgstr ""
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr ""
 
-#: lib/gui/edit_json/main_panel.py:435 lib/gui/edit_json/main_panel.py:451
-msgid "Could not read json file."
+#: lib/gui/edit_json/main_panel.py:435
+msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
 msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
+msgstr ""
+
+#: lib/gui/edit_json/main_panel.py:451
+msgid "Could not find a json file for this font. Please create one with Font Management > Generate JSON"
 msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:458
@@ -5263,12 +5267,12 @@ msgid "Regenerate the JSON file through:\n"
 "Extensions > Ink/Stitch > Font Management > Generate JSON..."
 msgstr ""
 
-#: lib/lettering/font.py:231
+#: lib/lettering/font.py:232
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "フォント '％s'にはバリアントがありません。"
 
-#: lib/lettering/font.py:667
+#: lib/lettering/font.py:668
 msgid "Color Group"
 msgstr ""
 
@@ -6413,7 +6417,7 @@ msgstr ""
 #: inx/inkstitch_gradient_blocks.inx:12 inx/inkstitch_knockdown_fill.inx:12
 #: inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
-msgstr ""
+msgstr "ツール: 塗りつぶし"
 
 #: inx/inkstitch_cleanup.inx:3
 msgid "Cleanup Document"
@@ -6823,27 +6827,27 @@ msgstr ""
 
 #: inx/inkstitch_gradient_blocks.inx:3
 msgid "Convert to gradient blocks"
-msgstr ""
+msgstr "グラデーションブロックに変換"
 
 #: inx/inkstitch_gradient_blocks.inx:9
 msgid "Split a fill with a gradient into single colored blocks"
-msgstr ""
+msgstr "グラデーション塗りつぶしを単色のカラーブロックに分割します"
 
 #: inx/inkstitch_gradient_blocks.inx:24
 msgid "Set to zero to use twice the row spacing value"
-msgstr ""
+msgstr "0にすると、行間隔の2倍の値が使用されます"
 
 #: inx/inkstitch_gradient_blocks.inx:27
 msgid "Converts a fill with a linear color gradient into color blocks with variable row spacing."
-msgstr ""
+msgstr "リニアグラデーションの塗りつぶしを、可変の行間隔を持つカラーブロックに変換します。"
 
 #: inx/inkstitch_gradient_blocks.inx:29
 msgid "This may add density at the center."
-msgstr ""
+msgstr "中心部の密度が高くなる場合があります。"
 
 #: inx/inkstitch_gradient_blocks.inx:31
 msgid "If necessary adapt the end row spacing value after the conversion with the params dialog."
-msgstr ""
+msgstr "必要に応じて、変換後にパラメーターダイアログで終端の行間隔の値を調整してください。"
 
 #: inx/inkstitch_gradient_blocks.inx:33
 msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
@@ -7631,67 +7635,67 @@ msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:3
 msgid "Selection to Knockdown Fill"
-msgstr ""
+msgstr "選択をノックダウンフィルに変換"
 
 #: inx/inkstitch_knockdown_fill.inx:9
 msgid "Generates a knockdown stitch with a specified offset around selection"
-msgstr ""
+msgstr "選択範囲の周辺に、指定の値でオフセットしたノックダウンフィルを生成します"
 
 #: inx/inkstitch_knockdown_fill.inx:19
 msgid "Keep holes"
-msgstr ""
+msgstr "図形の穴を保持"
 
 #: inx/inkstitch_knockdown_fill.inx:20
 msgid "Offset"
-msgstr ""
+msgstr "オフセット"
 
 #: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:40
 msgid "Mitre"
-msgstr ""
+msgstr "マイター"
 
 #: inx/inkstitch_knockdown_fill.inx:24 inx/inkstitch_knockdown_fill.inx:41
 msgid "Bevel"
-msgstr ""
+msgstr "ベベル"
 
 #: inx/inkstitch_knockdown_fill.inx:26
 msgid "Mitre limit"
-msgstr ""
+msgstr "マイター制限"
 
 #: inx/inkstitch_knockdown_fill.inx:31
 msgid "Embossing"
-msgstr ""
+msgstr "エンボス"
 
 #: inx/inkstitch_knockdown_fill.inx:32
 msgid "Shape"
-msgstr ""
+msgstr "形状"
 
 #: inx/inkstitch_knockdown_fill.inx:34
 msgid "Rectangle"
-msgstr ""
+msgstr "矩形"
 
 #: inx/inkstitch_knockdown_fill.inx:35
 msgid "Circle"
-msgstr ""
+msgstr "円"
 
 #: inx/inkstitch_knockdown_fill.inx:37
 msgid "Shape offset"
-msgstr ""
+msgstr "形状のオフセット"
 
 #: inx/inkstitch_knockdown_fill.inx:45
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
-msgstr ""
+msgstr "この拡張機能は、選択された要素に指定のオフセットでノックダウンフィル領域を生成します。"
 
 #: inx/inkstitch_knockdown_fill.inx:46
 msgid "* Select elements of any kind"
-msgstr ""
+msgstr "*任意の種類の要素を選択します"
 
 #: inx/inkstitch_knockdown_fill.inx:47
 msgid "* Open this extension and apply with desired settings"
-msgstr ""
+msgstr "*この拡張機能を開き、希望の設定で適用します"
 
 #: inx/inkstitch_knockdown_fill.inx:48
 msgid "* Adapt fill settings in the params dialog"
-msgstr ""
+msgstr "*パラメーターダイアログで塗りつぶし設定を調整します"
 
 #: inx/inkstitch_knockdown_fill.inx:51
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"

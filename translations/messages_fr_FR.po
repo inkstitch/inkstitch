@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
-"PO-Revision-Date: 2026-05-06 03:25\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
+"PO-Revision-Date: 2026-05-07 03:26\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-06 03:25+0000\n"
+"POT-Creation-Date: 2026-05-07 03:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2586,7 +2586,7 @@ msgstr "Cet élément est rendu comme point droit alors qu'il a un paramétrage 
 
 #: lib/elements/stroke.py:40
 msgid "Whether or not a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
-msgstr ""
+msgstr "Un trait peut ou non être rendu comme un satin selon son épaisseur et la valeur de la préférence pour le Seuil d'auto-conversion trait en satin. L'épaisseur du trait doit être supérieure à la valeur de la préférence, faute de quoi le trait est traité comme un point droit. Il est par ailleurs recommandé de ne pas produire de colonne satin de largeur inférieure à 1 mm."
 
 #: lib/elements/stroke.py:50 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
@@ -4143,13 +4143,17 @@ msgstr "Permet de vérifier ou de mettre à jour les informations sur une police
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
 msgstr "https://inkstitch.org/fr/docs/font-tools/#edit-json"
 
-#: lib/gui/edit_json/main_panel.py:435 lib/gui/edit_json/main_panel.py:451
-msgid "Could not read json file."
-msgstr "Impossible de lire le fichier json."
+#: lib/gui/edit_json/main_panel.py:435
+msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
+msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
 msgstr "Les changements ne peuvent pas être sauvegardés : impossible d'écrire dans le fichier json (permission denied)."
+
+#: lib/gui/edit_json/main_panel.py:451
+msgid "Could not find a json file for this font. Please create one with Font Management > Generate JSON"
+msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:458
 msgid "Could not write to json file: permission denied."
@@ -5302,12 +5306,12 @@ msgid "Regenerate the JSON file through:\n"
 msgstr "Re-générez le fichier JSON avec\n"
 "Extensions > Ink/Stitch >Gestion des polices > Générer JSON..."
 
-#: lib/lettering/font.py:231
+#: lib/lettering/font.py:232
 #, python-format
 msgid "The font '%s' has no variants."
 msgstr "Aucun fichier variant trouvé pour la police '%s'."
 
-#: lib/lettering/font.py:667
+#: lib/lettering/font.py:668
 msgid "Color Group"
 msgstr "Groupe de couleur"
 
