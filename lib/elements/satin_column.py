@@ -675,13 +675,36 @@ class SatinColumn(EmbroideryElement):
         return [Point(*point) for point in self._apply_push_comp(line, start, end).coords]
 
     def _apply_push_comp(self, linestring: shgeo.LineString, start: float, end: float) -> shgeo.Point | shgeo.LineString:
+        if start < 0:
+            linestring = self._extend_line(linestring, start)
+            start = 0
+        if end < 0:
+            linestring = self._extend_line(linestring, end, True)
+            end = 0
         if not start and not end:
-            return linestring
-        if start + end >= linestring.length - 0.5:
             return linestring
         if end == 0:
             end = 0.00000001
+        if start + end >= linestring.length - 0.5:
+            return linestring
         return substring(linestring, start, -end)
+
+    def _extend_line(self, linestring: shgeo.LineString, value: float, at_end: bool = False) -> shgeo.LineString:
+        '''Extends either the first or the last segment of the given line by given value.
+        '''
+        if at_end:
+            linestring = linestring.reverse()
+        coords = list(linestring.coords)
+        start_segment = shgeo.LineString([coords[0], coords[1]])
+        line_length = start_segment.length
+        target_length = line_length - value
+        scale_factor = target_length / line_length
+        extended_segment = shaffinity.scale(start_segment, xfact=scale_factor, yfact=scale_factor, origin=shgeo.Point(coords[1]))
+        first = list(extended_segment.coords)[0]
+        extended_line = shgeo.LineString([first] + coords)
+        if at_end:
+            extended_line = extended_line.reverse()
+        return extended_line
 
     @property
     @cache
