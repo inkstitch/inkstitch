@@ -372,9 +372,9 @@ jobs:
           # these exports are for wxpython to be linked aginst
           # libiconv from homebrew, inkscape libiconv cause issues
           # with wxpython binary
-          export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
-          export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
-          export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
+          export PATH="/usr/local/opt/libiconv/bin:$PATH"
+          export LDFLAGS="-L/usr/local/opt/libiconv/lib"
+          export CPPFLAGS="-I/usr/local/opt/libiconv/include"
 
           export LDFLAGS="-L/usr/local/opt/libffi/lib"
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
