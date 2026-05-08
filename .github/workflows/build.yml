@@ -369,9 +369,8 @@ jobs:
 
           brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
 
-          # these exports are for wxpython to be linked aginst
-          # libiconv from homebrew, inkscape libiconv cause issues
-          # with wxpython binary
+          # These exports of libiconv to build wxpython
+          # inkscape libiconv has issues with wxpython pip wheel
           export PATH="/usr/local/opt/libiconv/bin:$PATH"
           export LDFLAGS="-L/usr/local/opt/libiconv/lib"
           export CPPFLAGS="-I/usr/local/opt/libiconv/include"
@@ -435,9 +434,8 @@ jobs:
 
           brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
 
-          # these exports are for wxpython to be linked aginst
-          # libiconv from homebrew, inkscape libiconv cause issues
-          # with wxpython binary
+          # These exports of libiconv to build wxpython
+          # inkscape libiconv has issues with wxpython pip wheel
           export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
           export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
           export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
