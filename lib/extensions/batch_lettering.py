@@ -47,6 +47,7 @@ class BatchLettering(InkstitchExtension):
         self.arg_parser.add_argument('--line_height', type=float, default=0, dest='line_height')
 
         self.arg_parser.add_argument('--text-position', type=str, default='left', dest='text_position')
+        self.arg_parser.add_argument('--vertical-text-position', type=str, default='left', dest='vertical_text_position')
 
         self.arg_parser.add_argument('--file-formats', type=str, default='', dest='formats')
 
@@ -234,7 +235,7 @@ class BatchLettering(InkstitchExtension):
             parent = text_positioning_path.getparent()
             index = parent.index(text_positioning_path)
             parent.insert(index, lettering_group)
-            TextAlongPath(self.svg, lettering_group, text_positioning_path, self.options.text_position)
+            TextAlongPath(self.svg, lettering_group, text_positioning_path, self.options.text_position, self.options.vertical_text_position)
             text_positioning_path.delete()
 
         self.get_elements()
