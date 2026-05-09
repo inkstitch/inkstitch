@@ -116,6 +116,7 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
         self.m_value = []
 
         wx.CallAfter(self.watch_for_child_changes)
+        wx.CallAfter(self.watch_for_selection)
         wx.CallAfter(self.update_children)
 
     def update_children(self):
@@ -132,9 +133,10 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
             else:
                 self.DeleteChildren()
                 for i, value in enumerate(values):
-                    child = self.type(name=f"sub{i}", label=f"[{i}]", prefix=self.prefix, unit=self.unit, value=value)
+                    child = self.type(name=f"sub{i}", label="", prefix=self.prefix, unit=self.unit, value=value)
                     child.SetAttribute("Ignore", True)
                     pg.AppendIn(self, child)
+                pg.Collapse(self)
 
     def watch_for_child_changes(self):
         pg = self.GetGrid()
@@ -142,6 +144,24 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
             pg.Bind(wx.propgrid.EVT_PG_CHANGED, self.on_property_changed)
         else:
             debug.log("unable to watch for child changed events")
+
+    def watch_for_selection(self):
+        pg = self.GetGrid()
+        if pg:
+            pg.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_selection_changed)
+        else:
+            debug.log("unable to watch for selection changed events")
+
+    def on_selection_changed(self, event):
+        event.Skip()
+
+        selected = event.GetProperty()
+        pg = self.GetGrid()
+
+        if selected is self or (selected is not None and selected.GetParent() is self):
+            pg.Expand(self)
+        else:
+            pg.Collapse(self)
 
     def on_property_changed(self, event):
         # ensure that other event handlers are called too
