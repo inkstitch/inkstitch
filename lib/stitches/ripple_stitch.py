@@ -579,7 +579,7 @@ def _do_grid(stroke, helper_lines, skip_start, skip_end, is_linear, last_stitch)
 
 def _get_guided_helper_lines(stroke, outline, max_distance):
     # for each point generate a line going along and pointing to the guide line
-    guide_line = stroke.get_guide_line()
+    guide_line = stroke.get_guide_line(True)
     if isinstance(guide_line, SatinColumn):
         # satin type guide line
         return generate_satin_guide_helper_lines(stroke, outline, guide_line)
