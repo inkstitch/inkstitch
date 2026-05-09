@@ -77,7 +77,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
     def running_stitch(self, path):
         return running_stitch(
                 path,
-                self.config.stitch_length * PIXELS_PER_MM,
+                [self.config.stitch_length * PIXELS_PER_MM],
                 self.config.tolerance * PIXELS_PER_MM,
                 (self.config.stitch_length_jitter_percent > 0),
                 self.config.stitch_length_jitter_percent,
