@@ -367,7 +367,13 @@ jobs:
         run: |
           brew update
 
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
+
+          # These exports of libiconv to build wxpython
+          # inkscape libiconv has issues with wxpython pip wheel
+          export PATH="/usr/local/opt/libiconv/bin:$PATH"
+          export LDFLAGS="-L/usr/local/opt/libiconv/lib"
+          export CPPFLAGS="-I/usr/local/opt/libiconv/include"
 
           export LDFLAGS="-L/usr/local/opt/libffi/lib"
           export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
@@ -381,7 +387,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython
+          pip install wxPython --no-binary wxPython
           pip install -r requirements.txt
           # for networkx
           pip install pandas
@@ -426,7 +432,13 @@ jobs:
         run: |
           brew update
 
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt || true
+          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
+
+          # These exports of libiconv to build wxpython
+          # inkscape libiconv has issues with wxpython pip wheel
+          export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
+          export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
+          export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
 
           export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
           export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
@@ -440,7 +452,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython
+          pip install wxPython --no-binary wxPython
           pip install -r requirements.txt
           # for networkx
           pip install pandas
