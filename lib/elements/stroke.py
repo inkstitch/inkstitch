@@ -19,6 +19,7 @@ from ..threads import ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
+from .satin_column import SatinColumn
 from .validation import ValidationWarning
 
 
@@ -952,7 +953,7 @@ class Stroke(EmbroideryElement):
         return stitch_groups
 
     @cache
-    def get_guide_line(self):
+    def get_guide_line(self, force_satin=False):
         """Return the guide line element."""
         guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
         # No or empty guide line
@@ -963,6 +964,8 @@ class Stroke(EmbroideryElement):
         # ignore multiple guide lines
         if len(guide_lines["satin"]) >= 1:
             return guide_lines["satin"][0]
+        elif force_satin and len(guide_lines["stroke"][0].geoms) > 1:
+            return SatinColumn(guide_lines["stroke_data"][0]['marker_element'])
         return guide_lines["stroke"][0]
 
     @cache

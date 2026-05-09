@@ -86,6 +86,7 @@ def get_marker_elements(node, marker, get_fills=True, get_strokes=True, get_sati
             line_strings = [shgeo.LineString(path) for path in stroke]
             strokes.append(shgeo.MultiLineString(line_strings))
             stroke_data.append({
+                'marker_element': marker,
                 'pattern_interval': element.get_multiple_int_param('pattern_interval', "1"),
                 'pattern_offset': element.get_int_param('pattern_offset', 0)
             })
