@@ -102,6 +102,49 @@ class InkStitchIntProperty(InkStitchNumericProperty, wx.propgrid.IntProperty):
         return int(string)
 
 
+multi_parent_editor_instance = None
+
+
+class MultiParentEditor(wx.propgrid.PGTextCtrlAndButtonEditor):
+    """Text editor with a '+' button for adding multi-property children."""
+
+    def CreateControls(self, propgrid, property, pos, size):
+        window_list = super().CreateControls(propgrid, property, pos, size)
+
+        # Replace the default "..." button with a "+" bitmap button.
+        # We can't just SetBitmap on the generated button because on GTK
+        # a text-only button may lack the internal GtkImage widget.
+        old_button = window_list.GetSecondary()
+        btn_pos = old_button.GetPosition()
+        btn_size = old_button.GetSize()
+        old_button.Destroy()
+
+        button = wx.BitmapButton(
+            propgrid.GetPanel(), wx.ID_ANY,
+            wx.ArtProvider.GetBitmap(wx.ART_PLUS, wx.ART_OTHER),
+            pos=btn_pos, size=btn_size,
+            style=wx.BU_EXACTFIT,
+        )
+        button.SetToolTip(_("Add"))
+        window_list.SetSecondary(button)
+
+        return window_list
+
+    def OnEvent(self, propgrid, property, wnd, event):
+        if event.GetEventType() == wx.wxEVT_COMMAND_BUTTON_CLICKED:
+            if isinstance(property, InkstitchMultiProperty):
+                property.add_child()
+                return True
+        return super().OnEvent(propgrid, property, wnd, event)
+
+
+def _register_multi_editors():
+    global multi_parent_editor_instance
+    if multi_parent_editor_instance is None:
+        multi_parent_editor_instance = MultiParentEditor()
+        wx.propgrid.PropertyGrid.DoRegisterEditorClass(multi_parent_editor_instance, "MultiParentEditor")
+
+
 class InkstitchMultiProperty(wx.propgrid.PGProperty):
     def __init__(self, *args, type=None, prefix="", unit="", **kwargs):
         super().__init__(*args, **kwargs)
@@ -114,10 +157,15 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
         self.type = type
 
         self.m_value = []
+        self._initialized = False
 
         wx.CallAfter(self.watch_for_child_changes)
         wx.CallAfter(self.watch_for_selection)
+        wx.CallAfter(self.watch_for_right_click)
         wx.CallAfter(self.update_children)
+
+    def DoGetEditorClass(self):
+        return wx.propgrid.PropertyGridInterface.GetEditorByName("MultiParentEditor")
 
     def update_children(self):
         debug.log(f"InkstitchMultiProperty.update_children({self.m_value=})")
@@ -136,7 +184,9 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
                     child = self.type(name=f"sub{i}", label="", prefix=self.prefix, unit=self.unit, value=value)
                     child.SetAttribute("Ignore", True)
                     pg.AppendIn(self, child)
-                pg.Collapse(self)
+                if not self._initialized:
+                    pg.Collapse(self)
+                    self._initialized = True
 
     def watch_for_child_changes(self):
         pg = self.GetGrid()
@@ -151,6 +201,27 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
             pg.Bind(wx.propgrid.EVT_PG_SELECTED, self.on_selection_changed)
         else:
             debug.log("unable to watch for selection changed events")
+
+    def watch_for_right_click(self):
+        pg = self.GetGrid()
+        if pg:
+            pg.Bind(wx.propgrid.EVT_PG_RIGHT_CLICK, self.on_right_click)
+
+    def on_right_click(self, event):
+        event.Skip()
+
+        prop = event.GetProperty()
+        if prop is not None and prop.GetParent() is self and self.GetChildCount() > 1:
+            menu = wx.Menu()
+            item = menu.Append(wx.ID_ANY, _("Remove"))
+            index = prop.GetIndexInParent()
+
+            def on_remove(event):
+                self.remove_child(index)
+
+            menu.Bind(wx.EVT_MENU, on_remove, item)
+            self.GetGrid().PopupMenu(menu)
+            menu.Destroy()
 
     def on_selection_changed(self, event):
         event.Skip()
@@ -177,6 +248,27 @@ class InkstitchMultiProperty(wx.propgrid.PGProperty):
                 values = list(self.m_value)
                 values[prop.GetIndexInParent()] = prop.GetValue()
                 wx.CallAfter(lambda: self.GetGrid().ChangePropertyValue(self, values))
+
+    def add_child(self):
+        values = list(self.m_value)
+        if values:
+            values.append(values[-1])
+        else:
+            values.append(self.type.string_to_value("0"))
+        pg = self.GetGrid()
+
+        def do_add():
+            pg.ChangePropertyValue(self, values)
+            pg.RefreshEditor()
+
+        wx.CallAfter(do_add)
+
+    def remove_child(self, index):
+        values = list(self.m_value)
+        if len(values) > 1:
+            values.pop(index)
+            pg = self.GetGrid()
+            wx.CallAfter(lambda: pg.ChangePropertyValue(self, values))
 
     def ValueToString(self, value, flags=None):
         # debug.log(f"InkstitchMultiProperty.ValueToString({value=}, {flags=})")
@@ -298,6 +390,7 @@ class Property:
 
         property_class = self.get_property_class()
         if self.multi:
+            _register_multi_editors()
             self.property = InkstitchMultiProperty(name=self.name, label=self.label, type=property_class, **kwargs)
         else:
             self.property = property_class(name=self.name, label=self.label, **kwargs)
