@@ -814,9 +814,9 @@ class SatinColumn(EmbroideryElement):
         # rails have exactly one intersection. This case has to be distinguished from the case of short
         # coming rungs with only one intersection.
         if len(paths) == 3:
-            possible_rails = [i for i in range(num_paths) if intersection_counts[i] == 1 and paths[i].length > 0.001]
+            possible_rails = [i for i in range(num_paths) if intersection_counts[i] == 1 and paths[i].length > 0.1]
         else:
-            possible_rails = [i for i in range(num_paths) if intersection_counts[i] > 2 and paths[i].length > 0.001]
+            possible_rails = [i for i in range(num_paths) if intersection_counts[i] > 2 and paths[i].length > 0.1]
         num_possible_rails = len(possible_rails)
 
         if num_possible_rails == 2:
