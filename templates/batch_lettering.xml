@@ -54,12 +54,19 @@
               <separator />
               <spacer />
               <vbox>
-                <param name="text-position" type="optiongroup" appearance="combo" gui-text="Lettering along path: text position"
+                <label appearance="header">Lettering along path</label>
+                <param name="text-position" type="optiongroup" appearance="combo" gui-text="Horizontal text position"
                        gui-description="Uses this text position when using lettering along path">
                    <option value="left">Left</option>
                    <option value="center">Center</option>
                    <option value="right">Right</option>
                    <option value="stretch">Stretch</option>
+                </param>
+                <param name="vertical-text-position" type="optiongroup" appearance="combo" gui-text="Vertical text position"
+                       gui-description="Uses this text position when using lettering along path">
+                   <option value="top">Top</option>
+                   <option value="baseline">Baseline</option>
+                   <option value="bottom">Bottom</option>
                 </param>
                 <spacer />
                 <separator />
