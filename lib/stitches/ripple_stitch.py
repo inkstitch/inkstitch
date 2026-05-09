@@ -308,13 +308,12 @@ def _get_staggered_stitches(stroke, lines, skip_start):
         if len(line) == 1:
             continue
         connector = []
-        if i != 0 and stroke.join_style == 0:
+        if last_point is not None and stroke.join_style == 0:
             if i % 2 == 0 or not stroke.flip_copies:
                 first_point = line[0]
             else:
                 first_point = line[-1]
-            connector = even_running_stitch([last_point, first_point],
-                                            stitch_length, tolerance)[1:-1]
+            connector = even_running_stitch([last_point, first_point], stitch_length, tolerance)[1:-1]
         if stroke.join_style == 0:
             should_reverse = i % 2 == 1
         elif stroke.join_style == 1:
