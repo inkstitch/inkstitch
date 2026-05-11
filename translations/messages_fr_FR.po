@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-05-10 03:33+0000\n"
-"PO-Revision-Date: 2026-05-10 03:33\n"
+"PO-Revision-Date: 2026-05-11 03:44\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2407,7 +2407,7 @@ msgstr "Compensation d'étirement supplémentaire qui varie comme un pourcentage
 
 #: lib/elements/satin_column.py:293
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
-msgstr "Les points satin resserrent le tissu, ce qui entraîne une colonne plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre étend d'une valeur fixe chaque point depuis le centre vers l’extérieur de la colonne satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
+msgstr "Les points de la broderie de la colonne satin resserrent le tissu, ce qui entraîne un résultat plus étroit que la colonne satin dessinée dans Inkscape. Ce paramètre permet de compenser cette contraction en repoussant d'une valeur fixe chaque point depuis le centre vers l’extérieur de la colonne satin. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:307 lib/elements/stroke.py:472
 msgid "Automatic"
@@ -2431,11 +2431,11 @@ msgstr "Inverser la direction des deux rails"
 
 #: lib/elements/satin_column.py:316
 msgid "Push compensation"
-msgstr ""
+msgstr "Compensation de poussée"
 
 #: lib/elements/satin_column.py:317
 msgid "Shrinks the column at start and/or end."
-msgstr ""
+msgstr "Les points serrés d'une broderie de colonne satin entraînent un résultat plus long que la colonne satin dessinée dans Inkscape. Ce paramètre permet de compenser cette élongation en raccourcissant d'une valeur fixe chaque rail à ses extrémités. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique."
 
 #: lib/elements/satin_column.py:328 lib/elements/stroke.py:482
 msgid "Reverse rails"
@@ -4153,7 +4153,7 @@ msgstr "https://inkstitch.org/fr/docs/font-tools/#edit-json"
 
 #: lib/gui/edit_json/main_panel.py:435
 msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
-msgstr ""
+msgstr "Impossible de trouver le fichier JSON pour cette fonte. Merci d'en créer un avec Gestion des polices > Créer un fichier JSON"
 
 #: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
@@ -4161,7 +4161,7 @@ msgstr "Les changements ne peuvent pas être sauvegardés : impossible d'écrire
 
 #: lib/gui/edit_json/main_panel.py:451
 msgid "Could not find a json file for this font. Please create one with Font Management > Generate JSON"
-msgstr ""
+msgstr "Impossible de trouver le fichier JSON pour cette fonte. Merci d'en créer un avec Gestion des polices > Créer un fichier JSON"
 
 #: lib/gui/edit_json/main_panel.py:458
 msgid "Could not write to json file: permission denied."
@@ -6393,7 +6393,7 @@ msgstr "Lettrage le long d'un chemin"
 
 #: inx/inkstitch_batch_lettering.inx:59
 msgid "Horizontal text position"
-msgstr ""
+msgstr "Position horizontale du texte"
 
 #: inx/inkstitch_batch_lettering.inx:59 inx/inkstitch_batch_lettering.inx:66
 msgid "Uses this text position when using lettering along path"
@@ -6406,7 +6406,7 @@ msgstr "Étendre"
 
 #: inx/inkstitch_batch_lettering.inx:66
 msgid "Vertical text position"
-msgstr ""
+msgstr "Position verticale du texte"
 
 #: inx/inkstitch_batch_lettering.inx:67
 #: inx/inkstitch_lettering_along_path.inx:25
