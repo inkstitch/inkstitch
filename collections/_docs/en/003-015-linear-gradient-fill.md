@@ -4,12 +4,12 @@ permalink: /docs/stitches/linear-gradient-fill/
 last_modified_at: 2024-05-06
 toc: true
 ---
-## What it is
+## Description
 
 [![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }
 Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
 
-## How to Create
+## Creation
 
 * Create a closed path. The shape may have holes.
 * In the `Fill and Stroke` dialog, select a linear gradient as a fill and adjust colors. On canvas adjust the gradient angle. The stitch angle will have a 90 degree angle to gradient direction.
@@ -21,7 +21,7 @@ Linear gradient fill uses Inkscapes linear gradient color to create seamless gra
 
 Set start and end points for autofill objects with [Visual commands](/docs/commands/).
 
-## Params
+## Parameters
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
