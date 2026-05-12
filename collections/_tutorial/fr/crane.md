@@ -40,6 +40,5 @@ La courbure différente des plumes est obtenue à l'aide de l'effet de chemin d�
 [Télécharger la version plus légère](/assets/images/tutorials/samples/gruesouple.svg){: download="gruesouple.svg" }
 
 
-L'organisation de la broderie est différente dans les deux cas, afin d'assurer un nombre minimal de changements de couleurs et de sauts de fil.
-
+Ces deux broderies monochromes comportent de nombreux chemins obtenus à partir de la fonction "saut en trait" de façon à minimiser le nombre de sauts et donc de points d'arrêt.
 
