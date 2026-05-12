@@ -4,14 +4,12 @@ permalink: /fr/docs/stitches/guided-fill/
 last_modified_at: 2024-05-07
 toc: true
 ---
-## De quoi s'agit-il ?
-
-
+## Description
 
 ![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
 Tout comme le remplissage usuel, le remplissage guidé est composé de rangées décalées plus ou moins parallèles, mais au lieu de suivre des lignes droites,  les rangées peuvent être courbées par une ligne-guide. La ligne guide peut déborder de la forme, mais seule la partie qui intersecte la forme a de l'importance.
 
-## Comment le créer
+## Création
 
 * Créez une **forme fermée avec une couleur de remplissage**. Cette forme  peut comporter des trous.
 * Créez une ligne-guide pour définir la forme des rangées de points :
