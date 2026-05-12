@@ -4,12 +4,12 @@ permalink: /fr/docs/stitches/tartan-fill/
 last_modified_at: 2024-05-07
 toc: true
 ---
-## Qu'est ce que c'est
+## Description
 
 [![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }
 Un Tartan et un tissu à motif de rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais.  Ce point de broderie essaye d'imiter ces motifs.
 
-## Comment le créer
+## Creation
 
 * Créer un **chemin fermé avec une couleur de remplissage**. La forme peut avoir des trous ou ne pas être connexe.
 * Ouvrir l'extension:  `Extensions > Ink/Stitch > Outils: Remplissage > Tartan`  et créer votre propre motif de tartan
