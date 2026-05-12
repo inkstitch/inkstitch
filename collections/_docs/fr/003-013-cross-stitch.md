@@ -13,7 +13,7 @@ feature_row:
 
 {% include upcoming_release.html %}
 
-## De quoi s’agit-il 
+## Description
 
 Le point de croix imite les techniques traditionnelles de broderie à la main.
 
@@ -21,7 +21,7 @@ Il se caractérise par de petites croix régulières, ce qui donne à l'image br
 
 ![Grenouille en point de croix double](/assets/images/upcoming/3.3.0/cross_stitch.jpg)
 
-# Comment le créer
+# Création
 
 * Dessinez une forme fermée avec une couleur de remplissage.
 * Ouvrez la boîte de dialogue des paramètres.
