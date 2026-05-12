@@ -4,14 +4,14 @@ permalink: /fr/docs/stitches/meander-fill/
 last_modified_at: 2024-05-07
 toc: true
 ---
-## De quoi s'agit-il?
+## Description
 
 Le remplissage en méandres est originaire des techniques de quilting. Il produit un beau résultat en broderie machine. De grandes zones peuvent être remplies avec relativement peu de points.
 
 
 ![Meander stitch detail](/assets/images/docs/meander-fill.png)
 
-## Comment le créer
+## Création
 
 * Créez un **chemin fermé avec une couleur de remplissage**.  Cette forme peut contenir des trous.
 * Ouvrez le dialogue des paramètres (`Extensions > Ink/Stitch > Paramètres`)  et sélectionnez "Remplissage en méandres" comme méthode de remplissage.
