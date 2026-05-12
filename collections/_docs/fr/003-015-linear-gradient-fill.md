@@ -4,13 +4,13 @@ permalink: /fr/docs/stitches/linear-gradient-fill/
 last_modified_at: 2025-04-12
 toc: true
 ---
-## Qu'est ce que c'est 
+## Description
 
 [![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }
 
 Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d'Inkscape pour créer des dégradés homogènes avec un positionnement de point cohérent.
 
-## Comment le créer
+## Creation
 
 * Créez un **chemin fermé avec une couleur de remplissage**. La forme peut avoir des trous.
 * Dans la boîte de dialogue « Remplissage et contour », sélectionnez un dégradé linéaire comme remplissage et ajustez les couleurs. Sur le canevas, ajustez l'angle du dégradé. L'angle du point aura un angle de 90 degrés par rapport à la direction du dégradé.
