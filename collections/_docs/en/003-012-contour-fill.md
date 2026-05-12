@@ -4,13 +4,13 @@ permalink: /docs/stitches/contour-fill/
 last_modified_at: 2025-04-12
 toc: true
 ---
-## What it is
+## Description
 
 ![Contour fill detail](/assets/images/docs/contour-fill-detail.jpg)
 
 Contour fill covers areas with stitches following the contour of an object.
 
-## How to Create
+## Création
 
 Create a **closed path with a fill color**.
 
@@ -18,7 +18,7 @@ Create a **closed path with a fill color**.
 
 Set start and end points for autofill objects with [Visual commands](/docs/commands/).
 
-## Params
+## Parameters
 
 Run `Extensions > Ink/Stitch  > Params`. Set fill method to `Contour Fill` and tweak the settings to your needs.
 
