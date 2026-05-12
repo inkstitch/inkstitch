@@ -4,14 +4,14 @@ permalink: /fr/docs/stitches/contour-fill/
 last_modified_at: 2025-04-12
 toc: true
 ---
-## De quoi s'agit-il ?
+## Description
 
 ![Contour fill detail](/assets/images/docs/contour-fill-detail.jpg)
 
 Le remplissage selon le contour remplit les objets en suivant leur contour.
 
 
-## Comment le créer
+## Création
 
 Créez une **forme fermée avec une couleur de remplissage**
 
