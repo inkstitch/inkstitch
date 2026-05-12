@@ -52,14 +52,46 @@ Wenn du deine eigenen Tastenkürzel verwenden willst, füge sie in den Tastenkü
 Benutze die Suchfunktion um die Erweiterungen schneller zu finden. [Mehr informationen](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
-## Zoomkorrektur
+## Inkscape preferences
+Using ink/stitch will be easier if you set some inkscape preferences as stated below
 
-Beim Sticken ist es wichtig, ein Gefühl für die tatsächliche Größe des Entwurfs zu bekommen. Inkscape verfügt über eine Einstellung, mit der man die Zoomstufen an die Bildschirmgröße anpassen kann.
+#### Bounding box
+We recommend that you work with geometric bounding boxes so that the dimensions of objects do not take into account the thickness of the outlines.
 
-* Navigiere zu `Bearbeiten > Einstellungen > Benutzeroberfläche`
-* Nun hält man ein Lineal auf das Display und passt den Schieberegler an, bis die Länge übereinstimmt.
- 
-![Zoom correction](/assets/images/docs/de/customize-zoom-correction_ruler.jpg)
+####  Pfadkonturen & Pfadrichtungen
+
+Bei der Arbeit mit Ink/Stitch ist es wichtig, erkennen zu können, in welche Richtung ein Pfad verläuft. Wir empfehlen daher, die Kontrollkästchen `Umriss zeigen` und `Zeige temporär Umrandung für ausgewählte Pfade` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten` zu aktivieren.
+
+Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die Option `Zeige die Pfadrichtung an Außenlinie` in der Werkzeugleiste. In der Abbildung kannst du sehen, wo du die Option findest.
+
+[![Path outlines & directions](/assets/images/docs/de/customize-path-outlines.png)](/assets/images/docs/de/customize-path-outlines.png)
+
+#### Tools, Drawing Tool Styles
+
+It is convenient to define the styles of the pencil and pen tools by:
+- displaying the tool control bar (menu View > Show/Hide)
+- selecting, for example, the pen tool
+- selecting an object created with this tool with the correct style
+- double-clicking on the tool style displayed to the right of the tool control bar to open the preferences
+- clicking on "Capture Style from Selection"
+
+
+### Interface
+Language: Choose your language, not the system default. Otherwise, the Ink/Stitch menus will not be translated correctly.
+
+
+#### Origin and y axis
+For easier use of cross stitch grids, we recommend checking "Origin at upper left,  with y-axis pointing down"
+
+### Behavior
+#### Simplification threshold
+The default simplification threshold value in the Behavior tab is a bit aggressive. Reducing it to 0.001 will allow you to simplify your paths with less impact on their shape.
+
+#### Clones
+For proper behavior of the ink/stitch commands, it is necessary to check the "Relink duplicated clones" box.
+
+### Input/Output
+In Autosave , unable autosave. 
 
 ## Gitter
 
@@ -67,13 +99,7 @@ Um Vektoren richtig auszurichten, kann die Rasterfunktion von Inkscape verwendet
 
 ![Gitter](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
-## Pfadkonturen & Pfadrichtungen
 
-Bei der Arbeit mit Ink/Stitch ist es wichtig, erkennen zu können, in welche Richtung ein Pfad verläuft. Wir empfehlen daher, die Kontrollkästchen `Umriss zeigen` und `Zeige temporär Umrandung für ausgewählte Pfade` unter `Bearbeiten > Einstellungen > Werkzeuge > Knoten` zu aktivieren.
-
-Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die Option `Zeige die Pfadrichtung an Außenlinie` in der Werkzeugleiste. In der Abbildung kannst du sehen, wo du die Option findest.
-
-[![Path outlines & directions](/assets/images/docs/de/customize-path-outlines.png)](/assets/images/docs/de/customize-path-outlines.png)
 
 ## Vorlagen
 
