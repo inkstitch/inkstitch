@@ -4,13 +4,13 @@ permalink: /docs/stitches/meander-fill/
 last_modified_at: 2024-05-06
 toc: true
 ---
-## What it is
+## Description
 
 Meander fill has its origins in quilting techniques. A beautiful patterned effect results for machine embroidery. Large areas can be filled with relatively few stitches.
 
 ![Meander stitch detail](/assets/images/docs/meander-fill.png)
 
-## How to Create
+## Creation
 
 * Create a **closed path with a fill color**. This shape may have holes.
 * Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Meander Fill` as the fill method.
@@ -20,7 +20,7 @@ Meander fill has its origins in quilting techniques. A beautiful patterned effec
 
 Set start and end points for autofill objects with [Visual commands](/docs/commands/).
 
-## Params
+## Parameters
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
