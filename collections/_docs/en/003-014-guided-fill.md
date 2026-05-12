@@ -4,13 +4,13 @@ permalink: /docs/stitches/guided-fill/
 last_modified_at: 2024-05-06
 toc: true
 ---
-## What it is
+## Description
 
 Generate curved fill with guide lines.
 
 ![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
 
-## How to Create
+## Creation
 
 * Create a **closed path with a fill color**. This shape may have holes.
 * Create a guide line to define stitch directions:
@@ -44,7 +44,7 @@ Parallel offset will ensure that each line is always a consistent distance from 
 
 Set start and end points for autofill objects with [Visual commands](/docs/commands/).
 
-## Params
+## Parameters
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
