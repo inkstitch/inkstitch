@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/crane/
-title: "Grue en colonne satin"
+title: "Grue en colonnes satin"
 language: fr
 last_modified_at: 2026-05-12
 excerpt: "fichier exemple de grue en colonnes satin"
