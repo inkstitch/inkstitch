@@ -4,13 +4,13 @@ permalink: /fr/docs/stitches/circular-fill/
 last_modified_at: 2025-04-17
 toc: true
 ---
-## De quoi s'agit-il ?
+## Description
 
 Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
 
 ![Détail de point circulaire](/assets/images/docs/circular-fill-detail.png)
 
-## Comment le créer
+## Création
 
 * Créez **un chemin fermé avec une couleur de remplissage**. Cette forme peut avoir des trous.
 * Ouvrir le dialogue de paramètrage (`Extensions > Ink/Stitch > Paramètres`) et sélectionner `Remplissage circulaire` comme méthode de remplissage.
@@ -35,7 +35,7 @@ Utilisez les commandes "Position de début du remplissage" et "Position de fin d
 ## Paramètres
 
 Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
-
+### Couche supérieure
 |Paramètres||Description|
 |---|---|---|
 |Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
