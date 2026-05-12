@@ -2,7 +2,7 @@
 permalink: /tutorials/crane/
 title: "Satin columns crane"
 language: en
-last_modified_at: 2026-05-11
+last_modified_at: 2026-05-13
 excerpt: "satin column crane file sample"
 image: "/assets/images/tutorials/tutorial-preview-images/densecrane.jpg"
 tutorial-type:
