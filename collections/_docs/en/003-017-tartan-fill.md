@@ -4,12 +4,12 @@ permalink: /docs/stitches/tartan-fill/
 last_modified_at: 2024-03-11
 toc: true
 ---
-## What it is
+## Description
 
 [![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }
 Tartan is a patterned fabric with colored horizontal and vertical stripes. It is typically known from scottish kilts. The embroidery stitch type tries to mimic the typical pattern.
 
-## How to Create
+## Creation
 
 * Create a **closed path with a fill color**. The shape may have holes.
 * Open the tartan extension under `Extensions > Ink/Stitch > Tools: Fill > Tartan` and create your own tartan pattern
@@ -21,7 +21,7 @@ The Tartan Pattern Editor can be found in `Extensions > Ink/Stitch > Tools: Fill
 
 [Read more about the Tartan Stripe Editor](/docs/fill-tools#tartan)
 
-## Params
+## Parameters
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
@@ -53,7 +53,7 @@ Stop After                         |☑ |Stop the machine after sewing this obje
 
 ## Underlay
 
-Underlay in Tartan Fill is a normal Auto FillUnderlay and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
+Underlay in Tartan Fill is a normal Auto Fill Underlay and uses the fill angle which can be defined in the underlay [params](/docs/stitches/fill-stitch#underlay).
 
 ## Sample Files Including Tartan Fill Stitches
 
