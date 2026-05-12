@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="170mm"
-   height="200mm"
-   viewBox="0 0 170 200"
+   width="262.66135mm"
+   height="207.51079mm"
+   viewBox="0 0 262.66135 207.51079"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
    xml:space="preserve"
-   sodipodi:docname="gruede140-170-dense.svg"
+   sodipodi:docname="grue_dense.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,12 +26,12 @@
      inkscape:showpageshadow="false"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#000000"
+     inkscape:deskcolor="#e5e5e5"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.5338828"
-     inkscape:cx="896.26412"
-     inkscape:cy="-152.65523"
+     inkscape:zoom="0.0969004"
+     inkscape:cx="1109.3865"
+     inkscape:cy="-557.27324"
      inkscape:window-width="1472"
      inkscape:window-height="766"
      inkscape:window-x="0"
@@ -40,8 +40,8 @@
      inkscape:current-layer="__inkstitch_density_plan__"><inkscape:grid
        id="grid1"
        units="mm"
-       originx="0"
-       originy="60.000004"
+       originx="-7.1182362"
+       originy="67.074645"
        spacingx="1"
        spacingy="1"
        empcolor="#00e5d5"
@@ -107,7 +107,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
    startpoint_spacing_variation="0;1"
    endpoint_edge_variation="0;1"
    endpoint_spacing_variation="0;1"
-   strokepath="M0,0 L1,0"
+   strokepath="M 0,0 H 1"
    prop_scale="1"
    scale_y_rel="false" /><inkscape:path-effect
    effect="lattice2"
@@ -190,7 +190,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
    startpoint_spacing_variation="0;1"
    endpoint_edge_variation="0;1"
    endpoint_spacing_variation="0;1"
-   strokepath="M0,0 L1,0"
+   strokepath="M 0,0 H 1"
    prop_scale="1"
    scale_y_rel="false" /><inkscape:path-effect
    effect="perspective-envelope"
@@ -222,11 +222,11 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
       <g
    id="inkstitch-pattern-group">
         <path
-   style="fill:#fafafa;stroke:#ff5500;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:0.8;"
+   style="fill:#fafafa;fill-opacity:0.8;stroke:#ff5500;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
    d="M 10.12911,5.2916678 A 4.8374424,4.8374426 0 0 1 5.2916656,10.12911 4.8374424,4.8374426 0 0 1 0.45422399,5.2916678 4.8374424,4.8374426 0 0 1 5.2916656,0.45422399 4.8374424,4.8374426 0 0 1 10.12911,5.2916678 Z"
    id="inkstitch-pattern-marker-circle" />
         <path
-   style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-miterlimit:4;"
+   style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-miterlimit:4"
    id="inkstitch-pattern-marker-spiral"
    d="M 4.9673651,5.7245662 C 4.7549848,5.7646159 4.6247356,5.522384 4.6430021,5.3419847 4.6765851,5.0103151 5.036231,4.835347 5.3381858,4.8987426 5.7863901,4.9928495 6.0126802,5.4853625 5.9002872,5.9065088 5.7495249,6.4714237 5.1195537,6.7504036 4.5799191,6.5874894 3.898118,6.3816539 3.5659013,5.6122905 3.7800789,4.9545192 4.0402258,4.1556558 4.9498996,3.7699484 5.7256318,4.035839 6.6416744,4.3498087 7.0810483,5.4003986 6.7631909,6.2939744 6.395633,7.3272552 5.2038143,7.8204128 4.1924535,7.4503931 3.0418762,7.0294421 2.4948761,5.6961604 2.9171752,4.567073 3.3914021,3.2991406 4.8663228,2.6982592 6.1130974,3.1729158 7.4983851,3.7003207 8.1531869,5.3169977 7.6260947,6.6814205 7.0456093,8.1841025 5.2870784,8.8928844 3.8050073,8.3132966 2.1849115,7.6797506 1.4221671,5.7793073 2.0542715,4.1796074 2.7408201,2.4420977 4.7832541,1.6253548 6.5005435,2.310012 8.3554869,3.0495434 9.2262638,5.2339874 8.4890181,7.0688861 8.4256397,7.2266036 8.3515789,7.379984 8.2675333,7.5277183" />
       </g>
@@ -242,11 +242,11 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
      <g
    id="inkstitch-guide-line-group">
        <path
-   style="fill:#fafafa;stroke:#ff5500;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:0.8;"
+   style="fill:#fafafa;fill-opacity:0.8;stroke:#ff5500;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1"
    d="M 10.12911,5.2916678 A 4.8374424,4.8374426 0 0 1 5.2916656,10.12911 4.8374424,4.8374426 0 0 1 0.45422399,5.2916678 4.8374424,4.8374426 0 0 1 5.2916656,0.45422399 4.8374424,4.8374426 0 0 1 10.12911,5.2916678 Z"
    id="inkstitch-guide-line-marker-circle" />
        <path
-   style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-miterlimit:4;"
+   style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:round;stroke-miterlimit:4"
    id="inkstitch-guide-line-marker-spiral"
    d="M 1.7506092,6.2728168 3.4558825,5.2833684 7.1038696,7.400035 8.8193256,6.4046783 M 1.7963222,4.129626 3.4558825,3.1667016 7.1038696,5.2833682 8.8475785,4.2716184 M 1.6318889,5.2833683 3.4558825,4.225035 7.1038696,6.3417016 8.9558408,5.2677331" />
      </g>
@@ -274,7 +274,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
    cx="0"
    cy="0"
    r="1.5"
-   style="fill:context-stroke;opacity:0.8;"
+   style="opacity:0.8;fill:context-stroke"
    id="circle83" />
     </marker>
   <filter
@@ -291,7 +291,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
      id="feGaussianBlur4" /><feSpecularLighting
      result="result2"
      surfaceScale="1.5"
-     specularConstant="0.78"
+     specularConstant="0.77999997"
      specularExponent="2.5"
      id="feSpecularLighting4"><feDistantLight
        azimuth="-125"
@@ -313,19 +313,19 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
    id="title9694">Ignore entire layer when generating stitch plan</title>
       <path
    inkscape:connector-curvature="0"
-   style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.06501234;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19503705, 3.19503705;stroke-dashoffset:0;stroke-opacity:1"
+   style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.06501;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19504, 3.19504;stroke-dashoffset:0;stroke-opacity:1"
    d="M 9.2465269,-4.9265995e-6 C 9.246525,5.1067241 5.1067028,9.2465451 -2.615882e-5,9.2465451 -5.1067554,9.2465451 -9.2465782,5.1067241 -9.2465801,-4.9265995e-6 -9.24658,-2.4523429 -8.2723922,-4.8042399 -6.538327,-6.5383059 c 1.7340653,-1.734065 4.0859624,-2.708252 6.53830084118,-2.708252 5.10673015882,0 9.24655285882,4.139823 9.24655305882,9.2465529734005 0,0 0,0 0,0"
    id="inkstitch_path25368-7" />
       <path
    sodipodi:nodetypes="ccccc"
    inkscape:connector-curvature="0"
-   style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.63330007;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+   style="color:#000000;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#5a5a5a;stroke-width:0.6333;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
    d="M 4,4.452769 1.46667,1.286102 H -5.5 l 2.53333,3.166667 z"
    id="use5800" />
       <path
    sodipodi:nodetypes="ccccc"
    inkscape:connector-curvature="0"
-   style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.63339424;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
+   style="color:#000000;opacity:0.5;fill:#d5d5d5;fill-opacity:1;fill-rule:evenodd;stroke:#858585;stroke-width:0.633394;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1"
    d="M 4,2.552769 1.46667,-0.613898 H -5.5 l 2.53333,3.166667 z"
    id="use5864" />
       <g
@@ -340,24 +340,24 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
    inkscape:connector-curvature="0"
    id="path8023"
    d="m -0.43333658,-3.8755672 c 0,0 3.16666668,3.16666661 3.16666668,3.16666661"
-   style="fill:none;stroke:#ffffff;stroke-width:1.70000005" />
+   style="fill:none;stroke:#ffffff;stroke-width:1.7" />
         <path
    inkscape:connector-curvature="0"
    id="path8025"
    d="m 2.7333301,-3.8755672 c 0,0 -3.16666668,3.16666661 -3.16666668,3.16666661"
-   style="fill:none;stroke:#ffffff;stroke-width:1.79999995;stroke-linejoin:round" />
+   style="fill:none;stroke:#ffffff;stroke-width:1.8;stroke-linejoin:round" />
       </g>
     </symbol>
     </defs><g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0, 60)"
+     transform="translate(-7.1182359,67.074641)"
      style="display:inline;stroke:#d42727"><g
        id="g129"
        inkscape:label="tour de cou"
        style="display:inline;stroke:#e3e5fb"
-       transform="matrix(0.705073 0 0 0.705073 2.09409 41.4466)"><path
+       transform="matrix(0.705073,0,0,0.705073,2.09409,41.4466)"><path
          id="path2"
          style="font-variation-settings:normal;display:inline;opacity:0.99;vector-effect:none;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 58,92 C 57.7751,89.5232 58.7301,76.7536 55,72 51.801,67.9233 50.0993,65.6829 43,65 M 54,89 C 52.185879,82.673782 54.665651,75.713051 49.2201,74.552079 45.235629,73.702604 40.79835,74.85596 37.340213,79.27315"
@@ -471,7 +471,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          id="path129"
          inkstitch:repeats="2" /></g><g
        inkscape:label="partie droite bas"
-       transform="matrix(0.18655 0 0 0.18655 2.09409 -0.857754)"
+       transform="matrix(0.18655,0,0,0.18655,2.09409,-0.857754)"
        id="g1"
        style="display:inline;stroke:#e3e5fb;stroke-width:0.944883"><path
          d="m 229.53815,488.4979 c -34.43561,-6.15314 -41.63794,-52.817 -13.21143,-75.85781 26.37651,-21.3792 67.96106,-2.79491 98.38949,3.82246 l 28.16807,10.65671 C 397.63702,384.76546 452.10252,341.25293 506.856,298.9 c 0.50482,-0.96805 1.2483,-1.72577 1.989,-2.511"
@@ -762,7 +762,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          id="g31"
          inkscape:label="plumeau"
          style="display:inline;stroke:#e3e5fb;stroke-width:0.25"
-         transform="matrix(3.77953 0 0 3.77953 0 226.772)"><path
+         transform="matrix(3.77953,0,0,3.77953,0,226.772)"><path
            id="path25"
            style="font-variation-settings:normal;opacity:0.99;vector-effect:none;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 140.114,85.2679 -0.73,6.521079 m 4.525,-4.550779 -0.36427,6.336948"
@@ -971,7 +971,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
        id="g4"
        inkscape:label="CORPS"
        style="stroke:#e3e5fb"
-       transform="matrix(0.705073 0 0 0.705073 2.09409 41.4466)"><path
+       transform="matrix(0.705073,0,0,0.705073,2.09409,41.4466)"><path
          id="path167"
          style="display:inline;opacity:0.99;vector-effect:none;fill:none;fill-rule:evenodd;stroke:#e3e5fb;stroke-width:0.175411;stroke-opacity:0.843137;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="M 87.040383,74.417956 101.25653,65.834622 M 89.722675,79.648426 105.5482,74.417956 m -9.119793,11.66797 7.778643,-1.609373 m -2.27994,7.778647 4.55989,-4.694012 m 9.90413,15.683902 -15.01849,-18.57549 c 1.53541,-1.439188 2.97557,-2.564793 1.35915,-8.10581 C 99.87064,65.605681 94.832109,57.08905 89.966951,52.045344 M 114.93412,104.62405 99.817384,85.927042 91.60028,79.111968 C 93.121924,78.212815 89.073989,66.959676 81.837464,59.508366"
@@ -1065,7 +1065,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
        id="g51"
        inkscape:label="centre droit"
        style="display:inline;stroke:#e3e5fb;stroke-width:0.25"
-       transform="matrix(0.705073 0 0 0.705073 2.09409 41.4466)"><path
+       transform="matrix(0.705073,0,0,0.705073,2.09409,41.4466)"><path
          id="path61"
          style="font-variation-settings:normal;opacity:0.99;vector-effect:none;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
          d="m 89.504,51.8092 c -3.405686,-2.765793 -5.3783,-6.586 -19.1535,-7.7128 -4.9103,0.5183 -9.8329,0.765 -14.587,4.7634 m 36.9483,1.0573 C 87.2182,45.2615 83.2028,39.682 70.4102,39.5883 c -7.447,0.4183 -12.2708,3.8969 -16.8985,7.6044"
@@ -1117,7 +1117,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g36"
-         transform="matrix(0.983928 -0.178566 0.178566 0.983928 -10.9102 14.2456)"
+         transform="rotate(-10.286244,73.681615,67.73076)"
          style="stroke:#e3e5fb;stroke-width:0.25"><path
            d="M 98.9714,44.9497 94.654791,40.713571 100.588,34.6372"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.25;stroke-dasharray:3, 1"
@@ -1142,7 +1142,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g38"
-         transform="matrix(0.850189 -0.279913 0.244478 0.923016 -5.5074 23.388)"
+         transform="matrix(0.850189,-0.279913,0.244478,0.923016,-5.5074,23.388)"
          style="stroke:#e3e5fb;stroke-width:0.270659"><path
            d="M 98.5786,45.2011 94.620346,40.675948 100.588,34.6373"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.270659;stroke-dasharray:3, 1"
@@ -1167,7 +1167,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g40"
-         transform="matrix(0.696071 -0.475377 0.469031 0.761556 -4.94287 47.4102)"
+         transform="matrix(0.696071,-0.475377,0.469031,0.761556,-4.94287,47.4102)"
          style="stroke:#e3e5fb;stroke-width:0.288087"><path
            d="M 98.7435,44.811 94.654791,40.713571 100.588,34.637"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.288087;stroke-dasharray:3, 1"
@@ -1192,7 +1192,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g42"
-         transform="matrix(0.636168 -0.517457 0.555787 0.655236 -7.79012 55.0148)"
+         transform="matrix(0.636168,-0.517457,0.555787,0.655236,-7.79012,55.0148)"
          style="stroke:#e3e5fb;stroke-width:0.297865"><path
            d="M 98.5585,45.0904 94.654791,40.713571 100.588,34.6373"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.297865;stroke-dasharray:3, 1"
@@ -1217,7 +1217,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g44"
-         transform="matrix(0.487914 -0.481098 0.511249 0.50404 2.26693 57.6628)"
+         transform="matrix(0.487914,-0.481098,0.511249,0.50404,2.26693,57.6628)"
          style="stroke:#e3e5fb;stroke-width:0.356456"><path
            d="M 75.002037,32.847955 69.230826,32.708238 69.053508,26.726416"
            style="display:inline;fill:none;stroke:#e3e5fb;stroke-width:0.25;stroke-dasharray:2.10404, 0.701348"
@@ -1225,7 +1225,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            inkstitch:running_stitch_tolerance_mm="2.0"
            id="path54"
            sodipodi:nodetypes="ccc"
-           transform="matrix(1.0247 0.978062 -1.03936 0.991919 57.6094 -59.414)" /><path
+           transform="matrix(1.0247,0.978062,-1.03936,0.991919,57.6094,-59.414)" /><path
            id="path43"
            style="font-variation-settings:normal;opacity:0.99;vector-effect:none;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.356456;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;-inkscape-stroke:none;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 100.58789,34.637177 -5.933099,6.076394 m 9.409159,-1.913181 -5.312756,6.104838"
@@ -1243,7 +1243,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g46"
-         transform="matrix(0.418968 -0.475933 0.57612 0.376968 0.859371 63.3719)"
+         transform="matrix(0.418968,-0.475933,0.57612,0.376968,0.859371,63.3719)"
          style="stroke:#e3e5fb;stroke-width:0.380305"><path
            d="M 100.45,45.6288 94.497033,40.799908 100.588,34.6371"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.380305;stroke-dasharray:3, 1"
@@ -1268,7 +1268,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g48"
-         transform="matrix(0.301548 -0.419085 0.508278 0.251553 10.1484 64.7399)"
+         transform="matrix(0.301548,-0.419085,0.508278,0.251553,10.1484,64.7399)"
          style="stroke:#e3e5fb;stroke-width:0.465148"><path
            d="M 101.336,45.7425 94.696706,40.670643 100.588,34.637"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.465148;stroke-dasharray:3, 1"
@@ -1293,7 +1293,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            sodipodi:nodetypes="ccccc"
            inkstitch:repeats="2" /></g><g
          id="g50"
-         transform="matrix(0.328821 -0.238738 0.492237 0.212811 3.29028 50.8138)"
+         transform="matrix(0.328821,-0.238738,0.492237,0.212811,3.29028,50.8138)"
          style="stroke:#e3e5fb;stroke-width:0.577362"><path
            d="M 104.13,44.3913 93.656628,41.519329 100.588,34.6371"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.577362;stroke-dasharray:3, 1"
@@ -1321,7 +1321,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          style="fill:none;stroke:#e3e5fb;stroke-width:0.944883"
          d="m 205.32603,365.97572 10.22254,-4.41008 10.28344,-3.96563 10.30787,-3.42786 5.18755,-1.49545 5.18696,-1.32965 5.19844,-1.15752 5.21034,-0.9756 5.22247,-0.78372 5.2349,-0.5822 5.2475,-0.37049 5.26009,-0.1491 5.2727,0.0821 5.28512,0.32323 5.2972,0.57396 5.30901,0.83449 5.3203,1.10433 5.33128,1.38363 5.34177,1.67208 5.35187,1.96985 5.36152,2.2765 5.37121,2.59199 5.38064,2.91657 5.39007,3.24986 5.39986,3.59207 5.40966,3.94297 5.42005,4.30295 5.43066,4.67185 5.44204,5.04958 5.43107,5.41399 m -167.61099,-23.83435 10.15446,-4.38072 10.13136,-3.90697 10.15113,-3.37574 5.06025,-1.45875 5.07424,-1.30075 5.07696,-1.13048 5.08006,-0.9512 5.08353,-0.76288 5.0875,-0.5658 5.0921,-0.35951 5.09751,-0.1445 5.1037,0.0795 5.11088,0.31257 5.119,0.55464 5.12839,0.80611 5.1389,1.06667 5.15072,1.33677 5.16363,1.61632 5.17773,1.90575 5.19288,2.2049 5.20919,2.51381 5.22616,2.83283 5.24393,3.16174 5.26254,3.50073 5.28134,3.84943 5.30075,4.20825 5.32034,4.57695 5.34036,4.95522 5.38313,5.36621 m -163.10999,-26.8901 -1.79657,-4.16443 m 15.25797,-1.4142 -1.63187,-4.23168 m 11.87902,0.55226 -1.43119,-4.30371 m 10.08592,1.58705 -1.2563,-4.35797 m 10.00443,2.14765 -0.98575,-4.42701 m 9.8239,2.71048 -0.67308,-4.48521 m 11.41157,3.19692 -0.31942,-4.52417 m 11.11059,4.16835 0.0706,-4.53489 m 8.86876,4.99717 0.48856,-4.50905 m 10.17207,6.05544 0.92176,-4.44078 m 11.27457,7.59459 1.35485,-4.32834 m 7.03762,7.40208 1.77258,-4.1747 m 9.608,9.59798 2.16133,-3.98734 m 8.64104,10.50992 2.51202,-3.77623 m 7.69328,11.22459 2.82002,-3.55213 m 8.15337,13.00418 3.08491,-3.32468"
          inkstitch:satin_column="true"
-         transform="matrix(0.264583 0 0 0.264583 0 -60)"
+         transform="matrix(0.264583,0,0,0.264583,0,-60)"
          inkstitch:satin_method="satin_column"
          inkstitch:zigzag_spacing_mm="1.5"
          inkstitch:pull_compensation_mm="0.75"
@@ -1349,7 +1349,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
        id="g10"
        inkscape:label="bas centre gauche"
        style="display:inline;stroke:#e3e5fb;stroke-width:0.25"
-       transform="matrix(0.705073 0 0 0.705073 2.09409 41.4466)"><path
+       transform="matrix(0.705073,0,0,0.705073,2.09409,41.4466)"><path
          d="M 52.6384,39.372 51.574635,40.705317 50.4557,40.1179"
          style="fill:none;stroke:#e3e5fb;stroke-width:1px;stroke-dasharray:3, 1"
          inkstitch:running_stitch_length_mm="2.5"
@@ -1474,7 +1474,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          inkstitch:random_width_increase_percent="0"
          inkstitch:random_width_decrease_percent="0" /></g><g
        inkscape:label="haut droit"
-       transform="matrix(0.18655 0 0 0.18655 2.09409 -0.857754)"
+       transform="matrix(0.18655,0,0,0.18655,2.09409,-0.857754)"
        id="g77"
        style="display:inline;stroke:#e3e5fb;stroke-width:0.755906;stroke-dasharray:none"><g
          id="g136"
@@ -1485,19 +1485,19 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            id="path67"
            sodipodi:nodetypes="ccsc"
            inkstitch:repeats="4"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /><path
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /><path
            style="font-variation-settings:normal;opacity:0.99;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 132.88359,-42.67041 4.89853,-5.611036 c 2.43442,-0.593764 3.0909,-0.154957 3.4735,1.870345 0.51486,2.725448 -5.18925,3.139495 -2.85005,-0.356256"
            id="path68"
            sodipodi:nodetypes="ccsc"
            inkstitch:repeats="4"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /><path
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /><path
            style="font-variation-settings:normal;opacity:0.99;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 133.41797,-42.22509 1.5141,-2.048473 c 2.43442,-0.593764 3.0909,-0.154957 3.4735,1.870345 0.51486,2.725448 -5.18925,3.139495 -2.85005,-0.356256"
            id="path69"
            sodipodi:nodetypes="ccsc"
            inkstitch:repeats="4"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /></g><g
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /></g><g
          id="g78"
          style="stroke:#e3e5fb;stroke-width:0.755906;stroke-dasharray:none"><path
            id="autosatin544"
@@ -1519,7 +1519,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            style="opacity:0.99;fill:none;fill-rule:evenodd;stroke:#e3e5fb;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:0.843137;marker-start:url(#inkstitch-pattern-marker);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 103.15272,-2.8097775 a 1.3075272,1.4081063 0 0 1 -1.30753,1.4081062 1.3075272,1.4081063 0 0 1 -1.30753,-1.4081062 1.3075272,1.4081063 0 0 1 1.30753,-1.4081063 1.3075272,1.4081063 0 0 1 1.30753,1.4081063 z"
            inkscape:label="path62"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /></g><path
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /></g><path
          d="m 352.892,263.186 23.113,-28.705 8.867,7.255"
          style="fill:none;stroke:#e3e5fb;stroke-width:1px;stroke-dasharray:3, 1"
          inkstitch:running_stitch_length_mm="2.5"
@@ -1555,19 +1555,19 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            id="path70"
            sodipodi:nodetypes="ccsc"
            inkstitch:repeats="4"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /><path
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /><path
            style="font-variation-settings:normal;opacity:0.99;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 135.64458,-30.913953 4.89853,-5.611036 c 2.43442,-0.593764 3.0909,-0.154957 3.4735,1.870345 0.51486,2.725448 -5.18925,3.139495 -2.85005,-0.356256"
            id="path71"
            sodipodi:nodetypes="ccsc"
            inkstitch:repeats="4"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /><path
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /><path
            style="font-variation-settings:normal;opacity:0.99;fill:none;fill-opacity:1;stroke:#e3e5fb;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.843137;paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 136.17896,-30.468633 1.5141,-2.048473 c 2.43442,-0.593764 3.0909,-0.154957 3.4735,1.870345 0.51486,2.725448 -5.18925,3.139495 -2.85005,-0.356256"
            id="path72"
            sodipodi:nodetypes="ccsc"
            inkstitch:repeats="4"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /></g><g
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /></g><g
          id="g79"
          style="stroke:#e3e5fb;stroke-width:0.755906;stroke-dasharray:none"><path
            id="autosatin4886"
@@ -1588,7 +1588,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            id="path66"
            style="opacity:0.99;fill:none;fill-rule:evenodd;stroke:#e3e5fb;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:0.843137;marker-start:url(#inkstitch-pattern-marker);paint-order:markers fill stroke;stop-color:#000000;stop-opacity:1"
            d="m 108.67469,5.2059889 a 1.3075272,1.4081063 0 0 1 -1.30753,1.4081062 1.3075272,1.4081063 0 0 1 -1.30753,-1.4081062 1.3075272,1.4081063 0 0 1 1.30753,-1.4081063 1.3075272,1.4081063 0 0 1 1.30753,1.4081063 z"
-           transform="matrix(3.77953 0 0 3.77953 0 226.772)" /></g><path
+           transform="matrix(3.77953,0,0,3.77953,0,226.772)" /></g><path
          d="m 381.332,282.933 17.563,-23.879 9.089,7.069"
          style="fill:none;stroke:#e3e5fb;stroke-width:1px;stroke-dasharray:3, 1"
          inkstitch:running_stitch_length_mm="2.5"
@@ -1689,7 +1689,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          inkstitch:random_width_increase_percent="0"
          inkstitch:random_width_decrease_percent="0" /></g><g
        inkscape:label="haut centre"
-       transform="matrix(0.18655 0 0 0.18655 2.09409 -0.857754)"
+       transform="matrix(0.18655,0,0,0.18655,2.09409,-0.857754)"
        id="g9981"
        style="display:inline;stroke:#e3e5fb;stroke-width:0.944883"><path
          d="m 326.429,262.507 -13.101,9.59 C 287.49221,225.9822 241.07,238.477 217.691,255.966 L 199.083,147.139"
@@ -1930,11 +1930,11 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          id="path9980"
          inkstitch:bean_stitch_repeats="2"
          sodipodi:nodetypes="cccc"
-         transform="matrix(3.77953 0 0 3.77953 0 226.772)" /></g><g
+         transform="matrix(3.77953,0,0,3.77953,0,226.772)" /></g><g
        id="g9999"
        inkscape:label="haut centre gauche"
        style="display:inline;stroke:#e3e5fb"
-       transform="matrix(0.705073 0 0 0.705073 2.09409 41.4466)"><path
+       transform="matrix(0.705073,0,0,0.705073,2.09409,41.4466)"><path
          d="m 61.1981,9.72645 3.6836,3.11875"
          style="fill:none;stroke:#e3e5fb;stroke-width:0.25;stroke-dasharray:3, 1"
          inkstitch:running_stitch_length_mm="2.5"
@@ -2000,7 +2000,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          inkstitch:random_width_increase_percent="0"
          inkstitch:random_width_decrease_percent="0" /></g><g
        inkscape:label="partie gauche"
-       transform="matrix(0.18655 0 0 0.18655 2.09409 -0.857754)"
+       transform="matrix(0.18655,0,0,0.18655,2.09409,-0.857754)"
        id="g76"
        style="display:inline;fill:none;stroke:#e3e5fb;stroke-width:0.944883"><path
          d="m 147.623,269.605 -5.45086,4.64669 -6.41414,36.90531 -22.50686,7.05385 -6.94014,65.34215 c -8.589217,-0.0596 -17.424327,-2.35883 -24.4648,11.688 L 33.3029,166.445"
@@ -2163,7 +2163,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
          inkstitch:pull_compensation_percent="10"
          inkstitch:random_width_decrease_percent="0" /><g
          id="g74"
-         transform="matrix(3.77953 0 0 3.77953 0 226.772)"
+         transform="matrix(3.77953,0,0,3.77953,0,226.772)"
          style="stroke:#e3e5fb"><path
            d="m 31.751,43.1245 1.1951,3.8001"
            style="fill:none;stroke:#e3e5fb;stroke-width:0.25;stroke-dasharray:3, 1"
@@ -2176,7 +2176,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
            inkstitch:satin_column="True"
            sodipodi:nodetypes="ccccccccccccc"
            inkscape:label="Auto-remplissage satin 20"
-           transform="matrix(0.264583 0 0 0.264583 0 -60)"
+           transform="matrix(0.264583,0,0,0.264583,0,-60)"
            inkstitch:random_width_increase_percent="0"
            inkstitch:pull_compensation_percent="10"
            inkstitch:random_width_decrease_percent="0" /><ellipse
@@ -2216,7 +2216,7 @@ Dans l’état actuel, il mesure environ 160X200mm, il peut certainement être L
      id="__inkstitch_density_plan__"
      inkscape:label="Densité"
      inkscape:groupmode="layer"
-     transform="translate(151.64845,-1.982329)"><use
+     transform="translate(144.53021,5.092312)"><use
        id="use7940"
        inkscape:label="Commande Ink/Stitch: Ignorer le calque (ne broder aucun objet de cette couche)"
        xlink:href="#inkstitch_ignore_layer"
