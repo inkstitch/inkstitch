@@ -68,6 +68,15 @@ Il est important de connaître les directions de chemin en travaillant avec Ink/
 Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barre de contrôle de l'outil noeud` comme dans l'image ci-dessous
 [![Path outlines & directions](/assets/images/docs/fr/contour.png)
 
+#### Outils, style des outils de dessin
+
+Il est commode pour définir les styles des outils crayon et plume de 
+- afficher la barre de controle des outils (menu afficher afficher/cacher)
+- sélectionner par exemple l'outil plume
+- sélectionner un objet créé avec cet outil
+- double cliquer sur le style de l'outil affiché à droite de la barre de controle des outils pour ouvrir les préferences
+- cliquer sur capturer le style depuis la selection
+
 ### Interface
 #### Correction du facteur de zoom
 
@@ -83,10 +92,13 @@ Pour une utilisation plus simple des grilles du point de croix, nous vous recomm
 
 ### Comportement
 #### Seuil de simplification
-La valeur par défaut du seuil de simplification dans l'onglet Comportement est un peu aggressive. La réduire à 0,001 vous permettra de simplifier vos chemins avec un effet moindre sur leur forme
+La valeur par défaut du seuil de simplification dans l'onglet Comportement est un peu agressive. La réduire à 0,001 vous permettra de simplifier vos chemins avec un effet moindre sur leur forme.
 
 #### Clones
 Pour une bonne utilisation des commandes ink/stitch il est necessaire de cocher la case "Relier les clones dupliqués"
+
+### Entrée/Sortie
+Dans Enregistrement automatique, activer l'enregistrement automatique. 
 
 ## Travailler avec des modèles
 
