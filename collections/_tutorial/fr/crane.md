@@ -26,7 +26,7 @@ Deux fichiers différents, l'un dense qui convient bien à des tissus sans élas
 
 [Télécharger la version dense](/assets/images/tutorials/samples/grue_dense.svg){: download="grue_dense.svg.svg" }
 
-L'autre pour une broderie plus aérée , elle convient à des tissus plus souples (jersey, molleton)
+L'autre pour une broderie plus aérée , elle convient à des tissus plus souples (jersey, molleton).
 La courbure différente des plumes est obtenue à l'aide de l'effet de chemin déformation par grille appliqué a chacun des groupes de plumes.
 
 ![less dense version](/assets/images/tutorials/crane/lessdensecrane.jpg)
