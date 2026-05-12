@@ -4,13 +4,13 @@ permalink: /docs/stitches/circular-fill/
 last_modified_at: 2024-06-07
 toc: true
 ---
-## What it is
+## Description
 
 Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
 
 ![Circular fill stitch detail](/assets/images/docs/circular-fill-detail.png)
 
-## How to Create
+## Creation
 
 * Create a **closed path with a fill color**. The shape may have holes.
 * Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Circular Fill` as the fill method.
