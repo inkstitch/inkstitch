@@ -24,12 +24,12 @@ Deux fichiers différents, l'un dense qui convient bien à des tissus sans élas
 
 ![SVG](/assets/images/tutorials/samples/grue_dense.svg)
 
-[Télécharger la version monochrome](/assets/images/tutorials/samples/grue_dense.svg){: download="grue_dense.svg.svg" }
+[Télécharger la version dense](/assets/images/tutorials/samples/grue_dense.svg){: download="grue_dense.svg.svg" }
 
 L'autre pour une broderie plus aérée , elle convient à des tissus plus souples (jersey, molleton)
 La courbure différente des plumes est obtenue à l'aide de l'effet de chemin déformation par grille appliqué a chacun des groupes de plumes.
 
-![less dense version](/assets/images/tutorials/tutorial-preview-images/lessdensecrane.jpg)
+![less dense version](/assets/images/tutorials/crane/lessdensecrane.jpg)
 
 
 
@@ -37,7 +37,7 @@ La courbure différente des plumes est obtenue à l'aide de l'effet de chemin d�
 
 ![SVG](/assets/images/tutorials/samples/gruesouple.svg)
 
-[Télécharger la version à trois couleurs](/assets/images/tutorials/samples/gruesouple.svg){: download="gruesouple.svg" }
+[Télécharger la version plus légère](/assets/images/tutorials/samples/gruesouple.svg){: download="gruesouple.svg" }
 
 
 L'organisation de la broderie est différente dans les deux cas, afin d'assurer un nombre minimal de changements de couleurs et de sauts de fil.
