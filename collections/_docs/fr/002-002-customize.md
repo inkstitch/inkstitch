@@ -73,7 +73,7 @@ Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barr
 Il est commode pour définir les styles des outils crayon et plume de 
 - afficher la barre de controle des outils (menu afficher afficher/cacher)
 - sélectionner par exemple l'outil plume
-- sélectionner un objet créé avec cet outil
+- sélectionner un objet créé avec cet outil ayant le style que vous voulez pour l'outil
 - double cliquer sur le style de l'outil affiché à droite de la barre de controle des outils pour ouvrir les préferences
 - cliquer sur capturer le style depuis la selection
 
