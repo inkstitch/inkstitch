@@ -30,7 +30,7 @@ Read [how to attach commands to objects](/docs/commands/).
 
 Set start and end points for autofill objects with [Visual commands](/docs/commands/).
 
-## Params
+## Parameters
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
