@@ -1,7 +1,7 @@
 ---
 title: "Personnaliser Ink/Stitch"
 permalink: /fr/docs/customize/
-last_modified_at: 2026-01-06
+last_modified_at: 2026-05-12
 toc: true
 ---
 ## Raccourcis Clavier
@@ -78,6 +78,7 @@ Il est commode pour définir les styles des outils crayon et plume de
 - cliquer sur capturer le style depuis la selection
 
 ### Interface
+Langue principale : choisir votre langue et non pas valeur par défaut du système. A defaut les menus d'ink/stitch ne seront pas correctement traduits.
 #### Correction du facteur de zoom
 
 Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du dessin. Inkscape a un réglage pour adapter le niveau de zoom à votre écran:
