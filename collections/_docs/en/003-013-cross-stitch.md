@@ -13,14 +13,14 @@ feature_row:
 
 {% include upcoming_release.html %}
 
-## What is it? 
+## Description
 
 Cross stitch mimics traditional hand embroidery techniques.
 Cross-stitch is characterized by small, even crosses, which give the embroidered image a flat, blockish look.
 
 ![Cross stitched froq in double cross style](/assets/images/upcoming/3.3.0/cross_stitch.jpg)
 
-# How to Create it
+# Creation
 
 * Draw a closed shape with a fill color
 * Open the params dialog
