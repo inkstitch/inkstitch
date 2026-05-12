@@ -49,8 +49,27 @@ Si vous voulez définir vos propres raccourcis, entrez simplement la combinaison
 Utiliser la fonction de recherche pour trouver les extensions plus rapidement. [Plus d'informations](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
+## Grilles
 
-## Correction du facteur de zoom
+Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer  la `Grille`. N'oubliez pas d'activer le magnetisme (en haut à droite) et  vérifiez que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
+
+![Grids](/assets/images/docs/fr/grille.png)
+
+## Préférences inkscape
+Nous vous recommandons certains choix pour les préférences d'inkscape
+### Outils
+#### Boite englobante
+Nous vous conseillons de travailler avec des boites englobantes géométriques (dans Outils) afin que les dimensions des objets ne tiennent pas compte de l'épaisseur des contours.
+
+#### Noeuds: Activation de la direction des chemins
+
+Il est important de connaître les directions de chemin en travaillant avec Ink/Stitch. Par conséquent, nous vous recommandons d'activer les cases à cocher **Afficher la direction du chemin sur les contours** et **Afficher le contour temporaire pour les chemins sélectionnés** dans `Édition > Préférences > Outils > Noeuds`.
+
+Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barre de contrôle de l'outil noeud` comme dans l'image ci-dessous
+[![Path outlines & directions](/assets/images/docs/fr/contour.png)
+
+### Interface
+#### Correction du facteur de zoom
 
 Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du dessin. Inkscape a un réglage pour adapter le niveau de zoom à votre écran:
 
@@ -59,18 +78,15 @@ Pour broder il est essentiel d'avoir une bonne idée de la véritable taille du 
  
 ![Correction de zoom](/assets/images/docs/fr/customize-zoom-correction.png)
 
-## Grilles
+#### Position de l'origine
+Pour une utilisation plus simple des grilles du point de croix, nous vous recommandons de cocher "Origine en haut et à gauche, l'axe y pointant vers le bas"
 
-Pour aligner correctement vos formes vectorielles, vous pouvez utiliser la fonctionnalité de grille d’Inkscape. Aller à  `Affichage` et activer  la `Grille`. N'oubliez pas d'activer le magnetisme (en haut à droite) et  vérifiez que `Aimanter aux grilles` est activé. Il est également possible de régler l'espacement et l'origine de vos grilles dans `Fichier> Propriétés du document> Grilles`.
+### Comportement
+#### Seuil de simplification
+La valeur par défaut du seuil de simplification dans l'onglet Comportement est un peu aggressive. La réduire à 0,001 vous permettra de simplifier vos chemins avec un effet moindre sur leur forme
 
-![Grids](/assets/images/docs/fr/grille.png)
-
-## Activation de la direction des chemins
-
-Il est important de connaître les directions de chemin en travaillant avec Ink/Stitch. Par conséquent, nous vous recommandons d'activer les cases à cocher **Afficher la direction du chemin sur les contours** et **Afficher le contour temporaire pour les chemins sélectionnés** dans `Édition > Préférences > Outils > Noeuds`.
-
-Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barre de contrôle de l'outil noeud` comme dans l'image ci-dessous
-[![Path outlines & directions](/assets/images/docs/fr/contour.png)
+#### Clones
+Pour une bonne utilisation des commandes ink/stitch il est necessaire de cocher la case "Relier les clones dupliqués"
 
 ## Travailler avec des modèles
 
