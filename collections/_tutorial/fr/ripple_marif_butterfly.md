@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/ripple_marif_butterfly/
-title: "papillon en broderie ondulée"
+title: "Papillon en broderie ondulée"
 language: fr
 last_modified_at: 2026-05-13
 excerpt: "fichier exemple de papillon en broderie ondulée"
