@@ -1,5 +1,5 @@
 ---
-permalink: /en/tutorials/ripple_treble_clef/
+permalink: /tutorials/ripple_treble_clef/
 title: "Ripple Stitches Treble Clef"
 language: en
 last_modified_at: 2026-05-13
