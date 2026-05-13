@@ -26,8 +26,8 @@ Le plus souvent deux remplissages à basse densité sont superposés.
 
 ![Pavot brodée](/assets/images/tutorials/tutorial-preview-images/sorm_poppy.jpg)
 
-![SVG](/assets/images/tutorials/samples/pavot.svg)
+![SVG](/assets/images/tutorials/samples/Pavot.svg)
 
-[Télécharger](/assets/images/tutorials/samples/pavot.svg){: download="pavot.svg" }
+[Télécharger](/assets/images/tutorials/samples/Pavot.svg){: download="Pavot.svg" }
 
 
