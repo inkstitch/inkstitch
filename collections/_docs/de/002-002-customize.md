@@ -52,11 +52,17 @@ Wenn du deine eigenen Tastenkürzel verwenden willst, füge sie in den Tastenkü
 Benutze die Suchfunktion um die Erweiterungen schneller zu finden. [Mehr informationen](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
-## Inkscape preferences
-Using ink/stitch will be easier if you set some inkscape preferences as stated below
+## Inkscape Einstellungen
 
-#### Bounding box
-We recommend that you work with geometric bounding boxes so that the dimensions of objects do not take into account the thickness of the outlines.
+Die Benutzung von Ink/Stitch kann durch das Vornehmen der unten aufgeführten Inkscape-Einstellungen erleichtert werden.
+
+### Werkzeuge
+
+#### Objektrahmen
+
+Wir empfehlen die Verwendung des geometrischen Objektrahmens, da so die Dimensionen nicht durch die Breite der Konturen beeinflusst werden.
+
+`Bearbeiten > Einstellungen > Werkzeuge > Zu verwendender Objektrahmen > Geometrischer Objektrahmen`
 
 ####  Pfadkonturen & Pfadrichtungen
 
@@ -66,40 +72,54 @@ Damit die Pfadrichtungen auch wirklich angezeigt werden, aktiviere außerdem die
 
 [![Path outlines & directions](/assets/images/docs/de/customize-path-outlines.png)](/assets/images/docs/de/customize-path-outlines.png)
 
-#### Tools, Drawing Tool Styles
+#### Stil des Zeichen- und Malwerkzeugs
 
-It is convenient to define the styles of the pencil and pen tools by:
-- displaying the tool control bar (menu View > Show/Hide)
-- selecting, for example, the pen tool
-- selecting an object created with this tool with the correct style
-- double-clicking on the tool style displayed to the right of the tool control bar to open the preferences
-- clicking on "Capture Style from Selection"
+Um einen bestimmten Stil für ein Werkzeug festzulegen, gehe wie folgt vor:
 
+- die Werkzeugleiste anzeigen (`Anzeige > Anzeigen/Ausblenden > Werkzeugleiste`)
+- Werkzeug auswählen (z.B. Zeichenwerkzeug)
+- Wähle ein Objekt mit den richtigen Stileinstellungen auf der Arbeitsfläche aus
+- Doppelklick auf das Werkzeug (z.B. Zeichenwerkzeug), um die Einstellungen zu öffnen
+- Klicke auf `Aus Auswahl übernehmen`
 
-### Interface
-Language: Choose your language, not the system default. Otherwise, the Ink/Stitch menus will not be translated correctly.
+### Benutzeroberfläche
 
+#### Sprache
 
-#### Origin and y axis
-For easier use of cross stitch grids, we recommend checking "Origin at upper left,  with y-axis pointing down"
+Nutze nicht die Standardeinstellungen, sondern lege deine Sprache in den Inkscape Einstellungen fest. Ansonsten kann es passieren, dass die Ink/Stitch-Menüs nicht richtig übersetzt werden.
 
-### Behavior
-#### Simplification threshold
-The default simplification threshold value in the Behavior tab is a bit aggressive. Reducing it to 0.001 will allow you to simplify your paths with less impact on their shape.
+`Bearbeiten > Einstellungen > Benutzeroberfläche > Sprache`
 
-#### Clones
-For proper behavior of the ink/stitch commands, it is necessary to check the "Relink duplicated clones" box.
+#### Ursprung und Y-Achse
 
-### Input/Output
-In Autosave , unable autosave. 
+Für die Nutzung des Kreuzstich-Gitters empfehlen wir, die Option `Ursprung in der oberen linken Ecke, wobei die y-Achse nach unten zeigt` zu aktivieren.
+
+`Bearbeiten > Einstellungen > Benutzeroberfläche > Ursprung in der oberen linken Ecke, wobei die y-Achse nach unten zeigt`
+
+### Verhalten
+
+#### Schwellwert für Vereinfachungen
+
+Die Standardeinstellung für den Schwellwert für Vereinfachungen ist ein bisschen zu aggresiv.
+Eine Wert von `0.001` erlaubt es, Formveränderungen bei Anwendung der Funktion zu verringern.
+
+`Bearbeiten > Einstellungen > Verhalten > Schwellwert für Vereinfachungen`
+
+#### Klone
+
+Damit Ink/Stitch-Befehle gut funktionieren, sollte die Option `Duplizierte Klone neu verbinden` aktiviert sein.
+
+`Bearbeiten > Einstellungen > Verhalten > Duplizierte Klone neu verbinden`
+
+### Automatische Sicherung
+
+Um bei Absturz des Programms Verluste harter Arbeit zu vermeiden, aktiviere die automatische Sicherung unter `Bearbeiten > Einstellungen > Eingabe/Ausgabe > Automatische Sicherung`.
 
 ## Gitter
 
 Um Vektoren richtig auszurichten, kann die Rasterfunktion von Inkscape verwendet werden. Gehe zu `Ansicht` und aktiviere das `Seitengitter`. Stelle in der `Einrasten-Kontrollleiste` sicher, dass `Am Gitter einrasten` aktiviert ist. Es ist auch möglich, den Abstand und den Ursprung der Gitter unter `Datei > Dokumenteinstellungen > Gitter` anzupassen.
 
 ![Gitter](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
-
-
 
 ## Vorlagen
 

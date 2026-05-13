@@ -10,7 +10,7 @@ toc: true
 
 Contour fill covers areas with stitches following the contour of an object.
 
-## Création
+## Creation
 
 Create a **closed path with a fill color**.
 

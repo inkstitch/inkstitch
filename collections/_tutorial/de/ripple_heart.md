@@ -1,27 +1,25 @@
 ---
 permalink: /de/tutorials/ripple_heart/
-title: "Ripple Stitch Heart"
+title: "Ripplestich Herz"
 language: de
-last_modified_at: 2026-05-11
+last_modified_at: 2026-05-13
 excerpt: "ripple stitch  heart"
 image: "/assets/images/tutorials/tutorial-preview-images/michele_heart.jpg"
-tutorial-type:
-  - Sample File
-stitch-type:
-  - "Ripple Stitch"
+tutorial-typ:
+  - Beispieldatei
+stitch-typ:
+  - "Ripple Stich"
 techniques:
 field-of-use:
 user-level:
 
 ---
 
-## Ripple stitch heart
+## Ripplestich Herz
 
-The inside of the heart is composed  of ripple stitches.
+Dieses Herz wurde mit eine Reihe an Ripplestichen erzeugt.
 
-Each ripple stitch is made up of two combined paths, similar to the rails of a satin column.
-
-
+Dabei ist jeder Ripplestich hier eine Kombination aus zwei Pfaden, die wie Satinsäulen aufgebaut sind.
 
 ![stitchout](/assets/images/tutorials/tutorial-preview-images/michele_heart.jpg)
 
