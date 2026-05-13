@@ -20,7 +20,7 @@ user-level:
 
 Ce papillon presque monochrome, semble paré de plusieurs couleurs grâce à la reflexion de la lumière qui diffère selon les angles de la broderie.
 
-Les zones sont traitées en broderie ondulée ou en remplissage circulaire avec des cibles pour déplacer le centre du remplissage vers le bord des ailes.
+Les zones sont traitées en broderie ondulée, remplissage automatique  ou en remplissage circulaire avec des cibles pour déplacer le centre du remplissage vers le bord des ailes.
 
 Le contour est obtenu par un effet de chemin "motif suivant un chemin".
 
