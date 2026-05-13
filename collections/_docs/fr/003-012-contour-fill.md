@@ -18,7 +18,7 @@ Créez une **forme fermée avec une couleur de remplissage**
 
 
 ## Définir le point de départ et d'arrivée
-Définir le point de départ et d'arrivée pour les remplissages automatiques avec les [commandes visuelles](/fr/docs/commands/).
+Seul le point de départ peut être défini avec les [commandes visuelles](/fr/docs/commands/). La commande point d'arrivée est sans effet sur les remplissages selon contour.
 
 ## Paramètres
 
