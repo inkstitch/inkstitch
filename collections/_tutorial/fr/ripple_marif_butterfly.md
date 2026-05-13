@@ -3,7 +3,7 @@ permalink: /fr/tutorials/ripple_marif_butterfly/
 title: "Papillon en broderie ondulée et remplissages circulaire"
 language: fr
 last_modified_at: 2026-05-13
-excerpt: "fichier exemple de papillon en broderie ondulée et remplissages circulaire"
+excerpt: "fichier exemple de papillon en broderie ondulée et remplissages circulaires"
 image: "/assets/images/tutorials/tutorial-preview-images/papillon_marif.jpg"
 tutorial-type:
   - Sample File
