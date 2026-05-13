@@ -1,5 +1,5 @@
 ---
-permalink: /fr/tutorials/treble_clef/
+permalink: /fr/tutorials/ripple_treble_clef/
 title: "Clé de sol en broderie ondulée"
 language: fr
 last_modified_at: 2026-05-12
