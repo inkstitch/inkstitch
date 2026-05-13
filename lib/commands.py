@@ -440,6 +440,8 @@ def get_command_pos(element, index, total, distance=10):
         shape = element.as_multi_line_string()
     else:
         shape = element.shape
+    if shape.is_empty:
+        return None
     polygon = ensure_multi_polygon(shape.buffer(distance)).geoms[-1]
     outline = polygon.exterior
 
@@ -465,8 +467,9 @@ def add_commands(element, commands, pos=None):
             else:
                 position = get_command_pos(element, i, len(commands))
 
-        symbol = add_symbol(svg, group, command, position)
-        add_connector(svg, symbol, command, element)
+        if position is not None:
+            symbol = add_symbol(svg, group, command, position)
+            add_connector(svg, symbol, command, element)
 
 
 def add_layer_commands(layer, commands):
