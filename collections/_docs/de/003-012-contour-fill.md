@@ -16,7 +16,7 @@ Erstelle einen geschlossenen Pfad mit einer Füllfarbe.
 
 ### Anfangs- und Endpunkt festlegen
 
-Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines Füllobjekts](/de/docs/commands) zu kennzeichnen.
+Für die Konturfüllung kann nur der Startpunkt über [visuelle Befehle](/docs/commands/) festgelegt werden. Der Befehlt für Endpunkte hat bei dieser Stichart keinen Effekt.
 
 ### Parameter
 
