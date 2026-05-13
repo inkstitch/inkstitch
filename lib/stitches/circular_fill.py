@@ -67,7 +67,7 @@ def circular_fill(shape,
         path = list(intersection.coords)
         path = _apply_start_end_commands(shape, path, starting_point, ending_point)
         stitches = running_stitch([Stitch(*point) for point in path],
-                                  running_stitch_length,
+                                  [running_stitch_length],
                                   running_stitch_tolerance,
                                   enable_random_stitch_length,
                                   running_stitch_length_jitter,
