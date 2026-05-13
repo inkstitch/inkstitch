@@ -15,13 +15,10 @@ user-level:
 
 ---
 
-## Coeur en broderie ondulée
-L'intérieur du coeur est traité en broderie ondulée. 
-
-Chaque broderie ondulée est constituée de deux chemins combinés semblables aux rails d'une colonne satin.
+## Clé de sol en broderie ondulée
 
 
-![coeur brodé](/assets/images/tutorials/tutorial-preview-images/cle_de_sol.jpg)
+![coeulé de sol brodée](/assets/images/tutorials/tutorial-preview-images/cle_de_sol.jpg)
 
 ![SVG](/assets/images/tutorials/samples/cledesol_michele.svg)
 
