@@ -16,7 +16,7 @@ Create a **closed path with a fill color**.
 
 ## Set Start and End Point
 
-Set start and end points for autofill objects with [Visual commands](/docs/commands/).
+Only start point can be set with [Visual commands](/docs/commands/). End point command is not effective with contour fill.
 
 ## Parameters
 
