@@ -53,7 +53,33 @@ If you want to define your own custom shortcut keys simply enter your desired ke
 Use the search function to find the extensions quicker. [More information](http://wiki.inkscape.org/wiki/index.php/Customizing_Inkscape)
 {: .notice--info }
 
-## Zoom correction factor
+## Inkscape Preferences
+We recommend the following Inkscape preferences:
+### Tools
+#### Bounding Box
+We recommend working with geometric bounding boxes ) so that object dimensions do not take into account the thickness of the outlines.
+
+#### Enabling Path Outlines & Direction
+
+Knowing path directions is important working with Ink/Stitch. It is recommended to enable the checkboxes **Show path direction on outlines** and **Show temporary outline for selected paths** in `Edit > Preferences > Tools > Node`.
+
+Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as you can see in the image below.
+
+[![Path outlines & directions](/assets/images/docs/en/customize-path-outlines.png)](/assets/images/docs/en/customize-path-outlines.png)
+
+#### Tools, Drawing Tool Styles
+
+It is convenient to define the styles of the pencil and pen tools by:
+- showing the tool control bar (Show/Hide menu)
+- selecting, for example, the pen tool
+- selecting an object created with this tool that has the style you want for the tool
+- double-clicking on the tool style displayed to the right of the tool control bar to open the preferences
+- clicking on Capture Style from Selection
+
+### Interface
+Language: choose your language and not the system default. Otherwise, the ink/stitch menus will not be translated correctly.
+
+#### Zoom correction factor
 
 For embroidery it is essential to get a sense of the actual size of the design. Inkscape has a setting to adapt zoom levels to your display size.
 
@@ -62,19 +88,28 @@ For embroidery it is essential to get a sense of the actual size of the design. 
  
 ![Zoom correction](/assets/images/docs/en/customize-zoom-correction.png)
 
+
+#### Origin Position
+For easier use of cross-stitch grids, we recommend checking "Origin at upper left, y-axis pointing down."
+
+### Behavior
+#### Simplification Threshold
+The default simplification threshold value in the Behavior tab is a bit aggressive. Reducing it to 0.001 will allow you to simplify your paths with less of an effect on their shape.
+
+#### Clones
+For proper use of the ink/stitch commands, it is necessary to check the "Link duplicated clones" box.
+
+### Input/Output
+In Auto-save, enable auto-save.
+
+
 ## Grids
 
 To align your vector-shapes properly, you can use the grid functionality of Inkscape. Go to `View` and enable `Page Grid`. In `Snap Controls Bar` make sure `Snap to grids` is enabled. It is also possible to adjust spacing and origin of your grids in `File >  Document Properties > Grids`.
 
 ![Grids](https://user-images.githubusercontent.com/11083514/40359052-414d3554-5db9-11e8-8b49-3be75c5e9732.png)
 
-## Enabling Path Outlines & Direction
 
-Knowing path directions is important working with Ink/Stitch. It is recommended to enable the checkboxes **Show path direction on outlines** and **Show temporary outline for selected paths** in `Edit > Preferences > Tools > Node`.
-
-Make sure that also **Show path outline** is enabled in `Tool Controls Bar` as you can see in the image below.
-
-[![Path outlines & directions](/assets/images/docs/en/customize-path-outlines.png)](/assets/images/docs/en/customize-path-outlines.png)
 
 ## Working with Templates
 
