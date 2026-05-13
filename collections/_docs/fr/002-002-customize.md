@@ -25,13 +25,13 @@ Raccourcis&nbsp;Clavier | Effet | Remplace
 <key>ctrl</key>+<key>shift</key>+<key>I</key> | Export PDF 
 <key>ctrl</key>+<key>shift</key>+<key>Q</key> | Lettrage (Q pour QWERTY) | Objet > Selecteurs et CSS
 <span style="white-space: nowrap;"><key>ctrl</key>+<key>shift</key>+<key>Del</key></span> | Dépistage de problèmes avec les objets
-<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attacher des commandes aux objets selectionnés
+<key>ctrl</key>+<key>shift</key>+<key>+</key> | Attacher des commandes aux objets sélectionnés
 <key>ctrl</key>+<key>shift</key>+<key>U</key> | Trait en satin  (U ressemble à deux rails) | Objet > Grouper (utiliser Ctrl+G à la place)
 <key>ctrl</key>+<key>shift</key>+<key>J</key> | Intervertir les rails satin  (J ressemble à une flèche)
 <key>ctrl</key>+<key>shift</key>+<key>B</key> | Scinder colonne satin  (B est coupé en deux parties) | Chemin > Union (utiliser Ctrl++ à la place )
 <key>ctrl</key>+<key>shift</key>+<key>*</key> | Agencement automatique de colonnes satin (ordonne tout)
 
-\* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Calques et Objets (`Objet > Calques et Objets`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` selectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous selectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape ne renverse que le sous-chemin qui contient ce noeud. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
+\* Monter et Descendre dans la pile d'objets permet de contrôler précisement l'ordre dans lequel les objets sont brodés. Très utile en combinaison avec le panneau Calques et Objets (`Objet > Calques et Objets`).  L'ordre de la pile défini l'ordre dans lequel les éléments sont brodés (le bas de la pile en premier, pour finir par le haut de la pile).<br><br>** Pour les colonnes satin et les points droits, ceci change la direction des points. A utiliser avec `Afficher le sens des chemins sur le contour` sélectionné dans `Edition > Préférences > Outils > Noeuds`. Si vous sélectionnez un seul sommet en utilisant l'éditeur de noeuds et que vous effectuez un `Ctrl+R`, Inkscape ne renverse que le sous-chemin qui contient ce noeud. Vous pouvez de cette manière vous assurer que les deux rails d'une colonne satin sont orientés dans le même sens.
 {: .notice--info }
 {: style="font-size: 70%" }
 
@@ -66,16 +66,16 @@ Nous vous conseillons de travailler avec des boites englobantes géométriques (
 Il est important de connaître les directions de chemin en travaillant avec Ink/Stitch. Par conséquent, nous vous recommandons d'activer les cases à cocher **Afficher la direction du chemin sur les contours** et **Afficher le contour temporaire pour les chemins sélectionnés** dans `Édition > Préférences > Outils > Noeuds`.
 
 Vérifier aussi que **Afficher le contour du chemin** est activé dans la  `Barre de contrôle de l'outil noeud` comme dans l'image ci-dessous
-[![Path outlines & directions](/assets/images/docs/fr/contour.png)
+![Path outlines & directions](/assets/images/docs/fr/contour.png)
 
 #### Outils, style des outils de dessin
 
 Il est commode pour définir les styles des outils crayon et plume de 
-- afficher la barre de controle des outils (menu afficher afficher/cacher)
+- afficher la barre de contrôle des outils (menu afficher afficher/cacher)
 - sélectionner par exemple l'outil plume
 - sélectionner un objet créé avec cet outil ayant le style que vous voulez pour l'outil
-- double cliquer sur le style de l'outil affiché à droite de la barre de controle des outils pour ouvrir les préferences
-- cliquer sur capturer le style depuis la selection
+- double cliquer sur le style de l'outil affiché à droite de la barre de contrôle des outils pour ouvrir les préférences
+- cliquer sur capturer le style depuis la sélection
 
 ### Interface
 Langue principale : choisir votre langue et non pas valeur par défaut du système. A defaut les menus d'ink/stitch ne seront pas correctement traduits.
