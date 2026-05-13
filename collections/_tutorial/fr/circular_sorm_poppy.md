@@ -1,9 +1,9 @@
 ---
 permalink: /fr/tutorials/circular_sorm_poppy/
-title: "Pavot en remplissages circulairesn eb méandre et selon contour"
+title: "Pavot en remplissages circulaires, en méandres et selon contours"
 language: fr
 last_modified_at: 2026-05-13
-excerpt: "fichier exemple de pavot en remplissage circulaire, en méandre et selon contour"
+excerpt: "fichier exemple de pavot en remplissages circulaires, en méandres et selon contours"
 image: "/assets/images/tutorials/tutorial-preview-images/sorm_poppy.jpg"
 tutorial-type:
   - Sample File
@@ -17,7 +17,7 @@ user-level:
 
 ---
 
-## Pavots en remplissage circulaire, en méandre et selon contour
+## Pavots en remplissages circulaires, en méandres et selon contours
 
 Ce pavot est brodé dans un mélange de remplissages circulaires, en méandres et selon contour. 
 
