@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-05-10 03:33+0000\n"
-"PO-Revision-Date: 2026-05-12 03:31\n"
+"PO-Revision-Date: 2026-05-13 03:39\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -2730,7 +2730,10 @@ msgstr "Exposant de l'espacement entre les lignes"
 
 #: lib/elements/stroke.py:430
 msgid "Increase density towards one side."
-msgstr "Accroît la densité d'un côté."
+msgstr "A une valeur de 1, les espaces entre les ondulations sont réguliers\n"
+"Entre 0 et 1, l'espace entre les ondulations diminue quand on s'éloigne de l'origine,\n"
+"Entre 1 et l'infini, il augmente.\n\n"
+"Ne fonctionne pas avec les ondulations guidées par satin."
 
 #: lib/elements/stroke.py:444
 msgid "Flip exponent"

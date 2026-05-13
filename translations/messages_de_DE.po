@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-05-10 03:33+0000\n"
-"PO-Revision-Date: 2026-05-10 03:33\n"
+"PO-Revision-Date: 2026-05-13 03:39\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -2432,11 +2432,11 @@ msgstr "Beide Konturlinien umkehren"
 
 #: lib/elements/satin_column.py:316
 msgid "Push compensation"
-msgstr ""
+msgstr "Druckausgleich"
 
 #: lib/elements/satin_column.py:317
 msgid "Shrinks the column at start and/or end."
-msgstr ""
+msgstr "Verkürzt die Satinsäule am Anfang und/oder Ende."
 
 #: lib/elements/satin_column.py:328 lib/elements/stroke.py:482
 msgid "Reverse rails"
@@ -2595,7 +2595,7 @@ msgstr "Dieses Element wird als Geradstich ausgegeben, obwohl es als Satinsäule
 
 #: lib/elements/stroke.py:41
 msgid "Whether or not a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
-msgstr ""
+msgstr "Ob eine Linie als Satinsäule ausgegeben werden kann, hängt von der Konturbreite und den Einstellungen für die minimale Linienbreite für Satinsäulen. Die Konturbreite muss breiter sein als der Wert in den Ink/Stitch-Einstellungen, andernfalls wird die Linie als Geradstich behandelt. Um harte Stiche zu vermeiden, wird eine Mindestbreite von 1 mm für Satinsäulen empfohlen."
 
 #: lib/elements/stroke.py:51 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
@@ -4154,7 +4154,7 @@ msgstr "https://inkstitch.org/docs/font-tools/#json-bearbeiten"
 
 #: lib/gui/edit_json/main_panel.py:435
 msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
-msgstr ""
+msgstr "Die JSON-Datei für diese Schrift konnte nicht gefunden werden. Bitte erstelle diese über Schriftverwaltung > JSON-Datei erstellen"
 
 #: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
@@ -4162,7 +4162,7 @@ msgstr "Veränderungen werden nicht gespeichert: die JSON-Datei ist nicht beschr
 
 #: lib/gui/edit_json/main_panel.py:451
 msgid "Could not find a json file for this font. Please create one with Font Management > Generate JSON"
-msgstr ""
+msgstr "Die JSON-Datei für diese Schrift konnte nicht gefunden werden. Bitte erstelle diese über Schriftverwaltung > JSON-Datei erstellen"
 
 #: lib/gui/edit_json/main_panel.py:458
 msgid "Could not write to json file: permission denied."
@@ -4178,7 +4178,7 @@ msgstr "Text hinten"
 
 #: lib/gui/edit_json/settings_panel.py:33
 msgid "Second line"
-msgstr ""
+msgstr "Zweite Reihe"
 
 #: lib/gui/edit_json/settings_panel.py:56
 msgid "Font Info"
@@ -5304,7 +5304,7 @@ msgstr "Die JSON-Datei kann über folgende Ink/Stitch Funktion erstellt werden:\
 #: lib/lettering/font.py:130
 #, python-brace-format
 msgid "Failed to read the JSON file ({exception}):"
-msgstr ""
+msgstr "Konnte die JSON-Datei nicht lesen ({exception}):"
 
 #: lib/lettering/font.py:138
 msgid "Corrupt JSON file"
@@ -6394,7 +6394,7 @@ msgstr "Text entlang Pfad"
 
 #: inx/inkstitch_batch_lettering.inx:59
 msgid "Horizontal text position"
-msgstr ""
+msgstr "Horizontale Textposition"
 
 #: inx/inkstitch_batch_lettering.inx:59 inx/inkstitch_batch_lettering.inx:66
 msgid "Uses this text position when using lettering along path"
@@ -6407,22 +6407,22 @@ msgstr "Ausdehnen"
 
 #: inx/inkstitch_batch_lettering.inx:66
 msgid "Vertical text position"
-msgstr ""
+msgstr "Vertikale Textposition"
 
 #: inx/inkstitch_batch_lettering.inx:67
 #: inx/inkstitch_lettering_along_path.inx:25
 msgid "Top"
-msgstr ""
+msgstr "Oben"
 
 #: inx/inkstitch_batch_lettering.inx:68
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "Baseline"
-msgstr ""
+msgstr "Grundlinie"
 
 #: inx/inkstitch_batch_lettering.inx:69
 #: inx/inkstitch_lettering_along_path.inx:27
 msgid "Bottom"
-msgstr ""
+msgstr "Unten"
 
 #: inx/inkstitch_batch_lettering.inx:74
 msgid "File formats"
@@ -7790,7 +7790,7 @@ msgstr "Befehle hinzufügen, die sich auf eine Ebene auswirken"
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering Tool"
-msgstr ""
+msgstr "Text-Werkzeug"
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
@@ -7810,7 +7810,7 @@ msgstr "Textposition"
 
 #: inx/inkstitch_lettering_along_path.inx:24
 msgid "Vertical alignment"
-msgstr ""
+msgstr "Vertikale Ausrichtung"
 
 #: inx/inkstitch_lettering_along_path.inx:31
 msgid "This extension bends an Ink/Stitch text to a path."
@@ -8223,11 +8223,11 @@ msgstr "Schriftordner"
 
 #: inx/inkstitch_letters_to_font.inx:55
 msgid "Margin left (mm)"
-msgstr ""
+msgstr "Abstand links (mm)"
 
 #: inx/inkstitch_letters_to_font.inx:55
 msgid "With \"Use glyph width\" enabled in the json, the margin to the left page border defines the distance between glyphs"
-msgstr ""
+msgstr "Ist die Option \"Nutze Glyphenbreite\" in der JSON-Datei aktiviert, definiert der linke Abstand zur Arbeitsfläche den Abstand zwischen den Glyphen."
 
 #: inx/inkstitch_letters_to_font.inx:56
 msgid "Import commands"
