@@ -57,10 +57,13 @@ Les étapes sont les suivantes :
 - Sélectionner la fonte doto dans le menu déroulant des fontes
 - Ecrire votre texte dans la fenêtre de lettrage
 - Eventuellement redimentionner, pour que la taille des "pixels" de la fonte soit raisonable.
+  
+![hello1](/assets/images/tutorials/cross_stitch_lettering/hello1.jpg)
 
+- Convertir le texte en chemin, ici il suffit d'utiliser Inkscape > Objets > Objet en chemin
+- Sélectionner les chemins créés, et Ink/Stich > Outils: Remplissage > Assistant Point de Croix
 
-
-#### Exemple utilisant doto
+![hello1](/assets/images/tutorials/cross_stitch_lettering/fr/assistant1.jpg)
 
 ### Utiliser n'importe quelle fonte
 
