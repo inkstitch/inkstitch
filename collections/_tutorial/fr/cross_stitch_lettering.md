@@ -118,7 +118,8 @@ Il est en fait possible d'utiliser à peu près n'importe quelle fonte. Cela peu
 
 #### Exemple d'une fonte en lettres attachées
 Utilisons la fonte Good Vibes, elle aussi disponible sur fonts.google.com
-![good vibes](/assets/images/tutorials/cross_stitch_lettering/fr/good_vibes.jpg)
+
+![good vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
 
 * En vert, ce que vous obtenez directement avec l'outil texte. Notez comme l'intersection du H et du e n'est pas colorée en noir.
 
@@ -134,9 +135,29 @@ Pixeliser n'est pas obligatoire, mais permet d'obtenir la troisième forme visib
 Avec une fonte en lettres attachées comme celle-ci, on obtient un résultat sans aucun saut de fil.
 
 #### Exemple d'une fonte en lettres détachées
+Utilisons cette fois la fonte audiowide, toujours disponible sur fonts.google.com
+C'est une fonte de largeur quasi constante, sans détails trop fins, qui va se prêter assez bien à l'exercice.
+
+![audiowide](/assets/images/tutorials/cross_stitch_lettering/audiowide.jpg)
+
+* En vert ce que donne directement l'outil texte d'Inkscape.
+
+Cette fois-ci il est important de pouvoir placer les lettres une par une sur la grille pour cela
+* sélectionner le texte et Inkscape > Texte> Texte en Glyphes
+Il est maintenant possible de déplacer chaque lettre, résultat en vert
+![positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
+
+* convertir chaque lettre en chemin
+* paramétrer  et pixéliser avec l'assistant point de croix
+
+Le résultat est en marron, il peut être modifié à la main, par exemple pour obtenir un o bien symmétrique (résultat en rouge).
+
+Cette fois chaque lettre se brode sans interruption, mais il y a un saut entre chaque lettre.
 
 
-On a vu que la grille (qu'elle soit affichée ou non) découpe le canevas en carrés
+
+
+
 
 
 ### Partir d'un alphabet tel que sur une grille de point de croix 
