@@ -42,13 +42,14 @@ Nous allons utiliser pour ce tutoriel la fonte doto disponible sur fonts.google.
 ![doto](/assets/images/tutorials/cross_stitch_lettering/doto.jpg)
 
 On suppose dans la suite, que cette fonte est installées sur votre ordinateur.
+
 Rappel : Si vous installez une nouvelle fonte dans inkscape, il est possible (selon votre système) qu'il vous faille redémarrer Inkscape pour la voire apparaitre dans le menu déroulant des fontes installées pour l'outil Texte d’Inkscape.
 
 Chaque "pixel" de la fonte va devenir un point de croix. Avec du fil standard, il est raisonable de produire des croix de hauteur comprise entre 1.8 mm et 4 mm. L'usage d'un fil plus fin permet de descendre en dessous de 1.8mm, l'usage d'un fil plus épais permet des croix encore plus grandes.
 #### Marche à suivre
 Les étapes sont les suivantes :
 
-- Vérifier que vos préférences Inkscape , onglet interface, la ligne origine en haut et a gauche, axe des y pointant vers le bas est bien cochée.
+- Vérifier que vos préférences Inkscape , onglet interface, la ligne "origine en haut et a gauche, axe des y pointant vers le bas" est bien cochée.
 
 - Décider de la taille des croix : dans cette exemple, nous allons chercher à obtenir des croix de 3mm de haut et de large. Cette dimension convient à toutes les sortes de point de croix disponibles dans Ink/Stitch
 
@@ -73,8 +74,8 @@ Dans l'onglet paramètre, les paramètres important ici sont :
 - la méthode de point de croix choisie sera automatiquement choisie pour le paramétrage qui peut être fait dans cette même opération à condition
 
 dans l'onglet Options de sortie
-- cocher la case paramètres.
-- cocher la case pixeliser. 
+- de cocher la case paramètres.
+- de cocher la case pixeliser. 
 
 L'aspect du canevas change et le paramétrage en point de croix est fait:
 ![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/pixelateandparams.jpg)
@@ -88,7 +89,7 @@ Rapellons que l'assistant point de croix a trois fonctions **indépendantes** qu
 
 - La création d'une grille sur le canevas. C'est un outil visuel qui montre comment Ink/Stitch découpe l'espace pour y calculer la couverture par un remplissage (couleur par couleur). L'affichage de la grille est totalement facultatif. Cette grille peut être affichée via l'assistant point de croix ou via les propriétés du document, sans que cela ne change quoi que ce soit.
 - Le paramétrage. Il peut être fait via l'assistant de point de croix, ou via l'extension Paramètres d'Ink/Stitch. L'assistant point de croix par défaut ajoute un petit élargissement (0.1) à chaque forme
-- La pixelisation. Modifie les formes : chaque fois que le taux de couverture est atteint sur un carré, la forme est agrandie pour occuper tout le carré. Si deux carrés se touchent, les formes qui les contiennent sont fusionnés. Dans l'exemple précédent, après pixelisation, chaque lettre devient une forme unique.
+- La pixelisation. Elle modifie les formes : chaque fois que le taux de couverture est atteint sur un carré, la forme est agrandie pour occuper tout le carré. Si deux carrés se touchent, les formes qui les contiennent sont fusionnés. Dans l'exemple précédent, après pixelisation, chaque lettre devient une forme unique. Attention, la pixélisation est faite pour un espacement de grille donné, si vous changez d'avis ensuite sur la taille des croix, elle ne refletera plus la forme exacte de la broderie!
 
 Que ce serait-il passer si l'on avait uniquement coché la case paramètre et pas la case pixeliser
 
@@ -105,7 +106,7 @@ On voit mieux l'ordre de traitement des carrés (qui reste identique!) si l'on c
 
 La pixelisation a donc deux rôles :
  
- - une meilleure visualisation du résultat : on voit quel espace occupera la broderie
+ - une meilleure visualisation du résultat : on voit quel espace occupera la broderie (à condition que la pixelisation ait été effectué avec la même taille de croix que le paramètrage)
  - une meilleure broderie : une fois que les carrés entiers sont occupés, ils se touchent et peuvent être fusionnés. Il y aura beaucoup moins de sauts dans le résultat final.
 
 Néanmoins, la pixelisation n'est aucunement obligatoire. 
