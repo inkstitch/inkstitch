@@ -8,15 +8,13 @@ image: "/assets/images/tutorials/tutorial-preview-images/densecrane.jpg"
 tutorial-typ:
   - Beispieldatei
 stichart:
-  - Satinstich
+  - "Satinstich"
 techniques:
 field-of-use:
 user-level:
-tool:
+werkzeug:
   - Stroke
 ---
-## Kranich mit verschiedenen Satinsäulen
-
 An dieser Beispieldatei kann man sehr schön den Einsatz verschiedener Satinsäulen-Typen beobachten. Neben klassischem Satinstich kommen auch E-Stich, Muster und verschiedene Dichte-Einstellungen zum Einsatz.
 
 Dabei wird die Datei in zwei verschiedenen Varianten realisiert.
