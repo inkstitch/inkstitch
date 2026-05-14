@@ -1,9 +1,9 @@
 ---
 permalink: /de/tutorials/ripple-monochrome/
-title: "Einfarbige Blume mit Konturfüllung und Ripple Stich"
+title: "Einfarbige Blume mit Konturfüllung und Ripplestich"
 language: de
 last_modified_at: 2022-07-09
-excerpt: "Beispieldatei Einfarbige Blume"
+excerpt: "Beispieldatei: Monochrome Blume mit Kurvenfüllung un Ripplestich"
 image: "/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg"
 tutorial-typ:
   - Beispieldatei
@@ -13,9 +13,6 @@ stichart:
 techniken:
 schwierigkeitsgrad: 
 ---
-
-## Einfarbige Blume
-
 ![Stickbeispiel](/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg)
 
 - Step 1 (Schritt 1)

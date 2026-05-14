@@ -1,7 +1,7 @@
 ---
 title: Stichpfad-Optimierung
 permalink: /de/tutorials/routing/
-last_modified_at: 2024-09-09
+last_modified_at: 2025-08-20
 language: de
 excerpt: "Die Optimierung des Stickpfades ist eines der wichtigesten Themen in der Stickerei. Lerne, wie Ink/Stitch dich bei dieser Aufgabe unterstützen kann."
 image: /assets/images/tutorials/routing/routing.png

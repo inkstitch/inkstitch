@@ -17,9 +17,8 @@ techniken:
   - Fransen
 schwierigkeitsgrad: 
 ---
-## Fransen Beispieldatei
-
 (von Evan West)
+
 ![Fringe Example](/assets/images/tutorials/samples/Fringe Example.svg)
 
 [Download](/assets/images/tutorials/samples/Fringe Example.svg){: download="Fringe-Example.svg" }

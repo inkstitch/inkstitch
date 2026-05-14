@@ -14,9 +14,6 @@ stichart:
 techniken:
 schwierigkeitsgrad:
 ---
-
-## Ripple Iris
-
 ![Gestickt](/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg)
 
 - Blütenblätter sind einfache Rippelstiche, die auf Pfade mit zwei Unterpfaden angewendet wurden.
@@ -25,9 +22,6 @@ schwierigkeitsgrad:
 - Der Stiel ist eine geteilte Satinsäule.
 - Der Schriftzug ist ein einfacher Rippel-Stich, der auf Pfade mit zwei Unterpfaden angewendet wurde.
 
-
 ![SVG](/assets/images/tutorials/samples/ripple-iris.svg)
-
-
 
 [Download](/assets/images/tutorials/samples/ripple-iris.svg){: download="ripple-iris.svg" }

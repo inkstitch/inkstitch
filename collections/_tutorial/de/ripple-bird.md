@@ -1,9 +1,9 @@
 ---
 permalink: /de/tutorials/ripple-bird/
-title: "Pfau mittels Ripple Stich"
+title: "Ripplestich-Pfau"
 language: de
 last_modified_at: 2022-07-08
-excerpt: "Beispieldatei für die Verwendung des Ripple Stich bei einem Pfau"
+excerpt: "Beispieldatei für die Verwendung des Ripplestichs bei einem Pfau"
 image: "/assets/images/tutorials/samples/paon.svg"
 tutorial-typ:
   - Beispieldatei
@@ -12,10 +12,8 @@ stichart:
   - Kurvenfüllung
 techniken:
 schwierigkeitsgrad: 
-  - mittel
+  - Mittel
 ---
-## Beispiel für Ripple Stich und Kurvenfüllung.
-
 Der Körper des Vogels ist mit Kurvenfüllung, die Federn in Ripple Stich gearbeitet.
 
 ![Stickbeispiel](/assets/images/tutorials/tutorial-preview-images/paons.jpg)

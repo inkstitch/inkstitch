@@ -1,24 +1,24 @@
 ---
 permalink: /de/tutorials/autoroute_unicorn/
-title: "Einhorn mittels automatisch geführtem Geradstich"
+title: "Einhorn mit automatisch geführtem Geradstich"
 language: de
 last_modified_at: 2022-07-08
-excerpt: "fichier exemple licorne en points droits"
+excerpt: "Beispieldatei: Einhorn unter Verwendung des automatisch geführten Geradstichs zur Vermeidung von Sprungstichen"
 image: "/assets/images/tutorials/tutorial-preview-images/autoroute_unicorn.jpg"
 tutorial-typ:
   - Beispieldatei
 stichart: 
   - Geradstich
-  - Mehrfach-Geradstich
+  - Mehrfachgeradstich
 werkzeug:
   - Linie
 techniken:
 schwierigkeitsgrad: 
-  - leicht
+  - Leicht
 ---
 
-## Einhorn mittels Geradstich
 Starte mit diesem Bild, lade es als `.png` herunter [Einhorn](https://freesvg.org/1539642047)
+
 <a title="Public Domain" href="https://freesvg.org/1539642047"><img width="512" alt="Unicorn" src="https://freesvg.org/img/1539642047.png"></a>
 
 gestickte Version:

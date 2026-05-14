@@ -2,7 +2,7 @@
 permalink: /de/tutorials/font-creation/
 title: "Schriftarten für Ink/Stitch erstellen"
 language: de
-last_modified_at: 2025-09-06
+last_modified_at: 2026-12-29
 excerpt: "Erstelle neue Schriftarten für Ink/Stitch"
 image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
 tutorial-type: 

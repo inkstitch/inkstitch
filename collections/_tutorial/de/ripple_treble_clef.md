@@ -3,7 +3,7 @@ permalink: /de/tutorials/ripple_treble_clef/
 title: "Violinschlüssel mit Ripplestich"
 language: de
 last_modified_at: 2026-05-13
-excerpt: "sample file : ripple stitches Treble Clef"
+excerpt: "Beispieldatei: Violinschlüssel gefüllt mit Ripplestichen"
 image: "/assets/images/tutorials/tutorial-preview-images/cle_de_sol.jpg"
 tutorial-typ:
   - Beispieldatei

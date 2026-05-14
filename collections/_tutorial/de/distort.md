@@ -9,7 +9,7 @@ image: "/assets/images/galleries/fonts/multiple/multifont3.jpg"
 tutorial-typ:
   - Beispieldatei
 stichart: 
-  - Satin Stitch
+  - Satinstich
 techniken:
    - Lettering
 field-of-use:

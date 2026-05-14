@@ -1,5 +1,5 @@
 ---
-permalink: /en/tutorials/autoroute_life_flower/
+permalink: /tutorials/autoroute_life_flower/
 title: "Life Flower "
 language: en
 last_modified_at: 2022-06-11

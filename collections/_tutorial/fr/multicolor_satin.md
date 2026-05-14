@@ -19,6 +19,7 @@ On parle ici de simulation, car il ne s'agit pas d'une seule colonne satin  mult
 utilisant plusieurs  copies superposées d'une même colonne satin, simplement en utilisant des paramètres aléatoires différents.
 
 Ceci est devenu une des [extensions d'Ink/Stitch](/fr/docs/satin-tools/#multicolor-satin)
+{: .notice--info }
 
 ## Commençons par le bicolore
 Revenons sur les paramètres "aléatoires" des colonnes satin.

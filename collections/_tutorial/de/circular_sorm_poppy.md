@@ -1,28 +1,25 @@
 ---
 permalink: /de/tutorials/circular_sorm_poppy/
-title: "Poppy in circular, meander and contour fills"
+title: "Mohn mit Spiral-, Mäander- und Konturfüllung"
 language: de
 last_modified_at: 2026-05-12
-excerpt: "Sample file : Poppy in circular, meander and contour fills"
+excerpt: "Beispieldatei: Mohn mit Spiral-, Mäander- und Konturfüllung"
 image: "/assets/images/tutorials/tutorial-preview-images/sorm_poppy.jpg"
-tutorial-type:
-  - Sample File
-stitch-type:
-  - "Meander Fill"
-  - "Circular Fill"
-  - "Contour Fill"
+tutorial-typ:
+  - Beispieldatei
+stichart:
+  - "Mäanderfüllung"
+  - "Spiralfüllung"
+  - "Konturfüllung"
 techniques:
 field-of-use:
 user-level:
 
 ---
 
-## Poppy in circular, meander and contour fills
+Dieser Mohn ist aus einer Mischung von Spiral-, Mäander-, und Konturfüllung aufgebaut.
 
-This poppy is embroidered using a mix of circular, meander, and contour fills.
-
-Most often, two low-density fillings are layered.
-
+Hier kann ein schöner Effekt beobachtet werden, der entsteht, wenn zwei Füllungen mit geringer Dichte übereinander gestickt werden.
 
 ![Pavot brodée](/assets/images/tutorials/tutorial-preview-images/sorm_poppy.jpg)
 

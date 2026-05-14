@@ -8,12 +8,12 @@ image: "/assets/images/tutorials/sashiko/sashiko.jpg"
 tutorial-typ:
   - Beispieldatei
 stichart:
-  - Mehrfach-Geradstich
+  - Mehrfachgeradstich
 werkzeug:
   - Linie
 techniken:
 schwierigkeitsgrad: 
-  - mittel
+  - Mittel
 ---
 ![Sample](/assets/images/tutorials/sashiko/sashiko.jpg)
 

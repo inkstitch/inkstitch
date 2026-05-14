@@ -1,89 +1,96 @@
 ---
-title: QR code
+title: QR-Code
 permalink: /de/tutorials/qr-code/
-last_modified_at: 2026-01-10
+last_modified_at: 2026-05-14
 language: de
-excerpt: "Create a cross Stitch QR Code"
+excerpt: "Erstelle einen Kreuzstich-QR-Code"
 image: "/assets/images/tutorials/qr-code/qr-code.jpg"
-tutorial-type:
-  - Sample File
-stitch-type: 
-  - Cross Stitch
-  - Fill Stitch
+tutorial-typ:
+  - Beispieldatei
+stichart: 
+  - Kreuzstich
+  - Füllstich
 field-of-use:
-user-level: Beginner
+schwierigkeitsgrad: Leicht
 ---
 
 {% include upcoming_release.html %}
 
-Using Inkscape extension **Render > Bar Code  /QR code > QR code** and Ink/Stitch cross-stitch, one can easily embroider a working QR code:
+Mit der Inkscape-Erweiterung `Erweiterungen > Rendern > Strichcode / QR-Code > QR-Code` und dem Ink/Stitch-Kreuzstich ist es sehr leicht einen funktionierenden QR-Code zu sticken:
 
 ![Cross Stitch QR Code](/assets/images/tutorials/qr-code/qr-code.jpg)
 
-## Using the QR code extension
+## Die QR-Code Erweiterung nutzen
+
 ![Extension Menu](/assets/images/tutorials/qr-code/QR_extension.jpg)
 
-### Text Field 
-In the Text field, enter whatever you want to code. In this tutorial, we will use this page URL, that is
+### Textfeld
 
-https://inkstitch.org/tutorials/qr-code/
+In das Feld `Text` ist der Text einzugeben, der decodiert werden soll. In diesem Tutorial verwenden wir die URL der englischen Seite für dieses Tutorial:
 
-Do not forget the https://  at start.
+`https://inkstitch.org/tutorials/qr-code/`
 
-If you wish to create a QR code to share your Wi-Fi information, the Text field should be filled with something like this
+Vergesse dabei nicht das `https://` am Anfang.
+
+Es ist z.B. auch möglich, WiFi-Informationen über QR-Code zu teilen. Hierfür muss das Textfeld nach diesem Schema befüllt werden:
 
 ```
 WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;; 
 ```
 
-For instance, if your wifi SSID is "My_Wifi" , your password is "Hello" and your security protocol is WAP, enter this in the  Text field
+Das sieht dann für ein WiFI mit der SSID "My_Wifi" und dem Passwort "Hello" und dem WAP-Sicherheitsprotokoll dann so aus:
 
 ```
 WIFI:S:My_Wifi;T:WPA;P:Hello;;
 ```
 
-### Error correction level
-Chose a high level there, it will help us embroider later on.
+### Fehlerkorrektur-Level
 
-### Size
-Here, you chose the squares width in pixel. You will need the same size in mm for the cross-stitch extension.
+Nutze hier ein hohes Level, das wird später für die Erstellung des Stickpfades hilfreich sein.
 
-I chose 8 px width for my squares, that will be 2.12 mm for Ink/Stitch.
+### Größe
 
-### Apply 
-After applying, you get two different objects, one is a rectangle, remove it, and then the QR code as a single path, keep it
+Quadratgröße (px) definiert die Größe der Quadrate in Pixeln. Diese Größe brauchen wir später in der Kreuzstich-Erweiterung in mm.
+
+Ich wähle hier im Beispiel eine Größe von 8 px für meine Quadrate, das entspricht dann 2.12 mm für Ink/Stitch.
+
+### Anwenden
+
+Nachdem der QR-Code in die Arbeitsfläche eingefügt wurde, erhälst du zwei verschiedene Objekte. Eine ist ein Rechteck, lösche es.
+Der QR-Code selbst, ist ein einzelner Pfad, den behalten wir.
 
 ![Extension result](/assets/images/tutorials/qr-code/generated_QR_code.jpg)
 
+## QR-Code für Ink/Stitch vorbereiten
 
-## Prepare the QR code for Ink/Stitch Cross Stitch
+- Wähle den Pfad des QR-Codes aus und positioniere ihn in der linken oberen Ecke der Arbeitsfläche, indem du in der Inkscape Werkzeugeinstellungsleiste x und y auf 0 setzt.
+- **Dieser Schritt ist wichtig**: Nachdem unter `Bearbeiten > Einstellungen > Verhalten > Schritte > Schrumpfen/Erweitern um:` auf 0.5 px eingestellt wurde, erweitere den QR-Pfad um diesen Wert über `Pfad > Erweitern`
 
+## Kreuzstiche in Ink/Stitch nutzen
 
--  Select the QR path and move it to the upper left corner of the screen by setting X=0 and Y =0 in Inkscape toolbar. This will align your QR path with the cross-stitch grid
--  **Very important step** : After setting Inkscape **Behavior > Steps > Inset/Outset by:** to 0.5 px, slightly outset the QR code path using Path > Outset.  
+Wähle den nun vorbereiteten QR-Code-Pfad aus und wende die Kreuzstichparameter an.
+Setze die Mustergröße auf die Größe, die du für die Quadrate verwendet hast.
+In unserem Beispiel auf 2.12.
 
-## Using Ink/Stitch Cross Stitch
-
-Select the prepared QR-code Path and apply parameters, chose cross-stich fill **with pattern size 2.12**. 
-As you can see in the screenshot below, you have  an embroidable cross stitch QR code.
+Wir im Screenshot ersichtlich, hast du bereits jetzt einen stickbaren QR-Code erstellt.
 
 ![Extension Menu](/assets/images/tutorials/qr-code/First_trial.jpg)
 
-We can have a better embroidering experience by lowering the number of jumps.
+Allerdings gibt es noch eine erhebliche Menge an Sprunstichen, die wir vermeiden wollen.
 
-Because we chose a high error correction level, we can simplify the code by removing smmall areas and still have a working QR code.
+Aufgrund des hohen Levels für die Fehlerrate, können wir es uns erlauben, kleine Bereiche aus dem QR-Code herauszulöschen und erhalten noch immer einen funktionierenden QR-Code.
 
-- First use the cross stitch helper (with grid spacing set to 2.12 mm) to pixelise the QR path: It will break the shape into several connected areas
-- Then use Ink/Stitch > Trouble Shoot >Clean Up Document to remove area of surface smaller than 65 (8x8+1) squared pixel. This will remove all one square shapes
-- In my example, it removes 5 squares.
-- Check the QR code is still working It does, let's try to simplify more
-- Repeat the process, removing areas  of surface smaller than 129 (2x64+1).
-- In my example, it removes 4 shapes.
-- Check the QR code is still working.
+- Nutze zunächst den Kreuzstich-Helfer unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`.
 
-I now only have 9 shapes that I can reorder to get a smoother embroidering experience like this :
+  Setze die Mustergröße auf 2.12 und aktiviere die Checkbox `Verpixeln` in den Ausgabe-Einstellungen. Dies wird die einzelnen Teilbereiche der Form auseinanderbrechen.
+- Nutze nun `Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen` und setze die minimale Größe für Fülstichobjekte auf 65 (8x8+1).
+  So werden alle alleinstehenden Quadrate entfernt.
+- In diesem Beispiel werden 5 Quadrate entfernt.
+- Teste, ob dein QR-Code noch funktionsfähig ist. Ist er das, versuchen wir ihn noch weiter zu vereinfachen.
+- Wiederhole den Prozess und entferne nun Bereiche die kleiner als 129 (2x64+1) sind.
+- In meinem Beispiel werden weitere 4 Formen entfernt.
+- Überprüfe, ob der QR-Code noch funktioniert.
+
+Nun habe ich noch 9 Formen, die ich für das Sticken sinnvoll anordnen kann:
 
 ![Extension Menu](/assets/images/tutorials/qr-code/Second_trial.jpg)
-
-
-

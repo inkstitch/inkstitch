@@ -3,7 +3,7 @@ permalink: /de/tutorials/ripple-lady/
 title: "Frau Tinkerbell als Ripple-Stickerei"
 language: de
 last_modified_at: 2022-07-09
-excerpt: "Beispieldatei: Frau Tinkerbell als Ripple-Stickerei"
+excerpt: "Beispieldatei: Frau Tinkerbell mit Ripplestich"
 image: "/assets/images/tutorials/samples/ripple-lady.svg"
 tutorial-typ:
   - Beispieldatei
@@ -14,9 +14,6 @@ stichart:
 techniken:
 schwierigkeitsgrad: 
 ---
-
-## Tinkerbell mittels Muster-Füllung und Ripple-Stich.
-
 Der Blütenkelch der Blume besteht aus einer Muster-Füllung.
 
 Der Hut/die Blume besteht aus vier Kopien desselben geschlossenen Pfades, einfach gedreht und in der Größe verändert wurde. Alles ist in einfacher Ripple-Stickerei.

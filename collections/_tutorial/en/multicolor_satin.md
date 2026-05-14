@@ -20,6 +20,7 @@ We are talking simulation here, because it is not a single multicolored satin co
 using several superimposed copies of the same satin column, simply using different parameters settings.
 
 This is now an [Ink/Stitch extension](/docs/satin-tools/#multicolor-satin)
+{: .notice--info }
 
 ## Let's start with a bicolor satin
 Let's come back to the "random" parameters of the satin columns.

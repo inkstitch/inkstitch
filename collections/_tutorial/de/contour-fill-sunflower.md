@@ -1,5 +1,5 @@
 ---
-title: Sonnenblume mittels Konturfüllung 
+title: Sonnenblume mit Konturfüllung 
 permalink: /de/tutorials/contour-fill-sunflower/
 last_modified_at: 2022-07-09
 language: de

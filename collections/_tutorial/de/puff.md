@@ -18,6 +18,7 @@ schwierigkeitsgrad:
 ## Puff Regular 
 
 (von Evan West)
+
 ![Puff Regular](/assets/images/tutorials/samples/PuffRegular.svg)
 
 [Download](/assets/images/tutorials/samples/PuffRegular.svg){: download="Puff-Regular.svg" }
@@ -25,6 +26,7 @@ schwierigkeitsgrad:
 ## Puff ausschließlich 
 
 (von Evan West)
+
 ![Puff Only](/assets/images/tutorials/samples/Puff Only.svg)
 
 [Download](/assets/images/tutorials/samples/Puff Only.svg){: download="Puff-Only.svg" }

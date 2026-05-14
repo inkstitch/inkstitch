@@ -7,7 +7,7 @@ excerpt: "Unterlagen sind wichtig für die Qualität des Stickergebnisses"
 image: "/assets/images/docs/params-contour-underlay-example.jpg"
 
 tutorial-typ:
-  - text
+  - Text
 ---
 Ein Stickdesign ist Interaktion zwischen den Stichen. Jeder Stich hat Einfluss auf die folgenden Stiche im Sinne von Unterstützung und Verzug.
 {: .notice--info}

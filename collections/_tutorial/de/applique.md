@@ -13,7 +13,7 @@ stichart:
   - Satinstich
 techniken:
   - Applikation
-schwierigkeitsgrad: leicht
+schwierigkeitsgrad: Leicht
 ---
 
 ## Schritte
