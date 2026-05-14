@@ -65,6 +65,25 @@ Les étapes sont les suivantes :
 
 ![hello1](/assets/images/tutorials/cross_stitch_lettering/fr/assistant1.jpg)
 
+Dans l'onglet paramètre, les paramètres important ici sont :
+- l'espacement horizontal de la grille
+- le pourcentage de couverture du remplissage: Ici comme les "pixels" sont petits par rapport aux cases de la grille, il faut mettre une petite valeur dans ce paramètre.
+- la méthode de point de croix choisie sera automatiquement choisie pour le paramètrage qui peut être fait dans cette même opération à condition
+
+dans l'onglet Options de sortie
+- cocher la case paramètres.
+- vous pouvez ou non cocher la case pixeliser. 
+
+Si vous ne cochez pas la case pixeliser, l'aspect du canevas reste identique:
+![justparams](/assets/images/tutorials/cross_stitch_lettering/fr/justparameters.jpg)
+
+Si vous cochez aussi la case pixeliser, l'aspect du canevas change:
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/pixelateandparams.jpg)
+
+
+
+
+
 ### Utiliser n'importe quelle fonte
 
 
