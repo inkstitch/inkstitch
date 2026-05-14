@@ -58,12 +58,12 @@ Les étapes sont les suivantes :
 - Sélectionner l'outil texte, vérifiez que son style comporte bien une couleur de fond et pas de couleur de contour
 - Sélectionner la fonte doto dans le menu déroulant des fontes
 - Écrire votre texte dans la fenêtre de lettrage
-- Éventuellement, redimensionner, pour que la taille des "pixels" de la fonte soit raisonnable.
+- Éventuellement, redimensionner, jusqu'a obtenir un petit carré ("pixel") par case de la grille.
  
 ![hello1](/assets/images/tutorials/cross_stitch_lettering/hello1.jpg)
 
-- Convertir le texte en chemin, ici il suffit d'utiliser Inkscape > Objets > Objet en chemin
-- Sélectionner les chemins créés, et Ink/Stich > Outils: Remplissage > Assistant Point de Croix
+- Convertir le texte en chemin, ici il suffit d'utiliser `Inkscape > Chemin > Objet en chemin`
+- Sélectionner les chemins créés, et `Ink/Stich > Outils: Remplissage > Assistant Point de Croix`
 
 ![hello1](/assets/images/tutorials/cross_stitch_lettering/fr/assistant1.jpg)
 
@@ -86,8 +86,8 @@ Vous pouvez arrêter la lecture de cette section ici, mais si vous aimez bien to
 
 Rapellons que l'assistant point de croix a trois fonctions **indépendantes** que nous venons d'utiliser:
 
-- La création d'une grille sur le canevas. C'est un outil visuel qui montre comment ink/stitch découpe l'espace pour y calculer la couverture par un remplissage (couleur par couleur). L'affichage de la grille est totalement facultatif. Cette grille peut être affichée via l'assistant point de croix ou via les propriétés du document, sans que cela ne change quoi que ce soit.
-- Le paramétrage. Il peut être fait via l'assistant de point de croix, ou via l'extension Paramètres d'ink/stitch. L'assistant point de croix par défaut ajoute un petit élargissement (0.1) à chaque forme
+- La création d'une grille sur le canevas. C'est un outil visuel qui montre comment Ink/Stitch découpe l'espace pour y calculer la couverture par un remplissage (couleur par couleur). L'affichage de la grille est totalement facultatif. Cette grille peut être affichée via l'assistant point de croix ou via les propriétés du document, sans que cela ne change quoi que ce soit.
+- Le paramétrage. Il peut être fait via l'assistant de point de croix, ou via l'extension Paramètres d'Ink/Stitch. L'assistant point de croix par défaut ajoute un petit élargissement (0.1) à chaque forme
 - La pixelisation. Modifie les formes : chaque fois que le taux de couverture est atteint sur un carré, la forme est agrandie pour occuper tout le carré. Si deux carrés se touchent, les formes qui les contiennent sont fusionnés. Dans l'exemple précédent, après pixelisation, chaque lettre devient une forme unique.
 
 Que ce serait-il passer si l'on avait uniquement coché la case paramètre et pas la case pixeliser
@@ -125,8 +125,8 @@ Utilisons la fonte Good Vibes, elle aussi disponible sur fonts.google.com
 
 * Une manière simple d'obtenir la forme en noir est de :
 - sélectionner le texte
-- Inkscape > Texte > Texte en Glyphes
-- Sélectionner tous les glyphes Inkscape > Chemins > Union
+- `Inkscape > Texte > Texte en Glyphes`
+- Sélectionner tous les glyphes `Inkscape > Chemins > Union`
 
 Pour un résultat satisfaisant, il est préférable d'avoir un nombre assez important de croix, c'est pourquoi ici le texte a une hauteur de 60 mm et les croix sont des croix de 2 mm. Évidement, plus on a de croix, plus on peut être fidèle à la forme initiale du texte.
 
@@ -143,7 +143,7 @@ C'est une fonte de largeur quasi constante, sans détails trop fins, qui va se p
 * En vert ce que donne directement l'outil texte d'Inkscape.
 
 Cette fois-ci il est important de pouvoir placer les lettres une par une sur la grille pour cela
-* sélectionner le texte et Inkscape > Texte> Texte en Glyphes
+* sélectionner le texte et `Inkscape > Texte> Texte en Glyphes`
 Il est maintenant possible de déplacer chaque lettre, résultat en vert
 ![positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
 
