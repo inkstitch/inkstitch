@@ -52,7 +52,7 @@ Les étapes sont les suivantes :
 
 - Décider de la taille des croix : dans cette exemple, nous allons chercher à obtenir des croix de 3mm de haut et de large. Cette dimension convient à toutes les sortes de point de croix disponibles dans Ink/Stitch
 
-- Afficher une grille avec un espacement horizontal et vertical de 3mm, soit en utilisant les propriétés du document, soit en utilisant l'assistant point de croix
+- Afficher une grille avec un espacement horizontal et vertical de 3mm, soit en utilisant les propriétés du document, soit en utilisant l'assistant point de croix (Ne rien sélectionner, puis `Ink/Stich > Outils: Remplissage > Assistant Point de Croix` , définir l'espacement horizontal de la grille dans l'onglet paramètres, et cocher afficher la grille dans l'onglet Options de sortie)
 
 
 - Sélectionner l'outil texte, vérifiez que son style comporte bien une couleur de fond et pas de couleur de contour
