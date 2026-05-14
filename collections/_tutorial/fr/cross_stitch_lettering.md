@@ -144,11 +144,15 @@ C'est une fonte de largeur quasi constante, sans détails trop fins, qui va se p
 
 Cette fois-ci il est important de pouvoir placer les lettres une par une sur la grille pour cela
 * sélectionner le texte et `Inkscape > Texte> Texte en Glyphes`
-Il est maintenant possible de déplacer chaque lettre, résultat en vert
+Il est maintenant possible de déplacer chaque lettre, résultat en noir
 ![positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
 
 * convertir chaque lettre en chemin
+
 * paramétrer  et pixéliser avec l'assistant point de croix
+* 
+Vous pouvez utiliser la prévisualisation du svg pour tester différentes valeurs pour le pourcentage de couverture.
+![positioning](/assets/images/tutorials/cross_stitch_lettering/fr/svg_preview.jpg)
 
 Le résultat est en marron, il peut être modifié à la main, par exemple pour obtenir un o bien symmétrique (résultat en rouge).
 
