@@ -18,7 +18,7 @@ toc: true
 {% include upcoming_release.html %}
 ## Lettrage au point de croix
 
-Les différentes méthodes sont présentées par ordre de difficulté croissante.
+
 
 ### Utiliser le module de lettrage
 
@@ -31,6 +31,8 @@ Il est facile de limiter le menu de sélection des fontes à celles en point de 
 
 
 ### Utiliser une fonte pixelisée
+
+
 
 Il existe de nombreuses fontes pixélisées.
 Vous pouvez en trouver sur [fonts.google.com](https://fonts.google.com) en filtrant sur l'apparence pixel, mais il y en a bien d'autres libre de droit sur le web.
@@ -111,6 +113,30 @@ Néanmoins, la pixelisation n'est aucunement obligatoire.
 
 
 ### Utiliser n'importe quelle fonte
+
+Il est en fait possible d'utiliser à peu près n'importe quelle fonte. Cela peut même parfois être très simple. 
+
+#### Exemple d'une fonte en lettres attachées
+Utilisons la fonte Good Vibes, elle aussi disponible sur fonts.google.com
+![good vibes](/assets/images/tutorials/cross_stitch_lettering/fr/good_vibes.jpg)
+
+* En vert, ce que vous obtenez directement avec l'outil texte. Notez comme l'intersection du H et du e n'est pas colorée en noir.
+
+* Une manière simple d'obtenir la forme en noir est de :
+- sélectionner le texte
+- Inkscape > Texte > Texte en Glyphes
+- Sélectionner tous les glyphes Inkscape > Chemins > Union
+
+Pour un résultat satisfaisant, il est préférable d'avoir un nombre assez important de croix, c'est pourquoi ici le texte a une hauteur de 60 mm et les croix sont des croix de 2 mm. Évidement, plus on a de croix, plus on peut être fidèle à la forme initiale du texte.
+
+Pixeliser n'est pas obligatoire, mais permet d'obtenir la troisième forme visible sur l'image, sous laquelle se trouve la simulation de la broderie.
+
+Avec une fonte en lettres attachées comme celle-ci, on obtient un résultat sans aucun saut de fil.
+
+#### Exemple d'une fonte en lettres détachées
+
+
+On a vu que la grille (qu'elle soit affichée ou non) découpe le canevas en carrés
 
 
 ### Partir d'un alphabet tel que sur une grille de point de croix 
