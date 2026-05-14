@@ -17,7 +17,7 @@ class FontCategory:
 
 FONT_CATEGORIES = [
     FontCategory('applique', _("Applique")),
-    FontCategory('crossstitch', _("Crossstitch")),
+    FontCategory('crossstitch', _("Cross Stitch")),
     FontCategory('display', _('Display')),
     FontCategory('handwriting', _("Handwriting")),
     FontCategory('italic', _("Italic")),
