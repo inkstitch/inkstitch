@@ -28,21 +28,42 @@ Il est facile de limiter le menu de sélection des fontes à celles en point de 
 
 ![selection des fontes en points de croix](/assets/images/tutorials/cross_stitch_lettering/fr/choix_point_de_croix.jpg)
 
+
+
 ### Utiliser une fonte pixelisée
 
 Il existe de nombreuses fontes pixélisées.
-Vous pouvez en trouver sur [fonts.google.com](https://fonts.google.com)  en filtrant sur l'apparence pixel, ou avec le mot clé pixel, mais il y en a bien d'autres libre de droit sur le web.
+Vous pouvez en trouver sur [fonts.google.com](https://fonts.google.com)  en filtrant sur l'apparence pixel,  mais il y en a bien d'autres libre de droit sur le web.
 
-Si vous utilisez une nouvelle fonte dans inkscape, il est possible qu'il vous faille redemarrer inkscape pour la voire apparaitre dans le menu déroulant des fontes installées pour l'outil Texte d'inkscape
 
-Parmi les fontes pixélisées, certaines affichent les pixels un par un:
+Nous allons utiliser pour ce tutoriel la fonte doto disponible sur fonts.google.com
 ![doto](/assets/images/tutorials/cross_stitch_lettering/doto.jpg)
 
-alors que d'autres regroupent les pixels contigus en une seule surface:
-![doto](/assets/images/tutorials/cross_stitch_lettering/pixelify_sans.jpg)
+On suppose dans la suite, que cette fonte est installées sur votre ordinateur.
+Rappel : Si vous installez une nouvelle fonte dans inkscape, il est possible (selon votre système) qu'il vous faille redemarrer inkscape pour la voire apparaitre dans le menu déroulant des fontes installées pour l'outil Texte d'inkscape.
 
+Chaque "pixel" de la fonte va devenir un point de croix. Avec du fil standard, il est raisonable de produire des croix de hauteur comprise entre 1.8 mm et 4 mm. L'usage d'un fil plus fin  permet de descendre en dessous de 1.8mm, l'usage d'un fil plus épais  permet des croix encore plus grandes.
+
+Les étapes sont les suivantes :
+
+- Vérifier que vos préférences inkscape , onglet interface, la ligne origine en haut et a gauche, axe des y pointant vers le bas est bien cochée.
+
+- Décider de la taille des croix : dans cette exemple, nous allons chercher à obtenir des croix de 3mm de haut et de large. Cette dimension convient à toutes les sortes de point de croix disponibles dans inkstitch
+
+- Afficher une grille avec un espacement horizontal et vertical de 3mm, soit en utilisant les proriétés du document, soit en utilisant l'assistant point de croix
+
+
+- Sélectionner l'outil texte, vérifiez que son style comporte bien une couleur de fond et pas de couleur de contour
+- Sélectionner la fonte doto dans le menu déroulant des fontes
+- Ecrire votre texte dans la fenêtre de lettrage
+- Eventuellement redimentionner, pour que la taille des "pixels" de la fonte soit raisonable.
+
+
+
+#### Exemple utilisant doto
 
 ### Utiliser n'importe quelle fonte
+
 
 ### Partir d'un alphabet tel que sur une grille de point de croix 
 
