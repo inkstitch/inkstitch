@@ -72,12 +72,9 @@ Dans l'onglet paramètre, les paramètres important ici sont :
 
 dans l'onglet Options de sortie
 - cocher la case paramètres.
-- vous pouvez ou non cocher la case pixeliser. 
+- cocher la case pixeliser. 
 
-Si vous ne cochez pas la case pixeliser, l'aspect du canevas reste identique:
-![justparams](/assets/images/tutorials/cross_stitch_lettering/fr/justparameters.jpg)
-
-Si vous cochez aussi la case pixeliser, l'aspect du canevas change:
+L'aspect du canevas change et le paramètrage en point de croix est fait:
 ![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/pixelateandparams.jpg)
 
 
