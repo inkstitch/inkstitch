@@ -37,7 +37,7 @@ You can find some on [fonts.google.com](https://fonts.google.com) by filtering f
 
 For this tutorial, we will use the doto font, available on fonts.google.com.
 
-[doto](/assets/images/tutorials/cross_stitch_lettering/doto.jpg)
+![doto](/assets/images/tutorials/cross_stitch_lettering/doto.jpg)
 
 We will assume that this font is installed on your computer.
 
@@ -80,9 +80,9 @@ in the Output Options tab:
 
 - the pixelate box is checked.
 
-The shapes on thecanvas change appearance and the cross-stitch settings are complete:
+The shapes on the canvas change appearances and the cross-stitch parameters are set:
 
-![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/pixelateandparams.jpg)
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/en/pixelateandparams.jpg)
 
 Each letter has become a unique shape; while embroidering, jumps only occur between letters.
 
@@ -103,7 +103,7 @@ In this case, the shapes on the canvas remain unchanged. But the embroidery para
 
 If we call the parameters extension again to see the result, we get this:
 
-![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/cross_stitch.jpg)
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/en/cross_stitch.jpg)
 
 Each cross stitch continues to completely fill the squares, even though the shapes are not pixelated.
 
@@ -111,7 +111,7 @@ The parameters apply to the initial shapes, that is, each of the letters. But wh
 
 The order in which the squares are processed (which remains the same!) is more visible if you choose automatic fill:
 
-![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/autofill.jpg)
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/en/autofill.jpg)
 
 Pixelization therefore serves two purposes:
 
@@ -158,7 +158,7 @@ It's now possible to move each letter; the result is shown in black.
 
 You can use the SVG preview to test different values ​​for the percentage of coverage threshold.
 
-[positioning](/assets/images/tutorials/cross_stitch_lettering/fr/svg_preview.jpg)
+[positioning](/assets/images/tutorials/cross_stitch_lettering/en/svg_preview.jpg)
 
 The result is shown in brown; it can be modified manually, for example, to obtain a perfectly symmetrical "o" (result shown in red).
 
