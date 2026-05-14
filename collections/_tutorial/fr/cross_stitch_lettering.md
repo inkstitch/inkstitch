@@ -155,10 +155,3 @@ Le résultat est en marron, il peut être modifié à la main, par exemple pour 
 Cette fois chaque lettre se brode sans interruption, mais il y a un saut entre chaque lettre.
 
 
-
-
-
-
-
-### Partir d'un alphabet tel que sur une grille de point de croix 
-
