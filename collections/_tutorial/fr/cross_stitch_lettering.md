@@ -152,7 +152,7 @@ Il est maintenant possible de déplacer chaque lettre, résultat en noir
 * paramétrer  et pixéliser avec l'assistant point de croix
   
 Vous pouvez utiliser la prévisualisation du svg pour tester différentes valeurs pour le pourcentage de couverture.
-![positioning](/assets/images/tutorials/cross_stitch_lettering/fr/svg_preview.jpg)
+![svg preview](/assets/images/tutorials/cross_stitch_lettering/fr/svg_preview.jpg)
 
 Le résultat est en marron, il peut être modifié à la main, par exemple pour obtenir un o bien symmétrique (résultat en rouge).
 
