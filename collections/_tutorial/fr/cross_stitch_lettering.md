@@ -91,7 +91,7 @@ Rapellons que l'assistant point de croix a trois fonctions **indépendantes** qu
 
 Que ce serait-il passer si l'on avait uniquement coché la case paramètre et pas la case pixeliser ?
 
-Dans ce cas, l'aspect sur le canevas inchangé. Mais le paramétrage a été appliqué.
+Dans ce cas, l'aspect sur le canevas est inchangé. Mais le paramétrage a été appliqué.
 Si l'on appelle a nouveau le paramétrage pour voir le résultat on obtient ceci :
 ![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/cross_stitch.jpg)
 
@@ -104,7 +104,7 @@ On voit mieux l'ordre de traitement des carrés (qui reste identique!) si l'on c
 
 La pixelisation a donc deux rôles :
  
- - une meilleure visualisation du résultat : on voit quel espace occupera la broderie (à condition que la pixelisation ait été effectué avec la même taille de croix que le paramètrage)
+ - une meilleure visualisation du résultat : on voit quel espace occupera la broderie (à condition que la pixelisation ait été effectuée avec la même taille de croix que le paramètrage)
  - une meilleure broderie : une fois que les carrés entiers sont occupés, ils se touchent et peuvent être fusionnés. Il y aura beaucoup moins de sauts dans le résultat final.
 
 Néanmoins, la pixelisation n'est aucunement obligatoire. 
