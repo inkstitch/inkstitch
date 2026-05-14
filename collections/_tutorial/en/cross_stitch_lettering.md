@@ -150,7 +150,7 @@ This time, it's important to be able to place the letters one by one on the grid
 
 It's now possible to move each letter; the result is shown in black.
 
-[positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
+![positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
 
 * Convert each letter to a path.
 
@@ -158,7 +158,7 @@ It's now possible to move each letter; the result is shown in black.
 
 You can use the SVG preview to test different values ​​for the percentage of coverage threshold.
 
-[positioning](/assets/images/tutorials/cross_stitch_lettering/en/svg_preview.jpg)
+![svg preview](/assets/images/tutorials/cross_stitch_lettering/en/svg_preview.jpg)
 
 The result is shown in brown; it can be modified manually, for example, to obtain a perfectly symmetrical "o" (result shown in red).
 
