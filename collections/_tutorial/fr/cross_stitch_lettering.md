@@ -28,11 +28,9 @@ Il est facile de limiter le menu de sélection des fontes à celles en point de 
 
 ![selection des fontes en points de croix](/assets/images/tutorials/cross_stitch_lettering/fr/choix_point_de_croix.jpg)
 
+Ensuite, tout se passe comme pour les autres polices.
 
-
-### Utiliser une fonte pixelisée
-
-
+### Utiliser une fonte pixelisée pour un lettrage personnalisé.
 
 Il existe de nombreuses fontes pixélisées.
 Vous pouvez en trouver sur [fonts.google.com](https://fonts.google.com) en filtrant sur l'apparence pixel, mais il y en a bien d'autres libre de droit sur le web.
@@ -43,7 +41,7 @@ Nous allons utiliser pour ce tutoriel la fonte doto disponible sur fonts.google.
 
 On suppose dans la suite, que cette fonte est installées sur votre ordinateur.
 
-Rappel : Si vous installez une nouvelle fonte dans inkscape, il est possible (selon votre système) qu'il vous faille redémarrer Inkscape pour la voire apparaitre dans le menu déroulant des fontes installées pour l'outil Texte d’Inkscape.
+Rappel : Si vous installez une nouvelle fonte dans votre système pour l'utiliser dans **Inkscape**, il est possible (selon votre système) qu'il vous faille redémarrer Inkscape pour la voir apparaitre dans le menu déroulant des fontes installées pour l'outil Texte d’Inkscape. Cet ajout est indispensable pour l'utilisation de la fonte dans Inkscape.
 
 Chaque "pixel" de la fonte va devenir un point de croix. Avec du fil standard, il est raisonable de produire des croix de hauteur comprise entre 1.8 mm et 4 mm. L'usage d'un fil plus fin permet de descendre en dessous de 1.8mm, l'usage d'un fil plus épais permet des croix encore plus grandes.
 #### Marche à suivre
@@ -136,7 +134,8 @@ Pixeliser n'est pas obligatoire, mais permet d'obtenir la troisième forme visib
 Avec une fonte en lettres attachées comme celle-ci, on obtient un résultat sans aucun saut de fil.
 
 #### Exemple d'une fonte en lettres détachées
-Utilisons cette fois la fonte audiowide, toujours disponible sur fonts.google.com
+Utilisons cette fois la fonte audiowide, toujours disponible sur fonts.google.com.
+
 C'est une fonte de largeur quasi constante, sans détails trop fins, qui va se prêter assez bien à l'exercice.
 
 ![audiowide](/assets/images/tutorials/cross_stitch_lettering/audiowide.jpg)
