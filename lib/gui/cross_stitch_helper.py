@@ -334,7 +334,7 @@ class CrossStitchHelperFrame(wx.Frame):
         contrast_sizer.Add(self.contrast_numerical_input, 0, wx.ALL, 5)
 
         transparency_threshold_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        transparency_threshold_tooltip = _("Removes pixels with a lower transparency value than this from the original image.")
+        transparency_threshold_tooltip = _("Removes pixels with a higher transparency value than this from the original image.")
         self.transparency_threshold_label = wx.StaticText(self.bitmap, label=_("Transparency threshold (%)"))
         self.transparency_threshold = wx.Slider(self.bitmap, value=50, minValue=0, maxValue=99, size=(300, 0))
         self.transparency_threshold.SetTick(50)
