@@ -69,14 +69,16 @@ Lorsque deux croix sont reliées uniquement en diagonale, ajoutez une petite val
 Les demi-croix ne constituent qu'un demi-point de croix (une diagonale). Les chemins de dessous suivent le contour de la forme.
 
 
-  ![[Méthode de point de croix: Demi-Croix](/assets/images/docs/cross_stitch_method_half_cross.jpg)
+
+  ![Cross stitch method: half cross](/assets/images/docs/cross_stitch_method_half_cross.jpg)
+  
 * **Point de Croix Horizontal et Point de Croix Horizontal Retourné**
 
   Un Point de Croix ayant subi une rotation qui le rend horizontal.
 
 Veuillez noter que cette méthode de point de croix peut présenter des sauts lorsque les zones sont reliées uniquement en diagonale.
 
-  ![Méthode de point de croix: Demi-Croix](/assets/images/docs/cross_stitch_method_upright.jpg)
+  ![Méthode de point de croix: Horizontal](/assets/images/docs/cross_stitch_method_upright.jpg)
 
 * **Point de Croix Horizontal Dense et Point de Croix Horizontal Dense Retourné**
 
