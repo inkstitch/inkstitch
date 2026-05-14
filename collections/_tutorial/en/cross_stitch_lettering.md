@@ -25,7 +25,7 @@ The simplest method is to use a ready-to-use cross stitch font from the letterin
 
 It's easy to limit the font selection menu to cross stitch fonts by simply selecting "Cross Stitch" from the dropdown menu in the upper right corner.
 
-![cross stitch font selection](/assets/images/tutorials/cross_stitch_lettering/fr/choix_point_de_croix.jpg)
+![cross stitch font selection](/assets/images/tutorials/cross_stitch_lettering/en/choix_point_de_croix.jpg)
 
 Then, everything works just like with other fonts.
 
@@ -48,11 +48,11 @@ Our aim is to convert each "pixel" of the font into a cross stitch. With standar
 #### Instructions
 The steps are as follows:
 
-- Verify that in your Inkscape preferences, under the Interface tab, the "Origin at upper left, y-axis pointing downward" option is checked.
+- Check that in Inkscape preferences, under the Interface tab, the "Origin at upper left, y-axis pointing downward" option is checked.
 
 - Decide on the size of the crosses: in this example, we will aim for 3mm crosses. This size is suitable for all the types of cross stitch available in Ink/Stitch.
 
-- Display a grid with 3mm horizontal and vertical spacing, either using the document properties or the Cross Stitch Assistant (Deselect everything, then go to Ink/Stitch > Tools: Fill > Cross Stitch Assistant set the horizontal grid spacing in the Parameters tab, and check "Show grid" in the Output Options tab).
+- Display a grid with 3mm horizontal and vertical spacing, either using the document properties or the Cross Stitch Assistant (Deselect everything, then go to I`nk/Stitch > Tools: Fill > Cross Stitch Assistant` set the horizontal grid spacing in the Parameters tab, and check "Show grid" in the Output Options tab).
 
 - Select the text tool, and make sure its style has a background color and no outline color.
 - Select the Doto font from the font dropdown menu.
@@ -65,7 +65,7 @@ The steps are as follows:
 
 - Select the created paths, and then `Ink/Stitch > Tools: Fill > Cross Stitch Assistant`.
 
-![hello1](/assets/images/tutorials/cross_stitch_lettering/fr/assistant1.jpg)
+![hello1](/assets/images/tutorials/cross_stitch_lettering/en/assistant1.jpg)
 
 In the parameters tab, the important parameters  are:
 
