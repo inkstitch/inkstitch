@@ -3,8 +3,8 @@ permalink: /fr/tutorials/cross_stitch_lettering/
 title: "Lettrage au point de croix"
 language: fr
 last_modified_at: 2026-05-14
-excerpt: "Création de fonte pour Ink/Stitch "
-image: "/assets/images/tutorials/font_creation_complement/multifont3.jpg"
+excerpt: "Lettrage au point de croix "
+image: "/assets/images/tutorials/tutorial-preview-images/hello.png"
 tutorial-type: 
 stitch-type: 
  - Cross Stitch
