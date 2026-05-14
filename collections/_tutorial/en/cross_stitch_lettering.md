@@ -94,9 +94,74 @@ As a reminder, the cross stitch assistant has three **independent** functions th
 - Creating a grid on the canvas. This is a visual tool that shows how Ink/Stitch divides the space to calculate filling coverage (color by color). Displaying the grid is entirely optional. This grid can be displayed via the cross stitch assistant or via the document properties.
 
 - Embroidery Parameters. They can be set  via the cross stitch assistant or via the Ink/Stitch Parameters extension. The cross stitch assistant adds a small expansion (0.1) to each shape, which is always a good idea when creating cross stiches shapes.
-- 
-- Pixelate. This modifies the shapes: each time the coverage  threshold is reached on a square, the shape is enlarged to fill the entire square. If two squares touch, the shapes they contain are merged. In the previous example, after pixelate, each letter becomes a unique shape. Note that the pixelation is done for a given grid spacing; if you later change the size of the cross stitches, it will no longer accurately reflect the shape of the embroidery!
+  
+- Pixelate. This modifies the shapes: each time the coverage threshold is reached on a square, the shape is enlarged to fill the entire square. If two squares touch, the shapes they contain are merged. In the previous example, after pixelate, each letter becomes a unique shape. Note that the pixelation is done for a given grid spacing; if you later change the size of the cross stitches, it will no longer accurately reflect the shape of the embroidery!
 
 What would have happened if we had only checked the "parameter" box and not the "pixelate" box?
+
+In this case, the shapes on the canvas remain unchanged. But the embroidery parameters have been applied.
+
+If we call the parameters extension again to see the result, we get this:
+
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/cross_stitch.jpg)
+
+Each cross stitch continues to completely fill the squares, even though the shapes are not pixelated.
+
+The parameters apply to the initial shapes, that is, each of the letters. But what is a letter here? It's a shape composed of several squares separated from each other, not touching . As with all Ink/Stitch fills, for each letter, each square is treated independently, and Ink/Stitch orders the squares in its own way. Here, this somewhat obscures the sequential nature (cross by cross embroidery) because adjacent cross stitches are processed fairly well, but not perfectly, as can be seen, for example, by looking at the "e".
+
+The order in which the squares are processed (which remains the same!) is more visible if you choose automatic fill:
+
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/fr/autofill.jpg)
+
+Pixelization therefore serves two purposes:
+
+- better visualization of the result: you can see how much space the embroidery will occupy (provided that the pixelation was done with the same cross stitch size as in the parameters)
+- better embroidery: once the entire squares are filled, they touch and can be merged. There will be far fewer jumps in the final result.
+
+However, pixelate is by no means mandatory.
+
+### Using Any Font
+
+It's actually possible to use almost any font. Sometimes it can even be very simple.
+
+#### Example of a script Font
+Let's use the Good Vibes font, also available on fonts.google.com
+
+![good vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
+
+* In green, what you get directly with Inkscape the text tool. Note how the intersection of the H and the e is not colored black.
+
+* A simple way to obtain the black shape is to:
+
+- Select the text
+- `Inkscape > Type > Text to Glyphs`
+- Select all the glyphs `Inkscape > Paths > Union`
+
+For a satisfactory result, it's best to have a fairly large number of crosses, which is why here the text is 60 mm high and the crosses are 2 mm. Obviously, the more crosses you have, the more faithful you can be to the original shape of the text.
+
+Pixelate is not mandatory, but it allows you to obtain the third shape visible in the image, below which is the embroidery simulation.
+
+With a cursive font like this one, you get an embroidery without any jumps.
+
+* In green, what you get directly with Inkscape the text tool.
+
+This time, it's important to be able to place the letters one by one on the grid. To do this:
+* Select the text and go to `Inkscape > Text > Text to Glyphs`.
+
+It's now possible to move each letter; the result is shown in black.
+
+[positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
+
+* Convert each letter to a path.
+
+* Pixelate  and add parameters using the cross-stitch wizard.
+
+You can use the SVG preview to test different values ​​for the percentage of coverage threshold.
+
+[positioning](/assets/images/tutorials/cross_stitch_lettering/fr/svg_preview.jpg)
+
+The result is shown in brown; it can be modified manually, for example, to obtain a perfectly symmetrical "o" (result shown in red).
+
+This time each letter  embroiders without inside jump, but there is a jump between each letter.
 
 
