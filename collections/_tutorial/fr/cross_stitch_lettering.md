@@ -89,7 +89,7 @@ Rapellons que l'assistant point de croix a trois fonctions **indépendantes** qu
 - Le paramétrage. Il peut être fait via l'assistant de point de croix, ou via l'extension Paramètres d'Ink/Stitch. L'assistant point de croix par défaut ajoute un petit élargissement (0.1) à chaque forme
 - La pixelisation. Elle modifie les formes : chaque fois que le taux de couverture est atteint sur un carré, la forme est agrandie pour occuper tout le carré. Si deux carrés se touchent, les formes qui les contiennent sont fusionnés. Dans l'exemple précédent, après pixelisation, chaque lettre devient une forme unique. Attention, la pixélisation est faite pour un espacement de grille donné, si vous changez d'avis ensuite sur la taille des croix, elle ne refletera plus la forme exacte de la broderie!
 
-Que ce serait-il passer si l'on avait uniquement coché la case paramètre et pas la case pixeliser
+Que ce serait-il passer si l'on avait uniquement coché la case paramètre et pas la case pixeliser ?
 
 Dans ce cas, l'aspect sur le canevas inchangé. Mais le paramétrage a été appliqué.
 Si l'on appelle a nouveau le paramétrage pour voir le résultat on obtient ceci :
@@ -150,7 +150,7 @@ Il est maintenant possible de déplacer chaque lettre, résultat en noir
 * convertir chaque lettre en chemin
 
 * paramétrer  et pixéliser avec l'assistant point de croix
-* 
+  
 Vous pouvez utiliser la prévisualisation du svg pour tester différentes valeurs pour le pourcentage de couverture.
 ![positioning](/assets/images/tutorials/cross_stitch_lettering/fr/svg_preview.jpg)
 
