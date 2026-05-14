@@ -146,6 +146,6 @@ Stop After |☑ | Stop the machine after sewing this object. Before stopping it 
 
 [Download](/assets/images/docs/en/rippleways_en.svg){: download="rippleways.svg" }
 
-### Sample Files Including Ripple Stitches
+## Sample Files Including Ripple Stitches
 
 {% include tutorials/tutorial_list key="stitch-type" value="Ripple Stitch" %}

@@ -143,6 +143,6 @@ Stopp                          | ☑  oder ▢| Stoppt die Maschine nachdem dies
 
 [Download](/assets/images/docs/en/rippleways_en.svg){: download="rippleways.svg" }
 
-### Beispieldateien mit Ripple Stitch
+## Beispieldateien mit Ripple Stitch
 
 {% include tutorials/tutorial_list key="stichart" value="Ripplestich" %}
