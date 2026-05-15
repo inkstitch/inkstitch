@@ -14,12 +14,12 @@ user-level:
 
 classes: wide
 ---
-## Effet resserrement/étirement (Push/Pull effect)
+# Effet resserrement/étirement (Push/Pull effect)
 
 Vous avez soigneusement planifié et numérisé votre dessin. Mais lorsque vous envoyez enfin votre projet sur votre machine pour voir le résultat, vous êtes déçu. Vous remarquez des espaces entre remplissages ou entre remplissage et contour. Cela se produit car chaque point brodé déforme légérement le tissu. Il y a des resserrements (Pull) et des étirements (Push). Le resserrement se produit dans la direction des rangées de points, et l'étirement sur les côtés opposés.
 ![Push/Pull Effect](/assets/images/tutorials/embroidery/push-pull-effect.svg)
 
-## Compensation d'étirement
+# Compensation d'étirement
 
 Planifiez les tailles en fonction de la distorsion. Si vous voulez créer le rectangle du côté gauche avec une colonne satin vous devez laisser un espace des deux côtés où le tissu est poussé et un  chevauchement des autres côtés pour compenser l'effet de traction:
 
