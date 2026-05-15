@@ -32,11 +32,12 @@ class JumpToTrim(InkstitchExtension):
         last_element = None
         last_stitch_group = None
         for element, next_element in zip(self.elements, next_elements):
-            last = last_element
-            last_element = element
             stitch_groups = element.embroider(last_stitch_group, next_element)
             if not stitch_groups:
                 continue
+
+            last = last_element
+            last_element = element
 
             stitch_group = stitch_groups[0]
             if last_stitch_group is None or stitch_group.color != last_stitch_group.color:
