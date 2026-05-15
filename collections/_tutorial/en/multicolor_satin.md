@@ -14,8 +14,6 @@ user-level:
 toc : true
 ---
 
-# Multi-colored satin column Simulation
-
 We are talking simulation here, because it is not a single multicolored satin column, but a similar effect obtained by
 using several superimposed copies of the same satin column, simply using different parameters settings.
 
