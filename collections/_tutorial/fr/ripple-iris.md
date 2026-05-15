@@ -16,8 +16,6 @@ field-of-use:
 user-level:
 ---
 
-## Iris en broderie ondulée
-
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg)
 
 - Les pétales sont obtenus comme  des broderies ondulées, en point droit simple, appliquées sur des chemins composés de deux rails.
