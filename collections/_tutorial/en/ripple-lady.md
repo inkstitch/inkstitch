@@ -16,7 +16,6 @@ field-of-use:
 user-level:
 ---
 
-## Tinkerbell woman as sample of Pattern Stitch and Ripple Stitch
 
 * Cup flower is Pattern Stitch
 
