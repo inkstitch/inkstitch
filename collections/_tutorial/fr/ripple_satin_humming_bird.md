@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/ripple-satin-humming-bird/
-title: "Colibri en broderie ondulée satin"
+title: "Colibri en broderie ondulée guidée par une colonne satin"
 language: fr
 last_modified_at: 2026-01-03
 excerpt: "fichier exemple de colibri en broderie ondulée"
@@ -15,8 +15,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-
-## Colibri en broderie ondulée guidée par une colonne satin
 
 Chaque plume est une broderie ondulée guidée par un satin.
 ![Brodé avec un seul fil multicolore pour  les plumes](/assets/images/tutorials/tutorial-preview-images/ripple_satin_humming_bird_monochrom.jpg)
