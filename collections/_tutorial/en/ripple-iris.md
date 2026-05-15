@@ -16,8 +16,6 @@ field-of-use:
 user-level:
 ---
 
-## Ripple Iris
-
 ![Embroidered](/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg)
 
 - Petals are simple ripple stitch applied to paths with two subpaths.
