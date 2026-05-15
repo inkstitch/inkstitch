@@ -15,7 +15,6 @@ user-level:
 
 ---
 
-## Coeur en broderie ondulée
 L'intérieur du coeur est traité en broderie ondulée. 
 
 Chaque broderie ondulée est constituée de deux chemins combinés semblables aux rails d'une colonne satin.
