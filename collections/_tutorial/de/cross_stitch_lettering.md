@@ -1,13 +1,13 @@
 ---
-permalink: /tutorials/cross_stitch_lettering/
-title: "Cross Stitch Lettering"
+permalink: /de/tutorials/cross_stitch_lettering/
+title: "Kreuzstich Lettering"
 language: de
 last_modified_at: 2026-05-14
-excerpt: "Cross Stitch Lettering "
+excerpt: "Kreuzstich-Schriftzüge erstellen"
 image: "/assets/images/tutorials/tutorial-preview-images/hello.png"
 tutorial-type: 
-stitch-type: 
- - Cross Stitch
+stitch-typ: 
+ - Kreuzstich
 tool:
 techniques:
 field-of-use:
@@ -17,151 +17,153 @@ toc: true
 
 {% include upcoming_release.html %}
 
-## Cross Stitch Lettering
+## Das Textwerkzeug nutzen
 
-### Using the Lettering Tool
+Die einfachste Methode ist eine wiederverwendbare, stickfertige Schrift aus dem Textwerkzeug zu nutzen. Ink/Stitch bietet mittlerweile über 20 Schriftarten.
 
-The simplest method is to use a ready-to-use cross stitch font from the lettering tool, chosen from the twenty or so available.
+Über den Kategorie-Filter (Dropdown-Menü in der oberen rechten Ecke) kann die Schriftartenliste schnell auf Kreuzstich-Schriftarten reduziert werden.
 
-It's easy to limit the font selection menu to cross stitch fonts by simply selecting "Cross Stitch" from the dropdown menu in the upper right corner.
+![cross stitch font selection](/assets/images/tutorials/cross_stitch_lettering/de/choix_point_de_croix.jpg)
 
-![cross stitch font selection](/assets/images/tutorials/cross_stitch_lettering/en/choix_point_de_croix.jpg)
+Kreuzstichschriftarten funktionieren genauso, wie alle anderen Schriftarten auch.
 
-Then, everything works just like with other fonts.
+## Eine Pixelschriftart für individuelle Beschriftungen nutzen
 
-### Using a Pixel Font for Custom Lettering
+Es gibt viele Pixelschriftarten. Auf [fonts.google.com](https://fonts.google.com) kann sogar mit einem Filter gezielt danach gesucht werden.
+Aber auch anderswo kann man fündig werden.
 
-Many pixel fonts are available.
-
-You can find some on [fonts.google.com](https://fonts.google.com) by filtering for pixel appearance, but there are many more free pixel fonts on the web.
-
-For this tutorial, we will use the doto font, available on fonts.google.com.
+Für dieses Tutorial nutzen wir die Doto-schriftart von fonts.google.com
 
 ![doto](/assets/images/tutorials/cross_stitch_lettering/doto.jpg)
 
-We will assume that this font is installed on your computer.
+Wir nehmen an, dass diese Schrift auf deinem Computer installiert ist.
 
-Note: If you install a new font on your system to use in **Inkscape**, you may need to restart Inkscape (depending on your system) for it to appear in the dropdown menu of installed fonts for the Inkscape Text tool. This is essential for using the font in Inkscape.
+Beachte: Wenn du eine neue Schrift installierst, kann es nötig sein **Inkscape** neu zu starten. Erst dann wird die Schrift im Programm erscheinen.
 
-Our aim is to convert each "pixel" of the font into a cross stitch. With standard thread, it's reasonable to produce crosses between 1.8 mm and 4 mm high. Using thinner thread allows you to go below 1.8 mm, while using thicker thread allows for even larger crosses.
+Unser Ziel ist es, jeden "Pixel" der Schrift in ein Kreuz zu verwandeln. Für eine Verwendung mit dem üblichen 40wt Garn, ist ine Schrifthöhe zwischen 1.8 mm und 4 mm sinnvoll.
+Dünneres Garn erlaubt auch kleinere Buchstaben, mit dickerem Garn, darf die Schrift weiter vergrößert werden.
 
-#### Instructions
-The steps are as follows:
+### Arbeitsablauf
 
-- Check that in Inkscape preferences, under the Interface tab, the "Origin at upper left, y-axis pointing downward" option is checked.
+Die Schritte sind folgende:
 
-- Decide on the size of the crosses: in this example, we will aim for 3mm crosses. This size is suitable for all the types of cross stitch available in Ink/Stitch.
-
-- Display a grid with 3mm horizontal and vertical spacing, either using the document properties or the Cross Stitch Assistant (Deselect everything, then go to I`nk/Stitch > Tools: Fill > Cross Stitch Assistant` set the horizontal grid spacing in the Parameters tab, and check "Show grid" in the Output Options tab).
-
-- Select the text tool, and make sure its style has a background color and no outline color.
-- Select the Doto font from the font dropdown menu.
-- Type your text in the canvas.
-- If necessary, resize the text until you have one small square ("pixel") per grid cell.
+- Unter `Bearbeiten > Einstellungen > Benutzeroberfläche > Ursprung in der oberen linken Ecke, wobei die y-Achse nach unten zeigt` ist aktiviert
+- Entscheide dich für die Größe der Kreuze: in diesem Beispiel nutzen wir eine Größe von 3 mm. Diese größe ist für alle verfügbaren Kreuzsticharten von Ink/Stitch brauchbar.
+- Erstelle ein Seitengitter mit 3 mm Abstand auf beiden Achsen (x und y). Dies kann entweder über die Dokumenteinstellungen geschehen oder über den Kreuzstich-Helfer.
+  Wähle alle Objekte ab (keine aktive Auswahl) und öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`. Setze den gewünschten Gitterabstand im Einstellungs-Tab und
+  aktiviere das Seitengitter im Tab für die Ausgabe-Optionen.
+- Aktiviere das Inkscape Textwerkzeug mit `T` oder über die Werkzeugleiste. Versichere dich, dass eine Füllfarbe, aber keine Konturfarbe aktiviert ist.
+- Wähle die Doto-Schrift aus dem Dropdown-Menü aus.
+- Klicke auf die Arbeitsfläche und gib einen Text ein.
+- Wenn nötig, skaliere die Schrift, bis sich nur noch ein "Pixel" der Schrift in einer Gitterzelle befindet.
 
 ![hello1](/assets/images/tutorials/cross_stitch_lettering/hello1.jpg)
 
-- Convert the text to a path. Here, simply use `Inkscape > Path > Object to Path`.
+- Konvertiere den Text in einen Pfad (`Pfad > Objekt in Pfad umwandeln`)
+- Wähle den Pfad aus und öffne den Kreuzstich-Helfer (`Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`).
 
-- Select the created paths, and then `Ink/Stitch > Tools: Fill > Cross Stitch Assistant`.
+![hello1](/assets/images/tutorials/cross_stitch_lettering/de/assistant1.jpg)
 
-![hello1](/assets/images/tutorials/cross_stitch_lettering/en/assistant1.jpg)
+Im Einstellungs-Tab gibt es zwei wichtige Parameter, die sind:
 
-In the parameters tab, the important parameters  are:
+- Horizontaler Gitterabstand
+- Füllabdeckung (%): Da die "Pixel" kleiner sind als eine eigentliche Gitterzelle, sollte dieser Wert nicht zu groß sein.
+- Die gewählte Kreuzstich-Methode kann ebenfalls schon hier gesetzt werden. Hierfür muss im Ausgabe-Tab die Option `Parameter` angewählt sein.
+- Ebenfalls im Ausgabe-Tab sollte unbedingt die Option `Verpixeln` aktiviert sein.
 
-- Horizontal grid spacing
-
-- Fill coverage percentage: Since the "pixels" are small compared to the grid squares, you should enter a small value in this parameter.
-
-- The chosen cross stitch method will be automatically selected for the parameters of the fill, which can be adjusted in this same operation provided that:
-
-in the Output Options tab:
-- the parameters box is checked.
-
-- the pixelate box is checked.
-
-The shapes on the canvas change appearances and the cross-stitch parameters are set:
+Nach dem Anwenden des Kreuzstich-Helfers wird der Schriftpfad entsprechend verpixelt sein:
 
 ![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/en/pixelateandparams.jpg)
 
-Each letter has become a unique shape; while embroidering, jumps only occur between letters.
+Jeder Buchstabe ist nun eine einzige Form; Sprungstiche entstehen nur zwischen den Buchstaben.
 
-#### Maybe more information that you wish for ?
-You can stop reading this section here, but if you like to understand everything, you might be interested in reading further.
+### Ein Überfluss an Informationen?
 
-As a reminder, the cross stitch assistant has three **independent** functions that we just used:
+Du kannst diesen Part gerne überspringen, aber wenn du einen tieferen Einblick gewinnen möchtest, lies gerne weiter.
 
-- Creating a grid on the canvas. This is a visual tool that shows how Ink/Stitch divides the space to calculate filling coverage (color by color). Displaying the grid is entirely optional. This grid can be displayed via the cross stitch assistant or via the document properties.
+Als Erinnerung: der Kreuzstich-Helfer hat drei im wesentlichen **unabhängige** Funktionen die wir nutzen können:
 
-- Embroidery Parameters. They can be set  via the cross stitch assistant or via the Ink/Stitch Parameters extension. The cross stitch assistant adds a small expansion (0.1) to each shape, which is always a good idea when creating cross stiches shapes.
-  
-- Pixelate. This modifies the shapes: each time the coverage threshold is reached on a square, the shape is enlarged to fill the entire square. If two squares touch, the shapes they contain are merged. In the previous example, after pixelate, each letter becomes a unique shape. Note that the pixelation is done for a given grid spacing; if you later change the size of the cross stitches, it will no longer accurately reflect the shape of the embroidery!
+- Seitengitter erstellen. Dies ist ein optionales, rein visuelles Werkzeug. Es hat keinen Einfluss auf die Funktionalität.
+  Das Seitengitter hilft aber, die Positionierung der Stiche zu erkennen und die Füllabdeckung der Gitterzellen abzuschätzen.
+  Das Gitter kann über den Kreuzstich-Helfer oder über die Dokumenteinstellungen eingerichtet werden.
+- Stickparameter. Stichparameter können entweder über den Kreuzstich-Helfer oder über die Ink/Stitch Parameter angewendet werden.
+  Der Kreuzstich-Helfer setzt dabei auf jedes Element einen kleinen Wert für den `Erweitern`-Parameter. So kann für die meisten Kreuzstich-Methoden
+  das Auftrennen von Formen an Stellen verhindert werden, die sich nur an einer Ecke berühren.
+- Verpixeln. Diese Option modifiziert die Formen: jedes Mal wenn der Wert für die Füllabdeckung für eine Gitterzelle überschritten wurde, wird die gesamte Zelle gefüllt.
+  Berühren sich zwei Zellen, werden sie verbunden.
+  Im vorangegangenen Beispiel wurden die einzelnen "Pixel" in der Schrift zu einer einzigen Form zusammengefügt.
+  Die Verpixelung erfolgt für die angegebene Gittergröße; wird die Gittergröße nachträglich angepasst, gibt die Form nicht mehr die Form des gestickten Pfades wieder!
 
-What would have happened if we had only checked the "parameter" box and not the "pixelate" box?
+Was wäre passiert, wenn wir nur die Option `Parameter`, nicht aber `Verpixeln` angewählt hätten?
 
-In this case, the shapes on the canvas remain unchanged. But the embroidery parameters have been applied.
+In diesem Fall, wären nur die Parameter angepasst worden. Die Form aber wäre gleich geblieben.
 
-If we call the parameters extension again to see the result, we get this:
+Rufen wir nun die Parameter-Erweiterung mit der angewählten Form auf, erhalten wir dieses Ergebnis:
 
-![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/en/cross_stitch.jpg)
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/de/cross_stitch.jpg)
 
-Each cross stitch continues to completely fill the squares, even though the shapes are not pixelated.
+Jedes Kreuz füllt weiterhin die kompletten Gitterzellen aus und das obwohl die Form nicht erpixelt ist.
 
-The parameters apply to the initial shapes, that is, each of the letters. But what is a letter here? It's a shape composed of several squares separated from each other, not touching . As with all Ink/Stitch fills, for each letter, each square is treated independently, and Ink/Stitch orders the squares in its own way. Here, this somewhat obscures the sequential nature (cross by cross embroidery) because adjacent cross stitches are processed fairly well, but not perfectly, as can be seen, for example, by looking at the "e".
+Die Parameter werden aber auf die ursprünglichen Formen angewandt. D.h. auf jeden einzelnen "Pixel". So wie mit jeder anderen Ink/Stitch Füllung,
+sucht sich Ink/Stitch eine eigene Sortierung für kombinierte Pfade. Dies kann funktionieren, aber z.B. im `e` werden die Probleme offensichtlich.
 
-The order in which the squares are processed (which remains the same!) is more visible if you choose automatic fill:
+Die Anordnung der Quadrate wird offensichtlicher, wenn die Standardfüllung angewendet wird:
 
-![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/en/autofill.jpg)
+![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/de/autofill.jpg)
 
-Pixelization therefore serves two purposes:
+Das Verpixeln hat daher gleich zwei Vorteile:
 
-- better visualization of the result: you can see how much space the embroidery will occupy (provided that the pixelation was done with the same cross stitch size as in the parameters)
-- better embroidery: once the entire squares are filled, they touch and can be merged. There will be far fewer jumps in the final result.
+- eine bessere visuelle Repräsentation des finalen Ergebnisses: es wird ersichtlich, wie viel Raum die Stickerei einnehmen wird (vorausgesetzt, dass die Angaben der Gittergröße mit den Parametern übereinstimmt)
+- ein besseres Stickergebnis: zusammenhängende Gitterzellen sind zu einer Form zusammengefügt und was zur Vermeidung von Sprungstichen beiträgt.
 
-However, pixelate is by no means mandatory.
+Kreuzstiche funktionieren aber auch ohne die Verpixelung der Form.
 
-### Using Any Font
+## Jegliche Schrift benutzen
 
-It's actually possible to use almost any font. Sometimes it can even be very simple.
+Es ist tatsächliche möglich, fast jede Schrift auch als Kreuzstich zu nutzen. Das ist manchmal auch gar nicht so schwer.
 
-#### Example of a script Font
-Let's use the Good Vibes font, also available on fonts.google.com
+### Beispiel mit einer Script-Schriftart (Handschrift)
 
-![good vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
+Wir nutzen für dieses Beispiel die Great Vibes Schrift, die auch unter fonts.google.com zu finden ist.
 
-* In green, what you get directly with Inkscape the text tool. Note how the intersection of the H and the e is not colored black.
+![great vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
 
-* A simple way to obtain the black shape is to:
+Grün: so sieht das Ergebnis mit dem Inkscape Textwerkzeug aus. Beachte die Überschneidungen im H und im e. Dort ist die Schrift nicht komplett schwarz.
 
-- Select the text
-- `Inkscape > Type > Text to Glyphs`
-- Select all the glyphs `Inkscape > Paths > Union`
+Ein einfacher Weg eine schwarze Form zu erhalten ist dieser:
 
-For a satisfactory result, it's best to have a fairly large number of crosses, which is why here the text is 60 mm high and the crosses are 2 mm. Obviously, the more crosses you have, the more faithful you can be to the original shape of the text.
+- Wähle den Text aus
+- `Text > Text zerlegen`
+- Wähle alle Elemente aus und kombiniere sie mit `Pfad > Vereinigen`
 
-Pixelate is not mandatory, but it allows you to obtain the third shape visible in the image, below which is the embroidery simulation.
+Für ein zufriedenstellendes Ergebnis ist es am Besten eine größere Anzahl an Kreuzen zu haben. Daher ist der Text im Beispiel 60 mm hoch und die
+das Kreuzstichgitter umfasst 2 mm. Es ist offensichtlich, dass mehr Kreuze eine größere Flexibiliät mit der Form des Originaltextes ermöglichen.
 
-With a cursive font like this one, you get an embroidery without any jumps.
+Verpixeln ist nicht unbedingt notwendig, erlaubt es jedoch einen besseren visuellen Eindruck des Endergebnisses zu bekommen (drittes Bild von oben).
 
-* In green, what you get directly with Inkscape the text tool.
+Unten ist die Sticksimulation dargestellt.
 
-This time, it's important to be able to place the letters one by one on the grid. To do this:
-* Select the text and go to `Inkscape > Text > Text to Glyphs`.
+Mit einer Handschriftart wie dieser, erhalten wir keinerlei Sprungstiche.
 
-It's now possible to move each letter; the result is shown in black.
+### Unverbundene Schriftarten
 
-![positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
+Für andere, unverbundene Schriftarten ist es wichtig, die Buchstaben gut auf dem Gitter zu platzieren.
 
-* Convert each letter to a path.
+Hier eine Schritt für Schritt Anleitung:
 
-* Pixelate  and add parameters using the cross-stitch wizard.
+* Wähle den Text aus und wende die Funktion `Text > Text zerlegen` an.
 
-You can use the SVG preview to test different values ​​for the percentage of coverage threshold.
+  Nun kann jeder Buchstabe einzelnd bewegt werden; hier ist das Ergebnis:
 
-![svg preview](/assets/images/tutorials/cross_stitch_lettering/en/svg_preview.jpg)
+  ![positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
+* Konvertiere jeden Buchstaben in einen Pfad (`Pfad > Objekt in Pfad umwandeln`).
+* Verpixele die Buchstaben und wende die Stickparameter mit dem Kreuzstich-Helfer an.
 
-The result is shown in brown; it can be modified manually, for example, to obtain a perfectly symmetrical "o" (result shown in red).
+  Du kannst die SVG-Vorschua benutzen um verschiedene Werte für die Füllabdeckung zu testen.
 
-This time each letter  embroiders without inside jump, but there is a jump between each letter.
+  ![svg preview](/assets/images/tutorials/cross_stitch_lettering/de/svg_preview.jpg)
 
+Das Ergebnis wird hier in braun dargestellt; es kann manuell bearbeitet werden, z.B. um die Symmetrie im `o` zu verbessern (rot).
 
+Dieses Mal wird jeder einzelne Buchstabe ohne Sprungstiche gestickt. Sprungstiche zwischen den Buchstaben sind unvermeidbar,
+bzw. können nur durch einen Zwischenstich überbrückt werden.
