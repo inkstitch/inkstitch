@@ -50,7 +50,7 @@ Si votre ordinateur le supporte cocher la case Aperçu svg est utile, mais déj�
 
 Sur cet exemple,  il n'a pas été possible de l'éliminer totalement l' arrière-fond multicolore,.
 
-Notez que le nombre de couleurs comprend la couleur de l'arrierre-fond, qu'il soit supprimé ou gardé. Ce nombre de couleurs est aussi un maximum, et non une valeur qu'Ink/Stitch atteindra à tout prix.
+Notez que le nombre de couleurs comprend la couleur de l'arrière fond, qu'il soit supprimé ou gardé. Ce nombre de couleurs est aussi un maximum, et non une valeur qu'Ink/Stitch atteindra à tout prix.
 
 Pour que les zones soient bien reconnues, j'ai beaucoup augmenté la saturation, modifiant ce faisant les couleurs originelles.
 
@@ -64,7 +64,7 @@ Le résultat (calque "first result") est une base de travail que l'on peut amél
 
 Avec une telle image de départ, il est inévitable d'obtenir beaucoup de toutes petites zones (avec seulement une ou deux croix) et beaucoup de formes déconnectées, donc à l'arrivée énormément de sauts ou de coupes de fil.
 
-- pour les toutes petites zones, je modifie leur couleur pour leur donner la couleur d'une zone adjacente : pour cela selectionner la petite zone, puis selectionner l'outil pipette et cliquer dans une zone adjacente.
+- pour les toutes petites zones, je modifie leur couleur pour leur donner la couleur d'une zone adjacente : pour cela sélectionner la petite zone, puis sélectionner l'outil pipette et cliquer dans une zone adjacente.
 - j'essaye de connecter des zones de couleurs identiques. Notez qu'il suffit que deux zones de même couleur se touchent par un coin pour qu'elles puissent être fusionnées. 
 
 Il faut trouver un compromis entre le respect de l'image initiale, et la simplification de la broderie.
