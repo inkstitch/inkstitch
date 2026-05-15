@@ -16,7 +16,6 @@ tool:
   - Stroke
 ---
 
-## Grue aux nombreux satins
 Ces broderies sont essentiellement composées de colonnes satins, classiques, en E, texturées ou allégées.
 
 Deux fichiers différents, l'un dense qui convient bien à des tissus sans élasticité .
