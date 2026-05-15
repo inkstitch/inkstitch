@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/ripple-lady/
-title: "Femme Clochette en broderie ondulée"
+title: "Femme clochette en remplissage texturé et broderie ondulée"
 language: fr
 last_modified_at: 2022-05-27
 excerpt: "fichier exemple Femme Clochette en broderie ondulée"
@@ -15,8 +15,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-
-## Femme clochette en remplissage texturé et broderie ondulée
 
 La cupule de la fleur est en remplissage texturé.
 
