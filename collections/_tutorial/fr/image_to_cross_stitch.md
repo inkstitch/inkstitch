@@ -65,10 +65,15 @@ Le résultat (calque "first result") est une base de travail que l'on peut amél
   Il suffit de les dessiner **au dessus** de l'image obtenue, sans ce soucier de produire  une forme pixelisée. J'ai donc dessiné avec l'outil courbe de beziers des lignes blanches là ou je voulais des poils, j'ai donné une épaisseur de 3 mm a ces traits, j'ai converti leur contour en chemin (Inkscape > Chemin > Contour en chemin) pour obtenir des surfaces étroites.
   Je sélectionne alors le groupe de Point de Croix et les poils ajoutés, et je relance l'assistant point de croix (j'aime bien dégrouper avant pour un résultat plus ordonné).
 
+  Le fait de relancer l'assistant point de croix (avec les options pixeliser et supprimer les superpositions cochées), permet de recalculer de nouvelles formes pixelisées qui permettent de bien voir ou l'on en est.
+  Au cours du processus d'amélioration, on peut être ammené à utiliser l'assistant plusieurs fois.
+
 Avec une telle image de départ, il est inévitable d'obtenir beaucoup de toutes petites zones (avec seulement une ou deux croix) et beaucoup de formes déconnectées, donc à l'arrivée énormément de sauts ou de coupes de fil.
 
 - pour les toutes petites zones, je modifie leur couleur pour leur donner la couleur d'une zone adjacente : pour cela sélectionner la petite zone, puis sélectionner l'outil pipette et cliquer dans une zone adjacente.
-- j'essaye de fusionner des zones de couleurs identiques quasi adjacentes. Notez qu'il suffit que deux zones de même couleur se touchent par un coin pour qu'elles puissent être fusionnées. 
+- j'essaye de fusionner des zones de couleurs identiques quasi adjacentes. Notez qu'il suffit que deux zones de même couleur se touchent par un coin pour qu'elles puissent être fusionnées. Cela peut se faire soit par déformation des formes existantes soit simplement en dessinant par dessus les formes existantes.
+
+Après avoir un résultat visuellement satisfaisant, ne pas oublier de tout selectionner et relancer l'assistant point de croix afin que les zones adjacents de même couleur soient fusionnées.
 
 Il faut trouver un compromis entre le respect de l'image initiale, et la simplification de la broderie.
 
