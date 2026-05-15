@@ -15,7 +15,6 @@ field-of-use:
 user-level:
 ---
 
-## Fleur monochrome
 
 ![Brodé](/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg)
 
