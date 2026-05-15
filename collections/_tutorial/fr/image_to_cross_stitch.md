@@ -41,31 +41,32 @@ Il faut décider de deux dimensions :
 ## Utilisation de l'assistant point de croix pour générer des remplissages
 Sélectionner l'image et Ink/Stitch > Outils: Remplissage > Assistant point de croix
 
-- Remettre les valeurs des paramètres  par défaut
-- Dans l'onglet paramètres : Choisir l'espacement horizontal de la grille
+- Dans l'onglet paramètres :
+      - Rétablir les valeurs par défaut
+      - Choisir l'espacement horizontal de la grille
 - Puis dans l'onglet Paramètres de l'image matricielle, jouer avec les divers paramètres pour obtenir un résultat satisfaisant
 ![chat](/assets/images/tutorials/image_to_cross_stitch/cat_settings.jpg)
 
+Pour que les zones soient mieux reconnues, j'ai beaucoup augmenté la saturation, modifiant ce faisant les couleurs originelles.
+
 Si votre ordinateur le supporte cocher la case Aperçu svg est utile, mais déjà la simple prévisualisation de l'image permet de choisir les paramètres.
 
-Sur cet exemple,  il n'a pas été possible de l'éliminer totalement l' arrière-fond multicolore,.
+Sur cet exemple,  il n'a pas été possible de l'éliminer totalement l'arrière-fond multicolore,.
 
-Notez que le nombre de couleurs comprend la couleur de l'arrière fond, qu'il soit supprimé ou gardé. Ce nombre de couleurs est aussi un maximum, et non une valeur qu'Ink/Stitch atteindra à tout prix.
+Notez que le nombre de couleurs comprend la couleur de l'arrière fond, qu'il soit supprimé ou non. Ce nombre de couleurs est aussi un maximum, et non une valeur qu'Ink/Stitch atteindra à tout prix.
 
-Pour que les zones soient bien reconnues, j'ai beaucoup augmenté la saturation, modifiant ce faisant les couleurs originelles.
-
-Le résultat (calque "first result") est une base de travail que l'on peut améliorer
+Le résultat (calque "first result") est une base de travail que l'on peut améliorer. 
 
 ## Amélioration des formes et de la broderie
 - supprimer les parties de l'arrièrre fond qui ont été conservées.
 - rajout des moustaches  et autres poils. Les poils blancs de l'image de départ sont fins et n'ont pas été assez conservés par l'assistant point de croix.
-  Il suffit de dessiner **au dessus** de l'image obtenue, sans ce soucier de produire  une forme pixelisée. J'ai donc dessiné avec l'outil courbe de beziers des lignes blanches là ou je voulais des poils, j'ai donné une épaisseur de 3 mm a ces traits, j'ai converti leur contour en trait pour obtenir des surfaces étroites.
+  Il suffit de les dessiner **au dessus** de l'image obtenue, sans ce soucier de produire  une forme pixelisée. J'ai donc dessiné avec l'outil courbe de beziers des lignes blanches là ou je voulais des poils, j'ai donné une épaisseur de 3 mm a ces traits, j'ai converti leur contour en trait pour obtenir des surfaces étroites.
   Je sélectionne alors le groupe de Point de Croix et les poils ajoutés, et je relance l'assistant point de croix (j'aime bien dégrouper avant pour un résultat plus ordonné).
 
 Avec une telle image de départ, il est inévitable d'obtenir beaucoup de toutes petites zones (avec seulement une ou deux croix) et beaucoup de formes déconnectées, donc à l'arrivée énormément de sauts ou de coupes de fil.
 
 - pour les toutes petites zones, je modifie leur couleur pour leur donner la couleur d'une zone adjacente : pour cela sélectionner la petite zone, puis sélectionner l'outil pipette et cliquer dans une zone adjacente.
-- j'essaye de connecter des zones de couleurs identiques. Notez qu'il suffit que deux zones de même couleur se touchent par un coin pour qu'elles puissent être fusionnées. 
+- j'essaye de fusionner des zones de couleurs identiques quasi adjacentes. Notez qu'il suffit que deux zones de même couleur se touchent par un coin pour qu'elles puissent être fusionnées. 
 
 Il faut trouver un compromis entre le respect de l'image initiale, et la simplification de la broderie.
 
