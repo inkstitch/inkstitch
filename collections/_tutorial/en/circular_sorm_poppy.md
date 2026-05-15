@@ -17,8 +17,6 @@ user-level:
 
 ---
 
-## Poppy in circular, meander and contour fills
-
 This poppy is embroidered using a mix of circular, meander, and contour fills.
 
 Most often, two low-density fillings are layered.
