@@ -104,6 +104,8 @@ def get_marker_elements_cache_key_data(node, marker):
     marker_elements['fill'] = [shape.wkt for shape in marker_elements['fill']]
     marker_elements['stroke'] = [shape.wkt for shape in marker_elements['stroke']]
     marker_elements['satin'] = [satin.filtered_subpaths for satin in marker_elements['satin']]
+    for stroke_data in marker_elements['stroke_data']:
+        stroke_data['marker_element'] = stroke_data['marker_element'].get_id()
 
     return marker_elements
 
