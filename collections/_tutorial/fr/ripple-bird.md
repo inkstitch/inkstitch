@@ -13,7 +13,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-## Exemple de broderie ondulée et de  remplissage guidé
 
 Le corps de l'oiseau est en remplissage, les plumes en broderie ondulée
 
