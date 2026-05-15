@@ -15,8 +15,6 @@ field-of-use:
 user-level:
 ---
 
-##  Monochrome Flower
-
 ![Embroidered](/assets/images/tutorials/tutorial-preview-images/ripple_monochrome.jpg)
 
 - Step 1 Layer contains
