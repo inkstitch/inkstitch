@@ -5,7 +5,6 @@ last_modified_at: 2022-05-22
 language: en
 excerpt: "Sample file for contour fill"
 image: "/assets/images/tutorials/tutorial-preview-images/contour-fill.jpg"
-
 tutorial-type:
   - Sample File
 stitch-type: 
