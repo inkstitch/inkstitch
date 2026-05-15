@@ -14,7 +14,6 @@ field-of-use:
 user-level:
 ---
 
-## Simulation de fourrure
 
 ![Preview](/assets/images/docs/zigzagmeander_grumpycat.jpg)
 
