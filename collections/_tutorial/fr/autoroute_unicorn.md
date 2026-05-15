@@ -15,7 +15,7 @@ field-of-use:
 user-level:
 ---
 
-## Licorne en point droit
+
 Au départ cette image , téléchargée en png  depuis https://freesvg.org/1539642047 :
 <a title="Public Domain" href="https://freesvg.org/1539642047"><img width="512" alt="Unicorn" src="https://freesvg.org/img/1539642047.png"></a>
 
