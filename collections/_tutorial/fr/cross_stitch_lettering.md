@@ -114,7 +114,7 @@ Il est en fait possible d'utiliser à peu près n'importe quelle fonte. Cela peu
 ### Exemple d'une fonte en lettres attachées
 Utilisons la fonte Great Vibes, elle aussi disponible sur fonts.google.com
 
-![great vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
+![great vibes](/assets/images/tutorials/cross_stitch_lettering/great_vibes.jpg)
 
 * En vert, ce que vous obtenez directement avec l'outil texte. Notez comme l'intersection du H et du e n'est pas colorée en noir.
 
