@@ -126,7 +126,7 @@ Es ist tatsächliche möglich, fast jede Schrift auch als Kreuzstich zu nutzen. 
 
 Wir nutzen für dieses Beispiel die Great Vibes Schrift, die auch unter fonts.google.com zu finden ist.
 
-![great vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
+![great vibes](/assets/images/tutorials/cross_stitch_lettering/great_vibes.jpg)
 
 Grün: so sieht das Ergebnis mit dem Inkscape Textwerkzeug aus. Beachte die Überschneidungen im H und im e. Dort ist die Schrift nicht komplett schwarz.
 
