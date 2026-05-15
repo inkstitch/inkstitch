@@ -1,6 +1,6 @@
 ---
 permalink: /fr/tutorials/image_to_cross_stitch/
-title: "D'une image au points de croix"
+title: "D'une image aux points de croix"
 language: fr
 last_modified_at: 2026-05-15
 excerpt: "Utilisation de l'assistant point de croix pour passer d'une image à un remplissage en points de croix"
