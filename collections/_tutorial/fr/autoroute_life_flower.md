@@ -6,7 +6,6 @@ last_modified_at: 2022-06-12
 excerpt: "Agencement automatique de points droits"
 image: "/assets/images/tutorials/life_flower/flower-of-life-two-digitalisation.svg"
 tutorial-type:
-  - 
 stitch-type:
   - Bean Stitch
   - Running Stitch
