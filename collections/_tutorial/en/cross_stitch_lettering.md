@@ -143,6 +143,10 @@ Pixelate is not mandatory, but it allows you to obtain the third shape visible i
 
 With a cursive font like this one, you get an embroidery without any jumps.
 
+#### Example of a font with detached letters
+Let's use the audiowide font this time, still available on fonts.google.com.
+
+It's a font with a nearly constant width and no overly fine details, which will lend itself quite well to this exercise.
 * In green, what you get directly with Inkscape the text tool.
 
 This time, it's important to be able to place the letters one by one on the grid. To do this:
@@ -154,7 +158,7 @@ It's now possible to move each letter; the result is shown in black.
 
 * Convert each letter to a path.
 
-* Pixelate  and add parameters using the cross-stitch wizard.
+* Pixelate  and add parameters using the cross-stitch assistant.
 
 You can use the SVG preview to test different values ​​for the percentage of coverage threshold.
 
