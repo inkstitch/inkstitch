@@ -17,9 +17,7 @@ toc: true
 
 {% include upcoming_release.html %}
 
-## Cross Stitch Lettering
-
-### Using the Lettering Tool
+## Using the Lettering Tool
 
 The simplest method is to use a ready-to-use cross stitch font from the lettering tool, chosen from the twenty or so available.
 
@@ -29,7 +27,7 @@ It's easy to limit the font selection menu to cross stitch fonts by simply selec
 
 Then, everything works just like with other fonts.
 
-### Using a Pixel Font for Custom Lettering
+## Using a Pixel Font for Custom Lettering
 
 Many pixel fonts are available.
 
@@ -45,7 +43,7 @@ Note: If you install a new font on your system to use in **Inkscape**, you may n
 
 Our aim is to convert each "pixel" of the font into a cross stitch. With standard thread, it's reasonable to produce crosses between 1.8 mm and 4 mm high. Using thinner thread allows you to go below 1.8 mm, while using thicker thread allows for even larger crosses.
 
-#### Instructions
+### Instructions
 The steps are as follows:
 
 - Check that in Inkscape preferences, under the Interface tab, the "Origin at upper left, y-axis pointing downward" option is checked.
@@ -86,7 +84,7 @@ The shapes on the canvas change appearances and the cross-stitch parameters are 
 
 Each letter has become a unique shape; while embroidering, jumps only occur between letters.
 
-#### Maybe more information that you wish for ?
+### Maybe more information that you wish for ?
 You can stop reading this section here, but if you like to understand everything, you might be interested in reading further.
 
 As a reminder, the cross stitch assistant has three **independent** functions that we just used:
@@ -120,11 +118,11 @@ Pixelization therefore serves two purposes:
 
 However, pixelate is by no means mandatory.
 
-### Using Any Font
+## Using Any Font
 
 It's actually possible to use almost any font. Sometimes it can even be very simple.
 
-#### Example of a script Font
+### Example of a script Font
 Let's use the Great Vibes font, also available on fonts.google.com
 
 ![great_vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
@@ -143,10 +141,14 @@ Pixelate is not mandatory, but it allows you to obtain the third shape visible i
 
 With a cursive font like this one, you get an embroidery without any jumps.
 
-#### Example of a font with detached letters
+### Example of a font with detached letters
+
 Let's use the audiowide font this time, still available on fonts.google.com.
 
 It's a font with a nearly constant width and no overly fine details, which will lend itself quite well to this exercise.
+
+![audiowide](/assets/images/tutorials/cross_stitch_lettering/audiowide.jpg)
+
 * In green, what you get directly with Inkscape the text tool.
 
 This time, it's important to be able to place the letters one by one on the grid. To do this:
