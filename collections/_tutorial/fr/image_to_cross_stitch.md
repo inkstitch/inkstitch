@@ -35,6 +35,7 @@ Nous allons partir de cette image proposée par Pawpedia sur  [Pixabay](https://
 ![chat](/assets/images/tutorials/image_to_cross_stitch/pawpedia-reduced-10216974.png)
 
 Il faut décider de deux dimensions :
+
 - la taille souhaitée pour la broderie (180 mm dans l'exemple), et réduire l'image a cette taille
 - la taille des croix (2 mm dans l'exemple)
 
