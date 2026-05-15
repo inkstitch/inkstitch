@@ -16,8 +16,6 @@ user-level:
 
 ---
 
-## Butterfly in ripple stitches and circular fills
-
 This almost monochrome butterfly appears adorned with multiple colors thanks to the way light reflects off the embroidery from different angles.
 
 The areas are worked using ripples stitches , automatic fill, or circular fill (with targets to move the center of the fill towards the edge of the wings).
