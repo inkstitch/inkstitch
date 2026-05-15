@@ -125,9 +125,9 @@ However, pixelate is by no means mandatory.
 It's actually possible to use almost any font. Sometimes it can even be very simple.
 
 #### Example of a script Font
-Let's use the Good Vibes font, also available on fonts.google.com
+Let's use the Great Vibes font, also available on fonts.google.com
 
-![good vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
+![great_vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
 
 * In green, what you get directly with Inkscape the text tool. Note how the intersection of the H and the e is not colored black.
 
