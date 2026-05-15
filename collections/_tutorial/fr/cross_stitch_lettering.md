@@ -16,11 +16,7 @@ toc: true
 ---
 
 {% include upcoming_release.html %}
-## Lettrage au point de croix
-
-
-
-### Utiliser le module de lettrage
+## Utiliser le module de lettrage
 
 La méthode la plus simple est d'utiliser une fonte prête pour la broderie du module de lettrage, parmi la vingtaine de fontes en point de croix présentes.
 
@@ -30,7 +26,7 @@ Il est facile de limiter le menu de sélection des fontes à celles en point de 
 
 Ensuite, tout se passe comme pour les autres polices.
 
-### Utiliser une fonte pixelisée pour un lettrage personnalisé.
+## Utiliser une fonte pixelisée pour un lettrage personnalisé.
 
 Il existe de nombreuses fontes pixélisées.
 Vous pouvez en trouver sur [fonts.google.com](https://fonts.google.com) en filtrant sur l'apparence pixel, mais il y en a bien d'autres libre de droit sur le web.
@@ -44,7 +40,7 @@ On suppose dans la suite, que cette fonte est installées sur votre ordinateur.
 Rappel : Si vous installez une nouvelle fonte dans votre système pour l'utiliser dans **Inkscape**, il est possible (selon votre système) qu'il vous faille redémarrer Inkscape pour la voir apparaitre dans le menu déroulant des fontes installées pour l'outil Texte d’Inkscape. Cet ajout est indispensable pour l'utilisation de la fonte dans Inkscape.
 
 Chaque "pixel" de la fonte va devenir un point de croix. Avec du fil standard, il est raisonable de produire des croix de hauteur comprise entre 1.8 mm et 4 mm. L'usage d'un fil plus fin permet de descendre en dessous de 1.8mm, l'usage d'un fil plus épais permet des croix encore plus grandes.
-#### Marche à suivre
+### Marche à suivre
 Les étapes sont les suivantes :
 
 - Vérifier que vos préférences Inkscape , onglet interface, la ligne "origine en haut et a gauche, axe des y pointant vers le bas" est bien cochée.
@@ -80,7 +76,7 @@ L'aspect du canevas change et le paramétrage en point de croix est fait:
 
 Chaque lettre est devenue une unique forme, à la broderie les sauts ne se produisent que de lettre en lettre.
 
-#### Le pourquoi du comment
+### Le pourquoi du comment
 Vous pouvez arrêter la lecture de cette section ici, mais si vous aimez bien tout comprendre, la lecture de la suite peut vous intéresser.
 
 Rapellons que l'assistant point de croix a trois fonctions **indépendantes** que nous venons d'utiliser:
@@ -111,11 +107,11 @@ Néanmoins, la pixelisation n'est aucunement obligatoire.
 
 
 
-### Utiliser n'importe quelle fonte
+## Utiliser n'importe quelle fonte
 
 Il est en fait possible d'utiliser à peu près n'importe quelle fonte. Cela peut même parfois être très simple. 
 
-#### Exemple d'une fonte en lettres attachées
+### Exemple d'une fonte en lettres attachées
 Utilisons la fonte Great Vibes, elle aussi disponible sur fonts.google.com
 
 ![great vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
@@ -133,7 +129,7 @@ Pixeliser n'est pas obligatoire, mais permet d'obtenir la troisième forme visib
 
 Avec une fonte en lettres attachées comme celle-ci, on obtient un résultat sans aucun saut de fil.
 
-#### Exemple d'une fonte en lettres détachées
+### Exemple d'une fonte en lettres détachées
 Utilisons cette fois la fonte audiowide, toujours disponible sur fonts.google.com.
 
 C'est une fonte de largeur quasi constante, sans détails trop fins, qui va se prêter assez bien à l'exercice.
