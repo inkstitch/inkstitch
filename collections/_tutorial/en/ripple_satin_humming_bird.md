@@ -15,9 +15,6 @@ techniques:
 field-of-use:
 user-level:
 ---
-
-## Satin guided ripple stitch Hummingbird  
-
 Each feather is a satin guided ripple stitch
 
 ![Using one single varigated thread for the feathes](/assets/images/tutorials/tutorial-preview-images/ripple_satin_humming_bird_monochrom.jpg)
