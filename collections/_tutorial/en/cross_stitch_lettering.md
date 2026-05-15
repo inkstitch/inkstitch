@@ -21,8 +21,7 @@ toc: true
 
 The simplest method is to use a ready-to-use cross stitch font from the lettering tool, chosen from the twenty or so available.
 
-It's easy to limit the font selection menu to cross stitch fonts by simply selecting "Cross Stitch" from the dropdown menu in the upper right corner.
-
+It's easy to limit the font sélection to cross Stitch fonts in the font menu, by simply selecting "Cross Stitch" from the dropdown menu in the upper right corner.
 ![cross stitch font selection](/assets/images/tutorials/cross_stitch_lettering/en/choix_point_de_croix.jpg)
 
 Then, everything works just like with other fonts.
@@ -39,7 +38,7 @@ For this tutorial, we will use the doto font, available on fonts.google.com.
 
 We will assume that this font is installed on your computer.
 
-Note: If you install a new font on your system to use in **Inkscape**, you may need to restart Inkscape (depending on your system) for it to appear in the dropdown menu of installed fonts for the Inkscape Text tool. This is essential for using the font in Inkscape.
+Note: If you install a new font on your system to use in **Inkscape**, you may need to restart Inkscape (depending on your system) for it to appear in the dropdown menu of installed fonts for the Inkscape Text tool. This is critical for using the font in Inkscape.
 
 Our aim is to convert each "pixel" of the font into a cross stitch. With standard thread, it's reasonable to produce crosses between 1.8 mm and 4 mm high. Using thinner thread allows you to go below 1.8 mm, while using thicker thread allows for even larger crosses.
 
@@ -54,7 +53,7 @@ The steps are as follows:
 
 - Select the text tool, and make sure its style has a background color and no outline color.
 - Select the Doto font from the font dropdown menu.
-- Type your text in the canvas.
+- Type your text using Inkscape text tool.
 - If necessary, resize the text until you have one small square ("pixel") per grid cell.
 
 ![hello1](/assets/images/tutorials/cross_stitch_lettering/hello1.jpg)
