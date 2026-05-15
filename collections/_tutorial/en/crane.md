@@ -15,7 +15,7 @@ user-level:
 tool:
   - Stroke
 ---
-## Crane using mostly various  Satins
+
 These embroideries are primarily composed of satin columns: classic, E-stitches, textured, or very light satin.
 
 Two different files are available.
