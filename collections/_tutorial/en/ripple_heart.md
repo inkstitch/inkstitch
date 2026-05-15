@@ -15,8 +15,6 @@ user-level:
 
 ---
 
-## Ripple stitch heart
-
 The inside of the heart is composed  of ripple stitches.
 
 Each ripple stitch is made up of two combined paths, similar to the rails of a satin column.
