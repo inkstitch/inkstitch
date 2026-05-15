@@ -17,6 +17,7 @@ user-level:
 
 L'assistant point de croix permet la transformation d'une image en remplissage en Point de Croix
 
+Le résultat des différentes étapes de ce tutorial se trouvent dans ce fichier:
 
 ![SVG](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg)
 
@@ -51,7 +52,7 @@ Pour que les zones soient mieux reconnues, j'ai beaucoup augmenté la saturation
 
 Si votre ordinateur le supporte cocher la case Aperçu svg est utile, mais déjà la simple prévisualisation de l'image permet de choisir les paramètres.
 
-Sur cet exemple,  il n'a pas été possible de l'éliminer totalement l'arrière-fond multicolore,.
+Sur cet exemple,  il n'a pas été possible de l'éliminer totalement l'arrière-plan multicolore.
 
 Notez que le nombre de couleurs comprend la couleur de l'arrière fond, qu'il soit supprimé ou non. Ce nombre de couleurs est aussi un maximum, et non une valeur qu'Ink/Stitch atteindra à tout prix.
 
@@ -60,7 +61,7 @@ Le résultat (calque "first result") est une base de travail que l'on peut amél
 ## Amélioration des formes et de la broderie
 - supprimer les parties de l'arrièrre fond qui ont été conservées.
 - rajout des moustaches  et autres poils. Les poils blancs de l'image de départ sont fins et n'ont pas été assez conservés par l'assistant point de croix.
-  Il suffit de les dessiner **au dessus** de l'image obtenue, sans ce soucier de produire  une forme pixelisée. J'ai donc dessiné avec l'outil courbe de beziers des lignes blanches là ou je voulais des poils, j'ai donné une épaisseur de 3 mm a ces traits, j'ai converti leur contour en trait pour obtenir des surfaces étroites.
+  Il suffit de les dessiner **au dessus** de l'image obtenue, sans ce soucier de produire  une forme pixelisée. J'ai donc dessiné avec l'outil courbe de beziers des lignes blanches là ou je voulais des poils, j'ai donné une épaisseur de 3 mm a ces traits, j'ai converti leur contour en chemin (Inkscape > Chemin > Contour en chemin) pour obtenir des surfaces étroites.
   Je sélectionne alors le groupe de Point de Croix et les poils ajoutés, et je relance l'assistant point de croix (j'aime bien dégrouper avant pour un résultat plus ordonné).
 
 Avec une telle image de départ, il est inévitable d'obtenir beaucoup de toutes petites zones (avec seulement une ou deux croix) et beaucoup de formes déconnectées, donc à l'arrivée énormément de sauts ou de coupes de fil.
