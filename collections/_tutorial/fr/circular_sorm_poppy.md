@@ -17,8 +17,6 @@ user-level:
 
 ---
 
-## Pavots en remplissages circulaires, en méandres et selon contours
-
 Ce pavot est brodé dans un mélange de remplissages circulaires, en méandres et selon contour. 
 
 Le plus souvent deux remplissages à basse densité sont superposés.
