@@ -14,8 +14,6 @@ field-of-use:
 user-level:
 ---
 
-## Fur imitation
-
 ![Preview](/assets/images/docs/zigzagmeander_grumpycat.jpg)
 
 Cat's body is a meander fill with zigzag activated. Variegated thread was used to create the color effect.
