@@ -15,9 +15,6 @@ user-level:
 
 ---
 
-## Ripple Stitches Treble Key
-
-
 ![stitchout](/assets/images/tutorials/tutorial-preview-images/cle_de_sol.jpg)
 
 ![SVG](/assets/images/tutorials/samples/cledesol_michele.svg)
