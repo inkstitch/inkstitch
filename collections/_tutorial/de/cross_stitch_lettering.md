@@ -147,7 +147,15 @@ Mit einer Handschriftart wie dieser, erhalten wir keinerlei Sprungstiche.
 
 ### Unverbundene Schriftarten
 
-Für andere, unverbundene Schriftarten ist es wichtig, die Buchstaben gut auf dem Gitter zu platzieren.
+Wir benutzen in diesem Beispiel die Audiowide-Schrift, die ebenfalls auf fonts.google.com zum Download zur Verfügung steht.
+
+Es ist eine Schrift mit annähernd konstanter Breite und ist nicht zu detailreich, was sie zu einer idealen Schrift für diese Übung macht.
+
+![audiowide](/assets/images/tutorials/cross_stitch_lettering/audiowide.jpg)
+
+* In grün dargestellt ist das direkte Ergebnis aus dem Inkscape Textwerkzeug.
+
+Für unverbundene Schriftarten ist es wichtig, die einzelnen Buchstaben gut auf dem Gitter zu platzieren.
 
 Hier eine Schritt für Schritt Anleitung:
 
