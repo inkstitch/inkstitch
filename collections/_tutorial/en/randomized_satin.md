@@ -12,7 +12,6 @@ stitch-type:
   - Ripple Stitch
   - Satin Stitch
 ---
-## Random Satin - Bee
 
 ![Bee](/assets/images/tutorials/randomized_satin/random_satin.jpg)
 
