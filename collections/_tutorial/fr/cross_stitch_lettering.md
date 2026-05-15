@@ -116,9 +116,9 @@ Néanmoins, la pixelisation n'est aucunement obligatoire.
 Il est en fait possible d'utiliser à peu près n'importe quelle fonte. Cela peut même parfois être très simple. 
 
 #### Exemple d'une fonte en lettres attachées
-Utilisons la fonte Good Vibes, elle aussi disponible sur fonts.google.com
+Utilisons la fonte Great Vibes, elle aussi disponible sur fonts.google.com
 
-![good vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
+![great vibes](/assets/images/tutorials/cross_stitch_lettering/good_vibes.jpg)
 
 * En vert, ce que vous obtenez directement avec l'outil texte. Notez comme l'intersection du H et du e n'est pas colorée en noir.
 
