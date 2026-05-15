@@ -87,10 +87,14 @@ def roll_linear_ring(ring, distance, normalized=False):
     """
 
     if not isinstance(ring, LinearRing):
+        # a ring can only be build with at least 4 points, so let's ensure 4 points
+        if len(ring.coords) < 4:
+            length = ring.length
+            ring = ring.segmentize(max_segment_length=length/3)
         # In case they handed us a LineString
         ring = LinearRing(ring)
 
-    pieces = cut(LinearRing(ring), distance, normalized=False)
+    pieces = cut(LinearRing(ring), distance, normalized)
 
     if None in pieces:
         # We cut exactly at the start or end.
@@ -161,7 +165,7 @@ def ensure_multi_polygon(thing: BaseGeometry, min_size=0) -> MultiPolygon:
     return multi_polygon
 
 
-def ensure_multi_point(thing):
+def ensure_multi_point(thing, line_endpoints=False):
     """Given a shapely geometry, return a MultiPoint"""
     multi_point = MultiPoint()
     if thing.is_empty:
@@ -170,6 +174,8 @@ def ensure_multi_point(thing):
         return thing
     elif thing.geom_type == "Point":
         return MultiPoint([thing])
+    elif line_endpoints and thing.geom_type == "LineString":
+        return MultiPoint([ShapelyPoint(thing.coords[0]), ShapelyPoint(thing.coords[-1])])
     elif thing.geom_type == "GeometryCollection":
         points = []
         for shape in thing.geoms:
@@ -177,6 +183,9 @@ def ensure_multi_point(thing):
                 points.append(shape)
             elif shape.geom_type == "MultiPoint":
                 points.extend(shape.geoms)
+            elif line_endpoints and shape.geom_type == "LineString":
+                points.append(ShapelyPoint(shape.coords[0]))
+                points.append(ShapelyPoint(shape.coords[-1]))
         return MultiPoint(points)
     return multi_point
 

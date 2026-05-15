@@ -263,6 +263,7 @@ def stitch_curve_evenly(
 
     i: typing.Optional[int] = 1
     last = points[0]
+    last_real_stitch = points[0]
     stitches: typing.List[Point] = []
     while i is not None and i < len(points):
         d = last.distance(points[i]) + dist_left[i]
@@ -271,14 +272,22 @@ def stitch_curve_evenly(
         # correction for rounding error
         stitch_len = d / math.ceil(d / stitch_length[stitch_length_pos]) + 0.000001
 
+        if last_real_stitch != last and last_real_stitch.distance(last) < stitch_len:
+            stitch_len -= last_real_stitch.distance(last)
+
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
         i = newidx
         if stitch is not None:
             stitches.append(stitch)
+            # when we use this for fill stitch type such as guided fill where rows of lines are visibile,
+            # we do not want to break the stitch pattern through shortcoming stitches
+            # therefore we save the last actual meant to be stitch position and subtract this from the current stitch length
+            if last_real_stitch.distance(stitch) >= stitch_len:
+                last_real_stitch = stitch
+                stitch_length_pos += 1
+                if stitch_length_pos >= len(stitch_length):
+                    stitch_length_pos = 0
             last = stitch
-            stitch_length_pos += 1
-            if stitch_length_pos > len(stitch_length) - 1:
-                stitch_length_pos = 0
     return stitches, stitch_length_pos
 
 
