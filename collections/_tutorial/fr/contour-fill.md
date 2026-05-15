@@ -5,7 +5,6 @@ last_modified_at: 2022-05-23
 language: fr
 excerpt: "Fichier exemple pour le remplissage selon contour"
 image: "/assets/images/tutorials/tutorial-preview-images/contour-fill.jpg"
-
 tutorial-type:
   - Sample File
 stitch-type: 
