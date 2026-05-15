@@ -16,8 +16,6 @@ user-level:
 
 ---
 
-## Papillon en broderie ondulée et remplissages circulaires
-
 Ce papillon presque monochrome, semble paré de plusieurs couleurs grâce à la reflexion de la lumière qui diffère selon les angles de la broderie.
 
 Les zones sont traitées en broderie ondulée, remplissage automatique  ou en remplissage circulaire avec des cibles pour déplacer le centre du remplissage vers le bord des ailes.
