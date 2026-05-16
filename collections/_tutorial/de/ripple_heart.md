@@ -3,7 +3,7 @@ permalink: /de/tutorials/ripple_heart/
 title: "Ripplestich Herz"
 language: de
 last_modified_at: 2026-05-13
-excerpt: "ripple stitch  heart"
+excerpt: "Ein Anwendungsbeispiel für Ripplestiche"
 image: "/assets/images/tutorials/tutorial-preview-images/michele_heart.jpg"
 tutorial-typ:
   - Beispieldatei
@@ -14,9 +14,6 @@ field-of-use:
 user-level:
 
 ---
-
-## Ripplestich Herz
-
 Dieses Herz wurde mit eine Reihe an Ripplestichen erzeugt.
 
 Dabei ist jeder Ripplestich hier eine Kombination aus zwei Pfaden, die wie Satinsäulen aufgebaut sind.

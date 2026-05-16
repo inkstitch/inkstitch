@@ -2,7 +2,7 @@
 permalink: /de/tutorials/circular_sorm_poppy/
 title: "Mohn mit Spiral-, Mäander- und Konturfüllung"
 language: de
-last_modified_at: 2026-05-12
+last_modified_at: 2026-05-13
 excerpt: "Beispieldatei: Mohn mit Spiral-, Mäander- und Konturfüllung"
 image: "/assets/images/tutorials/tutorial-preview-images/sorm_poppy.jpg"
 tutorial-typ:
@@ -16,7 +16,6 @@ field-of-use:
 user-level:
 
 ---
-
 Dieser Mohn ist aus einer Mischung von Spiral-, Mäander-, und Konturfüllung aufgebaut.
 
 Hier kann ein schöner Effekt beobachtet werden, der entsteht, wenn zwei Füllungen mit geringer Dichte übereinander gestickt werden.
@@ -25,6 +24,6 @@ Hier kann ein schöner Effekt beobachtet werden, der entsteht, wenn zwei Füllun
 
 ![SVG](/assets/images/tutorials/samples/Pavot.svg)
 
-[Télécharger](/assets/images/tutorials/samples/Pavot.svg){: download="Pavot.svg" }
+[Download](/assets/images/tutorials/samples/Pavot.svg){: download="Pavot.svg" }
 
 

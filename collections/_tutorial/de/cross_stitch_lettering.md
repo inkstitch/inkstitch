@@ -118,7 +118,7 @@ Das Verpixeln hat daher gleich zwei Vorteile:
 
 Kreuzstiche funktionieren aber auch ohne die Verpixelung der Form.
 
-## Jegliche Schrift benutzen
+## Schriftvielfalt
 
 Es ist tatsächliche möglich, fast jede Schrift auch als Kreuzstich zu nutzen. Das ist manchmal auch gar nicht so schwer.
 

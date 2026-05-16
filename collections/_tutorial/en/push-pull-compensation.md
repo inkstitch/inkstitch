@@ -24,17 +24,16 @@ Push describes fabric being pushed outward, often when dense stitches pack into 
 
 ## Push/Pull Compensation
 
-As the machine embroiders, the stitches pull on the fabric, which can throw off the alignment of stitched elements. To make your design come out the target size, you have to design files to compensate.
-To account for the push/pull effect and make your elements line up correctly, you can either embroider one color on top of another, or embroider two or more adjacent areas, but have the areas overlap.
+Plan the embroidery paths accordingly to the distortion. Cut short on the sides where the pushing is happening and enlarge the shape on the other sides to compensate for the pull effect.
 
 ![Push/Pull Compensation](/assets/images/tutorials/embroidery/push-pull-compensation.svg)
 
-For the actual amount of compensation, there is a lot of things to consider:
+For the actual amount of compensation, there are many influencal factors to consider:
 
 * fabric
 * stabilizer
 * design size
-* stitch type/length/density
+* stitch type, length and density
 * underlay stitches
 * hoop(-ing)
 * machine speed

@@ -1,7 +1,7 @@
 ---
 title: Applikation
 permalink: /de/tutorials/applique/
-last_modified_at: 2022-07-08
+last_modified_at: 2026-05-16
 language: de
 excerpt: "Beispieldatei Applikation"
 image: "/assets/images/tutorials/samples/Applique Color Change.svg"
@@ -15,6 +15,18 @@ techniken:
   - Applikation
 schwierigkeitsgrad: Leicht
 ---
+Applikation ist eine Technik, bei der ein oder mehrere Stoffstücke auf einen größeren Hintergrundstoff aufgenäht werden, um Bilder oder Muster zu erzeugen.
+
+Für größere Flächen kann durch die Anwendung der Applikationstechnik so ein schöner Effekt erzielt werden
+und - was auch kein unerheblicher Faktor ist - jede Menge Garn gespart werden. 
+
+## Übersicht
+
+Deine Datei sollte für die Applikation folgende Pfade beinhalten:
+
+1. Platzierungsstiche. Sie markieren die Position auf der der Stoff aufgelegt werden soll.
+2. Heftstiche. Sie halten den Stoff an der richtigen Stelle.
+3. Deckstiche. Meistens eine Satinsäule. Deckt den Rand des Stoffes ab und hält ihn zusätzlich fest
 
 ## Schritte
 

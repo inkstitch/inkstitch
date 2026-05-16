@@ -1,6 +1,6 @@
 ---
 permalink: /de/tutorials/autoroute_sashiko/
-title: "Sashiko "
+title: "Sashiko"
 language: de
 last_modified_at: 2025-02-17
 excerpt: "Automatisch Geführter Geradstich und Sashiko-Erweiterung"

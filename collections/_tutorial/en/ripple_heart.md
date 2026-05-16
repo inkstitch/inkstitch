@@ -1,5 +1,5 @@
 ---
-permalink: //tutorials/ripple_heart/
+permalink: /tutorials/ripple_heart/
 title: "Ripple Stitch Heart"
 language: en
 last_modified_at: 2026-05-11

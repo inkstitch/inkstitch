@@ -38,7 +38,7 @@ Your file should have the following stitches:
 1. In your file, add a outline run for cutting. Use a basting stitch or a wide running stitch, and match the outline to the appliqué shape. This would be about the same size as the placement stitches, but larger than the tackdown stitches. Confirm the placement stitches and tackdown stitches are present.
 2. The outline, placement stitches and the tackdown stitches should be separate colors so the machine stops between steps.
 3. Hoop the appliqué fabric in your embroidery machine.
-4. Stitch only the outline run onto the appliqué fabric. You don't need stabilizer for this. 
+4. Stitch only the outline run onto the appliqué fabric.
 5. Remove the fabric from your machine and use the stitched outline as the guide to cut out the shape.
 6. Set the precut piece aside.
 7. Hoop your base fabric and start stitching the design, starting with the placement stitch.

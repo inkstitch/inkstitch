@@ -3,7 +3,7 @@ permalink: /de/tutorials/autoroute_life_flower/
 title: "Life Flower"
 language: de
 last_modified_at: 2022-07-09
-excerpt: "Auto route running stitches"
+excerpt: "Automatisch geführte Geradstiche"
 image: "/assets/images/tutorials/life_flower/flower-of-life-two-digitalisation.svg"
 tutorial-typ:
   - Beispieldatei
