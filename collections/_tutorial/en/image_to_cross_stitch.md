@@ -3,7 +3,7 @@ permalink: /tutorials/image_to_cross_stitch/
 title: "From image to Cross Stitch"
 language: en
 last_modified_at: 2026-05-15
-excerpt: "Using the Cross Stitch Helper to convert an Image into Cross Stitches Fill"
+excerpt: "Using the Cross Stitch Helper to convert an Image into Cross Stitch Fills"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_cat.jpg"
 tutorial-type:
 stitch-type:
@@ -15,7 +15,7 @@ field-of-use:
 user-level: 
 ---
 
-The cross stitch helper helps you transform an image into a cross stitch fills.
+The cross stitch helper helps you transform an image into Cross Stitch fills.
 
 The results of this tutorial different steps can be found in this file:
 
