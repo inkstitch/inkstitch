@@ -31,15 +31,19 @@ L'image de départ (à gauche) provient du livre [Muster altdeutscher Leinenstic
 Commencer par utiliser l'assistant point de croix (sans aucun objet sélectionné) pour afficher la grille de la taille souhaitée (2 mm dans le fichier exemple).
 Le jeu consiste maintenant à redimensionner l'image et à la positionner de telle sorte que chaque carré de l'image initiale corresponde bien à une case de la grille affichée.
 
-Notez qu'un rectangle à été utilisé comme découpe pour limiter l'image strictement à la grille.
-
 Une fois l'image correctement dimensionnée et positionnée, utilisez à nouveau l'assistant point de croix pour la conversion de l'image en remplissages en point de croix.
+
+Notez qu'un rectangle à été utilisé comme découpe pour limiter l'image strictement à la grille.
 
 Le plus important est que l'image doit être positionnée très précisement par rapport à la grille, la grille de l'image doit être parfaitement horizontale, et les cellules doivent correspondent impeccablement. 
 En cas de très grand dessin ou d'image légèrement déformée , il peut être plus utile d'utiliser des découpes pour travailler sur des zones plus petites.
+
+Une fois l'image en place, il ne reste plus qu'à utiliser l'assistant point de croix pour convertir l'image.
 ![helper](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_fr.jpg)
 
 Pour ce genre d'image, augmenter très fortement le contraste et la luminosité est une bonne idée. Notez aussi qu'il faut demander deux couleurs, car la couleur d'arrierre-plan doit être prise en compte.
+
+Le résultat final comporte cinq sauts de fils, incontournables puisque l'image est en fait en six morceaux.
 
 Y-a-t-il des sources de grilles plus modernes sur internet ? Oui, mais en très grande majorité se sont des grilles utilisables pour un usage personnel uniquement, ce qui empêche de les utiliser ici. 
 
