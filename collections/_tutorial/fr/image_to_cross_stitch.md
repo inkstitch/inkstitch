@@ -14,7 +14,7 @@ techniques:
 field-of-use:
 user-level: 
 ---
-
+{% include upcoming_release.html %}
 L'assistant point de croix permet la transformation d'une image en remplissage en Point de Croix
 
 Le résultat des différentes étapes de ce tutorial se trouvent dans ce fichier:
