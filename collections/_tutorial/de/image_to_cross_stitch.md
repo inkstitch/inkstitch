@@ -14,7 +14,7 @@ techniques:
 field-of-use:
 user-level: 
 ---
-
+{% include upcoming_release.html %}
 The cross stitch helper helps you transform an image into Cross Stitch fills.
 
 The results of this tutorial different steps can be found in this file:
