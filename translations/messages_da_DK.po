@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-15 03:41+0000\n"
-"PO-Revision-Date: 2026-05-15 03:41\n"
+"POT-Creation-Date: 2026-05-16 03:26+0000\n"
+"PO-Revision-Date: 2026-05-16 03:26\n"
 "Last-Translator: \n"
 "Language-Team: Danish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 03:41+0000\n"
+"POT-Creation-Date: 2026-05-16 03:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1194,7 +1194,7 @@ msgstr ""
 msgid "%(command)s: %(description)s"
 msgstr ""
 
-#: lib/commands.py:368 lib/commands.py:492
+#: lib/commands.py:368 lib/commands.py:495
 msgid "Ink/Stitch Command"
 msgstr ""
 
@@ -1208,7 +1208,7 @@ msgstr ""
 msgid "command marker"
 msgstr ""
 
-#: lib/commands.py:481
+#: lib/commands.py:484
 msgid "Please select a layer to include layer commands."
 msgstr ""
 
@@ -1601,7 +1601,8 @@ msgstr ""
 msgid "Contour Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:169
+#: lib/elements/fill_stitch.py:169 lib/lettering/categories.py:20
+#: inx/inkstitch_lettering_generate_json.inx:60
 msgid "Cross Stitch"
 msgstr ""
 
@@ -5179,10 +5180,6 @@ msgstr ""
 
 #: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:59
 msgid "Applique"
-msgstr ""
-
-#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:60
-msgid "Crossstitch"
 msgstr ""
 
 #: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:61

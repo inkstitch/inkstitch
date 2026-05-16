@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-15 03:41+0000\n"
-"PO-Revision-Date: 2026-05-15 03:41\n"
+"POT-Creation-Date: 2026-05-16 03:26+0000\n"
+"PO-Revision-Date: 2026-05-16 03:26\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 03:41+0000\n"
+"POT-Creation-Date: 2026-05-16 03:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1197,7 +1197,7 @@ msgstr "Fout: er is meer dan één %(command)s in het document, maar er kan er s
 msgid "%(command)s: %(description)s"
 msgstr "%(command)s: %(description)s"
 
-#: lib/commands.py:368 lib/commands.py:492
+#: lib/commands.py:368 lib/commands.py:495
 msgid "Ink/Stitch Command"
 msgstr "Ink/Stitch Commando"
 
@@ -1211,7 +1211,7 @@ msgstr "verbinding"
 msgid "command marker"
 msgstr "commando symbool"
 
-#: lib/commands.py:481
+#: lib/commands.py:484
 msgid "Please select a layer to include layer commands."
 msgstr "Selecteer een laag om laag opdrachten op te nemen."
 
@@ -1604,7 +1604,8 @@ msgstr "Circulaire vulling"
 msgid "Contour Fill"
 msgstr "Contour vulling"
 
-#: lib/elements/fill_stitch.py:169
+#: lib/elements/fill_stitch.py:169 lib/lettering/categories.py:20
+#: inx/inkstitch_lettering_generate_json.inx:60
 msgid "Cross Stitch"
 msgstr "Kruissteek"
 
@@ -5215,10 +5216,6 @@ msgstr "Er is een fout opgetreden bij het renderen van het steekplan:"
 #: lib/lettering/categories.py:19 inx/inkstitch_lettering_generate_json.inx:59
 msgid "Applique"
 msgstr "Appliqué"
-
-#: lib/lettering/categories.py:20 inx/inkstitch_lettering_generate_json.inx:60
-msgid "Crossstitch"
-msgstr "Kruissteek"
 
 #: lib/lettering/categories.py:21 inx/inkstitch_lettering_generate_json.inx:61
 #: inx/inkstitch_troubleshoot.inx:9
