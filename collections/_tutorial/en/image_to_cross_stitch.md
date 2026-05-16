@@ -7,82 +7,91 @@ excerpt: "Using the Cross Stitch Helper to convert an Image into Cross Stitches 
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_cat.jpg"
 tutorial-type:
 stitch-type:
-  - Cross Stitch
+ - Cross Stitch
 tool:
-  - Fill
+ - Fill
 techniques:
 field-of-use:
 user-level: 
 ---
 
-L'assistant point de croix permet la transformation d'une image en remplissage en Point de Croix
+The cross stitch helper helps you transform an image into a cross stitch fills.
 
-Le résultat des différentes étapes de ce tutorial se trouvent dans ce fichier:
+The results of this tutorial different steps can be found in this file:
+
 
 ![SVG](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg)
 
 [Télécharger ](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg){: download="pawpedia.svg" }
 
 
+## Starting Image
 
+The process will be simpler and more efficient if the image is simple, with few colors and clearly defined color areas.
+The simplier the original image, the less you will have to work to tweat the helper results.
 
-
-## Image de départ
-
-Le processus sera d'autant plus simple et efficace que l'image sera simple, avec peu de couleurs, et des zones de couleurs bien démarquées. 
-Nous allons partir de cette image proposée par Pawpedia sur  [Pixabay](https://pixabay.com/de/illustrations/image-10216974), sous licence pixabay, permettant la création d'oeuvre dérivée. 
+We will start with this image provided by Pawpedia on [Pixabay](https://pixabay.com/de/illustrations/image-10216974), licensed by Pixabay, which allows the creation of derivative works.
 
 ![chat](/assets/images/tutorials/image_to_cross_stitch/pawpedia-reduced-10216974.png)
 
-Il faut décider de deux dimensions :
+You need to decide:
 
-- la taille souhaitée pour la broderie (180 mm dans l'exemple), et réduire l'image a cette taille
-- la taille des croix (2 mm dans l'exemple)
+- the desired size for the embroidery (180 mm in the example), and then reduce the image to this size
+- the size of the cross stitches (2 mm in the example)
 
 
-## Utilisation de l'assistant point de croix pour générer des remplissages
-Sélectionner l'image et Ink/Stitch > Outils: Remplissage > Assistant point de croix
+## Using the Cross Stitch Helper to generate Cross Stitch Fills
 
-- Dans l'onglet paramètres :
-      - Rétablir les valeurs par défaut
-      - Choisir l'espacement horizontal de la grille
-- Puis dans l'onglet Paramètres de l'image matricielle, jouer avec les divers paramètres pour obtenir un résultat satisfaisant
-![chat](/assets/images/tutorials/image_to_cross_stitch/cat_settings.jpg)
+Select the image and go to Ink/Stitch > Tools: Fill > Cross Stitch Hetter
 
-Pour que les zones soient mieux reconnues, j'ai beaucoup augmenté la saturation, modifiant ce faisant les couleurs originelles.
+- In the Parameters tab:
 
-Si votre ordinateur le supporte cocher la case Aperçu svg est utile, mais déjà la simple prévisualisation de l'image permet de choisir les paramètres.
+  - Restore the default values
+  
+  - Choose the horizontal grid spacing
+- Then, in the Bitmap Image Settings tab, experiment with the various parameters to achieve a satisfactory result.
 
-Sur cet exemple,  il n'a pas été possible de l'éliminer totalement l'arrière-plan multicolore.
+[cat](/assets/images/tutorials/image_to_cross_stitch/cat_settings.jpg)
 
-Notez que le nombre de couleurs comprend la couleur de l'arrière fond, qu'il soit supprimé ou non. Ce nombre de couleurs est aussi un maximum, et non une valeur qu'Ink/Stitch atteindra à tout prix.
+To make the areas more easily recognizable, I significantly increased the saturation, thereby altering the original colors.
 
-Le résultat (calque "first result") est une base de travail que l'on peut améliorer. 
+If your computer supports it, checking the SVG Preview box is helpful, but simply previewing the image allows you to choose the settings.
 
-## Amélioration des formes et de la broderie
-- supprimer les parties de l'arrièrre fond qui ont été conservées.
-- rajout des moustaches  et autres poils. Les poils blancs de l'image de départ sont fins et n'ont pas été assez conservés par l'assistant point de croix.
-  Il suffit de les dessiner **au dessus** de l'image obtenue, sans ce soucier de produire  une forme pixelisée. J'ai donc dessiné avec l'outil courbe de beziers des lignes blanches là ou je voulais des poils, j'ai donné une épaisseur de 3 mm a ces traits, j'ai converti leur contour en chemin (Inkscape > Chemin > Contour en chemin) pour obtenir des surfaces étroites.
-  Je sélectionne alors le groupe de Point de Croix et les poils ajoutés, et je relance l'assistant point de croix (j'aime bien dégrouper avant pour un résultat plus ordonné).
+In this example, it wasn't possible to completely remove the multicolored background.
 
-  Le fait de relancer l'assistant point de croix (avec les options pixeliser et supprimer les superpositions cochées), permet de recalculer de nouvelles formes pixelisées qui permettent de bien voir ou l'on en est.
-  Au cours du processus d'amélioration, on peut être ammené à utiliser l'assistant plusieurs fois.
+Note that the number of colors includes the background color, whether it's removed or not. This number of colors is also a maximum, not a value that Ink/Stitch will always reach.
 
-Avec une telle image de départ, il est inévitable d'obtenir beaucoup de toutes petites zones (avec seulement une ou deux croix) et beaucoup de formes déconnectées, donc à l'arrivée énormément de sauts ou de coupes de fil.
+The result (the "first result" layer) is a starting point that can be improved.
 
-- pour les toutes petites zones, je modifie leur couleur pour leur donner la couleur d'une zone adjacente : pour cela sélectionner la petite zone, puis sélectionner l'outil pipette et cliquer dans une zone adjacente.
-- j'essaye de fusionner des zones de couleurs identiques quasi adjacentes. Notez qu'il suffit que deux zones de même couleur se touchent par un coin pour qu'elles puissent être fusionnées. Cela peut se faire soit par déformation des formes existantes soit simplement en dessinant par dessus les formes existantes.
+## Improving Shapes and Embroidery
 
-Après avoir un résultat visuellement satisfaisant, ne pas oublier de tout selectionner et relancer l'assistant point de croix afin que les zones adjacents de même couleur soient fusionnées.
+- Remove the unwanted background parts.
 
-Il faut trouver un compromis entre le respect de l'image initiale, et la simplification de la broderie.
+- Add whiskers and other hairs. The white hairs in the original image are not large enough for the cross stitch assistant do keep them.
+Simply redraw them **on top** of the cross stitch shapes, without worrying about creating a pixelated shape. So, using the Bézier curve tool, I drew white lines where I wanted hairs, gave these lines a thickness of 3 mm, and converted their outlines to paths (Inkscape > Path > Outline to Path) to obtain narrow areas.
 
-Le résultat se trouve dans le calque "tweaking the shapes"
+I then select the wholecross stitch group plus the added hairs, and relaunch the cross stitch assitant (I like to ungroup beforehand for a neater result).
 
-## Choisir les couleurs de la broderie
-Avant de broder, on peut si on le souhaite choisir des couleurs plus proches de celles de l'image d'origine, tout en se limitant aux couleurs de sa palette de fil préférée.
-Le résultat final est dans le calque "changing_colors"
+Re-using the cross-stitch assistant (with the pixelate and remove overlays options checked) allows you to recalculate new pixelated shapes, making it easy to see your progress.
 
+During the improvement process, you may need to use the assistant several times.
+
+With such a starting image, it's inevitable to end up with many very small areas (with only one or two cross stitches) and many disconnected shapes, resulting in a lot of jumps or thread trims.
+
+- For the very small areas, I like to change their color to match an adjacent area: to do this, select the small area, then select the eyedropper tool and click in an adjacent area.
+
+- I try to merge areas of the same color that are almost adjacent. Note that two areas of the same color only need to touch at a corner to be merged. This can be done either by distorting existing shapes or simply by drawing something connecting them on top the cross stitch fills.
+
+After achieving a visually pleasing result, remember to select everything and re-use the cross stitch assistant so that adjacent areas of the same color are merged.
+
+You need to find a balance between preserving the original image and simplifying the embroidery.
+
+The result can be found in the "tweaking the shapes" layer.
+
+## Choosing final embroidery colors
+You can, if you wish, choose colors closer to those of the original image, while limiting yourself to the colors in your preferred thread palette.
+
+The final result is in the "changing_colors" layer.
 
 
 
