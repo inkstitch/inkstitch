@@ -14,7 +14,7 @@ techniques:
 field-of-use:
 user-level: 
 ---
-
+{% include upcoming_release.html %}
 There are many cross-stitch chart resources available for hand embroidery.
 
 If you have permission to use these charts, you can use the cross-stitch assistant to adapt them for machine embroidery.
