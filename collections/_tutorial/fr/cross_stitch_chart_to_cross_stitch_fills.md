@@ -19,7 +19,7 @@ Il existe de très nombreuses ressources de grilles de points croix prévues pou
 Si vous avez le libre usage de ces grilles, vous pouvez utiliser l'assistant point de croix pour les transformer en broderie machine.
 
 
-Le résultat des différentes étapes de ce tutoriel se trouvent dans ce fichier :
+Les résultats des différentes étapes de ce tutoriel se trouvent dans ce fichier :
 
 ![old bird](/assets/images/tutorials/tutorial-preview-images/cross_stitch_chart_to_fills.jpg)
 
@@ -35,7 +35,7 @@ Une fois l'image correctement dimensionnée et positionnée, utilisez à nouveau
 
 Notez qu'un rectangle a été utilisé comme découpe pour limiter l'image strictement à la grille.
 
-Le plus important est que l'image doit être positionnée très précisement par rapport à la grille, la grille de l'image doit être parfaitement horizontale, et les cellules doivent correspondent impeccablement. 
+Le plus important est que l'image doit être positionnée très précisement par rapport à la grille, la grille de l'image doit être parfaitement horizontale, et les cellules doivent correspondre impeccablement. 
 En cas de très grand dessin ou d'image légèrement déformée , il peut être utile d'utiliser des découpes pour travailler sur des zones plus petites.
 
 Une fois l'image en place, il ne reste plus qu'à utiliser l'assistant point de croix pour convertir l'image.
