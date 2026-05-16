@@ -1,5 +1,5 @@
 ---
-permalink: /en/tutorials/cross_stitch_chart_to_cross_stitch_fills/
+permalink: /tutorials/cross_stitch_chart_to_cross_stitch_fills/
 title: "From hand cross stitch embroidery chart to cross stitch fills"
 language: en
 last_modified_at: 2026-05-15
