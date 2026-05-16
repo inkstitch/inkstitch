@@ -36,7 +36,7 @@ Une fois l'image correctement dimensionnée et positionnée, utilisez à nouveau
 Notez qu'un rectangle à été utilisé comme découpe pour limiter l'image strictement à la grille.
 
 Le plus important est que l'image doit être positionnée très précisement par rapport à la grille, la grille de l'image doit être parfaitement horizontale, et les cellules doivent correspondent impeccablement. 
-En cas de très grand dessin ou d'image légèrement déformée , il peut être plus utile d'utiliser des découpes pour travailler sur des zones plus petites.
+En cas de très grand dessin ou d'image légèrement déformée , il peut être utile d'utiliser des découpes pour travailler sur des zones plus petites.
 
 Une fois l'image en place, il ne reste plus qu'à utiliser l'assistant point de croix pour convertir l'image.
 ![helper](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_fr.jpg)
