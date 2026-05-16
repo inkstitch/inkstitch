@@ -30,9 +30,8 @@ The results of this tutorial different steps can be found in this file:
 The process will be simpler and more efficient if the image is simple, with few colors and clearly defined color areas.
 The simplier the original image, the less you will have to work to tweat the helper results.
 
-We will start with this image provided by Pawpedia on [Pixabay](https://pixabay.com/de/illustrations/image-10216974), licensed by Pixabay, which allows the creation of derivative works.
+The starting image (top left above) is by Pawpedia on [Pixabay](https://pixabay.com/de/illustrations/image-10216974), licensed by Pixabay, which allows the creation of derivative works.
 
-![chat](/assets/images/tutorials/image_to_cross_stitch/pawpedia-reduced-10216974.png)
 
 You need to decide:
 
