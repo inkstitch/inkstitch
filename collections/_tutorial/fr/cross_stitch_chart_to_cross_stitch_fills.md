@@ -19,7 +19,7 @@ Il existe de très nombreuses ressources de grilles de points croix prévues pou
 Si vous avez le libre usage de ces grilles, vous pouvez utiliser l'assistant point de croix pour les transformer en broderie machine.
 
 
-Le résultat des différentes étapes de ce tutorial se trouvent dans ce fichier:
+Le résultat des différentes étapes de ce tutoriel se trouvent dans ce fichier :
 
 ![old bird](/assets/images/tutorials/tutorial-preview-images/cross_stitch_chart_to_fills.jpg)
 
@@ -33,7 +33,7 @@ Le jeu consiste maintenant à redimensionner l'image et à la positionner de tel
 
 Une fois l'image correctement dimensionnée et positionnée, utilisez à nouveau l'assistant point de croix pour la conversion de l'image en remplissages en point de croix.
 
-Notez qu'un rectangle à été utilisé comme découpe pour limiter l'image strictement à la grille.
+Notez qu'un rectangle a été utilisé comme découpe pour limiter l'image strictement à la grille.
 
 Le plus important est que l'image doit être positionnée très précisement par rapport à la grille, la grille de l'image doit être parfaitement horizontale, et les cellules doivent correspondent impeccablement. 
 En cas de très grand dessin ou d'image légèrement déformée , il peut être utile d'utiliser des découpes pour travailler sur des zones plus petites.
@@ -41,14 +41,10 @@ En cas de très grand dessin ou d'image légèrement déformée , il peut être 
 Une fois l'image en place, il ne reste plus qu'à utiliser l'assistant point de croix pour convertir l'image.
 ![helper](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_fr.jpg)
 
-Pour ce genre d'image, augmenter très fortement le contraste et la luminosité est une bonne idée. Notez aussi qu'il faut demander deux couleurs, car la couleur d'arrierre-plan doit être prise en compte.
+Pour ce genre d'image, augmenter très fortement le contraste et la luminosité est une bonne idée. Notez aussi qu'il faut demander deux couleurs, car la couleur d'arrière-plan doit être prise en compte.
 
 Le résultat final comporte cinq sauts de fils, incontournables puisque l'image est en fait en six morceaux.
 
-Y-a-t-il des sources de grilles plus modernes sur internet ? Oui, mais en très grande majorité se sont des grilles utilisables pour un usage personnel uniquement, ce qui empêche de les utiliser ici. 
+Y a-t-il des sources de grilles plus modernes sur internet ? Oui, mais en très grande majorité ce sont des grilles utilisables pour un usage personnel uniquement, ce qui empêche de les utiliser ici. 
 
-Si vous avez une grille sous forme de fichier pdf, pensez à ouvrir le pdf avec inkscape (vous pourrez vous limiter à une seule page dans le menu d'importation), vous pourrez aussi de ne pas importer les textes, et parfois vous aurez la bonne surprise de pouvoir éliminer beaucoup d'éléments inutiles pour vous dans le fichier. 
-
-
-
-
+Si vous avez une grille sous forme de fichier PDF, pensez à ouvrir le PDF avec Inkscape (vous pourrez vous limiter à une seule page dans le menu d'importation), vous pourrez aussi de ne pas importer les textes, et parfois, vous aurez la bonne surprise de pouvoir éliminer beaucoup d'éléments inutiles pour vous dans le fichier. 
