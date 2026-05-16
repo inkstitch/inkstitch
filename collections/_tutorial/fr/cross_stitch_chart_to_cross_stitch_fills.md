@@ -14,7 +14,7 @@ techniques:
 field-of-use:
 user-level: 
 ---
-
+{% include upcoming_release.html %}
 Il existe de très nombreuses ressources de grilles de points croix prévues pour une broderie manuelle.
 Si vous avez le libre usage de ces grilles, vous pouvez utiliser l'assistant point de croix pour les transformer en broderie machine.
 
