@@ -2,7 +2,7 @@
 permalink: /fr/tutorials/zigzag-meander-fill/
 title: "Utilisation du remplissage en méandre pour simuler de la fourrure"
 language: fr
-last_modified_at: 2024-05-04
+last_modified_at: 2026-05-16
 excerpt: "Le corps du chat est un remplissage en méandre avec le point de zigzag activé"
 image: "/assets/images/docs/zigzagmeander_grumpycat.jpg"
 tutorial-type:
