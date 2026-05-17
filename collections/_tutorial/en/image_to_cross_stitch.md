@@ -69,7 +69,7 @@ The result (the "first result" layer) is a starting point that can be improved.
 - Add whiskers and other hairs. The white hairs in the original image are not large enough for the cross stitch assistant do keep them.
 Simply redraw them **on top** of the cross stitch shapes, without worrying about creating a pixelated shape. So, using the Bézier curve tool, I drew white lines where I wanted hairs, gave these lines a thickness of 3 mm, and converted their outlines to paths (Inkscape > Path > Outline to Path) to obtain narrow areas.
 
-I then select the wholecross stitch group plus the added hairs, and relaunch the cross stitch assitant (I like to ungroup beforehand for a neater result).
+I then select the wholecross stitch group plus the added hairs, and relaunch the cross stitch assitant.
 
 Re-using the cross-stitch assistant (with the pixelate and remove overlays options checked) allows you to recalculate new pixelated shapes, making it easy to see your progress.
 
