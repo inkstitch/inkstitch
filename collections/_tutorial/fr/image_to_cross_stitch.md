@@ -61,7 +61,7 @@ Le résultat (calque "first result") est une base de travail que l'on peut amél
 - supprimer les parties de l'arrièrre-plan qui ont été conservées.
 - rajout des moustaches et autres poils. Les poils blancs de l'image de départ sont fins et n'ont pas été assez conservés par l'assistant point de croix.
  Il suffit de les dessiner **au-dessus** de l'image obtenue, sans se soucier de produire une forme pixelisée. J'ai donc dessiné avec l'outil courbe de beziers des lignes blanches là où je voulais des poils, j'ai donné une épaisseur de 3 mm a ces lignes, j'ai converti leur contour en chemin (Inkscape > Chemin > Contour en chemin) pour obtenir des surfaces étroites.
- Je sélectionne alors le groupe de Point de Croix et les poils ajoutés, et je relance l'assistant point de croix (j'aime bien dégrouper avant pour un résultat plus ordonné).
+ Je sélectionne alors le groupe de Point de Croix et les poils ajoutés, et je relance l'assistant point de croix.
 
  Le fait de relancer l'assistant point de croix (avec les options pixeliser et supprimer les superpositions cochées), permet de recalculer de nouvelles formes pixelisées et de  bien voir où l'on en est.
  Au cours du processus d'amélioration, on peut être amené à utiliser l'assistant plusieurs fois.
