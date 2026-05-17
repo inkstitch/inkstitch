@@ -1,97 +1,104 @@
 ---
 permalink: /de/tutorials/image_to_cross_stitch/
-title: "From image to Cross Stitch"
+title: "Vom Bild zum Kreuzstich"
 language: de
-last_modified_at: 2026-05-15
-excerpt: "Using the Cross Stitch Helper to convert an Image into Cross Stitch Fills"
+last_modified_at: 2026-05-17
+excerpt: "Mit dem Kreuzsich-Helfer ein Bild in Kreuzstichfüllungen umwandeln"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_cat.jpg"
 tutorial-type:
 stitch-type:
- - Cross Stitch
+ - Kreuzstich
 tool:
- - Fill
+ - Füllung
 techniques:
 field-of-use:
 user-level: 
 ---
 {% include upcoming_release.html %}
-The cross stitch helper helps you transform an image into Cross Stitch fills.
+Der Kreuzstich-Helfer ist eine große Hilfe, wenn es darum geht, Bilder in Kreuzstich-Füllungen umzuwandeln.
 
-The results of this tutorial different steps can be found in this file:
-
+Da Ergebnis der in diesem Tutorial beschriebenen Schritte, befindet sich in dieser Datei:
 
 ![SVG](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg)
 
-[Télécharger ](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg){: download="pawpedia.svg" }
+[Herunterladen](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg){: download="pawpedia.svg" }
 
 
-## Starting Image
+## Ursprungsbild
 
-The process will be simpler and more efficient if the image is simple, with few colors and clearly defined color areas.
-The simplier the original image, the less you will have to work to tweat the helper results.
+Der Prozess wird einfache und effizienter sein, wenn das Bild einfach ist, d.h. wenige Farben enthält und klar abgegrenzte Farbbereiche aufweist.
 
-The starting image (top left above) is by Pawpedia on [Pixabay](https://pixabay.com/de/illustrations/image-10216974), licensed by Pixabay, which allows the creation of derivative works.
+Je einfacher da Ursprunsbild, desto weniger Nacharbeit ist am Ende erforderlich.
 
+In diesem Tutorial verwenden wir als Ursprungsbild ein Bild von Pawpedia auf [Pixabay](https://pixabay.com/de/illustrations/image-10216974).
+Es ist lizensiert von Pixabay und erlaubt Modifikationen. 
 
-You need to decide:
+Zunächst müssen folgende Parameter festgelegt werden:
 
-- the desired size for the embroidery (180 mm in the example), and then reduce the image to this size
-- the size of the cross stitches (2 mm in the example)
+- Skaliere da Bild auf die gewünschte Größe der gesamten Stickerei (180 mm x 270 mm in diesem Beispiel)
+- Überlege schon jetzt, wie groß die Kreuze werden sollen (2 mm in diesem Beispiel)
 
+## Mit dem Kreuzstich-Helfer die Kreuzstich-Füllungen ersellen
 
-## Using the Cross Stitch Helper to generate Cross Stitch Fills
+Wähle das Bild aus und öffne den Kreuzsich-Helfer (`Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzsich-Helfer`)
 
-Select the image and go to Ink/Stitch > Tools: Fill > Cross Stitch Hetter
+- Im Einstellungs-Tab:
+  - Setze die Werte auf die Standarteinstellungen zurück (unten links)
+  - Setze den horizontalen Gitterabstand (hier: 2 mm)
+- Experimentiere im Bitmap-Einstellungs-Tab mit den verschiedenen Parametern, bis du mit dem Ergebnis zufrieden bist.
 
-- In the Parameters tab:
+  ![cat](/assets/images/tutorials/image_to_cross_stitch/de/cat_settings.jpg)
 
-  - Restore the default values
-  
-  - Choose the horizontal grid spacing
-- Then, in the Bitmap Image Settings tab, experiment with the various parameters to achieve a satisfactory result.
+  Um die Farbregionen einfacher erkennbar zu machen, habe ich hier die Sättigung hoch eingestellt, was die Ursprungsfarben abändert.
 
-[cat](/assets/images/tutorials/image_to_cross_stitch/cat_settings.jpg)
+  Wenn dein Computer nicht zu langsam ist, ist es hilfreich die SVG-Vorschau zu aktivieren.
+  Aber auch die Vorschau des einfachen Bildes hilft bereits die richtigen Farbeinstellungen zu finden.
 
-To make the areas more easily recognizable, I significantly increased the saturation, thereby altering the original colors.
+  In diesem Beispiel war es nicht möglich, den mehrfarbigen Hintergrund komplett zu entfernen.
 
-If your computer supports it, checking the SVG Preview box is helpful, but simply previewing the image allows you to choose the settings.
+  Beachte, dass die Anzahl der Farben, die Farben der Hintergrundfarbe miteinschließt, egal ob, ob sie entfernt wird oder nicht.
+  Die Zahl ist außerdem nur eine Maximalangabe. Abhängig vom Urprungsbild wird Ink/Stitch wird nicht immer genau diese Anzahl an Farben einfügen.
 
-In this example, it wasn't possible to completely remove the multicolored background.
+Das Ergebnis ("first_result" Ebene) ist ein Anfangspunkt für weitere Verbesserungen.
 
-Note that the number of colors includes the background color, whether it's removed or not. This number of colors is also a maximum, not a value that Ink/Stitch will always reach.
+## Formen und Stickerei verbessern
 
-The result (the "first result" layer) is a starting point that can be improved.
+- Entferne die unerwünschten Bereiche des Hintergundes.
 
-## Improving Shapes and Embroidery
+- Füge Schnurrhaare und andere Haare hinzu. Die weißen Haar im Originalbild sind nicht breit genug und werden vom Kreuzstich-Helfer nicht berücksichtigt.
 
-- Remove the unwanted background parts.
+  Zeichne die Haare dabei mit dem Bézier-Werkzeg (Zeichenwerkzeug) **über** die Kreuzsich-Füllungen. Kümmere dich dabei noch nicht um die Pixel.
+  Ich nutze dabei ein Konturbreite von 3 mm. Anschließend konvertiere ich die Pfade in Füllungen (`Pfad > Kontur in Pfad umwandeln`).
 
-- Add whiskers and other hairs. The white hairs in the original image are not large enough for the cross stitch assistant do keep them.
-Simply redraw them **on top** of the cross stitch shapes, without worrying about creating a pixelated shape. So, using the Bézier curve tool, I drew white lines where I wanted hairs, gave these lines a thickness of 3 mm, and converted their outlines to paths (Inkscape > Path > Outline to Path) to obtain narrow areas.
+  Nun wähle ich sowohl die gezeichneten Haare, als auch die Gruppe mit den Kreuzsich-Füllungen des restlichen Bildes aus und öffne den Kreuzstich-Helfe erneut.
 
-I then select the wholecross stitch group plus the added hairs, and relaunch the cross stitch assitant (I like to ungroup beforehand for a neater result).
+  Mit Hilfe des Kreuzstich-Helfers wollen wir nun die Haare mit dem reslichen Bild vereinen.
+  Hierzu aktiviere unter den Augabe-Optionen `Verpixeln` und `Überlappungn entfernen`.
+  Mit diesem Einstellungen werden die gesamtn Formen neu berechnet und ohne Übershneidungen ausgegeben.
 
-Re-using the cross-stitch assistant (with the pixelate and remove overlays options checked) allows you to recalculate new pixelated shapes, making it easy to see your progress.
+Während des Verbesserungsprozesses, wirst den den Kreuzstich-Helfer imme wieder nutzen.
 
-During the improvement process, you may need to use the assistant several times.
+Mit diesem Ursprungsbild is es unvermeidbar, dass sehr kleine Farbregionen entstehen (mit nur einem ode zwei Pixeln).
+Da bedeutet, es entstehen unvebundene Formen, die wiederrum viele Sprungsiche oder Fadenshnitte hervorrufen.
 
-With such a starting image, it's inevitable to end up with many very small areas (with only one or two cross stitches) and many disconnected shapes, resulting in a lot of jumps or thread trims.
+- Für sehr kleine Farbregionen setze ich gerne eine Fabe die bereits in den anrenzenden Feldern vorhanden ist:
+  wähle die kleine Fabregion aus, dann aktivire die Fabpipette (`D`) und klicke auf ein angrenzendes Feld.
 
-- For the very small areas, I like to change their color to match an adjacent area: to do this, select the small area, then select the eyedropper tool and click in an adjacent area.
+- Ich versuche Felde gleicher Fabe zu vebinden, wenn sie fast angrenzend sind.
+  Für die meisten Kreuzsicharten ist es ausreichend, wenn sich die Felder an nur einr Ecke berühren.
 
-- I try to merge areas of the same color that are almost adjacent. Note that two areas of the same color only need to touch at a corner to be merged. This can be done either by distorting existing shapes or simply by drawing something connecting them on top the cross stitch fills.
+  Dies kann erreicht werden, indem bereits exisierende Formen angepasst werden oder indem ein verbindendes Element oberhalb der Kreuzsich-Füllungen hinzugefügt wird.
 
-After achieving a visually pleasing result, remember to select everything and re-use the cross stitch assistant so that adjacent areas of the same color are merged.
+Nachdem ein visuell zufriedenstellendes Ergbnis erzielt wurde, denke daran, alles auszuwählen und die Formen mit dem Kreuzstich-Helfer neu zu berechnen.
+Somit werden Regionen gleiche Fabe zu eine Form zusammengefügt.
 
-You need to find a balance between preserving the original image and simplifying the embroidery.
+Es muss dabei eine gute ein Balance zwischen dem visuellen Eindruck im Vergleich zum Originalbild und de Vereinfachung für die Stickerei gefunden werden.
 
-The result can be found in the "tweaking the shapes" layer.
+Das Ergebnis dieses Schrittes befindet sich in der Ebene mit dem Name `tweaking the shapes`.
 
-## Choosing final embroidery colors
-You can, if you wish, choose colors closer to those of the original image, while limiting yourself to the colors in your preferred thread palette.
+## Die endgültigen Farben festlegen
 
-The final result is in the "changing_colors" layer.
+Wenn du magst, kannst du ketzt noch die Farben so festlegen, dass sie mehr dem Originalbild entspechen.
+Dabei macht es Sinn, sich auf die Farben zu beschränken, die deiner vorhandnen Garnfarbenpalette entsprechen.
 
-
-
-
+Das Endergebnis ist in der Ebene `changing_colors` ersichtlich.
