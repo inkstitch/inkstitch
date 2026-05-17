@@ -30,7 +30,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Apex simple small AGS](/fonts/apex/)
 
   ![Apex simple small](/assets/images/fonts/apex_simple_small_AGS.png)
-* [Apesplit](/fonts/apespit/)
+* [Apesplit](/fonts/apesplit/)
 
   ![Apesplit](/assets/images/fonts/apesplit.jpg)
 * [Barstitch crosses](/fonts/barstitch_bold/)
@@ -65,7 +65,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Jacquard 12](/fonts/jacquard_12/)
 
   ![Jacquard 12](/assets/images/fonts/jacquard12.png)
-* [Jacquarda Bastarda 9](/fonts/jacquarda_basttarda_9/)
+* [Jacquarda Bastarda 9](/fonts/jacquarda_bastarda_9/)
 
   ![Jacquarda Bastarda 9J](/assets/images/fonts/jacquarda_bastarda.png)
 * [Jersey 15](/fonts/jersey_15/)
@@ -96,7 +96,7 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Precious](/fonts/precious/)
 
   ![Precious](/assets/images/fonts/precious.jpg)
-* [Priscilla](/fonts/priscillaa/)
+* [Priscilla](/fonts/priscilla/)
 
   ![Priscilla](/assets/images/fonts/priscilla.png)
 * [Venezia](/fonts/venezia/)

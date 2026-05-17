@@ -1,6 +1,6 @@
 ---
 title: "Heavenly"
-permalink: /fonts/heavenly
+permalink: /fonts/heavenly/
 last_modified_at: 2026-03-27
 toc: false
 preview_image:

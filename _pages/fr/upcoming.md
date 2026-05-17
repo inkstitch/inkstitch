@@ -32,7 +32,7 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Apex simple small AGS](/fr/fonts/apex/)
 
   ![Apex simple small](/assets/images/fonts/apex_simple_small_AGS.png)
-* [Apesplit](/fr/fonts/apespit/)
+* [Apesplit](/fr/fonts/apesplit/)
     
   ![Apesplit](/assets/images/fonts/apesplit.jpg)
 * [Barstitch crosses](/fr/fonts/barstitch_bold/)
@@ -66,7 +66,7 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Jacquard 12](/fr/fonts/jacquard_12/)
 
   ![Jacquard 12](/assets/images/fonts/jacquard12.png)
-* [Jacquarda Bastarda 9](/fr/fonts/jacquarda_basttarda_9/)
+* [Jacquarda Bastarda 9](/fr/fonts/jacquarda_bastarda_9/)
 
   ![Jacquarda Bastarda 9J](/assets/images/fonts/jacquarda_bastarda.png)
 * [Jersey 15](/fr/fonts/jersey_15/)
@@ -96,7 +96,7 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Precious](/fr/fonts/precious/)
 
   ![Precious](/assets/images/fonts/precious.jpg)
-* [Priscilla](/fr/fonts/priscillaa/)
+* [Priscilla](/fr/fonts/priscilla/)
 
   ![Priscilla](/assets/images/fonts/priscilla.png)
 * [Venezia](/fr/fonts/venezia/)

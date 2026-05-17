@@ -1,6 +1,6 @@
 ---
 title: "Very Crossy"
-permalink: /fr/fonts/very_crossy
+permalink: /fr/fonts/very_crossy/
 last_modified_at: 2026-04-05
 toc: false
 preview_image:
