@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-05-16 03:26+0000\n"
-"PO-Revision-Date: 2026-05-16 03:26\n"
+"PO-Revision-Date: 2026-05-17 03:40\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -4078,7 +4078,7 @@ msgstr "Kontrast"
 
 #: lib/gui/cross_stitch_helper.py:337
 msgid "Removes pixels with a higher transparency value than this from the original image."
-msgstr ""
+msgstr "Entfernt Pixel mit einem hohen Transparenzwert."
 
 #: lib/gui/cross_stitch_helper.py:338
 msgid "Transparency threshold (%)"
