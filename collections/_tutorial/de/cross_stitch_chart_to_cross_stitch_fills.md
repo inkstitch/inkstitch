@@ -1,56 +1,61 @@
 ---
 permalink: /de/tutorials/cross_stitch_chart_to_cross_stitch_fills/
-title: "From hand cross stitch embroidery chart to cross stitch fills"
+title: "Von einer Kreuzstichvorlage für Handstickerei zu Kreuzstich-Füllungen"
 language: de
 last_modified_at: 2026-05-15
-excerpt: "Using the cross stitch assistant to convert a cross stitch chart intended for hand embroidery"
+excerpt: "Mit Hilfe des Kreuzsich-Helfers eine Vorlage für Kreuzstichmuster für das Maschinensticken aufbereiten"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_chart_to_fills.jpg"
 tutorial-type:
 stitch-type:
- - Cross Stitch
+ - Kreuzstich
 tool:
- - Fill
+ - Füllung
 techniques:
 field-of-use:
 user-level: 
 ---
 {% include upcoming_release.html %}
-There are many cross-stitch chart resources available for hand embroidery.
+Im Internet sind viele Vorlagen für Kreuzstich-Muster erhältlich.
 
-If you have permission to use these charts, you can use the cross-stitch assistant to adapt them for machine embroidery.
+Wenn der Urheber der Vorlage es erlaubt, kann sie mit Hilfe des Kreuzstich-Helfers schnell in eine Kreuzistch-Füllung für das Maschinensticken umgewandelt werden.
 
-The results of the various steps in this tutorial can be found in this file:
+Die Ergebnisse der einzelnen Umwandlungsschritte können in dieser Dati gut nachvollzogen werden:
 
 ![old bird](/assets/images/tutorials/tutorial-preview-images/cross_stitch_chart_to_fills.jpg)
 
-[Download ](/assets/images/tutorials/samples/cross_stitch_chart_to_fills.svg){: download="cross_stitch_chart_to_fills.svg" }
+[Download](/assets/images/tutorials/samples/cross_stitch_chart_to_fills.svg){: download="cross_stitch_chart_to_fills.svg" }
 
+Das Ursprungsbild (links) wurde aus [Muster altdeutscher Leinenstickerei : IV](https://archive.org/details/musteraltdeutsch1888less/page/n65/mode/2up)
+entnommen, das 1888 in Berlin publiziert wurde und heute unter der Public Domain Lizenz steht.
 
-The starting image (left) is from [Muster altdeutscher Leinenstickerei : IV](https://archive.org/details/musteraltdeutsch1888less/page/n65/mode/2up)
-published in Berlin in 1888. This image is now public domain.
+## Skalieren und Positionieren
 
-Start by using the cross stitch assistant (with no objects selected) to display the grid at the desired size (2 mm in the example file).
-The next step is to resize the image and position it so that each square of the original image corresponds to a cell on the displayed grid.
+Erstelle mit Hilfe des Kreuzstich-Helfers ein Seitengitter auf die gewünschte Gittergröße (in diesem Beispiel 2 mm).
+Rufe hierfür (ohne aktive Auswahl) den Kreuzsich-Helfer auf und setze den Horizontalen Gitterabstand auf die gewünschte Größe.
+In den Ausgabe-Optionen sollte `Seitengitter` aktiviert sein.
 
-Once the image is correctly sized and positioned, use the cross stitch assistant again to convert the image into cross stitch fills.
+Im nächsten Schritt skalieren und positionieren wir das Bild so, dass jeder "Pixel" des Originalbildes einer Gitterzelle entspricht.
 
-Note that a rectangle has been used as a clipping path to confine the image strictly to the grid.
+Es ist wirklich wichtig, das das Bild gut an das Gitter angepasst wird. Das Gitter im Bild sollte perfekt horizontal liegen und die Musterpunkte git in die Zellen passen.
 
-The most important thing is that the image must be positioned very precisely relative to the grid, the image grid must be perfectly horizontal, and the cells must align flawlessly.
+Für größere und leicht verzogene Bilder kann es hilfreich sein, ein Rechteck als Ausschneidemaske zu verwenden und so kleinere Sektionen einzeln anzupassen.
 
-For very large designs or slightly distorted images, it may be helpful to use clipping paths to work on smaller areas.
+## Muster umwandeln
 
-Once the image is in place, simply use the cross stitch assistant to convert the image.
+Ist die korrekte Position und Größe eingestellt, wähle das Bild aus und rufe den Kreuzstich-Helfer erneut auf.
+
 ![helper](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_de.jpg)
 
-For this type of image, significantly increasing the contrast and brightness is a good idea. 
+Für diese Art von Bild sollten die Werte für Kontrast und Helligkeit in den Bitmap-Einstellungen hoch gesetzt werdn.
 
-Also note that you need to request two colors, as the background color must be taken into account.
+Die Farbanzahl sollte auf 2 gesetzt werden. Das ist die Motivfarbe und die Hintergrundfarbe.
 
-The final result has five jumps, which are unavoidable since the image is actually in six parts.
+Das Endergebnis ha in diesem Beispiel 5 Sprungstiche. Diese Sprungstiche sind aber unvermeidbar, da das Motiv tatsächlich aus 6 unzusammenhängenden Teilen besteht.
 
-Are there more modern chart resources available online? Yes, but the vast majority are charts intended for personal use only, which prevents their use here.
+## Bildquellen
 
-If you have a chart in PDF format, consider opening it with Inkscape (you can limit the import to a single page). You can also choose not to import the text, 
-and sometimes you'll be pleasantly surprised to find you can remove many unnecessary elements from the file.
+Git es auch moderne Vorlagen für Kreuzstichmuster? Ja, aber die Mehrheit diese Muster sind nur für den persönlichen Gebrauch besimmt, daher können wir sie hier im Beispiel nicht verwenden.
+
+Hast du eine Vorlage im PDF-Format, importiere sie direkt mit Inkscape. Dabei kann der Import auf eine Seit beschränkt werden.
+Es is ebenfalls möglich den Textimport zu überspringen, was ganz automatisch viele unnötige Elemente aus dem Bild entfernt.
 
