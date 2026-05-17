@@ -1,0 +1,178 @@
+"""
+Rendering Layer for the Cross Stitch Canvas.
+
+Responsible for taking the pure logic state from GridStateManager
+and interpreting it into a screen-space pixel map using wx.
+
+Phase 2: Full zoom/pan support, linen-style background, improved X rendering.
+"""
+
+import wx
+from typing import Set, Tuple
+from .grid_state import GridStateManager, Cell
+from .grid_mapper import grid_to_svg
+
+# Aida/linen look colours
+_BG_COLOUR       = wx.Colour(237, 232, 220)   # parchment/linen
+_GRID_MINOR      = wx.Colour(195, 185, 170)   # subtle minor lines
+_GRID_MAJOR      = wx.Colour(150, 138, 120)   # every-10 major lines
+_GRID_MINOR5     = wx.Colour(170, 160, 145)   # every-5 lines
+
+
+class GridVisualizer:
+    def __init__(self, parent_window: wx.Window, cell_size: float):
+        self.window    = parent_window
+        self.cell_size = cell_size          # base cell size in logical px
+
+        # ── View Transforms (User Zoom / Pan) ──────────────────────────
+        self.scale:    float = 1.0
+        self.offset_x: float = 0.0
+        self.offset_y: float = 0.0
+
+        # HiDPI — device property, strictly separated from user zoom
+        self.dpi_scale: float = self._compute_dpi_scale()
+
+        # Dirty-cell tracking for efficient partial repaints
+        self.dirty_cells: Set[Tuple[int, int]] = set()
+
+    # ── DPI ─────────────────────────────────────────────────────────────
+    def _compute_dpi_scale(self) -> float:
+        if hasattr(self.window, "GetContentScaleFactor"):
+            return self.window.GetContentScaleFactor()
+        elif hasattr(self.window, "GetDPIScaleFactor"):
+            return self.window.GetDPIScaleFactor()
+        return 1.0
+
+    # ── Dirty region management ──────────────────────────────────────────
+    def mark_dirty(self, row: int, col: int) -> None:
+        self.dirty_cells.add((row, col))
+
+    def mark_all_dirty(self, state: GridStateManager) -> None:
+        for r in range(state.rows):
+            for c in range(state.cols):
+                self.dirty_cells.add((r, c))
+
+    def request_render(self, state: GridStateManager) -> None:
+        if not self.dirty_cells:
+            return
+        cells = self.dirty_cells.copy()
+        self.dirty_cells.clear()
+        wx.CallAfter(self._flush_dirty_as_region, cells, state)
+
+    def _flush_dirty_as_region(self, cells: Set[Tuple[int, int]],
+                                state: GridStateManager) -> None:
+        if not cells:
+            return
+        threshold = state.rows * state.cols * 0.30
+        if len(cells) > threshold:
+            self.window.Refresh()
+            return
+
+        min_r = min(r for r, c in cells)
+        max_r = max(r for r, c in cells)
+        min_c = min(c for r, c in cells)
+        max_c = max(c for r, c in cells)
+
+        x1, y1 = self.logical_to_screen(min_r,     min_c)
+        x2, y2 = self.logical_to_screen(max_r + 1, max_c + 1)
+        rect = wx.Rect(int(x1) - 2, int(y1) - 2,
+                       int(x2 - x1) + 4, int(y2 - y1) + 4)
+        self.window.RefreshRect(rect, eraseBackground=False)
+
+    # ── Coordinate helpers ───────────────────────────────────────────────
+    def logical_to_screen(self, row: int, col: int) -> Tuple[float, float]:
+        """Grid (row, col) → screen pixel, applying zoom and pan only.
+
+        HiDPI scaling is handled by wx internally when drawing with
+        wx.BufferedPaintDC; we must NOT double-apply it here.
+        """
+        svg_x, svg_y = grid_to_svg(row, col, self.cell_size)
+        screen_x = svg_x * self.scale + self.offset_x
+        screen_y = svg_y * self.scale + self.offset_y
+        return screen_x, screen_y
+
+    def screen_cell_size(self) -> float:
+        """Effective cell size in screen pixels at current zoom."""
+        return self.cell_size * self.scale
+
+    # ── Main paint entry point ───────────────────────────────────────────
+    def on_paint(self, event, state: GridStateManager,
+                 palette_colors: dict) -> None:
+        dc = wx.BufferedPaintDC(self.window)
+        dc.SetBackground(wx.Brush(_BG_COLOUR))
+        dc.Clear()
+        self._draw_grid_lines(dc, state)
+        for (r, c), cell in state.cells.items():
+            self._draw_cell(dc, r, c, cell, palette_colors)
+
+    # ── Grid lines ───────────────────────────────────────────────────────
+    def _draw_grid_lines(self, dc: wx.DC, state: GridStateManager) -> None:
+        # Pre-create pens ONCE — wx.Pen allocates a native GDI handle;
+        # constructing one per grid-line (160+ per frame) causes GDI handle churn.
+        pen_major = wx.Pen(_GRID_MAJOR, 1)
+        pen_minor5 = wx.Pen(_GRID_MINOR5, 1)
+        pen_minor  = wx.Pen(_GRID_MINOR,  1)
+
+        # Clip to visible area so we skip off-screen lines cheaply
+        size = self.window.GetClientSize()
+        w, h = size.GetWidth(), size.GetHeight()
+
+        for r in range(state.rows + 1):
+            start_x, start_y = self.logical_to_screen(r, 0)
+            screen_y = int(start_y)
+            if screen_y < -2 or screen_y > h + 2:
+                continue
+            if r % 10 == 0:
+                dc.SetPen(pen_major)
+            elif r % 5 == 0:
+                dc.SetPen(pen_minor5)
+            else:
+                dc.SetPen(pen_minor)
+            end_x, _ = self.logical_to_screen(r, state.cols)
+            dc.DrawLine(int(start_x), screen_y, int(end_x), screen_y)
+
+        for c in range(state.cols + 1):
+            start_x, start_y = self.logical_to_screen(0, c)
+            screen_x = int(start_x)
+            if screen_x < -2 or screen_x > w + 2:
+                continue
+            if c % 10 == 0:
+                dc.SetPen(pen_major)
+            elif c % 5 == 0:
+                dc.SetPen(pen_minor5)
+            else:
+                dc.SetPen(pen_minor)
+            _, end_y = self.logical_to_screen(state.rows, c)
+            dc.DrawLine(screen_x, int(start_y), screen_x, int(end_y))
+
+    # ── Cross stitch cell rendering ──────────────────────────────────────
+    def _draw_cell(self, dc: wx.DC, r: int, c: int, cell: Cell,
+                   palette_colors: dict) -> None:
+        hex_col = palette_colors.get(cell.thread_id, "#444444")
+
+        sx1, sy1 = self.logical_to_screen(r,     c)
+        sx2, sy2 = self.logical_to_screen(r + 1, c + 1)
+        cell_px = sx2 - sx1
+
+        # Scale stroke width with zoom but clamp so thin zoom still looks OK
+        stroke_w = max(1.0, cell_px * 0.13)
+        colour   = wx.Colour(hex_col)
+
+        # Cap style must be set at construction — SetCap() on an already-used
+        # pen is a silent no-op (or crash) on Windows because GDI pens are
+        # immutable once selected into a DC.
+        pen = wx.Pen(colour, round(stroke_w), wx.PENSTYLE_SOLID)
+        pen.SetCap(wx.CAP_ROUND)
+        dc.SetPen(pen)
+        # wx.TRANSPARENT_BRUSH is a stock object only valid after wx.App init;
+        # an explicit brush with BRUSHSTYLE_TRANSPARENT is always safe.
+        dc.SetBrush(wx.Brush(wx.Colour(0, 0, 0, 0), wx.BRUSHSTYLE_TRANSPARENT))
+
+        # Inset so stitches don't touch the grid lines
+        pad = cell_px * 0.15
+        x1, y1 = sx1 + pad, sy1 + pad
+        x2, y2 = sx2 - pad, sy2 - pad
+
+        # Draw the two diagonals of the X
+        dc.DrawLine(int(x1), int(y1), int(x2), int(y2))
+        dc.DrawLine(int(x1), int(y2), int(x2), int(y1))
