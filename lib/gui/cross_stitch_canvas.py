@@ -1,8 +1,7 @@
-"""
-Main window wrapper assembling the Cross Stitch Canvas GUI components.
-Left toolbar, right palette panel (recently used + color picker),
-ruler canvas, zoom/pan, and status bar.
-"""
+# Authors: see git history
+#
+# Copyright (c) 2010 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from __future__ import annotations
 
@@ -19,8 +18,6 @@ logger = logging.getLogger(__name__)
 
 
 class ThreadSwatchPanel(wx.Panel):
-    """Clickable color swatch grid for 'Recently used colors'."""
-
     SWATCH_SIZE = 26
 
     def __init__(self, parent: wx.Window, callback: Callable[[str], None]) -> None:
@@ -87,28 +84,22 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._init_ui()
         self._set_thread("#000000")
 
-    # ------------------------------------------------------------------
-    # UI construction
-    # ------------------------------------------------------------------
+
     def _init_ui(self) -> None:
         root = wx.BoxSizer(wx.HORIZONTAL)
 
-        # ── Left vertical toolbar ──────────────────────────────────────
         root.Add(self._make_left_toolbar(), 0, wx.EXPAND)
 
-        # ── Centre: ruler + canvas + status bar ───────────────────────
         centre = wx.BoxSizer(wx.VERTICAL)
         centre.Add(self._make_canvas_area(), 1, wx.EXPAND)
         centre.Add(self._make_status_bar(), 0, wx.EXPAND)
         root.Add(centre, 1, wx.EXPAND)
 
-        # ── Right palette panel ────────────────────────────────────────
         root.Add(self._make_palette_panel(), 0, wx.EXPAND)
 
         self.SetSizer(root)
         self.Layout()
 
-    # ── Left toolbar ───────────────────────────────────────────────────
     def _make_left_toolbar(self) -> wx.Panel:
         panel = wx.Panel(self)
         panel.SetBackgroundColour(wx.Colour(240, 240, 240))
@@ -137,18 +128,15 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._highlight_tool("pencil")
         return panel
 
-    # ── Canvas area (ruler + drawable panel) ──────────────────────────
     def _make_canvas_area(self) -> wx.BoxSizer:
         sizer = wx.BoxSizer(wx.VERTICAL)
 
-        # Top horizontal ruler
         self.h_ruler = wx.Panel(self)
         self.h_ruler.SetMinSize((-1, 24))
         self.h_ruler.SetBackgroundColour(wx.Colour(230, 230, 230))
         self.h_ruler.Bind(wx.EVT_PAINT, self._on_paint_h_ruler)
         sizer.Add(self.h_ruler, 0, wx.EXPAND)
 
-        # Row sizer for left vertical ruler + canvas
         row = wx.BoxSizer(wx.HORIZONTAL)
 
         self.v_ruler = wx.Panel(self)
@@ -157,7 +145,6 @@ class CrossStitchCanvasWindow(wx.Frame):
         self.v_ruler.Bind(wx.EVT_PAINT, self._on_paint_v_ruler)
         row.Add(self.v_ruler, 0, wx.EXPAND)
 
-        # Main drawable canvas
         self.canvas_panel = wx.Panel(self)
         self.canvas_panel.SetBackgroundStyle(wx.BG_STYLE_PAINT)
         self.canvas_panel.SetCursor(wx.Cursor(wx.CURSOR_PENCIL))
@@ -184,7 +171,6 @@ class CrossStitchCanvasWindow(wx.Frame):
         sizer.Add(row, 1, wx.EXPAND)
         return sizer
 
-    # ── Status bar ────────────────────────────────────────────────────
     def _make_status_bar(self) -> wx.Panel:
         panel = wx.Panel(self)
         panel.SetBackgroundColour(wx.Colour(235, 235, 235))
@@ -216,7 +202,6 @@ class CrossStitchCanvasWindow(wx.Frame):
         panel.SetSizer(sizer)
         return panel
 
-    # ── Right palette panel ───────────────────────────────────────────
     def _make_palette_panel(self) -> wx.Panel:
         panel = wx.Panel(self)
         panel.SetBackgroundColour(wx.Colour(252, 252, 252))
@@ -228,7 +213,7 @@ class CrossStitchCanvasWindow(wx.Frame):
                               wx.FONTWEIGHT_BOLD))
         sizer.Add(title, 0, wx.ALL, 10)
 
-        # ── Current color ──────────────────────────────────────────────
+        # ── Current color 
         sizer.Add(wx.StaticText(panel, label="Current Color"), 0,
                   wx.LEFT | wx.RIGHT, 10)
         curr_row = wx.BoxSizer(wx.HORIZONTAL)
@@ -281,9 +266,6 @@ class CrossStitchCanvasWindow(wx.Frame):
         panel.SetSizer(sizer)
         return panel
 
-    # ------------------------------------------------------------------
-    # Color selection helpers
-    # ------------------------------------------------------------------
     def _set_thread(self, hex_col: str) -> None:
         """Set the active drawing color and update UI."""
         self.interaction.active_thread = hex_col

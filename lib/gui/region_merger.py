@@ -1,11 +1,3 @@
-"""
-Region merging algorithms for the Cross Stitch Canvas tool.
-
-Responsible for compressing raw grid cells into optimized continuous SVG elements.
-Phase 1: Horizontal-only run merging.
-Phase 2: Complex 2D region merging.
-"""
-
 from typing import Dict, List, Tuple
 from .grid_state import Cell
 

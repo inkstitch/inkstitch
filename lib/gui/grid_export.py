@@ -1,7 +1,7 @@
-"""
-Integration layer for exporting GridState into the working SVG DOM.
-"""
-
+# Authors: see git history
+#
+# Copyright (c) 2010 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import zlib
 import base64
 import json
@@ -20,10 +20,6 @@ MAX_EXPORT_RECTS = 5000
 
 
 def _serialize_state(grid_state: GridStateManager) -> str:
-    """
-    Produce highly compact representation of the sparse state:
-    [ [row, col, thread_id, stitch_type, direction, locked], ... ]
-    """
     sparse_list = []
     for (row, col), cell in grid_state.cells.items():
         sparse_list.append([
@@ -46,16 +42,11 @@ def _serialize_state(grid_state: GridStateManager) -> str:
 
 
 def build_export_group(grid_state: GridStateManager, cell_size: float, correction_transform=None) -> etree.Element:
-    """
-    Builds the SVG structure for the grid.
-    Returns: <g id="inkstitch-cross-stitch-canvas">
-    """
-    # Create the root group for our output
     root_group = inkex.Group()
     root_group.set("id", EXPORT_GROUP_ID)
     
     if correction_transform:
-        # Apply layer correction transformations if they exist
+
         root_group.transform = correction_transform
 
     if not grid_state.cells:
@@ -63,16 +54,15 @@ def build_export_group(grid_state: GridStateManager, cell_size: float, correctio
         root_group.set("inkstitch:grid-state", _serialize_state(grid_state))
         return root_group
         
-    # Group cells by thread_id
     threads = {}
     for pos, cell in grid_state.cells.items():
-        tid = cell.thread_id or "#444444"  # Default color for unset values
+        tid = cell.thread_id or "#444444" 
         if tid not in threads:
             threads[tid] = {}
         threads[tid][pos] = cell
     
     total_runs = 0
-    # Process each grouped thread in predictable sorted order
+
     for tid in sorted(threads.keys()):
         thread_group = inkex.Group()
         if tid:
@@ -86,7 +76,6 @@ def build_export_group(grid_state: GridStateManager, cell_size: float, correctio
             width = r.width * cell_size
             height = cell_size
             
-            # Build a single cross path per run, combining adjacent cells in the same row.
             margins = cell_size * 0.15
             segments = []
             for col in range(r.col, r.col + r.width):
@@ -113,7 +102,6 @@ def build_export_group(grid_state: GridStateManager, cell_size: float, correctio
             total_runs
         )
         
-    # Embed compressed grid state into the group metadata
     ser_state = _serialize_state(grid_state)
     root_group.set("inkstitch:grid-state", ser_state)
     
@@ -127,9 +115,6 @@ def build_export_group(grid_state: GridStateManager, cell_size: float, correctio
 
 
 def export_to_svg(svg_doc, layer, grid_state: GridStateManager, cell_size: float, correction_transform=None):
-    """
-    Perform atomic replacement of our tagged group onto the active SVG layer.
-    """
     new_group = build_export_group(grid_state, cell_size, correction_transform)
     
     # Locate existing EXPORT_GROUP_ID using standard lxml xpath
@@ -139,7 +124,6 @@ def export_to_svg(svg_doc, layer, grid_state: GridStateManager, cell_size: float
     # On an empty canvas export
     if not grid_state.cells:
         if old_group is not None:
-            # Option A UX rule: Clear the output when canvas is naturally emptied
             old_group.getparent().remove(old_group)
         return
         

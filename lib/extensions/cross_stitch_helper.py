@@ -57,15 +57,10 @@ class CrossStitchHelper(InkstitchExtension):
             'bitmap_display_svg_image': False
         }
 
-        # True will not show the no elements warning
-        # they may just simply want to check the the stitch length or setup the grid
         if self.svg.selection:
             self.get_elements(True)
         else:
-            # nothing was selected, keep it this way
             self.elements = []
-
-        # Fillter to only handle image and fill elements
         elements = []
         for element in self.elements:
             if element.name in ["Image", "FillStitch"]:
@@ -83,13 +78,8 @@ class CrossStitchHelper(InkstitchExtension):
         # add grid
         if settings['set_grid']:
             self.setup_page_grid()
-
-        # the following operations will need selected elements
-        # if we cannot find any, return early
         if not elements:
             return
-
-        # Pixelate and parametrize elements
         if self.settings['remove_overlaps']:
             # first convert images to fills, then process everything at once
             fills = self._prepare_fills(elements, palette)
@@ -125,7 +115,6 @@ class CrossStitchHelper(InkstitchExtension):
                 if self.settings['pixelize']:
                     self.pixelize_single(element)
                 elif self.settings['set_params']:
-                    # when pixelize is disabled, set params on each fill element
                     self.set_element_cross_stitch_params(element.node)
             else:
                 if not self.settings['convert_bitmap']:

@@ -1,9 +1,7 @@
-"""
-Interaction Engine.
-
-Maps raw physical events (drag, click) into pure geometric cell coordinates, generating
-state payloads that the visualizer and data manager consume.
-"""
+# Authors: see git history
+#
+# Copyright (c) 2010 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from typing import Optional, Tuple, List
 from .grid_state import GridStateManager, Cell

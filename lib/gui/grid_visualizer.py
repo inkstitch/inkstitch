@@ -1,11 +1,7 @@
-"""
-Rendering Layer for the Cross Stitch Canvas.
-
-Responsible for taking the pure logic state from GridStateManager
-and interpreting it into a screen-space pixel map using wx.
-
-Phase 2: Full zoom/pan support, linen-style background, improved X rendering.
-"""
+# Authors: see git history
+#
+# Copyright (c) 2010 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details."""
 
 import wx
 from typing import Set, Tuple
@@ -22,17 +18,12 @@ _GRID_MINOR5     = wx.Colour(170, 160, 145)   # every-5 lines
 class GridVisualizer:
     def __init__(self, parent_window: wx.Window, cell_size: float):
         self.window    = parent_window
-        self.cell_size = cell_size          # base cell size in logical px
-
-        # ── View Transforms (User Zoom / Pan) ──────────────────────────
+        self.cell_size = cell_size          
         self.scale:    float = 1.0
         self.offset_x: float = 0.0
         self.offset_y: float = 0.0
 
-        # HiDPI — device property, strictly separated from user zoom
         self.dpi_scale: float = self._compute_dpi_scale()
-
-        # Dirty-cell tracking for efficient partial repaints
         self.dirty_cells: Set[Tuple[int, int]] = set()
 
     # ── DPI ─────────────────────────────────────────────────────────────
@@ -154,18 +145,12 @@ class GridVisualizer:
         sx2, sy2 = self.logical_to_screen(r + 1, c + 1)
         cell_px = sx2 - sx1
 
-        # Scale stroke width with zoom but clamp so thin zoom still looks OK
         stroke_w = max(1.0, cell_px * 0.13)
         colour   = wx.Colour(hex_col)
 
-        # Cap style must be set at construction — SetCap() on an already-used
-        # pen is a silent no-op (or crash) on Windows because GDI pens are
-        # immutable once selected into a DC.
         pen = wx.Pen(colour, round(stroke_w), wx.PENSTYLE_SOLID)
         pen.SetCap(wx.CAP_ROUND)
         dc.SetPen(pen)
-        # wx.TRANSPARENT_BRUSH is a stock object only valid after wx.App init;
-        # an explicit brush with BRUSHSTYLE_TRANSPARENT is always safe.
         dc.SetBrush(wx.Brush(wx.Colour(0, 0, 0, 0), wx.BRUSHSTYLE_TRANSPARENT))
 
         # Inset so stitches don't touch the grid lines
@@ -173,6 +158,5 @@ class GridVisualizer:
         x1, y1 = sx1 + pad, sy1 + pad
         x2, y2 = sx2 - pad, sy2 - pad
 
-        # Draw the two diagonals of the X
         dc.DrawLine(int(x1), int(y1), int(x2), int(y2))
         dc.DrawLine(int(x1), int(y2), int(x2), int(y1))

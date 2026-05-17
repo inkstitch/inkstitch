@@ -1,7 +1,3 @@
-"""
-Undo/Redo pure logic manager for Cross Stitch Canvas.
-"""
-
 from typing import List, Optional
 from .grid_state import GridStateManager
 
