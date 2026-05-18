@@ -185,6 +185,9 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._btn_pencil = tb_btn("Pencil", "Pencil", lambda e: self._select_tool("pencil"))
         self._btn_eraser = tb_btn("Eraser", "Eraser", lambda e: self._select_tool("eraser"))
         sizer.AddSpacer(10)
+        self._btn_fill = tb_btn("Fill", "Fill region with color", lambda e: self._select_tool("fill"))
+        self._btn_fill_eraser = tb_btn("Fill Er.", "Fill erase region", lambda e: self._select_tool("fill_eraser"))
+        sizer.AddSpacer(10)
         self._btn_pan = tb_btn("Pan",  "Pan / Scroll", lambda e: self._select_tool("pan"))
 
         panel.SetSizer(sizer)
@@ -389,10 +392,10 @@ class CrossStitchCanvasWindow(wx.Frame):
     def _select_tool(self, tool: str) -> None:
         self.interaction.current_tool = tool
         self._highlight_tool(tool)
-        self._tool_label.SetLabel(f"Current Tool: {tool.capitalize()}")
+        self._tool_label.SetLabel(f"Current Tool: {tool.replace('_', ' ').capitalize()}")
         if tool == "pan":
             self.canvas_panel.SetCursor(wx.Cursor(wx.CURSOR_HAND))
-        elif tool == "eraser":
+        elif tool in ("eraser", "fill_eraser"):
             self.canvas_panel.SetCursor(wx.Cursor(wx.CURSOR_BULLSEYE))
         else:
             self.canvas_panel.SetCursor(wx.Cursor(wx.CURSOR_PENCIL))
@@ -400,6 +403,8 @@ class CrossStitchCanvasWindow(wx.Frame):
     def _highlight_tool(self, tool: str) -> None:
         for attr, t in [("_btn_pencil", "pencil"),
                         ("_btn_eraser", "eraser"),
+                        ("_btn_fill", "fill"),
+                        ("_btn_fill_eraser", "fill_eraser"),
                         ("_btn_pan",    "pan")]:
             btn = getattr(self, attr, None)
             if btn:

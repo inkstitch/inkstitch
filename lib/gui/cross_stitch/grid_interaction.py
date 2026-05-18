@@ -62,6 +62,9 @@ class GridInteractionEngine:
         if not self.is_dragging:
             return False
 
+        if self.current_tool in ("fill", "fill_eraser"):
+            return False
+
         r, c = self.screen_to_logical(x, y)
 
         # Critical Draw Coalescing Limit: block out stuttering updates and redundant undo frames
@@ -107,7 +110,67 @@ class GridInteractionEngine:
             self.state.clear_cell(r, c)
             self.visualizer.mark_dirty(r, c)
             return True
+        elif self.current_tool == "fill":
+            return self._flood_fill(r, c, self.active_thread)
+        elif self.current_tool == "fill_eraser":
+            return self._flood_fill(r, c, None)
         return False
+
+    def _flood_fill(self, r: int, c: int, replacement_color: Optional[str]) -> bool:
+        """
+        Flood fill starting at (r, c).
+        Fills contiguous cells that have the same thread_id as the clicked cell with replacement_color.
+        """
+        if not self.state.in_bounds(r, c):
+            return False
+
+        # Find the starting thread ID
+        start_cell = self.state.get_cell(r, c)
+        target_color = start_cell.thread_id if start_cell else None
+
+        # If the target color is already the replacement color, nothing to do!
+        if target_color == replacement_color:
+            return False
+
+        # Queue for BFS (breadth-first search)
+        queue = [(r, c)]
+        visited = {(r, c)}
+        
+        # Collect all cells to change
+        cells_to_change = []
+
+        while queue:
+            curr_r, curr_c = queue.pop(0)
+            cells_to_change.append((curr_r, curr_c))
+
+            # Check 4-connected neighbors: up, down, left, right
+            for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                nr, nc = curr_r + dr, curr_c + dc
+                if self.state.in_bounds(nr, nc) and (nr, nc) not in visited:
+                    neighbor_cell = self.state.get_cell(nr, nc)
+                    neighbor_color = neighbor_cell.thread_id if neighbor_cell else None
+                    if neighbor_color == target_color:
+                        visited.add((nr, nc))
+                        queue.append((nr, nc))
+
+        # Now apply the replacement to all identified cells
+        if not cells_to_change:
+            return False
+
+        for cr, cc in cells_to_change:
+            if replacement_color is None:
+                self.state.clear_cell(cr, cc)
+            else:
+                new_cell = Cell(
+                    thread_id=replacement_color,
+                    stitch_type="full",
+                    direction=None,
+                    locked=False
+                )
+                self.state.set_cell(cr, cc, new_cell)
+            self.visualizer.mark_dirty(cr, cc)
+
+        return True
 
     def _bresenham_line(self, r0: int, c0: int, r1: int, c1: int) -> List[Tuple[int, int]]:
         """
