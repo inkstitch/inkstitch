@@ -40,7 +40,7 @@ class CrossStitchCanvas(inkex.EffectExtension):
                 svg_doc=self.svg,
                 layer=layer,
                 grid_state=frame.state,
-                cell_size=15.0,  # Match canvas cell_size
+                cell_size=frame.CELL_SIZE,
                 correction_transform=layer.transform
             )
             

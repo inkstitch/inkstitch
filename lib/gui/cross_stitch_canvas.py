@@ -71,6 +71,7 @@ class CrossStitchCanvasWindow(wx.Frame):
     _MIN_ZOOM = 0.25
     _MAX_ZOOM = 4.0
     _ZOOM_STEP_FACTOR = 1.1
+    CELL_SIZE = 12.0  # standard size of a single grid cell in SVG user units
 
     def __init__(
         self,
@@ -122,13 +123,14 @@ class CrossStitchCanvasWindow(wx.Frame):
     def _make_left_toolbar(self) -> wx.Panel:
         panel = wx.Panel(self)
         panel.SetBackgroundColour(wx.Colour(240, 240, 240))
-        panel.SetMinSize((48, -1))
+        panel.SetMinSize((72, -1))
         sizer = wx.BoxSizer(wx.VERTICAL)
         sizer.AddSpacer(8)
 
         def tb_btn(label, tip, handler):
-            btn = wx.Button(panel, label=label, size=(40, 40),
+            btn = wx.Button(panel, label=label, size=(64, 40),
                             style=wx.BORDER_NONE | wx.BU_EXACTFIT)
+            btn.SetBackgroundColour(wx.Colour(240, 240, 240))
             btn.SetToolTip(tip)
             btn.Bind(wx.EVT_BUTTON, handler)
             sizer.Add(btn, 0, wx.ALL | wx.ALIGN_CENTER, 3)
@@ -140,7 +142,6 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._btn_pencil = tb_btn("Pencil", "Pencil", lambda e: self._select_tool("pencil"))
         self._btn_eraser = tb_btn("Eraser", "Eraser", lambda e: self._select_tool("eraser"))
         sizer.AddSpacer(10)
-        tb_btn("Custom", "Custom Color",  self.on_pick_custom_color)
         self._btn_pan    = tb_btn("Pan",  "Pan / Scroll", lambda e: self._select_tool("pan"))
 
         panel.SetSizer(sizer)
@@ -168,8 +169,7 @@ class CrossStitchCanvasWindow(wx.Frame):
         self.canvas_panel.SetBackgroundStyle(wx.BG_STYLE_PAINT)
         self.canvas_panel.SetCursor(wx.Cursor(wx.CURSOR_PENCIL))
 
-        cell_size = 12.0
-        self.visualizer = GridVisualizer(self.canvas_panel, cell_size=cell_size)
+        self.visualizer = GridVisualizer(self.canvas_panel, cell_size=self.CELL_SIZE)
         self.visualizer.offset_x = 0
         self.visualizer.offset_y = 0
         self.interaction = GridInteractionEngine(
@@ -336,8 +336,10 @@ class CrossStitchCanvasWindow(wx.Frame):
                         ("_btn_pan",    "pan")]:
             btn = getattr(self, attr, None)
             if btn:
-                btn.SetBackgroundColour(
-                    wx.Colour(180, 210, 255) if t == tool else wx.NullColour)
+                if t == tool:
+                    btn.SetBackgroundColour(wx.Colour(180, 210, 255))
+                else:
+                    btn.SetBackgroundColour(wx.Colour(240, 240, 240))
                 btn.Refresh()
 
     # ------------------------------------------------------------------
@@ -450,15 +452,7 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._pan_dragging = False
         self._pan_start = None
 
-    def on_pick_custom_color(self, _event) -> None:
-        """Open the system color dialog to choose a custom thread color."""
-        dlg = wx.ColourDialog(self)
-        if dlg.ShowModal() == wx.ID_OK:
-            col = dlg.GetColourData().GetColour()
-            hex_col = "#%02X%02X%02X" % (col.Red(), col.Green(), col.Blue())
-            self._set_thread(hex_col)
-            self._color_picker.SetColour(wx.Colour(hex_col))
-        dlg.Destroy()
+
 
     def on_undo(self, _event: wx.CommandEvent) -> None:
         new_state = self.undo_mgr.undo(self.state)

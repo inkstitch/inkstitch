@@ -23,8 +23,9 @@ MAX_EXPORT_RECTS = 5000
 # matching typical cross-stitch thread thickness at standard scales.
 _CROSS_MARGIN_RATIO = 0.15
 
-# stroke-width:1.5 approximates real thread thickness at 1:1 export scale
-_STITCH_STROKE_WIDTH = 1.5
+# Stroke width as a fraction of cell size; approximates real thread thickness visually.
+# Must match _STROKE_WIDTH_RATIO in grid_visualizer.py.
+_STROKE_WIDTH_RATIO = 0.13
 
 
 def _serialize_state(grid_state: GridStateManager) -> str:
@@ -108,16 +109,17 @@ def build_export_group(
     for tid in sorted(threads.keys()):
         thread_group = inkex.Group()
         if tid:
-            thread_group.set("inkstitch:thread", str(tid))
+            thread_group.set("inkstitch:thread", tid)
             
         rects = merge_runs(threads[tid], horizontal_only=True)
         total_runs += len(rects)
 
         for r in rects:
             cross_path = _build_cross_path(r, cell_size)
+            stroke_w = max(1.0, cell_size * _STROKE_WIDTH_RATIO)
             cross_elem = inkex.PathElement(attrib={
                 "d": cross_path,
-                "style": f"fill:none;stroke:{tid};stroke-width:{_STITCH_STROKE_WIDTH};stroke-linecap:round;stroke-opacity:0.9"
+                "style": f"fill:none;stroke:{tid};stroke-width:{stroke_w:.2f};stroke-linecap:round;stroke-opacity:0.9"
             })
             thread_group.append(cross_elem)
             
