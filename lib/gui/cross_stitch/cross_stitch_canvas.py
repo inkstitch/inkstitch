@@ -29,8 +29,7 @@ class ThreadSwatchPanel(wx.Panel):
         self.Bind(wx.EVT_LEFT_DOWN, self._on_click)
 
     def set_colors(self, hex_list: List[str]) -> None:
-        # Keep only the 15 most recent to avoid unbounded growth
-        self.colors = hex_list[-CrossStitchCanvasWindow._MAX_RECENT_COLORS:]
+        self.colors = hex_list
         self.Refresh()
 
     def _on_paint(self, _event: wx.PaintEvent) -> None:
@@ -318,6 +317,14 @@ class CrossStitchCanvasWindow(wx.Frame):
         sizer.Add(lbl_recent, 0, wx.LEFT | wx.RIGHT | wx.BOTTOM, 8)
         self._recent_panel = ThreadSwatchPanel(panel, self._on_recent_swatch_click)
         sizer.Add(self._recent_panel, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 10)
+        sizer.Add(wx.StaticLine(panel), 0, wx.EXPAND | wx.ALL, 6)
+
+        # ── Currently in Use ──────────────────────────────────────────
+        lbl_in_use = wx.StaticText(panel, label="Currently in Use")
+        lbl_in_use.SetForegroundColour(self.fg_text)
+        sizer.Add(lbl_in_use, 0, wx.LEFT | wx.RIGHT | wx.BOTTOM, 8)
+        self._in_use_panel = ThreadSwatchPanel(panel, self._on_in_use_swatch_click)
+        sizer.Add(self._in_use_panel, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 10)
 
         sizer.AddStretchSpacer()
         sizer.Add(wx.StaticLine(panel), 0, wx.EXPAND | wx.ALL, 6)
@@ -367,6 +374,11 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._set_thread(hex_col)
 
     def _on_recent_swatch_click(self, hex_col: str) -> None:
+        self._set_thread(hex_col)
+        # Sync the colour picker to show the selected colour
+        self._color_picker.SetColour(wx.Colour(hex_col))
+
+    def _on_in_use_swatch_click(self, hex_col: str) -> None:
         self._set_thread(hex_col)
         # Sync the colour picker to show the selected colour
         self._color_picker.SetColour(wx.Colour(hex_col))
@@ -583,6 +595,10 @@ class CrossStitchCanvasWindow(wx.Frame):
         cnt = self._thread_counts.get(cur, 0)
         self._curr_count.SetLabel(f"Count    {cnt}")
 
+        # Dynamic update of "Currently in Use" panel
+        in_use_colors = sorted(list(self._get_unique_threads()))
+        self._in_use_panel.set_colors(in_use_colors)
+
     def _refresh_rulers(self) -> None:
         self.h_ruler.Refresh()
         self.v_ruler.Refresh()
@@ -590,6 +606,13 @@ class CrossStitchCanvasWindow(wx.Frame):
 
 if __name__ == '__main__':
     app = wx.App()
-    frame = CrossStitchCanvasWindow(None)
+    state = GridStateManager(rows=40, cols=40)
+    # Pre-populate some cells of different colors to demonstrate 'Currently in Use'
+    state.set_cell(5, 5, "#FF0000")
+    state.set_cell(5, 6, "#FF0000")
+    state.set_cell(10, 10, "#00FF00")
+    state.set_cell(15, 15, "#0000FF")
+
+    frame = CrossStitchCanvasWindow(None, state=state)
     frame.Show()
     app.MainLoop()
