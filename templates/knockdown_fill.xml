@@ -34,6 +34,8 @@
            <option value="rect">Rectangle</option>
            <option value="circle">Circle</option>
         </param>
+        <param name="simple-shape" type="bool" gui-text="Use only shape"
+               gui-description="Whether or not the motif should be cut out of the shape.">false</param>
         <param name="shape-offset" type="float" gui-text="Shape offset" min="0" max="50">1</param>
         <param name="shape-join-style" type="optiongroup" appearance="combo" gui-text="Join style">
            <option value="1">Round</option>

@@ -29,6 +29,7 @@ class KnockdownFill(InkstitchExtension):
         self.arg_parser.add_argument("-m", "--mitre-limit", type=float, default=5.0, dest="mitre_limit")
 
         self.arg_parser.add_argument("-s", "--shape", type=str, default='', dest="shape")
+        self.arg_parser.add_argument("-a", "--simple-shape", type=Boolean, default=False, dest="simple_shape")
         self.arg_parser.add_argument("-f", "--shape-offset", type=float, default=0, dest="shape_offset")
         self.arg_parser.add_argument("-p", "--shape-join-style", type=str, default="1", dest="shape_join_style")
         # TODO: Layer options: underlay, row spacing, angle
@@ -125,9 +126,10 @@ class KnockdownFill(InkstitchExtension):
         offset_shape = offset_shape.reverse()
         d = str(Path(offset_shape.exterior.coords))
 
-        for polygon in combined_shape.geoms:
-            d += str(Path(polygon.exterior.coords))
-            d += self._get_hole_paths(polygon)
+        if not self.options.simple_shape:
+            for polygon in combined_shape.geoms:
+                d += str(Path(polygon.exterior.coords))
+                d += self._get_hole_paths(polygon)
 
         self.insert_path(d, transform, parent, index)
 
