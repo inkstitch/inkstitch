@@ -911,4 +911,4 @@ class CrossStitchHelperApp(wx.App):
         frame = CrossStitchHelperFrame(settings=self.settings, elements=self.elements, palette=self.palette)
         self.SetTopWindow(frame)
         frame.Show()
-        return True
+        return True
