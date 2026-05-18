@@ -6,7 +6,7 @@ import zlib
 import base64
 import json
 import logging
-from typing import Dict, Tuple, List, Optional
+from typing import Dict, Tuple, Optional
 from lxml import etree
 import inkex
 
@@ -33,13 +33,13 @@ def _serialize_state(grid_state: GridStateManager) -> str:
     sparse_list = []
     for (row, col), cell in grid_state.cells.items():
         sparse_list.append([
-            row, col, 
-            cell.thread_id, 
-            cell.stitch_type, 
-            cell.direction, 
+            row, col,
+            cell.thread_id,
+            cell.stitch_type,
+            cell.direction,
             cell.locked
         ])
-    
+
     data = {
         "version": 1,
         "rows": grid_state.rows,
@@ -53,7 +53,7 @@ def _serialize_state(grid_state: GridStateManager) -> str:
 
 def _build_cross_path(r: Rect, cell_size: float) -> str:
     """Generate SVG path data for an X cross-stitch across a merged run.
-    
+
     Each cell gets two diagonal lines forming an X. The margin keeps
     stitches visually separate from adjacent cells.
     """
@@ -74,21 +74,21 @@ def build_export_group(
     correction_transform: Optional[inkex.Transform] = None
 ) -> etree.Element:
     """Build the root SVG group containing the cross-stitch elements.
-    
+
     Generates cross-stitch diagonal paths for each cell, organized by thread color.
     Serializes the grid state metadata and attaches it to the group.
-    
+
     Args:
         grid_state: Current grid manager holding sparse cell coordinates and states.
         cell_size: Visual width/height of a single cell in SVG user units.
         correction_transform: Transform matrix to correct document scaling.
-        
+
     Returns:
         The generated lxml etree.Element representing the root export group.
     """
     root_group = inkex.Group()
     root_group.set("id", EXPORT_GROUP_ID)
-    
+
     if correction_transform:
         root_group.transform = correction_transform
 
@@ -96,21 +96,21 @@ def build_export_group(
         # Save serialized empty state over the root
         root_group.set("inkstitch:grid-state", _serialize_state(grid_state))
         return root_group
-        
+
     threads: Dict[str, Dict[Tuple[int, int], Cell]] = {}
     for pos, cell in grid_state.cells.items():
-        tid = cell.thread_id or DEFAULT_THREAD_COLOR 
+        tid = cell.thread_id or DEFAULT_THREAD_COLOR
         if tid not in threads:
             threads[tid] = {}
         threads[tid][pos] = cell
-    
+
     total_runs = 0
 
     for tid in sorted(threads.keys()):
         thread_group = inkex.Group()
         if tid:
             thread_group.set("inkstitch:thread", tid)
-            
+
         rects = merge_runs(threads[tid], horizontal_only=True)
         total_runs += len(rects)
 
@@ -122,24 +122,24 @@ def build_export_group(
                 "style": f"fill:none;stroke:{tid};stroke-width:{stroke_w:.2f};stroke-linecap:round;stroke-opacity:0.9"
             })
             thread_group.append(cross_elem)
-            
+
         root_group.append(thread_group)
-        
+
     if total_runs > MAX_EXPORT_RECTS:
         logger.warning(
-            "DOM SCALING WARNING: Extracted %d SVG runs. Render performance will degrade.", 
+            "DOM SCALING WARNING: Extracted %d SVG runs. Render performance will degrade.",
             total_runs
         )
-        
+
     ser_state = _serialize_state(grid_state)
     root_group.set("inkstitch:grid-state", ser_state)
-    
+
     if len(ser_state) > 50000:
         logger.warning(
-            "SERIALIZATION BUDGET WARNING: Artifact payload reached %d bytes", 
+            "SERIALIZATION BUDGET WARNING: Artifact payload reached %d bytes",
             len(ser_state)
         )
-        
+
     return root_group
 
 
@@ -151,11 +151,11 @@ def export_to_svg(
     correction_transform: Optional[inkex.Transform] = None
 ) -> None:
     """Write the cross-stitch grid into the Inkscape SVG document layer.
-    
+
     Replaces any existing export group (identified by EXPORT_GROUP_ID) with
     a freshly built one. If the canvas is empty, removes the old group and
     returns without adding anything.
-    
+
     Args:
         svg_doc: The lxml root SVG document tree, used for xpath lookup of old groups.
         layer: The inkex Layer where the group should be appended.
@@ -165,16 +165,16 @@ def export_to_svg(
             used to align the export with the Inkscape document's coordinate system.
     """
     new_group = build_export_group(grid_state, cell_size, correction_transform)
-    
+
     # Locate existing EXPORT_GROUP_ID using standard lxml xpath
     old_groups = svg_doc.xpath(f"//*[@id='{EXPORT_GROUP_ID}']")
     old_group = old_groups[0] if old_groups else None
-    
+
     if not grid_state.cells:
         logger.info("Canvas is empty; exporting empty placeholder group to preserve grid metadata.")
-        
+
     # Normal replacement path
     if old_group is not None:
         old_group.getparent().remove(old_group)
-        
-    layer.append(new_group)
+
+    layer.append(new_group)

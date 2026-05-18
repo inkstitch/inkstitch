@@ -15,11 +15,11 @@ class GridInteractionEngine:
         self.visualizer = visualizer
         self.state = state
         self.undo_mgr = undo_mgr
-        
+
         # Toolstate (Default Phase 1 implementations)
-        self.current_tool = "pencil" # "eraser", "pencil"
+        self.current_tool = "pencil"  # "eraser", "pencil"
         self.active_thread = None
-        
+
         # Drag sequence tracking
         self.is_dragging = False
         self.last_cell: Optional[Tuple[int, int]] = None
@@ -31,25 +31,25 @@ class GridInteractionEngine:
         # 1. Reverse HiDPI tracking
         zoom_x = screen_x / self.visualizer.dpi_scale
         zoom_y = screen_y / self.visualizer.dpi_scale
-        
+
         # 2. Reverse User Zoom/Pan
         svg_x = (zoom_x - self.visualizer.offset_x) / self.visualizer.scale
         svg_y = (zoom_y - self.visualizer.offset_y) / self.visualizer.scale
-        
+
         # 3. Resolve using pure domain mapper (Handles bounds clamping automatically)
         return svg_to_grid(svg_x, svg_y, self.visualizer.cell_size, self.state.rows, self.state.cols)
 
     def on_mouse_down(self, x: float, y: float) -> None:
         self.is_dragging = True
-        
-        # UX Rule: Snapshots MUST trigger only once at the beginning of an action 
+
+        # UX Rule: Snapshots MUST trigger only once at the beginning of an action
         # (Allows sweeping strokes to act as 1 undo frame)
         self.undo_mgr.save_state(self.state)
-        
+
         r, c = self.screen_to_logical(x, y)
         self._apply_tool(r, c)
         self.last_cell = (r, c)
-        
+
         # Fire single emission
         self.visualizer.request_render(self.state)
 
@@ -61,13 +61,13 @@ class GridInteractionEngine:
     def on_mouse_move(self, x: float, y: float) -> bool:
         if not self.is_dragging:
             return False
-            
+
         r, c = self.screen_to_logical(x, y)
-        
+
         # Critical Draw Coalescing Limit: block out stuttering updates and redundant undo frames
         if (r, c) == self.last_cell:
             return False
-            
+
         modified = False
         # Draw Bresenham interpolation line avoiding chopped drag trails when OS event polling lags
         if self.last_cell:
@@ -77,9 +77,9 @@ class GridInteractionEngine:
         else:
             if self._apply_tool(r, c):
                 modified = True
-            
+
         self.last_cell = (r, c)
-        
+
         # Queue emission bound to CallAfter region bounds to prevent synchronous stall
         self.visualizer.request_render(self.state)
         return modified
@@ -92,15 +92,14 @@ class GridInteractionEngine:
                 return False
             # Immutable instantiation pattern
             new_cell = Cell(
-                thread_id=self.active_thread, 
-                stitch_type="full", 
-                direction=None, 
+                thread_id=self.active_thread,
+                stitch_type="full",
+                direction=None,
                 locked=False
             )
             self.state.set_cell(r, c, new_cell)
             self.visualizer.mark_dirty(r, c)
             return True
-            
         elif self.current_tool == "eraser":
             existing = self.state.get_cell(r, c)
             if existing is None:
@@ -124,12 +123,12 @@ class GridInteractionEngine:
         pixels = []
         dr = abs(r1 - r0)
         dc = abs(c1 - c0)
-        
+
         sr = 1 if r0 < r1 else -1
         sc = 1 if c0 < c1 else -1
-        
+
         err = dc - dr
-        
+
         while True:
             pixels.append((r0, c0))
             if r0 == r1 and c0 == c1:
@@ -141,4 +140,4 @@ class GridInteractionEngine:
             if e2 < dc:
                 err += dc
                 r0 += sr
-        return pixels
+        return pixels

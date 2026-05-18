@@ -44,4 +44,4 @@ def svg_to_grid(
 
     row = max(0, min(max_rows - 1, int(y // cell_size)))
     col = max(0, min(max_cols - 1, int(x // cell_size)))
-    return row, col
+    return row, col

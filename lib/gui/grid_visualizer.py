@@ -9,10 +9,10 @@ from .grid_state import GridStateManager, Cell, DEFAULT_THREAD_COLOR
 from .grid_mapper import grid_to_svg
 
 # Aida/linen look colours
-_BG_COLOUR       = wx.Colour(237, 232, 220)   # parchment/linen
-_GRID_MINOR      = wx.Colour(195, 185, 170)   # subtle minor lines
-_GRID_MAJOR      = wx.Colour(150, 138, 120)   # every-10 major lines
-_GRID_MINOR5     = wx.Colour(170, 160, 145)   # every-5 lines
+_BG_COLOUR = wx.Colour(237, 232, 220)  # parchment/linen
+_GRID_MINOR = wx.Colour(195, 185, 170)  # subtle minor lines
+_GRID_MAJOR = wx.Colour(150, 138, 120)  # every-10 major lines
+_GRID_MINOR5 = wx.Colour(170, 160, 145)  # every-5 lines
 
 # Proportion of cell width used as padding so stitches don't touch grid lines.
 # Must match _CROSS_MARGIN_RATIO in build_export.py to keep screen and export consistent.
@@ -26,8 +26,8 @@ class GridVisualizer:
     _DIRTY_ALL = object()  # sentinel meaning "repaint the entire canvas"
 
     def __init__(self, parent_window: wx.Window, cell_size: float):
-        self.window    = parent_window
-        self.cell_size = cell_size          
+        self.window = parent_window
+        self.cell_size = cell_size
         self.scale:    float = 1.0
         self.offset_x: float = 0.0
         self.offset_y: float = 0.0
@@ -65,13 +65,13 @@ class GridVisualizer:
         wx.CallAfter(self._flush_dirty_as_region, cells, state)
 
     def _flush_dirty_as_region(self, cells: Union[Set[Tuple[int, int]], object],
-                                state: GridStateManager) -> None:
+                               state: GridStateManager) -> None:
         if not cells:
             return
         if cells is self._DIRTY_ALL:
             self.window.Refresh()
             return
-            
+
         threshold = state.rows * state.cols * 0.30
         if len(cells) > threshold:  # type: ignore[arg-type]
             self.window.Refresh()
@@ -80,10 +80,14 @@ class GridVisualizer:
         min_r = min_c = float('inf')
         max_r = max_c = float('-inf')
         for r, c in cells:  # type: ignore[union-attr]
-            if r < min_r: min_r = r
-            if r > max_r: max_r = r
-            if c < min_c: min_c = c
-            if c > max_c: max_c = c
+            if r < min_r:
+                min_r = r
+            if r > max_r:
+                max_r = r
+            if c < min_c:
+                min_c = c
+            if c > max_c:
+                max_c = c
 
         x1, y1 = self.logical_to_screen(int(min_r), int(min_c))
         x2, y2 = self.logical_to_screen(int(max_r) + 1, int(max_c) + 1)
@@ -111,7 +115,7 @@ class GridVisualizer:
     def on_paint(self, event: wx.PaintEvent, state: GridStateManager,
                  palette_colors: Dict[str, str]) -> None:
         """Handle a wx paint event by redrawing the full canvas.
-        
+
         palette_colors maps thread_id strings to hex colour strings.
         Falls back to DEFAULT_THREAD_COLOR for any thread_id not in the palette.
         """
@@ -125,14 +129,14 @@ class GridVisualizer:
     # ── Grid lines ───────────────────────────────────────────────────────
     def _draw_grid_lines(self, dc: wx.DC, state: GridStateManager) -> None:
         """Draw major and minor grid lines on the DC.
-        
+
         Clips drawing to the visible screen area to optimize rendering performance.
         """
         # Pre-create pens ONCE — wx.Pen allocates a native GDI handle;
         # constructing one per grid-line (160+ per frame) causes GDI handle churn.
         pen_major = wx.Pen(_GRID_MAJOR, 1)
         pen_minor5 = wx.Pen(_GRID_MINOR5, 1)
-        pen_minor  = wx.Pen(_GRID_MINOR,  1)
+        pen_minor = wx.Pen(_GRID_MINOR, 1)
 
         # Clip to visible area so we skip off-screen lines cheaply
         size = self.window.GetClientSize()
@@ -170,7 +174,7 @@ class GridVisualizer:
     def _draw_cell(self, dc: wx.DC, r: int, c: int, cell: Cell,
                    palette_colors: Dict[str, str]) -> None:
         """Draw an individual cross-stitch cell as a diagonal X.
-        
+
         Applies cell padding ratio and stroke width ratio for premium visual rendering.
         """
         tid = cell.thread_id or DEFAULT_THREAD_COLOR
@@ -181,7 +185,7 @@ class GridVisualizer:
         cell_px = sx2 - sx1
 
         stroke_w = max(1.0, cell_px * _STROKE_WIDTH_RATIO)
-        colour   = wx.Colour(hex_col)
+        colour = wx.Colour(hex_col)
 
         pen = wx.Pen(colour, round(stroke_w), wx.PENSTYLE_SOLID)
         pen.SetCap(wx.CAP_ROUND)
@@ -194,5 +198,4 @@ class GridVisualizer:
         x2, y2 = sx2 - pad, sy2 - pad
 
         dc.DrawLine(int(x1), int(y1), int(x2), int(y2))
-        dc.DrawLine(int(x1), int(y2), int(x2), int(y1))
-        
+        dc.DrawLine(int(x1), int(y2), int(x2), int(y1))

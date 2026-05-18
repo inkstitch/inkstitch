@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import sys
 import wx
 import inkex
 
@@ -25,11 +24,11 @@ class CrossStitchCanvas(inkex.EffectExtension):
 
     def effect(self):
         layer = self.svg.get_current_layer()
-        
+
         initial_state = None
         old_groups = self.svg.xpath(f"//*[@id='{EXPORT_GROUP_ID}']")
         old_group = old_groups[0] if old_groups else None
-        
+
         if old_group is not None:
             serialized_state = old_group.get("inkstitch:grid-state")
             if serialized_state:
@@ -45,7 +44,7 @@ class CrossStitchCanvas(inkex.EffectExtension):
         frame = CrossStitchCanvasWindow(None, state=initial_state)
         frame.Show()
         app.MainLoop()
-        
+
         # Only export if the user explicitly clicked "Export to Inkscape".
         # Closing via the window X button or Cancel leaves export_confirmed=False.
         if getattr(frame, 'export_confirmed', False):
@@ -58,4 +57,4 @@ class CrossStitchCanvas(inkex.EffectExtension):
 
 
 if __name__ == '__main__':
-    CrossStitchCanvas().run()
+    CrossStitchCanvas().run()

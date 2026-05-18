@@ -16,20 +16,19 @@ DEFAULT_THREAD = None
 DEFAULT_THREAD_COLOR = "#444444"  # fallback for cells with no assigned thread
 
 
-
 class Cell:
     """
     Explicit lightweight representation of a single stitch to minimize memory.
-    
+
     Immutability Contract: Cell objects must never be mutated after insertion.
     Always replace the entire Cell object in the GridStateManager to prevent
     subtle undo corruption.
     """
     __slots__ = ("thread_id", "stitch_type", "direction", "locked")
 
-    def __init__(self, thread_id: Optional[str] = DEFAULT_THREAD, 
-                 stitch_type: str = DEFAULT_STITCH, 
-                 direction: Optional[str] = None, 
+    def __init__(self, thread_id: Optional[str] = DEFAULT_THREAD,
+                 stitch_type: str = DEFAULT_STITCH,
+                 direction: Optional[str] = None,
                  locked: bool = False):
         self.thread_id = thread_id
         self.stitch_type = stitch_type
@@ -46,16 +45,16 @@ class GridStateManager:
             raise ValueError(f"rows must be between 1 and {MAX_ROWS}")
         if not (1 <= cols <= MAX_COLS):
             raise ValueError(f"cols must be between 1 and {MAX_COLS}")
-        
+
         self.rows = rows
         self.cols = cols
         # Sparse Cell Storage: stores only painted cells
         self.cells: Dict[Tuple[int, int], Cell] = {}
-        
+
     def in_bounds(self, row: int, col: int) -> bool:
         """Check if grid coordinates are valid."""
         return 0 <= row < self.rows and 0 <= col < self.cols
-        
+
     def set_cell(self, row: int, col: int, cell: Cell) -> None:
         """
         Assign a Cell object to a grid coordinate.
@@ -64,13 +63,13 @@ class GridStateManager:
         if not self.in_bounds(row, col):
             raise ValueError(f"Coordinate ({row}, {col}) out of bounds")
         self.cells[(row, col)] = cell
-        
+
     def get_cell(self, row: int, col: int) -> Optional[Cell]:
         """Get the specific cell or None if empty/unpainted."""
         if not self.in_bounds(row, col):
             raise ValueError(f"Coordinate ({row}, {col}) out of bounds")
         return self.cells.get((row, col))
-        
+
     def clear_cell(self, row: int, col: int) -> None:
         """Remove a cell from the sparse mapping."""
         if not self.in_bounds(row, col):
@@ -123,5 +122,4 @@ class GridStateManager:
                 locked=locked,
             )
 
-        return state
-    
+        return state

@@ -6,7 +6,7 @@
 from __future__ import annotations
 
 import logging
-from typing import Callable, Dict, List, Optional, Set, Tuple
+from typing import Callable, Dict, List, Optional, Set
 
 import wx
 from .grid_state import GridStateManager, DEFAULT_THREAD_COLOR
@@ -104,7 +104,6 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._set_thread("#000000")
         self._update_counts()
 
-
     def _init_ui(self) -> None:
         root = wx.BoxSizer(wx.HORIZONTAL)
 
@@ -142,7 +141,7 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._btn_pencil = tb_btn("Pencil", "Pencil", lambda e: self._select_tool("pencil"))
         self._btn_eraser = tb_btn("Eraser", "Eraser", lambda e: self._select_tool("eraser"))
         sizer.AddSpacer(10)
-        self._btn_pan    = tb_btn("Pan",  "Pan / Scroll", lambda e: self._select_tool("pan"))
+        self._btn_pan = tb_btn("Pan",  "Pan / Scroll", lambda e: self._select_tool("pan"))
 
         panel.SetSizer(sizer)
         self._highlight_tool("pencil")
@@ -232,7 +231,7 @@ class CrossStitchCanvasWindow(wx.Frame):
                               wx.FONTWEIGHT_BOLD))
         sizer.Add(title, 0, wx.ALL, 10)
 
-        # ── Current color 
+        # ── Current color
         sizer.Add(wx.StaticText(panel, label="Current Color"), 0,
                   wx.LEFT | wx.RIGHT, 10)
         curr_row = wx.BoxSizer(wx.HORIZONTAL)
@@ -240,7 +239,7 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._curr_swatch.SetBackgroundColour(wx.Colour("#000000"))
         curr_row.Add(self._curr_swatch, 0, wx.ALL, 4)
         info_col = wx.BoxSizer(wx.VERTICAL)
-        self._curr_hex   = wx.StaticText(panel, label="#000000")
+        self._curr_hex = wx.StaticText(panel, label="#000000")
         self._curr_count = wx.StaticText(panel, label="Count    0")
         self._curr_hex.SetFont(wx.Font(9, wx.FONTFAMILY_DEFAULT,
                                        wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_BOLD))
@@ -356,11 +355,11 @@ class CrossStitchCanvasWindow(wx.Frame):
         offset = self.visualizer.offset_x
         left_margin = self.v_ruler.GetSize().width
         width = self.h_ruler.GetClientSize().width
-        
+
         # Calculate mathematically visible column boundaries to avoid redundant iterations
         start_col = max(0, int((-20 - offset - left_margin) // cell))
         end_col = min(self.state.cols, int((width + 20 - offset - left_margin) // cell) + 1)
-        
+
         for col in range(start_col, end_col + 1):
             x = int(col * cell + offset + left_margin)
             if col % 10 == 0:
@@ -379,11 +378,11 @@ class CrossStitchCanvasWindow(wx.Frame):
         cell = self.visualizer.cell_size * self.visualizer.scale
         offset = self.visualizer.offset_y
         height = self.v_ruler.GetClientSize().height
-        
+
         # Calculate mathematically visible row boundaries to avoid drawing off-screen tick/labels
         start_row = max(0, int((-20 - offset) // cell))
         end_row = min(self.state.rows, int((height + 20 - offset) // cell) + 1)
-        
+
         for row in range(start_row, end_row + 1):
             y = int(row * cell + offset)
             if row % 10 == 0:
@@ -465,8 +464,6 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._pan_dragging = False
         self._pan_start = None
 
-
-
     def on_undo(self, _event: wx.CommandEvent) -> None:
         new_state = self.undo_mgr.undo(self.state)
         if new_state is not self.state:
@@ -518,7 +515,7 @@ class CrossStitchCanvasWindow(wx.Frame):
         # the full counts are stored in self._thread_counts for the palette panel.
         preview = [f"{tid}: {n}" for tid, n in list(self._thread_counts.items())[:self._STATUS_THREAD_PREVIEW_COUNT]]
         self._count_label.SetLabel("  ".join(preview) + f"  Total: {total}")
-        
+
         # Keep the active color's count label in sync
         cur = self.interaction.active_thread or ""
         cnt = self._thread_counts.get(cur, 0)
@@ -526,4 +523,4 @@ class CrossStitchCanvasWindow(wx.Frame):
 
     def _refresh_rulers(self) -> None:
         self.h_ruler.Refresh()
-        self.v_ruler.Refresh()
+        self.v_ruler.Refresh()
