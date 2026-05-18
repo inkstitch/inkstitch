@@ -272,4 +272,4 @@ class CrossStitchHelper(InkstitchExtension):
             "enabled": "true",
             "visible": "true",
         })
-        namedview.append(grid)
+        namedview.append(grid)
