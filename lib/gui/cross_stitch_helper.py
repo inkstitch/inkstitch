@@ -1,738 +1,224 @@
 # Authors: see git history
 #
-# Copyright (c) 2026 Authors
+# Copyright (c) 2025 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import threading
-from math import sqrt
+from inkex import Color, Grid, Group, Path
+from inkex.units import convert_unit
 
-import wx
-import wx.svg  # type: ignore[import-untyped]
-from inkex import Group, Path, PathElement
-from PIL import Image
-
-from ..elements.fill_stitch import FillStitch
-from ..extensions.utils.bitmap_to_cross_stitch import BitmapToCrossStitch
+from ..elements import FillStitch
+from ..gui.cross_stitch_helper import CrossStitchHelperApp
 from ..i18n import _
+from ..svg import get_correction_transform
+from ..svg.tags import SVG_PATH_TAG
 from ..utils.pixelate import pixelate_element, pixelate_multiple
-from ..utils.settings import global_settings
-
-
-class CrossStitchHelperFrame(wx.Frame):
-    def __init__(self, *args, **kwargs):
-        self.settings = kwargs.pop("settings")
-        self.default_settings = self.settings.copy()
-        self.elements = kwargs.pop("elements")
-        self.palette = kwargs.pop("palette")
-
-        self.cross_bitmap = None
-        self._load_bitmap()
-
-        wx.Frame.__init__(self, None, wx.ID_ANY, _("Ink/Stitch - Cross stitch"), *args, **kwargs)
-
-        self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
-
-        self._setup_timer()
-        self.widgets_and_panels()
-        self.apply_global_settings()
-        self.update()
-        self.enable_bitmap_settings()
-        self.update_color_selection_method()
-        self.Show()
-
-    def _setup_timer(self):
-        # Calculating the svg image is relatively expensive.
-        # Let's use a timer for debouncing
-        self._debounce_timer = wx.Timer(self)
-        self.Bind(wx.EVT_TIMER, self._on_debounce_timer, self._debounce_timer)
-
-        # Track latest task so we can skip a task later
-        self._current_task_id = 0
-
-    def widgets_and_panels(self):
-        self.main_panel = wx.Panel(self, name="main_panel")
-        main_sizer = wx.BoxSizer(wx.VERTICAL)
-
-        notebook_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.notebook = wx.Notebook(self.main_panel, wx.ID_ANY)
-        notebook_sizer.Add(self.notebook, 1, wx.EXPAND | wx.ALL, 0)
-
-        self.settings_panel = wx.Panel(self.notebook, wx.ID_ANY)
-        self.notebook.AddPage(self.settings_panel, _("Settings"))
-
-        # settings
-        settings_wrapper_sizer = wx.BoxSizer(wx.VERTICAL)
-        grid_settings_sizer = wx.BoxSizer(wx.VERTICAL)
-        grid_sizer = wx.FlexGridSizer(4, 2, 15, 20)
-        grid_sizer.AddGrowableCol(1)
-
-        grid_settings_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid Settings"))
-        font = wx.Font(wx.FontInfo().Bold())
-        grid_settings_label.SetFont(font)
-
-        x_only_label = wx.StaticText(self.settings_panel, label=_("Square grid"))
-        self.x_only_checkbox = wx.CheckBox(self.settings_panel)
-        self.x_only_checkbox.SetValue(True)
-        self.x_only_checkbox.Bind(wx.EVT_CHECKBOX, self.update)
-
-        box_x_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid horizontal spacing (mm)"))
-        self.box_x = wx.SpinCtrlDouble(self.settings_panel, value='3', min=0.1, max=100, initial=3, inc=0.1)
-        self.box_x.SetDigits(2)
-        self.box_x.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
-
-        self.box_y_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Grid vertical spacing (mm)"))
-        self.box_y = wx.SpinCtrlDouble(self.settings_panel, value='3', min=0.1, max=100, initial=3, inc=0.1)
-        self.box_y.SetDigits(2)
-        self.box_y.Bind(wx.EVT_SPINCTRLDOUBLE, self.update)
-
-        self.stitch_length_label = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Stitch length:"))
-        self.stitch_length = wx.SpinCtrlDouble(self.settings_panel, value='3', min=0.1, max=100, initial=4.24, inc=0.1)
-        self.stitch_length.SetDigits(2)
-        self.stitch_length.Bind(wx.EVT_SPINCTRLDOUBLE, self.update_by_stitch_length)
-
-        grid_sizer.AddMany([
-            (x_only_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.x_only_checkbox, 1, wx.EXPAND),
-            (box_x_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.box_x, 1, wx.EXPAND),
-            (self.box_y_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.box_y, 1, wx.EXPAND),
-            (self.stitch_length_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.stitch_length, 1, wx.EXPAND)
-        ])
-
-        # Pixelate and Param settings
-        param_settings_headline = wx.StaticText(self.settings_panel, wx.ID_ANY, _("Params, pixelate and bitmap settings"))
-        param_settings_headline.SetFont(font)
-
-        param_settings_sizer = wx.FlexGridSizer(4, 2, 15, 20)
-        param_settings_sizer.AddGrowableCol(1)
-
-        self.cross_stitch_options = {p.id: p.name for p in FillStitch.cross_stitch_options}
-        cross_stitch_method_label = wx.StaticText(self.settings_panel, label=_("Cross stitch method"))
-        self.cross_stitch_method = wx.Choice(self.settings_panel, choices=list(self.cross_stitch_options.values()))
-
-        coverage_label = wx.StaticText(self.settings_panel, label=_("Fill coverage (%)"))
-        self.coverage = wx.SpinCtrl(self.settings_panel, wx.ID_ANY, min=0, max=100, initial=50)
-        self.coverage.Bind(wx.EVT_SPINCTRL, self.update_bitmap_panel)
-
-        align_with_canvas_label = wx.StaticText(self.settings_panel, label=_("Align with canvas"))
-        self.align_with_canvas = wx.CheckBox(self.settings_panel)
-        self.align_with_canvas.Bind(wx.EVT_CHECKBOX, self.update_bitmap_panel)
-
-        grid_offset_label = wx.StaticText(self.settings_panel, label=_("Grid offset (mm) x[ y]"))
-        self.grid_offset = wx.TextCtrl(self.settings_panel, wx.ID_ANY)
-        self.grid_offset.Bind(wx.EVT_TEXT, self.update_bitmap_panel)
-
-        param_settings_sizer.AddMany([
-            (cross_stitch_method_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.cross_stitch_method, 1, wx.EXPAND),
-            (coverage_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.coverage, 1, wx.EXPAND),
-            (align_with_canvas_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.align_with_canvas, 1, wx.EXPAND),
-            (grid_offset_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.grid_offset, 1, wx.EXPAND)
-        ])
-
-        grid_settings_sizer.Add(grid_settings_label, 0, wx.EXPAND | wx.ALL, 5)
-        grid_settings_sizer.Add(grid_sizer, 1, wx.EXPAND | wx.ALL, 10)
-        grid_settings_sizer.Add((30, 30), 0, 0, 0)
-        grid_settings_sizer.Add(param_settings_headline, 0, wx.EXPAND | wx.ALL, 5)
-        grid_settings_sizer.Add(param_settings_sizer, 1, wx.EXPAND | wx.ALL, 10)
-
-        settings_wrapper_sizer.Add(grid_settings_sizer, 1, wx.EXPAND | wx.ALL, 20)
-
-        # Apply grid to
-        self.output_option_panel = wx.Panel(self.notebook, wx.ID_ANY)
-        self.notebook.AddPage(self.output_option_panel, _("Output options"))
-
-        output_wrapper_sizer = wx.BoxSizer(wx.VERTICAL)
-        apply_settings_sizer = wx.BoxSizer(wx.VERTICAL)
-
-        apply_to_settings = wx.StaticText(self.output_option_panel, wx.ID_ANY, _("Apply grid settings to"))
-        apply_to_settings.SetFont(font)
-
-        apply_to_grid_sizer = wx.FlexGridSizer(4, 2, 15, 20)
-        apply_to_grid_sizer.AddGrowableCol(1)
-        element_handling_sizer = wx.FlexGridSizer(1, 2, 15, 20)
-        element_handling_sizer.AddGrowableCol(1)
-        apply_page_grid = wx.FlexGridSizer(3, 2, 15, 20)
-        apply_page_grid.AddGrowableCol(1)
-
-        set_params_label = wx.StaticText(self.output_option_panel, label=_("Params"))
-        self.set_params = wx.CheckBox(self.output_option_panel)
-        params_tooltip = _("Defines whether params for all selected elements should be updated or not.")
-        set_params_label.SetToolTip(params_tooltip)
-        self.set_params.SetToolTip(params_tooltip)
-        self.set_params.Bind(wx.EVT_CHECKBOX, self.update)
-
-        pixelize_label = wx.StaticText(self.output_option_panel, label=_("Pixelate"))
-        self.pixelize = wx.CheckBox(self.output_option_panel)
-        pixelize_tooltip = _("Defines whether the outlines of selected fill shapes should be pixelated or not.")
-        pixelize_label.SetToolTip(pixelize_tooltip)
-        self.pixelize.SetToolTip(pixelize_tooltip)
-        self.pixelize.Bind(wx.EVT_CHECKBOX, self.update)
-
-        node_label_text = "     " + _("Add nodes")
-        self.nodes_label = wx.StaticText(self.output_option_panel, label=node_label_text)
-        self.nodes = wx.CheckBox(self.output_option_panel)
-        nodes_tooltip = _("Add nodes at the horizontal grid spacing value")
-        self.nodes_label.SetToolTip(nodes_tooltip)
-        self.nodes.SetToolTip(nodes_tooltip)
-
-        apply_to_grid_sizer.AddMany([
-            (set_params_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.set_params, 1, wx.EXPAND),
-            (pixelize_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.pixelize, 1, wx.EXPAND),
-            (self.nodes_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.nodes, 1, wx.EXPAND),
-        ])
-
-        element_handling_headline = wx.StaticText(self.output_option_panel, wx.ID_ANY, _("Element handling"))
-        element_handling_headline.SetFont(font)
-
-        remove_overlaps_label_text = _("Remove overlaps")
-        remove_overlaps_label = wx.StaticText(self.output_option_panel, label=remove_overlaps_label_text)
-        self.remove_overlaps = wx.CheckBox(self.output_option_panel)
-        remove_overlaps_tooltip = _("Inserts a new set of non-overlapping shapes and removes selected fill elements")
-        remove_overlaps_label.SetToolTip(remove_overlaps_tooltip)
-        self.remove_overlaps.SetToolTip(remove_overlaps_tooltip)
-
-        element_handling_sizer.AddMany([
-            (remove_overlaps_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.remove_overlaps, 1, wx.EXPAND),
-        ])
-
-        grid_setup_headline = wx.StaticText(self.output_option_panel, wx.ID_ANY, _("Setup page grid"))
-        grid_setup_headline.SetFont(font)
-
-        setup_grid_label = wx.StaticText(self.output_option_panel, label=_("Page grid"))
-        self.setup_grid = wx.CheckBox(self.output_option_panel)
-        self.setup_grid.Bind(wx.EVT_CHECKBOX, self.update)
-
-        grid_color_label_text = "     " + _("Grid color")
-        self.grid_color_label = wx.StaticText(self.output_option_panel, label=grid_color_label_text)
-        self.grid_color = wx.ColourPickerCtrl(self.output_option_panel, colour=wx.Colour('#00d9e5'))
-
-        remove_grids_label_text = "     " + _("Remove previous")
-        self.remove_grids_label = wx.StaticText(self.output_option_panel, label=remove_grids_label_text)
-        self.remove_grids = wx.CheckBox(self.output_option_panel)
-        remove_grids_tooltip = _("Remove previous cross stitch page grids")
-        self.remove_grids_label.SetToolTip(remove_grids_tooltip)
-        self.remove_grids.SetToolTip(remove_grids_tooltip)
-
-        apply_page_grid.AddMany([
-            (setup_grid_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.setup_grid, 1, wx.EXPAND),
-            (self.grid_color_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.grid_color, 1, wx.EXPAND),
-            (self.remove_grids_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.remove_grids, 1, wx.EXPAND)
-        ])
-
-        apply_settings_sizer.Add(apply_to_settings, 0, wx.EXPAND | wx.ALL, 5)
-        apply_settings_sizer.Add(apply_to_grid_sizer, 0, wx.EXPAND | wx.ALL, 10)
-        apply_settings_sizer.Add(element_handling_headline, 0, wx.EXPAND | wx.ALL, 10)
-        apply_settings_sizer.Add(element_handling_sizer, 0, wx.ALL, 10)
-        apply_settings_sizer.Add(grid_setup_headline, 0, wx.EXPAND | wx.ALL, 10)
-        apply_settings_sizer.Add(apply_page_grid, 1, wx.EXPAND | wx.ALL, 10)
-
-        output_wrapper_sizer.Add(apply_settings_sizer, 1, wx.EXPAND | wx.ALL, 20)
-
-        # image conversion
-        self.bitmap = wx.Panel(self.notebook, wx.ID_ANY)
-        self.notebook.AddPage(self.bitmap, _("Bitmap Settings"))
-
-        self.bitmap_wrapper_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.bitmap_settings_sizer = wx.BoxSizer(wx.VERTICAL)
-
-        bitmap_headline = wx.StaticText(self.bitmap, wx.ID_ANY, _("Convert bitmaps to pixelated fill areas"))
-        bitmap_headline.SetFont(font)
-
-        bitmap_grid_sizer = wx.FlexGridSizer(13, 2, 15, 20)
-        bitmap_grid_sizer.AddGrowableCol(1)
-
-        convert_bitmap_label = wx.StaticText(self.bitmap, label=_("Convert bitmaps"))
-        self.convert_bitmap = wx.CheckBox(self.bitmap)
-        self.convert_bitmap.Bind(wx.EVT_CHECKBOX, self.enable_bitmap_settings)
-
-        self.pixel_by_pixel_label = wx.StaticText(self.bitmap, label=_("One cross each pixel"))
-        self.pixel_by_pixel = wx.CheckBox(self.bitmap)
-        pixel_tooltip = _("Scales the image up by using one cross for each pixel")
-        self.pixel_by_pixel_label.SetToolTip(pixel_tooltip)
-        self.pixel_by_pixel.SetToolTip(pixel_tooltip)
-        self.pixel_by_pixel.Bind(wx.EVT_CHECKBOX, self.update_bitmap_panel)
-
-        color_choices = [
-            _("Number of colors"),
-            _("Selected stroke colors"),
-            _("List with RGB values"),
-            _("GIMP color palette")
-        ]
-        self.color_selection_method_label = wx.StaticText(self.bitmap, label=_("Color selection"))
-        self.color_selection_method = wx.Choice(self.bitmap, choices=color_choices)
-        self.color_selection_method.Bind(wx.EVT_CHOICE, self.update_color_selection_method)
-
-        self.num_colors_label = wx.StaticText(self.bitmap, label=_("Number of colors"))
-        self.num_colors = wx.SpinCtrl(self.bitmap, wx.ID_ANY, min=1, max=100, initial=5)
-        num_color_tooltip = _("Reduces colors to given value.\n"
-                              "This may not match the final number of colors. "
-                              "It is possible, that colors get removed when the image gets pixelated.")
-        self.num_colors_label.SetToolTip(num_color_tooltip)
-        self.num_colors.SetToolTip(num_color_tooltip)
-        self.num_colors.Bind(wx.EVT_SPINCTRL, self.update_bitmap_panel)
-
-        self.rgb_color_list_label = wx.StaticText(self.bitmap, label=_("RGB value list"))
-        self.rgb_color_list = wx.TextCtrl(self.bitmap, wx.ID_ANY)
-        rgb_color_tooltip = _("A comma separated list with rgb values: r g b, r, g, b\n"
-                              "r,g and b can take a value from 0 - 255")
-        self.rgb_color_list_label.SetToolTip(rgb_color_tooltip)
-        self.rgb_color_list.SetToolTip(rgb_color_tooltip)
-        self.rgb_color_list.Bind(wx.EVT_TEXT, self.update_bitmap_panel)
-
-        self.gimp_palette_label = wx.StaticText(self.bitmap, label=_("Gimp palette file"))
-        self.gimp_palette = wx.FilePickerCtrl(self.bitmap, message=_("Select a Gimp palette file"), wildcard="GIMP palette files (*.gpl)|*.gpl")
-        gimp_palette_tooltip = _("Restricted to the first 256 colors. Please use a color reduced palette.")
-        self.gimp_palette_label.SetToolTip(gimp_palette_tooltip)
-        self.gimp_palette.SetToolTip(gimp_palette_tooltip)
-        self.gimp_palette.Bind(wx.EVT_FILEPICKER_CHANGED, self.update_bitmap_panel)
-
-        self.quantize_method_label = wx.StaticText(self.bitmap, label=_("Color reduction method"))
-        self.quantize_method = wx.Choice(self.bitmap, choices=[_("Median cut"), _("Maxcoverage"), _("Fastoctree")])
-        self.quantize_method.Bind(wx.EVT_CHOICE, self.update_bitmap_panel)
-
-        saturation_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.saturation_label = wx.StaticText(self.bitmap, label=_("Saturation"))
-        self.saturation = wx.Slider(self.bitmap, value=100, minValue=0, maxValue=200, size=(300, 0))
-        self.saturation.SetTick(100)
-        self.saturation_numerical_input = wx.SpinCtrlDouble(self.bitmap, value='1', min=0, max=2, initial=1, inc=0.01)
-        self.saturation.Bind(wx.EVT_SCROLL, lambda event: self.on_color_slider_change("saturation", event))
-        self.saturation_numerical_input.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_numerical_color_change("saturation", event))
-        saturation_sizer.Add(self.saturation, 0, wx.ALL | wx.EXPAND, 5)
-        saturation_sizer.Add(self.saturation_numerical_input, 0, wx.ALL, 5)
-
-        brightness_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.brightness_label = wx.StaticText(self.bitmap, label=_("Brightness"))
-        self.brightness = wx.Slider(self.bitmap, value=100, minValue=0, maxValue=200, size=(300, 0))
-        self.brightness.SetTick(100)
-        self.brightness_numerical_input = wx.SpinCtrlDouble(self.bitmap, value='1', min=0, max=2, initial=1, inc=0.01)
-        self.brightness.Bind(wx.EVT_SCROLL, lambda event: self.on_color_slider_change("brightness", event))
-        self.brightness_numerical_input.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_numerical_color_change("brightness", event))
-        brightness_sizer.Add(self.brightness, 0, wx.ALL | wx.EXPAND, 5)
-        brightness_sizer.Add(self.brightness_numerical_input, 0, wx.ALL, 5)
-
-        contrast_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.contrast_label = wx.StaticText(self.bitmap, label=_("Contrast"))
-        self.contrast = wx.Slider(self.bitmap, value=100, minValue=0, maxValue=200, size=(300, 0))
-        self.contrast.SetTick(100)
-        self.contrast_numerical_input = wx.SpinCtrlDouble(self.bitmap, value='1', min=0, max=2, initial=1, inc=0.01)
-        self.contrast.Bind(wx.EVT_SCROLL, lambda event: self.on_color_slider_change("contrast", event))
-        self.contrast_numerical_input.Bind(wx.EVT_SPINCTRLDOUBLE, lambda event: self.on_numerical_color_change("contrast", event))
-        contrast_sizer.Add(self.contrast, 0, wx.ALL | wx.EXPAND, 5)
-        contrast_sizer.Add(self.contrast_numerical_input, 0, wx.ALL, 5)
-
-        transparency_threshold_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        transparency_threshold_tooltip = _("Removes pixels with a higher transparency value than this from the original image.")
-        self.transparency_threshold_label = wx.StaticText(self.bitmap, label=_("Transparency threshold (%)"))
-        self.transparency_threshold = wx.Slider(self.bitmap, value=50, minValue=0, maxValue=99, size=(300, 0))
-        self.transparency_threshold.SetTick(50)
-        self.transparency_threshold_numerical_input = wx.SpinCtrl(self.bitmap, value='50', min=0, max=99, initial=50)
-        self.transparency_threshold.Bind(wx.EVT_SCROLL, lambda event: self.on_color_slider_change("transparency_threshold", event))
-        self.transparency_threshold_numerical_input.Bind(
-            wx.EVT_SPINCTRL, lambda event: self.on_numerical_color_change("transparency_threshold", event)
-        )
-        self.transparency_threshold_label.SetToolTip(transparency_threshold_tooltip)
-        self.transparency_threshold.SetToolTip(transparency_threshold_tooltip)
-        self.transparency_threshold_numerical_input.SetToolTip(transparency_threshold_tooltip)
-        transparency_threshold_sizer.Add(self.transparency_threshold, 0, wx.ALL | wx.EXPAND, 5)
-        transparency_threshold_sizer.Add(self.transparency_threshold_numerical_input, 0, wx.ALL, 5)
-
-        background_tooltip_text = _("Background color for transparent images and background removal.")
-        self.background_color_label = wx.StaticText(self.bitmap, label=_("Background color"))
-        self.background_color_label.SetToolTip(background_tooltip_text)
-        self.background_color = wx.ColourPickerCtrl(self.bitmap, colour=wx.BLACK)
-        self.background_color.SetToolTip(background_tooltip_text)
-        self.background_color.Bind(wx.EVT_COLOURPICKER_CHANGED, self.update_bitmap_panel)
-
-        self.remove_background_label = wx.StaticText(self.bitmap, label=_("Remove background"))
-        self.remove_background = wx.Choice(
-            self.bitmap,
-            choices=[_("Keep background"), _("Remove nearest to background color"), _("Remove most common color")]
-        )
-        remove_background_tooltip_text = _("Removes the background color.")
-        self.remove_background_label.SetToolTip(remove_background_tooltip_text)
-        self.remove_background.SetToolTip(remove_background_tooltip_text)
-        self.remove_background.Bind(wx.EVT_CHOICE, self.update_bitmap_panel)
-
-        bitmap_grid_sizer.AddMany([
-            (convert_bitmap_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.convert_bitmap, 1, wx.EXPAND),
-            (self.pixel_by_pixel_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.pixel_by_pixel, 1, wx.EXPAND),
-            (self.color_selection_method_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.color_selection_method, 1, wx.EXPAND),
-            (self.num_colors_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.num_colors, 1, wx.EXPAND),
-            (self.rgb_color_list_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.rgb_color_list, 1, wx.EXPAND),
-            (self.gimp_palette_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.gimp_palette, 1, wx.EXPAND),
-            (self.quantize_method_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.quantize_method, 1, wx.EXPAND),
-            (self.saturation_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (saturation_sizer, 1, wx.EXPAND),
-            (self.brightness_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (brightness_sizer, 1, wx.EXPAND),
-            (self.contrast_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (contrast_sizer, 1, wx.EXPAND),
-            (self.transparency_threshold_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (transparency_threshold_sizer, 1, wx.EXPAND),
-            (self.background_color_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.background_color, 1, wx.EXPAND),
-            (self.remove_background_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.remove_background, 1, wx.EXPAND),
-        ])
-
-        self.bitmap_settings_sizer.Add(bitmap_headline, 0, wx.EXPAND | wx.ALL, 10)
-        self.bitmap_settings_sizer.Add(bitmap_grid_sizer, 1, wx.EXPAND | wx.ALL, 10)
-
-        self.bitmap_wrapper_sizer.Add(self.bitmap_settings_sizer, 1, wx.EXPAND | wx.ALL, 20)
-
-        # help
-        self.help = wx.Panel(self.notebook, wx.ID_ANY)
-        self.notebook.AddPage(self.help, _("Help"))
-
-        help_sizer = wx.BoxSizer(wx.VERTICAL)
-
-        help_text = wx.StaticText(
-            self.help,
-            wx.ID_ANY,
-            _("This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
-              "* Define the grid size by either the maximum stitch length or grid spacing values\n"
-              "* Apply cross stitch parameters.\n"
-              "* Pixelate outlines of selected fill elements.\n"
-              "* Generate pixelated fills from bitmaps.\n"
-              "* Remove overlaps.\n"
-              "* Setup a page grid."),
-            style=wx.ALIGN_LEFT
-        )
-        help_text.Wrap(500)
-        help_sizer.Add(help_text, 0, wx.TOP | wx.LEFT | wx.RIGHT, 20)
-
-        help_sizer.Add((20, 20), 0, 0, 0)
-
-        website_info = wx.StaticText(self.help, wx.ID_ANY, _("More information on our website:"))
-        help_sizer.Add(website_info, 0, wx.TOP | wx.LEFT | wx.RIGHT, 20)
-
-        self.website_link = wx.adv.HyperlinkCtrl(
-            self.help,
-            wx.ID_ANY,
-            _("https://inkstitch.org/docs/tools-fill/#cross-stitch"),
-            _("https://inkstitch.org/docs/tools-fill/#cross-stitch")
-        )
-        help_sizer.Add(self.website_link, 0, wx.BOTTOM | wx.LEFT | wx.RIGHT, 20)
-
-        bitmap_wrapper_sizer = wx.BoxSizer(wx.VERTICAL)
-        bitmap_panel = wx.Panel(self.main_panel)
-        bitmap_panel.SetWindowStyle(wx.BORDER_SUNKEN)
-        # bitmap_panel.SetBackgroundColour("red")  # TODO: set background color
-        bitmap_sizer = wx.BoxSizer(wx.VERTICAL)
-        self.staticbitmap = wx.StaticBitmap(bitmap_panel, size=(600, 600))
-        self.staticbitmap.SetToolTip(_("Preview image (if applicable)"))
-        bitmap_sizer.Add(self.staticbitmap, 0, wx.ALL, 10)
-        bitmap_panel.SetSizer(bitmap_sizer)
-
-        bmp_grid_sizer = wx.FlexGridSizer(2, 2, 15, 20)
-        bmp_grid_sizer.AddGrowableCol(1)
-        display_svg_image_label = wx.StaticText(self.main_panel, label=_("SVG Preview (slow)"))
-        self.display_svg_image = wx.CheckBox(self.main_panel)
-        self.display_svg_image.Bind(wx.EVT_CHECKBOX, self.update_bitmap_panel)
-
-        bmp_grid_sizer.AddMany([
-            (display_svg_image_label, 0, wx.ALIGN_CENTER_VERTICAL),
-            (self.display_svg_image, 1, wx.EXPAND | wx.ALIGN_CENTER_VERTICAL)
-        ])
-
-        bitmap_wrapper_sizer.Add(bitmap_panel, 0, wx.ALL, 10)
-        bitmap_wrapper_sizer.Add(bmp_grid_sizer, 1, wx.EXPAND | wx.ALL, 10)
-
-        notebook_sizer.Add(bitmap_wrapper_sizer, 0, wx.LEFT, 10)
-        main_sizer.Add(notebook_sizer, 1, wx.EXPAND | wx.ALL, 10)
-
-        # apply or cancel
-        apply_sizer = wx.BoxSizer(wx.HORIZONTAL)
-        self.reset_button = wx.Button(self.main_panel, label=_("Reset values"))
-        self.reset_button.Bind(wx.EVT_BUTTON, self.reset_values)
-        self.cancel_button = wx.Button(self.main_panel, label=_("Cancel"))
-        self.cancel_button.Bind(wx.EVT_BUTTON, self.cancel)
-        self.apply_button = wx.Button(self.main_panel, label=_("Apply"))
-        self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
-        apply_sizer.Add(self.reset_button, 0, wx.RIGHT | wx.LEFT | wx.BOTTOM, 10)
-        apply_sizer.AddStretchSpacer(prop=1)
-        apply_sizer.Add(self.cancel_button, 0, wx.RIGHT | wx.BOTTOM, 10)
-        apply_sizer.Add(self.apply_button, 0, wx.RIGHT | wx.BOTTOM, 10)
-
-        main_sizer.Add(apply_sizer, 0, wx.EXPAND | wx.ALL, 0)
-
-        # set sizers
-        self.settings_panel.SetSizer(settings_wrapper_sizer)
-        self.output_option_panel.SetSizer(output_wrapper_sizer)
-        self.bitmap.SetSizer(self.bitmap_wrapper_sizer)
-        self.help.SetSizer(help_sizer)
-
-        self.main_panel.SetSizerAndFit(main_sizer)
-        self.Fit()
-        self.Layout()
-
-    def update_by_stitch_length(self, event=None):
-        stitch_length = self.stitch_length.GetValue()
-        xy = stitch_length / sqrt(2)
-        self.box_x.SetValue(xy)
-        self.box_y.SetValue(xy)
-
-        self.update_bitmap_panel()
-
-    def update(self, event=None):
-        y_on = not self.x_only_checkbox.GetValue()
-        self.box_y.Enable(y_on)
-        self.box_y_label.Enable(y_on)
-
-        box_x = self.box_x.GetValue()
-        box_y = self.box_y.GetValue()
-        if not y_on:
-            box_y = box_x
-            self.box_y.SetValue(box_y)
-        result = sqrt(pow(box_x, 2) + pow(box_y, 2))
-        self.stitch_length.SetValue(result)
-
-        if y_on:
-            self.stitch_length.Enable(False)
+from .base import InkstitchExtension
+from .utils.bitmap_to_cross_stitch import BitmapToCrossStitch
+
+
+class CrossStitchHelper(InkstitchExtension):
+    '''Cross stitch helper is a tool to prepare canvas and elements for cross stitching.
+       It can:
+        * apply grid settings to a page grid (optionally delete previously generated cross stitch grids)
+        * apply cross stitch settins to selectd fill elements (and images)
+        * pixelate the outlines of fill elements
+        * convert bitmap into pixelated fill elements
+    '''
+    def effect(self):
+        settings = {
+            'applied': False,
+            'square': True,
+            'box_x': 3,
+            'box_y': 3,
+            'set_params': True,
+            'cross_method': 'simple_cross',
+            'pixelize': False,
+            'remove_overlaps': True,
+            'coverage': 50,
+            'grid_offset': '0',
+            'align_with_canvas': True,
+            'nodes': False,
+            'set_grid': False,
+            'grid_color': (0, 153, 229),
+            'remove_grids': False,
+            'color_method': 0,
+            'convert_bitmap': False,
+            'pixel_by_pixel': False,
+            'bitmap_num_colors': 5,
+            'bitmap_quantize_method': 1,
+            'bitmap_rgb_colors': '',
+            'bitmap_gimp_palette': '',
+            'bitmap_saturation': 1,
+            'bitmap_brightness': 1,
+            'bitmap_contrast': 1,
+            'bitmap_transparency_threshold': 50,
+            'bitmap_background_color': (0, 0, 0),
+            'bitmap_remove_background': 0,
+            'bitmap_display_svg_image': False
+        }
+
+        # True will not show the no elements warning
+        # they may just simply want to check the the stitch length or setup the grid
+        if self.svg.selection:
+            self.get_elements(True)
         else:
-            self.stitch_length.Enable(True)
+            # nothing was selected, keep it this way
+            self.elements = []
 
-        enable = self.pixelize.GetValue()
-        self.nodes_label.Enable(enable)
-        self.nodes.Enable(enable)
-
-        self.grid_color_label.Enable(self.setup_grid.GetValue())
-        self.grid_color.Enable(self.setup_grid.GetValue())
-        self.remove_grids_label.Enable(self.setup_grid.GetValue())
-        self.remove_grids.Enable(self.setup_grid.GetValue())
-
-        self.update_bitmap_panel()
-
-    def on_color_slider_change(self, rule, event):
-        # update numberical color values
-        if rule == "saturation":
-            self.saturation_numerical_input.SetValue(self.saturation.GetValue() / 100)
-        elif rule == "brightness":
-            self.brightness_numerical_input.SetValue(self.brightness.GetValue() / 100)
-        elif rule == "contrast":
-            self.contrast_numerical_input.SetValue(self.contrast.GetValue() / 100)
-        elif rule == "transparency_threshold":
-            self.transparency_threshold_numerical_input.SetValue(self.transparency_threshold.GetValue())
-        self.update_bitmap_panel()
-
-    def on_numerical_color_change(self, rule, event):
-        if rule == "saturation":
-            saturation = self.saturation_numerical_input.GetValue()
-            self.saturation.SetValue(int(saturation * 100))
-        elif rule == "brightness":
-            brightness = self.brightness_numerical_input.GetValue()
-            self.brightness.SetValue(int(brightness * 100))
-        elif rule == "contrast":
-            contrast = self.contrast_numerical_input.GetValue()
-            self.contrast.SetValue(int(contrast * 100))
-        elif rule == "transparency_threshold":
-            transparency_threshold = self.transparency_threshold_numerical_input.GetValue()
-            self.transparency_threshold.SetValue(int(transparency_threshold))
-        self.update_bitmap_panel()
-
-    def enable_bitmap_settings(self, event=None):
-        convert = self.convert_bitmap.GetValue()
-        self.pixel_by_pixel_label.Enable(convert)
-        self.pixel_by_pixel.Enable(convert)
-        self.color_selection_method_label.Enable(convert)
-        self.color_selection_method.Enable(convert)
-        self.num_colors_label.Enable(convert)
-        self.num_colors.Enable(convert)
-        self.quantize_method_label.Enable(convert)
-        self.quantize_method.Enable(convert)
-        self.rgb_color_list_label.Enable(convert)
-        self.rgb_color_list.Enable(convert)
-        self.gimp_palette_label.Enable(convert)
-        self.gimp_palette.Enable(convert)
-        self.saturation_label.Enable(convert)
-        self.saturation.Enable(convert)
-        self.saturation_numerical_input.Enable(convert)
-        self.brightness_label.Enable(convert)
-        self.brightness.Enable(convert)
-        self.brightness_numerical_input.Enable(convert)
-        self.contrast_label.Enable(convert)
-        self.contrast.Enable(convert)
-        self.contrast_numerical_input.Enable(convert)
-        self.transparency_threshold_label.Enable(convert)
-        self.transparency_threshold.Enable(convert)
-        self.transparency_threshold_numerical_input.Enable(convert)
-        self.background_color_label.Enable(convert)
-        self.background_color.Enable(convert)
-        self.remove_background_label.Enable(convert)
-        self.remove_background.Enable(convert)
-
-        self.update_bitmap_panel()
-
-    def update_color_selection_method(self, event=None):
-        method = self.color_selection_method.GetSelection()
-        self.num_colors_label.Show(method == 0)
-        self.num_colors.Show(method == 0)
-        self.quantize_method_label.Show(method == 0)
-        self.quantize_method.Show(method == 0)
-
-        self.rgb_color_list_label.Show(method == 2)
-        self.rgb_color_list.Show(method == 2)
-
-        self.gimp_palette_label.Show(method == 3)
-        self.gimp_palette.Show(method == 3)
-
-        self.bitmap.Fit()
-        self.bitmap.Layout()
-        self.update_bitmap_panel()
-
-    def _load_bitmap(self):
-        self.cross_bitmaps = {}
+        # Fillter to only handle image and fill elements
+        elements = []
         for element in self.elements:
-            if element.name == "FillStitch":
-                continue
-            el_id = element.node.get_id()
-            cross_bitmap = BitmapToCrossStitch(None, element, self.settings, self.palette)
-            if cross_bitmap.original_image is not None:
-                self.cross_bitmaps[el_id] = (cross_bitmap)
+            if element.name in ["Image", "FillStitch"]:
+                elements.append(element)
 
-    def _on_debounce_timer(self, event):
-        # Debounce timer fired — start a new task
-        self._current_task_id += 1
-        task_id = self._current_task_id
+        palette = self._get_stroke_palette()
 
-        # Run image rendering in a thread
-        if self.settings['bitmap_display_svg_image']:
-            threading.Thread(target=self.update_svg_image, args=[task_id], daemon=True).start()
-        elif self.settings['convert_bitmap']:
-            threading.Thread(target=self.update_bitmap_image, args=[task_id], daemon=True).start()
-        else:
-            self.staticbitmap.SetBitmap(wx.NullBitmap)
+        app = CrossStitchHelperApp(settings=settings, elements=elements, palette=palette)
+        app.MainLoop()
 
-    def update_bitmap_panel(self, event=None):
-        self.apply_settings()
+        if not settings['applied']:
+            return
+        self.settings = settings
 
-        # Restart debounce timer (200 ms)
-        if self._debounce_timer.IsRunning():
-            self._debounce_timer.Stop()
-        self._debounce_timer.Start(200, oneShot=True)
+        # add grid
+        if settings['set_grid']:
+            self.setup_page_grid()
 
-    def _get_max_image_bounds(self):
-        minx = miny = maxx = maxy = 0
-        for bmp in self.cross_bitmaps.values():
-            sx, sy, mx, my = bmp.bitmap.original_shape.bounds
-            if sx < minx:
-                minx = sx
-            if sy < miny:
-                miny = sy
-            if mx > maxx:
-                maxx = mx
-            if my > maxy:
-                maxy = my
-        return minx, miny, maxx, maxy
-
-    def update_bitmap_image(self, task_id):
-        if not self.cross_bitmaps.values():
-            image = Image.new('RGBA', (10, 10), (255, 255, 255, 1))
-        else:
-            minx, miny, maxx, maxy = self._get_max_image_bounds()
-            width = int(maxx - minx)
-            height = int(maxy - miny)
-
-            image = Image.new('RGBA', (width, height), (255, 255, 255, 1))
-
-            for cross_bitmap in self.cross_bitmaps.values():
-                recolored_image = cross_bitmap.apply_color_corrections(cross_bitmap.original_image)
-                recolored_image = cross_bitmap.apply_clip(recolored_image)
-                image = cross_bitmap.combine_images(image, recolored_image, (minx, miny))
-
-        # Get bounding box of non-transparent areas
-        # and crop the image for display
-        alpha_mask = image.getchannel("A").point(lambda a: 255 if a > 1 else 0)
-        bbox = alpha_mask.getbbox()
-        if bbox:
-            image = image.crop(bbox)
-
-        width, height = self.scaled_size(*image.size)
-        image = image.resize((width, height))
-        bitmap_prev = wx.Bitmap.FromBufferRGBA(width, height, image.tobytes())
-
-        if task_id != self._current_task_id:
-            # a newer task has already finished, do nothing
+        # the following operations will need selected elements
+        # if we cannot find any, return early
+        if not elements:
             return
 
-        self.staticbitmap.SetBitmap(bitmap_prev)
-
-    def update_svg_image(self, task_id):
-        svg_groups = Group()
-        if not self.settings['pixelize']:
-            for element in self.elements:
-                if element.name == "FillStitch":
-                    svg_groups.append(element.node.copy())
-                elif self.settings['convert_bitmap']:
-                    svg_groups.extend(self._get_image_nodes(element, True))
+        # Pixelate and parametrize elements
+        if self.settings['remove_overlaps']:
+            # first convert images to fills, then process everything at once
+            fills = self._prepare_fills(elements, palette)
+            if fills:
+                self.pixelize_combined(fills)
         else:
-            if self.settings['remove_overlaps']:
-                svg_groups = self._update_svg_image_combined(svg_groups)
-            else:
-                svg_groups = self._update_svg_image_single(svg_groups)
+            self._process_elements(elements, palette)
 
-        if not svg_groups:
-            self.staticbitmap.SetBitmap(wx.NullImage)
-
-        bmp = self.svg_groups_to_bmp(svg_groups)
-        if task_id == self._current_task_id:
-            # no newer task has already taken over, insert the bitmap
-            self.staticbitmap.SetBitmap(bmp)
-
-    def _update_svg_image_single(self, svg_groups):
-        for element in self.elements:
-            if element.name == "FillStitch":
-                pixelated_outline = pixelate_element(element, self.settings)
-                path = self._multipolygon_to_pathelement(pixelated_outline, element)
-                svg_groups.append(path)
-            else:
-                if self.settings['convert_bitmap']:
-                    elements = self._get_image_nodes(element, False)
-                    if elements:
-                        svg_groups.extend(elements)
-        return svg_groups
-
-    def _update_svg_image_combined(self, svg_groups):
+    def _prepare_fills(self, elements, palette):
         fills = []
-        for element in self.elements:
+        for element in elements:
             if element.name == "FillStitch":
-                fills.append(element)
+                if self.settings['pixelize']:
+                    fills.append(element)
+                elif self.settings['set_params']:
+                    # when pixelize is disabled, set params on each fill element
+                    self.set_element_cross_stitch_params(element.node)
             else:
                 if not self.settings['convert_bitmap']:
                     continue
-                nodes = self._get_image_nodes(element, False)
+                bitmap_convert = BitmapToCrossStitch(self.svg, element, self.settings, palette)
+                if bitmap_convert.original_image is None:
+                    continue
+                nodes = bitmap_convert.svg_nodes(False)
                 for color_group in nodes:
-                    for element in color_group:
-                        fills.append(FillStitch(element))
-        return pixelate_multiple(svg_groups, fills, self.settings)
+                    for el in color_group:
+                        fills.append(FillStitch(el))
+        return fills
 
-    def _get_image_nodes(self, element, transform):
-        el_id = element.node.get_id()
-        cross_bitmap = self.cross_bitmaps[el_id]
-        return cross_bitmap.svg_nodes(transform)
+    def _process_elements(self, elements, palette):
+        for element in elements:
+            if element.name == "FillStitch":
+                if self.settings['pixelize']:
+                    self.pixelize_single(element)
+                elif self.settings['set_params']:
+                    # when pixelize is disabled, set params on each fill element
+                    self.set_element_cross_stitch_params(element.node)
+            else:
+                if not self.settings['convert_bitmap']:
+                    continue
+                self._process_image(element, palette)
 
-    def _multipolygon_to_pathelement(self, pixelated_outline, fill):
-        path = ''
+    def _get_stroke_palette(self):
+        palette = []
+        for element in self.elements:
+            if element.name == "Stroke":
+                color = element.stroke_color
+                if color:
+                    palette.extend(color.to('rgb'))
+        return palette
+
+    def _process_image(self, element, palette):
+        parent = element.node.getparent()
+        index = parent.index(element.node)
+        bitmap_convert = BitmapToCrossStitch(self.svg, element, self.settings, palette)
+        if bitmap_convert.original_image is None:
+            return
+        elements = bitmap_convert.svg_nodes()
+        if elements:
+            main_group = Group()
+            main_group.label = element.node.label or element.node.get_id()
+            for color in elements:
+                if self.settings['set_params']:
+                    for path in color:
+                        self.set_element_cross_stitch_params(path)
+                if len(elements) == 1:
+                    main_group = color
+                else:
+                    main_group.append(color)
+            if elements:
+                parent.insert(index + 1, main_group)
+
+    def set_element_cross_stitch_params(self, element):
+        box_x = self.settings['box_x']
+        box_y = self.settings['box_y']
+        grid_param = str(box_x)
+        if box_y != box_x:
+            grid_param += f' {box_y}'
+        element.set('inkstitch:fill_method', 'cross_stitch')
+        element.set('inkstitch:cross_stitch_method', self.settings['cross_method'])
+        element.set('inkstitch:pattern_size_mm', grid_param)
+        element.set('inkstitch:expand_mm', '0.1')
+        element.set('inkstitch:fill_coverage', self.settings['coverage'])
+        element.set('inkstitch:cross_offset_mm', self.settings['grid_offset'])
+        element.set('inkstitch:canvas_grid_origin', self.settings['align_with_canvas'])
+
+    def pixelize_combined(self, fills):
+        cross_stitch_group = Group()
+        cross_stitch_group.label = _("Cross stitch group")
+
+        cross_stitch_group = pixelate_multiple(cross_stitch_group, fills, self.settings)
+
+        for path_element in cross_stitch_group.iterdescendants(SVG_PATH_TAG):
+            if self.settings['set_params']:
+                self.set_element_cross_stitch_params(path_element)
+            path_element.set('id', self.svg.get_unique_id('cross_stitch_'))
+
+        # Let's take the top most element from selection and insert everything here
+        node = self.svg.selection.rendering_order()[-1]
+        parent = node.getparent()
+        transform = get_correction_transform(node)
+        cross_stitch_group.transform = transform
+        index = parent.index(node) + 1
+        parent.insert(index, cross_stitch_group)
+
+        for fill in fills:
+            self._remove_empty(fill.node)
+
+    def _remove_empty(self, group_or_element):
+        parent = group_or_element.getparent()
+        if group_or_element.TAG != 'g' or len(group_or_element) == 0:
+            group_or_element.delete()
+        if parent is not None and len(parent) == 0:
+            self._remove_empty(parent)
+
+    def pixelize_single(self, element):
+        node = element.node
+        element_id = node.get_id()
+
+        # Covert non-path elemnts to pah elements
+        if node.tag_name != "path" or node.get("sodipodi:type", None) in ['star', 'inkscape:box3dside']:
+            new_path = node.to_path_element()
+            node_parent = node.getparent()
+            node_index = node_parent.index(node)
+            node_parent.insert(node_index, new_path)
+        else:
+            new_path = node.duplicate()
+
+        pixelated_outline = pixelate_element(element, self.settings)
         for polygon in pixelated_outline.geoms:
             path = Path(list(polygon.exterior.coords))
             for interior in polygon.interiors:
@@ -740,175 +226,50 @@ class CrossStitchHelperFrame(wx.Frame):
                 interior_path.close()
                 path += interior_path
             path.close()
-        return PathElement(attrib={'d': str(path), 'style': f'fill:{fill.fill_color}'})
 
-    def scaled_size(self, orig_width, orig_height):
-        # calculate width and height for the bitmap, keeping aspect ratio
-        # use a fixed size to satisfy windows
-        max_width = 600
-        max_height = 600
-        ratio = min(max_width / max(1, orig_width), max_height / max(1, orig_height))
-        return int(orig_width * ratio), int(orig_height * ratio)
+            new_element = new_path.duplicate()
+            new_element.set('d', str(path))
+            new_element.set('id', self.svg.get_unique_id(f'{element_id}_'))
+            new_element.transform = get_correction_transform(node)
+            if self.settings['set_params']:
+                self.set_element_cross_stitch_params(new_element)
+        new_path.delete()
+        node.delete()
 
-    def svg_groups_to_bmp(self, svg_groups):
-        # I'd love to use SvgDocumentElement("svg", nsmap=inkex.NSS) but wxpython seems to be confused about namespaces
-        # So let's wrap the color groups manually
-        svg_string = '<svg xmlns="http://www.w3.org/2000/svg">'
-        svg_string += svg_groups.tostring().decode('utf-8')
-        svg_string += '</svg>'
+    def setup_page_grid(self):
+        namedview = self.svg.namedview
+        unit = self.svg.document_unit
 
-        svg = wx.svg.SVGimage.CreateFromBytes(svg_string.encode("utf-8"))
+        # hide old grids
+        grids = self.svg.findall('.//inkscape:grid')
+        for grid in grids:
+            if grid.get_id().startswith("inkstitch_cross_stitch_grid_"):
+                if self.settings['remove_grids']:
+                    grid.delete()
+            else:
+                grid.set("enabled", "false")
 
-        bbox = svg_groups.bounding_box()
-        if bbox is None:
-            return wx.NullBitmap
-        width, height = int(bbox.width), int(bbox.height)
-        width, height = self.scaled_size(width, height)
+        grid_id = self.svg.get_unique_id("inkstitch_cross_stitch_grid_")
 
-        return svg.ConvertToScaledBitmap(wx.Size(width, height))
-
-    def reset_values(self, event):
-        self.box_x.SetValue(self.default_settings['box_x'])
-        self.box_y.SetValue(self.default_settings['box_y'])
-        cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[self.default_settings['cross_method']])
-        self.color_selection_method.SetSelection(cross_method)
-        self.coverage.SetValue(self.default_settings['coverage'])
-        self.grid_offset.SetValue(self.default_settings['grid_offset'])
-        self.align_with_canvas.SetValue(self.default_settings['align_with_canvas'])
-        self.grid_color.SetColour(wx.Colour(self.default_settings['grid_color']))
-        self.num_colors.SetValue(self.default_settings['bitmap_num_colors'])
-        self.quantize_method.SetSelection(self.default_settings['bitmap_quantize_method'])
-        self.saturation.SetValue(int(self.default_settings['bitmap_saturation'] * 100))
-        self.brightness.SetValue(int(self.default_settings['bitmap_brightness'] * 100))
-        self.contrast.SetValue(int(self.default_settings['bitmap_contrast'] * 100))
-        self.transparency_threshold.SetValue(int(self.default_settings['bitmap_transparency_threshold']))
-        self.rgb_color_list.SetValue(self.default_settings['bitmap_rgb_colors'])
-        self.gimp_palette.SetPath(self.default_settings['bitmap_gimp_palette'])
-        self.background_color.SetColour(wx.Colour(self.default_settings['bitmap_background_color']))
-        self.remove_background.SetSelection(self.default_settings['bitmap_remove_background'])
-        self.update()
-        self.update_color_selection_method()
-        self.apply_settings()
-
-    def apply_global_settings(self):
-        self.x_only_checkbox.SetValue(global_settings['square'])
-        self.box_x.SetValue(global_settings['cross_helper_box_x'])
-        self.box_y.SetValue(global_settings['cross_helper_box_y'])
-        self.set_params.SetValue(global_settings['cross_helper_set_params'])
-        cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_helper_cross_method']])
-        self.cross_stitch_method.SetSelection(cross_method)
-        self.pixelize.SetValue(global_settings['cross_helper_pixelize'])
-        self.remove_overlaps.SetValue(global_settings['cross_helper_remove_overlaps'])
-        self.nodes.SetValue(global_settings['cross_helper_nodes'])
-        self.coverage.SetValue(global_settings['cross_helper_coverage'])
-        self.grid_offset.SetValue(global_settings['cross_helper_grid_offset'])
-        self.align_with_canvas.SetValue(global_settings['cross_helper_align_with_canvas'])
-        self.setup_grid.SetValue(global_settings['cross_helper_set_grid'])
-        self.grid_color.SetColour(wx.Colour(global_settings['cross_helper_grid_color']))
-        self.remove_grids.SetValue(global_settings['cross_helper_remove_grids'])
-        self.convert_bitmap.SetValue(global_settings['cross_helper_convert_bitmap'])
-        self.pixel_by_pixel.SetValue(global_settings['cross_helper_pixel_by_pixel'])
-        self.color_selection_method.SetSelection(global_settings['cross_helper_color_method'])
-        self.num_colors.SetValue(global_settings['cross_bitmap_num_colors'])
-        self.quantize_method.SetSelection(global_settings['cross_bitmap_quantize_method'])
-        self.rgb_color_list.SetValue(global_settings['cross_bitmap_rgb_colors'])
-        self.gimp_palette.SetPath(global_settings['cross_bitmap_gimp_palette'])
-        self.saturation.SetValue(int(global_settings['cross_bitmap_saturation'] * 100))
-        self.saturation_numerical_input.SetValue(global_settings['cross_bitmap_saturation'])
-        self.brightness.SetValue(int(global_settings['cross_bitmap_brightness'] * 100))
-        self.brightness_numerical_input.SetValue(global_settings['cross_bitmap_brightness'])
-        self.contrast.SetValue(int(global_settings['cross_bitmap_contrast'] * 100))
-        self.contrast_numerical_input.SetValue(global_settings['cross_bitmap_contrast'])
-        self.transparency_threshold.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
-        self.transparency_threshold_numerical_input.SetValue(int(global_settings['cross_bitmap_transparency_threshold']))
-        self.background_color.SetColour(wx.Colour(global_settings['cross_bitmap_background_color']))
-        self.remove_background.SetSelection(global_settings['cross_bitmap_remove_background'])
-        self.display_svg_image.SetValue(False)  # defaults always to False to avoid longer startup times
-
-    def apply_settings(self):
-        self.settings['square'] = self.x_only_checkbox.GetValue()
-        self.settings['box_x'] = self.box_x.GetValue()
-        self.settings['box_y'] = self.box_y.GetValue()
-        self.settings['set_params'] = self.set_params.GetValue()
-        self.settings['cross_method'] = self.get_cross_method()
-        self.settings['pixelize'] = self.pixelize.GetValue()
-        self.settings['nodes'] = self.nodes.GetValue()
-        self.settings['coverage'] = self.coverage.GetValue()
-        self.settings['grid_offset'] = self.grid_offset.GetValue()
-        self.settings['align_with_canvas'] = self.align_with_canvas.GetValue()
-        self.settings['remove_overlaps'] = self.remove_overlaps.GetValue()
-        self.settings['set_grid'] = self.setup_grid.GetValue()
-        self.settings['grid_color'] = self.grid_color.GetColour().Get(False)
-        self.settings['remove_grids'] = self.remove_grids.GetValue()
-        self.settings['color_method'] = self.color_selection_method.GetSelection()
-        self.settings['convert_bitmap'] = self.convert_bitmap.GetValue()
-        self.settings['pixel_by_pixel'] = self.pixel_by_pixel.GetValue()
-        self.settings['bitmap_num_colors'] = self.num_colors.GetValue()
-        self.settings['bitmap_quantize_method'] = self.quantize_method.GetSelection()
-        self.settings['bitmap_saturation'] = self.saturation.GetValue() / 100
-        self.settings['bitmap_brightness'] = self.brightness.GetValue() / 100
-        self.settings['bitmap_contrast'] = self.contrast.GetValue() / 100
-        self.settings['bitmap_transparency_threshold'] = self.transparency_threshold.GetValue()
-        self.settings['bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
-        self.settings['bitmap_gimp_palette'] = self.gimp_palette.GetPath()
-        self.settings['bitmap_background_color'] = self.background_color.GetColour().Get(False)
-        self.settings['bitmap_remove_background'] = self.remove_background.GetSelection()
-        self.settings['bitmap_display_svg_image'] = self.display_svg_image.GetValue()
-
-    def get_cross_method(self):
-        current_cross_method = self.cross_stitch_method.GetString(self.cross_stitch_method.GetSelection())
-        return [method_id for method_id, method in self.cross_stitch_options.items() if method == current_cross_method][0]
-
-    def apply(self, event):
-        self._current_task_id += 1
-        self.settings['applied'] = True
-        self.apply_settings()
-
-        global_settings['square'] = self.x_only_checkbox.GetValue()
-        global_settings['cross_helper_box_x'] = self.box_x.GetValue()
-        global_settings['cross_helper_box_y'] = self.box_y.GetValue()
-        global_settings['cross_helper_set_params'] = self.set_params.GetValue()
-        global_settings['cross_helper_cross_method'] = self.get_cross_method()
-        global_settings['cross_helper_pixelize'] = self.pixelize.GetValue()
-        global_settings['cross_helper_remove_overlaps'] = self.remove_overlaps.GetValue()
-        global_settings['cross_helper_nodes'] = self.nodes.GetValue()
-        global_settings['cross_helper_coverage'] = self.coverage.GetValue()
-        global_settings['cross_helper_grid_offset'] = self.grid_offset.GetValue()
-        global_settings['cross_helper_align_with_canvas'] = self.align_with_canvas.GetValue()
-        global_settings['cross_helper_set_grid'] = self.setup_grid.GetValue()
-        global_settings['cross_helper_grid_color'] = self.grid_color.GetColour().Get(False)
-        global_settings['cross_helper_remove_grids'] = self.remove_grids.GetValue()
-        global_settings['cross_helper_convert_bitmap'] = self.convert_bitmap.GetValue()
-        global_settings['cross_helper_pixel_by_pixel'] = self.pixel_by_pixel.GetValue()
-        global_settings['cross_helper_color_method'] = self.color_selection_method.GetSelection()
-        global_settings['cross_bitmap_num_colors'] = self.num_colors.GetValue()
-        global_settings['cross_bitmap_quantize_method'] = self.quantize_method.GetSelection()
-        global_settings['cross_bitmap_saturation'] = self.saturation.GetValue() / 100
-        global_settings['cross_bitmap_brightness'] = self.brightness.GetValue() / 100
-        global_settings['cross_bitmap_contrast'] = self.contrast.GetValue() / 100
-        global_settings['cross_bitmap_transparency_threshold'] = self.transparency_threshold.GetValue()
-        global_settings['cross_bitmap_rgb_colors'] = self.rgb_color_list.GetValue()
-        global_settings['cross_bitmap_gimp_palette'] = self.gimp_palette.GetPath()
-        global_settings['cross_bitmap_background_color'] = self.background_color.GetColour().Get(False)
-        global_settings['cross_bitmap_remove_background'] = self.remove_background.GetSelection()
-
-        self.GetTopLevelParent().Close()
-        return
-
-    def cancel(self, event=None):
-        self._current_task_id += 1
-        self.Destroy()
-
-
-class CrossStitchHelperApp(wx.App):
-    def __init__(self, settings, elements, palette):
-        self.settings = settings
-        self.elements = elements
-        self.palette = palette
-        super().__init__()
-
-    def OnInit(self):
-        frame = CrossStitchHelperFrame(settings=self.settings, elements=self.elements, palette=self.palette)
-        self.SetTopWindow(frame)
-        frame.Show()
-        return True
+        # insert new grid
+        svg_scale = self.svg.inkscape_scale
+        box_x = self.settings['box_x'] / svg_scale
+        box_x = convert_unit(f'{box_x}mm', unit)
+        box_y = self.settings['box_y'] / svg_scale
+        box_y = convert_unit(f'{box_y}mm', unit)
+        grid = Grid(attrib={
+            "id": grid_id,
+            "units": unit,
+            "originx": "0",
+            "originy": "0",
+            "spacingx": str(box_x),
+            "spacingy": str(box_y),
+            "empcolor": str(Color(self.settings['grid_color']).to('named')),
+            "empopacity": "0.30196078",
+            "color": str(Color(self.settings['grid_color']).to('named')),
+            "opacity": "0.14901961",
+            "empspacing": "1",
+            "enabled": "true",
+            "visible": "true",
+        })
+        namedview.append(grid)
