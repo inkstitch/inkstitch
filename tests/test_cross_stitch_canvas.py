@@ -15,9 +15,9 @@ def test_cross_stitch_canvas_export_import():
     state.set_cell(2, 4, Cell(thread_id="#ff0000"))
 
     # 2. Set up a dummy Inkscape SVG document structure
-    from inkex import SvgDocumentElement, Group
+    from inkex import SvgDocumentElement, Layer
     svg_doc = SvgDocumentElement()
-    layer = svg_doc.add(Group(id="layer1"))
+    layer = svg_doc.add(Layer(id="layer1"))
 
     # 3. Export to SVG
     cell_size = 12.0
@@ -49,7 +49,7 @@ def test_cross_stitch_canvas_export_import():
 
 def test_cross_stitch_snapped_translation():
     import inkex
-    from inkex import SvgDocumentElement, Group
+    from inkex import SvgDocumentElement, Layer
     from lib.gui.cross_stitch.grid_export import EXPORT_GROUP_ID
     from lib.svg.path import get_node_transform
     from lib.svg import get_correction_transform
@@ -59,7 +59,7 @@ def test_cross_stitch_snapped_translation():
     state.set_cell(2, 3, Cell(thread_id="#ff0000"))
 
     svg_doc = SvgDocumentElement()
-    layer = svg_doc.add(Group(id="layer1"))
+    layer = svg_doc.add(Layer(id="layer1"))
     cell_size = 12.0
 
     export_to_svg(svg_doc, layer, state, cell_size)
@@ -124,13 +124,14 @@ def test_cross_stitch_fill_and_fill_eraser():
     # Initialize state
     state = GridStateManager(rows=10, cols=10)
     undo_mgr = UndoManager(state)
-    visualizer = MockVisualizer()
+    from typing import Any
+    visualizer: Any = MockVisualizer()
     engine = GridInteractionEngine(visualizer, state, undo_mgr)
 
     # 1. Fill empty background
     engine.current_tool = "fill"
     engine.active_thread = "#ff0000"
-    
+
     # Perform fill at (0, 0)
     engine.on_mouse_down(6.0, 6.0)
     engine.on_mouse_up(6.0, 6.0)
@@ -172,8 +173,10 @@ def test_cross_stitch_fill_and_fill_eraser():
             assert cell.thread_id == "#ff0000"
 
     # Verify boundary cells are unchanged
-    assert state.get_cell(0, 2).thread_id == "#0000ff"
-    assert state.get_cell(2, 2).thread_id == "#0000ff"
+    for r, c in [(0, 2), (2, 2)]:
+        cell = state.get_cell(r, c)
+        assert cell is not None
+        assert cell.thread_id == "#0000ff"
 
     # Verify cells outside boundary are unchanged (still empty)
     assert state.get_cell(3, 3) is None
@@ -189,7 +192,9 @@ def test_cross_stitch_fill_and_fill_eraser():
             assert state.get_cell(r, c) is None
 
     # Verify boundary is still intact
-    assert state.get_cell(0, 2).thread_id == "#0000ff"
+    boundary_cell = state.get_cell(0, 2)
+    assert boundary_cell is not None
+    assert boundary_cell.thread_id == "#0000ff"
 
     # 5. Drag behavior prevention
     engine.current_tool = "fill"
@@ -201,11 +206,10 @@ def test_cross_stitch_fill_and_fill_eraser():
     engine.on_mouse_up(3 * 12.0 + 6.0, 6.0)
 
     # The original boundary at col=2 and row=2 should be filled with #ff0000
-    assert state.get_cell(0, 2).thread_id == "#ff0000"
-    assert state.get_cell(1, 2).thread_id == "#ff0000"
-    assert state.get_cell(2, 2).thread_id == "#ff0000"
-    assert state.get_cell(2, 1).thread_id == "#ff0000"
-    assert state.get_cell(2, 0).thread_id == "#ff0000"
+    for r, c in [(0, 2), (1, 2), (2, 2), (2, 1), (2, 0)]:
+        cell = state.get_cell(r, c)
+        assert cell is not None
+        assert cell.thread_id == "#ff0000"
 
     # But (0, 3) must remain None (unfilled)
     assert state.get_cell(0, 3) is None

@@ -135,7 +135,7 @@ class GridInteractionEngine:
         # Queue for BFS (breadth-first search)
         queue = [(r, c)]
         visited = {(r, c)}
-        
+
         # Collect all cells to change
         cells_to_change = []
 

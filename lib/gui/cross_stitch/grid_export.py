@@ -5,7 +5,7 @@
 # See the file LICENSE for details.
 import logging
 import re
-from typing import Optional
+from typing import Any, Optional
 from lxml import etree
 import inkex
 
@@ -84,7 +84,7 @@ def build_export_group(
 
 
 def export_to_svg(
-    svg_doc: etree._ElementTree,
+    svg_doc: Any,
     layer: inkex.Layer,
     grid_state: GridStateManager,
     cell_size: float,
@@ -126,7 +126,7 @@ def export_to_svg(
 
 
 def import_from_svg(
-    svg_doc: etree._ElementTree,
+    svg_doc: Any,
     cell_size: float
 ) -> Optional[GridStateManager]:
     """Parse native cross-stitch fill paths to restore GridStateManager.
