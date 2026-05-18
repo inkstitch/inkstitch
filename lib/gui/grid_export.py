@@ -6,20 +6,29 @@ import zlib
 import base64
 import json
 import logging
+from typing import Dict, Tuple, List, Optional
 from lxml import etree
 import inkex
 
-from .grid_state import GridStateManager, Cell
+from .grid_state import GridStateManager, Cell, DEFAULT_THREAD_COLOR
 from .grid_mapper import grid_to_svg
-from .region_merger import merge_runs
+from .region_merger import merge_runs, Rect
 
 logger = logging.getLogger(__name__)
 
 EXPORT_GROUP_ID = "inkstitch-cross-stitch-canvas"
 MAX_EXPORT_RECTS = 5000
 
+# 15% inset keeps the stitch arms clear of cell borders,
+# matching typical cross-stitch thread thickness at standard scales.
+_CROSS_MARGIN_RATIO = 0.15
+
+# stroke-width:1.5 approximates real thread thickness at 1:1 export scale
+_STITCH_STROKE_WIDTH = 1.5
+
 
 def _serialize_state(grid_state: GridStateManager) -> str:
+    """Serialize the current grid state to a compressed base64 string."""
     sparse_list = []
     for (row, col), cell in grid_state.cells.items():
         sparse_list.append([
@@ -41,12 +50,45 @@ def _serialize_state(grid_state: GridStateManager) -> str:
     return base64.b64encode(compressed).decode('utf-8')
 
 
-def build_export_group(grid_state: GridStateManager, cell_size: float, correction_transform=None) -> etree.Element:
+def _build_cross_path(r: Rect, cell_size: float) -> str:
+    """Generate SVG path data for an X cross-stitch across a merged run.
+    
+    Each cell gets two diagonal lines forming an X. The margin keeps
+    stitches visually separate from adjacent cells.
+    """
+    margins = cell_size * _CROSS_MARGIN_RATIO
+    segments = []
+    for col in range(r.col, r.col + r.width):
+        x, y = grid_to_svg(r.row, col, cell_size)
+        x1, y1 = x + margins, y + margins
+        x2, y2 = x + cell_size - margins, y + cell_size - margins
+        segments.append(f"M{x1},{y1} L{x2},{y2}")
+        segments.append(f"M{x1},{y2} L{x2},{y1}")
+    return " ".join(segments)
+
+
+def build_export_group(
+    grid_state: GridStateManager,
+    cell_size: float,
+    correction_transform: Optional[inkex.Transform] = None
+) -> etree.Element:
+    """Build the root SVG group containing the cross-stitch elements.
+    
+    Generates cross-stitch diagonal paths for each cell, organized by thread color.
+    Serializes the grid state metadata and attaches it to the group.
+    
+    Args:
+        grid_state: Current grid manager holding sparse cell coordinates and states.
+        cell_size: Visual width/height of a single cell in SVG user units.
+        correction_transform: Transform matrix to correct document scaling.
+        
+    Returns:
+        The generated lxml etree.Element representing the root export group.
+    """
     root_group = inkex.Group()
     root_group.set("id", EXPORT_GROUP_ID)
     
     if correction_transform:
-
         root_group.transform = correction_transform
 
     if not grid_state.cells:
@@ -54,9 +96,9 @@ def build_export_group(grid_state: GridStateManager, cell_size: float, correctio
         root_group.set("inkstitch:grid-state", _serialize_state(grid_state))
         return root_group
         
-    threads = {}
+    threads: Dict[str, Dict[Tuple[int, int], Cell]] = {}
     for pos, cell in grid_state.cells.items():
-        tid = cell.thread_id or "#444444" 
+        tid = cell.thread_id or DEFAULT_THREAD_COLOR 
         if tid not in threads:
             threads[tid] = {}
         threads[tid][pos] = cell
@@ -72,25 +114,10 @@ def build_export_group(grid_state: GridStateManager, cell_size: float, correctio
         total_runs += len(rects)
 
         for r in rects:
-            x_start, y = grid_to_svg(r.row, r.col, cell_size)
-            width = r.width * cell_size
-            height = cell_size
-            
-            margins = cell_size * 0.15
-            segments = []
-            for col in range(r.col, r.col + r.width):
-                x, y_cell = grid_to_svg(r.row, col, cell_size)
-                x1 = x + margins
-                y1 = y_cell + margins
-                x2 = x + cell_size - margins
-                y2 = y_cell + cell_size - margins
-                segments.append(f"M{x1},{y1} L{x2},{y2}")
-                segments.append(f"M{x1},{y2} L{x2},{y1}")
-
-            cross_path = " ".join(segments)
+            cross_path = _build_cross_path(r, cell_size)
             cross_elem = inkex.PathElement(attrib={
                 "d": cross_path,
-                "style": f"fill:none;stroke:{tid};stroke-width:1.5;stroke-linecap:round;stroke-opacity:0.9"
+                "style": f"fill:none;stroke:{tid};stroke-width:{_STITCH_STROKE_WIDTH};stroke-linecap:round;stroke-opacity:0.9"
             })
             thread_group.append(cross_elem)
             
@@ -114,7 +141,27 @@ def build_export_group(grid_state: GridStateManager, cell_size: float, correctio
     return root_group
 
 
-def export_to_svg(svg_doc, layer, grid_state: GridStateManager, cell_size: float, correction_transform=None):
+def export_to_svg(
+    svg_doc: etree._ElementTree,
+    layer: inkex.Layer,
+    grid_state: GridStateManager,
+    cell_size: float,
+    correction_transform: Optional[inkex.Transform] = None
+) -> None:
+    """Write the cross-stitch grid into the Inkscape SVG document layer.
+    
+    Replaces any existing export group (identified by EXPORT_GROUP_ID) with
+    a freshly built one. If the canvas is empty, removes the old group and
+    returns without adding anything.
+    
+    Args:
+        svg_doc: The lxml root SVG document tree, used for xpath lookup of old groups.
+        layer: The inkex Layer where the group should be appended.
+        grid_state: Current canvas state to serialize and render.
+        cell_size: Size of each grid cell in SVG user units.
+        correction_transform: Optional transform applied to the root group,
+            used to align the export with the Inkscape document's coordinate system.
+    """
     new_group = build_export_group(grid_state, cell_size, correction_transform)
     
     # Locate existing EXPORT_GROUP_ID using standard lxml xpath
@@ -125,6 +172,7 @@ def export_to_svg(svg_doc, layer, grid_state: GridStateManager, cell_size: float
     if not grid_state.cells:
         if old_group is not None:
             old_group.getparent().remove(old_group)
+        logger.info("Canvas is empty; removing any existing export group and skipping export.")
         return
         
     # Normal replacement path

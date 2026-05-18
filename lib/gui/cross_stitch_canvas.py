@@ -9,7 +9,7 @@ import logging
 from typing import Callable, Dict, List, Optional, Set, Tuple
 
 import wx
-from .grid_state import GridStateManager
+from .grid_state import GridStateManager, DEFAULT_THREAD_COLOR
 from .grid_visualizer import GridVisualizer
 from .grid_interaction import GridInteractionEngine
 from .undo_manager import UndoManager
@@ -29,12 +29,14 @@ class ThreadSwatchPanel(wx.Panel):
         self.Bind(wx.EVT_LEFT_DOWN, self._on_click)
 
     def set_colors(self, hex_list: List[str]) -> None:
-        self.colors = hex_list[-15:]  # keep last 15
+        # Keep only the 15 most recent to avoid unbounded growth
+        self.colors = hex_list[-CrossStitchCanvasWindow._MAX_RECENT_COLORS:]
         self.Refresh()
 
     def _on_paint(self, _event: wx.PaintEvent) -> None:
         dc = wx.PaintDC(self)
         s = self.SWATCH_SIZE
+        # Guard against zero-width panel during initialization or resize
         cols = max(1, self.GetSize().width // (s + 2))
         for i, hex_col in enumerate(self.colors):
             row, col = divmod(i, cols)
@@ -45,6 +47,7 @@ class ThreadSwatchPanel(wx.Panel):
 
     def _on_click(self, event: wx.MouseEvent) -> None:
         s = self.SWATCH_SIZE
+        # Guard against zero-width panel during initialization or resize
         cols = max(1, self.GetSize().width // (s + 2))
         col = event.GetX() // (s + 2)
         row = event.GetY() // (s + 2)
@@ -54,6 +57,21 @@ class ThreadSwatchPanel(wx.Panel):
 
 
 class CrossStitchCanvasWindow(wx.Frame):
+    """Main editor window for the cross-stitch canvas.
+
+    Hosts the drawing canvas, tool palette, color picker, and undo/redo stack.
+    When the user clicks 'Export to Inkscape', sets export_confirmed = True
+    before closing, which signals the extension to write the grid back to the
+    Inkscape document. Closing via the window X button leaves it False.
+    """
+
+    _FALLBACK_THREAD_COLOR = DEFAULT_THREAD_COLOR  # used for cells with no assigned thread
+    _MAX_RECENT_COLORS = 15             # swatch panel display cap
+    _STATUS_THREAD_PREVIEW_COUNT = 3    # max threads shown in status bar
+    _MIN_ZOOM = 0.25
+    _MAX_ZOOM = 4.0
+    _ZOOM_STEP_FACTOR = 1.1
+
     def __init__(
         self,
         parent: Optional[wx.Window],
@@ -83,6 +101,7 @@ class CrossStitchCanvasWindow(wx.Frame):
         self.Bind(wx.EVT_CLOSE, self.on_close)
         self._init_ui()
         self._set_thread("#000000")
+        self._update_counts()
 
 
     def _init_ui(self) -> None:
@@ -121,7 +140,7 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._btn_pencil = tb_btn("Pencil", "Pencil", lambda e: self._select_tool("pencil"))
         self._btn_eraser = tb_btn("Eraser", "Eraser", lambda e: self._select_tool("eraser"))
         sizer.AddSpacer(10)
-        tb_btn("Pick",   "Color Picker",  self.on_eyedropper)
+        tb_btn("Custom", "Custom Color",  self.on_pick_custom_color)
         self._btn_pan    = tb_btn("Pan",  "Pan / Scroll", lambda e: self._select_tool("pan"))
 
         panel.SetSizer(sizer)
@@ -179,7 +198,7 @@ class CrossStitchCanvasWindow(wx.Frame):
 
         sizer.Add(wx.StaticText(panel, label="Zoom:"), 0,
                   wx.ALIGN_CENTER_VERTICAL | wx.LEFT, 8)
-        self._zoom_slider = wx.Slider(panel, minValue=25, maxValue=400,
+        self._zoom_slider = wx.Slider(panel, minValue=int(self._MIN_ZOOM * 100), maxValue=int(self._MAX_ZOOM * 100),
                                       value=100, size=(120, -1))
         self._zoom_slider.Bind(wx.EVT_SLIDER, self.on_zoom_slider)
         sizer.Add(self._zoom_slider, 0, wx.ALIGN_CENTER_VERTICAL | wx.LEFT, 4)
@@ -266,19 +285,26 @@ class CrossStitchCanvasWindow(wx.Frame):
         panel.SetSizer(sizer)
         return panel
 
-    def _set_thread(self, hex_col: str) -> None:
-        """Set the active drawing color and update UI."""
+    def _set_active_thread(self, hex_col: str) -> None:
+        """Set the active drawing color and sync all UI elements that reflect it."""
         self.interaction.active_thread = hex_col
         self._curr_swatch.SetBackgroundColour(wx.Colour(hex_col))
         self._curr_swatch.Refresh()
         self._curr_hex.SetLabel(hex_col.upper())
         cnt = self._thread_counts.get(hex_col, 0)
         self._curr_count.SetLabel(f"Count    {cnt}")
-        # Update recently used list (dedup, most-recent last)
+
+    def _record_recent_color(self, hex_col: str) -> None:
+        """Add hex_col to the recently-used list (deduped, most-recent last)."""
         if hex_col in self._recent_colors:
             self._recent_colors.remove(hex_col)
         self._recent_colors.append(hex_col)
         self._recent_panel.set_colors(self._recent_colors)
+
+    def _set_thread(self, hex_col: str) -> None:
+        """Select a thread color for drawing and record it in recently-used."""
+        self._set_active_thread(hex_col)
+        self._record_recent_color(hex_col)
 
     def _on_color_picked(self, event: wx.ColourPickerEvent) -> None:
         col = self._color_picker.GetColour()  # read from widget, not event (more reliable)
@@ -389,14 +415,16 @@ class CrossStitchCanvasWindow(wx.Frame):
             return
 
         if event.Dragging() and event.LeftIsDown():
-            self.interaction.on_mouse_move(x, y)
-            self._update_counts()
+            changed = self.interaction.on_mouse_move(x, y)
+            # Only recount if a cell actually changed, not on every pixel
+            if changed:
+                self._update_counts()
 
     def on_mousewheel(self, event: wx.MouseEvent) -> None:
         rotation = event.GetWheelRotation()
-        factor = 1.1 if rotation > 0 else 0.9
+        factor = self._ZOOM_STEP_FACTOR if rotation > 0 else (1.0 / self._ZOOM_STEP_FACTOR)
         old_scale = self.visualizer.scale
-        new_scale = max(0.25, min(4.0, old_scale * factor))
+        new_scale = max(self._MIN_ZOOM, min(self._MAX_ZOOM, old_scale * factor))
         mx, my = event.GetX(), event.GetY()
         self.visualizer.offset_x = mx - (mx - self.visualizer.offset_x) * (new_scale / old_scale)
         self.visualizer.offset_y = my - (my - self.visualizer.offset_y) * (new_scale / old_scale)
@@ -422,8 +450,8 @@ class CrossStitchCanvasWindow(wx.Frame):
         self._pan_dragging = False
         self._pan_start = None
 
-    def on_eyedropper(self, _event):
-        """Open color dialog to pick any custom color."""
+    def on_pick_custom_color(self, _event) -> None:
+        """Open the system color dialog to choose a custom thread color."""
         dlg = wx.ColourDialog(self)
         if dlg.ShowModal() == wx.ID_OK:
             col = dlg.GetColourData().GetColour()
@@ -466,19 +494,27 @@ class CrossStitchCanvasWindow(wx.Frame):
         return set(cell.thread_id for cell in self.state.cells.values()
                    if cell.thread_id)
 
-    def _update_counts(self) -> None:
-        counts = {}
+    def _tally_thread_counts(self) -> Dict[str, int]:
+        """Count stitches per thread across all cells.
+        Cells with no thread_id fall back to _FALLBACK_THREAD_COLOR."""
+        counts: Dict[str, int] = {}
         for cell in self.state.cells.values():
-            tid = cell.thread_id or "#444444"
+            tid = cell.thread_id or self._FALLBACK_THREAD_COLOR
             counts[tid] = counts.get(tid, 0) + 1
-        self._thread_counts = counts
-        total = sum(counts.values())
-        parts = [f"{tid}: {n}" for tid, n in list(counts.items())[:3]]
-        self._count_label.SetLabel("  ".join(parts) + f"  Total: {total}")
-        # active_thread is Optional[str]; guard before using as a dict key so the
-        # type checker can confirm the lookup is always str → int, never None → int.
+        return counts
+
+    def _update_counts(self) -> None:
+        """Refresh thread counts and update the status bar label."""
+        self._thread_counts = self._tally_thread_counts()
+        total = sum(self._thread_counts.values())
+        # Show only the first few threads in the status bar to keep it readable;
+        # the full counts are stored in self._thread_counts for the palette panel.
+        preview = [f"{tid}: {n}" for tid, n in list(self._thread_counts.items())[:self._STATUS_THREAD_PREVIEW_COUNT]]
+        self._count_label.SetLabel("  ".join(preview) + f"  Total: {total}")
+        
+        # Keep the active color's count label in sync
         cur = self.interaction.active_thread or ""
-        cnt = counts.get(cur, 0)
+        cnt = self._thread_counts.get(cur, 0)
         self._curr_count.SetLabel(f"Count    {cnt}")
 
     def _refresh_rulers(self) -> None:

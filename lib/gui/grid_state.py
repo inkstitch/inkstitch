@@ -13,6 +13,7 @@ MAX_COLS = 100
 
 DEFAULT_STITCH = "full"
 DEFAULT_THREAD = None
+DEFAULT_THREAD_COLOR = "#444444"  # fallback for cells with no assigned thread
 
 
 class Cell:

@@ -57,31 +57,38 @@ class GridInteractionEngine:
         self.is_dragging = False
         self.last_cell = None
 
-    def on_mouse_move(self, x: float, y: float) -> None:
+    def on_mouse_move(self, x: float, y: float) -> bool:
         if not self.is_dragging:
-            return
+            return False
             
         r, c = self.screen_to_logical(x, y)
         
         # Critical Draw Coalescing Limit: block out stuttering updates and redundant undo frames
         if (r, c) == self.last_cell:
-            return
+            return False
             
+        modified = False
         # Draw Bresenham interpolation line avoiding chopped drag trails when OS event polling lags
         if self.last_cell:
             for br, bc in self._bresenham_line(self.last_cell[0], self.last_cell[1], r, c):
-                self._apply_tool(br, bc)
+                if self._apply_tool(br, bc):
+                    modified = True
         else:
-            self._apply_tool(r, c)
+            if self._apply_tool(r, c):
+                modified = True
             
         self.last_cell = (r, c)
         
         # Queue emission bound to CallAfter region bounds to prevent synchronous stall
         self.visualizer.request_render(self.state)
+        return modified
 
-    def _apply_tool(self, r: int, c: int) -> None:
-        """Mutates the data layer according to tool context."""
+    def _apply_tool(self, r: int, c: int) -> bool:
+        """Mutates the data layer according to tool context. Returns True if a change actually occurred."""
         if self.current_tool == "pencil":
+            existing = self.state.get_cell(r, c)
+            if existing and existing.thread_id == self.active_thread and existing.stitch_type == "full":
+                return False
             # Immutable instantiation pattern
             new_cell = Cell(
                 thread_id=self.active_thread, 
@@ -91,10 +98,16 @@ class GridInteractionEngine:
             )
             self.state.set_cell(r, c, new_cell)
             self.visualizer.mark_dirty(r, c)
+            return True
             
         elif self.current_tool == "eraser":
+            existing = self.state.get_cell(r, c)
+            if existing is None:
+                return False
             self.state.clear_cell(r, c)
             self.visualizer.mark_dirty(r, c)
+            return True
+        return False
 
     def _bresenham_line(self, r0: int, c0: int, r1: int, c1: int) -> List[Tuple[int, int]]:
         """
