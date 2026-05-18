@@ -60,8 +60,9 @@ class GridVisualizer:
             self.dirty_cells = set()
             wx.CallAfter(self._flush_dirty_as_region, self._DIRTY_ALL, state)
             return
-        cells = self.dirty_cells.copy()  # type: ignore[union-attr]
-        self.dirty_cells.clear()  # type: ignore[union-attr]
+        assert isinstance(self.dirty_cells, set)
+        cells = self.dirty_cells.copy()
+        self.dirty_cells.clear()
         wx.CallAfter(self._flush_dirty_as_region, cells, state)
 
     def _flush_dirty_as_region(self, cells: Union[Set[Tuple[int, int]], object],
@@ -72,14 +73,15 @@ class GridVisualizer:
             self.window.Refresh()
             return
 
+        assert isinstance(cells, set)
         threshold = state.rows * state.cols * 0.30
-        if len(cells) > threshold:  # type: ignore[arg-type]
+        if len(cells) > threshold:
             self.window.Refresh()
             return
 
         min_r = min_c = float('inf')
         max_r = max_c = float('-inf')
-        for r, c in cells:  # type: ignore[union-attr]
+        for r, c in cells:
             if r < min_r:
                 min_r = r
             if r > max_r:
@@ -140,7 +142,7 @@ class GridVisualizer:
 
         # Clip to visible area so we skip off-screen lines cheaply
         size = self.window.GetClientSize()
-        w, h = size.GetWidth(), size.GetHeight()
+        w, h = size.Width, size.Height
 
         for r in range(state.rows + 1):
             start_x, start_y = self.logical_to_screen(r, 0)

@@ -18,7 +18,7 @@ class GridInteractionEngine:
 
         # Toolstate (Default Phase 1 implementations)
         self.current_tool = "pencil"  # "eraser", "pencil"
-        self.active_thread = None
+        self.active_thread: Optional[str] = None
 
         # Drag sequence tracking
         self.is_dragging = False

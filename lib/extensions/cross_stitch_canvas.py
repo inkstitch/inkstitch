@@ -4,9 +4,9 @@
 import wx
 import inkex
 
-from lib.gui.grid_state import GridStateManager
-from lib.gui.cross_stitch_canvas import CrossStitchCanvasWindow
-from lib.gui.grid_export import EXPORT_GROUP_ID, export_to_svg
+from lib.gui.cross_stitch.grid_state import GridStateManager
+from lib.gui.cross_stitch.cross_stitch_canvas import CrossStitchCanvasWindow
+from lib.gui.cross_stitch.grid_export import EXPORT_GROUP_ID, export_to_svg
 
 
 class CrossStitchCanvas(inkex.EffectExtension):
@@ -16,7 +16,7 @@ class CrossStitchCanvas(inkex.EffectExtension):
     DEVELOPMENT_ONLY = False
 
     @classmethod
-    def name(cls) -> str:
+    def name(cls) -> str:  # type: ignore[override]
         return "cross_stitch_canvas"
 
     def add_arguments(self, pars):
