@@ -346,6 +346,7 @@ class CrossStitchCanvasWindow(wx.Frame):
     # Ruler painting
     # ------------------------------------------------------------------
     def _on_paint_h_ruler(self, _event: wx.PaintEvent) -> None:
+        """Draw the horizontal ruler ticks and numeric labels, optimized for viewport clipping."""
         dc = wx.PaintDC(self.h_ruler)
         dc.SetBackground(wx.Brush(wx.Colour(230, 230, 230)))
         dc.Clear()
@@ -355,10 +356,13 @@ class CrossStitchCanvasWindow(wx.Frame):
         offset = self.visualizer.offset_x
         left_margin = self.v_ruler.GetSize().width
         width = self.h_ruler.GetClientSize().width
-        for col in range(self.state.cols + 1):
+        
+        # Calculate mathematically visible column boundaries to avoid redundant iterations
+        start_col = max(0, int((-20 - offset - left_margin) // cell))
+        end_col = min(self.state.cols, int((width + 20 - offset - left_margin) // cell) + 1)
+        
+        for col in range(start_col, end_col + 1):
             x = int(col * cell + offset + left_margin)
-            if x < -20 or x > width + 20:
-                continue
             if col % 10 == 0:
                 dc.DrawLine(x, 14, x, 24)
                 dc.DrawText(str(col), x + 2, 2)
@@ -366,6 +370,7 @@ class CrossStitchCanvasWindow(wx.Frame):
                 dc.DrawLine(x, 18, x, 24)
 
     def _on_paint_v_ruler(self, _event: wx.PaintEvent) -> None:
+        """Draw the vertical ruler ticks and numeric labels, optimized for viewport clipping."""
         dc = wx.PaintDC(self.v_ruler)
         dc.SetBackground(wx.Brush(wx.Colour(230, 230, 230)))
         dc.Clear()
@@ -373,7 +378,13 @@ class CrossStitchCanvasWindow(wx.Frame):
                            wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL))
         cell = self.visualizer.cell_size * self.visualizer.scale
         offset = self.visualizer.offset_y
-        for row in range(self.state.rows + 1):
+        height = self.v_ruler.GetClientSize().height
+        
+        # Calculate mathematically visible row boundaries to avoid drawing off-screen tick/labels
+        start_row = max(0, int((-20 - offset) // cell))
+        end_row = min(self.state.rows, int((height + 20 - offset) // cell) + 1)
+        
+        for row in range(start_row, end_row + 1):
             y = int(row * cell + offset)
             if row % 10 == 0:
                 dc.DrawLine(18, y, 28, y)
