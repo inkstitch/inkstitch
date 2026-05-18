@@ -195,3 +195,4 @@ class GridVisualizer:
 
         dc.DrawLine(int(x1), int(y1), int(x2), int(y2))
         dc.DrawLine(int(x1), int(y2), int(x2), int(y1))
+        

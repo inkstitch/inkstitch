@@ -16,6 +16,7 @@ DEFAULT_THREAD = None
 DEFAULT_THREAD_COLOR = "#444444"  # fallback for cells with no assigned thread
 
 
+
 class Cell:
     """
     Explicit lightweight representation of a single stitch to minimize memory.
@@ -123,3 +124,4 @@ class GridStateManager:
             )
 
         return state
+    
