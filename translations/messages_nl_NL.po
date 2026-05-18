@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-05-16 03:26+0000\n"
-"PO-Revision-Date: 2026-05-16 03:26\n"
+"PO-Revision-Date: 2026-05-18 03:55\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr ""
 #. description of font in fonts/abecedaire_small
 #: inkstitch-fonts-metadata.py:4
 msgid "This font is an altered version of Abécédaire AGS, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Dit lettertype is een aangepaste versie van Abécédaire AGS, waardoor een grotere verkleining mogelijk is. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/ags_garamond_latin_grec
 #: inkstitch-fonts-metadata.py:6
@@ -293,7 +293,7 @@ msgstr "klein kruissteek lettertype"
 #. description of font in fonts/egyptian_small
 #: inkstitch-fonts-metadata.py:104
 msgid "This font is an altered version of Egyptian, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Dit lettertype is een aangepaste versie van het Egyptische lettertype, waardoor een grotere verkleining mogelijk is. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/eloquent
 #: inkstitch-fonts-metadata.py:106
@@ -303,7 +303,7 @@ msgstr "klein cursief kruissteek lettertype"
 #. description of font in fonts/eloquent_small
 #: inkstitch-fonts-metadata.py:108
 msgid "This font is an altered version of Eloquent, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Dit lettertype is een aangepaste versie van Eloquent, waardoor een grotere verkleining mogelijk is. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/emilio_20
 #: inkstitch-fonts-metadata.py:110
@@ -393,7 +393,7 @@ msgstr "Lettertype voor kruissteek. Oorspronkelijk bedoeld voor het borduren van
 #. description of font in fonts/heavenly_small
 #: inkstitch-fonts-metadata.py:146
 msgid "This font is an altered version of Heavenly, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
-msgstr ""
+msgstr "Dit lettertype is een aangepaste versie van Heavenly, waardoor een grotere verkleining mogelijk is. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/hebrew_font_large
 #: inkstitch-fonts-metadata.py:148
@@ -478,7 +478,7 @@ msgstr "Kum Tsoan Tartan is schots ruiten text. Het bevat 43 letters inclusief a
 #. description of font in fonts/ladies_present
 #: inkstitch-fonts-metadata.py:180
 msgid "A  rectangular crosses font"
-msgstr ""
+msgstr "Een rechthoekig lettertype met kruis steek"
 
 #. description of font in fonts/learning_curve
 #: inkstitch-fonts-metadata.py:182
@@ -703,7 +703,7 @@ msgstr "Venezia small is een aangepaste versie van Venezia om een ​​grotere 
 #. description of font in fonts/very_crossy
 #: inkstitch-fonts-metadata.py:272
 msgid "Medium size cross stitch font"
-msgstr ""
+msgstr "Middelgroot lettertype voor kruissteek"
 
 #. description of font in fonts/violin_serif
 #: inkstitch-fonts-metadata.py:274
@@ -2431,11 +2431,11 @@ msgstr "Keer beide rails om"
 
 #: lib/elements/satin_column.py:316
 msgid "Push compensation"
-msgstr ""
+msgstr "Duw compensatie"
 
 #: lib/elements/satin_column.py:317
 msgid "Shrinks the column at start and/or end."
-msgstr ""
+msgstr "Verkleint de kolom aan het begin en/of einde."
 
 #: lib/elements/satin_column.py:328 lib/elements/stroke.py:482
 msgid "Reverse rails"
@@ -2594,7 +2594,7 @@ msgstr "Dit element wordt weergegeven als een loop steek zolang het een satijn k
 
 #: lib/elements/stroke.py:41
 msgid "Whether or not a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
-msgstr ""
+msgstr "Of een lijn als satijn steek kan worden weergegeven, hangt af van de lijndikte en de voorkeur waarde voor de minimale satijn steek breedte. De lijndikte moet groter zijn dan de voorkeur instelling, anders wordt dit element als een rijgsteek behandeld. Om harde steken te voorkomen, is het aan te raden alleen satijn steken te gebruiken die breder zijn dan 1 mm."
 
 #: lib/elements/stroke.py:51 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
@@ -3916,7 +3916,7 @@ msgstr "Raster verschuiving (mm) x[ y]"
 
 #: lib/gui/cross_stitch_helper.py:148
 msgid "Output options"
-msgstr ""
+msgstr "Uitvoer opties"
 
 #: lib/gui/cross_stitch_helper.py:153
 msgid "Apply grid settings to"
@@ -3928,7 +3928,7 @@ msgstr "Borduur Instellingen"
 
 #: lib/gui/cross_stitch_helper.py:165
 msgid "Defines whether params for all selected elements should be updated or not."
-msgstr ""
+msgstr "Bepaalt of de instellingen voor alle geselecteerde elementen moeten worden bijgewerkt of niet."
 
 #: lib/gui/cross_stitch_helper.py:170
 msgid "Pixelate"
@@ -3952,11 +3952,11 @@ msgstr ""
 
 #: lib/gui/cross_stitch_helper.py:196
 msgid "Remove overlaps"
-msgstr ""
+msgstr "Overlappingen verwijderen"
 
 #: lib/gui/cross_stitch_helper.py:199
 msgid "Inserts a new set of non-overlapping shapes and removes selected fill elements"
-msgstr ""
+msgstr "Voegt een nieuwe set niet overlappende vormen in en verwijdert geselecteerde opvul elementen"
 
 #: lib/gui/cross_stitch_helper.py:208
 msgid "Setup page grid"
@@ -3992,11 +3992,11 @@ msgstr "Bitmap omzetten"
 
 #: lib/gui/cross_stitch_helper.py:261
 msgid "One cross each pixel"
-msgstr ""
+msgstr "Eén kruis per pixel"
 
 #: lib/gui/cross_stitch_helper.py:263
 msgid "Scales the image up by using one cross for each pixel"
-msgstr ""
+msgstr "Vergroot de afbeelding door voor elke pixel een kruisje te gebruiken"
 
 #: lib/gui/cross_stitch_helper.py:269 lib/gui/cross_stitch_helper.py:278
 msgid "Number of colors"
@@ -4076,7 +4076,7 @@ msgstr "Contrast"
 
 #: lib/gui/cross_stitch_helper.py:337
 msgid "Removes pixels with a higher transparency value than this from the original image."
-msgstr ""
+msgstr "Verwijdert pixels met een hogere transparantie waarde dan deze uit de originele afbeelding."
 
 #: lib/gui/cross_stitch_helper.py:338
 msgid "Transparency threshold (%)"
@@ -4118,7 +4118,13 @@ msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\
 "* Generate pixelated fills from bitmaps.\n"
 "* Remove overlaps.\n"
 "* Setup a page grid."
-msgstr ""
+msgstr "Deze extensie helpt bij het genereren van kruissteek patronen in Ink/Stitch. Het biedt de volgende mogelijkheden:\n\n"
+"* De rastergrootte definiëren aan de hand van de maximale steeklengte of de raster afstand.\n"
+"* Kruissteek instelling toepassen.\n"
+"* Omtrekken van geselecteerde vul elementen pixeliseren.\n"
+"* Gepixelde vullingen genereren vanuit bitmaps.\n"
+"* Overlappingen verwijderen.\n"
+"* Een paginaraster instellen."
 
 #: lib/gui/cross_stitch_helper.py:432 lib/gui/cross_stitch_helper.py:433
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
@@ -7779,7 +7785,7 @@ msgstr "Voeg opdrachten toe die van invloed zijn op de bevattende laag"
 
 #: inx/inkstitch_lettering.inx:3
 msgid "Lettering Tool"
-msgstr ""
+msgstr "Text Gereedschap"
 
 #: inx/inkstitch_lettering.inx:9
 msgid "Insert ready-to-embroider text into the document"
