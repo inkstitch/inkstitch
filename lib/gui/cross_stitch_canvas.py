@@ -410,7 +410,9 @@ class CrossStitchCanvasWindow(wx.Frame):
     def on_mouse_up(self, event: wx.MouseEvent) -> None:
         self._pan_dragging = False
         self._pan_start = None
-        self.interaction.on_mouse_up(event.GetX(), event.GetY())
+        changed = self.interaction.on_mouse_up(event.GetX(), event.GetY())
+        if changed:
+            self._update_counts()
 
     def on_mouse_move(self, event: wx.MouseEvent) -> None:
         x, y = event.GetX(), event.GetY()

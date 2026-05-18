@@ -53,9 +53,10 @@ class GridInteractionEngine:
         # Fire single emission
         self.visualizer.request_render(self.state)
 
-    def on_mouse_up(self, x: float, y: float) -> None:
+    def on_mouse_up(self, x: float, y: float) -> bool:
         self.is_dragging = False
         self.last_cell = None
+        return False
 
     def on_mouse_move(self, x: float, y: float) -> bool:
         if not self.is_dragging:

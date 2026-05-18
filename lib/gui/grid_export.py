@@ -170,12 +170,8 @@ def export_to_svg(
     old_groups = svg_doc.xpath(f"//*[@id='{EXPORT_GROUP_ID}']")
     old_group = old_groups[0] if old_groups else None
     
-    # On an empty canvas export
     if not grid_state.cells:
-        if old_group is not None:
-            old_group.getparent().remove(old_group)
-        logger.info("Canvas is empty; removing any existing export group and skipping export.")
-        return
+        logger.info("Canvas is empty; exporting empty placeholder group to preserve grid metadata.")
         
     # Normal replacement path
     if old_group is not None:

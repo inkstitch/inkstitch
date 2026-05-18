@@ -54,7 +54,6 @@ class CrossStitchCanvas(inkex.EffectExtension):
                 layer=layer,
                 grid_state=frame.state,
                 cell_size=frame.CELL_SIZE,
-                correction_transform=layer.transform
             )
 
 
