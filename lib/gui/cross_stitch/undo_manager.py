@@ -1,3 +1,8 @@
+# Authors: see git history
+#
+# Copyright (c) 2026 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
 from typing import List
 from .grid_state import GridStateManager
 
@@ -55,4 +60,4 @@ class UndoManager:
 
         self.undo_stack.append(current_state.clone())
         next_state = self.redo_stack.pop()
-        return next_state.clone()
+        return next_state.clone()

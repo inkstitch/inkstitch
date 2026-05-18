@@ -1,3 +1,8 @@
+# Authors: see git history
+#
+# Copyright (c) 2026 Authors
+# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+
 from typing import Dict, List, Tuple
 from .grid_state import Cell
 
@@ -62,4 +67,4 @@ def merge_runs(cells_by_thread: Dict[Tuple[int, int], Cell], horizontal_only: bo
         width = current_col_prev - current_col_start + 1
         rects.append(Rect(row=r, col=current_col_start, width=width, height=1))
 
-    return rects
+    return rects

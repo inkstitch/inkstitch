@@ -4,15 +4,12 @@
 import wx
 import inkex
 
-from lib.gui.cross_stitch.grid_state import GridStateManager
 from lib.gui.cross_stitch.cross_stitch_canvas import CrossStitchCanvasWindow
-from lib.gui.cross_stitch.grid_export import EXPORT_GROUP_ID, export_to_svg
+from lib.gui.cross_stitch.grid_export import export_to_svg
 
 
 class CrossStitchCanvas(inkex.EffectExtension):
-    """
-    Standard Inkstitch Hook implementation launching our new specialized interactive GUI.
-    """
+    """Launch the interactive wxPython cross-stitch canvas tool."""
     DEVELOPMENT_ONLY = False
 
     @classmethod
@@ -25,20 +22,16 @@ class CrossStitchCanvas(inkex.EffectExtension):
     def effect(self):
         layer = self.svg.get_current_layer()
 
+        from lib.gui.cross_stitch.grid_export import import_from_svg
         initial_state = None
-        old_groups = self.svg.xpath(f"//*[@id='{EXPORT_GROUP_ID}']")
-        old_group = old_groups[0] if old_groups else None
-
-        if old_group is not None:
-            serialized_state = old_group.get("inkstitch:grid-state")
-            if serialized_state:
-                try:
-                    initial_state = GridStateManager.from_serialized(serialized_state)
-                except Exception as exc:
-                    inkex.errormsg(
-                        f"Warning: Failed to restore previous cross-stitch canvas state: {exc}\n"
-                        "Starting with a clean canvas."
-                    )
+        try:
+            cell_sz = CrossStitchCanvasWindow.CELL_SIZE
+            initial_state = import_from_svg(self.svg, cell_sz)
+        except Exception as exc:
+            inkex.errormsg(
+                f"Warning: Failed to restore previous state: {exc}\n"
+                "Starting with a clean canvas."
+            )
 
         app = wx.App(False)
         frame = CrossStitchCanvasWindow(None, state=initial_state)
@@ -46,13 +39,40 @@ class CrossStitchCanvas(inkex.EffectExtension):
         app.MainLoop()
 
         # Only export if the user explicitly clicked "Export to Inkscape".
-        # Closing via the window X button or Cancel leaves export_confirmed=False.
+        # Closing via X or Cancel leaves export_confirmed=False.
         if getattr(frame, 'export_confirmed', False):
+            from lib.gui.cross_stitch.grid_export import EXPORT_GROUP_ID
+            from lib.svg.path import get_node_transform
+            from lib.svg import get_correction_transform
+
+            tx, ty = 0.0, 0.0
+            old_groups = self.svg.xpath(f"//*[@id='{EXPORT_GROUP_ID}']")
+            if old_groups:
+                try:
+                    global_trans = get_node_transform(old_groups[0])
+                    tx = global_trans.e
+                    ty = global_trans.f
+                except Exception:
+                    pass
+
+            cell_size = frame.CELL_SIZE
+            tx_snapped = round(tx / cell_size) * cell_size
+            ty_snapped = round(ty / cell_size) * cell_size
+
+            corr_str = get_correction_transform(layer, child=True)
+            corr_transform = (
+                inkex.Transform(corr_str) if corr_str else inkex.Transform()
+            )
+
+            snap_t = inkex.Transform().add_translate(tx_snapped, ty_snapped)
+            final_transform = corr_transform @ snap_t
+
             export_to_svg(
                 svg_doc=self.svg,
                 layer=layer,
                 grid_state=frame.state,
-                cell_size=frame.CELL_SIZE,
+                cell_size=cell_size,
+                correction_transform=final_transform,
             )
 
 

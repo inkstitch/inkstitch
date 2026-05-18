@@ -1,10 +1,8 @@
 # Authors: see git history
 #
 # Copyright (c) 2026 Authors
-# Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-import zlib
-import base64
-import json
+# Licensed under the GNU GPL version 3.0 or later.
+# See the file LICENSE for details.
 from typing import Dict, Tuple, Optional
 
 # Enforce maximum bounds early to prevent performance disasters
@@ -78,13 +76,14 @@ class GridStateManager:
             del self.cells[(row, col)]
 
     def clone(self) -> 'GridStateManager':
-        """
-        High-speed sparse dict copy.
+        """High-speed sparse dict copy.
+
         Creates an independent deep copy with no shared cell references,
-        completely avoiding Python's slow copy.deepcopy() to hit performance targets.
+        completely avoiding Python's slow copy.deepcopy() to hit
+        performance targets.
         """
         new_state = GridStateManager(self.rows, self.cols)
-        # Manually reinstantiate each Cell to enforce immutability boundary on undo
+        # Reinstantiate each Cell manually to enforce undo immutability
         for pos, cell in self.cells.items():
             new_state.cells[pos] = Cell(
                 thread_id=cell.thread_id,
@@ -92,34 +91,4 @@ class GridStateManager:
                 direction=cell.direction,
                 locked=cell.locked
             )
-        return new_state
-
-    @classmethod
-    def from_serialized(cls, serialized_state: str) -> 'GridStateManager':
-        """Restore a GridStateManager from serialized grid state metadata."""
-        try:
-            compressed = base64.b64decode(serialized_state)
-            raw = zlib.decompress(compressed).decode('utf-8')
-            data = json.loads(raw)
-        except Exception as exc:
-            raise ValueError("Invalid serialized grid state") from exc
-
-        if data.get("version", 1) != 1:
-            raise ValueError("Unsupported serialized grid-state version")
-
-        rows = data["rows"]
-        cols = data["cols"]
-        state = cls(rows=rows, cols=cols)
-
-        for entry in data.get("cells", []):
-            if len(entry) != 6:
-                raise ValueError("Serialized grid state cell entry has invalid format")
-            row, col, thread_id, stitch_type, direction, locked = entry
-            state.cells[(row, col)] = Cell(
-                thread_id=thread_id,
-                stitch_type=stitch_type,
-                direction=direction,
-                locked=locked,
-            )
-
-        return state
+        return new_state
