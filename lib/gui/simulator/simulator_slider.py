@@ -114,7 +114,7 @@ class SimulatorSlider(wx.Panel):
         gc = wx.GraphicsContext.Create(dc)
 
         if self._value < self._min:
-            return
+            self._value = self._min
 
         width, height = self.GetSize()
         min_value = self._min
