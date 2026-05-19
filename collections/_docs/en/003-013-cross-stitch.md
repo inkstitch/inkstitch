@@ -94,7 +94,8 @@ Ink/Stitch comes with an extension which helps you to perform cross stitch speci
 
 * Setup a grid for cross stitch alignment (and visual support while working on cross stitches)
 * Apply cross stitch params to selected elements
-* Pixelize the outline of selected elements, to easily see and adapt cross stitch positions
+* Pixelize and combine the outline of selected elements, to avoid jump stitches and receive a better representation of the cross stitch positioning
+* Convert bitmap images into cross stitch fill elements
 
 It also computes and displays the stitch length given the grid dimensions. Maximum stitch length in the cross stitches parameters should be larger than this value.
 

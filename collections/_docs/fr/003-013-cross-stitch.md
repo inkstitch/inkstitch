@@ -106,10 +106,9 @@ Une Combinaison de Point de Croix et de Point de Croix Horizontal, avec la croix
 Ink/Stitch inclut une extension qui vous permet d'effectuer toutes les tâches spécifiques au point de croix en une seule opération.
 
 * Création d'une grille pour l'alignement des points de croix (et aide visuelle pendant la broderie)
-
 * Application des paramètres de point de croix aux éléments sélectionnés
-
 * Pixellisation du contour des éléments sélectionnés pour visualiser et ajuster facilement la position des points
+* Convert bitmap images into cross stitch fill elements
 
 L'extension calcule et affiche également la longueur des points en fonction des dimensions de la grille;  dans le paramétrage, la longueur maximale du point devrait être supérieure à cette valeur.
 

@@ -89,11 +89,12 @@ Ink/Stitch kennt verschiedene Kreuzstich-Methoden.
 
 ### Kreuzstich-Helfer
 
-Ink/Stitch kommt mit einer Erweiterung, die Kreuzstich-spezifische Aufgaben in einem arbeitsablauf erledigen kann.
+Ink/Stitch kommt mit einer Erweiterung, die Kreuzstich-spezifische Aufgaben in einem Arbeitsablauf erledigen kann.
 
-* Erstellen eines Seitengitter für die Stichpositionierung (als visuelle Unterstützung bei der Erstellung des Kreuzstichmusters)
+* Erstellen eines Seitengitters für die Stichpositionierung (als visuelle Unterstützung bei der Erstellung des Kreuzstichmusters)
 * Kreuzstichparameter auf gewählte Füllstich-Elemente anwenden
-* Füllstichelemente verpixeln, so dass sie die Stichpositionen besser abbilden
+* Füllstichelemente kombinieren und verpixeln (weniger Sprungstiche, bessere visuelle Repräsentation des Ergebnisses)
+* Umwandeln von Rastergrafiken in Kreuzstich-Füllungen
 
 Außerdem wird die aus den Gitter-Dimensionen erechnete Stichlänge der diagonalen Stiche angezeigt. Große Kreuze können durch die Eingabe eines Wertes für die maximale Stichlänge unterteilt werden.
 

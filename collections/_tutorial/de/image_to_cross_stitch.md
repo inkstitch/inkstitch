@@ -8,7 +8,7 @@ image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_cat.jpg"
 tutorial-type:
 stitch-type:
  - Kreuzstich
-tool:
+werkzeug:
  - Füllung
 techniques:
 field-of-use:
