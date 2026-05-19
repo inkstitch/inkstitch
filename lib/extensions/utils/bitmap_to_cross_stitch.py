@@ -28,7 +28,7 @@ from ...utils.geometry import ensure_multi_polygon
 
 class BitmapToCrossStitch(object):
     ''' Converts a bitmap to pixelated fill elements by also trying to combine as many fill areas as possible.
-        This class is used for the cross stitch helper extension.
+        This class is used for the cross stitch assistant extension.
     '''
     def __init__(self, svg, bitmap, settings, palette=None):
         '''Prepare the bitmap image:
@@ -244,7 +244,7 @@ class BitmapToCrossStitch(object):
 
     def _crop_transparent_borders(self, image):
         ''' Crop transparent borders
-            (only for use in cross stitch helper)
+            (only for use in cross stitch assistant)
         '''
         bbox = image.getchannel("A").getbbox()
         if bbox:

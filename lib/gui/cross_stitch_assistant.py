@@ -18,7 +18,7 @@ from ..utils.pixelate import pixelate_element, pixelate_multiple
 from ..utils.settings import global_settings
 
 
-class CrossStitchHelperFrame(wx.Frame):
+class CrossStitchAssistantFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
         self.settings = kwargs.pop("settings")
         self.default_settings = self.settings.copy()
@@ -429,8 +429,8 @@ class CrossStitchHelperFrame(wx.Frame):
         self.website_link = wx.adv.HyperlinkCtrl(
             self.help,
             wx.ID_ANY,
-            _("https://inkstitch.org/docs/tools-fill/#cross-stitch"),
-            _("https://inkstitch.org/docs/tools-fill/#cross-stitch")
+            _("https://inkstitch.org/docs/tools-fill/#cross-stitch-assistant"),
+            _("https://inkstitch.org/docs/tools-fill/#cross-stitch-assistant")
         )
         help_sizer.Add(self.website_link, 0, wx.BOTTOM | wx.LEFT | wx.RIGHT, 20)
 
@@ -792,23 +792,23 @@ class CrossStitchHelperFrame(wx.Frame):
 
     def apply_global_settings(self):
         self.x_only_checkbox.SetValue(global_settings['square'])
-        self.box_x.SetValue(global_settings['cross_helper_box_x'])
-        self.box_y.SetValue(global_settings['cross_helper_box_y'])
-        self.set_params.SetValue(global_settings['cross_helper_set_params'])
-        cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_helper_cross_method']])
+        self.box_x.SetValue(global_settings['cross_assist_box_x'])
+        self.box_y.SetValue(global_settings['cross_assist_box_y'])
+        self.set_params.SetValue(global_settings['cross_assist_set_params'])
+        cross_method = self.cross_stitch_method.FindString(self.cross_stitch_options[global_settings['cross_assist_cross_method']])
         self.cross_stitch_method.SetSelection(cross_method)
-        self.pixelize.SetValue(global_settings['cross_helper_pixelize'])
-        self.remove_overlaps.SetValue(global_settings['cross_helper_remove_overlaps'])
-        self.nodes.SetValue(global_settings['cross_helper_nodes'])
-        self.coverage.SetValue(global_settings['cross_helper_coverage'])
-        self.grid_offset.SetValue(global_settings['cross_helper_grid_offset'])
-        self.align_with_canvas.SetValue(global_settings['cross_helper_align_with_canvas'])
-        self.setup_grid.SetValue(global_settings['cross_helper_set_grid'])
-        self.grid_color.SetColour(wx.Colour(global_settings['cross_helper_grid_color']))
-        self.remove_grids.SetValue(global_settings['cross_helper_remove_grids'])
-        self.convert_bitmap.SetValue(global_settings['cross_helper_convert_bitmap'])
-        self.pixel_by_pixel.SetValue(global_settings['cross_helper_pixel_by_pixel'])
-        self.color_selection_method.SetSelection(global_settings['cross_helper_color_method'])
+        self.pixelize.SetValue(global_settings['cross_assist_pixelize'])
+        self.remove_overlaps.SetValue(global_settings['cross_assist_remove_overlaps'])
+        self.nodes.SetValue(global_settings['cross_assist_nodes'])
+        self.coverage.SetValue(global_settings['cross_assist_coverage'])
+        self.grid_offset.SetValue(global_settings['cross_assist_grid_offset'])
+        self.align_with_canvas.SetValue(global_settings['cross_assist_align_with_canvas'])
+        self.setup_grid.SetValue(global_settings['cross_assist_set_grid'])
+        self.grid_color.SetColour(wx.Colour(global_settings['cross_assist_grid_color']))
+        self.remove_grids.SetValue(global_settings['cross_assist_remove_grids'])
+        self.convert_bitmap.SetValue(global_settings['cross_assist_convert_bitmap'])
+        self.pixel_by_pixel.SetValue(global_settings['cross_assist_pixel_by_pixel'])
+        self.color_selection_method.SetSelection(global_settings['cross_assist_color_method'])
         self.num_colors.SetValue(global_settings['cross_bitmap_num_colors'])
         self.quantize_method.SetSelection(global_settings['cross_bitmap_quantize_method'])
         self.rgb_color_list.SetValue(global_settings['cross_bitmap_rgb_colors'])
@@ -865,22 +865,22 @@ class CrossStitchHelperFrame(wx.Frame):
         self.apply_settings()
 
         global_settings['square'] = self.x_only_checkbox.GetValue()
-        global_settings['cross_helper_box_x'] = self.box_x.GetValue()
-        global_settings['cross_helper_box_y'] = self.box_y.GetValue()
-        global_settings['cross_helper_set_params'] = self.set_params.GetValue()
-        global_settings['cross_helper_cross_method'] = self.get_cross_method()
-        global_settings['cross_helper_pixelize'] = self.pixelize.GetValue()
-        global_settings['cross_helper_remove_overlaps'] = self.remove_overlaps.GetValue()
-        global_settings['cross_helper_nodes'] = self.nodes.GetValue()
-        global_settings['cross_helper_coverage'] = self.coverage.GetValue()
-        global_settings['cross_helper_grid_offset'] = self.grid_offset.GetValue()
-        global_settings['cross_helper_align_with_canvas'] = self.align_with_canvas.GetValue()
-        global_settings['cross_helper_set_grid'] = self.setup_grid.GetValue()
-        global_settings['cross_helper_grid_color'] = self.grid_color.GetColour().Get(False)
-        global_settings['cross_helper_remove_grids'] = self.remove_grids.GetValue()
-        global_settings['cross_helper_convert_bitmap'] = self.convert_bitmap.GetValue()
-        global_settings['cross_helper_pixel_by_pixel'] = self.pixel_by_pixel.GetValue()
-        global_settings['cross_helper_color_method'] = self.color_selection_method.GetSelection()
+        global_settings['cross_assist_box_x'] = self.box_x.GetValue()
+        global_settings['cross_assist_box_y'] = self.box_y.GetValue()
+        global_settings['cross_assist_set_params'] = self.set_params.GetValue()
+        global_settings['cross_assist_cross_method'] = self.get_cross_method()
+        global_settings['cross_assist_pixelize'] = self.pixelize.GetValue()
+        global_settings['cross_assist_remove_overlaps'] = self.remove_overlaps.GetValue()
+        global_settings['cross_assist_nodes'] = self.nodes.GetValue()
+        global_settings['cross_assist_coverage'] = self.coverage.GetValue()
+        global_settings['cross_assist_grid_offset'] = self.grid_offset.GetValue()
+        global_settings['cross_assist_align_with_canvas'] = self.align_with_canvas.GetValue()
+        global_settings['cross_assist_set_grid'] = self.setup_grid.GetValue()
+        global_settings['cross_assist_grid_color'] = self.grid_color.GetColour().Get(False)
+        global_settings['cross_assist_remove_grids'] = self.remove_grids.GetValue()
+        global_settings['cross_assist_convert_bitmap'] = self.convert_bitmap.GetValue()
+        global_settings['cross_assist_pixel_by_pixel'] = self.pixel_by_pixel.GetValue()
+        global_settings['cross_assist_color_method'] = self.color_selection_method.GetSelection()
         global_settings['cross_bitmap_num_colors'] = self.num_colors.GetValue()
         global_settings['cross_bitmap_quantize_method'] = self.quantize_method.GetSelection()
         global_settings['cross_bitmap_saturation'] = self.saturation.GetValue() / 100
@@ -900,7 +900,7 @@ class CrossStitchHelperFrame(wx.Frame):
         self.Destroy()
 
 
-class CrossStitchHelperApp(wx.App):
+class CrossStitchAssistantApp(wx.App):
     def __init__(self, settings, elements, palette):
         self.settings = settings
         self.elements = elements
@@ -908,7 +908,7 @@ class CrossStitchHelperApp(wx.App):
         super().__init__()
 
     def OnInit(self):
-        frame = CrossStitchHelperFrame(settings=self.settings, elements=self.elements, palette=self.palette)
+        frame = CrossStitchAssistantFrame(settings=self.settings, elements=self.elements, palette=self.palette)
         self.SetTopWindow(frame)
         frame.Show()
         return True

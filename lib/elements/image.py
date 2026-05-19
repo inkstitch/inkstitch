@@ -21,7 +21,7 @@ class ImageTypeWarning(ObjectTypeWarning):
         _('* Redraw the image with the pen (P) or bezier (B) tool'),
         _('* Alternatively convert your image into a path: Path > Trace Bitmap... (Shift+Alt+B) '
           '(further steps might be required)'),
-        _('* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Helper')
+        _('* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Assistant')
     ]
 
 
