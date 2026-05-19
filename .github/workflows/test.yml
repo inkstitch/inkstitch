@@ -35,7 +35,7 @@ jobs:
         run: |
           # We're pinning this PyGObject version because newer ones need more system dependencies (girepository-2.0).
           python -m pip install PyGObject==3.50.0
-          python -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
+          python -m pip install https://github.com/inkstitch/build-libs/releases/download/v0.1/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
           python -m pip install -r requirements.txt
 
       - name: Run tests
