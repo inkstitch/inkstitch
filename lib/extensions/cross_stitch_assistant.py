@@ -7,7 +7,7 @@ from inkex import Color, Grid, Group, Path
 from inkex.units import convert_unit
 
 from ..elements import FillStitch
-from ..gui.cross_stitch_helper import CrossStitchHelperApp
+from ..gui.cross_stitch_assistant import CrossStitchAssistantApp
 from ..i18n import _
 from ..svg import get_correction_transform
 from ..svg.tags import SVG_PATH_TAG
@@ -16,8 +16,8 @@ from .base import InkstitchExtension
 from .utils.bitmap_to_cross_stitch import BitmapToCrossStitch
 
 
-class CrossStitchHelper(InkstitchExtension):
-    '''Cross stitch helper is a tool to prepare canvas and elements for cross stitching.
+class CrossStitchAssistant(InkstitchExtension):
+    '''Cross stitch Assistant is a tool to prepare canvas and elements for cross stitching.
        It can:
         * apply grid settings to a page grid (optionally delete previously generated cross stitch grids)
         * apply cross stitch settins to selectd fill elements (and images)
@@ -73,7 +73,7 @@ class CrossStitchHelper(InkstitchExtension):
 
         palette = self._get_stroke_palette()
 
-        app = CrossStitchHelperApp(settings=settings, elements=elements, palette=palette)
+        app = CrossStitchAssistantApp(settings=settings, elements=elements, palette=palette)
         app.MainLoop()
 
         if not settings['applied']:

@@ -142,7 +142,7 @@ class CrossPatternCoverageWarning(ValidationWarning):
         _('* Or adapt the grid offset or move the shape'),
         _('* Or increase the expand value or increase shape size'),
         _('* Or decrease the fill coverage value'),
-        _('* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Helper, adapt settings and pixelate the shape')
+        _('* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant, adapt settings and pixelate the shape')
     ]
 
 
