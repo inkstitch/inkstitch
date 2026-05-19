@@ -49,8 +49,8 @@ Die Schritte sind folgende:
 
 - Unter `Bearbeiten > Einstellungen > Benutzeroberfläche > Ursprung in der oberen linken Ecke, wobei die y-Achse nach unten zeigt` ist aktiviert
 - Entscheide dich für die Größe der Kreuze: in diesem Beispiel nutzen wir eine Größe von 3 mm. Diese größe ist für alle verfügbaren Kreuzsticharten von Ink/Stitch brauchbar.
-- Erstelle ein Seitengitter mit 3 mm Abstand auf beiden Achsen (x und y). Dies kann entweder über die Dokumenteinstellungen geschehen oder über den Kreuzstich-Helfer.
-  Wähle alle Objekte ab (keine aktive Auswahl) und öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`. Setze den gewünschten Gitterabstand im Einstellungs-Tab und
+- Erstelle ein Seitengitter mit 3 mm Abstand auf beiden Achsen (x und y). Dies kann entweder über die Dokumenteinstellungen geschehen oder über den Kreuzstich-Assistent.
+  Wähle alle Objekte ab (keine aktive Auswahl) und öffne `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Assistent`. Setze den gewünschten Gitterabstand im Einstellungs-Tab und
   aktiviere das Seitengitter im Tab für die Ausgabe-Optionen.
 - Aktiviere das Inkscape Textwerkzeug mit `T` oder über die Werkzeugleiste. Versichere dich, dass eine Füllfarbe, aber keine Konturfarbe aktiviert ist.
 - Wähle die Doto-Schrift aus dem Dropdown-Menü aus.
@@ -60,7 +60,7 @@ Die Schritte sind folgende:
 ![hello1](/assets/images/tutorials/cross_stitch_lettering/hello1.jpg)
 
 - Konvertiere den Text in einen Pfad (`Pfad > Objekt in Pfad umwandeln`)
-- Wähle den Pfad aus und öffne den Kreuzstich-Helfer (`Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`).
+- Wähle den Pfad aus und öffne den Kreuzstich-Assistent (`Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Assistent`).
 
 ![hello1](/assets/images/tutorials/cross_stitch_lettering/de/assistant1.jpg)
 
@@ -71,7 +71,7 @@ Im Einstellungs-Tab gibt es zwei wichtige Parameter, die sind:
 - Die gewählte Kreuzstich-Methode kann ebenfalls schon hier gesetzt werden. Hierfür muss im Ausgabe-Tab die Option `Parameter` angewählt sein.
 - Ebenfalls im Ausgabe-Tab sollte unbedingt die Option `Verpixeln` aktiviert sein.
 
-Nach dem Anwenden des Kreuzstich-Helfers wird der Schriftpfad entsprechend verpixelt sein:
+Nach dem Anwenden des Kreuzstich-Assistenten wird der Schriftpfad entsprechend verpixelt sein:
 
 ![pixelateandparams](/assets/images/tutorials/cross_stitch_lettering/en/pixelateandparams.jpg)
 
@@ -81,13 +81,13 @@ Jeder Buchstabe ist nun eine einzige Form; Sprungstiche entstehen nur zwischen d
 
 Du kannst diesen Part gerne überspringen, aber wenn du einen tieferen Einblick gewinnen möchtest, lies gerne weiter.
 
-Als Erinnerung: der Kreuzstich-Helfer hat drei im wesentlichen **unabhängige** Funktionen die wir nutzen können:
+Als Erinnerung: der Kreuzstich-Assistent hat drei im wesentlichen **unabhängige** Funktionen die wir nutzen können:
 
 - Seitengitter erstellen. Dies ist ein optionales, rein visuelles Werkzeug. Es hat keinen Einfluss auf die Funktionalität.
   Das Seitengitter hilft aber, die Positionierung der Stiche zu erkennen und die Füllabdeckung der Gitterzellen abzuschätzen.
-  Das Gitter kann über den Kreuzstich-Helfer oder über die Dokumenteinstellungen eingerichtet werden.
-- Stickparameter. Stichparameter können entweder über den Kreuzstich-Helfer oder über die Ink/Stitch Parameter angewendet werden.
-  Der Kreuzstich-Helfer setzt dabei auf jedes Element einen kleinen Wert für den `Erweitern`-Parameter. So kann für die meisten Kreuzstich-Methoden
+  Das Gitter kann über den Kreuzstich-Assistent oder über die Dokumenteinstellungen eingerichtet werden.
+- Stickparameter. Stichparameter können entweder über den Kreuzstich-Assistent oder über die Ink/Stitch Parameter angewendet werden.
+  Der Kreuzstich-Assistent setzt dabei auf jedes Element einen kleinen Wert für den `Erweitern`-Parameter. So kann für die meisten Kreuzstich-Methoden
   das Auftrennen von Formen an Stellen verhindert werden, die sich nur an einer Ecke berühren.
 - Verpixeln. Diese Option modifiziert die Formen: jedes Mal wenn der Wert für die Füllabdeckung für eine Gitterzelle überschritten wurde, wird die gesamte Zelle gefüllt.
   Berühren sich zwei Zellen, werden sie verbunden.
@@ -165,7 +165,7 @@ Hier eine Schritt für Schritt Anleitung:
 
   ![positioning](/assets/images/tutorials/cross_stitch_lettering/positioning.jpg)
 * Konvertiere jeden Buchstaben in einen Pfad (`Pfad > Objekt in Pfad umwandeln`).
-* Verpixele die Buchstaben und wende die Stickparameter mit dem Kreuzstich-Helfer an.
+* Verpixele die Buchstaben und wende die Stickparameter mit dem Kreuzstich-Assistent an.
 
   Du kannst die SVG-Vorschua benutzen um verschiedene Werte für die Füllabdeckung zu testen.
 

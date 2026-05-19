@@ -88,7 +88,7 @@ In Ink/Stitch you can choose from various cross stitch methods.
   
   ![Cross stitch method:Smyrna cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
 
-### Cross Stitch Helper
+### Cross Stitch Assistant
 
 Ink/Stitch comes with an extension which helps you to perform cross stitch specific tasks all at once.
 
@@ -99,7 +99,7 @@ Ink/Stitch comes with an extension which helps you to perform cross stitch speci
 
 It also computes and displays the stitch length given the grid dimensions. Maximum stitch length in the cross stitches parameters should be larger than this value.
 
-[Read more](/docs/tools-fill/#cross-stitch-helper)
+[Read more](/docs/tools-fill/#cross-stitch-assistant)
 
 ## Set Start and End Point
 

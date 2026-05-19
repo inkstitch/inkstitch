@@ -87,7 +87,7 @@ Ink/Stitch kennt verschiedene Kreuzstich-Methoden.
 
   ![Cross stitch method:Smyrna cross](/assets/images/docs/cross_stitch_method_smyrna.jpg)
 
-### Kreuzstich-Helfer
+### Kreuzstich-Assistent
 
 Ink/Stitch kommt mit einer Erweiterung, die Kreuzstich-spezifische Aufgaben in einem Arbeitsablauf erledigen kann.
 
@@ -98,7 +98,7 @@ Ink/Stitch kommt mit einer Erweiterung, die Kreuzstich-spezifische Aufgaben in e
 
 Außerdem wird die aus den Gitter-Dimensionen erechnete Stichlänge der diagonalen Stiche angezeigt. Große Kreuze können durch die Eingabe eines Wertes für die maximale Stichlänge unterteilt werden.
 
-[Mehr lesen](/de/docs/fill-tools/#kreuzstich-helfer)
+[Mehr lesen](/de/docs/fill-tools/#kreuzstich-assistent)
 
 ### Anfangs- und Endpunkt festlegen
 

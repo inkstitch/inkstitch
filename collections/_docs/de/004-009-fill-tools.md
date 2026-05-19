@@ -38,9 +38,9 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
    ![color blocks](/assets/images/docs/color_blocks.png)
 3. Setze einen Wert für den Reihenabstand am Ende der Füllung. Bei einem Wert von 0.00 wird der doppelte Wert des ursprünglichen Reihenabstandes angenommen.
 
-## Kreuzstich-Helfer
+## Kreuzstich-Assistent
 
-Der Kreuzstich-Helfer kann bei der Erstellung von [Kreuzstichmustern](/de/docs/stitches/cross-stitch) auf verschiedene Weise unterstützen.
+Der Kreuzstich-Assistent kann bei der Erstellung von [Kreuzstichmustern](/de/docs/stitches/cross-stitch) auf verschiedene Weise unterstützen.
 
 * Überprüfung der diagonalen Stichlänge
 * Anlegen des Seitengitters
@@ -50,7 +50,7 @@ Der Kreuzstich-Helfer kann bei der Erstellung von [Kreuzstichmustern](/de/docs/s
 ### Funktionsweise
 
 * Optional: Wähle ein oder mehrere Füllflächen aus
-* Öffne die Erweiterung unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`
+* Öffne die Erweiterung unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Assistent`
 * Stelle die gewünschte Gittergröße ein
 * Lege die gewünschten Optionen fest, wie die Gittergröße angewendet werden soll (siehe unten)
 * Klicke auf `Anwenden`
@@ -66,17 +66,17 @@ Unter `Datei > Dokumenteinstellungen... > Gitter` kann das Gitter auch manuell e
 
 #### Außenkontur verpixeln
 
-Der Kreuzstich-Helfer hat außerdem eine Funktion die Außenkontur ausgewählter Füllflächen automatisch anhand der gesetzen Gittereinstellungen zu verpixeln.
+Der Kreuzstich-Assistent hat außerdem eine Funktion die Außenkontur ausgewählter Füllflächen automatisch anhand der gesetzen Gittereinstellungen zu verpixeln.
 So ist es möglich, die Formen direkt an das Gitter anzupassen und visuell die Stichpositionen genau erkennen zu können.
 
 #### Stickparameter setzen
 
-Nachdem das Gitter auf die gewünschte Größe eingestellt ist, muss die Gittergröße natürlich auch in den Stickparametern eines Elements gleichgesetzt werden. Wenn die Option aktiviert ist, kann der Kreuzstich-Helfer diese Einstellungen auch direkt selbst vornehmen.
+Nachdem das Gitter auf die gewünschte Größe eingestellt ist, muss die Gittergröße natürlich auch in den Stickparametern eines Elements gleichgesetzt werden. Wenn die Option aktiviert ist, kann der Kreuzstich-Assistent diese Einstellungen auch direkt selbst vornehmen.
 
 #### Stichlängenberechnung
 
 Durch die Angabe der Gittergröße sind die Stichlängen der diagonalen Kreuze nicht direkt ersichtlich.
-Die Stichlängen spielen in der Maschinenstickerei aber immer eine wichtige Rolle. Der Kreuzstich-Helfer hat daher ein Feld für die Anzeige der diagonalen Stichlängen.
+Die Stichlängen spielen in der Maschinenstickerei aber immer eine wichtige Rolle. Der Kreuzstich-Assistent hat daher ein Feld für die Anzeige der diagonalen Stichlängen.
 
 ## Knockdown Füllung
 

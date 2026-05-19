@@ -3,7 +3,7 @@ permalink: /de/tutorials/cross_stitch_chart_to_cross_stitch_fills/
 title: "Von einer Kreuzstichvorlage für Handstickerei zu Kreuzstich-Füllungen"
 language: de
 last_modified_at: 2026-05-17
-excerpt: "Mit Hilfe des Kreuzsich-Helfers eine Vorlage für Kreuzstichmuster für das Maschinensticken aufbereiten"
+excerpt: "Mit Hilfe des Kreuzsich-Assistenten eine Vorlage für Kreuzstichmuster für das Maschinensticken aufbereiten"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_chart_to_fills.jpg"
 tutorial-type:
 stichart:
@@ -17,7 +17,7 @@ user-level:
 {% include upcoming_release.html %}
 Im Internet sind viele Vorlagen für Kreuzstich-Muster erhältlich.
 
-Wenn der Urheber der Vorlage es erlaubt, kann sie mit Hilfe des Kreuzstich-Helfers schnell in eine Kreuzistch-Füllung für das Maschinensticken umgewandelt werden.
+Wenn der Urheber der Vorlage es erlaubt, kann sie mit Hilfe des Kreuzstich-Assistenten schnell in eine Kreuzistch-Füllung für das Maschinensticken umgewandelt werden.
 
 Die Ergebnisse der einzelnen Umwandlungsschritte können in dieser Dati gut nachvollzogen werden:
 
@@ -30,8 +30,8 @@ entnommen, das 1888 in Berlin publiziert wurde und heute unter der Public Domain
 
 ## Skalieren und Positionieren
 
-Erstelle mit Hilfe des Kreuzstich-Helfers ein Seitengitter auf die gewünschte Gittergröße (in diesem Beispiel 2 mm).
-Rufe hierfür (ohne aktive Auswahl) den Kreuzsich-Helfer auf und setze den Horizontalen Gitterabstand auf die gewünschte Größe.
+Erstelle mit Hilfe des Kreuzstich-Assistenten ein Seitengitter auf die gewünschte Gittergröße (in diesem Beispiel 2 mm).
+Rufe hierfür (ohne aktive Auswahl) den Kreuzsich-Assistent auf und setze den Horizontalen Gitterabstand auf die gewünschte Größe.
 In den Ausgabe-Optionen sollte `Seitengitter` aktiviert sein.
 
 Im nächsten Schritt skalieren und positionieren wir das Bild so, dass jeder "Pixel" des Originalbildes einer Gitterzelle entspricht.
@@ -42,9 +42,9 @@ Für größere und leicht verzogene Bilder kann es hilfreich sein, ein Rechteck 
 
 ## Muster umwandeln
 
-Ist die korrekte Position und Größe eingestellt, wähle das Bild aus und rufe den Kreuzstich-Helfer erneut auf.
+Ist die korrekte Position und Größe eingestellt, wähle das Bild aus und rufe den Kreuzstich-Assistent erneut auf.
 
-![helper](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_de.jpg)
+![Assistent](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_de.jpg)
 
 Für diese Art von Bild sollten die Werte für Kontrast und Helligkeit in den Bitmap-Einstellungen hoch gesetzt werdn.
 

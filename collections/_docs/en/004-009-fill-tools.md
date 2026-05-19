@@ -47,9 +47,9 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 
    ![color blocks](/assets/images/docs/color_blocks.png)
 
-## Cross Stitch Helper
+## Cross Stitch Assistant
 
-The cross-stitch helper can assist in various ways when creating [cross stitch patterns](/docs/stitches/cross-stitch).
+The cross stitch assistant can assist in various ways when creating [cross stitch patterns](/docs/stitches/cross-stitch).
 
 * Checking the diagonal stitch length
 * Creating the page grid
@@ -59,7 +59,7 @@ The cross-stitch helper can assist in various ways when creating [cross stitch p
 ### Usage
 
 * Optional: Select one or more fill elements
-* Open the helper extension under `Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Helper`
+* Open the assistant extension under `Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant`
 * Set the desired grid size
 * Specify the desired options for how the grid size should be applied (see below)
 * Click on `Apply`
@@ -75,18 +75,18 @@ The grid can also be set manually under `File > Document Properties... > Grids`.
 
 #### Pixelize fill elements
 
-The Cross Stitch Helper has an option to automatically pixelate selected fill elements based on the grid settings.
+The Cross Stitch Assistant has an option to automatically pixelate selected fill elements based on the grid settings.
 This makes it possible to adjust the shapes directly to the grid and visually identify the stitch positions accurately.
 
 #### Set embroidery parameters
 
 Once the grid size has been adjusted, it must of course also be set in the embroidery parameters of an element.
-The Grid Helper extension has therefore an option to apply the grid size settings on selected elements in one step.
+The Cross Stitch Assistant extension has therefore an option to apply the grid size settings on selected elements in one step.
 
 #### Stitch length calculation
 
 When specifying the grid size, the stitch lengths of the diagonal crosses are not immediately apparent.
-However, stitch lengths always play an important role in machine embroidery. The Cross Stitch Helper therefore has a field for displaying the diagonal stitch lengths.
+However, stitch lengths always play an important role in machine embroidery. The Cross Stitch Assistant therefore has a field for displaying the diagonal stitch lengths.
 
 ## Knockdown Fill
 

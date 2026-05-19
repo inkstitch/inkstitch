@@ -80,7 +80,7 @@ Allerdings gibt es noch eine erhebliche Menge an Sprunstichen, die wir vermeiden
 
 Aufgrund des hohen Levels für die Fehlerrate, können wir es uns erlauben, kleine Bereiche aus dem QR-Code herauszulöschen und erhalten noch immer einen funktionierenden QR-Code.
 
-- Nutze zunächst den Kreuzstich-Helfer unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Helfer`.
+- Nutze zunächst den Kreuzstich-Assistent unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Assistent`.
 
   Setze die Mustergröße auf 2.12 und aktiviere die Checkbox `Verpixeln` in den Ausgabe-Einstellungen. Dies wird die einzelnen Teilbereiche der Form auseinanderbrechen.
 - Nutze nun `Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen` und setze die minimale Größe für Fülstichobjekte auf 65 (8x8+1).

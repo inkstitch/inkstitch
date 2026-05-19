@@ -41,7 +41,7 @@ The most important thing is that the image must be positioned very precisely rel
 For very large designs or slightly distorted images, it may be helpful to use clipping paths to work on smaller areas.
 
 Once the image is in place, simply use the cross stitch assistant to convert the image.
-![helper](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_en.jpg)
+![assistent](/assets/images/tutorials/cross_stitch_chart_to_fills/assistant_en.jpg)
 
 For this type of image, significantly increasing the contrast and brightness is a good idea. 
 

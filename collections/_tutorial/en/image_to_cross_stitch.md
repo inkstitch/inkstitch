@@ -3,7 +3,7 @@ permalink: /tutorials/image_to_cross_stitch/
 title: "From image to Cross Stitch"
 language: en
 last_modified_at: 2026-05-15
-excerpt: "Using the Cross Stitch Helper to convert an Image into Cross Stitch Fills"
+excerpt: "Using the Cross Stitch Assistant to convert an Image into Cross Stitch Fills"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_cat.jpg"
 tutorial-type:
 stitch-type:
@@ -15,7 +15,8 @@ field-of-use:
 user-level: 
 ---
 {% include upcoming_release.html %}
-The cross stitch helper helps you transform an image into Cross Stitch fills.
+
+The cross stitch assistant helps you transform an image into Cross Stitch fills.
 
 The results of this tutorial different steps can be found in this file:
 
@@ -28,7 +29,7 @@ The results of this tutorial different steps can be found in this file:
 ## Starting Image
 
 The process will be simpler and more efficient if the image is simple, with few colors and clearly defined color areas.
-The simplier the original image, the less you will have to work to tweat the helper results.
+The simplier the original image, the less you will have to work to tweat the assistant results.
 
 The starting image (top left above) is by Pawpedia on [Pixabay](https://pixabay.com/de/illustrations/image-10216974), licensed by Pixabay, which allows the creation of derivative works.
 
@@ -39,7 +40,7 @@ You need to decide:
 - the size of the cross stitches (2 mm in the example)
 
 
-## Using the Cross Stitch Helper to generate Cross Stitch Fills
+## Using the Cross Stitch Assistant to generate Cross Stitch Fills
 
 Select the image and go to Ink/Stitch > Tools: Fill > Cross Stitch Hetter
 

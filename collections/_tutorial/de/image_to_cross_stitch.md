@@ -3,7 +3,7 @@ permalink: /de/tutorials/image_to_cross_stitch/
 title: "Vom Bild zum Kreuzstich"
 language: de
 last_modified_at: 2026-05-17
-excerpt: "Mit dem Kreuzsich-Helfer ein Bild in Kreuzstichfüllungen umwandeln"
+excerpt: "Mit dem Kreuzsich-Assistent ein Bild in Kreuzstichfüllungen umwandeln"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_cat.jpg"
 tutorial-type:
 stichart:
@@ -15,7 +15,7 @@ field-of-use:
 user-level: 
 ---
 {% include upcoming_release.html %}
-Der Kreuzstich-Helfer ist eine große Hilfe, wenn es darum geht, Bilder in Kreuzstich-Füllungen umzuwandeln.
+Der Kreuzstich-Assistent ist eine große Hilfe, wenn es darum geht, Bilder in Kreuzstich-Füllungen umzuwandeln.
 
 Da Ergebnis der in diesem Tutorial beschriebenen Schritte, befindet sich in dieser Datei:
 
@@ -38,9 +38,9 @@ Zunächst müssen folgende Parameter festgelegt werden:
 - Skaliere da Bild auf die gewünschte Größe der gesamten Stickerei (180 mm x 270 mm in diesem Beispiel)
 - Überlege schon jetzt, wie groß die Kreuze werden sollen (2 mm in diesem Beispiel)
 
-## Mit dem Kreuzstich-Helfer die Kreuzstich-Füllungen ersellen
+## Mit dem Kreuzstich-Assistent die Kreuzstich-Füllungen ersellen
 
-Wähle das Bild aus und öffne den Kreuzsich-Helfer (`Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzsich-Helfer`)
+Wähle das Bild aus und öffne den Kreuzsich-Assistent (`Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzsich-Assistent`)
 
 - Im Einstellungs-Tab:
   - Setze die Werte auf die Standarteinstellungen zurück (unten links)
@@ -65,18 +65,18 @@ Das Ergebnis ("first_result" Ebene) ist ein Anfangspunkt für weitere Verbesseru
 
 - Entferne die unerwünschten Bereiche des Hintergundes.
 
-- Füge Schnurrhaare und andere Haare hinzu. Die weißen Haar im Originalbild sind nicht breit genug und werden vom Kreuzstich-Helfer nicht berücksichtigt.
+- Füge Schnurrhaare und andere Haare hinzu. Die weißen Haar im Originalbild sind nicht breit genug und werden vom Kreuzstich-Assistent nicht berücksichtigt.
 
   Zeichne die Haare dabei mit dem Bézier-Werkzeg (Zeichenwerkzeug) **über** die Kreuzsich-Füllungen. Kümmere dich dabei noch nicht um die Pixel.
   Ich nutze dabei ein Konturbreite von 3 mm. Anschließend konvertiere ich die Pfade in Füllungen (`Pfad > Kontur in Pfad umwandeln`).
 
   Nun wähle ich sowohl die gezeichneten Haare, als auch die Gruppe mit den Kreuzsich-Füllungen des restlichen Bildes aus und öffne den Kreuzstich-Helfe erneut.
 
-  Mit Hilfe des Kreuzstich-Helfers wollen wir nun die Haare mit dem reslichen Bild vereinen.
+  Mit Hilfe des Kreuzstich-Assistenten wollen wir nun die Haare mit dem reslichen Bild vereinen.
   Hierzu aktiviere unter den Augabe-Optionen `Verpixeln` und `Überlappungn entfernen`.
   Mit diesem Einstellungen werden die gesamtn Formen neu berechnet und ohne Übershneidungen ausgegeben.
 
-Während des Verbesserungsprozesses, wirst den den Kreuzstich-Helfer imme wieder nutzen.
+Während des Verbesserungsprozesses, wirst den den Kreuzstich-Assistent immer wieder nutzen.
 
 Mit diesem Ursprungsbild is es unvermeidbar, dass sehr kleine Farbregionen entstehen (mit nur einem ode zwei Pixeln).
 Da bedeutet, es entstehen unvebundene Formen, die wiederrum viele Sprungsiche oder Fadenshnitte hervorrufen.
@@ -89,7 +89,7 @@ Da bedeutet, es entstehen unvebundene Formen, die wiederrum viele Sprungsiche od
 
   Dies kann erreicht werden, indem bereits exisierende Formen angepasst werden oder indem ein verbindendes Element oberhalb der Kreuzsich-Füllungen hinzugefügt wird.
 
-Nachdem ein visuell zufriedenstellendes Ergbnis erzielt wurde, denke daran, alles auszuwählen und die Formen mit dem Kreuzstich-Helfer neu zu berechnen.
+Nachdem ein visuell zufriedenstellendes Ergbnis erzielt wurde, denke daran, alles auszuwählen und die Formen mit dem Kreuzstich-Assistent neu zu berechnen.
 Somit werden Regionen gleiche Fabe zu eine Form zusammengefügt.
 
 Es muss dabei eine gute ein Balance zwischen dem visuellen Eindruck im Vergleich zum Originalbild und de Vereinfachung für die Stickerei gefunden werden.
