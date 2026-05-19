@@ -4,7 +4,7 @@ permalink: /docs/stitches/lock-stitches/
 last_modified_at: 2024-09-01
 toc: true
 ---
-## What it is
+## Description
 
 Tack and lock stitches are small stitches at the beginning (tack) or the end (lock) of a color block or before and after jump stitches or trim commands. They help to secure the thread.
 

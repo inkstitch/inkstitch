@@ -2,7 +2,7 @@
 permalink: /de/tutorials/cross_stitch_chart_to_cross_stitch_fills/
 title: "Von einer Kreuzstichvorlage für Handstickerei zu Kreuzstich-Füllungen"
 language: de
-last_modified_at: 2026-05-15
+last_modified_at: 2026-05-17
 excerpt: "Mit Hilfe des Kreuzsich-Helfers eine Vorlage für Kreuzstichmuster für das Maschinensticken aufbereiten"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_chart_to_fills.jpg"
 tutorial-type:

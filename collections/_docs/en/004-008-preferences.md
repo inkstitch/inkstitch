@@ -21,7 +21,7 @@ Up from v 3.1.0 it is possible to overwrite the global value for single elements
 
 ### Minimum stitch length (mm)
 
-#### What it is
+#### Creation
 
 Stitches smaller than this value will be dropped (exception: lock stitches). This value is only used at the very end of the stitch plan computation to filter too short stitches. Be aware that the behavior may not be what you expected : for instance if Minimum stitch length is set to 2mm and you have running stitches with maximum stitch length of 1.5mm, every other stich is droped, yielding a running path  with 3mm stiches.
 
@@ -35,7 +35,7 @@ When *Minimum stitch length* is set to 2mm, except for lock stitchs, every other
 
 Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/doc/params).
 
-#### How it affects embroidery 
+#### Effect on embroidery
 
 *Minimum stitch length*  also affects the **sides of fills** (in a similar way as skip last stitch of row, - a good option for dense fills) if set to value smaller than the *row spacing*. It also affects **sharp corners** of running stitches where actual stitch length may be much lower than *running  stitch  length* (tolerance is important there).
 
