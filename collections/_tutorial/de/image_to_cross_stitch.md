@@ -6,7 +6,7 @@ last_modified_at: 2026-05-17
 excerpt: "Mit dem Kreuzsich-Helfer ein Bild in Kreuzstichfüllungen umwandeln"
 image: "/assets/images/tutorials/tutorial-preview-images/cross_stitch_cat.jpg"
 tutorial-type:
-stitch-type:
+stichart:
  - Kreuzstich
 werkzeug:
  - Füllung
