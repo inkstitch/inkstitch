@@ -10,7 +10,7 @@ main:
     url: /de/tutorials/
   - title: "Hilfe"
     url: /de/docs/faq/
-  - title: "Mitmachen"
+  - title: "Unterstützen"
     url: /de/developers/introduction/
     
 # index + specific pages which have the sidebar option in the header
@@ -208,7 +208,7 @@ tutorials:
   
 # developers links
 developers:
-  - title: Mitmachen
+  - title: Unterstützen
     url: /de/developers/introduction/
   - title: Ink/Stitch
     url: /de/developers/inkstitch/
