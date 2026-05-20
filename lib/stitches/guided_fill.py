@@ -162,7 +162,7 @@ def _linestring_to_segments(shape, linestring) -> list[list[tuple[float, ...]]]:
         projections = [0] + projections + [1]
     elif shgeo.Point(linestring.coords[0]).within(shape):
         # line is fully within the shape
-        return [linestring]
+        return [linestring.coords[:]]
     # Collect inside segments
     segments = []
     for d0, d1 in zip(projections[:-1], projections[1:]):
