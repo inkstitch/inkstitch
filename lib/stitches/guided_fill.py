@@ -4,6 +4,7 @@ from random import random
 import numpy as np
 from networkx import connected_components, is_empty
 from shapely import geometry as shgeo
+from shapely import get_point
 from shapely.affinity import scale, translate
 from shapely.ops import linemerge, nearest_points, substring, unary_union
 from shapely.prepared import prep
@@ -106,8 +107,8 @@ def _stagger_and_cut_segments(
         check_stop_flag()
         linestring = segment
 
-        if shgeo.Point(linestring.coords[0]).within(shape):
-            # we just assume that all lines which possibly end within the shape are actually rings (even when not recognized as such)
+        if linestring.is_ring or get_point(linestring, 0).within(shape):
+            # we assume that all lines which possibly ends within the shape are actually rings (even when not recognized as such)
             diff = linestring.difference(shape)
             if not diff.is_empty:
                 outside_point = take_only_line_strings(diff).geoms[0].interpolate(0.5, True)
@@ -146,7 +147,7 @@ def _sort_segments(shape, segments) -> None:
     envelope = shape.envelope.boundary
     if envelope.is_empty:
         return
-    segments.sort(key=lambda line: envelope.project(shgeo.Point(line.coords[0])))
+    segments.sort(key=lambda line: envelope.project(get_point(line, 0)))
 
 
 def _linestring_to_segments(shape, linestring) -> list[list[tuple[float, ...]]]:
@@ -160,7 +161,7 @@ def _linestring_to_segments(shape, linestring) -> list[list[tuple[float, ...]]]:
     projections = sorted(linestring.project(point, True) for point in boundary_intersections.geoms)
     if projections:
         projections = [0] + projections + [1]
-    elif shgeo.Point(linestring.coords[0]).within(shape):
+    elif get_point(linestring, 0).within(shape):
         # line is fully within the shape
         return [linestring.coords[:]]
     # Collect inside segments
@@ -283,8 +284,8 @@ def _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within,
         except IndexError:
             pass
     outline_segments.extend(add)
-    if unconnected and iteration < 3:
-        # it it a second try, we may have made helping connections
+    if unconnected and iteration < 5:
+        # give it an other try, we may have made helping connections in the last iteration
         linearrings_within = unconnected
         iteration += 1
         _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within, row_spacing, iteration)
@@ -307,7 +308,7 @@ def _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing
                     if line.intersects(shape.exterior):
                         return
             else:
-                if shgeo.Point(line.coords[0]).within(shape):
+                if get_point(line, 0).within(shape):
                     seg1 = _connect_linearring_with_linestring(ring, line, row_spacing)
                     if seg1 is None:
                         continue
@@ -413,7 +414,7 @@ def _split_segment_types(shape, segments, row_spacing) -> tuple[list[shgeo.LineS
         else:
             # if this segment has the same starting and ending point (linearring),
             # we need to ensure, that this point lies outside of the shape
-            if line.coords[0] == line.coords[-1] and shgeo.Point(line.coords[0]).within(shape):
+            if line.coords[0] == line.coords[-1] and get_point(line, 0).within(shape):
                 outside_point = take_only_line_strings(line.difference(shape)).geoms[0].interpolate(0.5, True)
                 line = shgeo.LineString(roll_linear_ring(line, line.project(outside_point)))
             outline_segments.append(line)
