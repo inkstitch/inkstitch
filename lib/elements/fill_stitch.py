@@ -185,7 +185,7 @@ class FillStitch(EmbroideryElement):
 
     @property
     @param('guided_fill_strategy', _('Guided Fill Strategy'), type='dropdown', default=0,
-           options=[_("Copy"), _("Parallel Offset")], select_items=[('fill_method', 'guided_fill')], sort_index=10,
+           options=[_("Copy"), _("Parallel Offset"), _("Buffer")], select_items=[('fill_method', 'guided_fill')], sort_index=10,
            tooltip=_('Copy (the default) will fill the shape with shifted copies of the line. '
                      'Parallel offset will ensure that each line is always a consistent distance from its neighbor. '
                      'Sharp corners may be introduced.'))
@@ -267,7 +267,7 @@ class FillStitch(EmbroideryElement):
            type='float',
            unit='mm',
            default=0,
-           select_items=[('fill_method', 'contour_fill'), ('fill_method', 'meander_fill')],
+           select_items=[('fill_method', 'contour_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'meander_fill')],
            sort_index=14)
     def smoothness(self):
         return self.get_float_param('smoothness_mm', 0)
@@ -1143,7 +1143,7 @@ class FillStitch(EmbroideryElement):
             )
             stitch_groups.append(underlay)
             starting_point = underlay.stitches[-1]
-        return [stitch_groups, starting_point]
+        return stitch_groups, starting_point
 
     def do_auto_fill(self, shape, starting_point, ending_point):
         stitch_group = StitchGroup(
@@ -1235,32 +1235,39 @@ class FillStitch(EmbroideryElement):
         if not guide_line:
             return self.do_auto_fill(shape, starting_point, ending_point)
 
-        stitch_group = StitchGroup(
-            color=self.color,
-            tags=("guided_fill", "auto_fill_top"),
-            force_lock_stitches=self.force_lock_stitches,
-            lock_stitches=self.lock_stitches,
-            stitches=guided_fill(
-                shape,
-                guide_line.geoms[0],
-                self.angle,
-                self.row_spacing,
-                self.staggers,
-                self.bean_stitch_repeats,
-                self.max_stitch_length,
-                self.running_stitch_length,
-                self.running_stitch_tolerance,
-                self.skip_last,
-                starting_point,
-                ending_point,
-                self.underpath,
-                self.guided_fill_strategy,
-                self.enable_random_stitch_length,
-                self.random_stitch_length_jitter,
-                self.random_seed,
-            )
+        stitch_groups = []
+        guided_stitch_groups = guided_fill(
+            shape,
+            guide_line,
+            self.angle,
+            self.row_spacing,
+            self.staggers,
+            self.bean_stitch_repeats,
+            self.max_stitch_length,
+            self.running_stitch_length,
+            self.running_stitch_tolerance,
+            self.smoothness,
+            self.skip_last,
+            starting_point,
+            ending_point,
+            self.underpath,
+            self.guided_fill_strategy,
+            self.enable_random_stitch_length,
+            self.random_stitch_length_jitter,
+            self.random_seed,
         )
-        return [stitch_group]
+
+        for stitches in guided_stitch_groups:
+            stitch_groups.append(
+                StitchGroup(
+                    color=self.color,
+                    tags=("guided_fill", "auto_fill_top"),
+                    force_lock_stitches=self.force_lock_stitches,
+                    lock_stitches=self.lock_stitches,
+                    stitches=stitches
+                )
+            )
+        return stitch_groups
 
     @cache
     def _get_guide_lines(self, multiple=False):
