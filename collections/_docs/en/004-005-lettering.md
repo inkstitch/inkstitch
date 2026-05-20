@@ -1,7 +1,7 @@
 ---
 title: "Lettering"
 permalink: /docs/lettering/
-last_modified_at: 2025-03-30
+last_modified_at: 2025-05-20
 toc: true
 ---
 ## Lettering Tool
@@ -140,7 +140,9 @@ Batch lettering allows to easily create multiple text files.
 * **Add trims:** Whether trims should be added or not (never, after each line, word or letter)
 * **Use command symbols:** Whether the trims should be added as command symbols or as a param option (only relevant for svg output)
 * **Align Multiline Text:** Define how multiline text should be aligned
-* **Lettering along path: text position:** The text position on the `batch lettering` path
+* **Lettering along path**
+  * **horizontal text position:** The horizontal text position along the `batch lettering` path
+  * **vertical text position:** The vertical position in relation to the `batch lettering` path
 * **File formats:** Enter a comma separated list of [file formats](/docs/file-formats/#writing)
 
 [Download sample file](/assets/images/docs/batch_lettering_template_example.svg){: title="Download SVG File" download="batch_lettering_template_example.svg" }

@@ -1,7 +1,7 @@
 ---
 title: "New Features, Updates and Fixes for the upcoming Ink/Stitch version"
 permalink: /upcoming/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 sidebar:
   nav: pages
 toc: true
@@ -171,6 +171,9 @@ Old files will be automatically updated to keep the previous setting.
 ### Guided Fill
 
 * Add bean stitch option [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
+* New strategy: Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
+
+  This strategy allows even self-intersecting paths to be used as guide lines. Paths containing multiple subpaths are also permitted.
 
 ### Legacy Fill
 
@@ -222,6 +225,8 @@ Old files will be automatically updated to keep the previous setting.
 
 ### Satin columns
 
+[Read more about satin columns](/docs/stitches/satin-column/)
+
 #### Stroke to satin conversion under the hood
 
 Simple strokes can be used as satin columns directly [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
@@ -240,7 +245,11 @@ When multiple values are set, the satin column will use these to level consecuti
 
   ![Satin with two short stitch inset levels](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg){: width="600px"}
 
-[Read more about satin columns](/docs/stitches/satin-column/)
+#### Push compensation
+
+Ink/Stitch supports the much more important pull compensation for a while. Now push compensation is also supported.
+
+It will shorten satin stitches at the specified ends to compensate for the stitches pushing the fabric.
 
 ### Zigzag Stitch (Stroke)
 
@@ -412,6 +421,7 @@ Adds a fill underneath selected objects.
 * Add stitch length option [#4084](https://github.com/inkstitch/inkstitch/pull/4084)
 
   Row spacing will adapt accordingly to line up with the stitches.
+* New option to include shapes (rectangle or circle) without cutting out the shape of the motif [#4397](https://github.com/inkstitch/inkstitch/pull/4397)
 
 [Read more](/docs/fill-tools/#knockdown-fill)
 
@@ -435,7 +445,10 @@ Text module to use pre-digitized fonts.
   * Baseline: the baseline of the text sits on the path
   * Bottom: the text is entirely below the path
 
-[Read more](/docs/lettering/#lettering-along-path)
+The same options have been added to the batch lettering export.
+
+[Read more (lettering along path)](/docs/lettering/#lettering-along-path)
+[Read more (batch lettering)](/docs/lettering/#batch-lettering)
 
 ### Object commands
 
@@ -492,6 +505,7 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Bugfixes
 
+* Fix issue for linear gradients without gradients [#4361](https://github.com/inkstitch/inkstitch/pull/4361)
 * Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
 * Fix editjson sample text glyph distance between text parts [#4339](https://github.com/inkstitch/inkstitch/pull/4339)
 * Manual stitch: skip (sub)paths with a single node [#4328](https://github.com/inkstitch/inkstitch/pull/4328)

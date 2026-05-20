@@ -1,7 +1,7 @@
 ---
 title: "Neue Funktionen, Aktualisierungen und Fehlerbehebungen für die nächste Ink/Stitch Version"
 permalink: /de/upcoming/
-last_modified_at: 2026-05-06
+last_modified_at: 2026-05-20
 sidebar:
   nav: pages
 toc: true
@@ -168,6 +168,9 @@ Old files will be automatically updated to keep the previous setting ([#4280](ht
 ### Kurvenfüllung
 
 * Füge Option für den Mehrfachgeradstich hinzu [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
+* Neue Strategie: Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
+
+  Diese Strategie erlaubt es auch sich selbst kreuzende Pfade als Führungslinie zu verwenden. Auch Pfade mit mehreren Unterpfaden sind zulässig.
 
 ### Manuelle Füllung
 
@@ -217,6 +220,8 @@ Old files will be automatically updated to keep the previous setting ([#4280](ht
 
 ### Satinsäulen
 
+[Mer erfahren](/de/docs/stitches/satin-column/)
+
 #### Linienbasierte Satinsäulen
 
 Einfache Linien mit einer Konturfarbe können jetzt direkt als Satinsäule ausgegeben werden [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
@@ -236,7 +241,11 @@ Sind mehrere Werte angegeben, werden aufeinanderfolgende Kurzstiche auf verschie
 
   ![Satin with two short stitch inset levels](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg){: width="600px"}
 
-[Mer erfahren](/de/docs/stitches/satin-column/)
+#### Druckausgleich
+
+Ink/Stitch unterstützt schon seit längerem den wesentlich wichtigeren Zugausgleich. Jetzt wird der Druckausgleich zusätzlich unterstützt.
+
+Der Druckausgleich verkürzt die Satinsäulen an den angegebenen Seiten und kompensiert so den Verzug den die Stiche im Stoff verursachen.
 
 ### Zick-Zack Stiche (Linien)
 
@@ -412,6 +421,7 @@ Fügt ein Füllobjekt hinzu, dass alle ausgewählten Elemente mit einer Füllung
 * Neue Option für Stichlängen [#4084](https://github.com/inkstitch/inkstitch/pull/4084)
 
   Der Reihenabstand wird entsprechend angepasst.
+* Neue Option, um die umschließenden Formen (Rechteck oder Kreis) ohne Motivausschnitt einzufügen) [#4397](https://github.com/inkstitch/inkstitch/pull/4397)
 
 [Mehr erfahren](/de/docs/fill-tools/#knockdown-füllung)
 
@@ -431,11 +441,14 @@ Das Ink/Stitch Textmodul für vordigitalisierte Schriftarten.
 
 * Funktioniert auch mit Kreuzstich-Schriften (Kreuze werden gedreht) [#4277](https://github.com/inkstitch/inkstitch/pull/4277)
 * Optionen für die vertikale Textposition zum gewählten Pfad [#4329](https://github.com/inkstitch/inkstitch/pull/4329):
-  * Top: text is entirely on top of the path, including pgq, etc.
-  * Baseline: the baseline of the text sits on the path
-  * Bottom: the text is entirely below the path
+  * Oben: der Text ist komplett oberhalb des Pfades, dies gilt auch für Buchstaben wie pgq, etc.
+  * Grundlinie: der Text ist auf dem Pfad positioniert
+  * Unten: der Text ist komplettunter dem Pfad angeordnet
 
-[Mehr erfahren](/de/docs/lettering/#schrift-entlang-pfad)
+Die selben Optionen stehen auch für den Batch-Lettering-Export zur Verfügung
+
+[Mehr erfahren (Text entlang Pfad)](/de/docs/lettering/#schrift-entlang-pfad)
+[Mehr erfahren (Batch lettering)](/de/docs/lettering/#batch-lettering)
 
 ### Objektbefehle
 
@@ -490,6 +503,9 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Bugfixes
 
+* fix cannot pickle pathelement (#4391)
+* Add commands: skip on empty shapes [#4383](https://github.com/inkstitch/inkstitch/pull/4383)
+* Fix issue for linear gradients without gradients [#4361](https://github.com/inkstitch/inkstitch/pull/4361)
 * Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
 * Fix editjson sample text glyph distance between text parts [#4339](https://github.com/inkstitch/inkstitch/pull/4339)
 * Manual stitch: skip (sub)paths with a single node [#4328](https://github.com/inkstitch/inkstitch/pull/4328)
@@ -540,6 +556,7 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* macos: wxpython build fix [#4375](https://github.com/inkstitch/inkstitch/pull/4375)
 * Fixed profilers when exiting early, added time profiler [#4331](https://github.com/inkstitch/inkstitch/pull/4331)
 * Distributed font files are now compressed with lzma [#4313](https://github.com/inkstitch/inkstitch/pull/4313)
 * Update contributing and code style documents and add pull request template [#4170](https://github.com/inkstitch/inkstitch/pull/4170)

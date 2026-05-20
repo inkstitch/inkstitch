@@ -175,6 +175,9 @@ Old files will be automatically updated to keep the previous setting.
 ### Guided Fill
 
 * Add bean stitch option [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
+* New strategy: Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
+
+  This strategy allows even self-intersecting paths to be used as guide lines. Paths containing multiple subpaths are also permitted.
 
 ### Remplissage Legacy
 
@@ -226,6 +229,8 @@ _Image ci-dessus : point ondulé avec une longueur de point de `1 1 5`_
 
 ### Colonnes Satin
 
+[En savoir plus sur les colonnes de satin](/fr/docs/stitches/satin-column/)
+
 #### Conversion implicite des traits en satin 
 
 Les traits simples peuvent être utilisés directement comme colonnes satin [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
@@ -245,7 +250,11 @@ Lorsque plusieurs valeurs sont définies, la colonne satin les utilise alternati
 
 ![Satin avec deux niveaux d'inserts de points courts](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg){: width="600px"}
 
-[En savoir plus sur les colonnes de satin](/fr/docs/stitches/satin-column/)
+#### Push compensation
+
+Ink/Stitch supports the much more important pull compensation for a while. Now push compensation is also supported.
+
+It will shorten satin stitches at the specified ends to compensate for the stitches pushing the fabric.
 
 ### Point zigzag (trait)
 
@@ -419,7 +428,8 @@ Ajoute un remplissage sous les objets sélectionnés.
 
 * Ajout d'une option de longueur de point [#4084](https://github.com/inkstitch/inkstitch/pull/4084)
 
-L'espacement des rangées s'adaptera automatiquement pour s'aligner avec les points.
+  L'espacement des rangées s'adaptera automatiquement pour s'aligner avec les points.
+* New option to include shapes (rectangle or circle) without cutting out the shape of the motif [#4397](https://github.com/inkstitch/inkstitch/pull/4397)
 
 [En savoir plus](/fr/docs/fill-tools/#knockdown-fill)
 
@@ -443,7 +453,10 @@ Module de texte utilisant des polices pré-numérisées.
   * Baseline: the baseline of the text sits on the path
   * Bottom: the text is entirely below the path
 
-[En savoir plus](/fr/docs/lettering/#lettering-along-path)
+The same options have been added to the batch lettering export.
+
+[En savoir plus (lettering along path)](/fr/docs/lettering/#lettering-along-path)
+[Read more (batch lettering)](/fr/docs/lettering/#batch-lettering)
 
 ### Ajouter une commande à des objets
 
@@ -499,6 +512,7 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Corrections de bugs
 
+* Fix issue for linear gradients without gradients [#4361](https://github.com/inkstitch/inkstitch/pull/4361)
 * Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
 * Fix editjson sample text glyph distance between text parts [#4339](https://github.com/inkstitch/inkstitch/pull/4339)
 * Manual stitch: skip (sub)paths with a single node [#4328](https://github.com/inkstitch/inkstitch/pull/4328)
@@ -549,6 +563,7 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* use local repo for wxpython [#4400](https://github.com/inkstitch/inkstitch/pull/4400)
 * Fixed profilers when exiting early, added time profiler [#4331](https://github.com/inkstitch/inkstitch/pull/4331)
 * Chore: Bumped CI action versions to get rid of deprecation warnings [#4330](https://github.com/inkstitch/inkstitch/pull/4330)
 * Refactored non-drawing code out of DrawingPanel [#4305](https://github.com/inkstitch/inkstitch/pull/4305)

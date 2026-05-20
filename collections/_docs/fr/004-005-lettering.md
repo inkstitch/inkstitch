@@ -129,7 +129,9 @@ Le texte sera divisé et placé dans un nouveau fichier à chaque occurrence du 
 * **Ajouter des coupes :** Indique si des coupes doivent être ajoutés ou non (jamais, après chaque ligne, mot ou lettre).
 * **Utiliser des symboles de commande :** Indique si les coupes doivent être ajoutés comme symboles de commande ou comme option de paramètre (pertinent uniquement pour la sortie SVG).
 * **Aligner le texte multi-ligne :** Définit l'alignement du texte multi-ligne.
-* **Lettrage le long du chemin : position du texte :** Position du texte sur le chemin `batch lettering`.
+* **Lettrage le long du chemin**
+  * **position du texte :** Position du texte sur le chemin `batch lettering`.
+  * **vertical text position:** The vertical position in relation to the `batch lettering` path
 * **Formats de fichier :** Saisissez une liste de [formats de fichier] (/fr/docs/file-formats/#writing) séparés par des virgules.
 
 Par exemple, si vous souhaitez créer les 4 patchs illutrés plus haut,utilisez le fichier d'exemple et paramétrez la fenêtre qui s'ouvre à l'enregistrement ainsi:

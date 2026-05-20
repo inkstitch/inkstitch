@@ -1,7 +1,7 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-last_modified_at: 2025-03-30
+last_modified_at: 2025-05-20
 toc: true
 ---
 ## Text-Werkzeug
@@ -138,7 +138,9 @@ Mit `Batch Lettering` können mehrere Textdateien gleichzeitig erstellt werden.
 * **Fadenschnittbefehle hinzufügen:** Legt fest, ob Fadenschnittbefehle verwendet werden sollen (nie, nach jeder Linie, jedem Word oder Buchstaben)
 * **Symbole verwenden:** Legt fest, ob die Fadenschnittbefehle als Parameter oder Symbol angelegt werden (nur bei Ausgabe als SVG relevant)
 * **Mehrzeiligen Text ausrichten:** Definiert wie mehrzeiliger Text ausgerichtet werden soll
-* **Schrift entlang Pfad: Textposition:** Die Ausrichtung des Textes entlang des Pfades mit dem Label `batch lettering`
+* **Schrift entlang Pfad**
+  * **Horizontale Textposition:** Die Ausrichtung des Textes entlang des Pfades mit dem Label `batch lettering`
+  * **Vertikale Textposition:** Die Ausrichtung am Pfad in vertikaler Richtung (über, auf oder unter dem Pfad)
 * **Dateiformate:** eine durch Kommata getrennte Liste von [Dateiformaten](/de/docs/file-formats/#schreiben)
 
 [Beispieldatei herunterladen](/assets/images/docs/batch_lettering_template_example.svg){: title="Download SVG File" download="batch_lettering_template_example.svg" }
