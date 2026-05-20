@@ -199,7 +199,7 @@ def _connect_parallel_offset_segments(shape, segments, row_spacing, skip_last, m
     # we only need to connect them to the outside
     _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within, row_spacing)
 
-    debug.add_layer('segments complete')
+    debug.add_layer('connected offset segments')
     debug.log_line_strings(outline_segments)
 
     return outline_segments
@@ -270,11 +270,12 @@ def _connect_linearrings(
     return False
 
 
-def _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within, row_spacing) -> None:
+def _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within, row_spacing, iteration=0) -> None:
     remove: list[int] = []
     add: list[shgeo.LineString] = []
+    unconnected: list[shgeo.LineString] = []
     for ring in linearrings_within:
-        _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing, remove, add)
+        _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing, unconnected, remove, add)
     # remove the duplicated inner segments
     for segment_index in sorted(remove, reverse=True):
         try:
@@ -282,9 +283,14 @@ def _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within,
         except IndexError:
             pass
     outline_segments.extend(add)
+    if unconnected and iteration < 3:
+        # it it a second try, we may have made helping connections
+        linearrings_within = unconnected
+        iteration += 1
+        _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within, row_spacing, iteration)
 
 
-def _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing, remove, add) -> None:
+def _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing, unconnected, remove, add) -> None:
     original_ring = ring
     connected = None
     for i in range(len(outline_segments)):
@@ -299,7 +305,7 @@ def _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing
                     ring = new_segment
                     connected = i
                     if line.intersects(shape.exterior):
-                        break
+                        return
             else:
                 if shgeo.Point(line.coords[0]).within(shape):
                     seg1 = _connect_linearring_with_linestring(ring, line, row_spacing)
@@ -311,7 +317,8 @@ def _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing
                 outline_segments[connected] = seg1
                 remove.append(i)
                 # let's not try any harder
-                break
+                return
+    unconnected.append(ring)
 
 
 def _get_segment_relations(segments_within) -> dict[int, int | None]:
