@@ -1996,9 +1996,6 @@ class SatinColumn(EmbroideryElement):
         # allowing the user to control how the zigzags flow around corners.
 
         start_point = self.start_point(last_stitch_group)
-        if start_point and self.center_line.project(shgeo.Point(start_point), normalized=True) > 0.5:
-            satin = self.reverse()
-            return satin.to_stitch_groups()
         end_point = self.end_point(self.next_stitch(next_element))
         stitch_groups = []
 
