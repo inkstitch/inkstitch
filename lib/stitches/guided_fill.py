@@ -3,9 +3,10 @@ from random import random
 
 import numpy as np
 from networkx import connected_components, is_empty
-from shapely import geometry as shgeo
 from shapely import get_point
 from shapely.affinity import scale, translate
+from shapely.geometry import (LinearRing, LineString, MultiLineString, Point,
+                              Polygon)
 from shapely.ops import linemerge, nearest_points, substring, unary_union
 from shapely.prepared import prep
 
@@ -112,7 +113,7 @@ def _stagger_and_cut_segments(
             diff = linestring.difference(shape)
             if not diff.is_empty:
                 outside_point = take_only_line_strings(diff).geoms[0].interpolate(0.5, True)
-                linestring = shgeo.LineString(roll_linear_ring(linestring, linestring.project(outside_point)))
+                linestring = LineString(roll_linear_ring(linestring, linestring.project(outside_point)))
                 stagger = 1
             i -= 1
         else:
@@ -120,7 +121,7 @@ def _stagger_and_cut_segments(
 
         if smoothness:
             points = smooth_path([InkstitchPoint(*coord) for coord in linestring.coords], smoothness)
-            linestring = shgeo.LineString(points)
+            linestring = LineString(points)
 
         if enable_random_stitch_length:
             start = ((i / (stagger)) % 1) * max_stitch_length
@@ -130,9 +131,16 @@ def _stagger_and_cut_segments(
             scale_factor = target_length / segment_length
             extended_line = scale(first_segment, scale_factor, scale_factor, origin='centroid')
             points = [InkstitchPoint(*extended_line.coords[0])] + [InkstitchPoint(*coord) for coord in linestring.coords]
-            linestring = shgeo.LineString(random_running_stitch(points, [max_stitch_length], tolerance, random_sigma, prng.join_args(random_seed, i)))
+            linestring = LineString(random_running_stitch(points, [max_stitch_length], tolerance, random_sigma, prng.join_args(random_seed, i)))
         else:
             linestring = apply_stitches(linestring, [max_stitch_length], stagger, row_spacing, i, tolerance)
+            # we may have distoreted the line, cut it (by staggereing) or did something else bad to it
+            first = get_point(linestring, 0)
+            last = get_point(linestring, -1)
+            if max_stitch_length >= first.distance(shape.boundary) > 0.001 and first.within(shape):
+                linestring = _connect_line_to_boundary(shape.boundary, linestring, 0)
+            elif max_stitch_length > last.distance(shape.boundary) > 0.001 and last.within(shape):
+                linestring = _connect_line_to_boundary(shape.boundary, linestring, -1)
 
         # restrict segments to shape
         new_segments.extend(_linestring_to_segments(shape, linestring))
@@ -168,11 +176,20 @@ def _linestring_to_segments(shape, linestring) -> list[list[tuple[float, ...]]]:
     segments = []
     for d0, d1 in zip(projections[:-1], projections[1:]):
         seg = substring(linestring, d0, d1, True)
-        if isinstance(seg, shgeo.Point):
+        if isinstance(seg, Point):
             continue
         if shape.contains(substring(seg, 0.4, -0.4, True)):
             segments.append(seg.coords[:])
     return segments
+
+
+def _connect_line_to_boundary(boundary, line, position) -> LineString:
+    point = nearest_points(get_point(line, position), boundary)[1]
+    if position == 0:
+        new_line = LineString([point] + list(line.coords))
+    else:
+        new_line = LineString(list(line.coords) + [point])
+    return new_line
 
 
 def _connect_parallel_offset_segments(shape, segments, row_spacing, skip_last, max_stitch_length):
@@ -191,7 +208,7 @@ def _connect_parallel_offset_segments(shape, segments, row_spacing, skip_last, m
 
     # the polygons were helpful to figure out the geometric relationsship between the shapes
     # up from now we prefer to work with LinearRings, the index positions will stay the same
-    linearrings_within = [shgeo.LinearRing(seg.exterior.coords) for seg in segments_within]
+    linearrings_within = [LinearRing(seg.exterior.coords) for seg in segments_within]
 
     # now let's loop through the connected_segments dictionary and connect the shapes as good as possible
     _connect_within(connected_segments, linearrings_within, row_spacing, skip_last, max_stitch_length)
@@ -254,16 +271,16 @@ def _connect_linearrings(
         if d1 < row_spacing + d_tolerance and d2 < row_spacing + d_tolerance:
             proj1 = inner.project(p2_inner)
             proj2 = outer.project(p2_outer)
-            rolled_inner = shgeo.LineString(roll_linear_ring(inner, proj1))
-            rolled_outer = shgeo.LineString(roll_linear_ring(outer, proj2))
+            rolled_inner = LineString(roll_linear_ring(inner, proj1))
+            rolled_outer = LineString(roll_linear_ring(outer, proj2))
             rolled_inner = substring(rolled_inner, 0, -row_spacing)
             rolled_outer = substring(rolled_outer, 0, -row_spacing)
             if skip_last:
                 # TODO: this could be improved, maybe with a substring,
                 # but I'm goig to leave it like this for now, because taking simply the substring would not be correct neither
-                connected_line = shgeo.LinearRing(rolled_outer.coords[:] + rolled_inner.segmentize(max_stitch_length).reverse().coords[1:-1])
+                connected_line = LinearRing(rolled_outer.coords[:] + rolled_inner.segmentize(max_stitch_length).reverse().coords[1:-1])
             else:
-                connected_line = shgeo.LinearRing(rolled_outer.coords[:] + rolled_inner.reverse().coords[:])
+                connected_line = LinearRing(rolled_outer.coords[:] + rolled_inner.reverse().coords[:])
             linearrings_within[outer_index] = connected_line
             segments_to_remove.append(inner_index)
             return True
@@ -273,8 +290,8 @@ def _connect_linearrings(
 
 def _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within, row_spacing, iteration=0) -> None:
     remove: list[int] = []
-    add: list[shgeo.LineString] = []
-    unconnected: list[shgeo.LineString] = []
+    add: list[LineString] = []
+    unconnected: list[LineString] = []
     for ring in linearrings_within:
         _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing, unconnected, remove, add)
     # remove the duplicated inner segments
@@ -352,13 +369,13 @@ def _connect_linestrings(line1, line2, row_spacing):
     segment2 = substring(line2, 0, line2.project(p3)).reverse()
     segment3 = substring(line1, line1.project(p2), line1.length).reverse()
     segment4 = substring(line2, line2.project(p4), line2.length)
-    connected = shgeo.LineString(list(segment1.coords) + list(segment2.coords)), shgeo.LineString(list(segment3.coords) + list(segment4.coords))
+    connected = LineString(list(segment1.coords) + list(segment2.coords)), LineString(list(segment3.coords) + list(segment4.coords))
     return connected
 
 
 def _needs_reverse(p1, p2, p3, p4):
-    p1p3 = shgeo.LineString([p1, p3])
-    p2p4 = shgeo.LineString([p2, p4])
+    p1p3 = LineString([p1, p3])
+    p2p4 = LineString([p2, p4])
     if p1p3.intersects(p2p4):
         return True
     return False
@@ -381,18 +398,18 @@ def _connect_linearring_with_linestring(ring, line, row_spacing, threshold=0.01)
             o2 = substring(line, proj1 + row_spacing, line.length)
             # open the ring
             proj1 = ring.project(p1)
-            rolled_ring = shgeo.LineString(roll_linear_ring(ring, proj1))
+            rolled_ring = LineString(roll_linear_ring(ring, proj1))
             rolled_ring = substring(rolled_ring, row_spacing, rolled_ring.length)
             # connect the parts
-            connected = shgeo.LineString(o1.coords[:] + rolled_ring.coords[:] + o2.coords[:])
+            connected = LineString(o1.coords[:] + rolled_ring.coords[:] + o2.coords[:])
             if not connected.is_simple:
-                connected = shgeo.LineString(o1.coords[:] + rolled_ring.coords[::-1] + o2.coords[:])
+                connected = LineString(o1.coords[:] + rolled_ring.coords[::-1] + o2.coords[:])
             return connected
         offset += 1
     return None
 
 
-def _split_segment_types(shape, segments, row_spacing) -> tuple[list[shgeo.LineString], list[shgeo.Polygon]]:
+def _split_segment_types(shape, segments, row_spacing) -> tuple[list[LineString], list[Polygon]]:
     # we have two different kinds of segments:
     # the ones that are touching the outline
     # and the ones, that are entirely within the shape (those are the ones we need to connect)
@@ -410,18 +427,18 @@ def _split_segment_types(shape, segments, row_spacing) -> tuple[list[shgeo.LineS
             if len(line.coords) < 4:
                 length = line.length
                 line = line.segmentize(max_segment_length=length/3).coords[:]
-            segments_within.append(shgeo.Polygon(line))
+            segments_within.append(Polygon(line))
         else:
             # if this segment has the same starting and ending point (linearring),
             # we need to ensure, that this point lies outside of the shape
             if line.coords[0] == line.coords[-1] and get_point(line, 0).within(shape):
                 outside_point = take_only_line_strings(line.difference(shape)).geoms[0].interpolate(0.5, True)
-                line = shgeo.LineString(roll_linear_ring(line, line.project(outside_point)))
+                line = LineString(roll_linear_ring(line, line.project(outside_point)))
             outline_segments.append(line)
     return outline_segments, segments_within
 
 
-def _get_possible_connector_points(inner, outer, offset, row_spacing) -> tuple[shgeo.Point, shgeo.Point, shgeo.Point, shgeo.Point, float, float]:
+def _get_possible_connector_points(inner, outer, offset, row_spacing) -> tuple[Point, Point, Point, Point, float, float]:
     # define two points on the inner ring according to offset and row_spacing
     p1 = inner.interpolate(offset)
     p2 = inner.interpolate(offset + row_spacing)
@@ -434,7 +451,7 @@ def _get_possible_connector_points(inner, outer, offset, row_spacing) -> tuple[s
     return p1, p2, p1_outer, p2_outer, d1, d2
 
 
-def ensure_ccw(ring) -> shgeo.LinearRing:
+def ensure_ccw(ring) -> LinearRing:
     # True if counter-clockwise
     if ring.is_ccw:
         return ring
@@ -491,14 +508,14 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
     return stitches
 
 
-def extend_line(line, shape) -> shgeo.LineString:
+def extend_line(line, shape) -> LineString:
     start_point = InkstitchPoint.from_tuple(line.coords[0])
     end_point = InkstitchPoint.from_tuple(line.coords[-1])
     direction = (end_point - start_point).unit()
 
     length = max(
-        shgeo.Point(start_point).hausdorff_distance(shape.envelope),
-        shgeo.Point(end_point).hausdorff_distance(shape.envelope)
+        Point(start_point).hausdorff_distance(shape.envelope),
+        Point(end_point).hausdorff_distance(shape.envelope)
     )
 
     new_start_point = start_point - direction * length
@@ -509,10 +526,10 @@ def extend_line(line, shape) -> shgeo.LineString:
     new_start_point += InkstitchPoint(random() * 0.01, random() * 0.01)
     new_end_point += InkstitchPoint(random() * 0.01, random() * 0.01)
 
-    return shgeo.LineString((new_start_point, *line.coords, new_end_point))
+    return LineString((new_start_point, *line.coords, new_end_point))
 
 
-def repair_non_simple_line(line) -> shgeo.LineString:
+def repair_non_simple_line(line) -> LineString:
     repaired = ensure_multi_line_string(unary_union(line))
     counter = 0
     # Do several iterations since we might have several concatenated selfcrossings
@@ -526,18 +543,18 @@ def repair_non_simple_line(line) -> shgeo.LineString:
         counter += 1
     if len(repaired.geoms) > 1:
         # They gave us a line with complicated self-intersections.  Use a fallback.
-        return shgeo.LineString((line.coords[0], line.coords[-1]))
+        return LineString((line.coords[0], line.coords[-1]))
     else:
         return repaired.geoms[0]
 
 
-def take_only_line_strings(thing) -> shgeo.MultiLineString:
+def take_only_line_strings(thing) -> MultiLineString:
     things = ensure_geometry_collection(thing)
-    line_strings = linemerge([line for line in things.geoms if isinstance(line, (shgeo.LineString, shgeo.LinearRing))])
+    line_strings = linemerge([line for line in things.geoms if isinstance(line, (LineString, LinearRing))])
     return ensure_multi_line_string(line_strings)
 
 
-def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None) -> shgeo.LineString:
+def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, threshold=None) -> LineString:
     max_stitch_length = max_stitch_length[0]
     if num_staggers == 0:
         num_staggers = 1  # sanity check to avoid division by zero.
@@ -549,14 +566,14 @@ def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, 
         coords = line.coords
         points = np.array([coords[0], coords[-1]])
 
-    stitched_line = shgeo.LineString(points)
+    stitched_line = LineString(points)
 
     # stitched_line may round corners, which will look terrible.  This finds the
     # corners.
     if not threshold:
         threshold = row_spacing / 2.0
     simplified_line = line.simplify(threshold, preserve_topology=False)
-    simplified_points = [shgeo.Point(x, y) for x, y in simplified_line.coords]
+    simplified_points = [Point(x, y) for x, y in simplified_line.coords]
 
     extra_points = []
     extra_point_projections = []
@@ -570,10 +587,10 @@ def apply_stitches(line, max_stitch_length, num_staggers, row_spacing, row_num, 
     if len(indices) > 0:
         points = np.insert(points, indices, extra_points, axis=0)
 
-    return shgeo.LineString(points)
+    return LineString(points)
 
 
-def prepare_copy_guide(line, shape) -> shgeo.LineString:
+def prepare_copy_guide(line, shape) -> LineString:
     line = line.geoms[0]
     if line.geom_type != 'LineString' or not line.is_simple:
         line = repair_non_simple_line(line)
@@ -581,14 +598,14 @@ def prepare_copy_guide(line, shape) -> shgeo.LineString:
     if line.is_ring:
         # If they pass us a ring, break it to avoid dividing by zero when
         # calculating a unit vector from start to end.
-        line = shgeo.LineString(line.coords[:-2])
+        line = LineString(line.coords[:-2])
 
     # extend the end points away from each other
     line = extend_line(line, shape)
     return line
 
 
-def prepare_offset_guide(line, shape) -> shgeo.LineString | shgeo.LinearRing:
+def prepare_offset_guide(line, shape) -> LineString | LinearRing:
     line = line.geoms[0]
     if not line.is_ring:
         # extend the end points away from each other
@@ -598,12 +615,12 @@ def prepare_offset_guide(line, shape) -> shgeo.LineString | shgeo.LinearRing:
         line = repair_non_simple_line(line)
 
     if line.is_ring:
-        line = shgeo.LinearRing(line)
+        line = LinearRing(line)
 
     return line
 
 
-def prepare_guide_line(line, shape, strategy) -> shgeo.LinearRing | shgeo.LineString | shgeo.MultiLineString:
+def prepare_guide_line(line, shape, strategy) -> LinearRing | LineString | MultiLineString:
     if strategy == 0:
         return prepare_copy_guide(line, shape)
     elif strategy == 2:
@@ -626,7 +643,7 @@ def _get_start_row(line, shape, row_spacing, line_direction):
 
 
 def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy, tolerance, smoothness,  # noqa: C901
-                                            enable_random_stitch_length, random_sigma, random_seed) -> list[shgeo.LineString]:
+                                            enable_random_stitch_length, random_sigma, random_seed) -> list[LineString]:
     line = prepare_guide_line(line, shape, strategy)
 
     shape_envelope = prep(shape.convex_hull)
@@ -659,7 +676,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
                 offset = 0.0001
             if strategy == 1:
                 stitched_line = line.offset_curve(offset, quad_segs=16)
-                if not isinstance(stitched_line, (shgeo.LineString, shgeo.LinearRing)):
+                if not isinstance(stitched_line, (LineString, LinearRing)):
                     # sometimes for an odd reason parallel_offset will split up a part of the offset line
                     # we can put it back together with the line_merge method and still keepthe disjoint parts
                     stitched_line = list(ensure_multi_line_string(stitched_line).geoms)
@@ -680,8 +697,8 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
                     end_points_within = []
                     for buffered_geoms in lines.geoms:
                         end_points_within.extend([
-                            shgeo.Point(buffered_geoms.coords[0]).within(shape),
-                            shgeo.Point(buffered_geoms.coords[-1]).within(shape)
+                            Point(buffered_geoms.coords[0]).within(shape),
+                            Point(buffered_geoms.coords[-1]).within(shape)
                         ])
                     if line.is_simple and (line.is_ring or not any(end_points_within)):
                         # we would like to avoid avoid doubling up the first line with a small buffer value
@@ -699,7 +716,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
             translate_amount = translate_direction * row * row_spacing
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
             if smoothness:
-                offset_line = shgeo.LineString(smooth_path(offset_line.coords, smoothness))
+                offset_line = LineString(smooth_path(offset_line.coords, smoothness))
             stitched_line = apply_stitches(offset_line, [max_stitch_length], num_staggers, row_spacing, row, tolerance)
 
         intersection = shape.intersection(stitched_line)
@@ -730,6 +747,6 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
     debug.log_line_strings(ensure_multi_line_string(line), 'guide line')
     debug.log_line_strings(ensure_multi_line_string(shape.boundary), "guided fill shape")
     debug.add_layer("Grating rows")
-    debug.log_line_strings([shgeo.LineString(row) for row in rows])
+    debug.log_line_strings([LineString(row) for row in rows])
 
     return rows
