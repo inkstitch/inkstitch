@@ -684,6 +684,9 @@ def _generate_simple_satin_guide_helper_lines(stroke, outline, guide_line):
         for (rail0, rail1) in sections:
             pairs.append((rail0[-1], rail1[-1]))
         pairs = pairs[:-1]
+        if not pairs:
+            # no rungs, fallback to normal
+            pairs = guide_line.plot_points_on_rails(spacing)
     else:
         pairs = guide_line.plot_points_on_rails(spacing)
 
