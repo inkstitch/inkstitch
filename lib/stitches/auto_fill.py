@@ -672,7 +672,7 @@ def find_stitch_path(graph, travel_graph, starting_point=None, ending_point=None
             path.insert(0, PathEdge((starting_node, ending_node), key="initial"))
     else:
         # If underpath is disabled, we only have the option travel along the outline edges.
-        # The user chose to start and end on different oultines, so there is no way to travel
+        # The user chose to start and end on different outlines, so there is no way to travel
         # along the edge from start to end. Add an additional path from start to end along existing
         # graph and travel edges (they will be duplicated).
         start_path = networkx.shortest_path(composed_graph, starting_node, ending_node, weight='weight')
