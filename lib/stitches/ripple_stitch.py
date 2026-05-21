@@ -360,7 +360,7 @@ def apply_stagger(line, stitch_length, num_staggers, row_num, tolerance, is_rand
     extended_line = scale(first_segment, scale_factor, scale_factor)
 
     line = [InkstitchPoint(*extended_line.coords[0])] + line
-    stitched_row = running_stitch(line, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed)
+    stitched_row = running_stitch(line, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed, False)
     if len(stitched_row) <= 1:
         return LineString()
 

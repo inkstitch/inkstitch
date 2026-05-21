@@ -6,7 +6,7 @@ from networkx import connected_components, is_empty
 from shapely import get_point
 from shapely.affinity import scale, translate
 from shapely.geometry import (LinearRing, LineString, MultiLineString, Point,
-                              Polygon)
+                              Polygon, MultiPoint)
 from shapely.ops import linemerge, nearest_points, substring, unary_union
 from shapely.prepared import prep
 
@@ -23,7 +23,7 @@ from ..utils.threading import check_stop_flag
 from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
                         collapse_sequential_outline_edges, find_stitch_path,
                         graph_make_valid, travel)
-from .running_stitch import bean_stitch, random_running_stitch
+from .running_stitch import bean_stitch, running_stitch
 
 
 def guided_fill(shape,
@@ -64,7 +64,11 @@ def guided_fill(shape,
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
 
+    debug.add_layer("Segments")
+    debug.log_line_strings([LineString(segment) for segment in segments])
+
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
+
     if is_empty(fill_stitch_graph):
         return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
                         num_staggers, skip_last, starting_point, ending_point, underpath)
@@ -98,8 +102,7 @@ def _stagger_and_cut_segments(
         enable_random_stitch_length, random_sigma, random_seed, tolerance, smoothness) -> list[list[tuple[float, ...]]]:
 
     # sort segments so that they are well prepared for staggering
-    if num_staggers:
-        _sort_segments(shape, segments)
+    segments = _sort_segments(shape, segments, strategy)
 
     # apply stagger and smoothness
     new_segments = []
@@ -114,7 +117,9 @@ def _stagger_and_cut_segments(
             if not diff.is_empty:
                 outside_point = take_only_line_strings(diff).geoms[0].interpolate(0.5, True)
                 linestring = LineString(roll_linear_ring(linestring, linestring.project(outside_point)))
-                stagger = 1
+                linestring = linestring.simplify(0.5)
+                # stagger = 1 # TODO: check!!
+                stagger = num_staggers
             i -= 1
         else:
             stagger = num_staggers
@@ -123,25 +128,18 @@ def _stagger_and_cut_segments(
             points = smooth_path([InkstitchPoint(*coord) for coord in linestring.coords], smoothness)
             linestring = LineString(points)
 
-        if enable_random_stitch_length:
-            start = ((i / (stagger)) % 1) * max_stitch_length
-            first_segment = substring(linestring, 0, 1)
-            segment_length = max(first_segment.length, 0.1)
-            target_length = segment_length + 2 * start
-            scale_factor = target_length / segment_length
-            extended_line = scale(first_segment, scale_factor, scale_factor, origin='centroid')
-            points = [InkstitchPoint(*extended_line.coords[0])] + [InkstitchPoint(*coord) for coord in linestring.coords]
-            linestring = LineString(random_running_stitch(points, [max_stitch_length], tolerance, random_sigma, prng.join_args(random_seed, i)))
-        else:
-            linestring = apply_stitches(linestring, [max_stitch_length], stagger, row_spacing, i, tolerance)
-            # we may have distoreted the line, cut it (by staggereing) or did something else bad to it
-            first = get_point(linestring, 0)
-            last = get_point(linestring, -1)
-            if max_stitch_length >= first.distance(shape.boundary) > 0.001 and first.within(shape):
-                linestring = _connect_line_to_boundary(shape.boundary, linestring, 0)
-            elif max_stitch_length > last.distance(shape.boundary) > 0.001 and last.within(shape):
-                linestring = _connect_line_to_boundary(shape.boundary, linestring, -1)
-
+        # TODO: maybe it would be less dangerous (in sense of line intersections and faster if we used a substring
+        # and then reappend the first point?
+        start = ((i / (stagger)) % 1) * max_stitch_length
+        first_segment = substring(linestring, 0, 1)
+        segment_length = max(first_segment.length, 0.1)
+        target_length = segment_length + 2 * start
+        scale_factor = target_length / segment_length
+        extended_line = scale(first_segment, scale_factor, scale_factor, origin='centroid')
+        points = [InkstitchPoint(*extended_line.coords[0])] + [InkstitchPoint(*coord) for coord in linestring.coords]
+        linestring = LineString(
+            running_stitch(points, [max_stitch_length], tolerance, enable_random_stitch_length, random_sigma, prng.join_args(random_seed, i), False)
+        )
         # restrict segments to shape
         new_segments.extend(_linestring_to_segments(shape, linestring))
         i += 1
@@ -149,13 +147,30 @@ def _stagger_and_cut_segments(
     return new_segments
 
 
-def _sort_segments(shape, segments) -> None:
+def _sort_segments(shape, segments, strategy) -> list[LineString]:
     # sort segments
-    # construct a line going through all the segments
-    envelope = shape.envelope.boundary
-    if envelope.is_empty:
-        return
-    segments.sort(key=lambda line: envelope.project(get_point(line, 0)))
+    if strategy == 2:
+        # this is a more bad than good approach to sort segments
+        # it will almost be impossible to sort wild line sections
+        projection_line = shape.envelope.boundary
+        if projection_line.is_empty:
+            return segments
+    else:
+        # construct a line going through all the segments
+        points = MultiPoint([get_point(line, 0) for line in segments])
+        rect = points.minimum_rotated_rectangle
+        projection_line = LineString()
+        if isinstance(rect, LineString):
+            projection_line = rect
+        elif isinstance(rect, Polygon):
+            minx, miny, maxx, maxy = rect.bounds
+            projection_line = LineString([(minx, miny), (maxx, maxy)])
+        else:
+            return segments
+    segments.sort(key=lambda line: projection_line.project(get_point(line, 0)))
+    debug.add_layer("sorted")
+    debug.log_line_strings(segments, 'sorted lines', 'red')
+    return segments
 
 
 def _linestring_to_segments(shape, linestring) -> list[list[tuple[float, ...]]]:
@@ -213,14 +228,42 @@ def _connect_parallel_offset_segments(shape, segments, row_spacing, skip_last, m
     # now let's loop through the connected_segments dictionary and connect the shapes as good as possible
     _connect_within(connected_segments, linearrings_within, row_spacing, skip_last, max_stitch_length)
 
+    debug.add_layer('rings within')
+    debug.log_line_strings(linearrings_within)
+
     # now we cleaned up the inner circles
     # we only need to connect them to the outside
+    # TODO: with buffer we only get rings
     _connect_rings_to_regular_lines(shape, outline_segments, linearrings_within, row_spacing)
+
+    # TODO: ensure outline connection
+    # _ensure_connection_to_exterior(shape, outline_segments)
 
     debug.add_layer('connected offset segments')
     debug.log_line_strings(outline_segments)
 
     return outline_segments
+
+
+'''
+def _ensure_connection_to_exterior(shape, outline_segments):
+    exterior = shape.exterior
+    for interior in shape.interiors:
+        interior_segments = []
+        exterior_intersection_count = 0
+        connects_to_outline = False
+        for seg in outline_segments:
+            if seg.intersects(interior):
+                interior_segments.append(interior_segments)
+                if seg.intersects(exterior):
+                    # intersection = ensure_multi_point(seg.intersection(exterior))
+                    # exterior_intersection_count =
+                    connects_to_outline = True
+                    break
+        if not connects_to_outline:
+            # with strategy 2 we only have linearrings?!?
+            pass
+'''
 
 
 def _connect_within(connected_segments, linearrings_within, row_spacing, skip_last, max_stitch_length):
@@ -317,7 +360,7 @@ def _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing
         line = outline_segments[i]
         if original_ring.distance(line) <= row_spacing + 0.001:
             if connected is None:
-                new_segment = _connect_linearring_with_linestring(ring, line, row_spacing)
+                new_segment = _connect_linearring_with_linestring(shape, ring, line, row_spacing)
                 if new_segment is not None:
                     outline_segments[i] = new_segment
                     ring = new_segment
@@ -326,7 +369,7 @@ def _connect_ring(ring, shape, outline_segments, linearrings_within, row_spacing
                         return
             else:
                 if get_point(line, 0).within(shape):
-                    seg1 = _connect_linearring_with_linestring(ring, line, row_spacing)
+                    seg1 = _connect_linearring_with_linestring(shape, ring, line, row_spacing)
                     if seg1 is None:
                         continue
                 else:
@@ -381,11 +424,14 @@ def _needs_reverse(p1, p2, p3, p4):
     return False
 
 
-def _connect_linearring_with_linestring(ring, line, row_spacing, threshold=0.01):
+def _connect_linearring_with_linestring(shape, ring, line, row_spacing, threshold=0.01):
     offset = 0
     while ring.length >= row_spacing + offset:
         check_stop_flag()
-        p1, p2, p3, p4, d1, d2 = _get_possible_connector_points(ring, line, offset, row_spacing)
+        line_fraction = line.intersection(shape)
+        if line_fraction.is_empty:
+            return None
+        p1, p2, p3, p4, d1, d2 = _get_possible_connector_points(ring, line_fraction, offset, row_spacing)
         if d1 < row_spacing * 1.5 and d2 < row_spacing * 1.5:
             # line start
             proj1 = line.project(p3)
@@ -664,8 +710,11 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
     offset_line = None
     rows = []
     buffer_offset = 0
+    i = 0
 
     while True:
+        # used for the copy method with random stitch length
+        i += 1
         check_stop_flag()
 
         if strategy > 0:
@@ -717,6 +766,18 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
             offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
             if smoothness:
                 offset_line = LineString(smooth_path(offset_line.coords, smoothness))
+            # TODO: enable random for copy method
+            # maybe use running stitch only and get rid of apply stitch method entirely as with the strict parameter we get the same effect
+            # (to be tested!)
+            '''
+            if enable_random_stitch_length: # or max_stitch_length == 1 when this also takes multiple stitch length (which is doesn't at the moment):
+                points = [InkstitchPoint(*offset_line.coords[0])] + [InkstitchPoint(*coord) for coord in offset_line.coords]
+                points = running_stitch(
+                    points, [max_stitch_length], tolerance, enable_random_stitch_length, random_sigma, prng.join_args(random_seed, i), False
+                )
+                stitched_line = LineString(stitched_line)
+            else:
+            '''
             stitched_line = apply_stitches(offset_line, [max_stitch_length], num_staggers, row_spacing, row, tolerance)
 
         intersection = shape.intersection(stitched_line)
@@ -728,8 +789,8 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
                         rows.append(segment)
                 elif strategy == 2:
                     # apply stitches reduces the line length, so when we cut our lines here, we'll need to add at least the stitch length to it
-                    intersection = stitched_line.intersection(shape.envelope.buffer(max_stitch_length + 0.2))
-                    for segment in take_only_line_strings(intersection).geoms:
+                    # intersection = stitched_line.intersection(shape.envelope.buffer(0.1))
+                    for segment in take_only_line_strings(stitched_line).geoms:
                         if segment.intersects(shape):
                             rows.append(segment)
                 else:
