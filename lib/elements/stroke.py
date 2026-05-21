@@ -14,12 +14,12 @@ from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches.ripple_stitch import ripple_stitch
-from ..stitches.running_stitch import bean_stitch, running_stitch, zigzag_stitch
+from ..stitches.running_stitch import (bean_stitch, running_stitch,
+                                       zigzag_stitch)
 from ..threads import ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
-from .satin_column import SatinColumn
 from .validation import ValidationWarning
 
 
@@ -951,33 +951,6 @@ class Stroke(EmbroideryElement):
                     stitch_groups.append(stitch_group)
 
         return stitch_groups
-
-    @cache
-    def get_guide_line(self, force_satin=False):
-        """Return the guide line element."""
-        guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
-        # No or empty guide line
-        if not guide_lines or (not guide_lines["stroke"] and not guide_lines["satin"]):
-            return None
-
-        # use the satin guide line if there is one, else use stroke
-        # ignore multiple guide lines
-        if len(guide_lines["satin"]) >= 1:
-            return guide_lines["satin"][0]
-        elif force_satin and len(guide_lines["stroke"][0].geoms) > 1:
-            return SatinColumn(guide_lines["stroke_data"][0]['marker_element'])
-        return guide_lines["stroke"][0]
-
-    @cache
-    def get_anchor_line(self):
-        """Return the anchor line element."""
-        anchor_lines = get_marker_elements(self.node, "anchor-line", False, True, False)
-        # No or empty guide line
-        if not anchor_lines or not anchor_lines["stroke"]:
-            return None
-
-        # ignore multiple anchor lines
-        return anchor_lines["stroke"][0].geoms[0]
 
     def _representative_point(self):
         """Return a representative point on the stroke."""
