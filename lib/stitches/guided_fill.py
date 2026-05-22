@@ -3,10 +3,10 @@ from random import random
 
 import numpy as np
 from networkx import connected_components, is_empty
-from shapely import get_point
+from shapely import get_point, set_precision
 from shapely.affinity import scale, translate
-from shapely.geometry import (LinearRing, LineString, MultiLineString, Point,
-                              Polygon, MultiPoint)
+from shapely.geometry import (LinearRing, LineString, MultiLineString,
+                              MultiPoint, Point, Polygon)
 from shapely.ops import linemerge, nearest_points, substring, unary_union
 from shapely.prepared import prep
 
@@ -150,6 +150,7 @@ def _stagger_and_cut_segments(
 def _sort_segments(shape, segments, strategy) -> list[LineString]:
     # sort segments
     if strategy == 2:
+        # TODO: update this method as we are not cutting the shapes previously and are dealing with linearrings
         # this is a more bad than good approach to sort segments
         # it will almost be impossible to sort wild line sections
         projection_line = shape.envelope.boundary
@@ -158,6 +159,8 @@ def _sort_segments(shape, segments, strategy) -> list[LineString]:
     else:
         # construct a line going through all the segments
         points = MultiPoint([get_point(line, 0) for line in segments])
+        # necessary for macOS
+        points = set_precision(points, 0.00001)
         rect = points.minimum_rotated_rectangle
         projection_line = LineString()
         if isinstance(rect, LineString):
