@@ -104,7 +104,6 @@ def _route_clipped_stitches(stroke, stitches, remove_start_travel=True, remove_e
         return [stitches]
 
     # multi-part stitch result (clip cuts off one or more parts of the original path)
-    # TODO: sort multipart ripples with grid
     _sort_segments(routed_segments, starting_point, ending_point)
     stitches = _segments_to_stitches(segments, routed_segments, starting_point, ending_point, remove_start_travel, remove_end_travel)
 
@@ -245,6 +244,9 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
 
     # we may have added travel points towards the end point in the center. We do not actually want to stitch them
     travel_path = [point for point in path if Point(point).distance(shape.boundary) < 1]
+
+    if not travel_path:
+        return []
 
     points = even_running_stitch(travel_path, running_stitch_length, running_stitch_tolerance)
     stitches = [Stitch(point) for point in points]

@@ -22,8 +22,8 @@ from ..utils.threading import check_stop_flag
 from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
                         find_stitch_path, graph_make_valid)
 from .circular_fill import path_to_stitches
-from .guided_fill import apply_stitches
 from .running_stitch import random_running_stitch
+from .utils.stitches import apply_stitches
 
 
 def linear_gradient_fill(fill, shape, starting_point, ending_point):
