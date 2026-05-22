@@ -167,17 +167,20 @@ Un grand merci à tous les traducteurs. Nous avons reçu de nouvelles traduction
 
 ## Mises à jour relatives aux types de points
 
-### Fill stitches
+### Remplissages
 
-Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 to 4.
-Old files will be automatically updated to keep the previous setting.
+Changement de la valeur par défaut du paramétre "Longueur maximale du point de remplissage" de 3 à 4mm.
 
-### Guided Fill
+Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
 
-* Add bean stitch option [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
-* New strategy: Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
 
-  This strategy allows even self-intersecting paths to be used as guide lines. Paths containing multiple subpaths are also permitted.
+### Remplissage guidé
+
+* Ajout de l'option "Nombre de répétitions pour le point multiple " [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
+* Nouvelle méthode :  Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
+
+Cette nouvelle méthode permet l'usage de chemins qui s'autointersectent comme ligne guide. Il est ausssi possible d'utiliser des chemins composés de plusieurs sous-chemins.
+
 
 ### Remplissage Legacy
 
@@ -250,24 +253,25 @@ Lorsque plusieurs valeurs sont définies, la colonne satin les utilise alternati
 
 ![Satin avec deux niveaux d'inserts de points courts](/assets/images/docs/satin_multiple_short_stitch_inset_values.jpg){: width="600px"}
 
-#### Push compensation
+#### Compensation d'élongation
 
-Ink/Stitch supports the much more important pull compensation for a while. Now push compensation is also supported.
+Ink/Stitch permet depuis un certain temps de déinir une compensation d'élongation. Maintenant, il permet aussi de définir une compensation d'élongation.
 
-It will shorten satin stitches at the specified ends to compensate for the stitches pushing the fabric.
+Elle va racourcir une colones satin aux extrémités spécifiées afin de compenser la poussée des points sur le tissu.
 
 ### Point zigzag (trait)
 
 * Ajout de l'option de paramètre répétition de point multiple  [#4127](https://github.com/inkstitch/inkstitch/pull/4127)
 * Ajout du paramètre angle [#4141](https://github.com/inkstitch/inkstitch/pull/4141)
 
-### Patterns
+### Textures
 
-* Patterns: add interval option for stroke patterns [#4250](https://github.com/inkstitch/inkstitch/pull/4250)
+* Texture: ajout de l'option intervalle pour les textures en trait [#4250](https://github.com/inkstitch/inkstitch/pull/4250)
 
+  Cette option permet de sauter des points aux intersections avec le plan de broderie (par exemple une sur deux)
   This option allows to skip intersection points on the stitch path (for example every second one)
 
-[Learn more](/fr/docs/stitches/patterns/)
+[En savoir plus](/fr/docs/stitches/patterns/)
 
 ## Nouvelles extensions
 
@@ -297,8 +301,9 @@ Cette extension facilite la création de points de croix dans Ink/Stitch. Elle p
 * Appliquer les paramètres du point de croix aux éléments de remplissage sélectionnés.
 * Pixelliser les contours des éléments de remplissage sélectionnés.
 * Appliquer des valeurs d'espacement à la grille de la page.
-* Convert images to fill stitch elements
-* Remove overlaps
+* Convertir des images en éléments de remplissage
+* Supprimer les superpositions
+
 
 [En savoir plus](/fr/docs/fill-tools/#cross-stitch-helper)
 
@@ -341,11 +346,11 @@ Désormais, les fichiers de polices peuvent être nommés ltr.svg, rtl.svg, ttb.
 
 [En savoir plus](/fr/tutorials/font-creation/)
 
-#### Letters to Font
+#### Lettres vers police
 
-* Included glyph are now positioned at the bottom left of the page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
-* The baseline is positioned at the bottom of the page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
-* Option to define the default distance to the left page border [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* Les glyphes sont maintenant positionnés en bas et à gauche par rapport à la page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* La baseline est positionnée en bas de la page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
+* Il est possible de définir une distance au bord gauche de la page [#4332](https://github.com/inkstitch/inkstitch/pull/4332)
 
 [En savoir plus](/fr/docs/font-tools/#letters-to-font)
 
@@ -379,7 +384,7 @@ Outil destiné aux numériseurs de polices pour la création initiale du fichier
 
 * Nouveaux champs de saisie pour:
   * police d'origine, URL de la police d'origine et licence de la police [#4103](https://github.com/inkstitch/inkstitch/pull/4103)
-  * Scale cross stitch pattern [#4281](https://github.com/inkstitch/inkstitch/pull/4281)
+  * Echelle des points de croixc [#4281](https://github.com/inkstitch/inkstitch/pull/4281)
 
 [En savoir plus](/fr/docs/font-tools/#generate-json)
 
@@ -401,18 +406,18 @@ Un outil permettant aux auteurs de polices d'activer automatiquement l'option de
 
 [En savoir plus](/fr/docs/font-tools/#force-lock-stitches)
 
-### Jump stitch to Stroke
+### Sauts en traits
 
-Value settings have been re-labeled and slightly adjusted [#4239](https://github.com/inkstitch/inkstitch/pull/4239):
+Les etiquettes des paramètres ont été réécrites et légérement modifiées [#4239](https://github.com/inkstitch/inkstitch/pull/4239):
 
-* Convert jumps longer than (mm): A value of 0 defaults to the actual minimum jump stitch length.
-* Convert jumps shorter than (mm): A value of 0 means no size limit.
+* Convertir les sauts plus longs que  (mm):  Une valeur de 0 permet d'utiliser la valeur de la longeur minimum de saut.
+* Convertit les sauts plus courts que (mm): Une valeur de 0, signifie aucune limite
 
-### Install Addons for Inkscape
+### Installer des compléments pour Inkscape
 
-Added new symbol-library for fill-stitch-patterns [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
+Ajout d'une nouvelle bibliiothèque de symboles pour des motifs de remplissage [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
 
-[Read more](/fr/docs/install-addons/)
+[En savoir plus](/fr/docs/install-addons/)
 
 ### Conversion des sauts de point en commandes de coupe/arrêt
 
@@ -445,18 +450,20 @@ Module de texte utilisant des polices pré-numérisées.
 
 [En savoir plus](/fr/docs/lettering/)
 
-### Lettering along Path
+### Lettrage le long d'un chemin
 
-* Works also with cross stitch fonts by rotating the crosses [#4277](https://github.com/inkstitch/inkstitch/pull/4277)
-* Options for vertical positioning [#4329](https://github.com/inkstitch/inkstitch/pull/4329):
-  * Top: text is entirely on top of the path, including pgq, etc.
-  * Baseline: the baseline of the text sits on the path
-  * Bottom: the text is entirely below the path
+* Fonctionne aussi pour le point de croix en tournant les croix [#4277](https://github.com/inkstitch/inkstitch/pull/4277)
+* Options de positionnement vertical [#4329](https://github.com/inkstitch/inkstitch/pull/4329):
+  * Au dessus : le texte en entierement au dessus du chemin (y compris les lettres comme p, g, q.)
+  * Baseline:  la baseline du texte est exactement sur le chemin
+  * En dessous: le texte est entierement sous le chemin
 
-The same options have been added to the batch lettering export.
 
-[En savoir plus (lettering along path)](/fr/docs/lettering/#lettering-along-path)
-[Read more (batch lettering)](/fr/docs/lettering/#batch-lettering)
+Les mêmes options ont été ajoutées à l'export par lots.
+
+
+[En savoir plus (lettrage le long d'un chemin)](/fr/docs/lettering/#lettering-along-path)
+[En savoir plus (export par lot)](/fr/docs/lettering/#batch-lettering)
 
 ### Ajouter une commande à des objets
 
@@ -484,9 +491,9 @@ Définit les paramètres globaux ou ceux du document SVG actuellement ouvert.
 
 [En savoir plus](/fr/docs/preferences/)
 
-### Simulator
+### Simulateur
 
-* Options to adapt colour size and thickness of simulator crosshair[#4299](https://github.com/inkstitch/inkstitch/pull/4299)
+* Options de choix pour la couleur, la taille et l'epaisseur de la croix du simulateur [#4299](https://github.com/inkstitch/inkstitch/pull/4299)
 
 [Read more](/fr/docs/simulator/)
 
@@ -506,9 +513,9 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 [Read more about color palettes](/fr/docs/thread-color/#install-palettes)
 
-## File type related updates
+## Mise a jour pour certains formats machine
 
-* VP3: fix rounding error [pystitch:129](https://github.com/inkstitch/pystitch/pull/129)
+* VP3: correction d'une erreur d'arrondi [pystitch:129](https://github.com/inkstitch/pystitch/pull/129)
 
 ## Corrections de bugs
 
