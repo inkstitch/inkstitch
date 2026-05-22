@@ -48,6 +48,7 @@ class DrawingPanel(wx.Panel):
         self.page_specs: Dict[Any, Any] = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
+        self.current_stitch = 0
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
         self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
