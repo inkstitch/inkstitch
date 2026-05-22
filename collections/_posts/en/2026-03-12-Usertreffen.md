@@ -13,7 +13,7 @@ In addition, we will cover satin stitches (created from simple lines) and advanc
 
 The main focus is on exchange and mutual support: We try things out together, share experiences, look at samples and make new contacts within the Ink/Stitch community.
 
-**Tickets are limites - [book your spot](https://www.buecherhallen.de/zentralbibliothek-termin/ink-stitch-usertreffen/datum/20260523.html) as soon as possible**
+**Tickets are limited - [book your spot](https://www.buecherhallen.de/zentralbibliothek-termin/ink-stitch-usertreffen/datum/20260523.html) as soon as possible**
 {: .notice--info }
 
 ## Prices
@@ -28,9 +28,10 @@ Please bring your computer. We want to practice.
 
 **Ink/Stitch Installation**
 
-We will announce a specific version shortly before the meeting.
+We will work with the following Ink/Stitch version [https://github.com/inkstitch/inkstitch/releases/tag/dev-build-kaalleen-hamburg2026](https://github.com/inkstitch/inkstitch/releases/tag/dev-build-kaalleen-hamburg2026).
 
 Please install this version on your laptop, so you can test new features during the event.
+{: .notice--info}
 
 **Your Ink/Stitch creations**
 

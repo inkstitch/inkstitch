@@ -28,9 +28,10 @@ Bitte bring, wenn möglich, deinen Laptop mit. Wir wollen aktiv werden.
 
 **Ink/Stitch Installation**
 
-Kurz vor dem Treffen geben wir noch einmal bekannt mit welcher Ink/Stitch Version wir arbeiten werden.
+Wir arbeiten mit folgender Ink/Stitch Version: [https://github.com/inkstitch/inkstitch/releases/tag/dev-build-kaalleen-hamburg2026](https://github.com/inkstitch/inkstitch/releases/tag/dev-build-kaalleen-hamburg2026)
 
-Bitte schaut noch einmal hier vorbei und installiert euch die entsprechende Version.
+Bitte installiert diese Version bereits vor dem Treffen
+{: .notice--info}
 
 **Eure Ink/Stitch Kreationen**
 
