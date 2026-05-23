@@ -17,6 +17,10 @@
         <main>
             <figure class="inksimulation" data-field-name="client-detail-transform-block{{ loop.index0 }}" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{color_block.svg_preview|replace("<li>", "")|replace("</li>", "")|safe}}
+                <div class="center-crosshair-overlay">
+                    <div class="crosshair-line horizontal"></div>
+                    <div class="crosshair-line vertical"></div>
+                </div>
                 {% with %}
                   {% set loop_index=loop.index0 %}
                   {% include 'ui_svg_action_buttons.html' with context %}

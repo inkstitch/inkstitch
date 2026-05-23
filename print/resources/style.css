@@ -1186,6 +1186,41 @@ body {
     }
 }
 
+.center-crosshair-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    display: none;
+    z-index: 1;
+}
+
+.show-crosshair .center-crosshair-overlay {
+    display: block;
+}
+
+.crosshair-line {
+    position: absolute;
+    background: #FF0000;
+}
+
+.crosshair-line.horizontal {
+    width: 800px;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.crosshair-line.vertical {
+    width: 1px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @page {
     size: auto;   /* auto is the initial value */
     margin: 0;

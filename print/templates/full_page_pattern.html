@@ -4,6 +4,10 @@
               title="{{ _('Ctrl + Scroll to Zoom') }}"
               style="cursor: auto;">
                 {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
+                <div class="center-crosshair-overlay">
+                    <div class="crosshair-line horizontal"></div>
+                    <div class="crosshair-line vertical"></div>
+                </div>
                 {% with %}
                 {% set realistic_id='realistic-pattern-overview' %}
                 {% include 'ui_svg_action_buttons.html' with context %}
