@@ -9,6 +9,7 @@ from base64 import b64decode
 import inkex
 import wx
 import wx.adv
+import re
 
 from ...elements import iterate_nodes, nodes_to_elements
 from ...i18n import _
@@ -137,7 +138,7 @@ class LetteringPanel(wx.Panel):
         # do not normalize the glyphs yet, available_glyphs are not normalized in the font json file
         # glyphs = set(l for l  in  unicodedata.normalize("NFC", self.options_panel.text_editor.GetValue().replace(r"\s", "")))
 
-        glyphs = set(letter for letter in self.options_panel.text_editor.GetValue().replace(r"\s", ""))
+        glyphs = set(letter for letter in re.sub(r"\s", "", self.options_panel.text_editor.GetValue()))
 
         for font in self.font_list:
             if filter_glyph and glyphs and not glyphs.issubset(font.available_glyphs):
