@@ -2,6 +2,8 @@ name: Translations
 on:
   schedule:
     - cron: '0 0 * * *'
+  workflow_dispatch: {}
+
 jobs:
   crowdin:
     runs-on: ubuntu-24.04
