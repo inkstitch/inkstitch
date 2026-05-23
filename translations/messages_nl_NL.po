@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-16 03:26+0000\n"
-"PO-Revision-Date: 2026-05-18 03:55\n"
+"POT-Creation-Date: 2026-05-23 07:37+0000\n"
+"PO-Revision-Date: 2026-05-23 07:37\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-16 03:26+0000\n"
+"POT-Creation-Date: 2026-05-23 07:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1573,8 +1573,8 @@ msgid "* Or decrease the fill coverage value"
 msgstr "* Of verlaag de vul dekkings-waarde"
 
 #: lib/elements/fill_stitch.py:145
-msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Helper, adapt settings and pixelate the shape"
-msgstr "* Of gebruik Extensies > Ink/Stitch > Gereedschap: Vullen > Kruissteek hulp, pas de instellingen aan en pixeliseer de vorm"
+msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant, adapt settings and pixelate the shape"
+msgstr ""
 
 #: lib/elements/fill_stitch.py:150
 msgid "This shape is invalid"
@@ -1646,6 +1646,10 @@ msgstr "Kopiëren"
 msgid "Parallel Offset"
 msgstr "Parallelle verschuiving"
 
+#: lib/elements/fill_stitch.py:188
+msgid "Buffer"
+msgstr ""
+
 #: lib/elements/fill_stitch.py:189
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr "Kopiëren (standaard) vult de vorm met verschoven kopieën van de lijn. Parallelle offset zorgt ervoor dat elke lijn altijd een constante afstand tot de aangrenzende lijn heeft. Scherpe hoeken worden misschien geïntroduceerd."
@@ -1671,7 +1675,7 @@ msgid "Join Style"
 msgstr "Combineer stijl"
 
 #: lib/elements/fill_stitch.py:203 inx/inkstitch_knockdown_fill.inx:22
-#: inx/inkstitch_knockdown_fill.inx:39
+#: inx/inkstitch_knockdown_fill.inx:41
 msgid "Round"
 msgstr "Rond"
 
@@ -2038,7 +2042,7 @@ msgstr "Smyrna-kruis"
 msgid "Smyrna Cross Flipped"
 msgstr "Smyrna-kruis omgedraaid"
 
-#: lib/elements/fill_stitch.py:769 lib/gui/cross_stitch_helper.py:112
+#: lib/elements/fill_stitch.py:769 lib/gui/cross_stitch_assistant.py:112
 msgid "Cross stitch method"
 msgstr "Kruis steek methode"
 
@@ -2126,8 +2130,8 @@ msgid "* Alternatively convert your image into a path: Path > Trace Bitmap... (S
 msgstr "* U kunt uw afbeelding ook omzetten naar een pad: Pad > Bitmap traceren... (Shift+Alt+B) (mogelijk zijn er verdere stappen nodig)"
 
 #: lib/elements/image.py:24
-msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Helper"
-msgstr "* Om de afbeelding geschikt te maken voor kruissteek, gebruikt u Hulpmiddelen: Vullen > Kruissteek hulp"
+msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Assistant"
+msgstr ""
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
@@ -2817,7 +2821,7 @@ msgid "Rotate satin guided ripple stitches"
 msgstr "Draai satijn geleide rimpel steken"
 
 #: lib/elements/stroke.py:603 inx/inkstitch_knockdown_fill.inx:21
-#: inx/inkstitch_knockdown_fill.inx:38
+#: inx/inkstitch_knockdown_fill.inx:40
 msgid "Join style"
 msgstr "Knooppunt stijl"
 
@@ -3017,7 +3021,7 @@ msgstr "{num_elements_removed} elementen verwijderd"
 msgid "{num_groups_removed} groups/layers removed"
 msgstr "{num_groups_removed} groepen/lagen verwijderd"
 
-#: lib/extensions/cross_stitch_helper.py:181
+#: lib/extensions/cross_stitch_assistant.py:181
 msgid "Cross stitch group"
 msgstr "Kruissteek groep"
 
@@ -3480,7 +3484,7 @@ msgid "This parameter will be saved when you click \"Apply and Quit\""
 msgstr "Deze parameter wordt opgeslagen als je \"Toepassen en Afsluiten\" klikt"
 
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
-#: lib/gui/cross_stitch_helper.py:468 lib/gui/edit_json/settings_panel.py:74
+#: lib/gui/cross_stitch_assistant.py:468 lib/gui/edit_json/settings_panel.py:74
 #: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
 #: lib/gui/simulator/simulator_preferences.py:73
@@ -3779,7 +3783,7 @@ msgid "threadlist"
 msgstr "garenlijst"
 
 #: lib/gui/abort_message.py:38 lib/gui/apply_palette.py:64
-#: lib/gui/cross_stitch_helper.py:426 lib/gui/edit_json/help_panel.py:27
+#: lib/gui/cross_stitch_assistant.py:426 lib/gui/edit_json/help_panel.py:27
 #: lib/gui/element_info.py:57 lib/gui/lettering_font_sample.py:98
 #: lib/gui/satin_multicolor/help_panel.py:27 lib/gui/selection_to_pattern.py:74
 #: lib/gui/tartan/help_panel.py:27
@@ -3814,7 +3818,7 @@ msgstr "Paletten"
 msgid "Select color palette"
 msgstr "Selecteer kleuren palet"
 
-#: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_helper.py:470
+#: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_assistant.py:470
 #: lib/gui/edit_json/settings_panel.py:76 lib/gui/lettering_font_sample.py:72
 #: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/selection_to_pattern.py:89
 #: lib/gui/simulator/simulator_preferences.py:75
@@ -3822,7 +3826,7 @@ msgstr "Selecteer kleuren palet"
 msgid "Apply"
 msgstr "Toepassen"
 
-#: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_helper.py:405
+#: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_assistant.py:405
 #: lib/gui/edit_json/main_panel.py:77 lib/gui/element_info.py:42
 #: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/selection_to_pattern.py:55
@@ -3836,7 +3840,7 @@ msgstr "Toepassen"
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:31
-#: inx/inkstitch_knockdown_fill.inx:44
+#: inx/inkstitch_knockdown_fill.inx:46
 #: inx/inkstitch_lettering_along_path.inx:30
 #: inx/inkstitch_lettering_custom_font_dir.inx:11
 #: inx/inkstitch_lettering_force_lock_stitches.inx:23
@@ -3866,11 +3870,11 @@ msgstr "Met deze extensie worden de dichtst bijzijnde kleuren uit het gekozen kl
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
 msgstr "https://inkstitch.org/docs/thread-color/#toepassing-palet"
 
-#: lib/gui/cross_stitch_helper.py:31
+#: lib/gui/cross_stitch_assistant.py:31
 msgid "Ink/Stitch - Cross stitch"
 msgstr "Ink/Stitch - Kruis steek"
 
-#: lib/gui/cross_stitch_helper.py:61 lib/gui/edit_json/main_panel.py:76
+#: lib/gui/cross_stitch_assistant.py:61 lib/gui/edit_json/main_panel.py:76
 #: lib/gui/lettering_font_sample.py:40 lib/gui/selection_to_pattern.py:24
 #: lib/gui/simulator/view_panel.py:134 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:93
@@ -3878,239 +3882,239 @@ msgstr "Ink/Stitch - Kruis steek"
 msgid "Settings"
 msgstr "Instellingen"
 
-#: lib/gui/cross_stitch_helper.py:69
+#: lib/gui/cross_stitch_assistant.py:69
 msgid "Grid Settings"
 msgstr "Raster Instellingen"
 
-#: lib/gui/cross_stitch_helper.py:73
+#: lib/gui/cross_stitch_assistant.py:73
 msgid "Square grid"
 msgstr "Vierkant raster"
 
-#: lib/gui/cross_stitch_helper.py:78
+#: lib/gui/cross_stitch_assistant.py:78
 msgid "Grid horizontal spacing (mm)"
 msgstr "Horizontale raster afstand (mm)"
 
-#: lib/gui/cross_stitch_helper.py:83
+#: lib/gui/cross_stitch_assistant.py:83
 msgid "Grid vertical spacing (mm)"
 msgstr "Verticale raster afstand (mm)"
 
-#: lib/gui/cross_stitch_helper.py:88
+#: lib/gui/cross_stitch_assistant.py:88
 msgid "Stitch length:"
 msgstr "Steeklengte:"
 
-#: lib/gui/cross_stitch_helper.py:105
+#: lib/gui/cross_stitch_assistant.py:105
 msgid "Params, pixelate and bitmap settings"
 msgstr "Instellingen, pixelatie en bitmap instellingen"
 
-#: lib/gui/cross_stitch_helper.py:115
+#: lib/gui/cross_stitch_assistant.py:115
 msgid "Fill coverage (%)"
 msgstr "Vul dekking (%)"
 
-#: lib/gui/cross_stitch_helper.py:119
+#: lib/gui/cross_stitch_assistant.py:119
 msgid "Align with canvas"
 msgstr "Uitlijnen met canvas"
 
-#: lib/gui/cross_stitch_helper.py:123
+#: lib/gui/cross_stitch_assistant.py:123
 msgid "Grid offset (mm) x[ y]"
 msgstr "Raster verschuiving (mm) x[ y]"
 
-#: lib/gui/cross_stitch_helper.py:148
+#: lib/gui/cross_stitch_assistant.py:148
 msgid "Output options"
 msgstr "Uitvoer opties"
 
-#: lib/gui/cross_stitch_helper.py:153
+#: lib/gui/cross_stitch_assistant.py:153
 msgid "Apply grid settings to"
 msgstr "Pas raster instellingen toe op"
 
-#: lib/gui/cross_stitch_helper.py:163 inx/inkstitch_params.inx:3
+#: lib/gui/cross_stitch_assistant.py:163 inx/inkstitch_params.inx:3
 msgid "Params"
 msgstr "Borduur Instellingen"
 
-#: lib/gui/cross_stitch_helper.py:165
+#: lib/gui/cross_stitch_assistant.py:165
 msgid "Defines whether params for all selected elements should be updated or not."
 msgstr "Bepaalt of de instellingen voor alle geselecteerde elementen moeten worden bijgewerkt of niet."
 
-#: lib/gui/cross_stitch_helper.py:170
+#: lib/gui/cross_stitch_assistant.py:170
 msgid "Pixelate"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:172
+#: lib/gui/cross_stitch_assistant.py:172
 msgid "Defines whether the outlines of selected fill shapes should be pixelated or not."
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:177
+#: lib/gui/cross_stitch_assistant.py:177
 msgid "Add nodes"
 msgstr "Punten toevoegen"
 
-#: lib/gui/cross_stitch_helper.py:180
+#: lib/gui/cross_stitch_assistant.py:180
 msgid "Add nodes at the horizontal grid spacing value"
 msgstr "Voeg knooppunten toe op de horizontale raster afstand"
 
-#: lib/gui/cross_stitch_helper.py:193
+#: lib/gui/cross_stitch_assistant.py:193
 msgid "Element handling"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:196
+#: lib/gui/cross_stitch_assistant.py:196
 msgid "Remove overlaps"
 msgstr "Overlappingen verwijderen"
 
-#: lib/gui/cross_stitch_helper.py:199
+#: lib/gui/cross_stitch_assistant.py:199
 msgid "Inserts a new set of non-overlapping shapes and removes selected fill elements"
 msgstr "Voegt een nieuwe set niet overlappende vormen in en verwijdert geselecteerde opvul elementen"
 
-#: lib/gui/cross_stitch_helper.py:208
+#: lib/gui/cross_stitch_assistant.py:208
 msgid "Setup page grid"
 msgstr "Pagina raster instellen"
 
-#: lib/gui/cross_stitch_helper.py:211
+#: lib/gui/cross_stitch_assistant.py:211
 msgid "Page grid"
 msgstr "Pagina raster"
 
-#: lib/gui/cross_stitch_helper.py:215
+#: lib/gui/cross_stitch_assistant.py:215
 msgid "Grid color"
 msgstr "Raster kleur"
 
-#: lib/gui/cross_stitch_helper.py:219
+#: lib/gui/cross_stitch_assistant.py:219
 msgid "Remove previous"
 msgstr "Verwijder vorige"
 
-#: lib/gui/cross_stitch_helper.py:222
+#: lib/gui/cross_stitch_assistant.py:222
 msgid "Remove previous cross stitch page grids"
 msgstr "Verwijder de rasterlijnen van de vorige kruissteek pagina"
 
-#: lib/gui/cross_stitch_helper.py:246
+#: lib/gui/cross_stitch_assistant.py:246
 msgid "Bitmap Settings"
 msgstr "Bitmap instellingen"
 
-#: lib/gui/cross_stitch_helper.py:251
+#: lib/gui/cross_stitch_assistant.py:251
 msgid "Convert bitmaps to pixelated fill areas"
 msgstr "Bitmaps naar gepixelde vulgebieden omzetten"
 
-#: lib/gui/cross_stitch_helper.py:257
+#: lib/gui/cross_stitch_assistant.py:257
 msgid "Convert bitmaps"
 msgstr "Bitmap omzetten"
 
-#: lib/gui/cross_stitch_helper.py:261
+#: lib/gui/cross_stitch_assistant.py:261
 msgid "One cross each pixel"
 msgstr "Eén kruis per pixel"
 
-#: lib/gui/cross_stitch_helper.py:263
+#: lib/gui/cross_stitch_assistant.py:263
 msgid "Scales the image up by using one cross for each pixel"
 msgstr "Vergroot de afbeelding door voor elke pixel een kruisje te gebruiken"
 
-#: lib/gui/cross_stitch_helper.py:269 lib/gui/cross_stitch_helper.py:278
+#: lib/gui/cross_stitch_assistant.py:269 lib/gui/cross_stitch_assistant.py:278
 msgid "Number of colors"
 msgstr "Aantal kleuren"
 
-#: lib/gui/cross_stitch_helper.py:270
+#: lib/gui/cross_stitch_assistant.py:270
 msgid "Selected stroke colors"
 msgstr "Geselecteerde lijnkleuren"
 
-#: lib/gui/cross_stitch_helper.py:271
+#: lib/gui/cross_stitch_assistant.py:271
 msgid "List with RGB values"
 msgstr "Lijst met RGB-waarden"
 
-#: lib/gui/cross_stitch_helper.py:272
+#: lib/gui/cross_stitch_assistant.py:272
 msgid "GIMP color palette"
 msgstr "GIMP kleurenpalet"
 
-#: lib/gui/cross_stitch_helper.py:274
+#: lib/gui/cross_stitch_assistant.py:274
 msgid "Color selection"
 msgstr "Kleur selectie"
 
-#: lib/gui/cross_stitch_helper.py:280
+#: lib/gui/cross_stitch_assistant.py:280
 msgid "Reduces colors to given value.\n"
 "This may not match the final number of colors. It is possible, that colors get removed when the image gets pixelated."
 msgstr "Vermindert het aantal kleuren tot een bepaalde waarde.\n"
 "Dit komt mogelijk niet overeen met het uiteindelijke aantal kleuren. Het is mogelijk dat kleuren worden verwijderd wanneer de afbeelding gepixeliseerd raakt."
 
-#: lib/gui/cross_stitch_helper.py:287
+#: lib/gui/cross_stitch_assistant.py:287
 msgid "RGB value list"
 msgstr "RGB waarden lijst"
 
-#: lib/gui/cross_stitch_helper.py:289
+#: lib/gui/cross_stitch_assistant.py:289
 msgid "A comma separated list with rgb values: r g b, r, g, b\n"
 "r,g and b can take a value from 0 - 255"
 msgstr "Een door komma's gescheiden lijst met Rgb waarden: r g b, r, g, b\n"
 "r, g en b kunnen een waarde aannemen van 0 tot 255"
 
-#: lib/gui/cross_stitch_helper.py:295
+#: lib/gui/cross_stitch_assistant.py:295
 msgid "Gimp palette file"
 msgstr "Gimp palet bestand"
 
-#: lib/gui/cross_stitch_helper.py:296
+#: lib/gui/cross_stitch_assistant.py:296
 msgid "Select a Gimp palette file"
 msgstr "Selecteer een Gimp palet bestand"
 
-#: lib/gui/cross_stitch_helper.py:297
+#: lib/gui/cross_stitch_assistant.py:297
 msgid "Restricted to the first 256 colors. Please use a color reduced palette."
 msgstr "Beperkt tot de eerste 256 kleuren. Gebruik een kleuren palet met minder kleuren."
 
-#: lib/gui/cross_stitch_helper.py:302
+#: lib/gui/cross_stitch_assistant.py:302
 msgid "Color reduction method"
 msgstr "Methode voor kleur reductie"
 
-#: lib/gui/cross_stitch_helper.py:303
+#: lib/gui/cross_stitch_assistant.py:303
 msgid "Median cut"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:303
+#: lib/gui/cross_stitch_assistant.py:303
 msgid "Maxcoverage"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:303
+#: lib/gui/cross_stitch_assistant.py:303
 msgid "Fastoctree"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:307
+#: lib/gui/cross_stitch_assistant.py:307
 msgid "Saturation"
 msgstr "Verzadiging"
 
-#: lib/gui/cross_stitch_helper.py:317
+#: lib/gui/cross_stitch_assistant.py:317
 msgid "Brightness"
 msgstr "Helderheid"
 
-#: lib/gui/cross_stitch_helper.py:327
+#: lib/gui/cross_stitch_assistant.py:327
 msgid "Contrast"
 msgstr "Contrast"
 
-#: lib/gui/cross_stitch_helper.py:337
+#: lib/gui/cross_stitch_assistant.py:337
 msgid "Removes pixels with a higher transparency value than this from the original image."
 msgstr "Verwijdert pixels met een hogere transparantie waarde dan deze uit de originele afbeelding."
 
-#: lib/gui/cross_stitch_helper.py:338
+#: lib/gui/cross_stitch_assistant.py:338
 msgid "Transparency threshold (%)"
 msgstr "Transparantie drempel (%)"
 
-#: lib/gui/cross_stitch_helper.py:352
+#: lib/gui/cross_stitch_assistant.py:352
 msgid "Background color for transparent images and background removal."
 msgstr "Achtergrondkleur voor transparante afbeeldingen en achtergrond verwijdering."
 
-#: lib/gui/cross_stitch_helper.py:353
+#: lib/gui/cross_stitch_assistant.py:353
 msgid "Background color"
 msgstr "Achtergrondkleur"
 
-#: lib/gui/cross_stitch_helper.py:359
+#: lib/gui/cross_stitch_assistant.py:359
 msgid "Remove background"
 msgstr "Achtergrond verwijderen"
 
-#: lib/gui/cross_stitch_helper.py:362
+#: lib/gui/cross_stitch_assistant.py:362
 msgid "Keep background"
 msgstr "Achtergrond bewaren"
 
-#: lib/gui/cross_stitch_helper.py:362
+#: lib/gui/cross_stitch_assistant.py:362
 msgid "Remove nearest to background color"
 msgstr "Verwijder de kleur die het dichtst bij de achtergrond ligt"
 
-#: lib/gui/cross_stitch_helper.py:362
+#: lib/gui/cross_stitch_assistant.py:362
 msgid "Remove most common color"
 msgstr "Verwijder de meest voorkomende kleur"
 
-#: lib/gui/cross_stitch_helper.py:364
+#: lib/gui/cross_stitch_assistant.py:364
 msgid "Removes the background color."
 msgstr "Verwijdert de achtergrond kleur."
 
-#: lib/gui/cross_stitch_helper.py:412
+#: lib/gui/cross_stitch_assistant.py:412
 msgid "This extension helps to generate cross stitches in Ink/Stitch. It can:\n\n"
 "* Define the grid size by either the maximum stitch length or grid spacing values\n"
 "* Apply cross stitch parameters.\n"
@@ -4126,19 +4130,19 @@ msgstr "Deze extensie helpt bij het genereren van kruissteek patronen in Ink/Sti
 "* Overlappingen verwijderen.\n"
 "* Een paginaraster instellen."
 
-#: lib/gui/cross_stitch_helper.py:432 lib/gui/cross_stitch_helper.py:433
-msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch"
+#: lib/gui/cross_stitch_assistant.py:432 lib/gui/cross_stitch_assistant.py:433
+msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch-assistant"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:443
+#: lib/gui/cross_stitch_assistant.py:443
 msgid "Preview image (if applicable)"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:449
+#: lib/gui/cross_stitch_assistant.py:449
 msgid "SVG Preview (slow)"
 msgstr ""
 
-#: lib/gui/cross_stitch_helper.py:466
+#: lib/gui/cross_stitch_assistant.py:466
 msgid "Reset values"
 msgstr "Waarden herzetten"
 
@@ -6309,7 +6313,7 @@ msgstr "Deze extensie probeert één enkel steekpad te maken door alle geselecte
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
 #: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
-#: inx/inkstitch_knockdown_fill.inx:50
+#: inx/inkstitch_knockdown_fill.inx:52
 #: inx/inkstitch_lettering_along_path.inx:40
 #: inx/inkstitch_lettering_custom_font_dir.inx:16
 #: inx/inkstitch_lettering_force_lock_stitches.inx:34
@@ -6483,7 +6487,7 @@ msgstr "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
 msgid "Break apart and repair (broken) fill shapes"
 msgstr "Vul vormen opsplitsen en repareren (kapotte)"
 
-#: inx/inkstitch_break_apart.inx:36 inx/inkstitch_cross_stitch_helper.inx:12
+#: inx/inkstitch_break_apart.inx:36 inx/inkstitch_cross_stitch_assistant.inx:12
 #: inx/inkstitch_gradient_blocks.inx:12 inx/inkstitch_knockdown_fill.inx:12
 #: inx/inkstitch_tartan.inx:12
 msgid "Tools: Fill"
@@ -6577,13 +6581,13 @@ msgstr "Commando's"
 msgid "View"
 msgstr "Bekijk"
 
-#: inx/inkstitch_cross_stitch_helper.inx:3
-msgid "Cross Stitch Helper"
-msgstr "Kruis Steek Assistent"
+#: inx/inkstitch_cross_stitch_assistant.inx:3
+msgid "Cross Stitch Assistant"
+msgstr ""
 
-#: inx/inkstitch_cross_stitch_helper.inx:9
-msgid "Cross stitch: helper to setup and apply grid size"
-msgstr "Kruissteek: hulpmiddel voor het instellen en toepassen van de raster grootte"
+#: inx/inkstitch_cross_stitch_assistant.inx:9
+msgid "Prepare your shapes and document for cross stitching"
+msgstr ""
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
@@ -7719,11 +7723,11 @@ msgstr "Gaten bewaren"
 msgid "Offset"
 msgstr "Offset"
 
-#: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:40
+#: inx/inkstitch_knockdown_fill.inx:23 inx/inkstitch_knockdown_fill.inx:42
 msgid "Mitre"
 msgstr "Verstek"
 
-#: inx/inkstitch_knockdown_fill.inx:24 inx/inkstitch_knockdown_fill.inx:41
+#: inx/inkstitch_knockdown_fill.inx:24 inx/inkstitch_knockdown_fill.inx:43
 msgid "Bevel"
 msgstr "Schuine kant"
 
@@ -7747,27 +7751,35 @@ msgstr "Rechthoek"
 msgid "Circle"
 msgstr "Cirkel"
 
-#: inx/inkstitch_knockdown_fill.inx:37
+#: inx/inkstitch_knockdown_fill.inx:38
+msgid "Use only shape"
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:38
+msgid "Whether or not the motif should be cut out of the shape."
+msgstr ""
+
+#: inx/inkstitch_knockdown_fill.inx:39
 msgid "Shape offset"
 msgstr "Vorm vergroting"
 
-#: inx/inkstitch_knockdown_fill.inx:45
+#: inx/inkstitch_knockdown_fill.inx:47
 msgid "This extension generates a knockdown fill area with a specified offset around selected elements."
 msgstr "Met deze extensie wordt een knockdown gegenereerd met een opgegeven vergroting rond geselecteerde elementen."
 
-#: inx/inkstitch_knockdown_fill.inx:46
+#: inx/inkstitch_knockdown_fill.inx:48
 msgid "* Select elements of any kind"
 msgstr "* Selecteer elementen van welke aard dan ook"
 
-#: inx/inkstitch_knockdown_fill.inx:47
+#: inx/inkstitch_knockdown_fill.inx:49
 msgid "* Open this extension and apply with desired settings"
 msgstr "* Open deze extensie en pas deze toe met de gewenste instellingen"
 
-#: inx/inkstitch_knockdown_fill.inx:48
+#: inx/inkstitch_knockdown_fill.inx:50
 msgid "* Adapt fill settings in the params dialog"
 msgstr "* Pas de vul instellingen aan in het parameters dialoog venster"
 
-#: inx/inkstitch_knockdown_fill.inx:51
+#: inx/inkstitch_knockdown_fill.inx:53
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
 msgstr "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
 
