@@ -2,11 +2,9 @@ name: Translations
 on:
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch: {}
-
 jobs:
   crowdin:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
         with:
@@ -18,7 +16,7 @@ jobs:
           git submodule update --init --recursive
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.11.x'
+          python-version: '3.12.x'
       - env:
           CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_V2_KEY }}
           CROWDIN_PROJECT_ID: "299419"
@@ -30,9 +28,6 @@ jobs:
           unzip -j crowdin-cli.zip
 
           sudo apt-get update
-          python -m pip install --upgrade pip
-          python -m pip install wheel
-
           sudo apt install gettext
 
           # for wxPython
@@ -43,19 +38,17 @@ jobs:
           sudo apt install libgirepository1.0-dev libcairo2-dev
 
           # for shapely
-          sudo apt install build-essential libgtk-3-dev cmake
+          sudo apt install build-essential libgtk-3-dev libgeos-dev cmake
+          sudo apt install gcc g++ gfortran libopenblas-dev liblapack-dev
 
-          # for numpy
-          sudo apt install  gfortran libopenblas-dev liblapack-dev pkg-config
-
+          python -m pip install --upgrade pip
+          python -m pip install wheel
           python -m pip install pycairo
           python -m pip install PyGObject==3.50.0
-          python -m pip install numpy --no-binary numpy
 
-          python -m pip install https://github.com/inkstitch/build-libs/releases/download/v0.1/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
+          python -m pip install https://github.com/inkstitch/build-libs/releases/download/v0.1/wxPython-4.2.2-cp312-cp312-linux_x86_64.whl
 
           python -m pip install -r requirements.txt
-
           python -m pip install Babel
 
           make messages.po
