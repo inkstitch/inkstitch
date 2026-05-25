@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-23 07:37+0000\n"
-"PO-Revision-Date: 2026-05-23 07:37\n"
+"POT-Creation-Date: 2026-05-25 04:02+0000\n"
+"PO-Revision-Date: 2026-05-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-23 07:37+0000\n"
+"POT-Creation-Date: 2026-05-25 04:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2993,7 +2993,7 @@ msgstr "Een lijst met alle ondersteunde bestand formaten vindt u op onze website
 msgid "Ink/Stitch Lettering"
 msgstr "Ink/Stitch Belettering"
 
-#: lib/extensions/batch_lettering.py:217 lib/gui/lettering/main_panel.py:317
+#: lib/extensions/batch_lettering.py:217 lib/gui/lettering/main_panel.py:318
 msgid "scale"
 msgstr "meten"
 
@@ -3485,7 +3485,7 @@ msgstr "Deze parameter wordt opgeslagen als je \"Toepassen en Afsluiten\" klikt"
 
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/cross_stitch_assistant.py:468 lib/gui/edit_json/settings_panel.py:74
-#: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
+#: lib/gui/lettering/main_panel.py:58 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
 #: lib/gui/simulator/simulator_preferences.py:73
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -3500,7 +3500,7 @@ msgid "Use Last Settings"
 msgstr "Gebruik Vorige Instellingen"
 
 #: lib/extensions/params.py:588 lib/extensions/sew_stack_editor.py:122
-#: lib/gui/lettering/main_panel.py:55
+#: lib/gui/lettering/main_panel.py:56
 msgid "Apply and Quit"
 msgstr "Toepassen en Sluiten"
 
@@ -3828,7 +3828,7 @@ msgstr "Toepassen"
 
 #: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_assistant.py:405
 #: lib/gui/edit_json/main_panel.py:77 lib/gui/element_info.py:42
-#: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
+#: lib/gui/lettering/main_panel.py:48 lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/selection_to_pattern.py:55
 #: lib/gui/tartan/main_panel.py:64 lib/gui/test_swatches.py:83
 #: inx/inkstitch_apply_attribute.inx:24 inx/inkstitch_apply_threadlist.inx:91
@@ -3876,7 +3876,7 @@ msgstr "Ink/Stitch - Kruis steek"
 
 #: lib/gui/cross_stitch_assistant.py:61 lib/gui/edit_json/main_panel.py:76
 #: lib/gui/lettering_font_sample.py:40 lib/gui/selection_to_pattern.py:24
-#: lib/gui/simulator/view_panel.py:134 print/templates/ui.html:5
+#: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:93
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
@@ -4314,7 +4314,7 @@ msgstr "Horizontale vooruitgang x spatie"
 msgid "Element Info"
 msgstr "Element informatie"
 
-#: lib/gui/element_info.py:29 lib/gui/simulator/view_panel.py:125
+#: lib/gui/element_info.py:29 lib/gui/simulator/view_panel.py:120
 msgid "Info"
 msgstr "Info"
 
@@ -4351,11 +4351,11 @@ msgstr "Een lettertype bibliotheek met een volledige beschrijving en geborduurde
 msgid "https://inkstitch.org/fonts/font-library/"
 msgstr "https://inkstitch.org/fonts/font-library/"
 
-#: lib/gui/lettering/main_panel.py:249
+#: lib/gui/lettering/main_panel.py:250
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Dit lettertype heeft geen beschikbare lettertypevariant. Gelieve het lettertype bij te werken of te verwijderen."
 
-#: lib/gui/lettering/main_panel.py:328
+#: lib/gui/lettering/main_panel.py:329
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -4806,107 +4806,107 @@ msgstr "Patronen voegen knooppunten toe aan of verwijderen knooppunten van bordu
 msgid "https://inkstitch.org/docs/stitches/patterns/"
 msgstr ""
 
-#: lib/gui/simulator/control_panel.py:53
+#: lib/gui/simulator/control_panel.py:47
 msgid "Slow down (arrow down)"
 msgstr "Langzamer (pijl omlaag)"
 
-#: lib/gui/simulator/control_panel.py:57
+#: lib/gui/simulator/control_panel.py:51
 msgid "Speed up (arrow up)"
 msgstr "Sneller (pijl omhoog)"
 
-#: lib/gui/simulator/control_panel.py:61
+#: lib/gui/simulator/control_panel.py:55
 msgid "Go backward one stitch (-)"
 msgstr "Ga één steek achteruit (-)"
 
-#: lib/gui/simulator/control_panel.py:65
+#: lib/gui/simulator/control_panel.py:59
 msgid "Go forward one stitch (+)"
 msgstr "Ga één steek vooruit (+)"
 
-#: lib/gui/simulator/control_panel.py:69
+#: lib/gui/simulator/control_panel.py:63
 msgid "Go backward one command (page-down)"
 msgstr "Ga één commando terug (pagina omlaag)"
 
-#: lib/gui/simulator/control_panel.py:73
+#: lib/gui/simulator/control_panel.py:67
 msgid "Go forward one command (page-up)"
 msgstr "Ga één commando vooruit (pagina omhoog)"
 
-#: lib/gui/simulator/control_panel.py:77
+#: lib/gui/simulator/control_panel.py:71
 msgid "Switch animation direction (arrow left, arrow right)"
 msgstr "Animatie richting veranderen (pijl naar links, pijl naar rechts)"
 
-#: lib/gui/simulator/control_panel.py:81
+#: lib/gui/simulator/control_panel.py:75
 msgid "Play (P)"
 msgstr "Spelen (P)"
 
-#: lib/gui/simulator/control_panel.py:85
+#: lib/gui/simulator/control_panel.py:79
 msgid "Restart (R)"
 msgstr "Herstart (R)"
 
-#: lib/gui/simulator/control_panel.py:108
+#: lib/gui/simulator/control_panel.py:102
 msgid "Controls"
 msgstr "Bediening"
 
-#: lib/gui/simulator/control_panel.py:121
+#: lib/gui/simulator/control_panel.py:115
 msgid "Speed"
 msgstr "Snelheid"
 
-#: lib/gui/simulator/control_panel.py:246
+#: lib/gui/simulator/control_panel.py:244
 #, python-format
 msgid "%d stitches/sec"
 msgstr "%d steken/sec"
 
-#: lib/gui/simulator/design_info.py:24
+#: lib/gui/simulator/design_info.py:25
 msgid "Design dimensions (mm)"
 msgstr "Ontwerp afmetingen (mm)"
 
-#: lib/gui/simulator/design_info.py:27
+#: lib/gui/simulator/design_info.py:28
 msgid "# Stitches"
 msgstr "# Steken"
 
-#: lib/gui/simulator/design_info.py:30
+#: lib/gui/simulator/design_info.py:31
 msgid "# Color Changes"
 msgstr "# Kleurveranderingen"
 
-#: lib/gui/simulator/design_info.py:33
+#: lib/gui/simulator/design_info.py:34
 msgid "# Jumps"
 msgstr "# Sprongen"
 
-#: lib/gui/simulator/design_info.py:36
+#: lib/gui/simulator/design_info.py:37
 msgid "# Trims"
 msgstr "# Afknippen"
 
-#: lib/gui/simulator/design_info.py:39
+#: lib/gui/simulator/design_info.py:40
 msgid "# Stops"
 msgstr "# Stops"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:29
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "STEEK"
 
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:33
 msgid "JUMP"
 msgstr "SPRONG"
 
-#: lib/gui/simulator/simulator_panel.py:16
+#: lib/gui/simulator/drawing_panel.py:17
 msgid "TRIM"
 msgstr "AFKNIPPEN"
 
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:35
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:35
 msgid "STOP"
 msgstr "STOP"
 
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:31
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "KLEUR WISSEL"
 
-#: lib/gui/simulator/simulator_panel.py:150
+#: lib/gui/simulator/drawing_panel.py:305
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Afmetingen: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/simulator_panel.py:265
+#: lib/gui/simulator/drawing_panel.py:451
 #, python-format
 msgid "Command: %s"
 msgstr "Opdracht: %s"
@@ -4945,59 +4945,59 @@ msgstr ""
 msgid "Embroidery Simulation"
 msgstr "Borduursimulatie"
 
-#: lib/gui/simulator/view_panel.py:45
+#: lib/gui/simulator/view_panel.py:40
 msgid "Display needle penetration point (O)"
 msgstr "Toon het naald penetratiepunt (O)"
 
-#: lib/gui/simulator/view_panel.py:49
+#: lib/gui/simulator/view_panel.py:44
 msgid "Show jump stitches"
 msgstr "Laat sprong steken zien"
 
-#: lib/gui/simulator/view_panel.py:56
+#: lib/gui/simulator/view_panel.py:51
 msgid "Show trims"
 msgstr "Toon afknippen"
 
-#: lib/gui/simulator/view_panel.py:63
+#: lib/gui/simulator/view_panel.py:58
 msgid "Show stops"
 msgstr "Toon stops"
 
-#: lib/gui/simulator/view_panel.py:70
+#: lib/gui/simulator/view_panel.py:65
 msgid "Show color changes"
 msgstr "Toon kleurveranderingen"
 
-#: lib/gui/simulator/view_panel.py:78
+#: lib/gui/simulator/view_panel.py:73
 msgid "Open info dialog"
 msgstr "Info dialoog openen"
 
-#: lib/gui/simulator/view_panel.py:83
+#: lib/gui/simulator/view_panel.py:78
 msgid "Change background color"
 msgstr "Achtergrondkleur wijzigen"
 
-#: lib/gui/simulator/view_panel.py:87
+#: lib/gui/simulator/view_panel.py:82
 msgid "Show crosshair"
 msgstr "Toon draadkruis"
 
-#: lib/gui/simulator/view_panel.py:97
+#: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
 msgstr "Pagina weergeven"
 
-#: lib/gui/simulator/view_panel.py:100
+#: lib/gui/simulator/view_panel.py:95
 msgid "Open settings dialog"
 msgstr "Dialoog venster Instellingen openen"
 
-#: lib/gui/simulator/view_panel.py:106
+#: lib/gui/simulator/view_panel.py:101
 msgid "Detach/attach simulator window"
 msgstr "Simulator venster loskoppelen/koppelen"
 
-#: lib/gui/simulator/view_panel.py:112
+#: lib/gui/simulator/view_panel.py:107
 msgid "Show"
 msgstr "Toon"
 
-#: lib/gui/simulator/view_panel.py:196
+#: lib/gui/simulator/view_panel.py:185
 msgid "Simulator Preferences"
 msgstr "Simulator voorkeuren"
 
-#: lib/gui/simulator/view_panel.py:204
+#: lib/gui/simulator/view_panel.py:193
 msgid "Design Info"
 msgstr "Ontwerp informatie"
 
@@ -5146,7 +5146,7 @@ msgstr "Lijn verwijderen"
 msgid "Generate Swatches"
 msgstr "Test exemplaar genereren"
 
-#: lib/gui/lettering/main_panel.py:45 lib/gui/test_swatches.py:33
+#: lib/gui/lettering/main_panel.py:46 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_attribute.inx:17 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8

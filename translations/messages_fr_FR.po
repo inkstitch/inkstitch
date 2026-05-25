@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-23 07:37+0000\n"
-"PO-Revision-Date: 2026-05-23 07:37\n"
+"POT-Creation-Date: 2026-05-25 04:02+0000\n"
+"PO-Revision-Date: 2026-05-25 04:03\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-23 07:37+0000\n"
+"POT-Creation-Date: 2026-05-25 04:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1574,7 +1574,7 @@ msgstr "Ou diminuer la valeur de la couverture"
 
 #: lib/elements/fill_stitch.py:145
 msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant, adapt settings and pixelate the shape"
-msgstr ""
+msgstr "* Ou utiliser Extensions > Ink/Stitch > Outils : Remplissage> Assistant point de croix, adapter les réglages et pixeliser la forme"
 
 #: lib/elements/fill_stitch.py:150
 msgid "This shape is invalid"
@@ -1648,7 +1648,7 @@ msgstr "Décalage parallèle"
 
 #: lib/elements/fill_stitch.py:188
 msgid "Buffer"
-msgstr ""
+msgstr "Buffer"
 
 #: lib/elements/fill_stitch.py:189
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
@@ -2132,7 +2132,7 @@ msgstr ":* Alternativement, convertir votre image en chemin: Chemin > Vectoriser
 
 #: lib/elements/image.py:24
 msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Assistant"
-msgstr ""
+msgstr "* Pour convertir l'image pour le point de croix, utiliser Outils : remplissage > Assistant point de croix"
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
@@ -2997,7 +2997,7 @@ msgstr "Vous pouvez trouver la liste de tous les formats de fichier supportés s
 msgid "Ink/Stitch Lettering"
 msgstr "Lettrage Ink/Stitch"
 
-#: lib/extensions/batch_lettering.py:217 lib/gui/lettering/main_panel.py:317
+#: lib/extensions/batch_lettering.py:217 lib/gui/lettering/main_panel.py:318
 msgid "scale"
 msgstr "Échelle"
 
@@ -3489,7 +3489,7 @@ msgstr "Ce paramètre sera enregistré lorsque vous cliquez sur « Appliquer et
 
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/cross_stitch_assistant.py:468 lib/gui/edit_json/settings_panel.py:74
-#: lib/gui/lettering/main_panel.py:57 lib/gui/lettering_font_sample.py:70
+#: lib/gui/lettering/main_panel.py:58 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
 #: lib/gui/simulator/simulator_preferences.py:73
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
@@ -3504,7 +3504,7 @@ msgid "Use Last Settings"
 msgstr "Utiliser les derniers paramètres"
 
 #: lib/extensions/params.py:588 lib/extensions/sew_stack_editor.py:122
-#: lib/gui/lettering/main_panel.py:55
+#: lib/gui/lettering/main_panel.py:56
 msgid "Apply and Quit"
 msgstr "Appliquer et Quitter"
 
@@ -3832,7 +3832,7 @@ msgstr "Appliquer"
 
 #: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_assistant.py:405
 #: lib/gui/edit_json/main_panel.py:77 lib/gui/element_info.py:42
-#: lib/gui/lettering/main_panel.py:47 lib/gui/lettering_font_sample.py:83
+#: lib/gui/lettering/main_panel.py:48 lib/gui/lettering_font_sample.py:83
 #: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/selection_to_pattern.py:55
 #: lib/gui/tartan/main_panel.py:64 lib/gui/test_swatches.py:83
 #: inx/inkstitch_apply_attribute.inx:24 inx/inkstitch_apply_threadlist.inx:91
@@ -3880,7 +3880,7 @@ msgstr "Ink/Stitch - Point de croix"
 
 #: lib/gui/cross_stitch_assistant.py:61 lib/gui/edit_json/main_panel.py:76
 #: lib/gui/lettering_font_sample.py:40 lib/gui/selection_to_pattern.py:24
-#: lib/gui/simulator/view_panel.py:134 print/templates/ui.html:5
+#: lib/gui/simulator/view_panel.py:129 print/templates/ui.html:5
 #: print/templates/ui.html:15 inx/inkstitch_lettering_generate_json.inx:93
 #: inx/inkstitch_png_realistic.inx:14 inx/inkstitch_png_simple.inx:14
 msgid "Settings"
@@ -4136,7 +4136,7 @@ msgstr "Cette extension permet de générer des points de croix dans Ink/Stitch.
 
 #: lib/gui/cross_stitch_assistant.py:432 lib/gui/cross_stitch_assistant.py:433
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch-assistant"
-msgstr ""
+msgstr "https://inkstitch.org/fr/docs/tools-fill/#cross-stitch"
 
 #: lib/gui/cross_stitch_assistant.py:443
 msgid "Preview image (if applicable)"
@@ -4318,7 +4318,7 @@ msgstr "Avancée horizontale de l'espace"
 msgid "Element Info"
 msgstr "Information sur l'élément"
 
-#: lib/gui/element_info.py:29 lib/gui/simulator/view_panel.py:125
+#: lib/gui/element_info.py:29 lib/gui/simulator/view_panel.py:120
 msgid "Info"
 msgstr "Information"
 
@@ -4355,11 +4355,11 @@ msgstr "Une bibliothèque de fontes avec description complète et exemples brod�
 msgid "https://inkstitch.org/fonts/font-library/"
 msgstr "https://inkstitch.org/fr/fonts/font-library/"
 
-#: lib/gui/lettering/main_panel.py:249
+#: lib/gui/lettering/main_panel.py:250
 msgid "This font has no available font variant. Please update or remove the font."
 msgstr "Cette police n'a pas de variante de police disponible. Veuillez mettre à jour ou supprimer la police."
 
-#: lib/gui/lettering/main_panel.py:328
+#: lib/gui/lettering/main_panel.py:329
 #, python-format
 msgid "Error: Text cannot be applied to the document.\n"
 "%s"
@@ -4810,107 +4810,107 @@ msgstr "Les textures ajoutent ou suppriment des points sur les éléments de bro
 msgid "https://inkstitch.org/docs/stitches/patterns/"
 msgstr "https://inkstitch.org/fr/docs/stitches/patterns/"
 
-#: lib/gui/simulator/control_panel.py:53
+#: lib/gui/simulator/control_panel.py:47
 msgid "Slow down (arrow down)"
 msgstr "Ralentir (flèche vers le bas)"
 
-#: lib/gui/simulator/control_panel.py:57
+#: lib/gui/simulator/control_panel.py:51
 msgid "Speed up (arrow up)"
 msgstr "Accélérer (flèche vers le haut)"
 
-#: lib/gui/simulator/control_panel.py:61
+#: lib/gui/simulator/control_panel.py:55
 msgid "Go backward one stitch (-)"
 msgstr "Reculer d'un point (-)"
 
-#: lib/gui/simulator/control_panel.py:65
+#: lib/gui/simulator/control_panel.py:59
 msgid "Go forward one stitch (+)"
 msgstr "Avancer d'un point (+)"
 
-#: lib/gui/simulator/control_panel.py:69
+#: lib/gui/simulator/control_panel.py:63
 msgid "Go backward one command (page-down)"
 msgstr "Reculer d'une commande (page précédente pgDn)"
 
-#: lib/gui/simulator/control_panel.py:73
+#: lib/gui/simulator/control_panel.py:67
 msgid "Go forward one command (page-up)"
 msgstr "Avancer d'une commande (page précédente)"
 
-#: lib/gui/simulator/control_panel.py:77
+#: lib/gui/simulator/control_panel.py:71
 msgid "Switch animation direction (arrow left, arrow right)"
 msgstr "Changer de direction (flèche à gauche | flèche à droite)"
 
-#: lib/gui/simulator/control_panel.py:81
+#: lib/gui/simulator/control_panel.py:75
 msgid "Play (P)"
 msgstr "Jouer (P)"
 
-#: lib/gui/simulator/control_panel.py:85
+#: lib/gui/simulator/control_panel.py:79
 msgid "Restart (R)"
 msgstr "Redémarrer (R)"
 
-#: lib/gui/simulator/control_panel.py:108
+#: lib/gui/simulator/control_panel.py:102
 msgid "Controls"
 msgstr "Contrôles"
 
-#: lib/gui/simulator/control_panel.py:121
+#: lib/gui/simulator/control_panel.py:115
 msgid "Speed"
 msgstr "Vitesse"
 
-#: lib/gui/simulator/control_panel.py:246
+#: lib/gui/simulator/control_panel.py:244
 #, python-format
 msgid "%d stitches/sec"
 msgstr "%d points/sec"
 
-#: lib/gui/simulator/design_info.py:24
+#: lib/gui/simulator/design_info.py:25
 msgid "Design dimensions (mm)"
 msgstr "Taille de la broderie (mm)"
 
-#: lib/gui/simulator/design_info.py:27
+#: lib/gui/simulator/design_info.py:28
 msgid "# Stitches"
 msgstr "# Points"
 
-#: lib/gui/simulator/design_info.py:30
+#: lib/gui/simulator/design_info.py:31
 msgid "# Color Changes"
 msgstr "# Changements de couleur"
 
-#: lib/gui/simulator/design_info.py:33
+#: lib/gui/simulator/design_info.py:34
 msgid "# Jumps"
 msgstr "# Sauts"
 
-#: lib/gui/simulator/design_info.py:36
+#: lib/gui/simulator/design_info.py:37
 msgid "# Trims"
 msgstr "# Coupes"
 
-#: lib/gui/simulator/design_info.py:39
+#: lib/gui/simulator/design_info.py:40
 msgid "# Stops"
 msgstr "# Stops"
 
 #. #-#-#-#-#  messages-babel.po (PROJECT VERSION)  #-#-#-#-#
 #. command label at bottom of simulator window
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:29
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:29
 msgid "STITCH"
 msgstr "BRODER"
 
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:33
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:33
 msgid "JUMP"
 msgstr "SAUT"
 
-#: lib/gui/simulator/simulator_panel.py:16
+#: lib/gui/simulator/drawing_panel.py:17
 msgid "TRIM"
 msgstr "COUPURE"
 
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:35
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:35
 msgid "STOP"
 msgstr "STOP"
 
-#: lib/gui/simulator/simulator_panel.py:16 inx/inkstitch_output_GCODE.inx:31
+#: lib/gui/simulator/drawing_panel.py:17 inx/inkstitch_output_GCODE.inx:31
 msgid "COLOR CHANGE"
 msgstr "CHANGEMENT COULEUR"
 
-#: lib/gui/simulator/simulator_panel.py:150
+#: lib/gui/simulator/drawing_panel.py:305
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Dimensions: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/simulator_panel.py:265
+#: lib/gui/simulator/drawing_panel.py:451
 #, python-format
 msgid "Command: %s"
 msgstr "Commande : %s"
@@ -4949,59 +4949,59 @@ msgstr "Couleur de la croix"
 msgid "Embroidery Simulation"
 msgstr "Simulation de broderie"
 
-#: lib/gui/simulator/view_panel.py:45
+#: lib/gui/simulator/view_panel.py:40
 msgid "Display needle penetration point (O)"
 msgstr "Afficher les points de pénétration de l'aiguille (O)"
 
-#: lib/gui/simulator/view_panel.py:49
+#: lib/gui/simulator/view_panel.py:44
 msgid "Show jump stitches"
 msgstr "Montrer les sauts de fil"
 
-#: lib/gui/simulator/view_panel.py:56
+#: lib/gui/simulator/view_panel.py:51
 msgid "Show trims"
 msgstr "Montrer les coupes de fil"
 
-#: lib/gui/simulator/view_panel.py:63
+#: lib/gui/simulator/view_panel.py:58
 msgid "Show stops"
 msgstr "Montrer les stops"
 
-#: lib/gui/simulator/view_panel.py:70
+#: lib/gui/simulator/view_panel.py:65
 msgid "Show color changes"
 msgstr "Montrer les changements de couleur"
 
-#: lib/gui/simulator/view_panel.py:78
+#: lib/gui/simulator/view_panel.py:73
 msgid "Open info dialog"
 msgstr "Ouvrir le dialogue Informations"
 
-#: lib/gui/simulator/view_panel.py:83
+#: lib/gui/simulator/view_panel.py:78
 msgid "Change background color"
 msgstr "Changer la couleur d'arrière fond"
 
-#: lib/gui/simulator/view_panel.py:87
+#: lib/gui/simulator/view_panel.py:82
 msgid "Show crosshair"
 msgstr "Montrer la position de l'aiguille"
 
-#: lib/gui/simulator/view_panel.py:97
+#: lib/gui/simulator/view_panel.py:92
 msgid "Show page"
 msgstr "Montrer la page"
 
-#: lib/gui/simulator/view_panel.py:100
+#: lib/gui/simulator/view_panel.py:95
 msgid "Open settings dialog"
 msgstr "Ouvrir le dialogue de paramétrage"
 
-#: lib/gui/simulator/view_panel.py:106
+#: lib/gui/simulator/view_panel.py:101
 msgid "Detach/attach simulator window"
 msgstr "Détacher/Attacher le simulateur"
 
-#: lib/gui/simulator/view_panel.py:112
+#: lib/gui/simulator/view_panel.py:107
 msgid "Show"
 msgstr "Montrer"
 
-#: lib/gui/simulator/view_panel.py:196
+#: lib/gui/simulator/view_panel.py:185
 msgid "Simulator Preferences"
 msgstr "Préférences du simulateur"
 
-#: lib/gui/simulator/view_panel.py:204
+#: lib/gui/simulator/view_panel.py:193
 msgid "Design Info"
 msgstr "Information sur la broderie"
 
@@ -5150,7 +5150,7 @@ msgstr "Supprimer la bande"
 msgid "Generate Swatches"
 msgstr "Générer des échantillons"
 
-#: lib/gui/lettering/main_panel.py:45 lib/gui/test_swatches.py:33
+#: lib/gui/lettering/main_panel.py:46 lib/gui/test_swatches.py:33
 #: inx/inkstitch_apply_attribute.inx:17 inx/inkstitch_apply_threadlist.inx:7
 #: inx/inkstitch_auto_satin.inx:7 inx/inkstitch_batch_lettering.inx:9
 #: inx/inkstitch_break_apart.inx:8 inx/inkstitch_cleanup.inx:8
@@ -6587,11 +6587,11 @@ msgstr "Affichage"
 
 #: inx/inkstitch_cross_stitch_assistant.inx:3
 msgid "Cross Stitch Assistant"
-msgstr ""
+msgstr "Assistant Point de Croix"
 
 #: inx/inkstitch_cross_stitch_assistant.inx:9
 msgid "Prepare your shapes and document for cross stitching"
-msgstr ""
+msgstr "Prépare vos formes et votre document pour le point de croix"
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
