@@ -704,7 +704,7 @@ $('button.settings').click(function(){
     // which will cause the checkbox to be checked or unchecked
     // immediately even if SVG rendering takes awhile
     setTimeout(function() {
-        if (checked) {
+      if (checked) {
         if (!(item in normal_rendering)) {
           normal_rendering[item] = svg[0].outerHTML;
         }
@@ -759,13 +759,6 @@ $('button.settings').click(function(){
       $.postJSON('/settings/logo', {value: data});
     };
     reader.readAsDataURL(file);
-  });
-
-  // Center crosshair toggle
-  $('#show-center-crosshair').on('change initialize', function() {
-    $('body').toggleClass('show-crosshair', $(this).prop('checked'));
-  }).on('change', function() {
-    $.postJSON('/settings/show_center_crosshair', {value: $(this).prop('checked')});
   });
 
   // "save as defaults" button

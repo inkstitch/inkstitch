@@ -28,10 +28,6 @@
         <main>
             <figure class="inksimulation operator" data-field-name="operator-overview-transform" title="{{ _('Ctrl + Scroll to Zoom') }}">
                 {{ svg_overview|replace("<li>", "")|replace("</li>", "")|safe }}
-                <div class="center-crosshair-overlay">
-                    <div class="crosshair-line horizontal"></div>
-                    <div class="crosshair-line vertical"></div>
-                </div>
                 {% with %}
                   {% set realistic_id='realistic-operator-overview' %}
                   {% include 'ui_svg_action_buttons.html' with context %}
