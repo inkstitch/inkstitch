@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-05-25 04:02+0000\n"
-"PO-Revision-Date: 2026-05-25 04:03\n"
+"PO-Revision-Date: 2026-05-27 04:02\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1576,7 +1576,7 @@ msgstr "* den Wert für Füllabdeckung verringern"
 
 #: lib/elements/fill_stitch.py:145
 msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant, adapt settings and pixelate the shape"
-msgstr ""
+msgstr "* oder öffne Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Assistent, passe die Einstellungen an und verpixelt die Form entsprechend"
 
 #: lib/elements/fill_stitch.py:150
 msgid "This shape is invalid"
@@ -1650,7 +1650,7 @@ msgstr "Parallelverschiebung"
 
 #: lib/elements/fill_stitch.py:188
 msgid "Buffer"
-msgstr ""
+msgstr "Buffer"
 
 #: lib/elements/fill_stitch.py:189
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
@@ -2133,7 +2133,7 @@ msgstr "* Alternativ kann das Bild in einen Pfad konvertiert werden: Pfad> Bitma
 
 #: lib/elements/image.py:24
 msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Assistant"
-msgstr ""
+msgstr "* Um das Bild für Kreuzstiche umzuwandeln, nutze Werkzeuge: Füllung > Kreuzstich-Assistent"
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
@@ -4134,7 +4134,7 @@ msgstr "Diese Erweiterung hilft, Kreuzstichmuster für Ink/Stitch vorzubereiten.
 
 #: lib/gui/cross_stitch_assistant.py:432 lib/gui/cross_stitch_assistant.py:433
 msgid "https://inkstitch.org/docs/tools-fill/#cross-stitch-assistant"
-msgstr ""
+msgstr "https://inkstitch.org/de/docs/fill-tools/#kreuzstich-assistent"
 
 #: lib/gui/cross_stitch_assistant.py:443
 msgid "Preview image (if applicable)"
@@ -6585,11 +6585,11 @@ msgstr "Ansicht"
 
 #: inx/inkstitch_cross_stitch_assistant.inx:3
 msgid "Cross Stitch Assistant"
-msgstr ""
+msgstr "Kreuzstich-Assistent"
 
 #: inx/inkstitch_cross_stitch_assistant.inx:9
 msgid "Prepare your shapes and document for cross stitching"
-msgstr ""
+msgstr "Bereitet Dokument und Füllelemente für Kreuzstich vor"
 
 #: inx/inkstitch_cut_satin.inx:3
 msgid "Cut Satin Column"
