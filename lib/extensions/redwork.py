@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+from typing import List
 
 import networkx as nx
 from inkex import Boolean, Group, Path, PathElement, errormsg
@@ -10,18 +11,19 @@ from shapely import length, unary_union
 from shapely.geometry import LineString, MultiLineString, Point
 from shapely.ops import linemerge, nearest_points, substring
 
+from .base import InkstitchExtension
 from ..elements import Stroke
 from ..i18n import _
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..svg.svg import delete_empty_groups
 from ..utils.geometry import ensure_multi_line_string
-from .base import InkstitchExtension
 
 
 class Redwork(InkstitchExtension):
     """Takes a bunch of stroke elements and traverses them so,
        that every stroke has exactly two passes
     """
+
     def __init__(self, *args, **kwargs):
         InkstitchExtension.__init__(self, *args, **kwargs)
 
@@ -29,8 +31,11 @@ class Redwork(InkstitchExtension):
         self.arg_parser.add_argument("-c", "--combine", dest="combine", type=Boolean, default=False)
         self.arg_parser.add_argument("-m", "--merge_distance", dest="merge_distance", type=float, default=0.5)
         self.arg_parser.add_argument("-p", "--minimum_path_length", dest="minimum_path_length", type=float, default=0.5)
-        self.arg_parser.add_argument("-s", "--redwork_running_stitch_length_mm", dest="redwork_running_stitch_length_mm", type=float, default=2.5)
-        self.arg_parser.add_argument("-b", "--redwork_bean_stitch_repeats", dest="redwork_bean_stitch_repeats", type=str, default='0')
+        self.arg_parser.add_argument("-s", "--redwork_running_stitch_length_mm",
+                                     dest="redwork_running_stitch_length_mm", type=float, default=2.5)
+        self.arg_parser.add_argument("-b", "--redwork_bean_stitch_repeats", dest="redwork_bean_stitch_repeats",
+                                     type=str, default='0')
+        self.arg_parser.add_argument("--redwork_split_colors", dest="redwork_split_colors", type=Boolean, default=False)
         self.arg_parser.add_argument("-k", "--keep_originals", dest="keep_originals", type=Boolean, default=False)
 
         self.elements = None
@@ -48,9 +53,12 @@ class Redwork(InkstitchExtension):
             errormsg(no_selection_message)
             return
         elements = [element for element in self.elements if isinstance(element, Stroke)]
+
         if not elements:
             errormsg(no_selection_message)
             return
+
+        color_groups = self._group_by_colors(elements)
 
         self.merge_distance = self.options.merge_distance * PIXELS_PER_MM
         self.minimum_path_length = self.options.minimum_path_length * PIXELS_PER_MM
@@ -60,18 +68,31 @@ class Redwork(InkstitchExtension):
         if not starting_point:
             starting_point = self._get_starting_point('autoroute_end')
 
-        multi_line_string = self._elements_to_multi_line_string(elements)
-        if starting_point:
-            multi_line_string = self._ensure_starting_point(multi_line_string, starting_point)
-        self._build_graph(multi_line_string)
-
-        redwork_group = self._create_redwork_group()
-        self._generate_strongly_connected_components()
-        self._generate_eulerian_circuits()
-        self._eulerian_circuits_to_elements(redwork_group, elements)
+        for color, color_elements in color_groups.items():
+            multi_line_string = self._elements_to_multi_line_string(color_elements)
+            if starting_point:
+                multi_line_string = self._ensure_starting_point(multi_line_string, starting_point)
+            self._build_graph(multi_line_string)
+            redwork_group = self._create_redwork_group(color)
+            self._generate_strongly_connected_components()
+            self._generate_eulerian_circuits()
+            self._eulerian_circuits_to_elements(redwork_group, color_elements)
 
         if not self.options.keep_originals:
             self._delete_original_elements(elements)
+
+    def _group_by_colors(self, elements: list[Stroke]) -> dict[str, List[Stroke]]:
+        color_groups: dict[str, List[Stroke]] = {}
+
+        if self.options.redwork_split_colors:
+            for element in elements:
+                if color_groups.get(str(element.stroke_color)) is None:
+                    color_groups[str(element.stroke_color)] = []
+
+                color_groups[str(element.stroke_color)].append(element)
+        else:
+            color_groups[str(elements[0].stroke_color)] = elements
+        return color_groups
 
     def _delete_original_elements(self, elements):
         # remove input elements
@@ -113,13 +134,13 @@ class Redwork(InkstitchExtension):
                 # return the first occurence directly
                 return command.target_point
 
-    def _create_redwork_group(self):
+    def _create_redwork_group(self, color):
         node = self.svg.selection.rendering_order()[-1]
         parent = node.getparent()
         index = parent.index(node) + 1
         # create redwork group
         redwork_group = Group()
-        redwork_group.label = _("Redwork Group")
+        redwork_group.label = _(f"Redwork Group - {color}")
         parent.insert(index, redwork_group)
         return redwork_group
 
@@ -220,7 +241,8 @@ class Redwork(InkstitchExtension):
         for i, cc in enumerate(self.connected_components):
             if list(self.graph.nodes)[0] in cc:
                 break
-        ordered_connected_components = [self.connected_components[i]] + self.connected_components[:i] + self.connected_components[i+1:]
+        ordered_connected_components = [self.connected_components[i]] + self.connected_components[
+            :i] + self.connected_components[i + 1:]
         self.connected_components = ordered_connected_components
 
     def _generate_eulerian_circuits(self):
