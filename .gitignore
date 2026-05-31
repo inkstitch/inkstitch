@@ -41,3 +41,5 @@ env/
 ENV/
 .python-version
 
+inkscape_dialog/build
+inkscape_dialog/release

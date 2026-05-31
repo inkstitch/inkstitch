@@ -1,0 +1,59 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 20, "patch": 0 },
+
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "INKSCAPE_DIR": "/home/alexander/projects/0_third_party/inkscape"
+      }
+    },
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-O2"
+      }
+    }
+  ],
+
+  "buildPresets": [
+    { "name": "debug",   "configurePreset": "debug"   },
+    { "name": "release", "configurePreset": "release" }
+  ],
+
+  "testPresets": [],
+
+  "workflowPresets": [
+    {
+      "name": "debug",
+      "displayName": "Configure + Build (debug)",
+      "steps": [
+        { "type": "configure", "name": "debug" },
+        { "type": "build",     "name": "debug" }
+      ]
+    },
+    {
+      "name": "release",
+      "displayName": "Configure + Build (release)",
+      "steps": [
+        { "type": "configure", "name": "release" },
+        { "type": "build",     "name": "release" }
+      ]
+    }
+  ]
+}
