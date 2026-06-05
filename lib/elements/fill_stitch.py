@@ -22,6 +22,7 @@ from ..stitches import (auto_fill, circular_fill, contour_fill, cross_stitch,
                         guided_fill, legacy_fill, linear_gradient_fill,
                         meander_fill, tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
+from ..stitches.running_stitch import bean_stitch
 from ..stitches.utils.cross_stitch import CrossGeometries
 from ..svg import PIXELS_PER_MM
 from ..svg.tags import INKSCAPE_LABEL
@@ -534,6 +535,7 @@ class FillStitch(EmbroideryElement):
            type='int',
            default="1",
            select_items=[('fill_method', 'meander_fill'),
+                         ('fill_method', 'contour_fill'),
                          ('fill_method', 'circular_fill')],
            sort_index=50)
     def repeats(self):
@@ -549,6 +551,7 @@ class FillStitch(EmbroideryElement):
            type='str',
            select_items=[('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
+                         ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'tartan_fill')],
            default=0,
@@ -1217,6 +1220,17 @@ class FillStitch(EmbroideryElement):
                 self.random_stitch_length_jitter,
                 self.random_seed
             )
+
+        if self.bean_stitch_repeats:
+            stitches = bean_stitch(stitches, self.bean_stitch_repeats)
+
+        if self.repeats:
+            for i in range(1, self.repeats):
+                if i % 2 == 1:
+                    # reverse every other pass
+                    stitches.extend(stitches[::-1])
+                else:
+                    stitches.extend(stitches)
 
         stitch_group = StitchGroup(
             color=self.color,
