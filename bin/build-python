@@ -53,7 +53,7 @@ if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
     pyinstaller_args+="--windowed "
 fi
 # Run command to build the inkstich program
-python -m PyInstaller $pyinstaller_args inkstitch.py
+${PYTHON:-python} -m PyInstaller $pyinstaller_args inkstitch.py
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
 # to put some more user-accessible stuff like examples and palettes in
