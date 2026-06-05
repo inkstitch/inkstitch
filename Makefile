@@ -1,8 +1,16 @@
 # used for distlocal
 OS=$(shell uname)
 
+# Use uv run python when available so commands resolve to the uv-managed venv.
+# Falls back to plain python for environments that use pip/virtualenv directly.
+ifneq ($(shell command -v uv 2>/dev/null),)
+    PYTHON_EXECUTABLE := uv run python
+else
+    PYTHON_EXECUTABLE := python
+endif
+
 dist: version locales inx
-	bash bin/build-python
+	PYTHON="$(PYTHON_EXECUTABLE)" bash bin/build-python
 	bash bin/build-distribution-archives
 
 distclean:
@@ -15,7 +23,7 @@ manual:
 
 .PHONY: inx
 inx: version locales
-	python bin/generate-inx-files;
+	$(PYTHON_EXECUTABLE) bin/generate-inx-files;
 
 .PHONY: messages.po
 messages.po: inx
@@ -50,12 +58,12 @@ version:
 
 .PHONY: style
 style:
-	bash -x bin/style-check
+	PYTHON="$(PYTHON_EXECUTABLE)" bash -x bin/style-check
 
 .PHONY: type-check mypy
 type-check mypy:
-	python -m mypy
+	$(PYTHON_EXECUTABLE) -m mypy
 
 .PHONY: test
 test:
-	pytest
+	$(PYTHON_EXECUTABLE) -m pytest

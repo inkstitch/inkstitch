@@ -1,0 +1,89 @@
+[project]
+name = "inkstitch"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pystitch",
+    # For macOS and Windows our installer bundles the version specified here.
+    # Some Linux distros package Ink/Stitch depending on the inkex bundled with Inkscape.
+    "inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.4.1",
+    # For Linux users it may be tricky to install wxPython from sources.
+    # Prebuilt packages: https://wxpython.org/pages/downloads/index.html
+    #                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
+    "wxPython>=4.1.1",
+    "networkx",
+    "shapely>=2.0.0",
+    "lxml",
+    "platformdirs",
+    "numpy==2.2.6",
+    "jinja2>2.9",
+    "requests",
+    # tomllib is built into Python 3.11+; tomli needed only for older versions
+    "tomli ; python_version < '3.11'",
+    "colormath2",
+    "flask>=2.2.0",
+    "fonttools",
+    "trimesh>=3.15.2",
+    "diskcache",
+    "flask-cors",
+    "pywinutils ; sys_platform == 'win32'",
+    "pywin32 ; sys_platform == 'win32'",
+]
+
+[dependency-groups]
+dev = [
+    "debugpy",
+    "mypy==1.19.1",
+    "flake8==7.3.0",
+    "pytest",
+    "types-wxpython",
+    "types-appdirs",
+    "types-shapely",
+    "types-networkx",
+    "types-lxml",
+    "types-pywin32",
+    "pyinstaller>=6.20.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+files = ["lib/**/*.py", "tests/**/*.py"]
+
+# We use class properties, which mypy considers an error, probably because it's going to be deprecated.
+# Ignore that for now.
+disable_error_code = ["misc"]
+
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+strict_equality = true
+extra_checks = true
+disallow_subclassing_any = true
+disallow_untyped_decorators = true
+
+[[tool.mypy.overrides]]
+module = "lib.elements.clone"
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+check_untyped_defs = true
+
+# Libraries missing type information
+[[tool.mypy.overrides]]
+module = "colormath2.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "winutils.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pystitch.*"
+ignore_missing_imports = true
+follow_imports = "skip"
