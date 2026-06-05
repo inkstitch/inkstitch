@@ -4,12 +4,12 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import json
+import lzma
 import os
 from collections import defaultdict
 from copy import deepcopy
 from itertools import combinations_with_replacement
 from os import path
-import lzma
 
 import wx
 import wx.adv
@@ -22,7 +22,7 @@ from ...lettering import get_font_list
 from ...lettering.categories import FONT_CATEGORIES
 from ...lettering.font_variant import FontVariant
 from ...stitch_plan import stitch_groups_to_stitch_plan
-from ...svg.tags import SVG_PATH_TAG
+from ...svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
 from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
 from .. import PreviewRenderer, WarningPanel
@@ -590,6 +590,10 @@ class LetteringEditJsonPanel(wx.Panel):
         stitch_groups = []
         try:
             self.update_lettering()
+            # filter hidden groups
+            for child in self.layer.iterdescendants(SVG_GROUP_TAG):
+                if child.specified_style().get('display', 'inline') == 'none':
+                    child.delete()
             elements = nodes_to_elements(self.layer.iterdescendants(SVG_PATH_TAG))
             last_stitch_group = None
             for element in elements:
