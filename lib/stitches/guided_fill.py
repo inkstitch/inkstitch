@@ -405,7 +405,7 @@ def prepare_guide_line(line, shape, strategy) -> LinearRing | LineString | Multi
     if strategy == 0:
         return prepare_copy_guide(line, shape)
     elif strategy == 2:
-        return line.normalize()
+        return line.simplify(0.0001).normalize()
     return prepare_offset_guide(line, shape)
 
 
