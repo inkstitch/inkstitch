@@ -16,7 +16,6 @@ lxml
 platformdirs
 numpy==2.2.6
 jinja2>2.9
-requests
 
 # toml release 0.10.2 still buggy for heterogenous arrays
 # tomli is built as tomllib in python 3.11 and higher
@@ -27,7 +26,7 @@ flask>=2.2.0
 fonttools
 trimesh>=3.15.2
 diskcache
-flask-cors
+
 pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
 

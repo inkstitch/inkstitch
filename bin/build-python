@@ -9,6 +9,9 @@ pyinstaller_args+="--contents-directory . "
 # output useful debugging info that helps us trace library dependency issues
 pyinstaller_args+="--log-level DEBUG "
 
+# Erroneous dependencies
+pyinstaller_args+="--exclude-module sphinx " # Pulled in by scipy docscrape if present.
+
 # Setting up pyinstaller arguments for each OS.
 # This adds bundle identifier in reverse DSN format for macos
 if [ "$BUILD" = "osx" ]; then
@@ -54,6 +57,11 @@ if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
 fi
 # Run command to build the inkstich program
 ${PYTHON:-python} -m PyInstaller $pyinstaller_args inkstitch.py
+
+if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32"]; then
+	# Delete some GTK icons that pyinstaller shouldn't have pulled in
+	rm -rf dist/inkstitch/bin/share/icons
+fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
 # to put some more user-accessible stuff like examples and palettes in
