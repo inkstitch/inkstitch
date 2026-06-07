@@ -9,6 +9,7 @@ from ..elements import FillStitch, SatinColumn, Stroke
 from ..i18n import _
 from ..svg.tags import SVG_GROUP_TAG
 from .base import InkstitchExtension
+from ..svg import PIXELS_PER_MM
 
 
 class Cleanup(InkstitchExtension):
@@ -28,9 +29,9 @@ class Cleanup(InkstitchExtension):
         self.rm_fill = self.options.rm_fill
         self.rm_stroke = self.options.rm_stroke
         self.rm_satin = self.options.rm_satin
-        self.fill_threshold = self.options.fill_threshold
-        self.stroke_threshold = self.options.stroke_threshold
-        self.satin_threshold = self.options.satin_threshold
+        self.fill_threshold = self.options.fill_threshold * PIXELS_PER_MM
+        self.stroke_threshold = self.options.stroke_threshold * PIXELS_PER_MM
+        self.satin_threshold = self.options.satin_threshold * PIXELS_PER_MM
         self.rm_groups = self.options.rm_groups
         self.dry_run = self.options.dry_run
 
