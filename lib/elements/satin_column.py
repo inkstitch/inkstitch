@@ -1366,12 +1366,12 @@ class SatinColumn(EmbroideryElement):
             end = connector.project(nearest_points(split_line, connector)[1])
 
         start_path = substring(connector, start, end)
-
         stitches = [Stitch(*coord) for coord in start_path.coords]
         stitch_group = StitchGroup(
             color=self.color,
             stitches=stitches
         )
+
         stitch_group = self.connect_and_add(start_stitch_group, stitch_group)
         stitch_group.add_tags(("satin_column", "satin_column_underlay"))
         return stitch_group
@@ -1914,16 +1914,11 @@ class SatinColumn(EmbroideryElement):
         return point1 * (1 - distance_fraction) + point2 * distance_fraction
 
     def add_running_stitches(self, start_stitch, end_stitch, stitch_group):
-        # When max_stitch_length is set, the satin column may be quite wide and the jumps
-        # between underlays or from underlay to final satin should be turned into running stitch
-        # to avoid long jumps or unexpected trims.
-
-        if self.max_stitch_length_px:
-            max_len = self.max_stitch_length_px
-            if end_stitch.distance(start_stitch) > max_len:
-                split_points = running_stitch.split_segment_even_dist(start_stitch, end_stitch, max_len)
-                stitch_group.add_stitches(split_points)
-                stitch_group.add_stitch(end_stitch)
+        # add points in the distance of running stitch length
+        if end_stitch.distance(start_stitch) > self.running_stitch_length:
+            split_points = running_stitch.split_segment_even_dist(start_stitch, end_stitch, self.running_stitch_length)
+            stitch_group.add_stitches(split_points)
+            stitch_group.add_stitch(end_stitch)
 
     def connect_and_add(self, stitch_group, next_stitch_group):
         if not next_stitch_group.stitches:
