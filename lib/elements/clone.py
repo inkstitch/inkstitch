@@ -82,7 +82,7 @@ class Clone(EmbroideryElement):
             elements = node_to_elements(node, True)
         elif node.tag == SVG_GROUP_TAG:
             for child in node.iterdescendants():
-                elements.extend(node_to_elements(child, True))
+                elements.extend(self.clone_to_elements(child))
         return elements
 
     def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
