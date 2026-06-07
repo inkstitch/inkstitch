@@ -38,7 +38,7 @@ def build_environment():
         if sys.platform == "win32":
             env.globals["command_tag"] = '<command location="inx">../inkstitch_uv.bat</command>'
             env.globals["icon_path"] = '../icons/'
-        else: 
+        else:
             env.globals["command_tag"] = '<command location="inx">../inkstitch_uv.sh</command>'
             env.globals["icon_path"] = '../icons/'
     else:
