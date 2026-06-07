@@ -23,7 +23,7 @@ The results of this tutorial different steps can be found in this file:
 
 ![SVG](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg)
 
-[Télécharger ](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg){: download="pawpedia.svg" }
+[Download](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg){: download="pawpedia.svg" }
 
 
 ## Starting Image
