@@ -149,10 +149,12 @@ class Redwork(InkstitchExtension):
         node = elements[0].node
 
         transform = get_correction_transform(self.svg.selection.rendering_order()[-1], False)
-        style = node.style
+        style = node.specified_style()
         # Fix up the stroke width
         stroke_width = elements[0].stroke_width
         style["stroke-width"] = self.svg.viewport_to_unit(stroke_width)
+        # Set fill explicitly to none as input elements may have both (stroke and fill)
+        style["fill"] = None
 
         # insert lines grouped by underpath and top layer
         visited_lines = []
