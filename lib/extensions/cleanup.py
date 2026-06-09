@@ -19,9 +19,9 @@ class Cleanup(InkstitchExtension):
         self.arg_parser.add_argument("-f", "--rm_fill", dest="rm_fill", type=Boolean, default=True)
         self.arg_parser.add_argument("-s", "--rm_stroke", dest="rm_stroke", type=Boolean, default=True)
         self.arg_parser.add_argument("-n", "--rm_satin", dest="rm_satin", type=Boolean, default=True)
-        self.arg_parser.add_argument("-a", "--fill_threshold", dest="fill_threshold", type=int, default=20)
-        self.arg_parser.add_argument("-l", "--stroke_threshold", dest="stroke_threshold", type=int, default=5)
-        self.arg_parser.add_argument("-t", "--satin_threshold", dest="satin_threshold", type=int, default=5)
+        self.arg_parser.add_argument("-a", "--fill_threshold", dest="fill_threshold", type=float, default=5)
+        self.arg_parser.add_argument("-l", "--stroke_threshold", dest="stroke_threshold", type=float, default=1.35)
+        self.arg_parser.add_argument("-t", "--satin_threshold", dest="satin_threshold", type=float, default=1.35)
         self.arg_parser.add_argument("-g", "--rm_groups", dest="rm_groups", type=Boolean, default=True)
         self.arg_parser.add_argument("-d", "--dry_run", dest="dry_run", type=Boolean, default=False)
 

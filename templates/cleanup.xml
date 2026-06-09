@@ -8,13 +8,13 @@
         <page name="options" gui-text="Options">
             <param name="rm_fill" type="boolean" gui-text="Remove Small Fill Areas"
                    gui-description="Removes areas smaller than defined by threshold.">true</param>
-            <param name="fill_threshold" type="int" gui-text="Fill area threshold (mm²)" min="1" max="800">5</param>
+            <param name="fill_threshold" type="float" gui-text="Fill area threshold (mm²)" min="0" max="800">5</param>
             <param name="rm_stroke" type="boolean" gui-text="Remove Small strokes"
                    gui-description="Removes small strokes shorter than defined by threshold.">true</param>
-            <param name="stroke_threshold" type="int" gui-text="Stroke threshold (mm)" min="2" max="800">1.35</param>
+            <param name="stroke_threshold" type="float" gui-text="Stroke threshold (mm)" min="0" max="800">1.35</param>
             <param name="rm_satin" type="boolean" gui-text="Remove Small satins"
                    gui-description="Removes small satin columns shorter than defined by threshold.">true</param>
-            <param name="satin_threshold" type="int" gui-text="Satin threshold (mm)" min="2" max="800">1.35</param>
+            <param name="satin_threshold" type="float" gui-text="Satin threshold (mm)" min="0" max="800">1.35</param>
             <param name="rm_groups" type="boolean" gui-text="Remove empty layers and groups">true</param>
             <spacer />
             <separator />
