@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-06 03:41+0000\n"
-"PO-Revision-Date: 2026-06-06 03:42\n"
+"POT-Creation-Date: 2026-06-10 03:57+0000\n"
+"PO-Revision-Date: 2026-06-10 03:58\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-06 03:41+0000\n"
+"POT-Creation-Date: 2026-06-10 03:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3515,23 +3515,19 @@ msgstr "Ve vašem webovém prohlížeči byl otevřen náhled tisku. Toto okno z
 msgid "Ink/Stitch Print"
 msgstr "Ink/Stitch Tisk"
 
-#: lib/extensions/redwork.py:43 lib/extensions/remove_duplicated_points.py:32
+#: lib/extensions/redwork.py:48 lib/extensions/remove_duplicated_points.py:32
 msgid "Please select one or more strokes."
 msgstr "Vyberte prosím jeden nebo více tahů."
 
-#: lib/extensions/redwork.py:122
-msgid "Redwork Group"
-msgstr "Skupina Redwork"
-
-#: lib/extensions/redwork.py:143
+#: lib/extensions/redwork.py:166
 msgid "Connected Group"
 msgstr "Připojená skupina"
 
-#: lib/extensions/redwork.py:180 inx/inkstitch_redwork.inx:3
+#: lib/extensions/redwork.py:203 inx/inkstitch_redwork.inx:4
 msgid "Redwork"
 msgstr "Redwork"
 
-#: lib/extensions/redwork.py:184
+#: lib/extensions/redwork.py:207
 msgid "Redwork Underpath"
 msgstr "Redwork podšívka"
 
@@ -3839,7 +3835,7 @@ msgstr "Použít"
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
 #: inx/inkstitch_letters_to_font.inx:62 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
-#: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:28
+#: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:33
 #: inx/inkstitch_remove_duplicated_points.inx:14
 #: inx/inkstitch_remove_embroidery_settings.inx:140
 #: inx/inkstitch_satin_to_stroke.inx:12 inx/inkstitch_select_elements.inx:80
@@ -5139,7 +5135,7 @@ msgstr "Generovat vzorníky"
 #: inx/inkstitch_lettering_remove_kerning.inx:9
 #: inx/inkstitch_lettering_set_color_sort_index.inx:8
 #: inx/inkstitch_letters_to_font.inx:8 inx/inkstitch_outline.inx:8
-#: inx/inkstitch_palette_to_text.inx:17 inx/inkstitch_redwork.inx:8
+#: inx/inkstitch_palette_to_text.inx:17 inx/inkstitch_redwork.inx:9
 #: inx/inkstitch_remove_duplicated_points.inx:8
 #: inx/inkstitch_remove_embroidery_settings.inx:8
 #: inx/inkstitch_satin_to_stroke.inx:8 inx/inkstitch_stitch_plan_preview.inx:8
@@ -6224,7 +6220,7 @@ msgstr "Vygeneruje souvislou cestu pro vyšívání všech vybraných prvků"
 
 #: inx/inkstitch_auto_run.inx:12 inx/inkstitch_fill_to_stroke.inx:11
 #: inx/inkstitch_jump_to_stroke.inx:12 inx/inkstitch_outline.inx:39
-#: inx/inkstitch_redwork.inx:42 inx/inkstitch_satin_to_stroke.inx:25
+#: inx/inkstitch_redwork.inx:48 inx/inkstitch_satin_to_stroke.inx:25
 msgid "Tools: Stroke"
 msgstr "Nástroj: Tah"
 
@@ -6276,7 +6272,7 @@ msgstr "Automaticky směrovat saténové sloupce"
 msgid "Preserve order of satin columns"
 msgstr "Zachovat pořadí saténových sloupců"
 
-#: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_redwork.inx:26
+#: inx/inkstitch_auto_satin.inx:14 inx/inkstitch_redwork.inx:31
 msgid "Keep original paths"
 msgstr "Zachovej původní cesty"
 
@@ -6297,7 +6293,7 @@ msgstr "Toto rozšíření se pokusí vytvořit jednu stehovou cestu přes všec
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
 #: inx/inkstitch_letters_to_font.inx:77 inx/inkstitch_outline.inx:28
-#: inx/inkstitch_redwork.inx:31 inx/inkstitch_remove_duplicated_points.inx:24
+#: inx/inkstitch_redwork.inx:37 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45
 #: inx/inkstitch_transform_elements.inx:19 inx/inkstitch_troubleshoot.inx:26
@@ -8741,51 +8737,59 @@ msgstr "Vytvořte soubor PNG s jednoduchou reprezentací čárové výšivky pom
 msgid "PDF Export"
 msgstr "Export do PDF"
 
-#: inx/inkstitch_redwork.inx:11
+#: inx/inkstitch_redwork.inx:12
 msgid "Connect lines below this distance (mm)"
 msgstr "Spojte čáry pod touto vzdáleností (mm)"
 
-#: inx/inkstitch_redwork.inx:11
+#: inx/inkstitch_redwork.inx:12
 msgid "Unconnected lines may result in jump stitches"
 msgstr "Nespojené čáry mohou mít za následek skokové stehy"
 
-#: inx/inkstitch_redwork.inx:14
+#: inx/inkstitch_redwork.inx:15
 msgid "Minimum path length (mm)"
 msgstr "Minimální délka cesty (mm)"
 
-#: inx/inkstitch_redwork.inx:14
+#: inx/inkstitch_redwork.inx:15
 msgid "Shorter paths will be removed from redwork result"
 msgstr "Kratší cesty budou z výsledku redwork odstraněny"
 
-#: inx/inkstitch_redwork.inx:17
+#: inx/inkstitch_redwork.inx:19
 msgid "Redwork stitch length (mm)"
 msgstr "Délka stehu Redwork (mm)"
 
-#: inx/inkstitch_redwork.inx:17
+#: inx/inkstitch_redwork.inx:19
 msgid "set redwork stitch length"
 msgstr "nastavit délku stehu redwork"
 
-#: inx/inkstitch_redwork.inx:20
+#: inx/inkstitch_redwork.inx:22
 msgid "Redwork bean stitch number of repeats"
 msgstr "Redwork bean steh počet opakování"
 
 #: inx/inkstitch_redwork.inx:25
+msgid "Split by color"
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:25
+msgid "Split strokes by colors and generate Redwork for each color."
+msgstr ""
+
+#: inx/inkstitch_redwork.inx:30
 msgid "Combine elements"
 msgstr "Kombinovat prvky"
 
-#: inx/inkstitch_redwork.inx:25
+#: inx/inkstitch_redwork.inx:30
 msgid "Combine consecutive elements of same type"
 msgstr "Kombinuj po sobě jdoucí prvky stejného typu"
 
-#: inx/inkstitch_redwork.inx:29
+#: inx/inkstitch_redwork.inx:34
 msgid "Redwork embroidery is a stroke art embroidery which passes every line exactly twice."
 msgstr "Redwork výšivka je tahová umělecká výšivka, která prochází každou linií přesně dvakrát."
 
-#: inx/inkstitch_redwork.inx:32
+#: inx/inkstitch_redwork.inx:38
 msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
 msgstr ""
 
-#: inx/inkstitch_redwork.inx:39
+#: inx/inkstitch_redwork.inx:45
 msgid "Generates a path through all selected elements, passing each element exactly twice"
 msgstr "Vygeneruje cestu přes všechny vybrané prvky tak, že každým prvkem projde přesně dvakrát"
 
