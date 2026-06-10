@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="Schnecke.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.78"
+     inkscape:cx="221.06742"
+     inkscape:cy="188.20225"
+     inkscape:window-width="1920"
+     inkscape:window-height="1139"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid3"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="0.99999986"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#00d9e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1">
+    <inkstitch:min_stitch_len_mm>0.1</inkstitch:min_stitch_len_mm>
+    <inkstitch:collapse_len_mm>3.0</inkstitch:collapse_len_mm>
+    <inkstitch:inkstitch_svg_version>3</inkstitch:inkstitch_svg_version>
+  </metadata>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="display:inline;fill:#148b2a;stroke-width:0.0999999;-inkscape-stroke:none"
+       d="M 29.309626,54.123417 C 29.309626,54.123417 31.279023,47.353628 29.801978,46.492019 28.324933,45.630409 22.416753,43.291755 26.601707,39.845316 30.786671,36.398878 34.825707,35.560418 36.571765,37.260488 41.244754,41.810385 37.723163,47.988688 37.556459,51.538588 37.379837,55.300012 41.550025,55.092513 45.310949,61.754815 45.954159,62.894236 49.618999,65.816689 51.834566,66.678299 54.050133,67.539909 59.363745,66.72472 61.210047,66.601633 63.056358,66.478546 66.605015,65.201254 66.605015,65.201254 66.605015,65.201254 71.528492,67.416821 73.005537,68.278431 74.482582,69.14004 77.190501,70.370911 70.913055,70.493999 64.635619,70.617085 38.910418,70.86326 38.910418,70.86326 38.910418,70.86326 28.694189,67.90917 28.817284,59.539248 28.694189,56.954419 29.309626,54.123417 29.309626,54.123417 Z"
+       id="path1"
+       sodipodi:nodetypes="cssssssscssccc"
+       inkstitch:max_stitch_length_mm="3"
+       inkscape:label="Schneckenkörper" />
+    <path
+       style="display:inline;fill:#f4d23a;stroke-width:0.0999999;-inkscape-stroke:none"
+       d="M 38.102263,55.263791 C 39.832848,42.624686 48.020822,38.623377 56.511872,39.229881 63.404745,39.722229 67.215754,45.184482 67.83119,46.53844 68.446627,47.892398 69.928362,50.923153 69.928362,52.400198 69.928362,53.877243 70.543799,55.108113 69.559105,58.062203 68.574402,61.016293 67.589709,64.585819 65.620312,65.570515 63.650925,66.555212 57.496565,68.155344 56.634957,68.155344 55.773349,68.155344 51.219129,67.786083 49.86517,67.04756 48.51121,66.309038 45.064769,62.616425 44.326256,61.631729 43.587733,60.647032 43.218467,59.416162 41.0029,57.816029 38.787333,56.215897 38.102263,55.263791 38.102263,55.263791 Z"
+       id="path6"
+       sodipodi:nodetypes="csssssssssc"
+       inkstitch:max_stitch_length_mm="3"
+       inkscape:label="Spirale" />
+    <path
+       style="display:inline;fill:none;stroke:#1fa5f1;stroke-width:2;stroke-dasharray:none"
+       d="M 38.04881,54.738852 C 40.068133,41.530239 50.8126,36.919438 60.943007,40.337665 69.038999,43.069434 72.953582,56.401134 67.343538,62.00099 63.145436,66.191459 54.807004,66.133646 51.096044,60.523944 47.385093,54.914243 52.658055,47.899936 58.235088,48.461411 63.812121,49.022886 64.23069,54.844021 60.696836,56.585158"
+       id="path7"
+       sodipodi:nodetypes="csszzc"
+       inkscape:label="Haus" />
+    <path
+       style="display:inline;fill:none;stroke:#854089;stroke-width:0.264583;stroke-dasharray:none"
+       d="M 35.04538,39.559387 C 35.04538,39.559387 37.711188,39.947423 37.75903,39.352182 37.874635,37.913977 38.084836,35.279014 38.171896,34.060224 38.294981,32.337004 35.463986,29.136741 35.463986,29.136741"
+       id="path18"
+       sodipodi:nodetypes="cssc"
+       inkscape:label="Fühler1"
+       inkstitch:satin_column="False" />
+    <path
+       style="display:inline;fill:none;stroke:#854089;stroke-width:0.264583;stroke-dasharray:none"
+       d="M 30.171234,29.382915 C 30.171234,29.382915 32.756067,29.998351 32.756067,32.213918 32.756067,33.520537 32.584833,35.554919 32.44432,37.004234 32.346579,38.012448 35.04538,39.559387 35.04538,39.559387"
+       id="path8-2"
+       sodipodi:nodetypes="cssc"
+       inkscape:label="Fühler2" />
+  </g>
+</svg>
