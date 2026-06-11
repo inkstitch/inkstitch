@@ -7,7 +7,9 @@ outdated: dismiss
 ---
 ## Barcamp
 
-* [Patch Template](/assets/files/workshops/medienzentren/202606/01-Barcamp/patch_template_62_mandala.svg){: download="patch_template_62_mandala.svg" }
+* [Blanko Patch Template](/assets/files/kielux2025/patch_template_62mm.svg){: download="patch_template_62mm.svg" }
+
+* [Mandala Patch Template](/assets/files/workshops/medienzentren/202606/01-Barcamp/patch_template_62_mandala.svg){: download="patch_template_62_mandala.svg" }
 
 ## Grundsticharten
 
