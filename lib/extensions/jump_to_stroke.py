@@ -152,11 +152,12 @@ class JumpToStroke(InkstitchExtension):
 
         # do not add a running stitch if the distance is smaller than min_jump setting
         # when the extension didn't define a value, use the actual min. jump stitch length
-        min_jump = self.options.min_jump
+        min_jump = self.options.min_jump * PIXELS_PER_MM
         if not min_jump:
             min_jump = last_element.min_jump_stitch_length
         if min_jump is None:
             min_jump = self.metadata['collapse_len_mm'] * PIXELS_PER_MM
+
         line = DirectedLineSegment((start.x, start.y), (end.x, end.y))
         if line.length <= min_jump:
             return
