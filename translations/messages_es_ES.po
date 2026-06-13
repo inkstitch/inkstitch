@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-10 03:57+0000\n"
-"PO-Revision-Date: 2026-06-10 03:58\n"
+"POT-Creation-Date: 2026-06-12 04:12+0000\n"
+"PO-Revision-Date: 2026-06-12 04:12\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 03:57+0000\n"
+"POT-Creation-Date: 2026-06-12 04:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3247,7 +3247,7 @@ msgstr "Tipo de archivo incorrecto. Ink/Stitch sólo acepta paletas de colores g
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr "Ink/Stitch no puede encontrar su carpeta de paleta automáticamente. Instale su paleta manualmente."
 
-#: lib/extensions/jump_to_stroke.py:199 lib/lettering/categories.py:27
+#: lib/extensions/jump_to_stroke.py:200 lib/lettering/categories.py:27
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68

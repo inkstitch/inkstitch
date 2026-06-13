@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-10 03:57+0000\n"
-"PO-Revision-Date: 2026-06-10 03:58\n"
+"POT-Creation-Date: 2026-06-12 04:12+0000\n"
+"PO-Revision-Date: 2026-06-13 04:00\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 03:57+0000\n"
+"POT-Creation-Date: 2026-06-12 04:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3073,7 +3073,7 @@ msgstr "Deze functie kopieert inkt-/steekparameters van het eerste geselecteerde
 
 #: lib/extensions/element_info.py:21
 msgid "https://inkstitch.org/docs/troubleshoot/#element-info"
-msgstr "https://inkstitch.org/docs/troubleshoot/#element-info"
+msgstr ""
 
 #: lib/extensions/element_info.py:60 lib/extensions/sew_stack_editor.py:223
 #: inx/inkstitch_select_elements.inx:15
@@ -3182,7 +3182,7 @@ msgstr "Selecteer een opvul object en sporten."
 
 #: lib/extensions/fill_to_satin.py:177 inx/inkstitch_fill_to_satin.inx:28
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
-msgstr "https://inkstitch.org/docs/satin-tools/#vulling-naar-satijn"
+msgstr ""
 
 #: lib/extensions/fill_to_stroke.py:33 lib/extensions/fill_to_stroke.py:39
 msgid "Please select one or more fill objects to render the centerline."
@@ -3253,7 +3253,7 @@ msgstr "Verkeerd bestandstype. Ink/Stitch accepteert alleen gpl kleuren paletten
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr "Ink/Stitch kan uw palet map niet automatisch vinden. Installeer uw palet handmatig."
 
-#: lib/extensions/jump_to_stroke.py:199 lib/lettering/categories.py:27
+#: lib/extensions/jump_to_stroke.py:200 lib/lettering/categories.py:27
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
@@ -3274,7 +3274,7 @@ msgstr "Selecteer aub slechts een enkel blok tekst."
 #: lib/extensions/lettering.py:47 lib/gui/lettering/help_panel.py:28
 #: lib/gui/lettering/help_panel.py:29
 msgid "https://inkstitch.org/docs/lettering/#lettering-tool"
-msgstr "https://inkstitch.org/docs/lettering/#lettering-tool"
+msgstr ""
 
 #: lib/extensions/lettering_along_path.py:36
 msgid "Please select one path and one Ink/Stitch lettering group."
@@ -3550,7 +3550,7 @@ msgstr "Selecteer ten minste twee elementen om te hergroeperen."
 #: lib/gui/satin_multicolor/help_panel.py:33
 #: lib/gui/satin_multicolor/help_panel.py:34
 msgid "https://inkstitch.org/docs/satin-tools/#multicolor-satin"
-msgstr "https://inkstitch.org/docs/satin-tools/#meerkleurige-satijn"
+msgstr ""
 
 #: lib/extensions/satin_multicolor.py:45
 msgid "Ink/Stitch Multicolor Satin"
@@ -3647,7 +3647,7 @@ msgstr "Om een ​​Schots ruit patroon te maken, selecteert u minimaal één e
 
 #: lib/extensions/tartan.py:67
 msgid "https://inkstitch.org/docs/fill-tools/#tartan"
-msgstr "https://inkstitch.org/docs/fill-tools/#schotse ruit"
+msgstr ""
 
 #: lib/extensions/tartan.py:77
 msgid "Ink/Stitch Tartan"
@@ -3864,7 +3864,7 @@ msgstr "Met deze extensie worden de dichtst bijzijnde kleuren uit het gekozen kl
 
 #: lib/gui/apply_palette.py:70 lib/gui/apply_palette.py:71
 msgid "https://inkstitch.org/docs/thread-color/#apply-palette"
-msgstr "https://inkstitch.org/docs/thread-color/#toepassing-palet"
+msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:31
 msgid "Ink/Stitch - Cross stitch"
@@ -4149,7 +4149,7 @@ msgstr "Functie om lettertype-informatie voor een bestaand lettertype te verifi�
 #: lib/gui/edit_json/help_panel.py:33 lib/gui/edit_json/help_panel.py:34
 #: inx/inkstitch_lettering_generate_json.inx:169
 msgid "https://inkstitch.org/docs/font-tools/#edit-json"
-msgstr "https://inkstitch.org/docs/font-tools/#edit-json"
+msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:435
 msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
@@ -4329,7 +4329,7 @@ msgstr "Deze extensie geeft informatie over verschillende instellingen van gesel
 
 #: lib/gui/element_info.py:63 lib/gui/element_info.py:64
 msgid "https://inkstitch.org/docs/troubleshoot#element-info"
-msgstr "https://inkstitch.org/docs/troubleshoot#element-info"
+msgstr ""
 
 #: lib/gui/element_info.py:71
 msgid "Click on Copy to copy the information in the Clipboard"
@@ -4345,7 +4345,7 @@ msgstr "Een lettertype bibliotheek met een volledige beschrijving en geborduurde
 
 #: lib/gui/lettering/help_panel.py:42 lib/gui/lettering/help_panel.py:43
 msgid "https://inkstitch.org/fonts/font-library/"
-msgstr "https://inkstitch.org/fonts/font-library/"
+msgstr ""
 
 #: lib/gui/lettering/main_panel.py:250
 msgid "This font has no available font variant. Please update or remove the font."
@@ -4537,7 +4537,7 @@ msgstr "    Met deze extensie kunnen lettertype makers een uitvoer genereren van
 
 #: lib/gui/lettering_font_sample.py:104 lib/gui/lettering_font_sample.py:105
 msgid "https://inkstitch.org/docs/font-tools/#font-sampling"
-msgstr "https://inkstitch.org/docs/font-tools/#font-sampling"
+msgstr ""
 
 #: lib/gui/lettering_font_sample.py:226
 #, python-brace-format
@@ -5108,7 +5108,7 @@ msgstr "Met deze extensie kunt u vormen vullen met een Schots ruit patroon (of e
 
 #: lib/gui/tartan/help_panel.py:33 lib/gui/tartan/help_panel.py:34
 msgid "https://inkstitch.org/docs/stitches/tartan-fill"
-msgstr "https://inkstitch.org/docs/stitches/tartan-fill"
+msgstr ""
 
 #: lib/gui/tartan/main_panel.py:54
 msgid "Customize"
@@ -5213,7 +5213,7 @@ msgstr "Meer informatie vindt u op onze website"
 
 #: lib/gui/test_swatches.py:106 lib/gui/test_swatches.py:107
 msgid "https://inkstitch.org/docs/edit/#generate-test-swatches-from-selection"
-msgstr "https://inkstitch.org/docs/edit/#generate-test-exemplaren-van-selectie"
+msgstr ""
 
 #: lib/gui/warnings.py:21
 msgid "An error occurred while rendering the stitch plan:"
@@ -6228,7 +6228,7 @@ msgstr "Importeer elk ander Garenlijst bestand in txt formaat. Ink/Stitch zal pr
 
 #: inx/inkstitch_apply_threadlist.inx:103
 msgid "https://inkstitch.org/docs/thread-color/#apply-threadlist"
-msgstr "https://inkstitch.org/docs/thread-color/#apply-threadlist"
+msgstr ""
 
 #: inx/inkstitch_apply_threadlist.inx:109
 msgid "Applies colors from a specified color file onto the objects in this document."
@@ -6286,7 +6286,7 @@ msgstr "Meer info op onze website:"
 
 #: inx/inkstitch_auto_run.inx:37
 msgid "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
-msgstr "https://inkstitch.org/docs/stroke-tools#auto-route-running-stitch"
+msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:3
 msgid "Auto-Route Satin Columns"
@@ -6477,7 +6477,7 @@ msgstr "Te gebruiken op eenvoudige of complexe vormen met overlappende subpaden.
 
 #: inx/inkstitch_break_apart.inx:26
 msgid "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
-msgstr "https://inkstitch.org/docs/fill-tools/#break-apart-fill-objects"
+msgstr ""
 
 #: inx/inkstitch_break_apart.inx:33
 msgid "Break apart and repair (broken) fill shapes"
@@ -6547,7 +6547,7 @@ msgstr "Gebruik deze extensie om kleine objecten uit het document te verwijderen
 
 #: inx/inkstitch_cleanup.inx:29
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
-msgstr "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
+msgstr ""
 
 #: inx/inkstitch_cleanup.inx:36
 msgid "Remove small unstitchable elements"
@@ -6677,7 +6677,7 @@ msgstr "Op onze website hebben wij een aantal veel voorkomende opstellingen verz
 
 #: inx/inkstitch_cutwork_segmentation.inx:52
 msgid "https://inkstitch.org/docs/cutwork/"
-msgstr "https://inkstitch.org/docs/cutwork/"
+msgstr ""
 
 #: inx/inkstitch_density_map.inx:3
 msgid "Density Map"
@@ -6729,7 +6729,7 @@ msgstr "Met deze extensie kunt u de steek dichtheid bepalen."
 
 #: inx/inkstitch_density_map.inx:30
 msgid "https://inkstitch.org/docs/visualize/#density-map"
-msgstr "https://inkstitch.org/docs/visualize/#density-map"
+msgstr ""
 
 #: inx/inkstitch_density_map.inx:37
 msgid "Displays a colored dot at each stitch position"
@@ -6756,7 +6756,7 @@ msgstr "Met deze extensie worden genummerde labels voor geselecteerde elementen 
 
 #: inx/inkstitch_display_stacking_order.inx:15
 msgid "https://inkstitch.org/docs/visualize/#display-stacking-order"
-msgstr "https://inkstitch.org/docs/visualize/#display-stacking-order"
+msgstr ""
 
 #: inx/inkstitch_display_stacking_order.inx:22
 msgid "Generates numbered labels to indicate the stitching order"
@@ -6832,7 +6832,7 @@ msgstr "U kunt het resultaat verbeteren door snijlijnen te definiëren."
 
 #: inx/inkstitch_fill_to_stroke.inx:34
 msgid "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
-msgstr "https://inkstitch.org/docs/stroke-tools/#fill-to-stroke"
+msgstr ""
 
 #: inx/inkstitch_flip.inx:3
 msgid "Flip Satin Column Rails"
@@ -6881,7 +6881,7 @@ msgstr "Op onze website beschrijven wij alle stappen die nodig zijn om een kleur
 
 #: inx/inkstitch_generate_palette.inx:33
 msgid "https://inkstitch.org/docs/thread-color#generate-color-palette"
-msgstr "https://inkstitch.org/docs/thread-color#generate-color-palette"
+msgstr ""
 
 #: inx/inkstitch_global_commands.inx:3
 msgid "Add Commands"
@@ -6921,7 +6921,7 @@ msgstr "Pas indien nodig de waarde voor de eindrij afstand na de conversie aan m
 
 #: inx/inkstitch_gradient_blocks.inx:33
 msgid "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
-msgstr "https://inkstitch.org/docs/fill-tools/#convert-to-gradient-blocks"
+msgstr ""
 
 #: inx/inkstitch_input_100.inx:3
 msgid "100 file input"
@@ -7553,7 +7553,7 @@ msgstr "Start Inkscape opnieuw op nadat de installatie is voltooid."
 
 #: inx/inkstitch_install.inx:19
 msgid "https://inkstitch.org/docs/install-addons"
-msgstr "https://inkstitch.org/docs/install-addons"
+msgstr ""
 
 #: inx/inkstitch_install.inx:26
 msgid "Installs color palettes or a symbol library for motif stitches into Inkscape"
@@ -7577,7 +7577,7 @@ msgstr "Deze extensie installeert een aangepast draad palet in Inkscape."
 
 #: inx/inkstitch_install_custom_palette.inx:18
 msgid "https://inkstitch.org/docs/thread-color/#install-custom-palette"
-msgstr "https://inkstitch.org/docs/thread-color/#install-custom-palette"
+msgstr ""
 
 #: inx/inkstitch_install_custom_palette.inx:25
 msgid "Installs a custom color palette into Inkscape"
@@ -7669,7 +7669,7 @@ msgstr "Met deze extensie kunt u sprong steken omzetten in loop steken."
 
 #: inx/inkstitch_jump_to_stroke.inx:45
 msgid "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
-msgstr "https://inkstitch.org/docs/stroke-tools/#jump-to-stroke"
+msgstr ""
 
 #: inx/inkstitch_jump_to_trim.inx:3
 msgid "Jump Stitch to Trim/Stop Command"
@@ -7701,7 +7701,7 @@ msgstr "Met deze extensie voegt u knip of stop opdrachten in om sprong steken te
 
 #: inx/inkstitch_jump_to_trim.inx:34
 msgid "https://inkstitch.org/docs/commands/#jump-to-trim"
-msgstr "https://inkstitch.org/docs/commands/#jump-to-trim"
+msgstr ""
 
 #: inx/inkstitch_knockdown_fill.inx:3
 msgid "Selection to Knockdown Fill"
@@ -7777,7 +7777,7 @@ msgstr "* Pas de vul instellingen aan in het parameters dialoog venster"
 
 #: inx/inkstitch_knockdown_fill.inx:53
 msgid "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
-msgstr "https://inkstitch.org/docs/fill-tools/#knockdown-fill"
+msgstr ""
 
 #: inx/inkstitch_layer_commands.inx:3
 msgid "Add Layer Commands"
@@ -7841,7 +7841,7 @@ msgstr "Wanneer u 'uitrekken' selecteert, worden de ruimtes tussen de tekens ver
 
 #: inx/inkstitch_lettering_along_path.inx:41
 msgid "https://inkstitch.org/docs/lettering/#lettering-along-path"
-msgstr "https://inkstitch.org/docs/lettering/#lettering-along-path"
+msgstr ""
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:3
 #: inx/inkstitch_lettering_custom_font_dir.inx:9
@@ -7858,7 +7858,7 @@ msgstr "De map met aangepaste lettertypen moet voor elk lettertype een submap be
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:17
 msgid "https://inkstitch.org/docs/font-tools/#custom-font-directory"
-msgstr "https://inkstitch.org/docs/font-tools/#custom-font-directory"
+msgstr ""
 
 #: inx/inkstitch_lettering_custom_font_dir.inx:24
 msgid "Define a directory with custom fonts for the lettering tool"
@@ -7927,7 +7927,7 @@ msgstr "Deze extensie is ontwikkeld om lettertype ontwikkelaars te helpen automa
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:35
 msgid "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
-msgstr "https://inkstitch.org/docs/font-tools/#force-lock-stitches"
+msgstr ""
 
 #: inx/inkstitch_lettering_force_lock_stitches.inx:42
 msgid "Sets the forces lock stitch attribute on elements when the next element lies within a specified distance"
@@ -8086,7 +8086,7 @@ msgstr "Het gegenereerde bestand kan worden bijgewerkt met Extensies > Inkt/Stit
 
 #: inx/inkstitch_lettering_generate_json.inx:168
 msgid "https://inkstitch.org/docs/font-tools/#generate-json"
-msgstr "https://inkstitch.org/docs/font-tools/#generate-json"
+msgstr ""
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:3
 msgid "Organize Glyphs"
@@ -8142,7 +8142,7 @@ msgstr "Met deze extensie kan de lettertype digitaliseerder zijn werk in stappen
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:31
 msgid "https://inkstitch.org/docs/font-tools/#organize_glyphs"
-msgstr "https://inkstitch.org/docs/font-tools/#organiseer symbolen"
+msgstr ""
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:39
 msgid "Help with composed glyphs like é,ç or ï"
@@ -8166,7 +8166,7 @@ msgstr "⚠ Zorg ervoor dat u een kopie van het originele bestand bewaart. Na he
 
 #: inx/inkstitch_lettering_remove_kerning.inx:23
 msgid "https://inkstitch.org/docs/font-tools/#remove-kerning"
-msgstr "https://inkstitch.org/docs/font-tools/#verwijder spatie"
+msgstr ""
 
 #: inx/inkstitch_lettering_remove_kerning.inx:30
 msgid "Removes Kerning information from specified SVG files"
@@ -8190,7 +8190,7 @@ msgstr "Hiermee wordt de volgorde van elementen voor meerkleurige lettertypen in
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:20
 msgid "https://inkstitch.org/docs/font-tools/#set-color-sort-index"
-msgstr "https://inkstitch.org/docs/font-tools/# zet kleur sorteer index"
+msgstr ""
 
 #: inx/inkstitch_lettering_set_color_sort_index.inx:27
 msgid "Sets a color sort index on selected elements to define the stacking order for multicolor fonts"
@@ -8258,7 +8258,7 @@ msgstr "⚠ Nadat u deze functie hebt uitgevoerd, sleept u de basis lijn naar de
 
 #: inx/inkstitch_letters_to_font.inx:78
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
-msgstr "https://inkstitch.org/docs/font-tools/#letters-naar-lettertype"
+msgstr ""
 
 #: inx/inkstitch_letters_to_font.inx:85
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
@@ -8346,7 +8346,7 @@ msgstr "Met deze extensie kunt u een origineel object uit een steek bestand reco
 
 #: inx/inkstitch_outline.inx:29
 msgid "https://inkstitch.org/docs/stroke-tools/#outline"
-msgstr "https://inkstitch.org/docs/stroke-tools/#omlijning"
+msgstr ""
 
 #: inx/inkstitch_outline.inx:36
 msgid "Generates an outline around stitch paths"
@@ -8706,7 +8706,7 @@ msgstr "Lees verder op onze website:"
 
 #: inx/inkstitch_palette_to_text.inx:26
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
-msgstr "https://inkstitch.org/docs/thread-color#palette-to-text"
+msgstr ""
 
 #: inx/inkstitch_params.inx:9
 msgid "Adapt embroidery settings"
@@ -8743,7 +8743,7 @@ msgstr "Lees meer op onze website"
 
 #: inx/inkstitch_png_realistic.inx:24 inx/inkstitch_png_simple.inx:25
 msgid "https://inkstitch.org/docs/import-export/"
-msgstr "https://inkstitch.org/docs/import-export/"
+msgstr ""
 
 #: inx/inkstitch_png_simple.inx:3
 msgid "embroidery PNG file output"
@@ -8811,7 +8811,7 @@ msgstr "Roodwerk borduurwerk is een soort streek borduurwerk waarbij elke lijn p
 
 #: inx/inkstitch_redwork.inx:38
 msgid "https://inkstitch.org/docs/stroke-tools/#redwork"
-msgstr "https://inkstitch.org/docs/stroke-tools/#redwork"
+msgstr ""
 
 #: inx/inkstitch_redwork.inx:45
 msgid "Generates a path through all selected elements, passing each element exactly twice"
@@ -8839,7 +8839,7 @@ msgstr "Het is vooral handig voor handmatige paden (rechte lijnen), omdat het he
 
 #: inx/inkstitch_remove_duplicated_points.inx:25
 msgid "https://inkstitch.org/docs/edit/#remove-duplicated-points"
-msgstr "https://inkstitch.org/docs/edit/#remove-duplicated-points"
+msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:3
 msgid "Remove embroidery settings"
@@ -8876,7 +8876,7 @@ msgstr "Gebruik deze extensie om de informatie te verwijderen die Ink/Stitch in 
 
 #: inx/inkstitch_remove_embroidery_settings.inx:144
 msgid "https://inkstitch.org/docs/troubleshoot/#remove-embroidery-settings"
-msgstr "https://inkstitch.org/docs/troubleshoot/#borduur instellingen verwijderen"
+msgstr ""
 
 #: inx/inkstitch_remove_embroidery_settings.inx:152
 msgid "Remove specific or all embroidery settings from the document"
@@ -8912,7 +8912,7 @@ msgstr "Converteert een satijn kolom naar een loop steek."
 
 #: inx/inkstitch_satin_to_stroke.inx:16
 msgid "https://inkstitch.org/docs/stroke-tools/#convert-satin-to-stroke"
-msgstr "https://inkstitch.org/docs/stroke-tools/#satijn naar lijn omzetten"
+msgstr ""
 
 #: inx/inkstitch_select_elements.inx:3
 msgid "Select embroidery elements"
@@ -9158,7 +9158,7 @@ msgstr "Gebruik de realistische vector uitvoer optie met zorg. Ontwerpen met vee
 
 #: inx/inkstitch_stitch_plan_preview.inx:46
 msgid "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
-msgstr "https://inkstitch.org/docs/visualize/#stitch-plan-preview"
+msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview_undo.inx:3
 msgid "Undo Stitch Plan Preview"
@@ -9247,7 +9247,7 @@ msgstr "* Als u sporten wilt toevoegen of specifieke delen van de satijn wilt wi
 
 #: inx/inkstitch_stroke_to_lpe_satin.inx:33
 msgid "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
-msgstr "https://inkstitch.org/docs/satin-tools/#stroke-to-live-path-effect-satin"
+msgstr ""
 
 #: inx/inkstitch_stroke_to_satin.inx:3
 msgid "Stroke to Satin"
@@ -9291,7 +9291,7 @@ msgstr "Deze extensie past transformaties toe en past tegelijkertijd de vul hoek
 
 #: inx/inkstitch_transform_elements.inx:20
 msgid "https://inkstitch.org/docs/edit/#transform"
-msgstr "https://inkstitch.org/docs/edit/#transform"
+msgstr ""
 
 #: inx/inkstitch_transform_elements.inx:27
 msgid "Rotate or flip embroidery elements while also transforming stitch angles."
@@ -9331,7 +9331,7 @@ msgstr "Deze extensie wijst naar problematische of mogelijk problematische plekk
 
 #: inx/inkstitch_troubleshoot.inx:27
 msgid "https://inkstitch.org/docs/troubleshoot/#troubleshoot-objects"
-msgstr "https://inkstitch.org/docs/troubleshoot/#troubleshoot-objects"
+msgstr ""
 
 #: inx/inkstitch_troubleshoot.inx:34
 msgid "Marks problematic or possibly problematic spots in the document or selection"
@@ -9355,7 +9355,7 @@ msgstr "Koppel klonen los en pas de vulsteek hoek toe."
 
 #: inx/inkstitch_unlink_clone.inx:15
 msgid "https://inkstitch.org/docs/edit/#unlink-clone/"
-msgstr "https://inkstitch.org/docs/edit/#unlink-clone/"
+msgstr ""
 
 #: inx/inkstitch_unlink_clone.inx:21
 msgid "Unlink clones and apply the fill stitch angle"
@@ -9436,7 +9436,7 @@ msgstr "Zigzag: |\\/\\/\\/|"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:29
 msgid "https://inkstitch.org/docs/satin-tools/#zigzag-line-to-satin"
-msgstr "https://inkstitch.org/docs/satin-tools/#zigzag-line-to-satin"
+msgstr ""
 
 #: inx/inkstitch_zip.inx:3
 msgid "embroidery ZIP file output"
@@ -9584,5 +9584,5 @@ msgstr "Lees meer op ons website:"
 
 #: inx/inkstitch_zip.inx:70
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
-msgstr "https://inkstitch.org/docs/import-export/#batch-export"
+msgstr ""
 

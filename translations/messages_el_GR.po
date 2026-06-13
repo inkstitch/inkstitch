@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-10 03:57+0000\n"
-"PO-Revision-Date: 2026-06-10 03:58\n"
+"POT-Creation-Date: 2026-06-12 04:12+0000\n"
+"PO-Revision-Date: 2026-06-13 04:00\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 03:57+0000\n"
+"POT-Creation-Date: 2026-06-12 04:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2062,7 +2062,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:801 lib/elements/fill_stitch.py:834
 msgid "mm (x y)"
-msgstr ""
+msgstr "mm (x y)"
 
 #: lib/elements/fill_stitch.py:813
 msgid "Align grid with canvas"
@@ -3237,7 +3237,7 @@ msgstr ""
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr ""
 
-#: lib/extensions/jump_to_stroke.py:199 lib/lettering/categories.py:27
+#: lib/extensions/jump_to_stroke.py:200 lib/lettering/categories.py:27
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
@@ -3282,7 +3282,7 @@ msgstr ""
 
 #: lib/extensions/lettering_font_sample.py:21
 msgid "Font Sample"
-msgstr ""
+msgstr "Δείγμα γραμματοσειράς"
 
 #: lib/extensions/lettering_force_lock_stitches.py:35
 msgid "The maximum value is smaller than the minimum value."
@@ -3294,11 +3294,11 @@ msgstr "Παρακαλώ καθορίστε ένα αρχείο γραμματο
 
 #: lib/extensions/lettering_organize_glyphs.py:51
 msgid "Upper Case Letters"
-msgstr ""
+msgstr "Κεφαλαία γράμματα"
 
 #: lib/extensions/lettering_organize_glyphs.py:52
 msgid "Lower Case Letters"
-msgstr ""
+msgstr "Πεζά γράμματα"
 
 #: lib/extensions/lettering_organize_glyphs.py:53
 msgid "Other Letters"
@@ -3668,11 +3668,11 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:54
 msgid "* errors\n"
-msgstr ""
+msgstr "* σφάλματα"
 
 #: lib/extensions/troubleshoot.py:56
 msgid "* warnings\n"
-msgstr ""
+msgstr "* προειδοποιήσεις"
 
 #: lib/extensions/troubleshoot.py:58
 msgid "* type_warnings"
@@ -3979,7 +3979,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:269 lib/gui/cross_stitch_assistant.py:278
 msgid "Number of colors"
-msgstr ""
+msgstr "Αριθμός χρωμάτων"
 
 #: lib/gui/cross_stitch_assistant.py:270
 msgid "Selected stroke colors"
@@ -4041,15 +4041,15 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:307
 msgid "Saturation"
-msgstr ""
+msgstr "Κορεσμός"
 
 #: lib/gui/cross_stitch_assistant.py:317
 msgid "Brightness"
-msgstr ""
+msgstr "Φωτεινότητα"
 
 #: lib/gui/cross_stitch_assistant.py:327
 msgid "Contrast"
-msgstr ""
+msgstr "Αντίθεση"
 
 #: lib/gui/cross_stitch_assistant.py:337
 msgid "Removes pixels with a higher transparency value than this from the original image."
@@ -4065,15 +4065,15 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:353
 msgid "Background color"
-msgstr ""
+msgstr "Χρώμα φόντου"
 
 #: lib/gui/cross_stitch_assistant.py:359
 msgid "Remove background"
-msgstr ""
+msgstr "Αφαίρεση φόντου"
 
 #: lib/gui/cross_stitch_assistant.py:362
 msgid "Keep background"
-msgstr ""
+msgstr "Διατήρηση φόντου"
 
 #: lib/gui/cross_stitch_assistant.py:362
 msgid "Remove nearest to background color"
@@ -4111,7 +4111,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:466
 msgid "Reset values"
-msgstr ""
+msgstr "Επαναφορά τιμών"
 
 #: lib/gui/edit_json/help_panel.py:19
 msgid "Feature to verify or update font information for an existing font."
@@ -4152,11 +4152,11 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:56
 msgid "Font Info"
-msgstr ""
+msgstr "Πληροφορίες γραμματοσειράς"
 
 #: lib/gui/edit_json/settings_panel.py:59
 msgid "Font Settings"
-msgstr ""
+msgstr "Ρυθμίσεις γραμματοσειράς"
 
 #: lib/gui/edit_json/settings_panel.py:62
 msgid "General Kerning"
@@ -4195,7 +4195,7 @@ msgstr "Λέξεις-κλειδιά"
 #: lib/gui/edit_json/settings_panel.py:133
 #: inx/inkstitch_lettering_generate_json.inx:43
 msgid "Original Font Name"
-msgstr ""
+msgstr "Αρχικό όνομα γραμματοσειράς"
 
 #: lib/gui/edit_json/settings_panel.py:140
 #: inx/inkstitch_lettering_generate_json.inx:44
@@ -4226,12 +4226,12 @@ msgstr ""
 #: lib/gui/edit_json/settings_panel.py:203
 #: inx/inkstitch_lettering_generate_json.inx:114
 msgid "Upper"
-msgstr ""
+msgstr "Κεφαλαία"
 
 #: lib/gui/edit_json/settings_panel.py:203
 #: inx/inkstitch_lettering_generate_json.inx:115
 msgid "Lower"
-msgstr ""
+msgstr "Πεζά"
 
 #: lib/gui/edit_json/settings_panel.py:206
 #: inx/inkstitch_lettering_generate_json.inx:106
@@ -7889,7 +7889,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:3
 msgid "Generate JSON"
-msgstr ""
+msgstr "Δημιουργία JSON"
 
 #: inx/inkstitch_lettering_generate_json.inx:9
 msgid "Generates the json file for a font so it can be used with the lettering tool"
@@ -7901,11 +7901,11 @@ msgstr "Πληροφορίες γραμματοσειράς"
 
 #: inx/inkstitch_lettering_generate_json.inx:20
 msgid "General Font Info"
-msgstr ""
+msgstr "Γενικές πληροφορίες γραμματοσειράς"
 
 #: inx/inkstitch_lettering_generate_json.inx:23
 msgid "Font license"
-msgstr ""
+msgstr "Άδεια χρήσης γραμματοσειράς"
 
 #: inx/inkstitch_lettering_generate_json.inx:26
 msgid "Left to right"
@@ -7925,7 +7925,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:42
 msgid "Original Font Info"
-msgstr ""
+msgstr "Αρχικές πληροφορίες γραμματοσειράς"
 
 #: inx/inkstitch_lettering_generate_json.inx:50
 msgid "Source File"
@@ -8004,7 +8004,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_generate_json.inx:146
 msgid "Word spacing (px)"
-msgstr ""
+msgstr "Απόσταση λέξεων (px)"
 
 #: inx/inkstitch_lettering_generate_json.inx:146
 msgid "Space character width (default: 20)"
@@ -8180,7 +8180,7 @@ msgstr "Κατάλογος γραμμαοσειρών"
 
 #: inx/inkstitch_letters_to_font.inx:55
 msgid "Margin left (mm)"
-msgstr ""
+msgstr "Περιθώριο αριστερά (mm)"
 
 #: inx/inkstitch_letters_to_font.inx:55
 msgid "With \"Use glyph width\" enabled in the json, the margin to the left page border defines the distance between glyphs"
@@ -8228,7 +8228,7 @@ msgstr ""
 
 #: inx/inkstitch_object_commands.inx:15
 msgid "Random"
-msgstr ""
+msgstr "Τυχαία"
 
 #: inx/inkstitch_object_commands.inx:16
 msgid "Top left"
@@ -9526,7 +9526,7 @@ msgstr "Κατακόρυφο κενό (χλστ.)"
 
 #: inx/inkstitch_zip.inx:66
 msgid "Zip File Export"
-msgstr ""
+msgstr "Εξαγωγή αρχείου zip"
 
 #: inx/inkstitch_zip.inx:67
 msgid "Export multiple embroidery file formats at once."
