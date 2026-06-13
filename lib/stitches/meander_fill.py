@@ -182,12 +182,15 @@ def post_process(points, shape, original_shape, fill):
         stitches = even_running_stitch(smoothed_points, [fill.zigzag_spacing / 2], fill.running_stitch_tolerance)
         stitches = zigzag_stitch(stitches, fill.zigzag_spacing, fill.zigzag_width)
     else:
-        stitches = even_running_stitch(smoothed_points, [fill.running_stitch_length], fill.running_stitch_tolerance)
+        stitches = smoothed_points
 
     if fill.clip:
         # the stitch path may have self intersections
         # therefore we don't want clamp polygon to check for the distance to the start point of a segment
         stitches = clamp_path_to_polygon(stitches, original_shape, fill.running_stitch_length, False)
+
+    if fill.clip or fill.zigzag_spacing == 0:
+        stitches = even_running_stitch(stitches, [fill.running_stitch_length], fill.running_stitch_tolerance)
 
     if fill.bean_stitch_repeats:
         stitches = bean_stitch(stitches, fill.bean_stitch_repeats)
