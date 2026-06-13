@@ -1,0 +1,12 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "release",
+      "inherits": "release",
+      "cacheVariables": {
+        "INKSCAPE_DIR": "/path/to/inkscape"
+      }
+    }
+  ]
+}

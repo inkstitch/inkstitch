@@ -1,23 +1,16 @@
-BUILD_DIR   := build/release
-RELEASE_DIR := release
+BUILD_DIR := build/release
+SO        := $(BUILD_DIR)/libinkstitch-dialog.so
+ICONS_DST := icons/hicolor/scalable/actions
 
-SO   := $(BUILD_DIR)/libinkstitch-dialog.so
-UI   := src/inkstitch-dialog.ui
-IDLG := src/inkstitch.idlg
+.PHONY: all clean
 
-.PHONY: release clean
-
-ICONS_DST := $(RELEASE_DIR)/icons/hicolor/scalable/actions
-
-release: $(SO)
-	@mkdir -p $(RELEASE_DIR) $(ICONS_DST)
-	cp $(SO)   $(RELEASE_DIR)/libinkstitch-dialog.so
-	cp $(UI)   $(RELEASE_DIR)/inkstitch-dialog.ui
-	cp $(IDLG) $(RELEASE_DIR)/inkstitch.idlg
-	cp assets/inkstitch-stroke-satin.svg $(ICONS_DST)/inkstitch-stroke-to-satin.svg
+all: $(SO)
+	cp $(SO) libinkstitch-dialog.so
+	mkdir -p $(ICONS_DST)
+	cp assets/*.svg $(ICONS_DST)/
 
 $(SO): src/inkstitch-dialog.cpp src/inkstitch-dialog.h
 	cmake --workflow --preset release
 
 clean:
-	rm -rf $(RELEASE_DIR)
+	rm -rf build libinkstitch-dialog.so icons

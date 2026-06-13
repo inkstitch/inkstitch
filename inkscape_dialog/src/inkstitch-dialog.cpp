@@ -12,10 +12,10 @@
 #include "object/sp-item.h"
 #include "selection.h"
 #include "ui/builder-utils.h"
-#include "ui/dialog/dialog-plugin.h"
 #include "xml/node.h"
 #include "extension/db.h"
 #include "extension/effect.h"
+#include "extension/implementation/implementation.h"
 
 namespace Inkstitch {
 
@@ -27,23 +27,18 @@ static void run_effect(const char *id)
         g_warning("inkstitch: extension not found: %s", id);
         return;
     }
-    auto *desktop  = InkscapeApplication::instance()->get_active_desktop();
-    auto *document = InkscapeApplication::instance()->get_active_document();
-    effect->effect(desktop, document);
+    effect->prefs(InkscapeApplication::instance()->get_active_desktop());
 }
 
-InkstitchDialog::InkstitchDialog(const char *plugin_dir)
-    : DialogBase("/dialogs/inkstitch", "Inkstitch")
+InkstitchDialog::InkstitchDialog(const char *plugin_dir, const char *ui_file)
+    : DialogBase("/dialogs/inkstitch", "org.inkstitch.dialog")
 {
-
-    // Register the plugin's icons directory so our custom SVG icons are found by name
     if (auto display = Gdk::Display::get_default()) {
         Gtk::IconTheme::get_for_display(display)->add_search_path(
             Glib::build_filename(plugin_dir, "icons"));
     }
 
-    auto ui_path = Glib::build_filename(plugin_dir, "inkstitch-dialog.ui");
-    auto builder = Inkscape::UI::create_builder_from_path(ui_path);
+    auto builder = Inkscape::UI::create_builder_from_path(ui_file);
 
     _stroke_method_value = &Inkscape::UI::get_widget<Gtk::Label>(builder, "stroke-method-value");
     _fill_method_value   = &Inkscape::UI::get_widget<Gtk::Label>(builder, "fill-method-value");
@@ -54,32 +49,33 @@ InkstitchDialog::InkstitchDialog(const char *plugin_dir)
     };
 
     // Fill tools
-    connect("btn-break-apart",    "org.inkstitch.break_apart");
-    connect("btn-cross-stitch",   "org.inkstitch.cross_stitch_helper");
-    connect("btn-gradient-blocks","org.inkstitch.gradient_blocks");
-    connect("btn-knockdown-fill", "org.inkstitch.knockdown_fill");
-    connect("btn-tartan",         "org.inkstitch.tartan");
+    connect("btn-break-apart",     "org.inkstitch.break_apart");
+    connect("btn-cross-stitch",    "org.inkstitch.cross_stitch_helper");
+    connect("btn-gradient-blocks", "org.inkstitch.gradient_blocks");
+    connect("btn-knockdown-fill",  "org.inkstitch.knockdown_fill");
+    connect("btn-tartan",          "org.inkstitch.tartan");
 
     // Satin tools
-    connect("btn-auto-satin",     "org.inkstitch.auto_satin");
-    connect("btn-cut-satin",      "org.inkstitch.cut_satin");
-    connect("btn-fill-to-satin",  "org.inkstitch.fill_to_satin");
-    connect("btn-flip-satins",    "org.inkstitch.flip_satins");
-    connect("btn-satin-multicolor","org.inkstitch.satin_multicolor");
-    connect("btn-stroke-lpe-satin","org.inkstitch.stroke_lpe_satin");
-    connect("btn-stroke-to-satin","org.inkstitch.stroke_to_satin");
-    connect("btn-zigzag-to-satin","org.inkstitch.zigzag_line_to_satin");
+    connect("btn-auto-satin",       "org.inkstitch.auto_satin");
+    connect("btn-cut-satin",        "org.inkstitch.cut_satin");
+    connect("btn-fill-to-satin",    "org.inkstitch.fill_to_satin");
+    connect("btn-flip-satins",      "org.inkstitch.flip_satins");
+    connect("btn-satin-multicolor", "org.inkstitch.satin_multicolor");
+    connect("btn-stroke-lpe-satin", "org.inkstitch.stroke_lpe_satin");
+    connect("btn-stroke-to-satin",  "org.inkstitch.stroke_to_satin");
+    connect("btn-zigzag-to-satin",  "org.inkstitch.zigzag_line_to_satin");
 
     // Stroke tools
-    connect("btn-auto-run",       "org.inkstitch.auto_run");
-    connect("btn-fill-to-stroke", "org.inkstitch.fill_to_stroke");
-    connect("btn-jump-to-stroke", "org.inkstitch.jump_to_stroke");
-    connect("btn-outline",        "org.inkstitch.outline");
-    connect("btn-redwork",        "org.inkstitch.redwork");
-    connect("btn-satin-to-stroke","org.inkstitch.satin_to_stroke");
+    connect("btn-auto-run",             "org.inkstitch.auto_run");
+    connect("btn-fill-to-stroke",       "org.inkstitch.fill_to_stroke");
+    connect("btn-jump-to-stroke",       "org.inkstitch.jump_to_stroke");
+    connect("btn-outline",              "org.inkstitch.outline");
+    connect("btn-redwork",              "org.inkstitch.redwork");
+    connect("btn-satin-to-stroke",      "org.inkstitch.satin_to_stroke");
+    connect("btn-preview",              "org.inkstitch.stitch_plan_preview");
+    connect("btn-select-to-guideline",  "org.inkstitch.selection_to_guide_line");
 
-    auto &root = Inkscape::UI::get_widget<Gtk::Box>(builder, "inkstitch-main");
-    append(root);
+    append(Inkscape::UI::get_widget<Gtk::Widget>(builder, "dialog-root"));
 }
 
 void InkstitchDialog::update_from_selection(Inkscape::Selection *selection)
@@ -105,12 +101,10 @@ void InkstitchDialog::update_from_selection(Inkscape::Selection *selection)
     Glib::ustring css(repr->attribute("style") ? repr->attribute("style") : "");
 
     auto css_is_none = [&](const char *prop) {
-        // matches "stroke:none" anywhere in the CSS string
         Glib::ustring needle = Glib::ustring(prop) + ":none";
         return css.find(needle) != Glib::ustring::npos;
     };
 
-    // Stroke — mirror element.py stroke_color: show "N/A" when stroke is none
     if (!css_is_none("stroke")) {
         const char *val = repr->attribute("inkstitch:stroke_method");
         _stroke_method_value->set_text(val ? val : "bean_stitch");
@@ -131,35 +125,33 @@ void InkstitchDialog::selectionChanged(Inkscape::Selection *selection)
     update_from_selection(selection);
 }
 
-void InkstitchDialog::selectionModified(Inkscape::Selection *selection, guint /*flags*/)
+void InkstitchDialog::selectionModified(Inkscape::Selection *selection, guint)
 {
     update_from_selection(selection);
 }
 
 } // namespace Inkstitch
 
-static const InkscapeDialogInfo info = {
-    "Inkstitch",
-    "_Inkstitch",
-    "dialog-object-properties",
-    0,
+// ── Implementation plugin ────────────────────────────────────────────────────
+
+class InkstitchImpl : public Inkscape::Extension::Implementation::Implementation
+{
+public:
+    Inkscape::UI::Dialog::DialogBase *
+    create_dialog(const char *plugin_dir, const char *ui_file) override
+    {
+        return new Inkstitch::InkstitchDialog(plugin_dir, ui_file);
+    }
 };
 
-extern "C" {
+extern "C" G_MODULE_EXPORT
+Inkscape::Extension::Implementation::Implementation *GetImplementation()
+{
+    return new InkstitchImpl();
+}
 
-const char *inkscape_dialog_version()
+extern "C" G_MODULE_EXPORT
+const gchar *GetInkscapeVersion()
 {
     return Inkscape::version_string;
 }
-
-const InkscapeDialogInfo *inkscape_dialog_info()
-{
-    return &info;
-}
-
-Inkscape::UI::Dialog::DialogBase *inkscape_dialog_create(const char *plugin_dir)
-{
-    return new Inkstitch::InkstitchDialog(plugin_dir);
-}
-
-} // extern "C"
