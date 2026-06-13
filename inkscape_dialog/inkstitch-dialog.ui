@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <object class="GtkBox" id="dialog-root">
+    <property name="orientation">vertical</property>
+    <property name="spacing">0</property>
+
+    <!-- STATUS row — always visible above tabs -->
+    <child>
+      <object class="GtkLabel">
+        <property name="label">STATUS</property>
+        <property name="halign">start</property>
+        <property name="margin-start">10</property>
+        <property name="margin-top">8</property>
+        <property name="margin-bottom">4</property>
+        <style><class name="dim-label"/></style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="spacing">6</property>
+        <property name="margin-start">10</property>
+        <property name="margin-end">10</property>
+        <property name="margin-bottom">6</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="label" translatable="yes">Stroke</property>
+            <style><class name="dim-label"/></style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="stroke-method-value">
+            <property name="label">—</property>
+            <property name="halign">start</property>
+            <property name="hexpand">true</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="label" translatable="yes">Fill</property>
+            <style><class name="dim-label"/></style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="fill-method-value">
+            <property name="label">—</property>
+            <property name="halign">start</property>
+            <property name="hexpand">true</property>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkSeparator" />
+    </child>
+
+    <!-- Tabbed content -->
+    <child>
+      <object class="GtkNotebook">
+        <property name="vexpand">true</property>
+
+        <!-- ── Tab 1: Tools ── -->
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="hscrollbar-policy">never</property>
+            <property name="vscrollbar-policy">automatic</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">0</property>
+
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">FILL TOOLS</property>
+                    <property name="halign">start</property>
+                    <property name="margin-start">10</property>
+                    <property name="margin-top">8</property>
+                    <property name="margin-bottom">4</property>
+                    <style><class name="dim-label"/></style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">2</property>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-break-apart">
+                            <property name="tooltip-text" translatable="yes">Break apart and repair fill shapes, handling overlapping subpaths</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Break Apart Fill Objects</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-cross-stitch">
+                            <property name="tooltip-text" translatable="yes">Prepare shapes and document for cross stitching</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Cross Stitch Assistant</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-gradient-blocks">
+                            <property name="tooltip-text" translatable="yes">Convert fills with gradients into single-colored blocks</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Convert to Gradient Blocks</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-knockdown-fill">
+                            <property name="tooltip-text" translatable="yes">Generate knockdown fill with specified offset around selection</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Selection to Knockdown Fill</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-tartan">
+                            <property name="tooltip-text" translatable="yes">Tartan stripe editor for fill patterns</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Tartan</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+                <child><object class="GtkSeparator"><property name="margin-top">4</property></object></child>
+
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">SATIN TOOLS</property>
+                    <property name="halign">start</property>
+                    <property name="margin-start">10</property>
+                    <property name="margin-top">8</property>
+                    <property name="margin-bottom">4</property>
+                    <style><class name="dim-label"/></style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">2</property>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-auto-satin">
+                            <property name="tooltip-text" translatable="yes">Auto-route satin columns into a continuous path</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Auto-Route Satin Columns</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-cut-satin">
+                            <property name="tooltip-text" translatable="yes">Split satin column at specified points, keeping settings</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Cut Satin Column</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-fill-to-satin">
+                            <property name="tooltip-text" translatable="yes">Convert fill elements and rungs to satin</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Fill to Satin</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-flip-satins">
+                            <property name="tooltip-text" translatable="yes">Flip satin column rails</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Flip Satin Column Rails</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-satin-multicolor">
+                            <property name="tooltip-text" translatable="yes">Generate multicolor satin</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Multicolor Satin</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-stroke-lpe-satin">
+                            <property name="tooltip-text" translatable="yes">Convert stroke to satin using live path effect patterns</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Stroke to LPE Satin</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-stroke-to-satin">
+                            <property name="tooltip-text" translatable="yes">Convert stroke to standard satin</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">stroke_to_satin</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Stroke to Satin</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-zigzag-to-satin">
+                            <property name="tooltip-text" translatable="yes">Convert zigzag lines to satin columns</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Zig-Zag Line to Satin</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+                <child><object class="GtkSeparator"><property name="margin-top">4</property></object></child>
+
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">STROKE TOOLS</property>
+                    <property name="halign">start</property>
+                    <property name="margin-start">10</property>
+                    <property name="margin-top">8</property>
+                    <property name="margin-bottom">4</property>
+                    <style><class name="dim-label"/></style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">2</property>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-auto-run">
+                            <property name="tooltip-text" translatable="yes">Auto-route running stitches into a continuous path</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Auto-Route Running Stitch</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-fill-to-stroke">
+                            <property name="tooltip-text" translatable="yes">Convert fill outlines to running stitch using centerline tracing</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Fill to Stroke</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-jump-to-stroke">
+                            <property name="tooltip-text" translatable="yes">Convert jump stitches between elements to running stitch</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">jump_to_stroke</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Jump Stitch to Stroke</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-outline">
+                            <property name="tooltip-text" translatable="yes">Generate outline around stitch paths</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Outline</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                        <child>
+                          <object class="GtkButton" id="btn-redwork">
+                            <property name="tooltip-text" translatable="yes">Generate redwork — stroke art passing each line exactly twice</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Redwork</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="btn-satin-to-stroke">
+                            <property name="tooltip-text" translatable="yes">Convert satin column to running stitch</property>
+                            <property name="hexpand">true</property>
+                            <property name="focusable">true</property>
+                            <property name="focus-on-click">false</property>
+                            <property name="receives-default">true</property>
+                            <property name="has-frame">false</property>
+                            <child><object class="GtkBox"><property name="spacing">10</property>
+                              <child><object class="GtkImage"><property name="icon-name">emblem-system</property><property name="pixel-size">16</property></object></child>
+                              <child><object class="GtkLabel"><property name="label" translatable="yes">Satin to Stroke</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                            </object></child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+                <child><object class="GtkSeparator"><property name="margin-top">4</property></object></child>
+
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="label" translatable="yes">Tools</property>
+          </object>
+        </child>
+
+        <!-- ── Tab 2: Visualize & Export ── -->
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="spacing">2</property>
+            <property name="margin-top">8</property>
+            <property name="margin-start">0</property>
+            <property name="margin-end">0</property>
+
+            <child>
+              <object class="GtkBox"><property name="spacing">2</property><property name="homogeneous">true</property>
+                <child>
+                  <object class="GtkButton" id="btn-preview">
+                    <property name="tooltip-text" translatable="yes">Stitch Plan Preview</property>
+                    <property name="hexpand">true</property>
+                    <property name="focusable">true</property>
+                    <property name="focus-on-click">false</property>
+                    <property name="receives-default">true</property>
+                    <property name="has-frame">false</property>
+                    <child><object class="GtkBox"><property name="spacing">10</property>
+                      <child><object class="GtkImage"><property name="icon-name">preview</property><property name="pixel-size">16</property></object></child>
+                      <child><object class="GtkLabel"><property name="label" translatable="yes">Preview</property><property name="halign">start</property><property name="hexpand">true</property></object></child>
+                    </object></child>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+          </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="label" translatable="yes">Visualize &amp; Export</property>
+          </object>
+        </child>
+
+      </object>
+    </child>
+
+  </object>
+</interface>

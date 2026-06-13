@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>_Inkstitch</name>
+    <id>org.inkstitch.dialog</id>
+    <dialog>
+        <icon>dialog-object-properties</icon>
+        <category>0</category>
+        <ui-file>inkstitch-dialog.ui</ui-file>
+    </dialog>
+    <plugin name="libinkstitch-dialog"/>
+</inkscape-extension>
