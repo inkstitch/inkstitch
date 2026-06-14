@@ -18,9 +18,6 @@ virtualenv/bin/pip install -v shapely
 
 virtualenv/bin/pip install -r requirements.txt
 
-# for networkx
-virtualenv/bin/pip install pandas
-
 virtualenv/bin/pip install pyinstaller
 
 deactivate
