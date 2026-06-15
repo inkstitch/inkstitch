@@ -1248,7 +1248,7 @@ class FillStitch(EmbroideryElement):
     def do_guided_fill(self, shape, starting_point, ending_point):
         guide_line = self._get_guide_lines()
 
-        # No guide line: fallback to normal autofill
+        # No guide line: fallback to normal tatami fill
         if not guide_line:
             return self.do_tatami_fill(shape, starting_point, ending_point)
 
