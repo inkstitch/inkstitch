@@ -9,6 +9,7 @@ from ..elements import FillStitch, SatinColumn, Stroke
 from ..i18n import _
 from ..svg.tags import SVG_GROUP_TAG
 from .base import InkstitchExtension
+from ..svg import PIXELS_PER_MM
 
 
 class Cleanup(InkstitchExtension):
@@ -18,9 +19,9 @@ class Cleanup(InkstitchExtension):
         self.arg_parser.add_argument("-f", "--rm_fill", dest="rm_fill", type=Boolean, default=True)
         self.arg_parser.add_argument("-s", "--rm_stroke", dest="rm_stroke", type=Boolean, default=True)
         self.arg_parser.add_argument("-n", "--rm_satin", dest="rm_satin", type=Boolean, default=True)
-        self.arg_parser.add_argument("-a", "--fill_threshold", dest="fill_threshold", type=int, default=20)
-        self.arg_parser.add_argument("-l", "--stroke_threshold", dest="stroke_threshold", type=int, default=5)
-        self.arg_parser.add_argument("-t", "--satin_threshold", dest="satin_threshold", type=int, default=5)
+        self.arg_parser.add_argument("-a", "--fill_threshold", dest="fill_threshold", type=float, default=5)
+        self.arg_parser.add_argument("-l", "--stroke_threshold", dest="stroke_threshold", type=float, default=1.35)
+        self.arg_parser.add_argument("-t", "--satin_threshold", dest="satin_threshold", type=float, default=1.35)
         self.arg_parser.add_argument("-g", "--rm_groups", dest="rm_groups", type=Boolean, default=True)
         self.arg_parser.add_argument("-d", "--dry_run", dest="dry_run", type=Boolean, default=False)
 
@@ -28,9 +29,9 @@ class Cleanup(InkstitchExtension):
         self.rm_fill = self.options.rm_fill
         self.rm_stroke = self.options.rm_stroke
         self.rm_satin = self.options.rm_satin
-        self.fill_threshold = self.options.fill_threshold
-        self.stroke_threshold = self.options.stroke_threshold
-        self.satin_threshold = self.options.satin_threshold
+        self.fill_threshold = self.options.fill_threshold * PIXELS_PER_MM
+        self.stroke_threshold = self.options.stroke_threshold * PIXELS_PER_MM
+        self.satin_threshold = self.options.satin_threshold * PIXELS_PER_MM
         self.rm_groups = self.options.rm_groups
         self.dry_run = self.options.dry_run
 
