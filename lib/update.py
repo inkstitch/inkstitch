@@ -97,9 +97,21 @@ def _update_to(document, version, element):
 
 
 def _update_to_four(document, element):
-    if element.fill_color is not None and not element.get_float_param('max_stitch_length_mm', None):
-        # Updated the default fill stitch length from 3 to 4
-        element.set_param('max_stitch_length_mm', 3)
+    if element.fill_color is not None:
+        if not element.get_float_param('max_stitch_length_mm', None):
+            # Updated the default fill stitch length from 3 to 4
+            element.set_param('max_stitch_length_mm', 3)
+
+        # Fill used to fallback to legacy fill when auto_fill was disabled
+        # up from now this is simply enables / disables fill stitching
+        auto_fill = element.get_boolean_param('auto_fill', True)
+        if not auto_fill:
+            element.set_param('fill_method', 'legacy_fill')
+            element.node.pop('inkstitch:auto_fill')
+
+        # fill method 'auto_fill' was renamed to 'tatami_fill'
+        if element.get_param('fill_method', 'empty') == 'auto_fill':
+            element.set_param('fill_method', 'tatami_fill')
 
 
 def _update_to_three(document, element):

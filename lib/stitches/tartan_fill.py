@@ -25,12 +25,12 @@ from ..tartan.utils import (get_palette_width, get_tartan_settings,
                             stripes_to_shapes)
 from ..utils import cache, ensure_multi_line_string
 from ..utils.threading import check_stop_flag
-from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
-                        find_stitch_path, graph_make_valid)
 from .circular_fill import path_to_stitches
 from .guided_fill import apply_stitches
 from .linear_gradient_fill import remove_start_end_travel
 from .running_stitch import bean_stitch
+from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
+                          find_stitch_path, graph_make_valid)
 
 if TYPE_CHECKING:
     from ..elements import FillStitch
@@ -811,11 +811,11 @@ def _segments_to_stitch_group(
         stitches = remove_start_end_travel(fill, stitches, color, iteration)
 
     if runs:
-        stitches = bean_stitch(stitches, fill.bean_stitch_repeats, ['auto_fill_travel'])
+        stitches = bean_stitch(stitches, fill.bean_stitch_repeats, ['travel'])
 
     stitch_group = StitchGroup(
         color=color,
-        tags=("tartan_fill", "auto_fill_top"),
+        tags=("tartan_fill", "fill_top"),
         stitches=stitches,
         force_lock_stitches=fill.force_lock_stitches,
         lock_stitches=fill.lock_stitches,

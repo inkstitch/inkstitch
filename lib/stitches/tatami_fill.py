@@ -71,24 +71,26 @@ class PathEdge(object):
 
 
 @debug.time
-def auto_fill(shape,
-              angle,
-              row_spacing,
-              end_row_spacing,
-              max_stitch_length,
-              running_stitch_length,
-              running_stitch_tolerance,
-              staggers,
-              skip_last,
-              starting_point,
-              ending_point=None,
-              underpath=True,
-              gap_fill_rows=0,
-              enable_random_stitch_length=False,
-              random_sigma=0.0,
-              random_seed="",
-              pull_compensation_px=(0, 0),
-              pull_compensation_percent=(0, 0)):
+def tatami_fill(
+    shape,
+    angle,
+    row_spacing,
+    end_row_spacing,
+    max_stitch_length,
+    running_stitch_length,
+    running_stitch_tolerance,
+    staggers,
+    skip_last,
+    starting_point,
+    ending_point=None,
+    underpath=True,
+    gap_fill_rows=0,
+    enable_random_stitch_length=False,
+    random_sigma=0.0,
+    random_seed="",
+    pull_compensation_px=(0, 0),
+    pull_compensation_percent=(0, 0)
+):
     has_pull_compensation = not is_all_zeroes(pull_compensation_px) or not is_all_zeroes(pull_compensation_percent)
     if has_pull_compensation:
         spacing = min(row_spacing, end_row_spacing or row_spacing)
@@ -234,7 +236,7 @@ def build_fill_stitch_graph(shape, segments, starting_point=None, ending_point=N
     path must exist.
     """
 
-    debug.add_layer("auto-fill fill stitch")
+    debug.add_layer("tatami-fill fill stitch")
 
     graph = networkx.MultiGraph()
 
@@ -366,7 +368,7 @@ def graph_make_valid(graph):
         for start, end, key, data in newgraph.edges(keys=True, data=True):
             if isinstance(key, int):
                 # make valid duplicated edges, we cannot use the very same key
-                # again, but the automatic naming will not apply to the autofill algorithm
+                # again, but the automatic naming will not apply to the tatami fill algorithm
                 graph_edges = graph[start][end]
                 if 'segment' in graph_edges.keys():
                     data = graph_edges['segment']
@@ -383,10 +385,10 @@ def graph_make_valid(graph):
 
 
 def fallback(shape, running_stitch_length, running_stitch_tolerance):
-    """Generate stitches when the auto-fill algorithm fails.
+    """Generate stitches when the tatami-fill algorithm fails.
 
     If we received an empty graph, we're not going to be able to run the
-    auto-fill algorithm.  Instead, we'll just do running stitch around the
+    tatami-fill algorithm.  Instead, we'll just do running stitch around the
     outside of the shape.  In all likelihood, the shape is so small it won't
     matter.
     """
@@ -566,7 +568,7 @@ def build_travel_edges(shape, fill_angle):
     grating2 = travel_grating(shape, fill_angle - math.pi / 4, scale * 2 * PIXELS_PER_MM)
     grating3 = travel_grating(shape, fill_angle - math.pi / 2, scale * math.sqrt(2) * PIXELS_PER_MM)
 
-    debug.add_layer("auto-fill travel")
+    debug.add_layer("tatami-fill travel")
     debug.log_line_strings(grating1, "grating1")
     debug.log_line_strings(grating2, "grating2")
     debug.log_line_strings(grating3, "grating3")
@@ -906,7 +908,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:
-        stitch.add_tag('auto_fill_travel')
+        stitch.add_tag('tatami_fill_travel')
 
     # The path's first stitch will start at the end of a row of stitches.  We
     # don't want to double that last stitch, so we'd like to skip it.

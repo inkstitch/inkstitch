@@ -73,9 +73,10 @@ inkstitch_attribs = [
     # polyline
     'polyline',
     # fill
-    'angle',
-    'auto_fill',
+    'auto_fill',  # kept for the update process for older svg files
+    'fill',
     'fill_method',
+    'angle',
     'contour_strategy',
     'guided_fill_strategy',
     'join_style',

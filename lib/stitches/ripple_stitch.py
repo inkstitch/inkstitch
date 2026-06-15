@@ -16,10 +16,10 @@ from ..utils import prng
 from ..utils.geometry import (ensure_multi_line_string,
                               line_string_to_point_list, reverse_line_string)
 from ..utils.threading import check_stop_flag
-from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
-                        collapse_sequential_outline_edges, find_stitch_path,
-                        graph_make_valid)
 from .running_stitch import even_running_stitch, running_stitch
+from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
+                          collapse_sequential_outline_edges, find_stitch_path,
+                          graph_make_valid)
 
 
 def ripple_stitch(stroke):
@@ -117,13 +117,13 @@ def _segments_to_stitches(segments, routed_segments, starting_point, ending_poin
         current_segment = segment
         if remove_start_travel:
             for i, stitch in enumerate(current_segment):
-                if 'auto_fill_travel' not in stitch.tags:
+                if 'travel' not in stitch.tags:
                     current_segment = current_segment[i:]
                     break
         if remove_end_travel:
             current_segment.reverse()
             for i, stitch in enumerate(current_segment):
-                if 'auto_fill_travel' not in stitch.tags:
+                if 'travel' not in stitch.tags:
                     current_segment = current_segment[i:]
                     break
             current_segment.reverse()
@@ -198,7 +198,7 @@ def path_to_stitches(shape, segments, path, travel_graph, fill_stitch_graph, run
 
     # If the very first stitch is travel, we'll omit it in travel(), so add it here.
     if not path[0].is_segment():
-        stitches.append(Stitch(*path[0].nodes[0], tags={'auto_fill_travel'}))
+        stitches.append(Stitch(*path[0].nodes[0], tags={'travel'}))
 
     for edge in path:
         if edge.is_segment():
@@ -226,7 +226,7 @@ def path_to_stitches(shape, segments, path, travel_graph, fill_stitch_graph, run
 
 def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tolerance, skip_last):
     """Create stitches to get from one point on an outline of the shape to another.
-       See auto_fill travel. This distinguishes in that it removes the stitched path to the endpoint,
+       See tatami_fill travel. This distinguishes in that it removes the stitched path to the endpoint,
        in case it ended up to be somewhere within the shape.
     """
 
@@ -250,7 +250,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:
-        stitch.add_tag('auto_fill_travel')
+        stitch.add_tag('travel')
 
     # The path's first stitch will start at the end of a row of stitches.  We
     # don't want to double that last stitch, so we'd like to skip it.

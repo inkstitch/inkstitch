@@ -16,9 +16,9 @@ from shapely import (LineString, MultiLineString, MultiPolygon, Point, Polygon,
 from shapely.ops import linemerge, substring
 
 from ..elements import FillStitch
-from ..stitches.auto_fill import (PathEdge, build_fill_stitch_graph,
-                                  build_travel_graph, find_stitch_path,
-                                  graph_make_valid, which_outline)
+from ..stitches.tatami_fill import (PathEdge, build_fill_stitch_graph,
+                                    build_travel_graph, find_stitch_path,
+                                    graph_make_valid, which_outline)
 from ..svg import PIXELS_PER_MM, get_correction_transform
 from ..utils import DotDict, ensure_multi_line_string
 from .palette import Palette
@@ -527,8 +527,8 @@ class TartanSvgGroup:
 
         if self.stitch_type == 'legacy_fill':
             path_element.set('inkstitch:fill_method', 'legacy_fill')
-        elif self.stitch_type == 'auto_fill':
-            path_element.set('inkstitch:fill_method', 'auto_fill')
+        elif self.stitch_type == 'tatami_fill':
+            path_element.set('inkstitch:fill_method', 'tatami_fill')
             path_element.set('inkstitch:underpath', False)
 
         path_element.set('inkstitch:fill_underlay', False)

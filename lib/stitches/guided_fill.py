@@ -20,10 +20,10 @@ from ..utils.geometry import (ensure_geometry_collection,
                               reverse_line_string, roll_linear_ring)
 from ..utils.smoothing import smooth_path
 from ..utils.threading import check_stop_flag
-from .auto_fill import (auto_fill, build_fill_stitch_graph, build_travel_graph,
-                        collapse_sequential_outline_edges, find_stitch_path,
-                        graph_make_valid, travel)
 from .running_stitch import bean_stitch, random_running_stitch
+from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
+                          collapse_sequential_outline_edges, find_stitch_path,
+                          graph_make_valid, tatami_fill, travel)
 
 
 def guided_fill(shape,
@@ -88,7 +88,7 @@ def guided_fill(shape,
 
         if any(bean_stitch_repeats):
             # add bean stitches, but ignore travel stitches
-            stitches = bean_stitch(stitches, bean_stitch_repeats, ['auto_fill_travel', 'fill_row_start'])
+            stitches = bean_stitch(stitches, bean_stitch_repeats, ['travel', 'fill_row_start'])
         result.append(stitches)
     return result
 
@@ -465,8 +465,10 @@ def fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_le
     guideline = guideline.geoms[0]
     guide_start, guide_end = [guideline.coords[0], guideline.coords[-1]]
     angle = atan2(guide_end[1] - guide_start[1], guide_end[0] - guide_start[0]) * -1
-    return [auto_fill(shape, angle, row_spacing, None, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                      num_staggers, skip_last, starting_point, ending_point, underpath)]
+    return [tatami_fill(
+        shape, angle, row_spacing, None, max_stitch_length, running_stitch_length, running_stitch_tolerance,
+        num_staggers, skip_last, starting_point, ending_point, underpath
+    )]
 
 
 def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,

@@ -546,7 +546,7 @@ class Font(object):
             return
         for node in glyph_node.iterdescendants(EMBROIDERABLE_TAGS):
             element = EmbroideryElement(node)
-            if element.get_param('fill_method', 'auto_fill') != 'cross_stitch' or scale == 100:
+            if element.get_param('fill_method', 'tatami_fill') != 'cross_stitch' or scale == 100:
                 continue
             pattern_size = maximum(element.get_split_mm_param_as_px("pattern_size_mm", (3, 3)), 0.1 * PIXELS_PER_MM)
             x = (pattern_size[0] * (scale / 100)) / PIXELS_PER_MM

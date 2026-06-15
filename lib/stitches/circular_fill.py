@@ -6,11 +6,11 @@ from lib.utils import prng
 
 from ..stitch_plan import Stitch
 from ..utils.geometry import Point, reverse_line_string
-from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
-                        collapse_sequential_outline_edges, fallback,
-                        find_stitch_path, graph_make_valid, travel)
 from .contour_fill import _make_fermat_spiral
 from .running_stitch import bean_stitch, even_running_stitch, running_stitch
+from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
+                          collapse_sequential_outline_edges, fallback,
+                          find_stitch_path, graph_make_valid, travel)
 
 
 def circular_fill(shape,
@@ -102,7 +102,7 @@ def circular_fill(shape,
 def _apply_bean_stitch_and_repeats(stitches, repeats, bean_stitch_repeats):
     if any(bean_stitch_repeats):
         # add bean stitches, but ignore travel stitches
-        stitches = bean_stitch(stitches, bean_stitch_repeats, ['auto_fill_travel'])
+        stitches = bean_stitch(stitches, bean_stitch_repeats, ['travel'])
 
     if repeats:
         for i in range(1, repeats):
@@ -142,7 +142,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, running_stitc
 
     # If the very first stitch is travel, we'll omit it in travel(), so add it here.
     if not path[0].is_segment():
-        stitches.append(Stitch(*path[0].nodes[0], tags={'auto_fill_travel'}))
+        stitches.append(Stitch(*path[0].nodes[0], tags={'travel'}))
 
     for edge in path:
         if edge.is_segment():

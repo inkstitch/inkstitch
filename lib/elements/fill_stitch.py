@@ -18,7 +18,7 @@ from .. import tiles
 from ..i18n import _
 from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
-from ..stitches import (auto_fill, circular_fill, contour_fill, cross_stitch,
+from ..stitches import (tatami_fill, circular_fill, contour_fill, cross_stitch,
                         guided_fill, legacy_fill, linear_gradient_fill,
                         meander_fill, tartan_fill)
 from ..stitches.linear_gradient_fill import gradient_angle
@@ -160,11 +160,11 @@ class FillStitch(EmbroideryElement):
     element_name = _("FillStitch")
 
     @property
-    @param('auto_fill', _('Automatically routed fill stitching'), type='toggle', default=True, sort_index=1)
-    def auto_fill(self):
-        return self.get_boolean_param('auto_fill', True)
+    @param('fill', _('Fill stitching'), type='toggle', default=True, sort_index=1)
+    def fill(self):
+        return self.get_boolean_param('fill', True)
 
-    _fill_methods = [ParamOption('auto_fill', _("Auto Fill")),
+    _fill_methods = [ParamOption('tatami_fill', _("Tatami Fill")),
                      ParamOption('circular_fill', _("Circular Fill")),
                      ParamOption('contour_fill', _("Contour Fill")),
                      ParamOption('cross_stitch', _("Cross Stitch")),
@@ -182,7 +182,7 @@ class FillStitch(EmbroideryElement):
            options=_fill_methods,
            sort_index=2)
     def fill_method(self):
-        return self.get_param('fill_method', 'auto_fill')
+        return self.get_param('fill_method', 'tatami_fill')
 
     @property
     @param('guided_fill_strategy', _('Guided Fill Strategy'), type='dropdown', default=0,
@@ -293,7 +293,7 @@ class FillStitch(EmbroideryElement):
            type='int',
            default=0,
            sort_index=21,
-           select_items=[('fill_method', 'auto_fill')])
+           select_items=[('fill_method', 'tatami_fill')])
     def gap_fill_rows(self):
         return self.get_int_param('gap_fill_rows', 0)
 
@@ -304,7 +304,7 @@ class FillStitch(EmbroideryElement):
            unit='deg',
            type='float',
            sort_index=21,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'legacy_fill')],
+           select_items=[('fill_method', 'tatami_fill'), ('fill_method', 'legacy_fill')],
            default=0)
     @cache
     def angle(self):
@@ -331,7 +331,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=22,
            type='float',
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
@@ -348,7 +348,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=23,
            type='float',
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
@@ -366,7 +366,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            sort_index=24,
            type='float',
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'circular_fill'),
                          ('fill_method', 'legacy_fill')],
            default=None)
@@ -381,7 +381,7 @@ class FillStitch(EmbroideryElement):
                      'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
            sort_index=25,
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
                          ('fill_method', 'tartan_fill'),
@@ -398,7 +398,7 @@ class FillStitch(EmbroideryElement):
                   'Skipping it decreases stitch count and density.'),
         type='boolean',
         sort_index=30,
-        select_items=[('fill_method', 'auto_fill'),
+        select_items=[('fill_method', 'tatami_fill'),
                       ('fill_method', 'guided_fill'),
                       ('fill_method', 'linear_gradient_fill'),
                       ('fill_method', 'legacy_fill')],
@@ -453,7 +453,7 @@ class FillStitch(EmbroideryElement):
                      'are not visible.  This gives them a jagged appearance.'),
            type='boolean',
            default=True,
-           select_items=[('fill_method', 'auto_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
+           select_items=[('fill_method', 'tatami_fill'), ('fill_method', 'guided_fill'), ('fill_method', 'circular_fill')],
            sort_index=40)
     def underpath(self):
         return self.get_boolean_param('underpath', True)
@@ -466,7 +466,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=2.5,
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
                          ('fill_method', 'circular_fill'),
@@ -484,7 +484,7 @@ class FillStitch(EmbroideryElement):
            unit='mm',
            type='float',
            default=0.1,
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'meander_fill'),
@@ -502,7 +502,7 @@ class FillStitch(EmbroideryElement):
                      'This is recommended for closely-spaced curved fills to avoid Moiré artefacts.'),
            type='boolean',
            enables=['random_stitch_length_jitter_percent'],
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
@@ -518,7 +518,7 @@ class FillStitch(EmbroideryElement):
            tooltip=_('Amount to vary the length of each stitch by when randomizing.'),
            unit='± %',
            type='float',
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
@@ -617,7 +617,7 @@ class FillStitch(EmbroideryElement):
         tooltip=_('Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. '
                   'This setting expands each row of stitches outward from the center of the row by a fixed length. '
                   'Two values separated by a space may be used for an asymmetric effect.'),
-        select_items=[('fill_method', 'auto_fill')],
+        select_items=[('fill_method', 'tatami_fill')],
         unit=_('mm (each side)'),
         type='float',
         default=0,
@@ -632,7 +632,7 @@ class FillStitch(EmbroideryElement):
         _('Pull compensation percentage'),
         tooltip=_('Additional pull compensation which varies as a percentage of row width. '
                   'Two values separated by a space may be used for an asymmetric effect.'),
-        select_items=[('fill_method', 'auto_fill')],
+        select_items=[('fill_method', 'tatami_fill')],
         unit=_('% (each side)'),
         type='float',
         default=0,
@@ -734,7 +734,7 @@ class FillStitch(EmbroideryElement):
     @param('random_seed',
            _('Random seed'),
            tooltip=_('Use a specific seed for randomized attributes. Uses the element ID if empty.'),
-           select_items=[('fill_method', 'auto_fill'),
+           select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'contour_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'circular_fill'),
@@ -1013,8 +1013,11 @@ class FillStitch(EmbroideryElement):
             return True
 
     def to_stitch_groups(self, previous_stitch_group, next_element=None):  # noqa: C901
-        # backwards compatibility: legacy_fill used to be inkstitch:auto_fill == False
         stitch_groups = []
+
+        # they disabled fill stitching
+        if not self.fill:
+            return stitch_groups
 
         # start and end points
         start = self.get_starting_point(previous_stitch_group)
@@ -1052,7 +1055,7 @@ class FillStitch(EmbroideryElement):
 
             fill_shapes = self.fill_shape(shape)
             for i, fill_shape in enumerate(fill_shapes.geoms):
-                if not self.auto_fill or self.fill_method == 'legacy_fill':
+                if self.fill_method == 'legacy_fill':
                     stitch_groups.extend(self.do_legacy_fill(fill_shape))
                 elif self.fill_method == 'circular_fill':
                     stitch_groups.extend(self.do_circular_fill(fill_shape, start, end))
@@ -1067,8 +1070,8 @@ class FillStitch(EmbroideryElement):
                 elif self.fill_method == 'tartan_fill':
                     stitch_groups.extend(self.do_tartan_fill(fill_shape, start, end))
                 else:
-                    # auto_fill
-                    stitch_groups.extend(self.do_auto_fill(fill_shape, start, end))
+                    # defaults to tatami_fill
+                    stitch_groups.extend(self.do_tatami_fill(fill_shape, start, end))
                 if stitch_groups:
                     previous_stitch_group = stitch_groups[-1]
 
@@ -1128,9 +1131,9 @@ class FillStitch(EmbroideryElement):
         for i in range(len(self.fill_underlay_angle)):
             underlay = StitchGroup(
                 color=color,
-                tags=("auto_fill", "auto_fill_underlay"),
+                tags=("tatami_fill", "fill_underlay"),
                 lock_stitches=self.lock_stitches,
-                stitches=auto_fill(
+                stitches=tatami_fill(
                     shape,
                     self.fill_underlay_angle[i],
                     self.fill_underlay_row_spacing,
@@ -1148,13 +1151,13 @@ class FillStitch(EmbroideryElement):
             starting_point = underlay.stitches[-1]
         return stitch_groups, starting_point
 
-    def do_auto_fill(self, shape, starting_point, ending_point):
+    def do_tatami_fill(self, shape, starting_point, ending_point):
         stitch_group = StitchGroup(
             color=self.color,
-            tags=("auto_fill", "auto_fill_top"),
+            tags=("tatami_fill", "fill_top"),
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches,
-            stitches=auto_fill(
+            stitches=tatami_fill(
                 shape,
                 self.angle,
                 self.row_spacing,
@@ -1234,7 +1237,7 @@ class FillStitch(EmbroideryElement):
 
         stitch_group = StitchGroup(
             color=self.color,
-            tags=("auto_fill", "auto_fill_top"),
+            tags=("tatami_fill", "fill_top"),
             stitches=stitches,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches)
@@ -1245,9 +1248,9 @@ class FillStitch(EmbroideryElement):
     def do_guided_fill(self, shape, starting_point, ending_point):
         guide_line = self._get_guide_lines()
 
-        # No guide line: fallback to normal autofill
+        # No guide line: fallback to normal tatami fill
         if not guide_line:
-            return self.do_auto_fill(shape, starting_point, ending_point)
+            return self.do_tatami_fill(shape, starting_point, ending_point)
 
         stitch_groups = []
         guided_stitch_groups = guided_fill(
@@ -1275,7 +1278,7 @@ class FillStitch(EmbroideryElement):
             stitch_groups.append(
                 StitchGroup(
                     color=self.color,
-                    tags=("guided_fill", "auto_fill_top"),
+                    tags=("guided_fill", "guided_fill_top"),
                     force_lock_stitches=self.force_lock_stitches,
                     lock_stitches=self.lock_stitches,
                     stitches=stitches
@@ -1369,7 +1372,7 @@ class FillStitch(EmbroideryElement):
 
         stitch_group = StitchGroup(
             color=self.color,
-            tags=("circular_fill", "auto_fill_top"),
+            tags=("circular_fill", "circular_fill_top"),
             stitches=stitches,
             force_lock_stitches=self.force_lock_stitches,
             lock_stitches=self.lock_stitches
