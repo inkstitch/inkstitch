@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-12 04:12+0000\n"
-"PO-Revision-Date: 2026-06-13 04:00\n"
+"POT-Creation-Date: 2026-06-15 11:41+0000\n"
+"PO-Revision-Date: 2026-06-15 11:41\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 04:12+0000\n"
+"POT-Creation-Date: 2026-06-15 11:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2989,22 +2989,22 @@ msgstr "κλίμακα"
 msgid "Please select one or more fill areas to break apart."
 msgstr ""
 
-#: lib/extensions/cleanup.py:68
+#: lib/extensions/cleanup.py:69
 #, python-format
 msgid "%s elements to remove:"
 msgstr "%s στοιχεία για αφαίρεση:"
 
-#: lib/extensions/cleanup.py:76
+#: lib/extensions/cleanup.py:77
 #, python-format
 msgid "%s groups/layers to remove:"
 msgstr "%s ομάδες/επίπεδα για αφαίρεση:"
 
-#: lib/extensions/cleanup.py:84
+#: lib/extensions/cleanup.py:85
 #, python-brace-format
 msgid "{num_elements_removed} elements removed"
 msgstr "{num_elements_removed} στοιχεία αφαιρέθηκαν"
 
-#: lib/extensions/cleanup.py:88
+#: lib/extensions/cleanup.py:89
 #, python-brace-format
 msgid "{num_groups_removed} groups/layers removed"
 msgstr "{num_groups_removed} ομάδες/επίπεδα αφαιρέθηκαν"
@@ -3668,11 +3668,11 @@ msgstr ""
 
 #: lib/extensions/troubleshoot.py:54
 msgid "* errors\n"
-msgstr "* σφάλματα"
+msgstr "* σφάλματα\n"
 
 #: lib/extensions/troubleshoot.py:56
 msgid "* warnings\n"
-msgstr "* προειδοποιήσεις"
+msgstr "* προειδοποιήσεις\n"
 
 #: lib/extensions/troubleshoot.py:58
 msgid "* type_warnings"
@@ -6456,7 +6456,7 @@ msgid "Removes areas smaller than defined by threshold."
 msgstr ""
 
 #: inx/inkstitch_cleanup.inx:11
-msgid "Fill area threshold (px²)"
+msgid "Fill area threshold (mm²)"
 msgstr ""
 
 #: inx/inkstitch_cleanup.inx:13
@@ -6468,7 +6468,7 @@ msgid "Removes small strokes shorter than defined by threshold."
 msgstr ""
 
 #: inx/inkstitch_cleanup.inx:14
-msgid "Stroke threshold (px)"
+msgid "Stroke threshold (mm)"
 msgstr ""
 
 #: inx/inkstitch_cleanup.inx:16
@@ -6480,7 +6480,7 @@ msgid "Removes small satin columns shorter than defined by threshold."
 msgstr ""
 
 #: inx/inkstitch_cleanup.inx:17
-msgid "Satin threshold (px)"
+msgid "Satin threshold (mm)"
 msgstr ""
 
 #: inx/inkstitch_cleanup.inx:18
