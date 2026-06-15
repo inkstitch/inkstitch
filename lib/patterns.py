@@ -69,10 +69,10 @@ def _apply_fill_patterns(patterns, stitch_groups):
                 elif stitch.has_tag('fill_row_start') or stitch.has_tag('fill_row_end'):
                     # keep points if they are the start or end of a fill stitch row
                     stitch_group_points.append(stitch)
-                elif stitch.has_tag('auto_fill') and not stitch.has_tag('auto_fill_top'):
+                elif stitch.has_tag('fill') and not stitch.has_tag('fill_top'):
                     # keep auto-fill underlay
                     stitch_group_points.append(stitch)
-                elif stitch.has_tag('auto_fill_travel'):
+                elif stitch.has_tag('travel'):
                     # keep travel stitches (underpath or travel around the border)
                     stitch_group_points.append(stitch)
                 elif stitch.has_tag('satin_column') and not stitch.has_tag('satin_split_stitch'):

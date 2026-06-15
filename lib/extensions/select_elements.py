@@ -33,7 +33,7 @@ class SelectElements(InkstitchExtension):
         pars.add_argument("--select-e", type=Boolean, dest="e", default=False)
         pars.add_argument("--select-s", type=Boolean, dest="s", default=False)
         pars.add_argument("--select-satin-zigzag", type=Boolean, dest="satin_zigzag", default=False)
-        pars.add_argument("--select-auto-fill", type=Boolean, dest="fill", default=False)
+        pars.add_argument("--select-tatami-fill", type=Boolean, dest="tatami", default=False)
         pars.add_argument("--select-contour-fill", type=Boolean, dest="contour", default=False)
         pars.add_argument("--select-guided-fill", type=Boolean, dest="guided", default=False)
         pars.add_argument("--select-meander-fill", type=Boolean, dest="meander", default=False)
@@ -141,7 +141,7 @@ class SelectElements(InkstitchExtension):
         if not self._select_fill_underlay(element):
             return False
         method = element.fill_method
-        if self.options.fill and method == 'auto_fill':
+        if self.options.tatami and method == 'tatami_fill':
             select = True
         elif self.options.contour and method == 'contour_fill':
             select = True

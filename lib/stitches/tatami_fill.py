@@ -71,24 +71,26 @@ class PathEdge(object):
 
 
 @debug.time
-def auto_fill(shape,
-              angle,
-              row_spacing,
-              end_row_spacing,
-              max_stitch_length,
-              running_stitch_length,
-              running_stitch_tolerance,
-              staggers,
-              skip_last,
-              starting_point,
-              ending_point=None,
-              underpath=True,
-              gap_fill_rows=0,
-              enable_random_stitch_length=False,
-              random_sigma=0.0,
-              random_seed="",
-              pull_compensation_px=(0, 0),
-              pull_compensation_percent=(0, 0)):
+def tatami_fill(
+    shape,
+    angle,
+    row_spacing,
+    end_row_spacing,
+    max_stitch_length,
+    running_stitch_length,
+    running_stitch_tolerance,
+    staggers,
+    skip_last,
+    starting_point,
+    ending_point=None,
+    underpath=True,
+    gap_fill_rows=0,
+    enable_random_stitch_length=False,
+    random_sigma=0.0,
+    random_seed="",
+    pull_compensation_px=(0, 0),
+    pull_compensation_percent=(0, 0)
+):
     has_pull_compensation = not is_all_zeroes(pull_compensation_px) or not is_all_zeroes(pull_compensation_percent)
     if has_pull_compensation:
         spacing = min(row_spacing, end_row_spacing or row_spacing)
@@ -906,7 +908,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:
-        stitch.add_tag('auto_fill_travel')
+        stitch.add_tag('tatami_fill_travel')
 
     # The path's first stitch will start at the end of a row of stitches.  We
     # don't want to double that last stitch, so we'd like to skip it.

@@ -199,6 +199,6 @@ embroider_choices = [
 
 
 stitch_type_choices = [
-    ParamOption("auto_fill", _("AutoFill")),
+    ParamOption("tatami_fill", _("Tatami Fill")),
     ParamOption("legacy_fill", _("Legacy Fill"))
 ]

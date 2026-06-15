@@ -12,7 +12,6 @@
                 <option value="none">None</option>
                 <option value="all">All</option>
                 <option translatable="no"  value="angle">angle</option>
-                <option translatable="no"  value="auto_fill">auto_fill</option>
                 <option translatable="no"  value="avoid_self_crossing">avoid_self_crossing</option>
                 <option translatable="no" value="bean_stitch_repeats">bean_stitch_repeats</option>
                 <option translatable="no" value="center_walk_underlay">center_walk_underlay</option>
@@ -32,6 +31,7 @@
                 <option translatable="no" value="e_stitch">e_stitch</option>
                 <option translatable="no" value="expand_mm">expand_mm</option>
                 <option translatable="no" value="exponent">exponent</option>
+                <option translatable="no"  value="fill">fill</option>
                 <option translatable="no" value="fill_method">fill_method</option>
                 <option translatable="no" value="fill_underlay_angle">fill_underlay_angle</option>
                 <option translatable="no" value="fill_underlay">fill_underlay</option>

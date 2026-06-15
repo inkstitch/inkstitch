@@ -13,16 +13,16 @@ from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_multi_line_string, ensure_multi_polygon,
                               reverse_line_string)
 from ..utils.threading import check_stop_flag
-from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
-                        collapse_sequential_outline_edges, fallback,
-                        find_stitch_path, graph_make_valid, travel)
 from .running_stitch import bean_stitch
+from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
+                          collapse_sequential_outline_edges, fallback,
+                          find_stitch_path, graph_make_valid, travel)
 from .utils.cross_stitch import CrossGeometries
 
 
 def half_cross_stitch(fill, shape, starting_point, ending_point, bean_stitch_repeats, original_shape=None):
     ''' Half crosses in machine embroidery have unavoidably strongly visible travel stitches along the outline.
-        They behave much like an auto_fill in 45 degree angle. They only differ from auto-fill in:
+        They behave much like an tatami_fill in 45 degree angle. They only differ from auto-fill in:
         - their pixelated outline
         - thread count (bean stitch repeats)
           bean stitch repeats will always return an odd thread count, opposed to the other cross stitch methods
@@ -111,7 +111,7 @@ def _lines_to_stitches(line_geoms, shape, max_stitch_length, bean_stitch_repeats
 
     if bean_stitch_repeats >= 1:
         # add bean stitches, but ignore travel stitches
-        result = bean_stitch(result, [bean_stitch_repeats], ['auto_fill_travel', 'fill_row_start'])
+        result = bean_stitch(result, [bean_stitch_repeats], ['travel', 'fill_row_start'])
     return result
 
 
@@ -133,11 +133,11 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph, max_stitch_le
                 path_geometry = reverse_line_string(path_geometry)
 
             if edge.is_original_segment():
-                row_stitches = [Stitch(*point, tags=['auto_fill', 'fill_row']) for point in path_geometry.coords]
+                row_stitches = [Stitch(*point, tags=['cross_stitch_fill', 'fill_row']) for point in path_geometry.coords]
                 row_stitches[0].add_tag('fill_row_start')
                 row_stitches[-1].add_tag('fill_row_end')
             else:
-                row_stitches = [Stitch(*point, tags=['auto_fill_travel']) for point in path_geometry.coords]
+                row_stitches = [Stitch(*point, tags=['travel']) for point in path_geometry.coords]
             stitches.extend(row_stitches)
 
         else:

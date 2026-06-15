@@ -40,7 +40,7 @@ def cross_stitch(fill, shape, starting_point, ending_point):
     thread_count = abs(fill.cross_thread_count)
     rotation_center, shape, starting_point, ending_point = _grid_rotate(fill, shape, starting_point, ending_point)
     if fill.cross_stitch_method.startswith('half'):
-        # half stitches only differ from auto-fill in
+        # half stitches only differ from tatami-fill in
         # - their pixelated outline
         # - thread count option (bean stitch repeats)
         #   bean stitch repeats will always return an odd thread count, opposed to the other cross stitch methods

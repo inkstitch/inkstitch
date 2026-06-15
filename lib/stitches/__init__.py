@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from .auto_fill import auto_fill
+from .tatami_fill import tatami_fill
 from .circular_fill import circular_fill
 from .cross_stitch import cross_stitch
 from .fill import legacy_fill

@@ -19,11 +19,11 @@ from ..svg import get_node_transform
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import ensure_multi_line_string
 from ..utils.threading import check_stop_flag
-from .auto_fill import (build_fill_stitch_graph, build_travel_graph,
-                        find_stitch_path, graph_make_valid)
 from .circular_fill import path_to_stitches
 from .guided_fill import apply_stitches
 from .running_stitch import random_running_stitch
+from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
+                          find_stitch_path, graph_make_valid)
 
 
 def linear_gradient_fill(fill, shape, starting_point, ending_point):
@@ -322,7 +322,7 @@ def _get_stitch_groups(fill, shape, colors, color_lines, starting_point, ending_
 
         stitch_groups.append(StitchGroup(
             color=color,
-            tags=("linear_gradient_fill", "auto_fill_top"),
+            tags=("linear_gradient_fill", "fill_top"),
             stitches=stitches,
             force_lock_stitches=fill.force_lock_stitches,
             lock_stitches=fill.lock_stitches,
@@ -338,7 +338,7 @@ def remove_start_end_travel(fill, stitches, colors, color_section):
     remove_before = 0
     if color_section > 0 or not fill.fill_underlay:
         for stitch in range(len(stitches)-1):
-            if 'auto_fill_travel' not in stitches[stitch].tags:
+            if 'travel' not in stitches[stitch].tags:
                 remove_before = stitch
                 break
         stitches = stitches[remove_before:]
@@ -347,7 +347,7 @@ def remove_start_end_travel(fill, stitches, colors, color_section):
     # to the defined ending point
     if color_section < len(colors) - 2 or not fill.stop_at_ending_point:
         for stitch in range(remove_after, 0, -1):
-            if 'auto_fill_travel' not in stitches[stitch].tags:
+            if 'travel' not in stitches[stitch].tags:
                 remove_after = stitch + 1
                 break
         stitches = stitches[:remove_after]
