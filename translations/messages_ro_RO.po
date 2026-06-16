@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-15 11:41+0000\n"
-"PO-Revision-Date: 2026-06-15 11:41\n"
+"POT-Creation-Date: 2026-06-16 04:25+0000\n"
+"PO-Revision-Date: 2026-06-16 04:26\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 11:41+0000\n"
+"POT-Creation-Date: 2026-06-16 04:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1586,11 +1586,12 @@ msgid "FillStitch"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:163
-msgid "Automatically routed fill stitching"
+msgid "Fill stitching"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:167
-msgid "Auto Fill"
+#: lib/elements/fill_stitch.py:167 lib/gui/tartan/embroidery_panel.py:202
+#: inx/inkstitch_select_elements.inx:55
+msgid "Tatami Fill"
 msgstr ""
 
 #: lib/elements/fill_stitch.py:168 inx/inkstitch_select_elements.inx:56
@@ -5057,10 +5058,6 @@ msgstr ""
 
 #: lib/gui/tartan/embroidery_panel.py:197
 msgid "SVG Elements"
-msgstr ""
-
-#: lib/gui/tartan/embroidery_panel.py:202
-msgid "AutoFill"
 msgstr ""
 
 #: lib/gui/tartan/help_panel.py:19
@@ -8954,7 +8951,7 @@ msgstr ""
 msgid "Two Rungs"
 msgstr ""
 
-#: inx/inkstitch_select_elements.inx:54 inx/inkstitch_select_elements.inx:55
+#: inx/inkstitch_select_elements.inx:54
 msgid "Fill"
 msgstr ""
 
