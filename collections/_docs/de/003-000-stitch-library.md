@@ -1,7 +1,7 @@
 ---
 title: "Sticharten-Bibliothek"
 permalink: /de/docs/stitch-library/
-last_modified_at: 2026-04-08
+last_modified_at: 2026-06-17
 toc: true
 ---
 Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Satin- und Füllstich.
@@ -88,11 +88,11 @@ S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
 
 ## Füllstiche
 
-### Füllstich
+### Tatami
 
 Füllstich wird benutzt, um große Bereiche mit einer Farbe zu füllen.
 
-![Fill stitch realistic](/assets/images/docs/fill-stitch-realistic.png)
+{% include folder-galleries path="butterfly-fill-project/tatami/" captions="1:Einfacher Tatamistich mit zwei verschiedenen Winkeln;2:Tatami mit erhöhtem Reihenabstand (Ende);3:Tatami mit verschiedenen Parametereinstellungen;4:Tatami mit Muster" %}
 
 [Mehr lesen](/de/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
@@ -100,7 +100,7 @@ Füllstich wird benutzt, um große Bereiche mit einer Farbe zu füllen.
 
 Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
 
-![Meander stitch detail](/assets/images/docs/circular-fill-detail.png)
+{% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Spiralfüllung in mehreren Schichten;2:Spiralfüllung mit unauffälligem Farbverlauf" %}
 
 [Mehr lesen](/de/docs/stitches/circular-fill){: .btn .btn--primary}
 
@@ -108,7 +108,7 @@ Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpun
 
 Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
 
-![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
+{% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Konturfüllung auf die Gesamtform;2:Konturfüllung mit Unterteilungen" %}
 
 [Mehr lesen](/de/docs/stitches/contour-fill){: .btn .btn--primary}
 
@@ -119,7 +119,7 @@ Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
 Kreuzstich imitiert eine traditionelle Handstick-Technik.
 Das charakteristische Merkmal dieser Stichart sind kleine, gleichmäßige Kreuze, die ein flaches, verpixeltes Gesamtbild ergeben.
 
-![Cross Stitch](/assets/images/docs/cross_stitches.jpg){: width="350x" }
+{% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Kreuzstich" %}
 
 [Mehr lesen](/de/docs/stitches/cross-stitch){: .btn .btn--primary}
 
@@ -127,7 +127,7 @@ Das charakteristische Merkmal dieser Stichart sind kleine, gleichmäßige Kreuze
 
 Kurvenfüllung füllt eine Fläche mit Kopien einer Führungslinie.
 
-![Guided fill](/assets/images/docs/guided-fill-complex.svg)
+{% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Kurvenfüllung mit mehrfarbigem Garn;2:Übereinandergelagerte Flächen mit loser Kurvenfüllung für einen Wasserfarben-Effekt;3:Kurvenfüllung mit der Buffer-Methode" %}
 
 [Mehr lesen](/de/docs/stitches/guided-fill){: .btn .btn--primary}
 
@@ -135,7 +135,7 @@ Kurvenfüllung füllt eine Fläche mit Kopien einer Führungslinie.
 
 Die lineare Verlaufsfüllung nutzt die in Inkscape gesetzte Farbe “linearer Verlauf” um einen nahtlosen Verlauf mit guter Stichpositionierung zu schaffen.
 
-![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
+{% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1:Blau-Lila-Farbverlauf;2:Rot-Gelb-Farbverlauf" %}
 
 [Mehr lesen](/docs/stitches/linear-gradient-fill){: .btn .btn--primary}
 
@@ -143,7 +143,7 @@ Die lineare Verlaufsfüllung nutzt die in Inkscape gesetzte Farbe “linearer Ve
 
 Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
 
-![Meander fill](/assets/images/docs/meander-fill.png)
+{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Mäanderfüllung mit mehrfarbigem Garn;2:Mäanderfüllung mit Zickzack" %}
 
 [Mehr lesen](/de/docs/stitches/meander-fill){: .btn .btn--primary}
 
@@ -151,7 +151,7 @@ Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinenstick
 
 Tartan ist ein gemusterter Stoff mit farbigen horizontalen und vertikalen Streifen. Man kennt es typischerweise von schottischen Kilts. Diese Stichart versucht, das typische Muster nachzuahmen.
 
-![Tartan sample](/assets/images/galleries/fonts/colorful/bev_tartan.jpg)
+{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Einfarbiger Tartan;2:Mehrfarbiger Tartan" %}
 
 [Mehr lesen](/docs/stitches/tartan-fill){: .btn .btn--primary}
 

@@ -433,12 +433,29 @@ div.text-left {
 
 /* Gallery */
 
+  figure.third figure {
+    margin-top: 0;
+  }
+
+  figure.third figcaption {
+      text-align: center;
+  }
+
   .logo__gallery .archive__item-teaser img {
       height: 100px;
   }
 
   .logo__gallery .archive__item-body {
       text-align: center;
+  }
+
+  div.mfp-content figure {
+    background: white;
+  }
+
+  div.mfp-title, div.mfp-counter {
+    color: black;
+    padding: 1em;
   }
 
 @media (min-width: 37.5em) {

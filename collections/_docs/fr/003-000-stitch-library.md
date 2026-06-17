@@ -87,11 +87,11 @@ Le satin en “zigzag” est une colonne satin avec un air de zigzag.
 
 ## Remplissage
 
-### Point de remplissage
+### Tatami
 
 Le point de remplissage est utilisé pour remplir une grande surface avec une couleur.
 
-![Point de remplissage](/assets/images/docs/fill-stitch-realistic.png)
+{% include folder-galleries path="butterfly-fill-project/tatami/" captions="1:Simple Tatami using two different angles;2:Tatami with higher end row spacing;3:Tatami using various param settings;4:Tatami using a pattern" %}
 
 [En savoir plus](/fr/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
@@ -99,7 +99,7 @@ Le point de remplissage est utilisé pour remplir une grande surface avec une co
 
 Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
 
-![Remplissage circulaire](/assets/images/docs/circular-fill-detail.png)
+{% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Circular fill using multiple layers;2:Circular fill with subtle color gradient" %}
 
 [En savoir plus](/fr/docs/stitches/circular-fill){: .btn .btn--primary}
 
@@ -107,24 +107,27 @@ Le remplissage circulaire remplit une forme avec une spirale. Le centre de la sp
 
 Le remplissage selon contour recouvre des zones en suivant leur contours.
 
-![Contour stitch](/assets/images/docs/contour-fill-detail.jpg)
+{% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Contour fill applied to the entire shape;2:Contour fill applied to shape sections" %}
 
 [En savoir plus](/fr/docs/stitches/contour-fill){: .btn .btn--primary}
 
 ### Point de croix
+
 {% include upcoming_release.html %}
+
 Le point de croix imite les techniques traditionnelles de broderie à la main.
 
 Il se caractérise par de petites croix régulières, ce qui donne à l'image brodée un aspect plat et géométrique.![Cross Stitch](/assets/images/docs/cross_stitches.jpg){: width="350x" }
 
-[En savoir plus](/docs/stitches/cross-stitch){: .btn .btn--primary}
+{% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Cross stitch" %}
 
+[En savoir plus](/docs/stitches/cross-stitch){: .btn .btn--primary}
 
 ### Remplissage guidé
 
 Créez des lignes de guidage pour générer un remplissage courbé.
 
-![Guided fill](/assets/images/docs/guided-fill-complex.svg)
+{% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Guided fill with variegated thread;2:Layered areas using guided fill for a watercolor effect;3:Guided fill using the buffer method" %}
 
 [En savoir plus](/fr/docs/stitches/guided-fill){: .btn .btn--primary}
 
@@ -132,7 +135,7 @@ Créez des lignes de guidage pour générer un remplissage courbé.
 
 Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d’Inkscapes pour créer des dégradés homogènes avec un positionnement de point cohérent.
 
-![Gradient sample](/assets/images/tutorials/make_tartan_font_easier/herbst.jpg)
+{% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1:Blue-purple-gradient;2:Red-yellow-gradient" %}
 
 [En savoir plus](/docs/stitches/linear-gradient-fill){: .btn .btn--primary}
 
@@ -140,7 +143,7 @@ Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire 
 
 Le remplissage en méandres est originaire des techniques de quilting. Il produit un beau résultat en broderie machine. De grandes zones peuvent être remplies avec relativement peu de points.
 
-![Meander fill](/assets/images/docs/meander-fill.png)
+{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Meander fill using variegated thread;2:Meander fill with zick zack spacing" %}
 
 [En savoir plus](/fr/docs/stitches/meander-fill){: .btn .btn--primary}
 
@@ -148,7 +151,7 @@ Le remplissage en méandres est originaire des techniques de quilting. Il produi
 
 Un Tartan et un tissu à motif de rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais. Ce point de broderie essaye d’imiter ces motifs.
 
-![Tartan sample](/assets/images/galleries/fonts/colorful/bev_tartan.jpg)
+{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Single color Tartan;2:Multi-color Tartan" %}
 
 [En savoir plus](/fr/docs/stitches/tartan-fill){: .btn .btn--primary}
 
