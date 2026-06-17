@@ -11,7 +11,7 @@ Ripple stitch is part running stitch and part fill. It behaves like a running st
 
 <p style="clear: both;">&nbsp;</p>
 
-{% include video id="cyvby3KJM10" provider="youtubes" %}
+{% include video id="cyvby3KJM10" provider="youtube" %}
 
 Closed shapes will be filled with a spiral (circular ripples). Open shapes will be stitched back and forth (linear ripples). 
 

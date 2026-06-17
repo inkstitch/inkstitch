@@ -25,7 +25,7 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 
 En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
 
-{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path: each node represents one stitch" %}
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
 
 [En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
 

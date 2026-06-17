@@ -25,7 +25,7 @@ Bean stitch is a repeated running stitch which creates a thicker line.
 
 Manual stitch creates stitches using each node of a path as a needle penetration point.
 
-{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path: each node represents one stitch" %}
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
 
 [Learn more](/docs/stitches/manual-stitch/){: .btn .btn--primary}
 

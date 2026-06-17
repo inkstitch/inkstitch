@@ -11,7 +11,7 @@ toc: true
 
 Regardez cette video de présentation:
 
-{% include video id="cyvby3KJM10" provider="youtubes" %}
+{% include video id="cyvby3KJM10" provider="youtube" %}
 
 Si le chemin initial est fermé, la forme sera remplie par une spirale (ondulations circulaires). S'il est ouvert, la broderie se fera en va et vient (ondulations linéaires)
 

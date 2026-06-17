@@ -25,7 +25,7 @@ Mehrfachgeradstich beschreibt eine Wiederholung von Geradstichen (vor und zurüc
 
 Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. So ist es möglich jeden Stich genau zu planen.
 
-{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manueller Pfad: jeder Knotenpunkt ein Stich" %}
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manueller Pfad - jeder Knotenpunkt ein Stich" %}
 
 [Mehr lesen](/de/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
