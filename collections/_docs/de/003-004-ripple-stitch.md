@@ -11,7 +11,7 @@ Ripple stich ist zum Teil Geradstich und zum Teil Füllstich: es verhält sich w
 
 <p style="clear: both;">&nbsp;</p>
 
-{% include video id="e1426a71-486a-4e62-a4c7-3b2f25dd1fc0" provider="diode" %}
+{% include video id="cyvby3KJM10" provider="youtubes" %}
 
 Geschlossene Formen werden mit einer Spirale gefüllt (z.B. Kreis). Bei offenen Formen (Linie mit Anfang und Ende) wird hin und her gestickt. Schauen wir uns beide Formen genauer an.
 

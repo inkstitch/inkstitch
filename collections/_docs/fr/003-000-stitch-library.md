@@ -14,25 +14,18 @@ Les points de trait peuvent être utilisés pour: les contours, la broderie au t
 
 Le point droit produit une série de petits points suivant une ligne ou une courbe.
 
-![Détail point droit](/assets/images/docs/running-stitch-detail.jpg)
-
-[En savoir plus](/fr/docs/stitches/running-stitch/){: .btn .btn--primary}
-
-### Point triple ou plus généralement multiple
-
 Le point triple décrit une répétition de points droits avant arrière. Il en résultera un point plus fourni.
 
-![Point triple Détail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
-Il est possible de définir sa propre séquence de répétition, par exemple alternance de point simple et de point triple.
-
-[En savoir plus](/fr/docs/stitches/bean-stitch/){: .btn .btn--primary}
+[En savoir plus (points droits)](/fr/docs/stitches/running-stitch/){: .btn .btn--primary}
+[En savoir plus (Point triple ou plus généralement multiple)](/fr/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
 ### Point manuel
 
 En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
 
-![Point manuel Détail](/assets/images/docs/manual-stitch-detail.png)
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path: each node represents one stitch" %}
 
 [En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
@@ -40,14 +33,15 @@ En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point
 
 La broderie ondulée est un type de broderie qui s'étnd sur une surface en spirale ou en rangées de lignes ou même en grilles. 
 
-![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
+{% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Simple ripple from a closed shape;2:Satin guided ripple" %}
 
 [Learn more](/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
 ### Point Zig-Zag
 
 Le point zig-zag est une option très basique pour créer une simple ligne en zig-zag. Nous vous recommandons de ne l'utiliser que pour les lignes droites, parce qu'ils ne piqueront pas bien autour des bords. Dans la plupart des cas, choisissez plutôt une colonne satin.
-![Zigzag Detail](/assets/images/docs/zigzag-stitch-detail.png)
+
+{% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag with an angle;2: Zig-zag on a hexagonal Meanderpath" %}
 
 [En savoir plus](/fr/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 

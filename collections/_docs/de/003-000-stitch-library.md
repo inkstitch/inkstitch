@@ -10,27 +10,22 @@ Ink/Stitch-Sticharten können grob in drei Gruppen eingeteilt werden: Linien, Sa
 
 Linienartige Sticharten können benutzt werden für: Umrandungen, Strichkunst-Stickereien oder um dem Motiv Details hinzuzufügen.
 
-### Geradstich
+### Geradstich / Mehrfachgeradstich
 
 Der Geradstich produziert eine Serie von kleinen Stichen entlang eines Pfades.
 
-![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
-
-[Mehr lesen](/de/docs/stitches/running-stitch/){: .btn .btn--primary}
-
-### Mehrfachgeradstich
-
 Mehrfachgeradstich beschreibt eine Wiederholung von Geradstichen (vor und zurück). Durch die Wiederholungen wird der Faden dicker und die Linie deutlicher.
 
-![Bean Stitch Detail](/assets/images/docs/bean-stitch-detail.jpg){: width="350x" }
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Geradstich Mandala (Redwork)" %}
 
-[Mehr lesen](/de/docs/stitches/bean-stitch/){: .btn .btn--primary}
+[Mehr lesen (Geradstich)](/de/docs/stitches/running-stitch/){: .btn .btn--primary}
+[Mehr lesen (Mehrfachgeradstich)](/de/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
 ### Manuelle Stichplatzierung
 
 Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. So ist es möglich jeden Stich genau zu planen.
 
-![Manual Stitch Detail](/assets/images/docs/manual-stitch-detail.png)
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manueller Pfad: jeder Knotenpunkt ein Stich" %}
 
 [Mehr lesen](/de/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
@@ -38,7 +33,7 @@ Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. 
 
 Ripple-Stich vielseitiger Stichtyp, der sich in Spiralen, Reihen oder sogar Gittern über eine Fläche erstreckt.
 
-![Ripple Stitch](/assets/images/docs/ripplefly.jpg)
+{% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Einfacher Ripple mit geschlossener Form;2:Satingeführter Ripplestich" %}
 
 [Mehr lesen](/de/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
@@ -46,7 +41,7 @@ Ripple-Stich vielseitiger Stichtyp, der sich in Spiralen, Reihen oder sogar Gitt
 
 Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empfehlen sie nur für gerade Linien zu nutzen, da sie sich nicht schön um eine Kurve legen. In den meisten Fällen ist eine Satinsäule zu bevorzugen.
 
-![Zigzag Stitch Detail](/assets/images/docs/zigzag-stitch-detail.png)
+{% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zick-Zack Linie mit Winkel;2: Zick-Zack auf einem hexagonalen Mäanderpfad" %}
 
 [Mehr lesen](/de/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 

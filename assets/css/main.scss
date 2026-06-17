@@ -453,9 +453,12 @@ div.text-left {
     background: white;
   }
 
-  div.mfp-title, div.mfp-counter {
-    color: black;
-    padding: 1em;
+  div.mfp-title, div.mfp-counter, button.mfp-close {
+    color: black !important;
+    padding: 5px 1rem;
+  }
+  button.mfp-close {
+    padding: 0 1rem !important;
   }
 
 @media (min-width: 37.5em) {

@@ -9,7 +9,9 @@ toc: true
 [![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }La broderie ondulée tient à la fois du point droit et du remplissage : elle se comporte comme un point droit (on peut l'exécuter en point triple par exemple), elle est définie à partir d'un trait, mais elle produit à l'arrivée une broderie qui s'étend sur une surface. Utilisée de manière lâche, le résultat ressemble à des ondes, d'où son nom. 
 
 
-Regardez cette video de présentation: {% include video id="cyvby3KJM10" provider="youtube" %}
+Regardez cette video de présentation:
+
+{% include video id="cyvby3KJM10" provider="youtubes" %}
 
 Si le chemin initial est fermé, la forme sera remplie par une spirale (ondulations circulaires). S'il est ouvert, la broderie se fera en va et vient (ondulations linéaires)
 

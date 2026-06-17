@@ -10,27 +10,22 @@ A stitch type explains how Ink/Stitch converts paths and shapes into embroidery.
 
 Stroke stitches can be used for outlines, line art or to add small details.
 
-### Running Stitch
+### Running Stitch / Bean Stitch
 
 Running stitch creates small stitches that follow a line (path).
 
-![Running Stitch Detail](/assets/images/galleries/fonts/barstitch/barstitchmandala.jpg){: width="400px"}
-
-[Learn more](/docs/stitches/running-stitch/){: .btn .btn--primary}
-
-### Bean Stitch
-
 Bean stitch is a repeated running stitch which creates a thicker line.
 
-![Bean Stitch Detail](/assets/images/tutorials/tutorial-preview-images/cookie_cutter_tiling.jpg){: width="400" }
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
-[Learn more](/docs/stitches/bean-stitch/){: .btn .btn--primary}
+[Learn more (running stitch)](/docs/stitches/running-stitch/){: .btn .btn--primary}
+[Learn more (bean stitch](/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
 ### Manual Stitch
 
 Manual stitch creates stitches using each node of a path as a needle penetration point.
 
-![Manual Stitch Detail](/assets/images/docs/manual-stitch.jpg){: width="400px"}
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path: each node represents one stitch" %}
 
 [Learn more](/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
@@ -38,7 +33,7 @@ Manual stitch creates stitches using each node of a path as a needle penetration
 
 Ripple stitch creates a pattern of stitches in sprirals, rows, or grids.
 
-![Ripple Stitch](/assets/images/tutorials/tutorial-preview-images/ripple-iris.jpg){: width="400px"}
+{% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Simple ripple from a closed shape;2:Satin guided ripple" %}
 
 [Learn more](/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
@@ -46,7 +41,7 @@ Ripple stitch creates a pattern of stitches in sprirals, rows, or grids.
 
 Zigzag stitch creates running stitches that stitch back and forth. It works best on straight lines, since corners and tight curves stitch poorly. For most designs, a satin column is a better choice.
 
-![Zigzag Stitch Detail](/assets/images/docs/zigzag-stitch-detail.png){: width="400px"}
+{% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag with an angle;2: Zig-zag on a hexagonal Meanderpath" %}
 
 [Learn more](/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 
