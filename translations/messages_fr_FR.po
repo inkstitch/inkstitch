@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-06-16 04:25+0000\n"
-"PO-Revision-Date: 2026-06-16 04:26\n"
+"PO-Revision-Date: 2026-06-17 04:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -1590,12 +1590,12 @@ msgstr "Point de remplissage"
 
 #: lib/elements/fill_stitch.py:163
 msgid "Fill stitching"
-msgstr ""
+msgstr "Remplissage"
 
 #: lib/elements/fill_stitch.py:167 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:55
 msgid "Tatami Fill"
-msgstr ""
+msgstr "Remplissage Tatami"
 
 #: lib/elements/fill_stitch.py:168 inx/inkstitch_select_elements.inx:56
 msgid "Circular Fill"
@@ -6504,7 +6504,7 @@ msgstr "Supprime les zones plus petites que défini par le seuil."
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Fill area threshold (mm²)"
-msgstr ""
+msgstr "Seuil de la zone de remplissage (mm²)"
 
 #: inx/inkstitch_cleanup.inx:13
 msgid "Remove Small strokes"
@@ -6516,7 +6516,7 @@ msgstr "Supprimer les petits traits plus courts que le seuil défini."
 
 #: inx/inkstitch_cleanup.inx:14
 msgid "Stroke threshold (mm)"
-msgstr ""
+msgstr "Seuil de longueur de trait (contour)"
 
 #: inx/inkstitch_cleanup.inx:16
 msgid "Remove Small satins"
@@ -6528,7 +6528,7 @@ msgstr "Supprimer les colonnes satin plus courtes que la valeur définie par le 
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Satin threshold (mm)"
-msgstr ""
+msgstr "Seuil de satin (mm)"
 
 #: inx/inkstitch_cleanup.inx:18
 msgid "Remove empty layers and groups"
