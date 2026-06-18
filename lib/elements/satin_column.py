@@ -1429,18 +1429,16 @@ class SatinColumn(EmbroideryElement):
         )
         if self.satin_method == 'zigzag':
             top_layer_stitches = top_layer.stitches
-            first = None
-            second = None
-            if len(top_layer_stitches) >= 2:
-                for stitch in reversed(top_layer_stitches):
-                    if first is None and "peak_a" in stitch.tags:
-                        first = stitch
-                    if second is None and "peak_b" in stitch.tags:
-                        second = stitch
-                    if all((first, second)):
-                        break
-            first_side = self._shorten_contour_underlay_for_zigzag(first_side, first)
-            second_side = self._shorten_contour_underlay_for_zigzag(second_side, second)
+
+            end_first = self._get_peak(top_layer_stitches[::-1], "peak_a")
+            first_side = self._shorten_contour_underlay_for_zigzag(first_side, end_first, True)
+
+            end_second = self._get_peak(top_layer_stitches[::-1], "peak_b")
+            second_side = self._shorten_contour_underlay_for_zigzag(second_side, end_second, True)
+
+            start_second = self._get_peak(top_layer_stitches, "peak_b")
+            second_side = self._shorten_contour_underlay_for_zigzag(second_side, start_second)
+
         first_side = self._apply_push_comp_on_point_list(first_side, self.contour_underlay_inset_px[0], self.contour_underlay_inset_px[1])
         second_side = self._apply_push_comp_on_point_list(second_side, self.contour_underlay_inset_px[0], self.contour_underlay_inset_px[1])
 
@@ -1472,12 +1470,23 @@ class SatinColumn(EmbroideryElement):
         stitch_group.stitches += second_side
         return [stitch_group]
 
-    def _shorten_contour_underlay_for_zigzag(self, rail, end_point):
+    def _get_peak(self, stitches: list[Stitch], peak: str) -> Stitch | None:
+        for stitch in stitches:
+            if peak in stitch.tags:
+                return stitch
+        return None
+
+    def _shorten_contour_underlay_for_zigzag(self, rail, end_point, cut_end=False) -> list[Point]:
         if not end_point:
             return rail
         line = shgeo.LineString(rail)
-        end = -line.project(shgeo.Point(end_point))
-        return [Point(*point) for point in self._apply_push_comp(line, 0, end).coords]
+        if cut_end:
+            end = line.reverse().project(shgeo.Point(end_point))
+            shortened_line = self._apply_push_comp(line, 0, end)
+        else:
+            start = line.project(shgeo.Point(end_point))
+            shortened_line = self._apply_push_comp(line, start, 0)
+        return [Point(*point) for point in shortened_line.coords]
 
     def do_center_walk(self, end_point):
         # Center walk underlay is just a running stitch down and back on the
