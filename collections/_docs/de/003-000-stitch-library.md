@@ -53,7 +53,7 @@ Satinsäulen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbere
 
 Ink/Stitch produziert Zick-Zack-Linien zwischen zwei Randlinien. Dabei ist es möglich die Breite der Säule zu variieren.
 
-![Satin Column Detail](/assets/images/docs/satin-column-detail.png)
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin Umrandung;2:Satin mit randomisierter Stichlänge und versetzten Zwischenstichen;3: Mehrfarbige Satinsäulen" %}
 
 [Mehr lesen](/de/docs/stitches/satin-column/){: .btn .btn--primary}
 
@@ -61,7 +61,7 @@ Ink/Stitch produziert Zick-Zack-Linien zwischen zwei Randlinien. Dabei ist es m�
 
 E-Stich dient als einfacher (und dennoch fester) Deckstich für Applikationen. Er ist besonders geeignet für Baby-Kleidung, da ihre Haut besonders empfindlich ist.
 
-![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stich Applikation" %}
 
 [Mehr lesen](/de/docs/stitches/e-stitch/){: .btn .btn--primary}
 
@@ -69,7 +69,7 @@ E-Stich dient als einfacher (und dennoch fester) Deckstich für Applikationen. E
 
 S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
 
-![S-Stitch sample](/assets/images/docs/s-stitch-detail.png)
+{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stich Applikation" %}
 
 [Mehr lesen](/de/docs/stitches/s-stitch/){: .btn .btn--primary}
 
@@ -77,7 +77,7 @@ S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
 
 "Zick-Zack" ist eine Satinsäule mit einem Zick-Zack-Muster.
 
-![Zizag Sample](/assets/images/docs/en/compare-satin-zigzag.png)
+{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zick-Zack-Satin Applikation" %}
 
 [Mehr lesen](/de/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 

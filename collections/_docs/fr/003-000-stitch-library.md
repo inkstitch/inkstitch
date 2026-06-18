@@ -52,14 +52,15 @@ Le point zig-zag est une option très basique pour créer une simple ligne en zi
 Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
 Ink/Stitch va dessiner des zig-zags entre deux lignes. Vous pouvez faire varier l'épaisseur de la colonne à votre guise.
 
-![Colonne satin Détail](/assets/images/docs/satin-column-detail.png)
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin border;2:Satin with randomized stitch length and staggered split stitches;3: Mutlicolor-Satin" %}
 
 [En savoir plus](/fr/docs/stitches/satin-column/){: .btn .btn--primary}
 
 ### Point en E
 
 Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible.
-![Point en E Détail](/assets/images/docs/e-stitch-detail.jpg)
+
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application" %}
 
 [En savoir plus](/fr/docs/stitches/e-stitch/){: .btn .btn--primary}
 
@@ -67,7 +68,7 @@ Le point "E" est un point de recouvrement simple mais solide pour les éléments
 
 Le point en “S” est une colonne satin qui se donne des airs de remplissage capable de suivre une courbe
 
-![S-Stitch sample](/assets/images/docs/s-stitch-detail.png)
+{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stitch application" %}
 
 [En savoir plus](/fr/docs/stitches/s-stitch/){: .btn .btn--primary}
 
@@ -75,7 +76,7 @@ Le point en “S” est une colonne satin qui se donne des airs de remplissage c
 
 Le satin en “zigzag” est une colonne satin avec un air de zigzag.
 
-![Zizag Sample](/assets/images/docs/en/compare-satin-zigzag.png)
+{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zig-Zag-Satin application" %}
 
 [En savoir plus](/fr/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 

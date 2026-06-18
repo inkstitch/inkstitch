@@ -19,7 +19,7 @@ Bean stitch is a repeated running stitch which creates a thicker line.
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
 [Learn more (running stitch)](/docs/stitches/running-stitch/){: .btn .btn--primary}
-[Learn more (bean stitch](/docs/stitches/bean-stitch/){: .btn .btn--primary}
+[Learn more (bean stitch)](/docs/stitches/bean-stitch/){: .btn .btn--primary}
 
 ### Manual Stitch
 
@@ -53,7 +53,7 @@ Satin stitch is used for borders, letters or small fill areas.
 
 A satin column is created using a zigzag stitch between two boundary lines. The distance between those lines controls the column width, which gives you flexibility to adjust how thin or bold the stitch appears on the fabric.
 
-![Satin Column Detail](/assets/images/tutorials/font_creation_complement/multifont3.jpg){: width="400px"}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin border;2:Satin with randomized stitch length and staggered split stitches;3: Mutlicolor-Satin" %}
 
 [Learn more](/docs/stitches/satin-column/){: .btn .btn--primary}
 
@@ -61,7 +61,7 @@ A satin column is created using a zigzag stitch between two boundary lines. The 
 
 E-stitch is a simple but strong stitch used to hold appliques. Because this is not as thick of a stitch (unlike satin) it is often used for baby clothes as their skin tends to be more sensitive.
 
-![E-Stitch Detail](/assets/images/docs/e-stitch-example.jpg){: width="400px"}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application" %}
 
 [Learn more](/docs/stitches/e-stitch/){: .btn .btn--primary}
 
@@ -69,7 +69,7 @@ E-stitch is a simple but strong stitch used to hold appliques. Because this is n
 
 S-Stitch is a satin column that looks like a curvy fill stitch.
 
-![S-Stitch sample](/assets/images/docs/s-stitch-detail.png){: width="400px"}
+{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stitch application" %}
 
 [Learn more](/docs/stitches/e-stitch/){: .btn .btn--primary}
 
@@ -77,7 +77,7 @@ S-Stitch is a satin column that looks like a curvy fill stitch.
 
 Zigzag is a satin column that looks like a cleaner version of the zigzag stitch.
 
-![Zizag Sample](/assets/images/docs/en/compare-satin-zigzag.png){: width="400px"}
+{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zig-Zag-Satin application" %}
 
 [Learn more](/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
