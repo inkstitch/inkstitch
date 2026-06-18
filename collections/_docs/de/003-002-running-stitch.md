@@ -1,14 +1,14 @@
 ---
-title: "Geradstich"
+title: "Geradstich / Mehrfachgeradstich"
 permalink: /de/docs/stitches/running-stitch/
-last_modified_at: 2026-04-08
+last_modified_at: 2026-06-18
 toc: true
 ---
 ## Beschreibung
 
 [![Running Stitch Butterfly](/assets/images/docs/running-stitch.jpg){: width="200x"}](/assets/images/docs/running-stitch.svg){: title="Download SVG Datei" .align-left download="running-stitch.svg" }
-
 Der Geradstich produziert eine Serie von kleinen Stichen entlang einer Kurve.
+Häufig ist eine einfache Wiederholung zu dünn und der Geradstich wird stattdessen als Mehrfachgeradstich ausgeführt. So wird die Linie breiter und deutlicher.
 
 ![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
 
@@ -19,6 +19,10 @@ Geradstich wird durch einen Pfad mit einer Konturfarbe erstellt.
 Die Stickrichtung wird durch die [Pfadrichtung](/de/docs/customize/#pfadkonturen--pfadrichtungen) bestimmt. Wenn du die Richtung ändern willst, führe die Funktion `Pfad > Richtung umkehren` aus.
 
 Wenn ein Objekt aus mehreren Pfaden besteht, werden diese der Reihe nach mit einem Sprungstich verknüpft.
+
+### Mehrfachgeradstich
+
+Der Mehrfachgeradstich wird durch die Eingabe eines Wertes für die Parameter-Option `Mehrfachgeradstich Anzahl der Wiederholungen`
 
 ## Parameter
 
@@ -31,7 +35,7 @@ Einstellung|Beschreibung
 Geradstich                            | Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Methode                               | `Geradstich / Mehrfachgeradstich` auswählen
 Wiederholungen                        | ◦ Legt fest, wie oft der Pfad durchlaufen werden soll<br/>◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)<br/>◦ Ungerade Zahl: Stiche enden am Ende des Pfades<br/>◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
-Mehrfachgeradstich Anzahl der Wiederholungen | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
+Mehrfachgeradstich Anzahl der Wiederholungen | ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von `0` wiederholt den Stich nicht, er wird einal gestickt.<br/>◦ Ein Wert von `1` verdreifaht den Stich (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von `2` führt jeden Stich fünffach aus, usw.<br/>◦ Die Eingabe mehrerer durch ein Leerzeichen getrennte Werte erzeugt ein Muster (z.B ergibt der Wert `1 0` einen Wechsel von einfachen Geradstichen und Dreifachstichen: `≡-≡-≡`)
 Stichlänge                            | Länge der Stiche. Durch Eingabe mehrerer Werte kann ein Stichlängenmuster erstellt werden. Beispielsweise werden bei einem Wert von `2 4` eine Abfolge von Stichen erstellt, die abwechselnd eine Länge von 2mm und 4mm haben.
 Geradstich Toleranz                   | Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
 Zufällige Stichlänge                  | Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.

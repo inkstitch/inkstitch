@@ -70,10 +70,8 @@ docs:
     children:
       - title: "Point manuel"
         url: /fr/docs/stitches/manual-stitch/
-      - title: "Point droit"
+      - title: "Point droit / Point triple"
         url: /fr/docs/stitches/running-stitch/
-      - title: "Point triple"
-        url: /fr/docs/stitches/bean-stitch/
       - title: "Broderie ondulée"
         url: /fr/docs/stitches/ripple-stitch/
       - title: "Zig-Zag (Satin Simple)"

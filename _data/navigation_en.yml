@@ -70,10 +70,8 @@ docs:
     children:
       - title: "Manual Stitch"
         url: /docs/stitches/manual-stitch/
-      - title: "Running Stitch"
+      - title: "Running Stitch / Bean Stitch"
         url: /docs/stitches/running-stitch/
-      - title: "Bean Stitch"
-        url: /docs/stitches/bean-stitch/
       - title: "Ripple Stitch"
         url: /docs/stitches/ripple-stitch/
       - title: "Zig-Zag (Simple Satin)"

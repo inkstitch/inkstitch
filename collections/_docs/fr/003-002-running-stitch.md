@@ -1,5 +1,5 @@
 ---
-title: "Point droit"
+title: "Point droit / Point triple"
 permalink: /fr/docs/stitches/running-stitch/
 last_modified_at: 2025-12-29
 toc: true
@@ -7,12 +7,13 @@ toc: true
 ## Description
 
 [![Papillon au point droit](/assets/images/docs/running-stitch.jpg){: width="200x"}](/assets/images/docs/running-stitch.svg){: title="Download SVG File" .align-left download="running-stitch.svg" }
-
 Le point droit produit une série de petits points suivant une ligne ou une courbe.
+A simple repetition is most of the time too thin, so that the running stitch is usually executed as a bean stitch instead. This makes the line wider and more distinct.
 
 ![Point droit Détail](/assets/images/docs/running-stitch-detail.jpg)
 
 ## Création
+
 Un point droit est créé à l'aide d'un chemin muni d'une couleur de contour.
 
 Le sens de la broderie est influencé par [la direction du chemin](/fr/docs/customize/#activation-de-la-direction-des-chemins). Si vous souhaitez échanger le départ et l'arrivée de votre point droit, exécutez `Chemin > Inverser`.
@@ -30,7 +31,7 @@ Paramètres|Description
 Points droits le long des chemins |Doit être activé pour que ces paramètres prennent effet
 Méthode                           |Choisir `Point droit / Point multiple`
 Répétitions                         |Définir combien de fois aller et revenir le long du chemin<br />◦ Par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la broderie va revenir au début du chemin
-Nombre de répétitions du point triple |Active le [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br /> Il est possible d'entrer plusieurs valeurs séparées par un espace
+Nombre de répétitions du point triple |◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace (ces valeurs seront utilisées alternativement par les points)
 Longueur du point droit           |Détermine la longueur des points. En saisissant plusieurs valeurs, il est possible de définir un motif répétitif personnalisé. Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
 Tolerance du point droit          |Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
 Rendre aléatoire                    |Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. 
@@ -44,7 +45,6 @@ Point d'arrêt initial                   |Choisir le  [style désiré](/fr/docs/
 Point d'arrêt final                 |Choisir le  [style désiré](/fr/docs/stitches/lock-stitches/)
 Couper après                      |Couper le fil après avoir brodé cet objet
 Arrêter après                     |Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
-
 
 ## Routage (agencement automatique)
 

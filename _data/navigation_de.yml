@@ -68,10 +68,8 @@ docs:
     children:
       - title: "Manueller Stich"
         url: /de/docs/stitches/manual-stitch/
-      - title: "Geradstich"
+      - title: "(Mehrfach-)Geradstich"
         url: /de/docs/stitches/running-stitch/
-      - title: "Mehrfach Geradstich"
-        url: /de/docs/stitches/bean-stitch/
       - title: "Ripple Stitch"
         url: /de/docs/stitches/ripple-stitch/
       - title: "Zick-Zack-Stich"

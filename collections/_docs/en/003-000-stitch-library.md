@@ -41,7 +41,7 @@ Ripple stitch creates a pattern of stitches in sprirals, rows, or grids.
 
 Zigzag stitch creates running stitches that stitch back and forth. It works best on straight lines, since corners and tight curves stitch poorly. For most designs, a satin column is a better choice.
 
-{% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag with an angle;2: Zig-zag on a hexagonal Meanderpath" %}
+{% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag with an angle;2: Zig-zag on a hexagonal meanderpath" %}
 
 [Learn more](/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 
@@ -139,7 +139,7 @@ Linear gradient fill creates a gradient like transition by using an Inkscape lin
 
 Meander fill creates a quilting style meandering pattern that covers large areas with a lighter, decorative texture.
 
-{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Meander fill using variegated thread;2:Meander fill with zick zack spacing" %}
+{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Meander fill using variegated thread;2:Meander fill with zick-zack spacing" %}
 
 [Learn more](/docs/stitches/meander-fill){: .btn .btn--primary}
 
@@ -147,7 +147,7 @@ Meander fill creates a quilting style meandering pattern that covers large areas
 
 Tartan fill creates a woven look with horizontal and vertical stripes that mimic tartan fabric patterns.
 
-{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Single color Tartan;2:Multi-color Tartan" %}
+{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Single color tartan;2:Multi-color tartan" %}
 
 [Learn more](/docs/stitches/tartan-fill){: .btn .btn--primary}
 
