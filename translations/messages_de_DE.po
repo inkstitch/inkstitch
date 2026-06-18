@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-06-16 04:25+0000\n"
-"PO-Revision-Date: 2026-06-16 04:26\n"
+"PO-Revision-Date: 2026-06-18 04:12\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1592,12 +1592,12 @@ msgstr "Füllstitch"
 
 #: lib/elements/fill_stitch.py:163
 msgid "Fill stitching"
-msgstr ""
+msgstr "Flächenstickerei"
 
 #: lib/elements/fill_stitch.py:167 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:55
 msgid "Tatami Fill"
-msgstr ""
+msgstr "Tatami-Füllung"
 
 #: lib/elements/fill_stitch.py:168 inx/inkstitch_select_elements.inx:56
 msgid "Circular Fill"
@@ -6502,7 +6502,7 @@ msgstr "Entferne Bereiche, die kleiner sind als der Schwellenwert."
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Fill area threshold (mm²)"
-msgstr ""
+msgstr "Minimale Größe für Füllstich-Objekte (mm²)"
 
 #: inx/inkstitch_cleanup.inx:13
 msgid "Remove Small strokes"
@@ -6514,7 +6514,7 @@ msgstr "Entferne Linien, die kleiner sind als der Schwellwert."
 
 #: inx/inkstitch_cleanup.inx:14
 msgid "Stroke threshold (mm)"
-msgstr ""
+msgstr "Minimale Länge für Linien (mm)"
 
 #: inx/inkstitch_cleanup.inx:16
 msgid "Remove Small satins"
@@ -6526,7 +6526,7 @@ msgstr "Entfernt Satinsäulen, die kürzer sind als der Schwellwert."
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Satin threshold (mm)"
-msgstr ""
+msgstr "Minimale Länge für Satinsäulen (mm)"
 
 #: inx/inkstitch_cleanup.inx:18
 msgid "Remove empty layers and groups"
@@ -8790,11 +8790,11 @@ msgstr "Redwork Mehrfachgeradestich Anzahl der Wiederholungen"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Split by color"
-msgstr ""
+msgstr "Farben aufteilen"
 
 #: inx/inkstitch_redwork.inx:25
 msgid "Split strokes by colors and generate Redwork for each color."
-msgstr ""
+msgstr "Wendet die Redwork-Funktion auf jede Farbe getrennt an."
 
 #: inx/inkstitch_redwork.inx:30
 msgid "Combine elements"
