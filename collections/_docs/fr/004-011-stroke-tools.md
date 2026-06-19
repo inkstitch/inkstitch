@@ -137,6 +137,8 @@ Cet outil est à utiliser de préférence avec un dessin connexe ou avec peu de 
  
  Détermine [le nombre de répétitions du point multiple (bean stitch)](/docs/stitches/bean-stitch/) pour les chemins brodés au deuxime passage uniquement.
 
+ * Tri par couleur : traite chaque couleur indépendament
+
 * Combiner les éléments: Combine les éléments consécutifs de même type
  
 * Garder les chemins originels: choisir de supprimer ou non les éléments originels
