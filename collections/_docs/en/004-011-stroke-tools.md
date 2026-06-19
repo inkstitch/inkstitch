@@ -1,7 +1,7 @@
 ---
 title: "Tools: Stroke"
 permalink: /docs/stroke-tools/
-last_modified_at: 2025-04-12
+last_modified_at: 2026-06-19
 toc: true
 ---
 ## Autoroute Running Stitch
@@ -126,6 +126,7 @@ The main difference to `Autoroute Running Stitch` is that it ensures that paths 
 
   Sets the [bean stitch number of repeats](/docs/stitches/bean-stitch/) for the top layer stitches (not on underpaths).
 
+* Sort by color : work with each color independently
 * Combine elements: Combine consecutive elements of the same type
 * Keep original paths: whether to delete the original elements or not
 
