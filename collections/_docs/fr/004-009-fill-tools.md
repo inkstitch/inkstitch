@@ -132,6 +132,7 @@ Le paramètre espacement entre les rangées a été calculé en fonction de la l
 #### Onglet Embossage
 
 * Forme : Si la  valeur choisie est "Aucune", l'extension crée une zone de remplissage sous les éléments sélectionnés, en tenant compte de la valeur de décalage (de l'onglet Options). Si vous souhaitez un effet d'embossage, choisissez entre rectangle et cercle pour créer un remplissage autour des éléments sélectionnés, en excluant la zone située sous les éléments sélectionnés (en tenant toujours compte du décalage).
+* Utilisez seulement la forme : garde la forme  d'embossage (cercle ou rectangle) entiere sans exclure la zone du motif.
 * Décalage de la forme : Toute valeur positive étend la zone d'embossage. La zone exclue peut être modifiée à l'aide du paramètre de décalage dans l'onglet Options.
 * Méthode (arrondi, biseau, onglet) : influence l'aspect des bords.
 
