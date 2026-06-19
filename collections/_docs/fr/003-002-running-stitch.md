@@ -1,16 +1,18 @@
 ---
 title: "Point droit / Point triple"
 permalink: /fr/docs/stitches/running-stitch/
-last_modified_at: 2025-12-29
+last_modified_at: 2026-06-19
 toc: true
 ---
 ## Description
 
-[![Papillon au point droit](/assets/images/docs/running-stitch.jpg){: width="200x"}](/assets/images/docs/running-stitch.svg){: title="Download SVG File" .align-left download="running-stitch.svg" }
-Le point droit produit une série de petits points suivant une ligne ou une courbe.
-A simple repetition is most of the time too thin, so that the running stitch is usually executed as a bean stitch instead. This makes the line wider and more distinct.
 
-![Point droit Détail](/assets/images/docs/running-stitch-detail.jpg)
+Le point droit produit une série de petits points suivant une ligne ou une courbe.
+
+Une simple répétition est généralement trop fine, c'est pourquoi le point droite est souvent réalisé en point triple ou plus généralement en point multiple. 
+Cela rend la ligne plus large et plus visible.
+
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
 ## Création
 
