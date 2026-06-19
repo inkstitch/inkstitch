@@ -52,7 +52,7 @@ Satin stitch is used for borders, letters or small fill areas.
 
 A satin column is created using a zigzag stitch between two boundary lines. The distance between those lines controls the column width, which gives you flexibility to adjust how thin or bold the stitch appears on the fabric.
 
-{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin border;2:Satin with randomized stitch length and staggered split stitches;3: Mutlicolor-Satin" %}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin border;2:Satin with randomized stitch length and staggered split stitches;3: Multicolor-Satin" %}
 
 [Learn more](/docs/stitches/satin-column/){: .btn .btn--primary}
 
