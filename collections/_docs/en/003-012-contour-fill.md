@@ -6,9 +6,9 @@ toc: true
 ---
 ## Description
 
-![Contour fill detail](/assets/images/docs/contour-fill-detail.jpg)
-
 Contour fill covers areas with stitches following the contour of an object.
+
+{% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Contour fill applied to the entire shape;2:Contour fill applied to shape sections" %}
 
 ## Creation
 

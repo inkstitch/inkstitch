@@ -8,7 +8,9 @@ toc: true
 
 S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
 
-![Point S Détail](/assets/images/docs/s-stitch-detail.png)
+![S-Stich Detail](/assets/images/docs/s-stitch-detail.png)
+
+{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stich Applikation" %}
 
 ## Funktionsweise
 

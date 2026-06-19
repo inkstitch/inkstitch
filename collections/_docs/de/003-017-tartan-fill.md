@@ -6,8 +6,9 @@ toc: true
 ---
 ## Beschreibung
 
-[![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }
 Tartan ist ein gemusterter Stoff mit farbigen horizontalen und vertikalen Streifen. Man kennt es typischerweise von schottischen Kilts. Diese Stichart versucht, das typische Muster nachzuahmen.
+
+{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Einfarbiger Tartan;2:Mehrfarbiger Tartan" %}
 
 ## Funktionsweise
 

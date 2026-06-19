@@ -68,14 +68,14 @@ docs:
   - title: "Stitch Library"
     url: /docs/stitch-library/
     children:
-      - title: "Manual Stitch"
-        url: /docs/stitches/manual-stitch/
       - title: "Running Stitch / Bean Stitch"
         url: /docs/stitches/running-stitch/
       - title: "Ripple Stitch"
         url: /docs/stitches/ripple-stitch/
-      - title: "Zig-Zag (Simple Satin)"
+      - title: "Zig-Zag"
         url: /docs/stitches/zigzag-stitch/
+      - title: "Manual Stitch"
+        url: /docs/stitches/manual-stitch/
         class: menu-margin-after
       - title: "Satin Column"
         url: /docs/stitches/satin-column/
@@ -86,7 +86,7 @@ docs:
       - title: "Zigzag Satin"
         url: /docs/stitches/zigzag-satin-stitch/
         class: menu-margin-after
-      - title: "Fill Stitch"
+      - title: "Tatami"
         url: /docs/stitches/fill-stitch/
       - title: "Circular Fill"
         url: /docs/stitches/circular-fill/

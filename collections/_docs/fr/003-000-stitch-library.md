@@ -18,16 +18,7 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
-[En savoir plus (points droits)](/fr/docs/stitches/running-stitch/){: .btn .btn--primary}
-[En savoir plus (Point triple ou plus généralement multiple)](/fr/docs/stitches/bean-stitch/){: .btn .btn--primary}
-
-### Point manuel
-
-En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
-
-{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
-
-[En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
+[En savoir plus](/fr/docs/stitches/running-stitch/){: .btn .btn--primary}
 
 ### Broderie ondulée
 
@@ -44,6 +35,14 @@ Le point zig-zag est une option très basique pour créer une simple ligne en zi
 {% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag with an angle;2: Zig-zag on a hexagonal Meanderpath" %}
 
 [En savoir plus](/fr/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
+
+### Point manuel
+
+En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
+
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
+
+[En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
 ## Satin
 
@@ -112,7 +111,7 @@ Le remplissage selon contour recouvre des zones en suivant leur contours.
 
 Le point de croix imite les techniques traditionnelles de broderie à la main.
 
-Il se caractérise par de petites croix régulières, ce qui donne à l'image brodée un aspect plat et géométrique.![Cross Stitch](/assets/images/docs/cross_stitches.jpg){: width="350x" }
+Il se caractérise par de petites croix régulières, ce qui donne à l'image brodée un aspect plat et géométrique.
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Cross stitch" %}
 

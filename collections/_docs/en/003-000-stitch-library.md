@@ -18,8 +18,7 @@ Bean stitch is a repeated running stitch which creates a thicker line.
 
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
-[Learn more (running stitch)](/docs/stitches/running-stitch/){: .btn .btn--primary}
-[Learn more (bean stitch)](/docs/stitches/bean-stitch/){: .btn .btn--primary}
+[Learn more](/docs/stitches/running-stitch/){: .btn .btn--primary}
 
 ### Manual Stitch
 

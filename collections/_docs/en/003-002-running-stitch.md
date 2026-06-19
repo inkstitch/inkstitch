@@ -6,11 +6,10 @@ toc: true
 ---
 ## Description
 
-[![Running Stitch Butterfly](/assets/images/docs/running-stitch.jpg){: width="200x"}](/assets/images/docs/running-stitch.svg){: title="Download SVG File" .align-left download="running-stitch.svg" }
 Running stitch produces a series of small stitches following a line or curve.
 A simple repetition is most of the time too thin, so that the running stitch is usually executed as a bean stitch instead. This makes the line wider and more distinct.
 
-![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
 ## Creation
 

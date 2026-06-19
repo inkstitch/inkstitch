@@ -5,8 +5,10 @@ last_modified_at: 2026-04-08
 toc: true
 ---
 ## Beschreibung
-[![Manual Stitch Flowers](/assets/images/docs/manual-stitch.jpg){: width="200x"}](/assets/images/docs/manual-stitch.svg){: title="Download SVG File" .align-left download="manual-stitch.svg" }
+
 Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. So ist es möglich jeden Stich genau zu planen.
+
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manueller Pfad - jeder Knotenpunkt ein Stich" %}
 
 ## Funktionsweise
 

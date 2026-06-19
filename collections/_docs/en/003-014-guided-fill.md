@@ -6,9 +6,9 @@ toc: true
 ---
 ## Description
 
-Generate curved fill with guide lines.
+Generate curved fill using guide lines.
 
-![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
+{% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Guided fill with variegated thread;2:Layered areas using guided fill for a watercolor effect;3:Guided fill using the buffer method" %}
 
 ## Creation
 
@@ -24,7 +24,7 @@ Each group is allowed to contain more than one fill object, but only one guide l
 
 ![Guided Fill Group](/assets/images/docs/guided-fill-group.svg)
 
-If the group contains several guide lines, only one is effective. If the guide line is a composite path, only one  subpath is used as a guide line. However it is possible to use sinuous guide line , that may even cross the shape border many times.
+If the group contains mutliple guide lines, only one is effective. If the guide line is a composite path, only one  subpath is used as a guide line. However it is possible to use sinuous guide line , that may even cross the shape border many times.
 
 ![Guided fill group](/assets/images/docs/guided-fill-complex.svg)
 
@@ -34,11 +34,17 @@ Two filling strategies are allowed for guided fill:
 
 ### Copy
 
-Copy (the default) will fill the shape with shifted copies of the line. Sometimes, in particular is the guide line has sharp angles, it may result in a very irregular covering.
+Copy (the default) will fill the shape with shifted copies of the line. Depending on the guide line, this will produce ovelaps or irregular coverage.
 
 ### Parallel offset
 
 Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced.
+
+### Buffer
+
+{% include upcoming_release.html %}
+
+The buffer mehods uses offsets arond the guideline and even allows a guideline to consist out of multiple subpaths.
 
 ## Set Start and End Point
 

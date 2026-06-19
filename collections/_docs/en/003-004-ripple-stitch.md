@@ -6,17 +6,18 @@ toc: true
 ---
 ## Description
 
-[![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="100px"}](/assets/images/docs/ripplefly.svg){: title="Download SVG File" .align-left download="ripplefly.svg" }
-Ripple stitch is part running stitch and part fill. It behaves like a running stitch, in that it follows a path/stroke. It also behaves like a fill, in that it spreads outward from the line to cover or fill an area. It creates soft bands that resemble ripples, hence the name. 
+Ripple stitch is part running stitch and part fill. It behaves like a running stitch, in that it follows a path/stroke. It also behaves like a fill, in that it spreads outward from the line to cover or fill an area. It creates soft bands that resemble ripples, hence the name.
 
-<p style="clear: both;">&nbsp;</p>
+Closed shapes will be filled with a spiral (circular ripples). Open shapes will be stitched back and forth (linear ripples).
+
+{% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Simple ripple from a closed shape;2:Satin guided ripple" %}
+
+## Creation
 
 {% include video id="cyvby3KJM10" provider="youtube" %}
 
-Closed shapes will be filled with a spiral (circular ripples). Open shapes will be stitched back and forth (linear ripples). 
-
-## Creation
 ### Circular Ripples
+
 1. Create one closed path and apply a stroke color.
 2. Keep it as a single path only. Avoid combined paths like shapes with holes.
 3. Optional: Create [target point or guides.](#guiding-ripples)
@@ -139,12 +140,6 @@ Lock stitch ||Chose your [favorite style](/docs/stitches/lock-stitches/)
 Trim After |☑ | Trim the thread after sewing this object.
 Stop After |☑ | Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
 {: .params-table }
-
-## Ripple Overview
-
-![Many ripples](/assets/images/docs/en/rippleways_en.svg)
-
-[Download](/assets/images/docs/en/rippleways_en.svg){: download="rippleways.svg" }
 
 ## Sample Files Including Ripple Stitches
 

@@ -6,8 +6,11 @@ toc: true
 ---
 ## Description
 
-"S-Stitch" is a satin column that looks like a curvy fill. 
-![Point S Détail](/assets/images/docs/s-stitch-detail.png)
+"S-Stitch" is a satin column that looks like a curvy fill.
+
+![S-Stitch Detail](/assets/images/docs/s-stitch-detail.png)
+
+{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stitch application" %}
 
 ## Creation
 

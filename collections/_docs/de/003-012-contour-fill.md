@@ -6,9 +6,9 @@ toc: true
 ---
 ## Beschreibung
 
-![Konturfüllung Detail](/assets/images/docs/contour-fill-detail.jpg)
-
 Konturfüllung füllt eine Fläche der Kontur folgend.
+
+{% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Konturfüllung auf die Gesamtform;2:Konturfüllung mit Unterteilungen" %}
 
 ### Funktionsweise
 

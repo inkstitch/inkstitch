@@ -6,11 +6,10 @@ toc: true
 ---
 ## Beschreibung
 
-[![Running Stitch Butterfly](/assets/images/docs/running-stitch.jpg){: width="200x"}](/assets/images/docs/running-stitch.svg){: title="Download SVG Datei" .align-left download="running-stitch.svg" }
 Der Geradstich produziert eine Serie von kleinen Stichen entlang einer Kurve.
 Häufig ist eine einfache Wiederholung zu dünn und der Geradstich wird stattdessen als Mehrfachgeradstich ausgeführt. So wird die Linie breiter und deutlicher.
 
-![Running Stitch Detail](/assets/images/docs/running-stitch-detail.jpg)
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Geradstich Mandala (Redwork)" %}
 
 ## Funktionsweise
 

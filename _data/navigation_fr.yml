@@ -68,14 +68,14 @@ docs:
   - title: "Bibliothèque de points"
     url: /fr/docs/stitch-library/
     children:
-      - title: "Point manuel"
-        url: /fr/docs/stitches/manual-stitch/
       - title: "Point droit / Point triple"
         url: /fr/docs/stitches/running-stitch/
       - title: "Broderie ondulée"
         url: /fr/docs/stitches/ripple-stitch/
-      - title: "Zig-Zag (Satin Simple)"
+      - title: "Zig-Zag"
         url: /fr/docs/stitches/zigzag-stitch/
+      - title: "Point manuel"
+        url: /fr/docs/stitches/manual-stitch/
         class: menu-margin-after
       - title: "Colonne Satin"
         url: /fr/docs/stitches/satin-column/
@@ -86,7 +86,7 @@ docs:
       - title: "Satin en Zigzag"
         url: /fr/docs/stitches/zigzag-satin-stitch/
         class: menu-margin-after
-      - title: "Point de remplissage"
+      - title: "Tatami"
         url: /fr/docs/stitches/fill-stitch/
       - title: "Remplissage circulaire"
         url: /fr/docs/stitches/circular-fill/

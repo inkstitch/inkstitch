@@ -6,11 +6,11 @@ toc: true
 ---
 ## Description
 
-[![E-Stitch Dolphin](/assets/images/docs/e-stitch-example.jpg){: width="200x"}](/assets/images/docs/e-stitch.svg){: title="Download SVG File" .align-left download="e-stitch.svg" }
-
 It's biggest purpose is for a simple (and yet deceivingly strong) cover stitch for applique items. Mainly for baby cloths as their skin tends to be more sensitive.
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
+
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application" %}
 
 ## Creation
 

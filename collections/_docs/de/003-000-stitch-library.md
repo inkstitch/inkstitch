@@ -18,16 +18,7 @@ Mehrfachgeradstich beschreibt eine Wiederholung von Geradstichen (vor und zurüc
 
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Geradstich Mandala (Redwork)" %}
 
-[Mehr lesen (Geradstich)](/de/docs/stitches/running-stitch/){: .btn .btn--primary}
-[Mehr lesen (Mehrfachgeradstich)](/de/docs/stitches/bean-stitch/){: .btn .btn--primary}
-
-### Manuelle Stichplatzierung
-
-Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. So ist es möglich jeden Stich genau zu planen.
-
-{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manueller Pfad - jeder Knotenpunkt ein Stich" %}
-
-[Mehr lesen](/de/docs/stitches/manual-stitch/){: .btn .btn--primary}
+[Mehr lesen](/de/docs/stitches/running-stitch/){: .btn .btn--primary}
 
 ### Ripple-Stich
 
@@ -44,6 +35,14 @@ Zick-Zack-Stiche sind eine sehr einfache Version für Zick-Zack-Linien. Wir empf
 {% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zick-Zack Linie mit Winkel;2: Zick-Zack auf einem hexagonalen Mäanderpfad" %}
 
 [Mehr lesen](/de/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
+
+### Manuelle Stichplatzierung
+
+Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. So ist es möglich jeden Stich genau zu planen.
+
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manueller Pfad - jeder Knotenpunkt ein Stich" %}
+
+[Mehr lesen](/de/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
 ## Satin
 

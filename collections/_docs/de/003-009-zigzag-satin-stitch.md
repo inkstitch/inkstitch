@@ -1,14 +1,16 @@
 ---
-title: "Zick-Zack (Satin)"
+title: "Zickzack (Satin)"
 permalink: /de/docs/stitches/zigzag-satin-stitch/
 last_modified_at: 2024-05-22
 toc: true
 ---
 ## Beschreibung
 
-"Zick-Zack" ist eine Satinsäule mit einem Zick-Zack-Muster.
+Die Standard-Satinsäule verläuft in einem Sägezahnmuster. "Zick-Zack" ist eine Satinsäule mit einem Zickzack-Muster.
 
-![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
+![Zickzack Unterschied zu Sain](/assets/images/docs/en/compare-satin-zigzag.png)
+
+{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zick-Zack-Satin Applikation" %}
 
 ## Funktionsweise
 

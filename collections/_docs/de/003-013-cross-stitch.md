@@ -18,7 +18,7 @@ feature_row:
 Kreuzstich ahmt traditionelle Handsticktechniken nach.
 Kreuzstich zeichnet sich durch kleine, gleichmäßige Kreuze aus, die dem gestickten Bild ein flaches, blockartiges Aussehen verleihen.
 
-![Cross stitched froq in double cross style](/assets/images/upcoming/3.3.0/cross_stitch.jpg)
+{% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Kreuzstich mit einem schwarzen Rand mit Mehrfachgeradstichen" %}
 
 # Funktionsweise
 

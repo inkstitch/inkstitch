@@ -6,16 +6,17 @@ toc: true
 ---
 ## Beschreibung
 
-[![Ripple butterfly](/assets/images/docs/ripplefly.jpg){: width="200x"}](/assets/images/docs/ripplefly.svg){: title="Download SVG" .align-left download="ripplefly.svg" }
 Ripple stich ist zum Teil Geradstich und zum Teil Füllstich: es verhält sich wie ein Geradstich (es kann beispielsweise als Dreifach-Geradstich genutzt werden) und definiert sich über eine Linie, aber das Stickergebnis erstreckt sich über eine Oberfläche. Ripples werden für lose Stickereien verwendet und sehen ein bisschen wie Wellen aus, daher auch der Name.
-
-<p style="clear: both;">&nbsp;</p>
-
-{% include video id="cyvby3KJM10" provider="youtube" %}
 
 Geschlossene Formen werden mit einer Spirale gefüllt (z.B. Kreis). Bei offenen Formen (Linie mit Anfang und Ende) wird hin und her gestickt. Schauen wir uns beide Formen genauer an.
 
-## Geschlossene Formen
+{% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Einfacher Ripple mit geschlossener Form;2:Satingeführter Ripplestich" %}
+
+## Funktionsweise
+
+{% include video id="cyvby3KJM10" provider="youtube" %}
+
+### Geschlossene Formen
 
 * Erstelle einen einfachen geschlossenen Pfad mit einer Linienfarbe (keine kombinierten Pfade aus mehreren Teilen)
 * (Optional) Erstelle eine [Zielposition oder Führungslinien](#ripple-stiche-führen)
@@ -26,7 +27,7 @@ Geschlossene Formen werden mit einer Spirale gefüllt (z.B. Kreis). Bei offenen 
 
 [Beispieldatei herunterladen](/assets/images/docs/circular-ripple.svg){: download="circular-ripples.svg" }
 
-## Offene Formen
+### Offene Formen
 
 Lineare Ripples können auf verschiedene Weise erstellt werden. Sie können aus einer einfachen Kurve bestehen oder sogar wie eine Satinsäule konstruiert werden.
 

@@ -6,8 +6,11 @@ toc: true
 ---
 ## Description
 
-"Zigzag " is a satin column that looks like a better version of the zigzag stitch
+"Zigzag" is a satin column moving in zigzags instead of using sawtooth pattern.
+
 ![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
+
+{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zig-Zag-Satin application" %}
 
 ## Creation
 

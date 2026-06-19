@@ -6,8 +6,9 @@ toc: true
 ---
 ## Description
 
-[![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }
 Tartan is a patterned fabric with colored horizontal and vertical stripes. It is typically known from scottish kilts. The embroidery stitch type tries to mimic the typical pattern.
+
+{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Single color tartan;2:Multi-color tartan" %}
 
 ## Creation
 

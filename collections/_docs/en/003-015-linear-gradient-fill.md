@@ -6,8 +6,9 @@ toc: true
 ---
 ## Description
 
-[![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }
 Linear gradient fill uses Inkscapes linear gradient color to create seamless gradients with a consistent stitch positioning.
+
+{% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1:Blue-purple-gradient;2:Red-yellow-gradient" %}
 
 ## Creation
 
@@ -16,6 +17,12 @@ Linear gradient fill uses Inkscapes linear gradient color to create seamless gra
   ![linear gradient](/assets/images/docs/en/linear-gradient.png)
 * Open the params dialog (`Extensions > Ink/Stitch > Params`) and select `Linear Gradient Fill` as the fill method
   Set the params as you wish and Apply
+
+<!--
+
+Tutorial?!?
+
+[![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" download="linear-gradient.svg" } -->
 
 ## Set Start and End Point
 

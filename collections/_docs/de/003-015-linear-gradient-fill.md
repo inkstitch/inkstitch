@@ -6,8 +6,9 @@ toc: true
 ---
 ## Beschreibung
 
-[![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="SVG Datei herunterladen" .align-left download="linear-gradient.svg" }
 Die lineare Verlaufsfüllung nutzt die in Inkscape gesetzte Farbe "linearer Verlauf" um einen nahtlosen Verlauf mit guter Stichpositionierung zu schaffen.
+
+{% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1:Blau-Lila-Farbverlauf;2:Rot-Gelb-Farbverlauf" %}
 
 ## Funktionsweise
 

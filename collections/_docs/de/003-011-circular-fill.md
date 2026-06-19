@@ -8,7 +8,7 @@ toc: true
 
 Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpunkt der Spirale liegt im Mittelpunkt des Elements. Eine Zielposition kann definiert werden um den Spiralmittelpunkt zu verschieben.
 
-![Circular stitch detail](/assets/images/docs/circular-fill-detail.png)
+{% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Spiralfüllung in mehreren Schichten;2:Spiralfüllung mit unauffälligem Farbverlauf" %}
 
 ## Funktionsweise
 

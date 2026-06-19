@@ -8,7 +8,7 @@ toc: true
 
 Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinensticken ergibt sich ein schöner gemusterter Effekt. Große Bereiche können mit relativ wenigen Stichen befüllt werden.
 
-![Meander stitch detail](/assets/images/docs/meander-fill.png)
+{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Mäanderfüllung mit mehrfarbigem Garn;2:Mäanderfüllung mit Zickzack" %}
 
 ## Funktionsweise
 

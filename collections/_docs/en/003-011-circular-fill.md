@@ -8,7 +8,7 @@ toc: true
 
 Circular fill fills a shape with an embroidered spiral. The center of the spiral is positioned at the center of the shape. A target point can be used to define a custom spiral center.
 
-![Circular fill stitch detail](/assets/images/docs/circular-fill-detail.png)
+{% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Circular fill using multiple layers;2:Circular fill with subtle color gradient" %}
 
 ## Creation
 

@@ -66,14 +66,14 @@ docs:
   - title: Stich-Bibliothek
     url: /de/docs/stitch-library/
     children:
-      - title: "Manueller Stich"
-        url: /de/docs/stitches/manual-stitch/
       - title: "(Mehrfach-)Geradstich"
         url: /de/docs/stitches/running-stitch/
       - title: "Ripple Stitch"
         url: /de/docs/stitches/ripple-stitch/
-      - title: "Zick-Zack-Stich"
+      - title: "Zickzack-Stich"
         url: /de/docs/stitches/zigzag-stitch/
+      - title: "Manueller Stich"
+        url: /de/docs/stitches/manual-stitch/
         class: menu-margin-after
       - title: "Satinsäule"
         url: /de/docs/stitches/satin-column/
@@ -81,10 +81,10 @@ docs:
         url: /de/docs/stitches/e-stitch/
       - title: "S-stitch"
         url: /de/docs/stitches/s-stitch/
-      - title: "Zigzag Satin"
+      - title: "Zickzack Satin"
         url: /de/docs/stitches/zigzag-satin-stitch/
         class: menu-margin-after
-      - title: "Füllstich"
+      - title: "Tatami"
         url: /de/docs/stitches/fill-stitch/
       - title: "Spiralfüllung"
         url: /de/docs/stitches/circular-fill/
@@ -108,7 +108,7 @@ docs:
         class: menu-margin-after
       - title: "Klon"
         url: /de/docs/stitches/clone/
-  - title: Benutzeroberfläche
+  - title: Funktionen
     children:
     - title: "Befehle"
       url: /de/docs/commands/
