@@ -8,7 +8,7 @@ toc: true
 
 Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
 
-![Détail de point circulaire](/assets/images/docs/circular-fill-detail.png)
+{% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Plusieurs couches de remplissage circulaire;2:Remplissages circulaires avec effet de dégradé circulaire" %}
 
 ## Création
 
@@ -38,7 +38,7 @@ Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
 ### Couche supérieure
 |Paramètres||Description|
 |---|---|---|
-|Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage |Remplissage circulaire| Remplissage circulaire  doit être sélectionné.|
 |Compensation d'étirement - Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |Étend la forme avant le point de remplissage pour compenser les écarts entre les formes dues à l'étirement du tissu.|
 |Espacement entre les rangées|![Exemple d'espacement](/assets/images/docs/params-fill-spacing_between_rows.png) |Espacement entre les rangées de points.|
