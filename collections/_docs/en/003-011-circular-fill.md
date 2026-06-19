@@ -36,7 +36,7 @@ Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Fill stitching| ☑ |Must be enabled for these settings to take effect.
 Fill method                 |Circular Fill|Circular Fill must be selected.
 Expand                      |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
 Spacing between rows        |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) |Distance between rows of stitches
