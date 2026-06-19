@@ -6,8 +6,10 @@ toc: true
 ---
 ## Description
 
-![Fill stitch detail](/assets/images/docs/guided-fill-detail.jpg)
+
 Tout comme le remplissage usuel, le remplissage guidé est composé de rangées décalées plus ou moins parallèles, mais au lieu de suivre des lignes droites,  les rangées peuvent être courbées par une ligne-guide. La ligne guide peut déborder de la forme, mais seule la partie qui intersecte la forme a de l'importance.
+
+{% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Remplissage guidé avec fil multicolore;2: Superposition de zones en remplissage guidés pour un effet d'aquarelle;3:remplissage guidé avec la méthode Buffer" %}
 
 ## Création
 
@@ -33,7 +35,7 @@ Toutefois, il est possible d'utiliser une ligne guide qui traverse plusieurs foi
 L'utilisation de ligne guide très sinueuse ne donne pas toujours le résultat auquel on s'attend, il convient de tester les deux stratégies de remplissage et des modifications de la ligne guide jusqu'a obtenir l'effet souhaité.
 
 ## Stratégies de remplissage
-Deux stratégies sont possible pour le remplissage guidé.
+Trois  stratégies sont possible pour le remplissage guidé.
 
 ### Copier
 La stratégie "Copier", remplit la forme avec des copies non déformées de l'intersection de la ligne-guide et de la forme. Parfois, en particulier si la ligne guide a des angles aigus, le remplissage est très irrégulier.
@@ -41,6 +43,11 @@ La stratégie "Copier", remplit la forme avec des copies non déformées de l'in
 ### Décalage parallèle
 
 La stratégie "Décalage parallèle", remplit la forme avec des copies déformées de l'intersection de la ligne guide et de la forme, en s'assurant que chaque copie reste à distance constante de sa voisine. Cette stratégie peut introduire des angles même si la ligne guide n'en  contient pas.
+
+### Buffer
+{% include upcoming_release.html %}
+
+La méthode Buffer utilise des décalages autour de la ligne guide et contrairement aux autres méthodes permet  à une ligne guide d'être composée de plusieurs sous-chemins.
 
 ## Définir le point de départ et d'arrivée
 Définir le point de départ et d'arrivée pour les remplissages avec les [commandes visuelles](/fr/docs/commands/).
@@ -51,7 +58,7 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage guidé" da
 
 |Paramètres||Description|
 |---|---|---|
-|Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage |Remplissage guidé| Remplissage guidé doit être selectionné.|
 |Stratégie pour le remplissage guidé|![Stratégies de remplissage](/assets/images/docs/guidedfillstrategies.svg)| <br/>- Copier(valeur par défaut), en haut sur le dessin, remplit la forme avec des copies translatées de la ligne guide. </br>- Décalage parallèle, en bas sur le dessin, remplit avec des lignes qui sont calculées à partir de la ligne guide pour que chaque ligne soit a distance constante de la ligne précédente. Cette stratégie peut introduire des angles aigus.|
 |Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |dilate la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
