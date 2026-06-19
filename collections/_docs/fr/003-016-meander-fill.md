@@ -8,8 +8,7 @@ toc: true
 
 Le remplissage en méandres est originaire des techniques de quilting. Il produit un beau résultat en broderie machine. De grandes zones peuvent être remplies avec relativement peu de points.
 
-
-![Meander stitch detail](/assets/images/docs/meander-fill.png)
+{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Remplissage en méandres avec fil multicolore;2:Remplissage en méandres avec zigzag" %}
 
 ## Création
 
@@ -28,7 +27,7 @@ Lancez `Extensions > Ink/Stitch > Paramètres`. Choisir “Remplissage en méand
 
 |Paramètres||Description|
 |---|---|---|
-|Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage                     |Remplissage en méandres| Remplissage en méandres  doit être selectionné.|
 |Motif de méandre                           || Divers motifs au choix|
 |Angle du motif de méandre                           || en degré|
