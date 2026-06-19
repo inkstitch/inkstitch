@@ -12,7 +12,7 @@ Le point droit produit une série de petits points suivant une ligne ou une cour
 Une simple répétition est généralement trop fine, c'est pourquoi le point droite est souvent réalisé en point triple ou plus généralement en point multiple. 
 Cela rend la ligne plus large et plus visible.
 
-{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Mandala au point droit(redwork)" %}
 
 ## Création
 
