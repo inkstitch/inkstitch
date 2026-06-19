@@ -34,7 +34,7 @@ Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Fill stitching| ☑ |Must be enabled for these settings to take effect.
 Fill method                        |Linear Gradient Fill|Linear Gradient Fill must be selected.
 Expand                             |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
 Maximum fill stitch length         ||The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
