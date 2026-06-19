@@ -138,7 +138,7 @@ Linear gradient fill creates a gradient like transition by using an Inkscape lin
 
 Meander fill creates a quilting style meandering pattern that covers large areas with a lighter, decorative texture.
 
-{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Meander fill using variegated thread;2:Meander fill with zick-zack spacing" %}
+{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Meander fill using variegated thread;2:Meander fill with zig-zag spacing" %}
 
 [Learn more](/docs/stitches/meander-fill){: .btn .btn--primary}
 
