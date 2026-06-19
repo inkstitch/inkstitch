@@ -7,7 +7,7 @@ toc: true
 
 Un style de point décrit comment Ink/Stitch transforme les tracés et les formes en broderie. 
 
-Chaque type de point a sa texture, son épaisseur et so niveau de couverture. 
+Chaque type de point a sa texture, son épaisseur et son niveau de couverture. 
 
 Le choix du point influence l'apparence des contours, des lettres et des remplissages sur le tissu, déterminant i le style visuel et l'aspect général de la broderie finale.
 
@@ -158,6 +158,6 @@ Un Tartan et un tissu dont le tissage produit des rayures horizontales et vertic
 
 ### Remplissage legacy
 
-En mode de remplissage manuel, l’extension divise la forme en sections, chacune pouvant être brodée en une fois. Ensuite, ces sections sont brodées un eà la fois, en sautant directement entre les sections.
+En mode de remplissage manuel, l’extension divise la forme en sections, chacune pouvant être brodée en une fois. Ensuite, ces sections sont brodées une par une en sautant directement entre les sections.
 
 [En savoir plus](/fr/docs/stitches/fill-stitch/#remplissage-manuel-dit-aussi-remplissage-legacy){: .btn .btn--primary}
