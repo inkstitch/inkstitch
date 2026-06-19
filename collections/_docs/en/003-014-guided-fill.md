@@ -30,7 +30,7 @@ If the group contains mutliple guide lines, only one is effective. If the guide 
 
 ## Filling Strategies
 
-Two filling strategies are allowed for guided fill:
+Three filling strategies are allowed for guided fill:
 
 ### Copy
 
