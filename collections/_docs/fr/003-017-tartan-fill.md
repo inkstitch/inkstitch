@@ -6,8 +6,11 @@ toc: true
 ---
 ## Description
 
-[![Tartan Fill Sample](/assets/images/docs/tartan-fill.jpg){: width="200x"}](/assets/images/docs/tartan-fill.svg){: title="Download SVG File" .align-left download="tartan-fill.svg" }
-Un Tartan et un tissu à motif de rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais.  Ce point de broderie essaye d'imiter ces motifs.
+Un Tartan et un tissu dont le tissage produit des rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais.  Ce point de broderie imite ces motifs.
+
+{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Tartan monochrome;2:Tartan multicolore" %}
+
+
 
 ## Creation
 
@@ -27,7 +30,7 @@ Lancez `Extensions > Ink/Stitch  > Paramètres` pour modifier les réglages selo
 
 |Paramètres||Description|
 |---|---|---|
-|Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage  ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage|Remplissage Tartan| Doit être sur Remplissage Tartan.|
 |Compensation d'étirement - Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |Étend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
 |Angle des lignes de points|![Angle exemple](/assets/images/docs/params-fill-angle.png) |L'angle des rangées de points, en degrés. 0 est horizontal et l'angle augmente dans le sens contraire des aiguilles d'une montre. Les angles négatifs sont autorisés.|
