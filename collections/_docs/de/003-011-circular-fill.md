@@ -38,7 +38,7 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Einstellung          ||Beschreibung
 ---|---|---
-Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein
+Flächenstickerei| ☑ |Muss aktiviert sein
 Füllmethode          | Spiralfüllung|Für diesen Stichtyp bitte Spiralfüllung auswählen
 Erweitern            |![Expand example](/assets/images/docs/params-fill-expand.png)  |Erweitert die Ursprungsform. Diese Option kann genutzt werden um Lücken zwischen angrenzenden Objekten zu verringern. Negative Werte verkleinern die Form.
 Reihenabstand        |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
