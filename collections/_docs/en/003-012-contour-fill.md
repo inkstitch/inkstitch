@@ -24,7 +24,7 @@ Run `Extensions > Ink/Stitch  > Params`. Set fill method to `Contour Fill` and t
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Fill stitching| ☑ |Must be enabled for these settings to take effect.
 Fill method                        |Contour Fill|Contour Fill must be selected to sew spiral lines of the contour
 Contour Fill Strategy              |![Inner to Outer](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Contour spirals](/assets/images/docs/contour-fill-spirals.jpg)|**Inner to outer** (default) is able to fill shapes with bottlenecks<br>**Single spiral** fills a shape with a single spiral from the outside to the inside<br>**Double spiral** fills a shape with a double spiral, starts and ends at the outside border of the shape.
 Join Style                         |Round, Mitered, Beveled |Method to handle the edges when the size the contour is reduced for the inner spirals
