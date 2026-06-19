@@ -25,7 +25,7 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Einstellung          ||Beschreibung
 ---|---|---
-Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein
+Flächenstickerei | ☑ |Muss aktiviert sein
 Füllmethode          | Mäanderfüllung|Für diesen Stichtyp bitte Mäanderfüllung auswählen
 Muster               ||Various patterns to choose from
 Winkel des Musters   ||Rotiert das Muster
