@@ -10,6 +10,8 @@ Le point en  "S" est une colonne satin qui se donne des airs de remplissage capa
 
 ![Point S Détail](/assets/images/docs/s-stitch-detail.png)
 
+{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:Appliqué avec point en S" %}
+
 ## Création
 
 Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/fr/docs/stitches/satin-column). 
