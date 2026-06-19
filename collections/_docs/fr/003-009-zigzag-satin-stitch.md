@@ -10,6 +10,8 @@ Le satin en  "zigzag" est une colonne satin avec un air de zigzag
 
 ![Point Satin Zigzag](/assets/images/docs/en/compare-satin-zigzag.png)
 
+{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Appliqué avec un Satin Zig-Zag" %}
+
 ## Création
 
 Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/fr/docs/stitches/satin-column). 
