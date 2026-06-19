@@ -26,7 +26,7 @@ Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Fill stitching| ☑ |Must be enabled for these settings to take effect.
 Fill method          |Meander Fill|Meander Fill must be selected.
 Meander Pattern      ||Various patterns to choose from
 Meander Pattern  angle    ||Rotates Pattern
