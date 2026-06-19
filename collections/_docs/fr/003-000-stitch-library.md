@@ -1,10 +1,16 @@
 ---
 title: "Bibliothèque de points"
 permalink: /fr/docs/stitch-library/
-last_modified_at: 2025-12-29
+last_modified_at: 2026-06-19
 toc: true
 ---
-Les types de points Ink/Stitch peuvent être grossièrement divisés en trois sections: trait, satin et remplissage.
+
+Un style de point décrit comment Ink/Stitch transforme les tracés et les formes en broderie. 
+
+Chaque type de point a sa texture, son épaisseur et so  niveau de couverture. 
+
+Le choix du point influence l'apparence des contours, des lettres et des remplissages sur le tissu, déterminant i le style visuel et l'aspect général de la broderie finale.
+
 
 ## Traits
 
@@ -14,7 +20,7 @@ Les points de trait peuvent être utilisés pour: les contours, la broderie au t
 
 Le point droit produit une série de petits points suivant une ligne ou une courbe.
 
-Le point triple décrit une répétition de points droits avant arrière. Il en résultera un point plus fourni.
+Le point triple décrit une répétition de points droits avant arrière. Il en résultera un point plus épais.
 
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
@@ -22,7 +28,8 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 
 ### Broderie ondulée
 
-La broderie ondulée est un type de broderie qui s'étnd sur une surface en spirale ou en rangées de lignes ou même en grilles. 
+La broderie ondulée crée un motif de points en spirales, en rangées ou en grilles.
+
 
 {% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Simple ripple from a closed shape;2:Satin guided ripple" %}
 
@@ -38,7 +45,7 @@ Le point zig-zag est une option très basique pour créer une simple ligne en zi
 
 ### Point manuel
 
-En mode point manuel Ink/Stitch utilisera chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés. 
+En mode point manuel Ink/Stitch utilise chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement là où vous les avez placés. 
 
 {% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
 
