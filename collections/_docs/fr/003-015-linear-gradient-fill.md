@@ -6,9 +6,10 @@ toc: true
 ---
 ## Description
 
-[![Linear Gradient Fill Sample](/assets/images/docs/linear-gradient.jpg){: width="200x"}](/assets/images/docs/linear-gradient.svg){: title="Download SVG File" .align-left download="linear-gradient.svg" }
-
 Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d'Inkscape pour créer des dégradés homogènes avec un positionnement de point cohérent.
+
+{% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1: Dégradé Bleu PourpreB;2:Dégradé Rouge Jaune" %}
+
 
 ## Creation
 
@@ -29,7 +30,7 @@ Exécutez « Extensions > Ink/Stitch > Paramètres » pour ajuster les paramètr
 
 |Paramètres||Description|
 |---|---|---|
-|Auto-remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage|Remplissage dégradé linéaire| Doit être sur Remplissage dégradé linéaire.|
 |Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) Étend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.|
 |Longueur maximale du point de remplissage|![Exemple de longueur de point](/assets/images/docs/params-fill-stitch_length.png) |La longueur de chaque point dans une rangée. "Max", c'est parce qu'un point plus court peut être utilisé au début ou à la fin d'une ligne.|
