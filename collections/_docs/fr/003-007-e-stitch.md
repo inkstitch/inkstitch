@@ -6,10 +6,13 @@ toc: true
 ---
 ## Description
 
-[![Dauphin au point E](/assets/images/docs/e-stitch-example.jpg){: width="200x"}](/assets/images/docs/e-stitch.svg){: title="Download SVG File" .align-left download="e-stitch.svg" }
-Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible. Point en E Détail
 
-![Point E Détail](/assets/images/docs/e-stitch-detail.jpg)
+Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible. 
+
+![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
+
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1: Appliqué avec point en E" %}
+
 
 ## Création
 
