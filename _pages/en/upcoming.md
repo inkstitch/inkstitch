@@ -49,6 +49,10 @@ Ink/Stitch is in constant development. Here you can see all the changes made aft
 * [Egyptian](/fonts/egyptian/)
 
   ![Egyptian](/assets/images/fonts/egyptian.png)
+  
+* [Ellenika](/fr/fonts/ellenika/)
+
+  ![Ellenika](/assets/images/fonts/ellenika.png)
 * [Eloquent](/fonts/eloquent/)
 
   ![Eloquent](/assets/images/fonts/eloquent.png)
