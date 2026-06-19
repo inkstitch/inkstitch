@@ -112,7 +112,7 @@ Dieses Verhalten kann durch das Setzen von manuellen [Anfangs- bzw. Endpunken](/
 
 Einstellung                        ||Beschreibung
 ---|---|---
-Automatisch geführte Füllstiche    | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Flächenstickerei   | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Füllmethode                        |Kreuzstich| `Kreuzstich` auswählen
 Kreuzstich-Methode                 ||Wähle eine Methode. Für detailierte Informationen siehe oben.
 Mustergröße                        ||Definiert die Größe des Kreuzstichgitters
