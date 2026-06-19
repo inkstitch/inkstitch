@@ -40,6 +40,12 @@ Kopieren ist die Standardeinstellung. Mit dieser Methode werden Kopien der Führ
 
 Die Methode Parallelverschiebung stellt sicher, dass die Abstände zwischen den einzelnen Reihen immer gleich bleiben. Dabei können scharfe Ecken entstehen.
 
+#### Buffer
+
+{% include upcoming_release.html %}
+
+Die Buffer-Methode ist ein fortgeführter Vesatz zur Führungslinie und erlaubt auch, dass die Führungslinie aus mehreren Unterpfaden besteht.
+
 ## Anfangs- und Endpunkt festlegen
 
 Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines Füllobjekts](/de/docs/commands) zu kennzeichnen.
