@@ -36,9 +36,10 @@ Utilisez les commandes "Position de début du remplissage" et "Position de fin d
 
 Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
 ### Couche supérieure
+
 |Paramètres||Description|
 |---|---|---|
-|Remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage | ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage |Remplissage circulaire| Remplissage circulaire  doit être sélectionné.|
 |Compensation d'étirement - Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |Étend la forme avant le point de remplissage pour compenser les écarts entre les formes dues à l'étirement du tissu.|
 |Espacement entre les rangées|![Exemple d'espacement](/assets/images/docs/params-fill-spacing_between_rows.png) |Espacement entre les rangées de points.|
@@ -57,7 +58,6 @@ Lancez `Extensions > Ink/Stitch  > Paramètres` pour choisir vos réglages.
 |Point d'arrêt final       ||Sélectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
 |Arrêter après                       |☑ |Faire faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
 |Couper après                        |☑ |Couper le fil après avoir brodé cet objet.
-
 {: .params-table}
 
 ## Sous-couche
