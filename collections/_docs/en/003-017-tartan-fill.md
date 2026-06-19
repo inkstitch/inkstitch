@@ -28,7 +28,7 @@ Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Fill stitching| ☑ |Must be enabled for these settings to take effect.
 Fill method          |Tartan Fill|Tartan Fill must be selected.
 Expand               |![Expand example](/assets/images/docs/params-fill-expand.png)  |Expand the shape before stitching, to compensate for gaps between shapes.
 Angle of lines of stitches|| Relative to the tartan stripe direction.
