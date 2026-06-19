@@ -30,7 +30,7 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Einstellung                     ||Beschreibung
 ---|---|---
-Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Flächenstickerei | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Füllmethode                     | Lineare Verlaufsfüllung | Hier bitte `Lineare Verlaufsfüllung` auswählen
 Erweitern                       |![Expand example](/assets/images/docs/params-fill-expand.png) | Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.
 Maximale Füll-Stichlänge        |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) | Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
