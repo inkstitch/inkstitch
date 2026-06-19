@@ -160,10 +160,18 @@ Neue Übersetzungen in den folgenden Sprachen wurden uns zur Verfügung gestellt
 
 ## Stichart-Aktualisierungen
 
-### Fill stitches
+### Füllsticharten
 
-Changed default for all fill sttches with the parameter `maximum fill stitch length` from 3 mm to 4 mm.
-Old files will be automatically updated to keep the previous setting ([#4280](https://github.com/inkstitch/inkstitch/pull/4280)).
+Standardwert für die `maximale Füllstichlänge` in allen Füllsticharten von 3mm auf 4mm erhöht.
+Alte Dateien werden automatisch aktualisiert und behalten ihre bisherigen Einstellungen ([#4280](https://github.com/inkstitch/inkstitch/pull/4280)).
+
+### Füllstich
+
+* Füllstich wurde in Tatami **umbenannt** [#4454](https://github.com/inkstitch/inkstitch/pull/4454)
+
+### Konturfüllung
+
+* Wiederholungsfunktionen hinzugefügt [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
 
 ### Kurvenfüllung
 
@@ -503,7 +511,15 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Bugfixes
 
-* fix cannot pickle pathelement (#4391)
+* meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
+* Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)
+* redwork: fix element style when moved out of original grouping [#4427](https://github.com/inkstitch/inkstitch/pull/4427)
+* satin column: use running stitch length for connecting lines [#4446](https://github.com/inkstitch/inkstitch/pull/4446)
+* clone: check if grouped clone elements are embroiderable (prevent error message for example with comments) [#4444](https://github.com/inkstitch/inkstitch/pull/4444)
+* edit json: do not render elements from hidden groups [#4430](https://github.com/inkstitch/inkstitch/pull/4430)
+* fix glyph filter for white space characters [#4412](https://github.com/inkstitch/inkstitch/pull/4412)
+* ripple stitch render at rungs: fallback when no rungs [#4405](https://github.com/inkstitch/inkstitch/pull/4405)
+* fix cannot pickle pathelement [#4391](https://github.com/inkstitch/inkstitch/pull/4391)
 * Add commands: skip on empty shapes [#4383](https://github.com/inkstitch/inkstitch/pull/4383)
 * Fix issue for linear gradients without gradients [#4361](https://github.com/inkstitch/inkstitch/pull/4361)
 * Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
@@ -516,7 +532,6 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 * Fill to satin: improve warnings and error messages [#4244](https://github.com/inkstitch/inkstitch/pull/4244)
 * Fix bbox for gradient blocks [#4248](https://github.com/inkstitch/inkstitch/pull/4248)
 * Skip clamping when buffering the polygon returns GEOSException [#4221](https://github.com/inkstitch/inkstitch/pull/4221)
-* Satin column: start at nearest: allow to connect to outline when centerline has a greater distance than min jump stitch length [#4220](https://github.com/inkstitch/inkstitch/pull/4220)
 * Break apart: fix issue with area size value (can be negtative) [#4173](https://github.com/inkstitch/inkstitch/pull/4173)
 * Stroke: ignore invalid shapes in first_stitch [#4178](https://github.com/inkstitch/inkstitch/pull/4178)
 * Fill to satin: fix skip end segments, when there are only two rungs [#4146](https://github.com/inkstitch/inkstitch/pull/4146)
@@ -556,6 +571,9 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* Added pyproject and uv in build scripts [#4428](https://github.com/inkstitch/inkstitch/pull/4428)
+* dispatch translation workflow [#4410](https://github.com/inkstitch/inkstitch/pull/4410)
+* use local wxpython wheel [#4403](https://github.com/inkstitch/inkstitch/pull/4403)
 * macos: wxpython build fix [#4375](https://github.com/inkstitch/inkstitch/pull/4375)
 * Fixed profilers when exiting early, added time profiler [#4331](https://github.com/inkstitch/inkstitch/pull/4331)
 * Distributed font files are now compressed with lzma [#4313](https://github.com/inkstitch/inkstitch/pull/4313)

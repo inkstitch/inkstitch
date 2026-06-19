@@ -173,6 +173,13 @@ Changement de la valeur par défaut du paramétre "Longueur maximale du point de
 
 Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
 
+### AutoFill
+
+* AutoFill was **renamed** to Tatami [#4454](https://github.com/inkstitch/inkstitch/pull/4454)
+
+### Contour fill
+
+* add repeat options [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
 
 ### Remplissage guidé
 
@@ -180,7 +187,6 @@ Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
 * Nouvelle méthode :  Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
 
 Cette nouvelle méthode permet l'usage de chemins qui s'autointersectent comme ligne guide. Il est ausssi possible d'utiliser des chemins composés de plusieurs sous-chemins.
-
 
 ### Remplissage Legacy
 
@@ -335,6 +341,10 @@ Un outil pour collecter les informations de broderie.
 * Ajout d'une option pour copier la liste dans le presse-papiers (accessible depuis l'onglet Aide) [#3817](https://github.com/inkstitch/inkstitch/pull/3817)
 
 [En savoir plus](/fr/docs/troubleshoot/#element-info)
+
+### Redwork
+
+* Redwork optionally runs now on selected colors separately and groups by color (#4426)
 
 ### Gestion des polices
 
@@ -519,6 +529,15 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Corrections de bugs
 
+* meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
+* Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)
+* redwork: fix element style when moved out of original grouping [#4427](https://github.com/inkstitch/inkstitch/pull/4427)
+* satin column: use running stitch length for connecting lines [#4446](https://github.com/inkstitch/inkstitch/pull/4446)
+* clone: check if grouped clone elements are embroiderable (prevent error message for example with comments) [#4444](https://github.com/inkstitch/inkstitch/pull/4444)
+* edit json: do not render elements from hidden groups [#4430](https://github.com/inkstitch/inkstitch/pull/4430)
+* fix glyph filter for white space characters [#4412](https://github.com/inkstitch/inkstitch/pull/4412)
+* ripple stitch render at rungs: fallback when no rungs [#4405](https://github.com/inkstitch/inkstitch/pull/4405)
+* fix cannot pickle pathelement [#4391](https://github.com/inkstitch/inkstitch/pull/4391)
 * Fix issue for linear gradients without gradients [#4361](https://github.com/inkstitch/inkstitch/pull/4361)
 * Meander: fix straight segment clipped path [#4340](https://github.com/inkstitch/inkstitch/pull/4340)
 * Fix editjson sample text glyph distance between text parts [#4339](https://github.com/inkstitch/inkstitch/pull/4339)
@@ -570,6 +589,7 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Builds, tests, workflows, code quality and house keeping
 
+* CI changes to reduce package size (#4341)
 * use local repo for wxpython [#4400](https://github.com/inkstitch/inkstitch/pull/4400)
 * Fixed profilers when exiting early, added time profiler [#4331](https://github.com/inkstitch/inkstitch/pull/4331)
 * Chore: Bumped CI action versions to get rid of deprecation warnings [#4330](https://github.com/inkstitch/inkstitch/pull/4330)
