@@ -20,7 +20,7 @@ from ..commands import Command, find_commands
 from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
 from ..i18n import _
-from ..marker import get_marker_elements_cache_key_data
+from ..marker import get_marker_elements, get_marker_elements_cache_key_data
 from ..metadata import InkStitchMetadata
 from ..patterns import apply_patterns, get_patterns_cache_key_data
 from ..stitch_plan import StitchGroup
@@ -566,6 +566,31 @@ class EmbroideryElement(object):
             return commands[0]
         else:
             return None
+
+    @cache
+    def get_guide_lines(self, multiple=False):
+        guide_lines = get_marker_elements(self.node, "guide-line", False, True)
+        # No or empty guide line
+        if not guide_lines or not guide_lines['stroke']:
+            return None
+
+        if multiple:
+            return guide_lines['stroke']
+        else:
+            return guide_lines['stroke'][0]
+
+    @cache
+    def get_anchor_line(self, subpaths=False):
+        """Return the anchor line element."""
+        anchor_lines = get_marker_elements(self.node, "anchor-line", False, True, False)
+        # No or empty guide line
+        if not anchor_lines or not anchor_lines["stroke"]:
+            return None
+
+        if subpaths:
+            return anchor_lines["stroke"][0]
+        # ignore multiple anchor lines
+        return anchor_lines["stroke"][0].geoms[0]
 
     def strip_control_points(self, subpath):
         return [point for control_before, point, control_after in subpath]

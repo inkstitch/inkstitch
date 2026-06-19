@@ -16,7 +16,6 @@ from shapely.validation import explain_validity, make_valid
 
 from .. import tiles
 from ..i18n import _
-from ..marker import get_marker_elements
 from ..stitch_plan import StitchGroup
 from ..stitches import (tatami_fill, circular_fill, contour_fill, cross_stitch,
                         guided_fill, legacy_fill, linear_gradient_fill,
@@ -1246,7 +1245,8 @@ class FillStitch(EmbroideryElement):
         return stitch_groups
 
     def do_guided_fill(self, shape, starting_point, ending_point):
-        guide_line = self._get_guide_lines()
+        guide_line = self.get_guide_lines()
+        anchor_line = self.get_anchor_line(True)
 
         # No guide line: fallback to normal tatami fill
         if not guide_line:
@@ -1256,6 +1256,7 @@ class FillStitch(EmbroideryElement):
         guided_stitch_groups = guided_fill(
             shape,
             guide_line,
+            anchor_line,
             self.angle,
             self.row_spacing,
             self.staggers,
@@ -1285,18 +1286,6 @@ class FillStitch(EmbroideryElement):
                 )
             )
         return stitch_groups
-
-    @cache
-    def _get_guide_lines(self, multiple=False):
-        guide_lines = get_marker_elements(self.node, "guide-line", False, True)
-        # No or empty guide line
-        if not guide_lines or not guide_lines['stroke']:
-            return None
-
-        if multiple:
-            return guide_lines['stroke']
-        else:
-            return guide_lines['stroke'][0]
 
     def do_meander_fill(self, shape, original_shape, i, starting_point, ending_point):
         stitch_group = StitchGroup(
@@ -1417,7 +1406,7 @@ class FillStitch(EmbroideryElement):
 
         # guided fill warnings
         if self.fill_method == 'guided_fill':
-            guide_lines = self._get_guide_lines(True)
+            guide_lines = self.get_guide_lines(True)
             if not guide_lines or guide_lines[0].is_empty:
                 yield MissingGuideLineWarning(self.shape.centroid)
             elif len(guide_lines) > 1:

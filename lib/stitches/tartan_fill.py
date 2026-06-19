@@ -26,11 +26,11 @@ from ..tartan.utils import (get_palette_width, get_tartan_settings,
 from ..utils import cache, ensure_multi_line_string
 from ..utils.threading import check_stop_flag
 from .circular_fill import path_to_stitches
-from .guided_fill import apply_stitches
 from .linear_gradient_fill import remove_start_end_travel
 from .running_stitch import bean_stitch
 from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
                           find_stitch_path, graph_make_valid)
+from .utils.stitches import apply_stitches
 
 if TYPE_CHECKING:
     from ..elements import FillStitch
