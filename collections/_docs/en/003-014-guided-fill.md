@@ -56,7 +56,7 @@ Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑ |Must be enabled for these settings to take effect.
+Fill stitching| ☑ |Must be enabled for these settings to take effect.
 Fill method                        |Guided Fill| Guided Fill must be selected.
 Guided Fill Strategy               |![Guided Fill Strategies](/assets/images/docs/guidedfillstrategies.svg)| Copy( default), top, fill the shape with copies of the guide lines.  Parallel offset, bottom, will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced.
 Expand                             ||Expand the shape before fill stitching, to compensate for gaps between shapes.
