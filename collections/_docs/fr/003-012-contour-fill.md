@@ -6,9 +6,9 @@ toc: true
 ---
 ## Description
 
-![Contour fill detail](/assets/images/docs/contour-fill-detail.jpg)
-
 Le remplissage selon le contour remplit les objets en suivant leur contour.
+
+{% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Remplissage selon contour appliqué à toute la forme;2:Remplissage selon contour appliqué par sections" %}
 
 
 ## Création
@@ -26,7 +26,7 @@ Lancez `Extensions > Ink/Stitch  > Paramètres`. Choisir "Remplissage selon le c
 
 |Paramètres||Description|
 |---|---|---|
-|Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage | ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage                     |Remplissage selon le contour| Remplissage selon le contour doit être selectionné pour broder des lignes en spirale suivant le contour.|
 |Stratégie de remplissage selon le contour  |![Inner to Outer](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Contour spirals](/assets/images/docs/contour-fill-spirals.jpg)|**Intérieur vers extérieur** (valeur par défaut) est capable de remplir des formes avec un goulot d'étranglement<br>**Spirale Simple**  remplit une forme avec une spirale unique de l'extérieur vers l'intérieur<br>**Spirale doublel** remplit une forme avec une double spirale, en commençant et terminant sur la frontière extérieure de la forme.|
 |Style de jointure |Rond, à onglet, biseauté|Méthode pour gérer les arêtes lorsque la taille du contour est réduite pour les spirales intérieures|
