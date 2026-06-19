@@ -113,7 +113,7 @@ Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
 Settings||Description
 ---|---|---
-Automatically routed fill stitching| ☑      |Must be enabled for these settings to take effect.
+Fill stitching| ☑      |Must be enabled for these settings to take effect.
 Fill method                        |Cross Stitch|Must be set to cross stitch.
 Cross stitch method                ||Choose method (for detailed information see above)
 Pattern size                       ||Defines the size of the cross stitch (grid)
