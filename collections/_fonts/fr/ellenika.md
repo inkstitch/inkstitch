@@ -4,7 +4,7 @@ permalink: /fr/fonts/ellenika/
 last_modified_at: 2026-06-19
 toc: false
 preview_image:
-  - url: /assets/images/fonts/ellenika.jpg
+  - url: /assets/images/fonts/ellenika.png
     height: 50
 data_title:
   - ellenika
