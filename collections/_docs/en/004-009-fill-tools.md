@@ -134,6 +134,7 @@ The row spacing parameter has been computed acccording to the stitch length sett
 
 #### Embossing tab
 * Shape: If None, the extension creates a knockdown fill area underneath the selected elements, taking into account the offset (from options tab) value. If on the other hand, you wish an embossing effect, chose between rectangle and circle to create a knockdown fill around the selected elements, excluding the area underneath the selected elements (still taking the offset into account).
+* Use only shape: emboss the whole shape (rectangle or circle) without excluding the motif shape.
 * Shape offset : Any positive value will extend the embossing area. The excluded area may be modified by using the offset parameter in the options tab.
 * Method (round, miter, bevel): Influences how edges will look like
 
