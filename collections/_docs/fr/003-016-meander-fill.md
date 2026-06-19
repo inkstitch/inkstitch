@@ -27,7 +27,7 @@ Lancez `Extensions > Ink/Stitch > Paramètres`. Choisir “Remplissage en méand
 
 |Paramètres||Description|
 |---|---|---|
-|Remplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage  ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage                     |Remplissage en méandres| Remplissage en méandres  doit être selectionné.|
 |Motif de méandre                           || Divers motifs au choix|
 |Angle du motif de méandre                           || en degré|
