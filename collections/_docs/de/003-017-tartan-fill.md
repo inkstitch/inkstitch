@@ -28,7 +28,7 @@ Der Tartan-Muster Editor befindet sich unter `Erweiterungen > Ink/Stitch > Werkz
 
 Einstellung                     ||Beschreibung
 ---|---|---
-Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Flächenstickerei | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Füllmethode                     | Tartanfüllung | Hier bitte `Tartanfüllung` auswählen
 Erweitern                       |![Expand example](/assets/images/docs/params-fill-expand.png) | Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.
 Winkel der Stichlinien          || Relativ zur Rotation des Tartanmusters
