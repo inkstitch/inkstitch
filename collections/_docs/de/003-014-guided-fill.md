@@ -30,7 +30,7 @@ Kurvige Füllflächen mit Hilfe von Führungslinien.
 
 ### Strategie
 
-Ink/Stitch bietet zwei verschiedene Füllstrategien für Kurvenfüllungen an. Dabei hat jede Strategie Vor- und Nachteile.
+Ink/Stitch bietet drei verschiedene Füllstrategien für Kurvenfüllungen an. Dabei hat jede Strategie Vor- und Nachteile.
 
 #### Kopieren
 
