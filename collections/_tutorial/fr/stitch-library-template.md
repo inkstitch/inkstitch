@@ -3,7 +3,7 @@ permalink: /tutorials/butterfly-template/
 title: "Stitch library butterfly template"
 language: fr
 last_modified_at: 2026-06-18
-excerpt: "Template for the stitch library butterfly design"
+excerpt: "Modele pour le papillon de la bibliothèque de points"
 image: "/assets/images/galleries/butterfly-fill-project/running/01_running_stitch_mandala.png"
 tutorial-type:
   - Sample File
@@ -12,42 +12,44 @@ techniques:
 field-of-use:
 user-level: 
 ---
-![Butterfly card with envelope](/assets/images/tutorials/stitch-library-template/envelope.jpg){: style="max-width:400px;" .align-left} This templates serves as a versatile template for the sample images within the stitch library.
+![Butterfly card with envelope](/assets/images/tutorials/stitch-library-template/envelope.jpg){: style="max-width:400px;" .align-left} pour toutes les images de la bibliothèque de points.
 
 ## Usage
 
-* Download the butterfly template
-* Copy the template before reworking. This way you can develope multiple versions.
-* Open the copy of the template with Inkscape. You will now see the original image and the outline for the cutting machine.
-* Open the layers and objects dialog and hide the layer with the original image and display the layer with the prepared embroidery paths.
-* Begin your creative process
+* Téléchargez le modèle de papillon.
+* Copiez le modèle avant de le modifier. Vous pourrez ainsi créer plusieurs versions.
+* Ouvrez la copie du modèle avec Inkscape. Vous verrez alors l'image originale et le tracé pour la machine de découpe.
+* Ouvrez la boîte de dialogue Calques et objets, masquez le calque contenant l'image originale et affichez celui contenant la broderie.
+* Laissez libre cours à votre créativité !
 
-## File content
 
-### Original
+## Contenu du fichier
 
-* Original image
-* Source information
+### Calque Original
 
-### Plotter
+* Image originale
+* Informations sur la source
 
-* Cutting lines for the card (A6) with the butterfly outline
-* Cutting (and embossing) lines for a butterfly envelope
-* A7 cutting line (card without fold). Can be used for the inside to cover the fabric
-* Template for cutting the fabric
+### Calque Plotter
 
-### Embroidery
+* Lignes de découpe pour la carte (A6) avec le contour du papillon
+* Lignes de découpe (et de gaufrage) pour une enveloppe papillon
+* Ligne de découpe A7 (carte sans pli). Peut servir pour recouvrir l'intérieur d'un tissu.
+* Gabarit pour la découpe du tissu
 
-* Fill: use for fill patterns
-* Detail: Lines for cutting the fill area
-  * simple: cut fill into two or four sections
-  * complex: more detailed sections
-* Outlines: a selection of borders for the butterfly. Every border is a bean stitch.
-  * Simple Outline: simple outline
-  * Simple Redwork: simple outline, dividing top and bottom wings
-  * Complex Redwork: outline following wing details
-* Satin: a simple satin column for the body of the butterfly
+
+### Calque Embroidery
+
+* Fill: à utiliser pour les motifs de remplissage
+* Detail: lignes pour découper la zone de remplissage
+  * simple: découpe le remplissage en deux ou quatre sections
+  * complex: sections plus détaillées
+* Outlines: une sélection de bordures pour le papillon. Chaque bordure est un point multiple.
+  * Simple Outline: scontour simple
+  * Simple Redwork: contour simple, séparant les ailes supérieures et inférieures
+  * Complex Redwork: contour suivant les détails des ailes
+* Satin: une simple colonne satin pour le corps du papillon
 
 ![Template](/assets/images/tutorials/stitch-library-template/butterfly.svg)
 
-[Download Template](/assets/images/tutorials/stitch-library-template/butterfly.svg){: download="butterfly-template.svg"}
+[Télécharger](/assets/images/tutorials/stitch-library-template/butterfly.svg){: download="butterfly-template.svg"}
