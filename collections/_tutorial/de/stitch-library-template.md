@@ -13,7 +13,7 @@ field-of-use:
 user-level:
 werkzeug:
 ---
-![Schmetterlings-Karte mit Briefumschlag](/assets/images/tutorials/stitch-library-template/envelope.jpg){: style="max-width:400px;" .align-left} Dieses Template dient als Vorlage für alle Beispielbilder de Stich-Biblitothek.
+![Schmetterlings-Karte mit Briefumschlag](/assets/images/tutorials/stitch-library-template/envelope.jpg){: style="max-width:400px;" .align-left} Dieses Template dient als vielseitige Vorlage für alle Beispielbilder der Stich-Biblitothek.
 
 ## Verwendung
 
