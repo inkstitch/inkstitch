@@ -49,6 +49,9 @@ Ink/Stitch befindet sich stets in Enwicklung. Hier sind alle Änderungen seit de
 * [Egyptian](/de/fonts/egyptian/)
 
   ![Egyptian](/assets/images/fonts/egyptian.png)
+* [Ellenika](/fr/fonts/ellenika/)
+
+  ![Ellenika](/assets/images/fonts/ellenika.png)
 * [Eloquent](/de/fonts/eloquent/)
 
   ![Eloquent](/assets/images/fonts/eloquent.png)
