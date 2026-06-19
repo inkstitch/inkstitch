@@ -19,7 +19,7 @@ Le point de croix imite les techniques traditionnelles de broderie à la main.
 
 Il se caractérise par de petites croix régulières, ce qui donne à l'image brodée un aspect plat et géométrique.
 
-![Grenouille en point de croix double](/assets/images/upcoming/3.3.0/cross_stitch.jpg)
+{% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Point de croix" %}
 
 # Création
 
@@ -108,8 +108,8 @@ Ink/Stitch inclut une extension qui vous permet d'effectuer toutes les tâches s
 * Création d'une grille pour l'alignement des points de croix (et aide visuelle pendant la broderie)
 * Application des paramètres de point de croix aux éléments sélectionnés
 * Pixellisation du contour des éléments sélectionnés pour visualiser et ajuster facilement la position des points
-* Convert bitmap images into cross stitch fill elements
-
+* Convertir des images bitmap en remplissage en point de croix
+  
 L'extension calcule et affiche également la longueur des points en fonction des dimensions de la grille;  dans le paramétrage, la longueur maximale du point devrait être supérieure à cette valeur.
 
 [En savoir plus](/fr/docs/tools-fill/#cross-stitch-assistant)
@@ -126,7 +126,7 @@ Exécutez **Extensions > Ink/Stitch > Paramétres** pour ajuster les paramètres
 
 |Paramètres||Description|
 |---|---|---|
-|Autoremplissage avec des points de broderie| ☑ |Doit être activé pour que ces paramètres prennent effet.|
+|Remplissage| ☑ |Doit être activé pour que ces paramètres prennent effet.|
 |Méthode de remplissage |Point de Croix| Point de Croix  doit être sélectionné.|
 |Dimension des cellules|| Défini les dimensions de la grille de point de croix|
 |Méthode de Point de Croix||Choisir la méthode (voir ci-dessus pour des informations détaillées)|
