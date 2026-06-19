@@ -24,7 +24,7 @@ Für die Konturfüllung kann nur der Startpunkt über [visuelle Befehle](/docs/c
 
 Einstellung                     ||Beschreibung
 ---|---|---
-Automatisch geführte Füllstiche | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+Flächenstickerei | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
 Füllmethode                     | Konturfüllung | Hier bitte Konturfüllung auswählen
 Methode                         | ![Von Innen nach Außen](/assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg)<br>![Konturspiralen](/assets/images/docs/contour-fill-spirals.jpg)|**Von Innen nach Außen** (Standard) kann auch Formen mit Engpässen füllen<br>**Einfach Spirale** füllt eine Fläche mit einer einfachen Spirale von außen nach innen<br>**Doppelte Spirale** füllt eine Fläche mit einer doppelten Spirale, die Außen beginnt und endet.
 Stil der Verbindungen           | rund, spitz, abgeschrägt|Legt fest, wie Ecken beim Herunterskalieren der Kontur für die inneren Spiralen behandelt werden sollen
