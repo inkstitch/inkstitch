@@ -56,7 +56,7 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Einstellung                                 ||Beschreibung
 ---|---|---
-Automatisch geführte Füllstiche             | ☑ |Muss aktiviert sein
+Flächenstickerei            | ☑ |Muss aktiviert sein
 Füllmethode                                 | Kurvenfüllung|Für diesen Stichtyp bitte Kurvenfüllung auswählen
 Strategie                                   | ![Guided Fill Strategies](/assets/images/docs/guidedfillstrategies.svg)| Kopieren (Standard), oben, füllt die Form mit Hilfe von Kopien der Führungslinie. Parallelverschiebung, unten, stellt sicher, dass die Abstände gleich bleiben (dies kann zu scharfen Kanten führen).
 Erweitern                                   || Erweitert die Form um beim Sticken Lücken zu benachbarten Formen zu vermeiden.
