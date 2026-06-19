@@ -7,7 +7,7 @@ toc: true
 
 Un style de point décrit comment Ink/Stitch transforme les tracés et les formes en broderie. 
 
-Chaque type de point a sa texture, son épaisseur et so  niveau de couverture. 
+Chaque type de point a sa texture, son épaisseur et so niveau de couverture. 
 
 Le choix du point influence l'apparence des contours, des lettres et des remplissages sur le tissu, déterminant i le style visuel et l'aspect général de la broderie finale.
 
@@ -22,7 +22,7 @@ Le point droit produit une série de petits points suivant une ligne ou une cour
 
 Le point triple décrit une répétition de points droits avant arrière. Il en résultera un point plus épais.
 
-{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
+{% include folder-galleries path="butterfly-fill-project/running/" captions="1:Mandala au point droit (redwork)" %}
 
 [En savoir plus](/fr/docs/stitches/running-stitch/){: .btn .btn--primary}
 
@@ -31,15 +31,15 @@ Le point triple décrit une répétition de points droits avant arrière. Il en 
 La broderie ondulée crée un motif de points en spirales, en rangées ou en grilles.
 
 
-{% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Simple ripple from a closed shape;2:Satin guided ripple" %}
+{% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Ondulation à partir d'une forme fermée ;2:Ondulation guidée par un satin" %}
 
-[Learn more](/docs/stitches/ripple-stitch){: .btn .btn--primary}
+[En savoir plus](/docs/stitches/ripple-stitch){: .btn .btn--primary}
 
 ### Point Zig-Zag
 
-Le point zig-zag est une option très basique pour créer une simple ligne en zig-zag. Nous vous recommandons de ne l'utiliser que pour les lignes droites, parce qu'ils ne piqueront pas bien autour des bords. Dans la plupart des cas, choisissez plutôt une colonne satin.
+Le point zigzag crée des points de piqûre en va-et-vient. Il est idéal pour les lignes droites, mais les angles et les courbes serrées se prêtent mal à la réalisation de ces points. Pour la plupart des motifs, une colonne satin est préférable.
 
-{% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag with an angle;2: Zig-zag on a hexagonal Meanderpath" %}
+{% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag incliné avec un angle;2: Zig-zag sur un méandre hexagonal" %}
 
 [En savoir plus](/fr/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
 
@@ -47,7 +47,7 @@ Le point zig-zag est une option très basique pour créer une simple ligne en zi
 
 En mode point manuel Ink/Stitch utilise chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement là où vous les avez placés. 
 
-{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Chemin manuel - chaque noeud représente un point." %}
 
 [En savoir plus](/fr/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
@@ -56,9 +56,9 @@ En mode point manuel Ink/Stitch utilise chaque nœud d’un chemin comme point d
 ### Colonne Satin
 
 Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
-Ink/Stitch va dessiner des zig-zags entre deux lignes. Vous pouvez faire varier l'épaisseur de la colonne à votre guise.
+Une colonne satin est créée à l'aide d'un point zigzag entre deux lignes de contour (rails). La distance entre ces lignes détermine la largeur de la colonne, vous pouvez donc faire varier cette largeur à votre guise. Ink/Stitch dessine des zig-zags entre les deux lignes ce contour. 
 
-{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin border;2:Satin with randomized stitch length and staggered split stitches;3: Mutlicolor-Satin" %}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Bordure en colonne satin ;2:Satin avec longueur de point aléatoire et décalage;3: Satin Multicolore" %}
 
 [En savoir plus](/fr/docs/stitches/satin-column/){: .btn .btn--primary}
 
@@ -66,7 +66,7 @@ Ink/Stitch va dessiner des zig-zags entre deux lignes. Vous pouvez faire varier 
 
 Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible.
 
-{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application" %}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1: Appliqué avec point en E" %}
 
 [En savoir plus](/fr/docs/stitches/e-stitch/){: .btn .btn--primary}
 
@@ -74,7 +74,7 @@ Le point "E" est un point de recouvrement simple mais solide pour les éléments
 
 Le point en “S” est une colonne satin qui se donne des airs de remplissage capable de suivre une courbe
 
-{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stitch application" %}
+{% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:Appliqué avec point en S" %}
 
 [En savoir plus](/fr/docs/stitches/s-stitch/){: .btn .btn--primary}
 
@@ -82,25 +82,25 @@ Le point en “S” est une colonne satin qui se donne des airs de remplissage c
 
 Le satin en “zigzag” est une colonne satin avec un air de zigzag.
 
-{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zig-Zag-Satin application" %}
+{% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Appliqué avec un Satin Zig-Zag" %}
 
 [En savoir plus](/fr/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
 ## Remplissage
+Les points de remplissage sont utilisés pour remplir une grande surface avec une couleur.
+
 
 ### Tatami
 
-Le point de remplissage est utilisé pour remplir une grande surface avec une couleur.
-
-{% include folder-galleries path="butterfly-fill-project/tatami/" captions="1:Simple Tatami using two different angles;2:Tatami with higher end row spacing;3:Tatami using various param settings;4:Tatami using a pattern" %}
+{% include folder-galleries path="butterfly-fill-project/tatami/" captions="1: Tatamis simples utilisant deux angles différents;2:Tatami avec un large espace entre les rangées ;3:Tatami avec différents paramètres;4:Tatami utilisant une texture" %}
 
 [En savoir plus](/fr/docs/stitches/fill-stitch/){: .btn .btn--primary}
 
 ### Remplissage circulaire
 
-Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une cible.
+Le remplissage circulaire remplit une forme avec une spirale. Le centre de la spirale est positionné par défaut au centre de la forme. Il et possible de personnaliser la position du centre de la spirale à l'aide d'une commande de cible.
 
-{% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Circular fill using multiple layers;2:Circular fill with subtle color gradient" %}
+{% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Plusieurs couches de remplissage circulaire;2:Remplissages circulaires avec effet de dégradé circulaire" %}
 
 [En savoir plus](/fr/docs/stitches/circular-fill){: .btn .btn--primary}
 
@@ -108,7 +108,7 @@ Le remplissage circulaire remplit une forme avec une spirale. Le centre de la sp
 
 Le remplissage selon contour recouvre des zones en suivant leur contours.
 
-{% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Contour fill applied to the entire shape;2:Contour fill applied to shape sections" %}
+{% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Remplissage selon contour appliqué à toute la forme;2:Remplissage selon contour appliqué par sections" %}
 
 [En savoir plus](/fr/docs/stitches/contour-fill){: .btn .btn--primary}
 
@@ -120,7 +120,7 @@ Le point de croix imite les techniques traditionnelles de broderie à la main.
 
 Il se caractérise par de petites croix régulières, ce qui donne à l'image brodée un aspect plat et géométrique.
 
-{% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Cross stitch" %}
+{% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Point de croix" %}
 
 [En savoir plus](/docs/stitches/cross-stitch){: .btn .btn--primary}
 
@@ -128,15 +128,15 @@ Il se caractérise par de petites croix régulières, ce qui donne à l'image br
 
 Créez des lignes de guidage pour générer un remplissage courbé.
 
-{% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Guided fill with variegated thread;2:Layered areas using guided fill for a watercolor effect;3:Guided fill using the buffer method" %}
+{% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Remplissage guidé avec fil multicolore;2: Superposition de zones en remplissage guidés pour un effet d'aquarelle;3:remplissage guidé avec la méthode Buffer" %}
 
 [En savoir plus](/fr/docs/stitches/guided-fill){: .btn .btn--primary}
 
 ### Remplissage en dégradé linéaire
 
-Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d’Inkscapes pour créer des dégradés homogènes avec un positionnement de point cohérent.
+Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire d’Inkscape pour créer des dégradés linéaires homogènes avec un positionnement de point cohérent.
 
-{% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1:Blue-purple-gradient;2:Red-yellow-gradient" %}
+{% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1: Dégradé Bleu PourpreB;2:Dégradé Rouge Jaune" %}
 
 [En savoir plus](/docs/stitches/linear-gradient-fill){: .btn .btn--primary}
 
@@ -144,20 +144,20 @@ Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire 
 
 Le remplissage en méandres est originaire des techniques de quilting. Il produit un beau résultat en broderie machine. De grandes zones peuvent être remplies avec relativement peu de points.
 
-{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Meander fill using variegated thread;2:Meander fill with zick zack spacing" %}
+{% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Remplissage en méandres avec fil multicolore;2:Remplissage en méandres avec zigzag" %}
 
 [En savoir plus](/fr/docs/stitches/meander-fill){: .btn .btn--primary}
 
 ### Tartan Fill
 
-Un Tartan et un tissu à motif de rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais. Ce point de broderie essaye d’imiter ces motifs.
+Un Tartan et un tissu dont le tissage produit des rayures horizontales et verticales. Il est en particulier connu pour son utilisation pour les kilt écossais. Ce point de broderie essaye d’imiter ces motifs.
 
-{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Single color Tartan;2:Multi-color Tartan" %}
+{% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Tartan monochrome;2:Tartan multicolore" %}
 
 [En savoir plus](/fr/docs/stitches/tartan-fill){: .btn .btn--primary}
 
 ### Remplissage legacy
 
-En mode de remplissage manuel, l’extension divisera la forme en sections, chacune pouvant être brodée en une fois. Ensuite, ces sections seront cousues un à la fois, en sautant directement entre les sections.
+En mode de remplissage manuel, l’extension divise la forme en sections, chacune pouvant être brodée en une fois. Ensuite, ces sections sont brodées un eà la fois, en sautant directement entre les sections.
 
 [En savoir plus](/fr/docs/stitches/fill-stitch/#remplissage-manuel-dit-aussi-remplissage-legacy){: .btn .btn--primary}
