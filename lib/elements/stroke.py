@@ -20,6 +20,7 @@ from ..threads import ThreadColor
 from ..utils import Point, cache
 from ..utils.param import ParamOption
 from .element import EmbroideryElement, param
+from .satin_column import SatinColumn
 from .validation import ValidationWarning
 
 
@@ -635,6 +636,22 @@ class Stroke(EmbroideryElement):
             # TODO(#1696): When inplementing grouped clones, join this with the IDs of any shadow
             # roots, letting each instance without a specified seed get a different default.
         return seed
+
+    @cache
+    def get_guide_line(self, force_satin=False):
+        """Return the guide line element."""
+        guide_lines = get_marker_elements(self.node, "guide-line", False, True, True)
+        # No or empty guide line
+        if not guide_lines or (not guide_lines["stroke"] and not guide_lines["satin"]):
+            return None
+
+        # use the satin guide line if there is one, else use stroke
+        # ignore multiple guide lines
+        if len(guide_lines["satin"]) >= 1:
+            return guide_lines["satin"][0]
+        elif force_satin and len(guide_lines["stroke"][0].geoms) > 1:
+            return SatinColumn(guide_lines["stroke_data"][0]['marker_element'])
+        return guide_lines["stroke"][0]
 
     def _is_closed(self, clipped=True):
         # returns true if the outline of a single line stroke is a closed shape
