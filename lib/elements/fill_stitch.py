@@ -312,7 +312,7 @@ class FillStitch(EmbroideryElement):
     @property
     @param(
         'guided_fill_angle',
-        _('Angle'),
+        _('Guide copy angle'),
         tooltip=_('Angle for guide line shifting. '
                   'Changing the angle may have a huge impact on the actual spacing between the rows. '
                   'Ensure the guide line is large enough to fill the area when shifted into the given angle.'),
