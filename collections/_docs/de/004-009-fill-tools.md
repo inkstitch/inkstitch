@@ -115,7 +115,7 @@ Der Reihenabstand wird automatisch an die gewählte Stichlänge angepasst.
 #### Embossing
 
 * Form: Definiert die äußere Form des Embossing-Effekts. Optionen sind Rechteck oder Kreis. Die Form wird um alle ausgewählten Elemente herum angelegt, so dass alle umschlossen werden. Die Elemente selbst, werden dabei ausgespart.
-* Use only shape: emboss the whole shape (rectangle or circle) without excluding the motif shape.
+* Form ohne Ausschnitt: gibt die Form (Rechteck oder Kreis) ohne Motivausschnitt aus
 * Versatz (Form): Ein positiver Wert erweitert den Embossing Bereich. Der Versatz berechnet sich auf die ausgesparte Form und bezieht den Versatz unter Optionen mit ein.
 * Methode (rund, Gehrung, Abschrägung): Beeinflusst das Ergebnis um die Ecken herum
 

@@ -13,7 +13,7 @@ Therefore error messages for fill areas happen quiet often and are annoying for 
 ### Usage
 
 * Select one or more fill objects
-* Run: Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects
+* Run: Extensions > Ink/Stitch  > Tools: Fill > Break Apart Fill Objects
 
 ### Simple or Complex
 
@@ -51,65 +51,82 @@ Convert to gradient blocks will split a fill with a linear gradient into multipl
 
 The cross stitch assistant can assist in various ways when creating [cross stitch patterns](/docs/stitches/cross-stitch).
 
-It helps you to :
-* Check the diagonal stitch length
+![A mushroom in two versions: vector path and pixelated outline](/assets/images/docs/cross_stitch_assistant.jpg){: .align-right style="max-width: 400px" }
+It helps you to:
+* Check and adapt the diagonal stitch length
 * Create the page grid for cross stitch alignment (and visual support while working on cross stitches)
-* Pixelize and combine the outline of selected elements, to avoid jump stitches and receive a better representation of the cross stitch positioning
+* Pixelize and combine the outline of selected elements, to avoid jump stitches, overlaps and to receive a better representation of the cross stitch positioning
 * Apply cross stitch params to selected elements
 * Convert bitmap images into cross stitch fill elements
 
 ### Usage
 
-* Optional: select fill elements and/or bitmap images
+* Optional: select fill elements and/or bitmap images. Without a selection you can adapt the page grid only.
 * Open the assistant extension under `Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant`
 * Set the parameters, the output options and the bitmap settings (see below)
 * Click on `Apply`
 
-#### Parameters 
-- Grid settings: to ensure that adjacent areas are well coordinated, cross stitches are aligned according to a grid.
-This means that the embroidery pattern may change depending on where an element is located on the canvas.
-To plan this better, it is helpful to adjust the page grid to the size of the cross stitch pattern. This makes it easier to visually estimate the stitch positions.
+#### Settings
 
-The grid can also be set manually under `File > Document Properties... > Grids`. You will find an `Align to page` setting, that cannot be accessed via the Ink/Stitch plugin. It is therefore important to check that the newly generated grid is aligned with the top left corner of the page. If not, this setting must be adjusted manually.
-{: .notice--warning }
+* **Grid settings**
 
-When specifying the grid size, the stitch lengths of the diagonal crosses are not immediately apparent.
-However, stitch lengths always play an important role in machine embroidery. The Cross Stitch Assistant therefore has a field for displaying the diagonal stitch lengths.
+  To ensure that adjacent areas are well coordinated, cross stitches are aligned according to a grid.
+  This means that the embroidery pattern may change depending on where an element is located on the canvas.
+  To plan this better, it is helpful to adjust the page grid to the size of the cross stitch pattern. This makes it easier to visually estimate the stitch positions.
 
-- Params, pixelate and bitmap settings: You can directly set the cross stitch fill params here, according to the grid spacing.
+  **Check if the page grid is aligned at the top left corner of the page.**<br/>
+  If it is not, you'll need to manually adjust the grid under `File > Document Properties... > Grids`.
+  You will find an `Align to page` setting, that cannot be accessed via the Ink/Stitch plugin.
+  Set it to the top left corner.
+  {: .notice--warning }
+
+  When specifying the grid size, the **stitch lengths** of the diagonal crosses are not immediately apparent.
+  However, stitch lengths always play an important role in machine embroidery.
+  The Cross Stitch Assistant therefore has a field for displaying and adapting the diagonal stitch lengths.
+
+* **Params, pixelate and bitmap settings**
+
+  You can directly set the cross stitch fill params here, according to the grid spacing.
 
 #### Output options
 
-- Apply grid settings: Here you decide most of what the assistant is going to do.
+* **Apply grid settings**: Here you decide most of what the assistant is going to do.
 
-   - Parameters : If checked, the cross stitch parameters will be applied to all selected fill elements, according to the Parameters tab of the cross stitch assistant.
-   - Pixelize : If checked the Cross Stitch Assistant automatically pixelate selected fill elements based on the grid settings. This makes it possible to adjust the shapes directly to the grid and visually identify the stitch positions accurately.
+   * Parameters: If checked, the cross stitch parameters will be applied to all selected fill elements, according to the Parameters tab of the cross stitch assistant.
+   * Pixelize: If checked the Cross Stitch Assistant automatically pixelate selected fill elements based on the grid settings. This makes it possible to adjust the shapes directly to the grid and visually identify the stitch positions accurately.
+     * Add nodes: One can chose to add nodes at each grid intersection. This will make it easier to manually adapt the outline of the shape.
+       In non-square grids, nodes may not match grid intersections in vertical direction.
+* **Element handling**:
+  * Remove overlaps: decide if superpositions are kept or not.
 
-   - One can chose to add nodes at each grid intersection
-- Element handling: decide if superpositions are kept or not. 
-
-- Setup page grid: decide if the grid is shown or not, and its color. Chose to remove or not the other grids of the document.
+* **Setup page grid**:
+  * Define whether or not to adapt the page grid
+  * Define grid color
+  * Chose whether or not to remove the previously set cross stitch grids from the document.
+    Your manual page grids will not be removed, but disabled.
 
 #### Bitmap settings
-- Convert bitmaps : If checked all selected bitmap images are converted into fill shapes
-- One cross each pixel : check if you want to convert pixel art images
-- Color selection: chose between specifying either
-  - a number of colors, in this case you can also chose the color reducing algorithm. The proposed algorithms will give different results, and the best one really depends on your image
-  - a list of rgb colors
-  - a gimp color palette
-   - or add strokes with the colors you want to use and add them to the selection before using the assistant.
-- Saturation, Brightness and Contrast of the original image may be tweaked here to achieve better results
-- Transparency threashold : pixels with at least that transparency are ignored.
-- Background color : define the background color here, will allow you to
-- Remove background : decide what to do with fills with background color
 
+* **Convert bitmaps**: If checked all selected bitmap images are converted into fill shapes
+* **One cross each pixel**: check if you want to convert pixel art images
+* **Color selection**: chose between specifying either
+  * a number of colors, in this case you can also chose the color reducing algorithm. The proposed algorithms will give different results, and the best one really depends on your image
+  * a list of rgb colors
+  * a gimp color palette
+   * or add strokes with the colors you want to use and add them to the selection before using the assistant.
+* **Saturation, Brightness and Contrast** of the original image may be tweaked here to achieve better results
+* **Transparency threashold**: pixels with at least that transparency are ignored.
+* **Background color**: define the background color here, will allow you to remove the background.
+* **Remove background**: decide what to do with fills with background color
 
+In our tutorial section you can find multiple in depth instructions on how to convert images into cross stitch embroideries.
+{: .notice--info }
 
 ## Knockdown Fill
 
 Helper method to generate either
-- a fill area underneath all selected elements, optionally with a positive or a negative offset. This can be very useful when working with high pile fabric (usually with a positive offset) or to create global underlay (usually with a negative offset)
-- a rectangle or a circle area around all selected elements (but not underneath). This can be useful to create an embossing effect.
+* a fill area underneath all selected elements, optionally with a positive or a negative offset. This can be very useful when working with high pile fabric (usually with a positive offset) or to create global underlay (usually with a negative offset)
+* a rectangle or a circle area around all selected elements (but not underneath). This can be useful to create an embossing effect.
  
 ![A figure with a surrounding knockdown stitch](/assets/images/docs/knockdown.png)
 

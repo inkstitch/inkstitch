@@ -136,7 +136,7 @@ Der Hauptunterschied zum `Automatisch geführtem Laufstich` ist, dass jede Linie
 
   Wendet den Wert für [Mehrfach-Geradstitch Anzahl der Wiederholungen](/de/docs/stitches/bean-stitch/) auf die Deckstiche an (nicht auf die Unterpfade).
 
-* Sort by color : work with each color independently
+* Elemente nach Farbe sortieren: bearbeitet jede Farbe unabhängig voneinander
 
 * Elemente kombinieren: Kombiniere aufeinanderfolgende Elemente desselben Typs
 * Originalpfade behalten: legt fest, ob Originalpfade gelöscht werden sollen oder nicht
