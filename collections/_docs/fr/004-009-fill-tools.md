@@ -58,48 +58,110 @@ Convertir en blocs de dégradé va découper un remplissage dont la couleur de f
 
 L'assistant de point de croix peut vous aider de différentes manières lors de la création de [grilles de point de croix](/docs/stitches/cross-stitch).
 
-* Affichage de la longueur de la diagonale des croix, et donc de la longueur des points
-* Création de la grille de la page
-* Pixellisation des éléments de remplissage
-* Transmission de la taille de la grille comme paramètre aux éléments de remplissage
+![Un champignon en deux versions : tracé vectoriel et contour pixellisé](/assets/images/docs/cross_stitch_assistant.jpg){: .align-right style="max-width: 400px" }
+
+Il vous permet de :
+
+* Vérifier et ajuster la longueur de la diagonale des croix
+
+* Créer la grille de la page pour l'alignement des points de croix (et un support visuel pendant la broderie)
+
+* Pixeliser et combiner le contour des éléments sélectionnés, afin d'éviter les sauts de points et les chevauchements, et d'obtenir un meilleur rendu du positionnement des points de croix
+
+* Appliquer des paramètres de point de croix aux éléments sélectionnés
+
+* Convertir des images bitmap en éléments de remplissage en points de croix
+
+### Utilisation
+
+* Facultatif : sélectionnez des éléments de remplissage et/ou des images bitmap. Sans sélection, vous pouvez uniquement ajuster la grille de la page. Ouvrez l'extension d'assistance sous « Extensions > Ink/Stitch > Outils : Remplissage > Assistant Point de Croix ».
+
+Configurez les paramètres, les options de sortie et les paramètres de conversion des images bitmap (voir ci-dessous).
+
+Cliquez sur « Appliquer ».
+
+#### Paramètres
+
+**Paramètres de la grille**
+
+Pour assurer une bonne coordination des zones adjacentes, les points de croix sont alignés sur une grille.
+
+Cela signifie que le motif de broderie peut varier selon l'emplacement d'un élément sur le canevas.
+
+Pour une meilleure planification, il est conseillé d'ajuster la grille de la page à la taille du motif de point de croix. Cela facilite l'estimation visuelle de la position des points.
+
+**Vérifiez si la grille de la page est alignée dans le coin supérieur gauche.**
+
+Si ce n'est pas le cas, vous devrez ajuster manuellement la grille sous « Fichier > Propriétés du document… > Grilles ».
+
+Vous trouverez un paramètre « Aligner sur la page », qui n'est pas accessible via l'extension Ink/Stitch.
+
+Placez-le dans le coin supérieur gauche. {: .notice--warning }
 
 
-### Usage
+Lors de la définition de la taille de la grille, la **longueur des points** des croix diagonales n'est pas immédiatement visible.
 
-* Facultatif : sélectionnez un ou plusieurs éléments de remplissage.
-* Ouvrez l’extension d’assistance sous « Extensions >Ink/Stitch > Outils : Remplissage > Assistant Point de Croix ».
-* Définissez la taille de grille souhaitée.
-* Spécifiez les options d’application de la taille de grille (voir ci-dessous).
-* Cliquez sur « Appliquer ».
+Pourtant, la longueur des points est essentielle en broderie machine.
 
+L'Assistant Point de Croix dispose donc d'un champ permettant d'afficher et d'adapter la longueur des points diagonaux.
 
-#### La grille de point de croix
+* **Paramètres, pixellisation et bitmap**
 
-Pour assurer une bonne jonction des zones adjacentes, les points de croix sont alignés selon une grille.
-Cela signifie que le motif de broderie peut varier en fonction de l'emplacement d'un élément sur le canevas.
+Vous pouvez définir directement ici les paramètres de remplissage du point de croix, en fonction de l'espacement de la grille.
 
-Pour une meilleure planification, il est utile d'ajuster la grille de la page à la taille du motif de point de croix. Cela facilite l'estimation visuelle de l'emplacement des points.
+#### Options de sortie
 
-La grille peut également être définie manuellement dans « Fichier > Propriétés du document… > Grilles ». Vous y trouverez un paramètre « Aligner sur la page », qui n'est pas accessible via l'extension Ink/Stitch. Il est donc important de vérifier que la grille nouvellement générée est alignée avec le coin supérieur gauche de la page. Dans le cas contraire, ce paramètre doit être ajusté manuellement.
-{: .notice--warning }
+* **Appliquer les paramètres de la grille** : C'est ici que vous déterminez la plupart des actions de l'assistant.
 
-#### Pixelliser les éléments de remplissage
+* Paramètres : Si cette option est cochée, les paramètres du point de croix seront appliqués à tous les éléments de remplissage sélectionnés, conformément à l'onglet « Paramètres » de l'Assistant Point de Croix.
 
-L'extension Assistant Point de Croix propose une option permettant de pixelliser automatiquement les éléments de remplissage sélectionnés en fonction des paramètres de la grille.
+* Pixelliser : Si cette option est cochée, l'Assistant Point de Croix pixellise automatiquement les éléments de remplissage sélectionnés en fonction des paramètres de la grille. Cela permet d'ajuster les formes directement à la grille et d'identifier visuellement et précisément la position des points.
 
-Cela permet d'ajuster les formes directement sur la grille et d'identifier visuellement et précisément la position des points.
+* Ajouter des nœuds : Vous pouvez ajouter des nœuds à chaque intersection de la grille. Cela facilitera l’adaptation manuelle du contour de la forme.
 
-#### Définir les paramètres de broderie
+Dans les grilles non carrées, les nœuds peuvent ne pas correspondre aux intersections verticales de la grille.
 
-Une fois la taille de la grille ajustée, il est nécessaire de la définir également dans les paramètres de broderie de l'élément.
+* **Gestion des éléments** :
 
-L'extension Assistant Point de Croix offre donc la possibilité d'appliquer les paramètres de taille de la grille aux éléments sélectionnés en une seule étape.
+* Supprimer les chevauchements : choisissez de conserver ou non les superpositions.
 
-#### Calcul de la longueur des points
+* **Configurer la grille de la page** :
 
-Lors de la définition de la taille de la grille, la longueur des points des croix (diagonales) n'est pas immédiatement visible.
+* Indiquez si la grille de la page doit être adaptée.
 
-Pourtant, la longueur des points est essentielle en broderie machine. C'est pourquoi l'Assistant Point de Croix propose un champ permettant d'afficher la longueur de la diagonale des croix. 
+* Définissez la couleur de la grille.
+
+* Choisissez de supprimer ou non les grilles de point de croix précédemment définies dans le document.
+
+Vos grilles de page manuelles ne seront pas supprimées, mais désactivées.
+
+#### Paramètres des images bitmap
+
+* **Convertir les images bitmap** : Si cette option est cochée, toutes les images bitmap sélectionnées seront converties en formes de remplissage.
+
+* **Une croix par pixel** : Cochez cette case si vous souhaitez convertir les images pixel art.
+
+* **Sélection des couleurs** : Choisissez de spécifier :
+
+* un nombre de couleurs. Dans ce cas, vous pouvez également choisir l’algorithme de réduction des couleurs. Les algorithmes proposés donneront des résultats différents, et le meilleur dépendra de votre image.
+
+* Liste de couleurs RVB
+
+* Palette de couleurs GIMP
+
+* Vous pouvez également ajouter des traits avec les couleurs souhaitées et les intégrer à la sélection avant d'utiliser l'assistant.
+
+* **La saturation, la luminosité et le contraste** de l'image originale peuvent être ajustés ici pour de meilleurs résultats.
+
+* **Seuil de transparence** : les pixels dont la transparence est supérieure à ce seuil sont ignorés.
+
+* **Couleur d'arrière-plan** : définissez la couleur d'arrière-plan ici ; cela vous permettra de le supprimer.
+
+* **Supprimer l'arrière-plan** : choisissez le traitement à appliquer aux zones remplies de la couleur d'arrière-plan.
+
+Dans notre section tutoriels, vous trouverez de nombreux guides détaillés pour convertir des images en broderies au point de croix.
+
+{: .notice--info }
 
 
 ## Assise de points couchants à partir de la sélection {#knockdown-fill}
