@@ -1,4 +1,4 @@
-from math import atan2, copysign
+from math import atan2, copysign, cos, sin
 from random import random
 
 from networkx import connected_components, is_empty
@@ -26,44 +26,18 @@ from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
 from .utils.connect_geometries import connect_offset_lines
 
 
-def guided_fill(shape,
-                guideline,
-                anchor_line,
-                angle,
-                row_spacing,
-                num_staggers,
-                bean_stitch_repeats,
-                max_stitch_length,
-                running_stitch_length,
-                running_stitch_tolerance,
-                smoothness,
-                skip_last,
-                starting_point,
-                ending_point,
-                underpath,
-                strategy,
-                enable_random_stitch_length,
-                random_sigma,
-                random_seed,
-                ):
-    guide_line = prepare_guide_line(guideline, shape, strategy)
+def guided_fill(fill, shape, guideline, anchor_line, starting_point, ending_point):
+    guide_line = prepare_guide_line(guideline, shape, fill.guided_fill_strategy)
 
-    segments = intersect_region_with_grating_guideline(
-        shape, guide_line, row_spacing, num_staggers, max_stitch_length, strategy, running_stitch_tolerance, smoothness,
-        enable_random_stitch_length, random_sigma, random_seed
-    )
+    segments = intersect_region_with_grating_guideline(fill, shape, guide_line)
 
-    if strategy > 0 and segments:
-        segments = connect_offset_lines(shape, segments, row_spacing, skip_last, max_stitch_length)
+    if fill.guided_fill_strategy > 0 and segments:
+        segments = connect_offset_lines(shape, segments, fill.row_spacing, fill.skip_last, fill.max_stitch_length)
 
-    segments = _stagger_and_cut_segments(
-        shape, segments, guide_line, anchor_line, max_stitch_length, row_spacing, num_staggers, strategy,
-        enable_random_stitch_length, random_sigma, random_seed, running_stitch_tolerance, smoothness
-    )
+    segments = _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line)
 
     if not segments:
-        return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                        num_staggers, skip_last, starting_point, ending_point, underpath)
+        return fallback(fill, shape, guideline, starting_point, ending_point)
 
     debug.add_layer("Segments")
     debug.log_line_strings([LineString(segment) for segment in segments])
@@ -71,8 +45,7 @@ def guided_fill(shape,
     fill_stitch_graph = build_fill_stitch_graph(shape, segments, starting_point, ending_point)
 
     if is_empty(fill_stitch_graph):
-        return fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-                        num_staggers, skip_last, starting_point, ending_point, underpath)
+        return fallback(fill, shape, guideline, ending_point)
 
     # in case we end up with disconnected shapes for whatever reason, let's render them independently (with a jump in between)
     connected_graphs = [fill_stitch_graph.subgraph(c).copy() for c in connected_components(fill_stitch_graph)]
@@ -81,40 +54,33 @@ def guided_fill(shape,
         check_stop_flag()
         graph_make_valid(guided_graph)
 
-        travel_graph = build_travel_graph(guided_graph, shape, angle, underpath)
+        travel_graph = build_travel_graph(guided_graph, shape, fill.guided_fill_angle or 0, fill.underpath)
 
-        path = find_stitch_path(guided_graph, travel_graph, starting_point, ending_point, underpath)
-        stitches = path_to_stitches(
-            shape, path, travel_graph, guided_graph, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-            skip_last, underpath
-        )
+        path = find_stitch_path(guided_graph, travel_graph, starting_point, ending_point, fill.underpath)
+        stitches = path_to_stitches(fill, shape, path, travel_graph, guided_graph)
 
-        if any(bean_stitch_repeats):
+        if any(fill.bean_stitch_repeats):
             # add bean stitches, but ignore travel stitches
-            stitches = bean_stitch(stitches, bean_stitch_repeats, ['travel', 'fill_row_start'])
+            stitches = bean_stitch(stitches, fill.bean_stitch_repeats, ['travel', 'fill_row_start'])
         result.append(stitches)
     return result
 
 
-def fallback(shape, guideline, row_spacing, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-             num_staggers, skip_last, starting_point, ending_point, underpath):
+def fallback(fill, shape, guideline, starting_point, ending_point,):
     # fall back to normal auto-fill with an angle that matches the guideline (sorta)
     guideline = guideline.geoms[0]
     guide_start, guide_end = [guideline.coords[0], guideline.coords[-1]]
     angle = atan2(guide_end[1] - guide_start[1], guide_end[0] - guide_start[0]) * -1
     return [tatami_fill(
-        shape, angle, row_spacing, None, max_stitch_length, running_stitch_length, running_stitch_tolerance,
-        num_staggers, skip_last, starting_point, ending_point, underpath
+        shape, angle, fill.row_spacing, None, fill.max_stitch_length, fill.running_stitch_length, fill.running_stitch_tolerance,
+        fill.staggers, fill.skip_last, starting_point, ending_point, fill.underpath
     )]
 
 
-def _stagger_and_cut_segments(
-        shape, segments, guide_line, anchor_line, max_stitch_length, row_spacing, num_staggers, strategy,
-        enable_random_stitch_length, random_sigma, random_seed, tolerance, smoothness) -> list[list[tuple[float, ...]]]:
+def _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line) -> list[list[tuple[float, ...]]]:
 
     # sort segments so that they are well prepared for staggering
-    segments = _sort_segments(shape, segments, strategy, guide_line)
-    stagger = num_staggers
+    segments = _sort_segments(shape, segments, fill.guided_fill_strategy, guide_line)
 
     # apply stagger and smoothness
     new_segments = []
@@ -125,18 +91,15 @@ def _stagger_and_cut_segments(
         linestring = segment
         rolled = False
 
-        if smoothness:
-            points = smooth_path([InkstitchPoint(*coord) for coord in linestring.coords], smoothness)
+        if fill.smoothness:
+            points = smooth_path([InkstitchPoint(*coord) for coord in linestring.coords], fill.smoothness)
             linestring = LineString(points)
 
         if linestring.is_ring and (get_point(linestring, 0).within(shape) or anchor_line):
             # users have the option to use an anchor line to help defining the start and end of the linestrings
             # for the stitch positioning task
             if anchor_line is not None:
-                linestring, rolled = _get_anchored_stitch_line(
-                    linestring, guide_line, anchor_line, max_stitch_length, row_spacing, stagger, strategy,
-                    enable_random_stitch_length, random_sigma, random_seed, tolerance, i
-                )
+                linestring, rolled = _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i)
             if not rolled:
                 # we assume that all lines which possibly ends within the shape are actually rings (even when not recognized as such)
                 # take exterior of the shape, ignoring the holes. we connected everything to the exterior, so this should work
@@ -144,16 +107,9 @@ def _stagger_and_cut_segments(
                 diff = linestring.difference(Polygon(shape.exterior))
                 if not diff.is_empty:
                     outside_point = take_only_line_strings(diff).geoms[0].interpolate(0.5, True)
-                    linestring = _apply_stagger(
-                        LineString(roll_linear_ring(linestring, linestring.project(outside_point))),
-                        guide_line, max_stitch_length, row_spacing, stagger, strategy,
-                        enable_random_stitch_length, random_sigma, random_seed, tolerance, i
-                    )
+                    linestring = _apply_stagger(fill, LineString(roll_linear_ring(linestring, linestring.project(outside_point))), guide_line, i)
         else:
-            linestring = _apply_stagger(
-                linestring, guide_line, max_stitch_length, row_spacing, stagger, strategy,
-                enable_random_stitch_length, random_sigma, random_seed, tolerance, i
-            )
+            linestring = _apply_stagger(fill, linestring, guide_line, i)
 
         debug.log_line_string(linestring, "row", "blue")
 
@@ -171,9 +127,7 @@ def _stagger_and_cut_segments(
     return new_segments
 
 
-def _get_anchored_stitch_line(
-        linestring, guide_line, anchor_line, max_stitch_length, row_spacing, stagger, strategy,
-        enable_random_stitch_length, random_sigma, random_seed, tolerance, i) -> tuple[LineString, bool]:
+def _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i) -> tuple[LineString, bool]:
     rolled = False
 
     # get intersection points
@@ -189,10 +143,7 @@ def _get_anchored_stitch_line(
 
     if len(intersection.geoms) == 1:
         # there is only one intersection, we can simply apply stitches
-        linestring = _apply_stagger(
-            linestring, guide_line, max_stitch_length, row_spacing, stagger, strategy,
-            enable_random_stitch_length, random_sigma, random_seed, tolerance, i
-        )
+        linestring = _apply_stagger(fill, linestring, guide_line, i)
     else:
         # more than one intersection
         # split the segment into multiple paths and apply stitches individually
@@ -203,22 +154,21 @@ def _get_anchored_stitch_line(
         linestring_coords: list[Point] = []
         for start, end in zip(projections[:-1], projections[1:]):
             line = substring(linestring, start, end)
-            stitched_line = _apply_stagger(
-                line, guide_line, max_stitch_length, row_spacing, stagger, strategy,
-                enable_random_stitch_length, random_sigma, random_seed, tolerance, i
-            )
+            stitched_line = _apply_stagger(fill, line, guide_line, i)
             linestring_coords.extend(get_coordinates(stitched_line).tolist())
         linestring = LineString(linestring_coords)
     return linestring, rolled
 
 
-def _apply_stagger(
-        linestring, guide_line, max_stitch_length, row_spacing, stagger, strategy,
-        enable_random_stitch_length, random_sigma, random_seed, tolerance, i) -> LineString:
+def _apply_stagger(fill, linestring, guide_line, i) -> LineString:
     # we stagger by using a substring of the original line
     # then we reappend the first point (just in case we actually need it)
-    if strategy != 2:
-        start = ((i / stagger) % 1) * max_stitch_length
+    num_staggers = fill.staggers
+    if num_staggers == 0:
+        num_staggers = 1  # sanity check to avoid division by zero.
+
+    if fill.guided_fill_strategy != 2:
+        start = ((i / fill.staggers) % 1) * fill.max_stitch_length
     else:
         # stitch positions for the buffer method
         # it'd be better if we applied stitch positions earlier, but this would alter distance values between the rings and may also change
@@ -226,15 +176,22 @@ def _apply_stagger(
         # shape. Additionally: we already changed our starting points to somwhere outside of the shape
         # this helps to hide start and end point and enables us to do the routing, but it also means, that we already are way off when it
         # comes to stitch positions
-        pos = round(linestring.distance(guide_line) / row_spacing)
-        start = ((pos / stagger) % 1) * max_stitch_length
+        pos = round(linestring.distance(guide_line) / fill.row_spacing)
+        start = ((pos / num_staggers) % 1) * fill.max_stitch_length
 
     first_point = get_point(linestring, 0)
     points = [InkstitchPoint(*coord) for coord in substring(linestring, start, linestring.length).coords]
 
     return LineString(
         [first_point] +
-        running_stitch(points, [max_stitch_length], tolerance, enable_random_stitch_length, random_sigma, prng.join_args(random_seed, i), False)
+        running_stitch(
+            points,
+            [fill.max_stitch_length],
+            fill.running_stitch_tolerance,
+            fill.enable_random_stitch_length,
+            fill.random_stitch_length_jitter,
+            prng.join_args(fill.random_seed, i),
+            False)
     )
 
 
@@ -288,9 +245,7 @@ def _linestring_to_segments(shape, linestring) -> list[list[tuple[float, ...]]]:
     return segments
 
 
-def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
-                     stitch_length, running_stitch_length, running_stitch_tolerance, skip_last,
-                     underpath):
+def path_to_stitches(fill, shape, path, travel_graph, fill_stitch_graph):
     path = collapse_sequential_outline_edges(path, fill_stitch_graph)
 
     stitches = []
@@ -311,7 +266,7 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
 
             new_stitches = [Stitch(*point, tags=['guided_fill', 'fill_row']) for point in path_geometry.coords]
 
-            if skip_last:
+            if fill.skip_last:
                 del new_stitches[-1]
 
             if new_stitches:
@@ -322,7 +277,9 @@ def path_to_stitches(shape, path, travel_graph, fill_stitch_graph,
 
             travel_graph.remove_edges_from(fill_stitch_graph[edge[0]][edge[1]]['segment'].get('underpath_edges', []))
         else:
-            stitches.extend(travel(shape, travel_graph, edge, [running_stitch_length], running_stitch_tolerance, skip_last, underpath))
+            stitches.extend(travel(
+                shape, travel_graph, edge, [fill.running_stitch_length], fill.running_stitch_tolerance, fill.skip_last, fill.underpath)
+            )
 
     return stitches
 
@@ -411,6 +368,20 @@ def prepare_guide_line(line, shape, strategy) -> LinearRing | LineString | Multi
     return prepare_offset_guide(line, shape)
 
 
+def _get_direction_and_start_row(shape, guide_line, strategy, angle, row_spacing):
+    if strategy == 1 or (strategy == 0 and angle is None):
+        translate_direction = InkstitchPoint(*guide_line.coords[-1]) - InkstitchPoint(*guide_line.coords[0])
+        translate_direction = translate_direction.unit().rotate_left()
+        start_row = _get_start_row(guide_line, shape, row_spacing, translate_direction)
+    elif strategy == 0:
+        translate_direction = InkstitchPoint(cos(angle), sin(angle)).unit()
+        start_row = _get_start_row(guide_line, shape, row_spacing, translate_direction)
+    else:
+        translate_direction = None
+        start_row = int(guide_line.distance(shape) / row_spacing)
+    return translate_direction, start_row
+
+
 def _get_start_row(line, shape, row_spacing, line_direction) -> int:
     if line.intersects(shape):
         return 0
@@ -425,20 +396,12 @@ def _get_start_row(line, shape, row_spacing, line_direction) -> int:
     return int(copysign(row, shape_direction * line_direction))
 
 
-def intersect_region_with_grating_guideline(shape, line, row_spacing, num_staggers, max_stitch_length, strategy, tolerance, smoothness,  # noqa: C901
-                                            enable_random_stitch_length, random_sigma, random_seed) -> list[LineString]:
+def intersect_region_with_grating_guideline(fill, shape, guide_line) -> list[LineString]:  # noqa: C901
     shape_envelope = prep(shape.envelope)
-
-    if num_staggers == 0:
-        num_staggers = 1  # sanity check to avoid division by zero.
-
-    if strategy != 2:
-        translate_direction = InkstitchPoint(*line.coords[-1]) - InkstitchPoint(*line.coords[0])
-        translate_direction = translate_direction.unit().rotate_left()
-
-        start_row = _get_start_row(line, shape, row_spacing, translate_direction)
-    else:
-        start_row = int(line.distance(shape) / row_spacing)
+    strategy = fill.guided_fill_strategy
+    translate_direction, start_row = _get_direction_and_start_row(
+        shape, guide_line, strategy, fill.guided_fill_angle, fill.row_spacing
+    )
 
     row = start_row
     direction = 1
@@ -453,12 +416,12 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
 
         if strategy > 0:
             # parallel_offset
-            offset = row * row_spacing
+            offset = row * fill.row_spacing
             if offset == 0:
                 # this is needed for macOS builds
                 offset = 0.0001
             if strategy == 1:
-                segment = line.offset_curve(offset, quad_segs=16)
+                segment = guide_line.offset_curve(offset, quad_segs=16)
                 if not isinstance(segment, (LineString, LinearRing)):
                     # sometimes for an odd reason parallel_offset will split up a part of the offset line
                     # we can put it back together with the line_merge method and still keepthe disjoint parts
@@ -469,13 +432,13 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
                 # we have enough lines to work with
                 if direction == -1:
                     break
-                segment = line.buffer(offset + row_spacing / 2).boundary
+                segment = guide_line.buffer(offset + fill.row_spacing / 2).boundary
         else:
             # Copy
-            translate_amount = translate_direction * row * row_spacing
-            offset_line = translate(line, xoff=translate_amount.x, yoff=translate_amount.y)
-            if smoothness:
-                offset_line = LineString(smooth_path(offset_line.coords, smoothness))
+            translate_amount = translate_direction * row * fill.row_spacing
+            offset_line = translate(guide_line, xoff=translate_amount.x, yoff=translate_amount.y)
+            if fill.smoothness:
+                offset_line = LineString(smooth_path(offset_line.coords, fill.smoothness))
             segment = offset_line
 
         if shape_envelope.intersects(segment):
@@ -491,7 +454,7 @@ def intersect_region_with_grating_guideline(shape, line, row_spacing, num_stagge
                 break
 
     # Add some debug infos
-    debug.log_line_strings(ensure_multi_line_string(line), 'guide line')
+    debug.log_line_strings(ensure_multi_line_string(guide_line), 'guide line')
     debug.log_line_strings(ensure_multi_line_string(shape.boundary), "guided fill shape")
     debug.add_layer("Grating rows")
     debug.log_line_strings(rows)

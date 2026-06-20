@@ -79,6 +79,7 @@ inkstitch_attribs = [
     'angle',
     'contour_strategy',
     'guided_fill_strategy',
+    'guided_fill_angle',
     'join_style',
     'avoid_self_crossing',
     'smoothness_mm',

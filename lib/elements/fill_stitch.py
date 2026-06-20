@@ -310,6 +310,25 @@ class FillStitch(EmbroideryElement):
         return math.radians(self.get_float_param('angle', 0))
 
     @property
+    @param(
+        'guided_fill_angle',
+        _('Angle'),
+        tooltip=_('Angle for guide line shifting. '
+                  'Changing the angle may have a huge impact on the actual spacing between the rows. '
+                  'Ensure the guide line is large enough to fill the area when shifted into the given angle.'),
+        unit='deg',
+        type='float',
+        sort_index=21,
+        select_items=[('guided_fill_strategy', 0)],
+        default=None)
+    @cache
+    def guided_fill_angle(self):
+        angle = self.get_float_param('guided_fill_angle', None)
+        if angle is not None:
+            angle = math.radians(angle)
+        return angle
+
+    @property
     @param('tartan_angle',
            _('Angle of lines of stitches'),
            tooltip=_('Relative to the tartan stripe direction.'),
@@ -1253,27 +1272,7 @@ class FillStitch(EmbroideryElement):
             return self.do_tatami_fill(shape, starting_point, ending_point)
 
         stitch_groups = []
-        guided_stitch_groups = guided_fill(
-            shape,
-            guide_line,
-            anchor_line,
-            self.angle,
-            self.row_spacing,
-            self.staggers,
-            self.bean_stitch_repeats,
-            self.max_stitch_length,
-            self.running_stitch_length,
-            self.running_stitch_tolerance,
-            self.smoothness,
-            self.skip_last,
-            starting_point,
-            ending_point,
-            self.underpath,
-            self.guided_fill_strategy,
-            self.enable_random_stitch_length,
-            self.random_stitch_length_jitter,
-            self.random_seed,
-        )
+        guided_stitch_groups = guided_fill(self, shape, guide_line, anchor_line, starting_point, ending_point)
 
         for stitches in guided_stitch_groups:
             stitch_groups.append(
