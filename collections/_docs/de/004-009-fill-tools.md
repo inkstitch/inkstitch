@@ -57,6 +57,83 @@ Der Kreuzstich-Assistent kann bei der Erstellung von [Kreuzstichmustern](/de/doc
 
 #### Das Kreuzstich-Gitter
 
+## Cross Stitch Assistant
+
+The cross stitch assistant can assist in various ways when creating [cross stitch patterns](/docs/stitches/cross-stitch).
+
+![A mushroom in two versions: vector path and pixelated outline](/assets/images/docs/cross_stitch_assistant.jpg){: .align-right style="max-width: 400px" }
+It helps you to:
+* Check and adapt the diagonal stitch length
+* Create the page grid for cross stitch alignment (and visual support while working on cross stitches)
+* Pixelize and combine the outline of selected elements, to avoid jump stitches, overlaps and to receive a better representation of the cross stitch positioning
+* Apply cross stitch params to selected elements
+* Convert bitmap images into cross stitch fill elements
+
+### Usage
+
+* Optional: select fill elements and/or bitmap images. Without a selection you can adapt the page grid only.
+* Open the assistant extension under `Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant`
+* Set the parameters, the output options and the bitmap settings (see below)
+* Click on `Apply`
+
+#### Settings
+
+* **Grid settings**
+
+  To ensure that adjacent areas are well coordinated, cross stitches are aligned according to a grid.
+  This means that the embroidery pattern may change depending on where an element is located on the canvas.
+  To plan this better, it is helpful to adjust the page grid to the size of the cross stitch pattern. This makes it easier to visually estimate the stitch positions.
+
+  **Check if the page grid is aligned at the top left corner of the page.**<br/>
+  If it is not, you'll need to manually adjust the grid under `File > Document Properties... > Grids`.
+  You will find an `Align to page` setting, that cannot be accessed via the Ink/Stitch plugin.
+  Set it to the top left corner.
+  {: .notice--warning }
+
+  When specifying the grid size, the **stitch lengths** of the diagonal crosses are not immediately apparent.
+  However, stitch lengths always play an important role in machine embroidery.
+  The Cross Stitch Assistant therefore has a field for displaying and adapting the diagonal stitch lengths.
+
+* **Params, pixelate and bitmap settings**
+
+  You can directly set the cross stitch fill params here, according to the grid spacing.
+
+#### Output options
+
+* **Apply grid settings**: Here you decide most of what the assistant is going to do.
+
+   * Parameters: If checked, the cross stitch parameters will be applied to all selected fill elements, according to the Parameters tab of the cross stitch assistant.
+   * Pixelize: If checked the Cross Stitch Assistant automatically pixelate selected fill elements based on the grid settings. This makes it possible to adjust the shapes directly to the grid and visually identify the stitch positions accurately.
+     * Add nodes: One can chose to add nodes at each grid intersection. This will make it easier to manually adapt the outline of the shape.
+       In non-square grids, nodes may not match grid intersections in vertical direction.
+* **Element handling**:
+  * Remove overlaps: decide if superpositions are kept or not.
+
+* **Setup page grid**:
+  * Define whether or not to adapt the page grid
+  * Define grid color
+  * Chose whether or not to remove the previously set cross stitch grids from the document.
+    Your manual page grids will not be removed, but disabled.
+
+#### Bitmap settings
+
+* **Convert bitmaps**: If checked all selected bitmap images are converted into fill shapes
+* **One cross each pixel**: check if you want to convert pixel art images
+* **Color selection**: chose between specifying either
+  * a number of colors, in this case you can also chose the color reducing algorithm. The proposed algorithms will give different results, and the best one really depends on your image
+  * a list of rgb colors
+  * a gimp color palette
+   * or add strokes with the colors you want to use and add them to the selection before using the assistant.
+* **Saturation, Brightness and Contrast** of the original image may be tweaked here to achieve better results
+* **Transparency threashold**: pixels with at least that transparency are ignored.
+* **Background color**: define the background color here, will allow you to remove the background.
+* **Remove background**: decide what to do with fills with background color
+
+In our tutorial section you can find multiple in depth instructions on how to convert images into cross stitch embroideries.
+{: .notice--info }
+
+<!--
+
 Um beieinanderliegende Flächen gut aufeinander abzustimmen, richten sich Kreuzstche nach einem Gitter.
 Das heißt, je nachdem an welcher Stelle auf der Arbeitsfläche sich ein Element befindet, kann sich das Stickbild ändern.
 Um dies besser planen zu können, ist es hilfreich, das Seitengitter an die Kreuzstichmustergröße anzupassen. So kann man schon visuell die Stichpositionen besser abschätzen.
@@ -95,7 +172,7 @@ Hilfsmethode zur Erstellung von:
 {% include upcoming_release.html %}
 
 Der Reihenabstand wird automatisch an die gewählte Stichlänge angepasst.
-
+-->
 <!--
   Wenn du die gleiche Struktur behalten willst, das Muster aber skalieren möchtest,
   aktualisiere den Reihenabstand für die Deckschicht, als auch für die Unterlage und berechne die maximale Stichlänge: `spacing / sin(60)`<br><br>
