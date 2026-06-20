@@ -42,7 +42,7 @@ Diese Erweiterung teilt ein Füllobjekt mit einem linearen Farbverlauf in mehrer
 
 Der Kreuzstich-Assistent kann bei der Erstellung von [Kreuzstichmustern](/de/docs/stitches/cross-stitch) auf verschiedene Weise unterstützen.
 
-* Überprüfung der diagonalen Stichlänge
+* Überprüfung und Anpassung der diagonalen Stichlänge
 * Anlegen des Seitengitters
 * Verpixeln von Füllflächen
 * Gittergröße als Parameter auf die Füllflächen übertragen
@@ -62,84 +62,76 @@ Der Kreuzstich-Assistent kann bei der Erstellung von [Kreuzstichmustern](/de/doc
 The cross stitch assistant can assist in various ways when creating [cross stitch patterns](/docs/stitches/cross-stitch).
 
 ![A mushroom in two versions: vector path and pixelated outline](/assets/images/docs/cross_stitch_assistant.jpg){: .align-right style="max-width: 400px" }
-It helps you to:
-* Check and adapt the diagonal stitch length
-* Create the page grid for cross stitch alignment (and visual support while working on cross stitches)
-* Pixelize and combine the outline of selected elements, to avoid jump stitches, overlaps and to receive a better representation of the cross stitch positioning
-* Apply cross stitch params to selected elements
+Der Kreuzstich-Assisten ist für folgende Aufgaben ausgestattet:
+* Überprüfung und Anpassung der diagonalen Stichlänge
+* Erstellung eines Seitengitters für die Positionierung der Kreuzstiche (als visuelle Unterstützung während der Bearbeitung)
+* Verpixeln und kombinieren der ausgewählten Elemente. Dies hilft Sprungstiche und Überschneidungen zu verhindern und eine bessere visuelle Representation der Kreuzstich-Positionierungen zu erhalten.
+* Kreuzstich-Parameter auf gewählte Elemente anwenden
 * Convert bitmap images into cross stitch fill elements
 
-### Usage
+### Funktionsweise
 
-* Optional: select fill elements and/or bitmap images. Without a selection you can adapt the page grid only.
-* Open the assistant extension under `Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant`
-* Set the parameters, the output options and the bitmap settings (see below)
-* Click on `Apply`
+* Optional: wähle Füllelemente und/oder Pixelgrafiken aus. Ohne eine Auswahl kann lediglich das Seitengitter angepasst werden.
+* Öffne den Assistenten über `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Assistent`
+* Setze die gewünschten Einstellungen für Parameter, Ausgabe-Einstellungen und Bitmap-Einstellungen (siehe unten)
+* Klicke auf `Anwenden`
 
-#### Settings
+#### Einstellungen
 
 * **Grid settings**
 
-  To ensure that adjacent areas are well coordinated, cross stitches are aligned according to a grid.
-  This means that the embroidery pattern may change depending on where an element is located on the canvas.
-  To plan this better, it is helpful to adjust the page grid to the size of the cross stitch pattern. This makes it easier to visually estimate the stitch positions.
+  Um beieinanderliegende Flächen gut aufeinander abzustimmen, richten sich Kreuzstche nach einem Gitter.
+  Das heißt, je nachdem an welcher Stelle auf der Arbeitsfläche sich ein Element befindet, kann sich das Stickbild ändern.
+  Zur besseren Planung ist es hilfreich, das Seitengitter an die Kreuzstichmustergröße anzupassen.
+  So können die Stichpositionen schon direkt visuell erfasst werden.
 
-  **Check if the page grid is aligned at the top left corner of the page.**<br/>
-  If it is not, you'll need to manually adjust the grid under `File > Document Properties... > Grids`.
-  You will find an `Align to page` setting, that cannot be accessed via the Ink/Stitch plugin.
-  Set it to the top left corner.
+  **Überprüfe, ob das Seitengitter an der oberen linken Seitenecke ausgerichtet ist.**<br/>
+  Ist dies nicht der Fall, muss das Gitter under `Datei > Dokumenteinstellungen... > Gitter` manuell angepasst werden.
+  Dort gibt es eine Funktion (`An der Seite ausrichten`), die nicht über Ink/Stitch-Einstellungen erreicht werden kann.
+  Setze die Ausrichtung auf die linke obere Seitenecke.
   {: .notice--warning }
 
-  When specifying the grid size, the **stitch lengths** of the diagonal crosses are not immediately apparent.
-  However, stitch lengths always play an important role in machine embroidery.
-  The Cross Stitch Assistant therefore has a field for displaying and adapting the diagonal stitch lengths.
+  Bei der Festlegung der Gittergröße sind die **Sitchlängen** der diagonalen Kreuze nicht direkt ersichtlich.
+  Die Stichlänge spielt in der Sticherei aber immer eine wichtige Rolle.
+  Daher gibt der Kreuzstich-Assistent die Stichlänge an, bzw. kann die Gittergröße auch direkt über die Stichlänge angepasst werden.
 
-* **Params, pixelate and bitmap settings**
+* **Parameter, verpixeln und Bitmap-Einstellungen**
 
-  You can directly set the cross stitch fill params here, according to the grid spacing.
+  Es ist möglich einige wichtige Kreuzstich-Einstellungen direkt hier vorzunehmen und an die Gittereinstellungen anzupassen.
 
-#### Output options
+#### Ausgabe-Optionen
 
-* **Apply grid settings**: Here you decide most of what the assistant is going to do.
+* **Gittereinstellungen anwenden**: Hier wird festgelegt, was der Kreuzstichassistent tun wird.
 
-   * Parameters: If checked, the cross stitch parameters will be applied to all selected fill elements, according to the Parameters tab of the cross stitch assistant.
-   * Pixelize: If checked the Cross Stitch Assistant automatically pixelate selected fill elements based on the grid settings. This makes it possible to adjust the shapes directly to the grid and visually identify the stitch positions accurately.
-     * Add nodes: One can chose to add nodes at each grid intersection. This will make it easier to manually adapt the outline of the shape.
-       In non-square grids, nodes may not match grid intersections in vertical direction.
-* **Element handling**:
-  * Remove overlaps: decide if superpositions are kept or not.
+   * Parameter: Wenn aktiviert, werden die im Einstellungs-Tab gesetzten Kreuzstich-Parameter auf die ausgewählten Füllelemente angewandt.
+   * Verpixeln: Wenn aktiviert, verpixelt der Kreuzstich-Assistent die Form der ausgewählten Füllelemtene. So können die Formen direkt am Gitter ausgerichtet werden und die Stichpositionen werden visuell klar dargestellt.
+     * Knoten hinzufügen: fügt Knoten an den Eckpunkten des Gitters hinzu. So können die Formen schneller manuell auf der Arbeitsfläche angepasst werden. Bei nicht quadratischen Gittern, wird der horizontale Abstand beim Hinzufügen der Knotenpunkte verwendet.
+* **Elemente**:
+  * Überlappungen entfernen: Wenn aktiviert, werden die Formen neu zusammengesetzt, kombiniert und ohne Überlappungen ausgegeben.
 
-* **Setup page grid**:
-  * Define whether or not to adapt the page grid
-  * Define grid color
-  * Chose whether or not to remove the previously set cross stitch grids from the document.
-    Your manual page grids will not be removed, but disabled.
+* **Seitengitter anpassen**:
+  * Seitengitter: Definiert, ob das Seitengitter an die gewählte Gittergröße angepasst werden soll
+  * Gitterfarbe: Definiert die Farbe der Gitterlinien
+  * Vorhandene Gitter entfernen: definiert, ob zuvor gesetzte Kreuzstichgitter aus dem Dokument entfernt werden sollen. Existierende manuelle Gitter werden nicht entfernt, sondern nur deaktiviert.
 
-#### Bitmap settings
+#### Bitmap-Einstellungen
 
-* **Convert bitmaps**: If checked all selected bitmap images are converted into fill shapes
-* **One cross each pixel**: check if you want to convert pixel art images
-* **Color selection**: chose between specifying either
-  * a number of colors, in this case you can also chose the color reducing algorithm. The proposed algorithms will give different results, and the best one really depends on your image
-  * a list of rgb colors
-  * a gimp color palette
-   * or add strokes with the colors you want to use and add them to the selection before using the assistant.
-* **Saturation, Brightness and Contrast** of the original image may be tweaked here to achieve better results
-* **Transparency threashold**: pixels with at least that transparency are ignored.
-* **Background color**: define the background color here, will allow you to remove the background.
-* **Remove background**: decide what to do with fills with background color
+* **Bitmaps konvertieren**: Wenn aktiviert, werden Pixelgrafiken in Füllelemente umgewandelt
+* **Ein Kreuz pro Pixel**: Aktiviere diese Option, um jeden Pixel in ein volles Kreuz zu verwandeln (ändert die Größe der Grafik)
+* **Farbauswahl**: Farbreduktionsmethoden
+  * Anzahl der Farben: definiere die Anzahl der Farben für die Füllungen und wähle eine Farbreduktionsmethode. Das Ergebnis hängt stark vom Ausgangsbild ab.
+  * Ausgewählte Konturfarben: werden Elemente mit einer Konturfarbe vor dem Aufruf des Kreuzstich-Assistent mitausgewählt, ist es möglich, diese Farben hier als Farbpalette für die Farbreduktion einzusetzen
+  * Liste  mit RGB Werten: definiere eine Liste mit RGB-Werten, z.B. `0 0 0 255 255 255` für eine Schwarz-Weiß-Bild
+  * Gimp-Farbpalette
+* **Sättigung, Helligkeit und Kontrast**: passe die Werte an, um bessere Ergebnisse zu erzielen
+* **Transparenzschwelle (%)**: Pixel mit einem geringeren Transparenzwert werden nicht dargestellt
+* **Hintergrundfarbe**: definiere eine Hintergrundfarbe. Dies erlaubt, diese zu entfernen.
+* **Hintergrund entfernen**: entfernt Füllelemente mit der Hintergrundfarbe
 
-In our tutorial section you can find multiple in depth instructions on how to convert images into cross stitch embroideries.
+Bei den Tutorials findest du mehrere Beispiele für die Umwandlung von Pixelgrafiken in Kreuzstich-Muster.
 {: .notice--info }
 
 <!--
-
-Um beieinanderliegende Flächen gut aufeinander abzustimmen, richten sich Kreuzstche nach einem Gitter.
-Das heißt, je nachdem an welcher Stelle auf der Arbeitsfläche sich ein Element befindet, kann sich das Stickbild ändern.
-Um dies besser planen zu können, ist es hilfreich, das Seitengitter an die Kreuzstichmustergröße anzupassen. So kann man schon visuell die Stichpositionen besser abschätzen.
-
-Unter `Datei > Dokumenteinstellungen... > Gitter` kann das Gitter auch manuell eingestellt werden. Dort gibt es auch eine Funktion (`An der Seite ausrichten`), die nicht über Ink/Stitch-Einstellungen erreicht werden kann. Daher ist es wichtig zu überprüfen, ob sich das erstellte Gitter an der oberen linken Seitenecke ausrichtet. Ansonsten muss diese Einstellung noch manuell angepasst werden.
-{: .notice--warning }
 
 #### Außenkontur verpixeln
 
@@ -155,6 +147,7 @@ Nachdem das Gitter auf die gewünschte Größe eingestellt ist, muss die Gitterg
 Durch die Angabe der Gittergröße sind die Stichlängen der diagonalen Kreuze nicht direkt ersichtlich.
 Die Stichlängen spielen in der Maschinenstickerei aber immer eine wichtige Rolle. Der Kreuzstich-Assistent hat daher ein Feld für die Anzeige der diagonalen Stichlängen.
 
+--> 
 ## Knockdown Füllung
 
 Hilfsmethode zur Erstellung von:
@@ -172,7 +165,7 @@ Hilfsmethode zur Erstellung von:
 {% include upcoming_release.html %}
 
 Der Reihenabstand wird automatisch an die gewählte Stichlänge angepasst.
--->
+
 <!--
   Wenn du die gleiche Struktur behalten willst, das Muster aber skalieren möchtest,
   aktualisiere den Reihenabstand für die Deckschicht, als auch für die Unterlage und berechne die maximale Stichlänge: `spacing / sin(60)`<br><br>

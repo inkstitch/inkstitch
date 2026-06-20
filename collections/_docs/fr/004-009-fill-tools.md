@@ -145,7 +145,7 @@ Vos grilles de page manuelles ne seront pas supprimées, mais désactivées.
 
 * un nombre de couleurs. Dans ce cas, vous pouvez également choisir l’algorithme de réduction des couleurs. Les algorithmes proposés donneront des résultats différents, et le meilleur dépendra de votre image.
 
-* Liste de couleurs RVB
+* Liste de couleurs RVB: for example set to `0 0 0 255 255 255` to receive a black and white image
 
 * Palette de couleurs GIMP
 

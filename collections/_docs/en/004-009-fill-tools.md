@@ -111,7 +111,7 @@ It helps you to:
 * **One cross each pixel**: check if you want to convert pixel art images
 * **Color selection**: chose between specifying either
   * a number of colors, in this case you can also chose the color reducing algorithm. The proposed algorithms will give different results, and the best one really depends on your image
-  * a list of rgb colors
+  * a list of rgb colors, for example set to `0 0 0 255 255 255` to receive a black and white image
   * a gimp color palette
    * or add strokes with the colors you want to use and add them to the selection before using the assistant.
 * **Saturation, Brightness and Contrast** of the original image may be tweaked here to achieve better results
