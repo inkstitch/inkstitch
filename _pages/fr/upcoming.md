@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch"
 permalink: /fr/upcoming/
-last_modified_at: 2026-03-27
+last_modified_at: 2026-06-19
 sidebar:
   nav: pages
 toc: true
@@ -50,6 +50,10 @@ Ink/Stitch est en développement constant. Vous pouvez consulter ici toutes les 
 * [Egyptian](/fr/fonts/egyptian/)
 
   ![Egyptian](/assets/images/fonts/egyptian.png)
+
+* [Ellenika](/fr/fonts/ellenika/)
+
+  ![Ellenika](/assets/images/fonts/ellenika.png)
 * [Eloquent](/fr/fonts/eloquent/)
 
   ![Eloquent](/assets/images/fonts/eloquent.png)
@@ -175,11 +179,11 @@ Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
 
 ### AutoFill
 
-* AutoFill was **renamed** to Tatami [#4454](https://github.com/inkstitch/inkstitch/pull/4454)
+* AutoFill a été **renommé**  Tatami [#4454](https://github.com/inkstitch/inkstitch/pull/4454)
 
-### Contour fill
+### Remplissage selon contour
 
-* add repeat options [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
+* ajout des options de répétition [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
 
 ### Remplissage guidé
 
@@ -188,7 +192,7 @@ Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
 
 Cette nouvelle méthode permet l'usage de chemins qui s'autointersectent comme ligne guide. Il est ausssi possible d'utiliser des chemins composés de plusieurs sous-chemins.
 
-### Remplissage Legacy
+### Remplissage Manuel (Legacy)
 
 #### Elargir une forme
 
@@ -234,7 +238,7 @@ Cette séquence peut également être appliquée aux points ondulés.
 
 _Image ci-dessus : point ondulé avec une longueur de point de `1 1 5`_
 
-[En savoir plus sur les points de droits](/fr/docs/stitches/running-stitch/)
+[En savoir plus sur les points droits](/fr/docs/stitches/running-stitch/)
 
 ### Colonnes Satin
 
@@ -244,9 +248,8 @@ _Image ci-dessus : point ondulé avec une longueur de point de `1 1 5`_
 
 Les traits simples peuvent être utilisés directement comme colonnes satin [#3874](https://github.com/inkstitch/inkstitch/pull/3874).
 
-The following rules will apply:
-
-* By default, the width of the stroke must not be smaller than 1mm (adaptable through the preferences dialog)
+Les régle suivantes s'appliquent:
+* Par défaut, la largeur du trait doit être d'au moins 1mm (adaptable dans le dialogue des préférences 
 * La position des nœuds peut influencer le rendu du satin :
 
   ![Trait vers satin. Même chemin avec différentes configurations de nœuds](/assets/images/upcoming/3.3.0/stroke-to-satin-nodes.png){: width="600px"}
@@ -261,7 +264,7 @@ Lorsque plusieurs valeurs sont définies, la colonne satin les utilise alternati
 
 #### Compensation d'élongation
 
-Ink/Stitch permet depuis un certain temps de déinir une compensation d'élongation. Maintenant, il permet aussi de définir une compensation d'élongation.
+Ink/Stitch permet depuis un certain temps de définir une compensation d'étirement. Maintenant, il permet aussi de définir une compensation d'élongation.
 
 Elle va racourcir une colones satin aux extrémités spécifiées afin de compenser la poussée des points sur le tissu.
 
@@ -275,8 +278,7 @@ Elle va racourcir une colones satin aux extrémités spécifiées afin de compen
 * Texture: ajout de l'option intervalle pour les textures en trait [#4250](https://github.com/inkstitch/inkstitch/pull/4250)
 
   Cette option permet de sauter des points aux intersections avec le plan de broderie (par exemple une sur deux)
-  This option allows to skip intersection points on the stitch path (for example every second one)
-
+ 
 [En savoir plus](/fr/docs/stitches/patterns/)
 
 ## Nouvelles extensions
@@ -343,8 +345,7 @@ Un outil pour collecter les informations de broderie.
 [En savoir plus](/fr/docs/troubleshoot/#element-info)
 
 ### Redwork
-
-* Redwork optionally runs now on selected colors separately and groups by color (#4426)
+* Le redwork a  maintenant l'option de traiter les couleurs séparement (#4426)
 
 ### Gestion des polices
 
@@ -444,7 +445,8 @@ Ajoute un remplissage sous les objets sélectionnés.
 * Ajout d'une option de longueur de point [#4084](https://github.com/inkstitch/inkstitch/pull/4084)
 
   L'espacement des rangées s'adaptera automatiquement pour s'aligner avec les points.
-* New option to include shapes (rectangle or circle) without cutting out the shape of the motif [#4397](https://github.com/inkstitch/inkstitch/pull/4397)
+
+*  Nouvelle option pour inclure les formes (rectangle ou cercle) sans enlever la forme du motif [#4397](https://github.com/inkstitch/inkstitch/pull/4397)
 
 [En savoir plus](/fr/docs/fill-tools/#knockdown-fill)
 
@@ -479,7 +481,7 @@ Les mêmes options ont été ajoutées à l'export par lots.
 
 * Ajout d'un paramètre de position [#4169](https://github.com/inkstitch/inkstitch/pull/4169)
 
-[Read more](/fr/docs/commands/#attach-commands-to-selected-objects-)
+[En savoir plus](/fr/docs/commands/#attach-commands-to-selected-objects-)
 
 ### Paramètres
 
@@ -493,12 +495,13 @@ Les mêmes options ont été ajoutées à l'export par lots.
 Définit les paramètres globaux ou ceux du document SVG actuellement ouvert.
 
 * Ajout de l'option « Rotation à l'exportation » (affecte uniquement le fichier SVG courant) [#3840](https://github.com/inkstitch/inkstitch/pull/3840)
-* Add `minimum satin stroke width` setting [#4279](https://github.com/inkstitch/inkstitch/pull/4279)
+* Ajout du paramètre `Seuil d'auto-conversion trait en satin`  [#4279](https://github.com/inkstitch/inkstitch/pull/4279)
 
-  Wether or not a a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width.
-  The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard
-  stitches, It is recommended to only use satins wider than 1mm.
+La possibilité de rendre un trait comme un satin dépend de la largeur du trait et de la valeur de préférence pour le seuil d'auto-conversion trait en satin
 
+La largeur du trait doit être supérieure à la valeur de préférence ; sinon, cet élément sera traité comme un point droit. 
+Pour éviter les problèmes à la broderie, il est recommandé d'utiliser uniquement des traits satin d'une largeur supérieure à 1 mm.
+ 
 [En savoir plus](/fr/docs/preferences/)
 
 ### Simulateur
@@ -521,7 +524,7 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 * Magnifico thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
 * Threadart thread palette [#4022](https://github.com/inkstitch/inkstitch/pull/4022)
 
-[Read more about color palettes](/fr/docs/thread-color/#install-palettes)
+[En savoir plus](/fr/docs/thread-color/#install-palettes)
 
 ## Mise a jour pour certains formats machine
 
