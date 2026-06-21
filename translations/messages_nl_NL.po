@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-16 04:25+0000\n"
-"PO-Revision-Date: 2026-06-16 04:26\n"
+"POT-Creation-Date: 2026-06-21 04:25+0000\n"
+"PO-Revision-Date: 2026-06-21 04:25\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-16 04:25+0000\n"
+"POT-Creation-Date: 2026-06-21 04:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -285,8 +285,8 @@ msgstr "Een Font Grove juweel. Satijn breedte is 2.5 mm bij 18mm hoofdletters"
 #. description of font in fonts/egyptian
 #. description of font in fonts/heavenly
 #. description of font in fonts/noble
-#: inkstitch-fonts-metadata.py:102 inkstitch-fonts-metadata.py:144
-#: inkstitch-fonts-metadata.py:222
+#: inkstitch-fonts-metadata.py:102 inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:224
 msgid "small cross stitch font"
 msgstr "klein kruissteek lettertype"
 
@@ -295,155 +295,160 @@ msgstr "klein kruissteek lettertype"
 msgid "This font is an altered version of Egyptian, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Dit lettertype is een aangepaste versie van het Egyptische lettertype, waardoor een grotere verkleining mogelijk is. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
-#. description of font in fonts/eloquent
+#. description of font in fonts/ellenika
 #: inkstitch-fonts-metadata.py:106
+msgid "Clara Bold Greek subset with punctuation and symbol support."
+msgstr ""
+
+#. description of font in fonts/eloquent
+#: inkstitch-fonts-metadata.py:108
 msgid "small cursive crosstitch font"
 msgstr "klein cursief kruissteek lettertype"
 
 #. description of font in fonts/eloquent_small
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:110
 msgid "This font is an altered version of Eloquent, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Dit lettertype is een aangepaste versie van Eloquent, waardoor een grotere verkleining mogelijk is. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:112
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
 msgstr "Emilio 20 bevat alleen hoofdletters en cijfers. Elk satijn heeft een zigzag onderlaag."
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:114
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
 msgstr "Emilio 20 Applique is een applikaat lettertype. Dit lettertype is een aangepaste versie (grotere satijn kolommen) van Emilio_20, terwijl Emilio_20_Bold Emilio_20_applique is zonder de applikaat."
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:116
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
 msgstr "Emilio_20_Bold is een aangepaste versie van Emilio_20."
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:118
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
 msgstr "Emilio is een lettertype met alleen hoofdletters en cijfers. Elk satijn heeft een zigzag onderlaag."
 
 #. description of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:120
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Dit lettertype is een aangepaste versie van Emilio 20 Simple, om een ​​grotere schaalverkleining mogelijk te maken. Het gebruik van zowel dun garen (60) als dunne naald (60) is verplicht."
 
 #. description of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:122
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
 msgstr "Emilio 20 Tartan gebruikt kronkelende vulling voor een kleurrijk lettertype."
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:124
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr "Emilio 20 tricolore is een groot driekleurig lettertype met vulsteken en satijn kolommen. Het bevat 36 tekens, waaronder de cijfers en de 26 hoofdletters A-Z."
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:126
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
 msgstr "Excalibur KOR is een klein satijn kolom lettertype met manuscripten. Het bevat 144 tekens en voldoet daarmee aan de meeste West-Europese taalbehoeften."
 
 #. description of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:128
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Dit lettertype is een aangepaste versie van Excalibur KOR, om een ​​grotere schaalverkleining mogelijk te maken. Het gebruik van zowel dun garen (60) als dunne naald (60) is verplicht."
 
 #. description of font in fonts/flowery_crosses
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:130
 msgid "Very large cross stitch font. "
 msgstr "Zeer groot lettertype voor kruissteek borduurwerk "
 
 #. description of font in fonts/flowery_multicolor
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:132
 msgid "Very large multicolor cross stitch font. "
 msgstr "Zeer groot, veelkleurig kruissteek lettertype "
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:134
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr "Fold Ink/Stitch is een groot lettertype met drie-voudige en vijf-voudige loop steken in hoofdletters. Het bevat 40 tekens, waaronder alle cijfers en de 26 hoofdletters A-Z."
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 msgid "Geneva Simple Sans Rounded is a satin font."
 msgstr "Geneva Simple Sans Rounded is een satijn lettertype."
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 msgid "Geneva Simple Sans is a satin font."
 msgstr "Geneva Simple Sans is een satijn lettertype."
 
 #. description of font in fonts/gingo200
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 msgid "Gingo 200 is playful satin font with 158 glyphs."
 msgstr "Gingo 200 is een speels satijn lettertype met 158 ​​tekens."
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
 msgstr "Glacial is een heel klein lettertype. Dunne draad (60 wt) en een dunne naald (8/60) zijn verplicht. De tekens bestrijken veel Europese talen."
 
 #. description of font in fonts/handkerchief
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 msgid "Cross stitch font. Initially intended to embroider handkerchiefs corners."
 msgstr "Lettertype voor kruissteek. Oorspronkelijk bedoeld voor het borduren van de hoeken van zakdoeken."
 
 #. description of font in fonts/heavenly_small
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:148
 msgid "This font is an altered version of Heavenly, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Dit lettertype is een aangepaste versie van Heavenly, waardoor een grotere verkleining mogelijk is. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/hebrew_font_large
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "Large size Hebrew satin font"
 msgstr "Groot Hebreeuws satijn lettertype"
 
 #. description of font in fonts/hebrew_font_medium
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "Medium size hebrew satin font"
 msgstr "Hebreeuws satijn lettertype van gemiddelde grootte"
 
 #. description of font in fonts/hebrew_simple_rounded
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 msgid "A simple rounded hebrew font"
 msgstr "Een eenvoudig afgerond Hebreeuws lettertype"
 
 #. description of font in fonts/hebrew_simple_rounded_small
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:156
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
 msgstr "Een eenvoudig afgerond Hebreeuws lettertype, kleine versie om te borduren met 60wt garen en 60 naalden"
 
 #. description of font in fonts/honoka
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:158
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
 msgstr "Koru no Kakikomo is een satijn kolom lettertype in Japans schrift. Het bevat alle hiragana-, katakana- en leestekens plus 80 kanji's."
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:160
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr "InfiniPicto is een leuk lettertype met alleen de 26 tekens van A tot en met Z. Elke letter is een pictogram van een object waarvan de naam met diezelfde letter begint... in het Frans"
 
 #. description of font in fonts/initials_XL
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:162
 #, python-brace-format
 msgid "Initials XL is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr "Initials XL is een zeer groot satijn steek lettertype voor hoofdletters. Het bevat de 37 tekens: ampersand, A-Z en 0-9. Daarnaast worden de tien tekens (){}[],;.: gebruikt om kaders op te slaan. Typ een letter gevolgd door een kader (bijv. A( of B; ) om een ​​hoofdletter of cijfer met kader te krijgen. Let op: voor enkele grote letters moet u het kader handmatig vergroten."
 
 #. description of font in fonts/initials_medium
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:164
 #, python-brace-format
 msgid "Initials Medium is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr "Initials Medium is een satijn steek lettertype voor hoofdletters. Het bevat de 37 tekens: ampersand, A-Z en 0-9. Daarnaast worden de tien tekens (){}[],;.: gebruikt om kaders op te slaan. Typ een letter gevolgd door een kader (bijv. A( of B; of 7, ) om een ​​ingekaderde hoofdletter of cijfer te verkrijgen. Mogelijk moet het kader handmatig rond de letter worden geplaatst."
 
 #. description of font in fonts/inkstitch_masego
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:166
 msgid "Masego is a display san-serif typeface."
 msgstr "Masego is een schreefloos displaylettertype."
 
 #. description of font in fonts/invercelia
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:168
 msgid "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\n"
 "Please use exactly two letters,  if you use more, only the first and the last letters will be rendered."
 msgstr "Invercelia is een modern monogram lettertype met twee letters. Voer twee letters in voor een eenvoudig monogram. Voeg een ')' toe aan het einde en het monogram wordt omlijst met een cirkel (bijvoorbeeld 'AC')). Voeg een '(' toe aan het begin (bijvoorbeeld '(AC)' en je monogram is klaar voor applicatie. Je kunt ook iets als '!AC)' proberen om de applicatie te vervangen door knockdown steken.\n\n"
@@ -451,267 +456,267 @@ msgstr "Invercelia is een modern monogram lettertype met twee letters. Voer twee
 
 #. description of font in fonts/jacquard_12
 #. description of font in fonts/jersey_15
-#: inkstitch-fonts-metadata.py:168 inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:170 inkstitch-fonts-metadata.py:174
 msgid "cross stitch font"
 msgstr "kruissteek lettertype"
 
 #. description of font in fonts/jaquarda_bastarda_9
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:172
 msgid "small cross stitch font derived from a victorian needlepoint alphabet"
 msgstr "klein kruissteek lettertype afgeleid van een Victoriaans borduuralfabet"
 
 #. description of font in fonts/kum_tsoan_AGS
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:176
 msgid " Kum Tsoan AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr " Kum Tsoan AGS is een groot applique text. Het bevat 43 letters inclusief alle nummers en de 26 hoofdletters  A-Z."
 
 #. description of font in fonts/kum_tsoan_relief
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:178
 msgid "Kum Tsoan Relief is an altered version of Kum Tsoan AGS for embossed letters."
 msgstr "Kum Tsoan Reliëf is een aangepaste versie van Kum Tsoan AGS voor reliëfletters."
 
 #. description of font in fonts/kum_tsoan_tartan
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:180
 msgid "Kum Tsoan Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
 msgstr "Kum Tsoan Tartan is schots ruiten text. Het bevat 43 letters inclusief all nummers en de 26 hoofdletters."
 
 #. description of font in fonts/ladies_present
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:182
 msgid "A  rectangular crosses font"
 msgstr "Een rechthoekig lettertype met kruis steek"
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:184
 msgid "Learning curve is a small running stitch script font."
 msgstr "Learning curve is een klein script lettertype met een loop steek."
 
 #. description of font in fonts/magic_crosses
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:186
 msgid "Cross stitch font. "
 msgstr "Kruissteek lettertype "
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:188
 msgid "Magnolia KOR is a script satin font."
 msgstr "Magnolia KOR is een script satijn lettertype."
 
 #. description of font in fonts/magnolia_bicolor
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:190
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
 msgstr "Magnolia bicolor is een grotere tweekleurige variant van het Magnolia lettertype."
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:192
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Magnolia Small is een aangepaste versie van Magnolia KOR, die een grotere schaalverkleining mogelijk maakt. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/magnolia_tamed
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:194
 msgid "This is a less wild bicolor variation of Magnolia font"
 msgstr "Dit is een minder wilde tweekleurige variant van het Magnolia lettertype"
 
 #. description of font in fonts/mai_en_fleur
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:196
 msgid "Mai en Fleur AGS is a monogram font."
 msgstr "Mai en Fleur AGS is een monogram letter type."
 
 #. description of font in fonts/malika
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:198
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
 msgstr "Malika is een Arabisch satijn lettertype. Niet-verplichte diakritische tekens moeten niet in de tekst worden getypt, maar apart en vervolgens handmatig naar de juiste positie worden verplaatst. De drie sets haakjes bieden ruimte voor extra versieringen als u een extra decoratief tintje wilt toevoegen."
 
 #. description of font in fonts/mam_script
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:200
 msgid "MAM Script is a script satin font. Every satin has zigzag underlay."
 msgstr "MAM Script is een satijnen script lettertype. Elk satijnen element heeft zigzag onderborduren."
 
 #. description of font in fonts/manga_impact
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:202
 msgid "Manga Impact is a manga like satin font."
 msgstr "Manga Impact is een satijnachtig lettertype dat lijkt op manga."
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:204
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr "Ink/Stitch Medium Font is een eenvoudig satijn lettertype, geschikt voor middelgrote tekens. Elk satijn heeft een omtrek onderlaag."
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:206
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr "Millimarif-bold20 is een vet satijn lettertype."
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:208
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr "Mimosa Large is een satijn lettertype dat op een stippen lettertype lijkt.   "
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:210
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr "Mimosa Medium is een satijn lettertype met stippen."
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:212
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr "Monicha is een satijn script lettertype. Naast de symbolen die de meeste West-Europese talen bestrijken, bevat het afwisselende versieringen met sierletters. Deze sierletters moeten met de nodige voorzichtigheid worden gebruikt om overlappende letters te voorkomen. Gebruik met name geen twee sierletters achter elkaar. Raadpleeg de documentatie voor informatie over hoe u toegang krijgt tot de sierletters."
 
 #. description of font in fonts/montecarlo
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:214
 msgid "Montecarlo is a script satin font with lots of alternates. It also contains  swoops , swashes and  more, see the documentation  for details."
 msgstr "Montecarlo is een satijn achtig script lettertype met veel alternatieve tekens. Het bevat ook sierlijke krullen, swashes en meer; raadpleeg de documentatie voor details."
 
 #. description of font in fonts/nautical
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:216
 msgid "Cross Stitch Nautical Flag Alphabet"
 msgstr "Kruissteek nautische vlag alfabet"
 
 #. description of font in fonts/neon
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:218
 msgid "Satin font. Each letter or accent is a single satin."
 msgstr "Satijn lettertype. Elke letter of accent is een enkele satijn."
 
 #. description of font in fonts/neon_blinking
-#: inkstitch-fonts-metadata.py:218
+#: inkstitch-fonts-metadata.py:220
 msgid "Bean stitch font."
 msgstr "Drievoudige loopsteek lettertype."
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:220
+#: inkstitch-fonts-metadata.py:222
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr "NickAinley is een klein drievoudige loopsteek alfabet gebaseerd op een 24pt Seniors Studio jawn."
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:224
+#: inkstitch-fonts-metadata.py:226
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr "Ondulamarif M is een aangepaste versie van Ondulamarif XL. De aangepaste borduur instellingen van dit lettertype maken een kleiner lettertype mogelijk."
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:226
+#: inkstitch-fonts-metadata.py:228
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr "Ondulamarif S is een aangepaste versie van Ondulamarif XL, die een grotere verkleining mogelijk maakt."
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:228
+#: inkstitch-fonts-metadata.py:230
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr "Ondulamarif XL is een rimpel steek lettertype. Gebruik het zo groot mogelijk, maar maak het niet kleiner."
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:230
+#: inkstitch-fonts-metadata.py:232
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr "Pacificlo is een klein satijn kolom lettertype met manuscripten. Het bevat 120 tekens en voldoet daarmee aan de meeste West-Europese taalbehoeften. "
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:232
+#: inkstitch-fonts-metadata.py:234
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Pacificlo tiny is een aangepaste versie van Pacificlo, die een grotere verkleining mogelijk maakt. Zowel dunne draad (60) als dunne naald (60) zijn vereist."
 
 #. description of font in fonts/paquerette
-#: inkstitch-fonts-metadata.py:234
+#: inkstitch-fonts-metadata.py:236
 msgid "Paquerette font is created with manual sitch. Do not change the size or very little."
 msgstr "Het lettertype Paquerette is gemaakt met handmatige steek punten. Wijzig de grootte niet of slechts minimaal."
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:236
+#: inkstitch-fonts-metadata.py:238
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr "Perspective tricolore KOR is een gearceerd driekleurig lettertype met alleen hoofdletters, cijfers en leestekens."
 
 #. description of font in fonts/pisankris
-#: inkstitch-fonts-metadata.py:238
+#: inkstitch-fonts-metadata.py:240
 msgid "Pisankris is a satin font. Every satin has zigzag underlay."
 msgstr "Pisankris is een satijn text. Elke satijn heeft zigzag onder borduren."
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:240
+#: inkstitch-fonts-metadata.py:242
 msgid "Pixel 10 is a satin pixel font."
 msgstr "Pixel 10 is een satijn pixel lettertype."
 
 #. description of font in fonts/precious
-#: inkstitch-fonts-metadata.py:242
+#: inkstitch-fonts-metadata.py:244
 msgid "Precious is a decorative satin column round cursive font."
 msgstr "Precious is een decoratief satijnen, rond cursief lettertype."
 
 #. description of font in fonts/priscilla
-#: inkstitch-fonts-metadata.py:244
+#: inkstitch-fonts-metadata.py:246
 msgid "Large bicolor cross stitch font"
 msgstr "Groot tweekleurig lettertype voor kruissteek"
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:246
+#: inkstitch-fonts-metadata.py:248
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr "Roaring Twenties KOR is een mix van satijn en drievoudige loop steek."
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:248
+#: inkstitch-fonts-metadata.py:250
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Roaring Twenties KOR Small is een aangepaste versie van Roaring Twenties KOR, om een ​​grotere schaalverkleining mogelijk te maken. Het gebruik van zowel dun garen (60) als een dunne naald (60) is verplicht."
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:250
+#: inkstitch-fonts-metadata.py:252
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr "Roman AGS is gebaseerd op de Latijnse Modern Roman 10 Bold cursief. Elke satijn heeft een zigzag onderlaag."
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:252
+#: inkstitch-fonts-metadata.py:254
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr "Roman bicolor AGS is een aangepaste versie van het Romeinse AGS. Hoofdletters zijn tweekleurig."
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:254
+#: inkstitch-fonts-metadata.py:256
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr "Sacramarif is een heel klein lettertype met een loop steek, gebaseerd op Sacramento."
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:256
+#: inkstitch-fonts-metadata.py:258
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr "Ink/Stitch Small Font is geschikt voor kleine letters."
 
 #. description of font in fonts/stebor_AGS
-#: inkstitch-fonts-metadata.py:258
+#: inkstitch-fonts-metadata.py:260
 msgid "Stebor AGS is a script satin font. Every satin has zigzag underlay."
 msgstr "Stebor AGS is een satijnachtig scriptlettertype. Elk satijnen element heeft een zigzag onderlaag."
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:260
+#: inkstitch-fonts-metadata.py:262
 msgid "3 colors satin column font"
 msgstr "3 kleurig satijn kolom lettertype"
 
 #. description of font in fonts/tieralphabet
-#: inkstitch-fonts-metadata.py:262
+#: inkstitch-fonts-metadata.py:264
 msgid "cross stitch font, each letter includes an animal with german name starting with the letter"
 msgstr "kruissteek lettertype, elke letter bevat een dier met een Duitse naam die met die letter begint"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:264
+#: inkstitch-fonts-metadata.py:266
 msgid "TT  Directors is a satin font suited for directing."
 msgstr "TT Directors is een satijn lettertype dat geschikt is voor regie."
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:266
+#: inkstitch-fonts-metadata.py:268
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr "TT Masters is een satijn lettertype, geschikt voor vet typen :)"
 
 #. description of font in fonts/venezia
-#: inkstitch-fonts-metadata.py:268
+#: inkstitch-fonts-metadata.py:270
 msgid "A serif satin font"
 msgstr "Een schreefloos satijn lettertype"
 
 #. description of font in fonts/venezia_small
-#: inkstitch-fonts-metadata.py:270
+#: inkstitch-fonts-metadata.py:272
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Venezia small is een aangepaste versie van Venezia om een ​​grotere schaalverdeling mogelijk te maken. Zowel dunne draad (60) als dunne naald (60) zijn verplicht."
 
 #. description of font in fonts/very_crossy
-#: inkstitch-fonts-metadata.py:272
+#: inkstitch-fonts-metadata.py:274
 msgid "Medium size cross stitch font"
 msgstr "Middelgroot lettertype voor kruissteek"
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:274
+#: inkstitch-fonts-metadata.py:276
 msgid "Violin Serif is a condensed serif satin font."
 msgstr "Violin Serif is een gecondenseerd schreefloos satijn lettertype."
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:276
+#: inkstitch-fonts-metadata.py:278
 msgid "Western light is a light fill western style font."
 msgstr "Western light is een lichtgevuld westers lettertype."
 
@@ -1375,7 +1380,7 @@ msgstr "Stop na"
 msgid "Add a STOP command after stitching this object."
 msgstr "Voeg een STOP opdracht toe nadat dit object is geborduurd."
 
-#: lib/elements/element.py:783
+#: lib/elements/element.py:808
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Voer 'Extensies > Ink/Stitch > Problemen oplossen > Problemen met objecten oplossen' uit. Dit toont u de exacte locatie van het probleem."
 
@@ -1395,663 +1400,671 @@ msgstr "* Kies Uitbreidingen > Ink/Stitch > Probleemoplossen > Document opschone
 msgid "Empty Path"
 msgstr "Leeg pad"
 
-#: lib/elements/fill_stitch.py:38
+#: lib/elements/fill_stitch.py:37
 msgid "Small Fill"
 msgstr "Kleine Opvulling"
 
-#: lib/elements/fill_stitch.py:39
+#: lib/elements/fill_stitch.py:38
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Dit invul object is zo klein dat het er waarschijnlijk beter uitziet als doorlopende steek of satijn baan. Voor hele kleine vormen is vulsteek niet mogelijk, Ink/Stitch zal inplaats daarvan een doorlopende steek langs de rand maken."
 
-#: lib/elements/fill_stitch.py:45 lib/elements/fill_stitch.py:278
+#: lib/elements/fill_stitch.py:44 lib/elements/fill_stitch.py:277
 msgid "Expand"
 msgstr "Uitbreiden"
 
-#: lib/elements/fill_stitch.py:46
+#: lib/elements/fill_stitch.py:45
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "De instellingen Uitbreiden voor dit opvul object kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
 
-#: lib/elements/fill_stitch.py:51 lib/elements/fill_stitch.py:699
+#: lib/elements/fill_stitch.py:50 lib/elements/fill_stitch.py:717
 msgid "Inset"
 msgstr "Inzet"
 
-#: lib/elements/fill_stitch.py:52
+#: lib/elements/fill_stitch.py:51
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr "De instellingen voor de onderlaag inzet voor dit opvul object kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
 
-#: lib/elements/fill_stitch.py:57
+#: lib/elements/fill_stitch.py:56
 msgid "Missing Guideline"
 msgstr "Ontbrekende hulplijn"
 
-#: lib/elements/fill_stitch.py:58
+#: lib/elements/fill_stitch.py:57
 msgid "This object is set to \"Guided Fill\", but has no guide line."
 msgstr "Dit object is ingesteld op \"Geleide vulling\", maar heeft geen hulplijn."
 
-#: lib/elements/fill_stitch.py:60
+#: lib/elements/fill_stitch.py:59
 msgid "* Create a stroke object"
 msgstr "* Maak een lijnobject"
 
-#: lib/elements/fill_stitch.py:61
+#: lib/elements/fill_stitch.py:60
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
 msgstr "* Selecteer dit object en druk op Extensies > Inkt/Stitch > Bewerken > Selectie naar hulplijn"
 
-#: lib/elements/fill_stitch.py:66
+#: lib/elements/fill_stitch.py:65
 msgid "Disjointed Guide Line"
 msgstr "Onsamenhangende hulplijn"
 
-#: lib/elements/fill_stitch.py:67
+#: lib/elements/fill_stitch.py:66
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
 msgstr "De hulplijn van dit object ligt niet binnen de object grenzen. De hulplijn werkt het best, als hij binnen het doelelement ligt."
 
-#: lib/elements/fill_stitch.py:70
+#: lib/elements/fill_stitch.py:69
 msgid "* Move the guide line into the element"
 msgstr "* Verplaats de hulplijn in het element"
 
-#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:29
+#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:30
 msgid "Multiple Guide Lines"
 msgstr "Meerdere hulplijnen"
 
-#: lib/elements/fill_stitch.py:76 lib/elements/stroke.py:30
+#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:31
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr "Dit object heeft meerdere hulplijnen, maar alleen de eerste zal worden gebruikt."
 
-#: lib/elements/fill_stitch.py:78 lib/elements/stroke.py:31
+#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:32
 msgid "* Remove all guide lines, except for one."
 msgstr "* Verwijder alle hulplijnen, behalve één."
 
-#: lib/elements/fill_stitch.py:83
+#: lib/elements/fill_stitch.py:82
 msgid "Unconnected"
 msgstr "Losstaand"
 
-#: lib/elements/fill_stitch.py:84
+#: lib/elements/fill_stitch.py:83
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr "Opvulling: Dit object bestaat uit vormen die geen verband met elkaar houden. Ink/Stitch weet niet in welke volgorde ze moeten worden geborduurd.  Breek dit object alstublieft op in afzonderlijke vormen."
 
-#: lib/elements/fill_stitch.py:88 lib/elements/fill_stitch.py:97
-#: lib/elements/fill_stitch.py:154
+#: lib/elements/fill_stitch.py:87 lib/elements/fill_stitch.py:96
+#: lib/elements/fill_stitch.py:153
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr "* Uitbreidingen > Ink/Stitch > Opvul gereedschap > Opdelen Opvul objecten"
 
-#: lib/elements/fill_stitch.py:93
+#: lib/elements/fill_stitch.py:92
 msgid "Border crosses itself"
 msgstr "Rand kruist zichzelf"
 
-#: lib/elements/fill_stitch.py:94
+#: lib/elements/fill_stitch.py:93
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
 msgstr "Opvulling: De rand kruist zichzelf. Dit kan leiden tot niet aaneengesloten vormen. Breek dit object in aparte vormen om aan te geven in welke volgorde het geborduurd moet worden."
 
-#: lib/elements/fill_stitch.py:102
+#: lib/elements/fill_stitch.py:101
 msgid "Fill and Stroke color"
 msgstr "Vul en lijnkleur"
 
-#: lib/elements/fill_stitch.py:103
+#: lib/elements/fill_stitch.py:102
 msgid "Element has both a fill and a stroke color. It is recommended to use two separate elements instead."
 msgstr "Het element heeft zowel een vul als een lijnkleur. Het is aan te raden om in plaats daarvan twee afzonderlijke elementen te gebruiken."
 
-#: lib/elements/fill_stitch.py:105
+#: lib/elements/fill_stitch.py:104
 msgid "* Duplicate the element. Remove stroke color from the first and fill color from the second."
 msgstr "* Dupliceer het element. Verwijder de lijnkleur van het eerste element en de vulkleur van het tweede element."
 
-#: lib/elements/fill_stitch.py:106
+#: lib/elements/fill_stitch.py:105
 msgid "* Adapt the shape of the second element to compensate for push and pull fabric distortion."
 msgstr "* Pas de vorm van het tweede element aan om de duw en trekvervorming van de stof te compenseren."
 
-#: lib/elements/fill_stitch.py:111
+#: lib/elements/fill_stitch.py:110
 msgid "No linear gradient color"
 msgstr "Geen lineaire kleurverloop"
 
-#: lib/elements/fill_stitch.py:112
+#: lib/elements/fill_stitch.py:111
 msgid "Linear Gradient has no linear gradient color."
 msgstr "Lineair verloop heeft geen lineaire kleurverloop."
 
-#: lib/elements/fill_stitch.py:114
+#: lib/elements/fill_stitch.py:113
 msgid "* Open the Fill and Stroke dialog."
 msgstr "* Open het dialoogvenster Opvulling en lijn."
 
-#: lib/elements/fill_stitch.py:115
+#: lib/elements/fill_stitch.py:114
 msgid "* Set a linear gradient as a fill and adapt colors to your liking."
 msgstr "* Stel een lineair kleurverloop in als vulling en pas de kleuren naar wens aan."
 
-#: lib/elements/fill_stitch.py:120
+#: lib/elements/fill_stitch.py:119
 msgid "No stripes to render"
 msgstr "Geen strepen om weer te geven"
 
-#: lib/elements/fill_stitch.py:121
+#: lib/elements/fill_stitch.py:120
 msgid "Tartan fill: There is no active fill stripe to render"
 msgstr "Schotse ruit: er is geen actieve vul streep om te renderen"
 
-#: lib/elements/fill_stitch.py:123
+#: lib/elements/fill_stitch.py:122
 msgid "Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:"
 msgstr "Ga naar Extensies > Inkt/Steek > Vul gereedschappen > Schotse ruit en pas de streep instellingen aan:"
 
-#: lib/elements/fill_stitch.py:124
+#: lib/elements/fill_stitch.py:123
 msgid "* Check if stripes are active"
 msgstr "* Controleer of de strepen actief zijn"
 
-#: lib/elements/fill_stitch.py:125
+#: lib/elements/fill_stitch.py:124
 msgid "* Check the minimum stripe width setting and the scale factor"
 msgstr "* Controleer de minimale streepbreedte instelling en de schaalfactor"
 
-#: lib/elements/fill_stitch.py:130
+#: lib/elements/fill_stitch.py:129
 msgid "No customized pattern"
 msgstr "Geen aangepast patroon"
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:130
 msgid "Tartan fill: Using default pattern"
 msgstr "Schotse ruit vulling: Standaardpatroon gebruiken"
 
-#: lib/elements/fill_stitch.py:133
+#: lib/elements/fill_stitch.py:132
 msgid "Go to Extensions > Ink/Stitch > Tools: Fill > Tartan and adjust stripe settings:"
 msgstr "Ga naar Extensies > Ink/Stitch > Gereedschap: Vulling > Tartan en pas de streep instellingen aan:"
 
-#: lib/elements/fill_stitch.py:134
+#: lib/elements/fill_stitch.py:133
 msgid "* Customize your pattern"
 msgstr "* Pas uw patroon aan"
 
-#: lib/elements/fill_stitch.py:139
+#: lib/elements/fill_stitch.py:138
 msgid "Cross stitch: shape too small"
 msgstr "Kruissteek: vorm te klein"
 
-#: lib/elements/fill_stitch.py:140
+#: lib/elements/fill_stitch.py:139
 msgid "This shape is too small to fit a cross. Please adapt params and/or shape."
 msgstr "Deze vorm is te klein voor een kruis. Pas de borduur instellingen en/of de vorm aan."
 
-#: lib/elements/fill_stitch.py:142
+#: lib/elements/fill_stitch.py:141
 msgid "* Change the pattern size"
 msgstr "* Wijzig de patroon grootte"
 
-#: lib/elements/fill_stitch.py:143
+#: lib/elements/fill_stitch.py:142
 msgid "* Or adapt the grid offset or move the shape"
 msgstr "* Of pas de raster verschuiving aan of verplaats de vorm"
 
-#: lib/elements/fill_stitch.py:144
+#: lib/elements/fill_stitch.py:143
 msgid "* Or increase the expand value or increase shape size"
 msgstr "* Of verhoog de uitbreidings-waarde of vergroot de vormgrootte"
 
-#: lib/elements/fill_stitch.py:145
+#: lib/elements/fill_stitch.py:144
 msgid "* Or decrease the fill coverage value"
 msgstr "* Of verlaag de vul dekkings-waarde"
 
-#: lib/elements/fill_stitch.py:146
+#: lib/elements/fill_stitch.py:145
 msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant, adapt settings and pixelate the shape"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:151
+#: lib/elements/fill_stitch.py:150
 msgid "This shape is invalid"
 msgstr "Deze vorm is ongeldig"
 
-#: lib/elements/fill_stitch.py:152
+#: lib/elements/fill_stitch.py:151
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
 msgstr "Opvulling: Deze vorm kan niet worden geborduurd. Probeer het te repareren met de \"Break Apart Fill Objects\" extensie."
 
-#: lib/elements/fill_stitch.py:160
+#: lib/elements/fill_stitch.py:159
 msgid "FillStitch"
 msgstr "Vulsteek"
 
-#: lib/elements/fill_stitch.py:163
+#: lib/elements/fill_stitch.py:162
 msgid "Fill stitching"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:167 lib/gui/tartan/embroidery_panel.py:202
+#: lib/elements/fill_stitch.py:166 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:55
 msgid "Tatami Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:168 inx/inkstitch_select_elements.inx:56
+#: lib/elements/fill_stitch.py:167 inx/inkstitch_select_elements.inx:56
 msgid "Circular Fill"
 msgstr "Circulaire vulling"
 
-#: lib/elements/fill_stitch.py:169 inx/inkstitch_select_elements.inx:57
+#: lib/elements/fill_stitch.py:168 inx/inkstitch_select_elements.inx:57
 msgid "Contour Fill"
 msgstr "Contour vulling"
 
-#: lib/elements/fill_stitch.py:170 lib/lettering/categories.py:20
+#: lib/elements/fill_stitch.py:169 lib/lettering/categories.py:20
 #: inx/inkstitch_lettering_generate_json.inx:60
 msgid "Cross Stitch"
 msgstr "Kruissteek"
 
-#: lib/elements/fill_stitch.py:171 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:170 inx/inkstitch_select_elements.inx:58
 msgid "Guided Fill"
 msgstr "Begeleide vulling"
 
-#: lib/elements/fill_stitch.py:172 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:171 inx/inkstitch_select_elements.inx:59
 msgid "Linear Gradient Fill"
 msgstr "Lineaire kleur verloopvulling"
 
-#: lib/elements/fill_stitch.py:173 inx/inkstitch_select_elements.inx:60
+#: lib/elements/fill_stitch.py:172 inx/inkstitch_select_elements.inx:60
 msgid "Meander Fill"
 msgstr "Kronkelende Vulling"
 
-#: lib/elements/fill_stitch.py:174 inx/inkstitch_select_elements.inx:61
+#: lib/elements/fill_stitch.py:173 inx/inkstitch_select_elements.inx:61
 msgid "Tartan Fill"
 msgstr "Schotse ruit vulling"
 
-#: lib/elements/fill_stitch.py:175 lib/gui/tartan/embroidery_panel.py:203
+#: lib/elements/fill_stitch.py:174 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
 msgstr "Ouderwetse vulling"
 
-#: lib/elements/fill_stitch.py:179
+#: lib/elements/fill_stitch.py:178
 msgid "Fill method"
 msgstr "Vul methode"
 
-#: lib/elements/fill_stitch.py:188
+#: lib/elements/fill_stitch.py:187
 msgid "Guided Fill Strategy"
 msgstr "Begeleide vulstrategie"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:188
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:188
 msgid "Parallel Offset"
 msgstr "Parallelle verschuiving"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:188
 msgid "Buffer"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:190
+#: lib/elements/fill_stitch.py:189
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr "Kopiëren (standaard) vult de vorm met verschoven kopieën van de lijn. Parallelle offset zorgt ervoor dat elke lijn altijd een constante afstand tot de aangrenzende lijn heeft. Scherpe hoeken worden misschien geïntroduceerd."
 
-#: lib/elements/fill_stitch.py:197
+#: lib/elements/fill_stitch.py:196
 msgid "Contour Fill Strategy"
 msgstr "Contour vulstrategie"
 
-#: lib/elements/fill_stitch.py:198
+#: lib/elements/fill_stitch.py:197
 msgid "Inner to Outer"
 msgstr "Binnen naar buiten"
 
-#: lib/elements/fill_stitch.py:198
+#: lib/elements/fill_stitch.py:197
 msgid "Single spiral"
 msgstr "Enkele spiraal"
 
-#: lib/elements/fill_stitch.py:198
+#: lib/elements/fill_stitch.py:197
 msgid "Double spiral"
 msgstr "Dubbele spiraal"
 
-#: lib/elements/fill_stitch.py:203
+#: lib/elements/fill_stitch.py:202
 msgid "Join Style"
 msgstr "Combineer stijl"
 
-#: lib/elements/fill_stitch.py:204 inx/inkstitch_knockdown_fill.inx:22
+#: lib/elements/fill_stitch.py:203 inx/inkstitch_knockdown_fill.inx:22
 #: inx/inkstitch_knockdown_fill.inx:41
 msgid "Round"
 msgstr "Rond"
 
-#: lib/elements/fill_stitch.py:204
+#: lib/elements/fill_stitch.py:203
 msgid "Mitered"
 msgstr "Verstek"
 
-#: lib/elements/fill_stitch.py:204
+#: lib/elements/fill_stitch.py:203
 msgid "Beveled"
 msgstr "Afgeschuind"
 
-#: lib/elements/fill_stitch.py:210
+#: lib/elements/fill_stitch.py:209
 msgid "Avoid self-crossing"
 msgstr "Vermijd zelfkruising"
 
-#: lib/elements/fill_stitch.py:219
+#: lib/elements/fill_stitch.py:218
 msgid "Clockwise"
 msgstr "Met de klok mee"
 
-#: lib/elements/fill_stitch.py:224
+#: lib/elements/fill_stitch.py:223
 msgid "Meander Pattern"
 msgstr "Kronkel patroon"
 
-#: lib/elements/fill_stitch.py:231
+#: lib/elements/fill_stitch.py:230
 msgid "Meander pattern angle"
 msgstr "Kronkel patroon hoek"
 
-#: lib/elements/fill_stitch.py:241
+#: lib/elements/fill_stitch.py:240
 msgid "Meander pattern scale"
 msgstr "Kronkel patroon schaal"
 
-#: lib/elements/fill_stitch.py:242
+#: lib/elements/fill_stitch.py:241
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
 msgstr "Percentage om het kronkel patroon uit te rekken of in te drukken. U kunt horizontaal en verticaal afzonderlijk schalen door twee percentages te gebruiken, gescheiden door een spatie "
 
-#: lib/elements/fill_stitch.py:252
+#: lib/elements/fill_stitch.py:251
 msgid "Clip path"
 msgstr "Clip pad"
 
-#: lib/elements/fill_stitch.py:253
+#: lib/elements/fill_stitch.py:252
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
 msgstr "Beperk het borduren tot de vorm. Handig wanneer gladstrijken en vergroten worden gebruikt."
 
-#: lib/elements/fill_stitch.py:262
+#: lib/elements/fill_stitch.py:261
 msgid "Smoothness"
 msgstr "Gladheid"
 
-#: lib/elements/fill_stitch.py:264
+#: lib/elements/fill_stitch.py:263
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
 msgstr "Maak het steekpad glad. Gladheid beperkt hoe ver het gladgemaakte steekpad mag afwijken van het oorspronkelijke pad. Probeer lage getallen zoals 0.2 Tip: een lagere tolerantie voor de loopsteek kan ook nodig zijn."
 
-#: lib/elements/fill_stitch.py:279
+#: lib/elements/fill_stitch.py:278
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
 msgstr "Vergroot de vorm vóór het opvullen, om de ruimte tussen de vormen te compenseren. Negatieve waarden verkleinen in plaats daarvan."
 
-#: lib/elements/fill_stitch.py:289
+#: lib/elements/fill_stitch.py:288
 msgid "Gap Filling"
 msgstr "Opvullen van gaten"
 
-#: lib/elements/fill_stitch.py:290
+#: lib/elements/fill_stitch.py:289
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
 msgstr "Voeg extra rijen toe om gaten tussen de secties te compenseren die door vervorming ontstaan. Rijen worden altijd in paren toegevoegd, dus dit aantal wordt afgerond op het dichtstbijzijnde veelvoud van 2."
 
-#: lib/elements/fill_stitch.py:302 lib/elements/fill_stitch.py:315
+#: lib/elements/fill_stitch.py:301 lib/elements/fill_stitch.py:333
 #: lib/gui/tartan/embroidery_panel.py:35
 msgid "Angle of lines of stitches"
 msgstr "Hoek van de lijnen van de steken"
 
-#: lib/elements/fill_stitch.py:303
+#: lib/elements/fill_stitch.py:302
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "De hoek neemt toe tegen de klok in. 0 is horizontaal. Negatieve waarden zijn toegestaan."
 
-#: lib/elements/fill_stitch.py:316 lib/gui/tartan/embroidery_panel.py:36
+#: lib/elements/fill_stitch.py:315
+msgid "Guide copy angle"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:316
+msgid "Angle for guide line shifting. Changing the angle may have a huge impact on the actual spacing between the rows. Ensure the guide line is large enough to fill the area when shifted into the given angle."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:334 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
 msgstr "Relatief ten opzichte van de richting van de schotse ruit streep."
 
-#: lib/elements/fill_stitch.py:328
+#: lib/elements/fill_stitch.py:346
 msgid "Maximum fill stitch length"
 msgstr "Maximale opvul steeklengte"
 
-#: lib/elements/fill_stitch.py:330 lib/elements/fill_stitch.py:876
+#: lib/elements/fill_stitch.py:348 lib/elements/fill_stitch.py:894
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "De lengte van elke steek in een rij. Een kortere steek kan worden gebruikt aan het begin of einde van een rij."
 
-#: lib/elements/fill_stitch.py:346
+#: lib/elements/fill_stitch.py:364
 msgid "Spacing between rows"
 msgstr "Afstand tussen rijen"
 
-#: lib/elements/fill_stitch.py:347
+#: lib/elements/fill_stitch.py:365
 msgid "Distance between rows of stitches."
 msgstr "Afstand tussen rijen van steken."
 
-#: lib/elements/fill_stitch.py:364 inx/inkstitch_gradient_blocks.inx:24
+#: lib/elements/fill_stitch.py:382 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
 msgstr "Eind rijafstand"
 
-#: lib/elements/fill_stitch.py:365
+#: lib/elements/fill_stitch.py:383
 msgid "Increases or decreases the row spacing towards the end."
 msgstr "Vergroot of verkleint de rijafstand richting het einde."
 
-#: lib/elements/fill_stitch.py:379
+#: lib/elements/fill_stitch.py:397
 msgid "Stagger rows this many times before repeating"
 msgstr "Spring rijen zoveel keer in voordat herhaald wordt"
 
-#: lib/elements/fill_stitch.py:380 lib/elements/satin_column.py:227
+#: lib/elements/fill_stitch.py:398 lib/elements/satin_column.py:227
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Lengte van de cyclus waarmee opeenvolgende steekrijen verspringen. Fractionele waarden zijn toegestaan ​​en kunnen minder zichtbare diagonalen hebben dan gehele getallen."
 
-#: lib/elements/fill_stitch.py:396 lib/elements/fill_stitch.py:711
+#: lib/elements/fill_stitch.py:414 lib/elements/fill_stitch.py:729
 msgid "Skip last stitch in each row"
 msgstr "Sla de laatste steek in elke rij over"
 
-#: lib/elements/fill_stitch.py:397 lib/elements/fill_stitch.py:712
+#: lib/elements/fill_stitch.py:415 lib/elements/fill_stitch.py:730
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "De laatste steek in elke rij is vrij dicht op de eerste steek in de volgende rij. Door deze over te slaan wordt de dichtheid en het aantal steken verkleind."
 
-#: lib/elements/fill_stitch.py:412
+#: lib/elements/fill_stitch.py:430
 msgid "Flip fill (start right-to-left)"
 msgstr "Draai opvulling om (start rechts naar links)"
 
-#: lib/elements/fill_stitch.py:413
+#: lib/elements/fill_stitch.py:431
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr "De omdraai optie kan je helpen met het routeren van je steekpad. Als je omdraaien kiest, gaat het borduren van rechts naar links in plaats van van links naar rechts."
 
-#: lib/elements/fill_stitch.py:425
+#: lib/elements/fill_stitch.py:443
 msgid "Reverse fill"
 msgstr "Vulling Omkeren"
 
-#: lib/elements/fill_stitch.py:426
+#: lib/elements/fill_stitch.py:444
 msgid "Reverses fill path."
 msgstr "Keert het vul pad om."
 
-#: lib/elements/fill_stitch.py:437
+#: lib/elements/fill_stitch.py:455
 msgid "Stop at ending point"
 msgstr "Stop bij het eindpunt"
 
-#: lib/elements/fill_stitch.py:438
+#: lib/elements/fill_stitch.py:456
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr "Als deze optie is uitgeschakeld, wordt het eindpunt alleen gebruikt om een ​​algemene richting voor de steek route te definiëren. Indien ingeschakeld, eindigt het laatste gedeelte op de gedefinieerde plek."
 
-#: lib/elements/fill_stitch.py:450 lib/elements/fill_stitch.py:723
+#: lib/elements/fill_stitch.py:468 lib/elements/fill_stitch.py:741
 msgid "Underpath"
 msgstr "Onder pad"
 
-#: lib/elements/fill_stitch.py:451 lib/elements/fill_stitch.py:724
+#: lib/elements/fill_stitch.py:469 lib/elements/fill_stitch.py:742
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Beweeg binnen de vorm bij verplaatsen tussen secties. Onder pad steken vermijden de richting van de rijhoek zodat ze niet zichtbaar zijn. Dit geeft ze een gekarteld uiterlijk."
 
-#: lib/elements/fill_stitch.py:463 lib/elements/satin_column.py:389
-#: lib/elements/stroke.py:155
+#: lib/elements/fill_stitch.py:481 lib/elements/satin_column.py:389
+#: lib/elements/stroke.py:156
 msgid "Running stitch length"
 msgstr "Doorlopende steek lengte"
 
-#: lib/elements/fill_stitch.py:464
+#: lib/elements/fill_stitch.py:482
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr "Lengte van de steken rond de omtrek van het vulgebied, gebruikt bij het verplaatsen van sectie naar sectie. Ook gebruikt voor kronkel en cirkelvormige vulling."
 
-#: lib/elements/fill_stitch.py:481 lib/elements/satin_column.py:400
+#: lib/elements/fill_stitch.py:499 lib/elements/satin_column.py:400
 msgid "Running stitch tolerance"
 msgstr "Tolerantie lopende steek"
 
-#: lib/elements/fill_stitch.py:482 lib/elements/satin_column.py:401
+#: lib/elements/fill_stitch.py:500 lib/elements/satin_column.py:401
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Bepaalt hoe hard Ink/Stitch probeert te voorkomen dat er buiten de vorm wordt geborduurd. Bij lagere getallen is de kans kleiner dat er buiten de vorm wordt geborduurd, maar zijn er meer steken nodig."
 
-#: lib/elements/fill_stitch.py:500 lib/elements/stroke.py:199
+#: lib/elements/fill_stitch.py:518 lib/elements/stroke.py:200
 msgid "Randomize stitch length"
 msgstr "Willekeurige steeklengte"
 
-#: lib/elements/fill_stitch.py:501 lib/elements/stroke.py:201
+#: lib/elements/fill_stitch.py:519 lib/elements/stroke.py:202
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr "Maak de steeklengte en fase willekeurig in plaats van ze gelijkmatig te verdelen of te verspringen. Dit wordt aanbevolen voor dicht op elkaar geplaatste gebogen vullingen om moiré artefacten te voorkomen."
 
-#: lib/elements/fill_stitch.py:517 lib/elements/stroke.py:220
+#: lib/elements/fill_stitch.py:535 lib/elements/stroke.py:221
 msgid "Random stitch length jitter"
 msgstr "Willekeurige steeklengte jitter"
 
-#: lib/elements/fill_stitch.py:518 lib/elements/stroke.py:221
+#: lib/elements/fill_stitch.py:536 lib/elements/stroke.py:222
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Hoeveelheid om de lengte van elke steek te variëren bij het willekeurig maken."
 
-#: lib/elements/fill_stitch.py:533 lib/elements/satin_column.py:525
-#: lib/elements/stroke.py:98
+#: lib/elements/fill_stitch.py:551 lib/elements/satin_column.py:525
+#: lib/elements/stroke.py:99
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:33
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:35
 msgid "Repeats"
 msgstr "Herhalingen"
 
-#: lib/elements/fill_stitch.py:534 lib/elements/stroke.py:99
+#: lib/elements/fill_stitch.py:552 lib/elements/stroke.py:100
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:36
 msgid "Defines how many times to run down and back along the path."
 msgstr "Bepaalt hoe vaak op en neer langs een pad wordt gegaan."
 
-#: lib/elements/fill_stitch.py:546 lib/elements/stroke.py:116
+#: lib/elements/fill_stitch.py:564 lib/elements/stroke.py:117
 msgid "Bean stitch number of repeats"
 msgstr "Drievoudige loopsteek aantal herhalingen"
 
-#: lib/elements/fill_stitch.py:547 lib/elements/stroke.py:118
+#: lib/elements/fill_stitch.py:565 lib/elements/stroke.py:119
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Trek elke steek zoveel keer terug. Een waarde van 1 verdrievoudigt elke steek (vooruit, achteruit, vooruit). Een waarde van 2 vervijfvoudigt elke steek, enz.\n\n"
 "U kunt een patroon met verschillende herhalingen maken met behulp van een lijst met waarden die door een spatie worden gescheiden."
 
-#: lib/elements/fill_stitch.py:564 lib/elements/satin_column.py:264
-#: lib/elements/stroke.py:255
+#: lib/elements/fill_stitch.py:582 lib/elements/satin_column.py:264
+#: lib/elements/stroke.py:256
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Zig zag afstand (piek naar piek)"
 
-#: lib/elements/fill_stitch.py:565 lib/elements/stroke.py:256
+#: lib/elements/fill_stitch.py:583 lib/elements/stroke.py:257
 msgid "Length of stitches in zig-zag mode."
 msgstr "Lengte van steken in zig zag modus."
 
-#: lib/elements/fill_stitch.py:577
+#: lib/elements/fill_stitch.py:595
 msgid "Zig-zag width"
 msgstr "Zig zag breedte"
 
-#: lib/elements/fill_stitch.py:578
+#: lib/elements/fill_stitch.py:596
 msgid "Width of the zig-zag line."
 msgstr "De breedte van de zig-zag lijn."
 
-#: lib/elements/fill_stitch.py:591 lib/gui/tartan/embroidery_panel.py:42
+#: lib/elements/fill_stitch.py:609 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
 msgstr "Rijen per schotse ruit draad"
 
-#: lib/elements/fill_stitch.py:592 lib/gui/tartan/embroidery_panel.py:44
+#: lib/elements/fill_stitch.py:610 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
 msgstr "Aaneengesloten rijen van dezelfde kleur"
 
-#: lib/elements/fill_stitch.py:603
+#: lib/elements/fill_stitch.py:621
 msgid "Herringbone width"
 msgstr "Visgraat breedte"
 
-#: lib/elements/fill_stitch.py:604
+#: lib/elements/fill_stitch.py:622
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Definieert de breedte van een visgraatpatroon. Gebruik 0 voor regelmatige rijen."
 
-#: lib/elements/fill_stitch.py:616 lib/elements/satin_column.py:292
-#: lib/elements/stroke.py:271
+#: lib/elements/fill_stitch.py:634 lib/elements/satin_column.py:292
+#: lib/elements/stroke.py:272
 msgid "Pull compensation"
 msgstr "Trek compensatie"
 
-#: lib/elements/fill_stitch.py:617
+#: lib/elements/fill_stitch.py:635
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Met een vulsteek kan de stof worden samengetrokken, wat resulteert in een vorm die smaller is dan die u in Inkscape tekent. Deze instelling breidt elke rij steken vanuit het midden van de rij met een vaste lengte uit. Twee waarden gescheiden door een spatie kunnen worden gebruikt voor een asymmetrisch effect."
 
-#: lib/elements/fill_stitch.py:621 lib/elements/satin_column.py:296
+#: lib/elements/fill_stitch.py:639 lib/elements/satin_column.py:296
 #: lib/elements/satin_column.py:318 lib/elements/satin_column.py:470
-#: lib/elements/satin_column.py:564 lib/elements/stroke.py:277
+#: lib/elements/satin_column.py:564 lib/elements/stroke.py:278
 msgid "mm (each side)"
 msgstr "mm (elke kant)"
 
-#: lib/elements/fill_stitch.py:632 lib/elements/satin_column.py:277
+#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:277
 msgid "Pull compensation percentage"
 msgstr "Trekcompensatie percentage"
 
-#: lib/elements/fill_stitch.py:633
+#: lib/elements/fill_stitch.py:651
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Extra trekcompensatie die varieert als percentage van de rijbreedte. Twee waarden gescheiden door een spatie kunnen worden gebruikt voor een asymmetrisch effect."
 
-#: lib/elements/fill_stitch.py:636 lib/elements/satin_column.py:144
+#: lib/elements/fill_stitch.py:654 lib/elements/satin_column.py:144
 #: lib/elements/satin_column.py:154 lib/elements/satin_column.py:280
 #: lib/elements/satin_column.py:485 lib/elements/satin_column.py:584
 msgid "% (each side)"
 msgstr "% (elke kant)"
 
-#: lib/elements/fill_stitch.py:645 lib/elements/fill_stitch.py:654
-#: lib/elements/fill_stitch.py:681 lib/elements/fill_stitch.py:692
-#: lib/elements/fill_stitch.py:702 lib/elements/fill_stitch.py:714
-#: lib/elements/fill_stitch.py:727
+#: lib/elements/fill_stitch.py:663 lib/elements/fill_stitch.py:672
+#: lib/elements/fill_stitch.py:699 lib/elements/fill_stitch.py:710
+#: lib/elements/fill_stitch.py:720 lib/elements/fill_stitch.py:732
+#: lib/elements/fill_stitch.py:745
 msgid "Fill Underlay"
 msgstr "Vulling onderlaag"
 
-#: lib/elements/fill_stitch.py:645 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:663 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr "Versteviging"
 
-#: lib/elements/fill_stitch.py:651
+#: lib/elements/fill_stitch.py:669
 msgid "Fill angle"
 msgstr "Opvul hoek"
 
-#: lib/elements/fill_stitch.py:652
+#: lib/elements/fill_stitch.py:670
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Standaard: vulhoek + 90 graden. Voeg een lijst in voor meerdere lagen, gescheiden door een spatie."
 
-#: lib/elements/fill_stitch.py:678 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:696 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr "Opvulrij afstand"
 
-#: lib/elements/fill_stitch.py:679
+#: lib/elements/fill_stitch.py:697
 msgid "default: 3x fill row spacing"
 msgstr "standaard: 3x opvulrij afstand"
 
-#: lib/elements/fill_stitch.py:689 lib/elements/stroke.py:238
+#: lib/elements/fill_stitch.py:707 lib/elements/stroke.py:239
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr "Max steek lengte"
 
-#: lib/elements/fill_stitch.py:690
+#: lib/elements/fill_stitch.py:708
 msgid "default: equal to fill max stitch length"
 msgstr "standaard: gelijk aan max steek lengte"
 
-#: lib/elements/fill_stitch.py:700
+#: lib/elements/fill_stitch.py:718
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verklein de vorm van de versteviging om te voorkomen dat de versteviging zichtbaar is aan de buitenkant van de opvulling."
 
-#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:606
-#: lib/elements/stroke.py:619 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/fill_stitch.py:753 lib/elements/satin_column.py:606
+#: lib/elements/stroke.py:620 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Willekeurig zaad"
 
-#: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:607
-#: lib/elements/stroke.py:620
+#: lib/elements/fill_stitch.py:754 lib/elements/satin_column.py:607
+#: lib/elements/stroke.py:621
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Gebruik een specifieke zaad voor willekeurige kenmerken. Gebruikt de element ID als deze leeg is."
 
-#: lib/elements/fill_stitch.py:756 lib/stitch_plan/lock_stitch.py:218
+#: lib/elements/fill_stitch.py:774 lib/stitch_plan/lock_stitch.py:218
 msgid "Cross"
 msgstr "Kruis"
 
-#: lib/elements/fill_stitch.py:757
+#: lib/elements/fill_stitch.py:775
 msgid "Cross Flipped"
 msgstr "Kruissteek Gedraaid"
 
-#: lib/elements/fill_stitch.py:758
+#: lib/elements/fill_stitch.py:776
 msgid "Half Cross"
 msgstr "Half Kruis"
 
-#: lib/elements/fill_stitch.py:759
+#: lib/elements/fill_stitch.py:777
 msgid "Half Cross Flipped"
 msgstr "Half Kruis Gedraaid"
 
-#: lib/elements/fill_stitch.py:760
+#: lib/elements/fill_stitch.py:778
 msgid "Upright Cross"
 msgstr "Vertikaal Kruis"
 
-#: lib/elements/fill_stitch.py:761
+#: lib/elements/fill_stitch.py:779
 msgid "Upright Cross Flipped"
 msgstr "Vertikaal Gedraaid Kruis"
 
-#: lib/elements/fill_stitch.py:762
+#: lib/elements/fill_stitch.py:780
 msgid "Dense Upright Cross"
 msgstr "Dicht rechtopstaand kruis"
 
-#: lib/elements/fill_stitch.py:763
+#: lib/elements/fill_stitch.py:781
 msgid "Dense Upright Cross Flipped"
 msgstr "Dicht rechtopstaand kruis omgedraaid"
 
-#: lib/elements/fill_stitch.py:764
+#: lib/elements/fill_stitch.py:782
 msgid "Double Cross"
 msgstr "Dubbel Kruis"
 
-#: lib/elements/fill_stitch.py:765
+#: lib/elements/fill_stitch.py:783
 msgid "Double Cross Flipped"
 msgstr "Dubbel kruis omgedraaid"
 
-#: lib/elements/fill_stitch.py:766
+#: lib/elements/fill_stitch.py:784
 msgid "Smyrna Cross"
 msgstr "Smyrna-kruis"
 
-#: lib/elements/fill_stitch.py:767
+#: lib/elements/fill_stitch.py:785
 msgid "Smyrna Cross Flipped"
 msgstr "Smyrna-kruis omgedraaid"
 
-#: lib/elements/fill_stitch.py:772 lib/gui/cross_stitch_assistant.py:112
+#: lib/elements/fill_stitch.py:790 lib/gui/cross_stitch_assistant.py:112
 msgid "Cross stitch method"
 msgstr "Kruis steek methode"
 
-#: lib/elements/fill_stitch.py:783
+#: lib/elements/fill_stitch.py:801
 msgid "Thread count"
 msgstr "Draad telling"
 
-#: lib/elements/fill_stitch.py:784
+#: lib/elements/fill_stitch.py:802
 msgid "Defines the thread count for each stitch.\n"
 "Thread count must be an even number.\n"
 "Half crosses are stitched with an odd thread count."
@@ -2059,57 +2072,57 @@ msgstr "Definieert het aantal draden per steek.\n"
 "Het aantal draden moet een even getal zijn.\n"
 "Halve kruisjes worden geborduurd met een oneven aantal draden."
 
-#: lib/elements/fill_stitch.py:797
+#: lib/elements/fill_stitch.py:815
 msgid "Pattern size"
 msgstr "Patroon grote"
 
-#: lib/elements/fill_stitch.py:798
+#: lib/elements/fill_stitch.py:816
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
 msgstr "De afmetingen van het kruissteekpatroon worden in mm aangegeven; de x- en y-waarden worden gescheiden door een spatie. Slechts één invoerwaarde levert een vierkant patroon op."
 
-#: lib/elements/fill_stitch.py:801 lib/elements/fill_stitch.py:834
+#: lib/elements/fill_stitch.py:819 lib/elements/fill_stitch.py:852
 msgid "mm (x y)"
 msgstr "mm (x y)"
 
-#: lib/elements/fill_stitch.py:813
+#: lib/elements/fill_stitch.py:831
 msgid "Align grid with canvas"
 msgstr "Lijn het raster op met het canvas"
 
-#: lib/elements/fill_stitch.py:814
+#: lib/elements/fill_stitch.py:832
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
 msgstr "Dit zorgt voor een goede uitlijning van aangrenzende kruissteekgebieden, maar het betekent ook dat het resultaat kan veranderen wanneer het element buiten het raster wordt verplaatst.\n\n"
 "Schakel deze optie uit om ervoor te zorgen dat dit element op dezelfde manier wordt geborduurd, ongeacht de positie op het canvas."
 
-#: lib/elements/fill_stitch.py:830
+#: lib/elements/fill_stitch.py:848
 msgid "Grid Offset"
 msgstr "Raster Compensatie"
 
-#: lib/elements/fill_stitch.py:831
+#: lib/elements/fill_stitch.py:849
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
 msgstr "Verschuift het kruissteek raster met de opgegeven waarden. De X- en Y-waarden worden gescheiden door een spatie. Slechts één invoerwaarde verschuift het patroon gelijkmatig in de x- en y-richting."
 
-#: lib/elements/fill_stitch.py:846
+#: lib/elements/fill_stitch.py:864
 msgid "Grid Rotation"
 msgstr "Raster rotatie"
 
-#: lib/elements/fill_stitch.py:847
+#: lib/elements/fill_stitch.py:865
 msgid "Rotates the cross stitch grid by the given value."
 msgstr "Draait het kruissteek raster met de opgegeven waarde."
 
-#: lib/elements/fill_stitch.py:849
+#: lib/elements/fill_stitch.py:867
 msgid "deg"
 msgstr "graden"
 
-#: lib/elements/fill_stitch.py:861
+#: lib/elements/fill_stitch.py:879
 msgid "Fill coverage"
 msgstr "Vul dekking"
 
-#: lib/elements/fill_stitch.py:862
+#: lib/elements/fill_stitch.py:880
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr "Percentage van de overlap van elk kruis met het vulgebied"
 
-#: lib/elements/fill_stitch.py:874 lib/elements/satin_column.py:185
+#: lib/elements/fill_stitch.py:892 lib/elements/satin_column.py:185
 #: lib/elements/satin_column.py:595
 msgid "Maximum stitch length"
 msgstr "Maximale steeklengte"
@@ -2247,7 +2260,7 @@ msgstr "Dunne Satijn"
 msgid "This element renders as a satin, but it is too narrow."
 msgstr "Dit element wordt als satijn weergegeven, maar het is te dun."
 
-#: lib/elements/satin_column.py:87 lib/elements/stroke.py:40
+#: lib/elements/satin_column.py:87 lib/elements/stroke.py:41
 msgid "* Increase stroke width."
 msgstr "* Vergroot de lijn breedte."
 
@@ -2304,7 +2317,7 @@ msgstr "\"S\" Steek"
 msgid "Zig-zag"
 msgstr "Zig-zag"
 
-#: lib/elements/satin_column.py:131 lib/elements/stroke.py:85
+#: lib/elements/satin_column.py:131 lib/elements/stroke.py:86
 #: inx/inkstitch_break_apart.inx:9
 msgid "Method"
 msgstr "Methode"
@@ -2414,23 +2427,23 @@ msgstr "Extra trekcompensatie die varieert als percentage van de steekbreedte. T
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Satijn steken trekken de stof samen, wat resulteert in een kolom die smaller is dan je in Inkscape tekent. Deze instelling vergroot elk paar naald penetraties vanuit het midden van de satijn kolom met een vaste lengte. Twee waarden gescheiden door een spatie kunnen worden gebruikt voor een asymmetrisch effect."
 
-#: lib/elements/satin_column.py:307 lib/elements/stroke.py:472
+#: lib/elements/satin_column.py:307 lib/elements/stroke.py:473
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: lib/elements/satin_column.py:308 lib/elements/stroke.py:473
+#: lib/elements/satin_column.py:308 lib/elements/stroke.py:474
 msgid "Don't reverse"
 msgstr "Niet omkeren"
 
-#: lib/elements/satin_column.py:309 lib/elements/stroke.py:474
+#: lib/elements/satin_column.py:309 lib/elements/stroke.py:475
 msgid "Reverse first rail"
 msgstr "Keer de eerste rail om"
 
-#: lib/elements/satin_column.py:310 lib/elements/stroke.py:475
+#: lib/elements/satin_column.py:310 lib/elements/stroke.py:476
 msgid "Reverse second rail"
 msgstr "Keer de tweede rail om"
 
-#: lib/elements/satin_column.py:311 lib/elements/stroke.py:476
+#: lib/elements/satin_column.py:311 lib/elements/stroke.py:477
 msgid "Reverse both rails"
 msgstr "Keer beide rails om"
 
@@ -2442,7 +2455,7 @@ msgstr "Duw compensatie"
 msgid "Shrinks the column at start and/or end."
 msgstr "Verkleint de kolom aan het begin en/of einde."
 
-#: lib/elements/satin_column.py:328 lib/elements/stroke.py:482
+#: lib/elements/satin_column.py:328 lib/elements/stroke.py:483
 msgid "Reverse rails"
 msgstr "Rails omkeren"
 
@@ -2450,7 +2463,7 @@ msgstr "Rails omkeren"
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
 msgstr "Dit kan helpen als uw satijn heel vreemd rendert. Standaard: automatisch een omgekeerde rail detecteren en corrigeren."
 
-#: lib/elements/satin_column.py:378 lib/elements/stroke.py:497
+#: lib/elements/satin_column.py:378 lib/elements/stroke.py:498
 msgid "Swap rails"
 msgstr "Rails wisselen"
 
@@ -2504,7 +2517,7 @@ msgid "Stitch length"
 msgstr "Steek lengte"
 
 #: lib/elements/satin_column.py:450 lib/elements/satin_column.py:507
-#: lib/elements/stroke.py:177
+#: lib/elements/stroke.py:178
 msgid "Stitch tolerance"
 msgstr "Steek tolerantie"
 
@@ -2589,252 +2602,252 @@ msgstr "Inzet hoeveelheid (evenredig)"
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Splitsen van steek als afstand van maximale steeklengte wordt overschreden"
 
-#: lib/elements/stroke.py:37
+#: lib/elements/stroke.py:38
 msgid "Too narrow satin"
 msgstr "Te smalle satijn"
 
-#: lib/elements/stroke.py:38
+#: lib/elements/stroke.py:39
 msgid "This element renders as running stitch while it has a satin column parameter."
 msgstr "Dit element wordt weergegeven als een loop steek zolang het een satijn kolom instellingen heeft."
 
-#: lib/elements/stroke.py:41
+#: lib/elements/stroke.py:42
 msgid "Whether or not a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
 msgstr "Of een lijn als satijn steek kan worden weergegeven, hangt af van de lijndikte en de voorkeur waarde voor de minimale satijn steek breedte. De lijndikte moet groter zijn dan de voorkeur instelling, anders wordt dit element als een rijgsteek behandeld. Om harde steken te voorkomen, is het aan te raden alleen satijn steken te gebruiken die breder zijn dan 1 mm."
 
-#: lib/elements/stroke.py:51 lib/extensions/params.py:633
+#: lib/elements/stroke.py:52 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Lijn"
 
-#: lib/elements/stroke.py:54 lib/extensions/params.py:312
+#: lib/elements/stroke.py:55 lib/extensions/params.py:312
 msgid "Running stitch along paths"
 msgstr "Lopende steek langs paden"
 
-#: lib/elements/stroke.py:76
+#: lib/elements/stroke.py:77
 msgid "Running Stitch / Bean Stitch"
 msgstr "Loop steek/Drievoudige loopsteek"
 
-#: lib/elements/stroke.py:77 lib/lettering/categories.py:26
+#: lib/elements/stroke.py:78 lib/lettering/categories.py:26
 #: inx/inkstitch_lettering_generate_json.inx:70
 msgid "Ripple Stitch"
 msgstr "Rimpel steek"
 
-#: lib/elements/stroke.py:78 inx/inkstitch_select_elements.inx:23
+#: lib/elements/stroke.py:79 inx/inkstitch_select_elements.inx:23
 msgid "ZigZag Stitch"
 msgstr "Zigzag steek"
 
-#: lib/elements/stroke.py:79 inx/inkstitch_select_elements.inx:24
+#: lib/elements/stroke.py:80 inx/inkstitch_select_elements.inx:24
 msgid "Manual Stitch"
 msgstr "Handmatige Steek"
 
-#: lib/elements/stroke.py:141
+#: lib/elements/stroke.py:142
 msgid "Manual stitch placement"
 msgstr "Handmatige steek plaatsing"
 
-#: lib/elements/stroke.py:142
+#: lib/elements/stroke.py:143
 msgid "No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."
 msgstr "Er worden geen extra steken toegevoegd aan het originele rimpel patroon en de waarde van de loop steeklengte wordt genegeerd."
 
-#: lib/elements/stroke.py:157
+#: lib/elements/stroke.py:158
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
 "It is possible to create stitch length patterns by adding multiple values separately."
 msgstr "Lengte van de steken. De steken kunnen korter zijn, afhankelijk van de ingestelde steek tolerantie.\n\n"
 "Het is mogelijk om patronen voor de steeklengte te creëren door meerdere waarden afzonderlijk toe te voegen."
 
-#: lib/elements/stroke.py:179
+#: lib/elements/stroke.py:180
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr "Alle steken moeten binnen deze afstand van het pad liggen. Een lagere tolerantie betekent dat de steken dichter bij elkaar komen te liggen.  Een hogere tolerantie betekent dat scherpe hoeken mogen worden afgerond."
 
-#: lib/elements/stroke.py:239
+#: lib/elements/stroke.py:240
 msgid "Split stitches longer than this."
 msgstr "Split steken die langer zijn dan dit."
 
-#: lib/elements/stroke.py:273
+#: lib/elements/stroke.py:274
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr "Zigzagsteken trekken de stof samen, wat resulteert in een kolom die smaller is dan die je in Inkscape tekent. Dit vergroot de breedte van de zigzaglijn."
 
-#: lib/elements/stroke.py:291
+#: lib/elements/stroke.py:292
 msgid "Zig-zag angle"
 msgstr "Zigzag hoek"
 
-#: lib/elements/stroke.py:293
+#: lib/elements/stroke.py:294
 msgid "Rotate zig-zag direction by this angle (degrees). Creates spoke/radial effects on curves."
 msgstr "Draai de zigzag richting met deze hoek (graden). Dit creëert spaak-/radiale effecten op bochten."
 
-#: lib/elements/stroke.py:311
+#: lib/elements/stroke.py:312
 msgid "Number of lines"
 msgstr "Aantal regels"
 
-#: lib/elements/stroke.py:312
+#: lib/elements/stroke.py:313
 msgid "Number of lines from start to finish"
 msgstr "Aantal regels van begin tot eind"
 
-#: lib/elements/stroke.py:326
+#: lib/elements/stroke.py:327
 msgid "Minimum line distance"
 msgstr "Minimale lijn afstand"
 
-#: lib/elements/stroke.py:327
+#: lib/elements/stroke.py:328
 msgid "Overrides the number of lines setting."
 msgstr "Overschrijft de instelling voor het aantal lijnen."
 
-#: lib/elements/stroke.py:342
+#: lib/elements/stroke.py:343
 msgid "Line count / Minimum line distance"
 msgstr "Lijnen aantal / Minimale lijn afstand"
 
-#: lib/elements/stroke.py:343
+#: lib/elements/stroke.py:344
 msgid "Render at rungs"
 msgstr "Renderen op sporten"
 
-#: lib/elements/stroke.py:344
+#: lib/elements/stroke.py:345
 msgid "Adaptive + minimum line distance"
 msgstr "Adaptief + minimale lijnafstand"
 
-#: lib/elements/stroke.py:350
+#: lib/elements/stroke.py:351
 msgid "Pattern position"
 msgstr "Patroon positie"
 
-#: lib/elements/stroke.py:351
+#: lib/elements/stroke.py:352
 msgid "Pattern position for satin guided ripples."
 msgstr "Patroon positie voor satijn geleide rimpelingen."
 
-#: lib/elements/stroke.py:365
+#: lib/elements/stroke.py:366
 msgid "Stagger lines this many times before repeating"
 msgstr "Verplaats de naald punten zo vaak voordat u ze herhaalt"
 
-#: lib/elements/stroke.py:367
+#: lib/elements/stroke.py:368
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr "Lengte van de cyclus waarmee opeenvolgende steeklijnen verspringen. Fractionele waarden zijn toegestaan ​​en kunnen minder zichtbare diagonalen hebben dan gehele getallen. Een waarde van 0 (standaard) schakelt verspringen uit en zorgt in plaats daarvan voor gelijkmatige steken. Alleen voor lineaire ribbels."
 
-#: lib/elements/stroke.py:385
+#: lib/elements/stroke.py:386
 msgid "Skip first lines"
 msgstr "Eerste regels overslaan"
 
-#: lib/elements/stroke.py:386
+#: lib/elements/stroke.py:387
 msgid "Skip this number of lines at the beginning."
 msgstr "Sla dit aantal regels aan het begin over."
 
-#: lib/elements/stroke.py:400
+#: lib/elements/stroke.py:401
 msgid "Skip last lines"
 msgstr "Laatste regels overslaan"
 
-#: lib/elements/stroke.py:401
+#: lib/elements/stroke.py:402
 msgid "Skip this number of lines at the end"
 msgstr "Sla dit aantal regels aan het eind over"
 
-#: lib/elements/stroke.py:415
+#: lib/elements/stroke.py:416
 msgid "Flip every second line"
 msgstr "Draai elke tweede regel om"
 
-#: lib/elements/stroke.py:416
+#: lib/elements/stroke.py:417
 msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr "Lineaire rimpeling: of het patroon elke tweede lijn moet worden omgedraaid of niet."
 
-#: lib/elements/stroke.py:429
+#: lib/elements/stroke.py:430
 msgid "Line distance exponent"
 msgstr "Regelafstand exponent"
 
-#: lib/elements/stroke.py:430
+#: lib/elements/stroke.py:431
 msgid "Increase density towards one side."
 msgstr "Verhoog de dichtheid naar één kant."
 
-#: lib/elements/stroke.py:444
+#: lib/elements/stroke.py:445
 msgid "Flip exponent"
 msgstr "Spiegelen exponent"
 
-#: lib/elements/stroke.py:445
+#: lib/elements/stroke.py:446
 msgid "Reverse exponent effect."
 msgstr "Omgekeerd exponent effect."
 
-#: lib/elements/stroke.py:459
+#: lib/elements/stroke.py:460
 msgid "Reverse"
 msgstr "Omgekeerd"
 
-#: lib/elements/stroke.py:460
+#: lib/elements/stroke.py:461
 msgid "Flip start and end point"
 msgstr "Begin- en eindpunt spiegelen"
 
-#: lib/elements/stroke.py:483
+#: lib/elements/stroke.py:484
 msgid "Reverse satin ripple rails. Default: automatically detect and fix a reversed rail."
 msgstr "Omgekeerde satijnen ribbel rails. Standaard: automatisch detecteren en corrigeren van een omgekeerde rail."
 
-#: lib/elements/stroke.py:498
+#: lib/elements/stroke.py:499
 msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
 msgstr "Wisselt de eerste en tweede draad van een satijnen ribbel patroon, waardoor de kant waarop de draad eindigt en eventuele eigenschappen van de zijde worden beïnvloed"
 
-#: lib/elements/stroke.py:511
+#: lib/elements/stroke.py:512
 msgid "Grid size"
 msgstr "Rastergrootte"
 
-#: lib/elements/stroke.py:512
+#: lib/elements/stroke.py:513
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Weergeven als raster. Wees voorzichtig en let op de steekdichtheid."
 
-#: lib/elements/stroke.py:527
+#: lib/elements/stroke.py:528
 msgid "Stitch grid first"
 msgstr "Borduur eerst het raster"
 
-#: lib/elements/stroke.py:528
+#: lib/elements/stroke.py:529
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr "Keer de steek paden om, zodat het raster eerst wordt geborduurd"
 
-#: lib/elements/stroke.py:542
+#: lib/elements/stroke.py:543
 msgid "Scale axis"
 msgstr "Schaal as"
 
-#: lib/elements/stroke.py:543
+#: lib/elements/stroke.py:544
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Schaal as voor satijngeleide ribbelsteken."
 
-#: lib/elements/stroke.py:547 lib/gui/edit_json/settings_panel.py:203
+#: lib/elements/stroke.py:548 lib/gui/edit_json/settings_panel.py:203
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Geen"
 
-#: lib/elements/stroke.py:558
+#: lib/elements/stroke.py:559
 msgid "Starting scale"
 msgstr "Beginschaal"
 
-#: lib/elements/stroke.py:559
+#: lib/elements/stroke.py:560
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Hoe groot het eerste exemplaar van de regel moet zijn, in procenten."
 
-#: lib/elements/stroke.py:559 lib/elements/stroke.py:574
+#: lib/elements/stroke.py:560 lib/elements/stroke.py:575
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Alleen gebruikt voor ribbelsteek met een hulplijn."
 
-#: lib/elements/stroke.py:573
+#: lib/elements/stroke.py:574
 msgid "Ending scale"
 msgstr "Eindschaal"
 
-#: lib/elements/stroke.py:574
+#: lib/elements/stroke.py:575
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Hoe groot het laatste exemplaar van de regel moet zijn, in procenten."
 
-#: lib/elements/stroke.py:588 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:589 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Draaien"
 
-#: lib/elements/stroke.py:589
+#: lib/elements/stroke.py:590
 msgid "Rotate satin guided ripple stitches"
 msgstr "Draai satijn geleide rimpel steken"
 
-#: lib/elements/stroke.py:603 inx/inkstitch_knockdown_fill.inx:21
+#: lib/elements/stroke.py:604 inx/inkstitch_knockdown_fill.inx:21
 #: inx/inkstitch_knockdown_fill.inx:40
 msgid "Join style"
 msgstr "Knooppunt stijl"
 
-#: lib/elements/stroke.py:604
+#: lib/elements/stroke.py:605
 msgid "Join style for non circular ripples."
 msgstr "Knooppunt stijl voor niet circulaire golven."
 
-#: lib/elements/stroke.py:607
+#: lib/elements/stroke.py:608
 msgid "flat"
 msgstr "plat"
 
-#: lib/elements/stroke.py:607
+#: lib/elements/stroke.py:608
 msgid "point"
 msgstr "punt"
 
@@ -3845,7 +3858,7 @@ msgstr "Toepassen"
 #: inx/inkstitch_lettering_organize_glyphs.inx:27
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
-#: inx/inkstitch_letters_to_font.inx:62 inx/inkstitch_outline.inx:25
+#: inx/inkstitch_letters_to_font.inx:64 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:33
 #: inx/inkstitch_remove_duplicated_points.inx:14
@@ -3855,7 +3868,7 @@ msgstr "Toepassen"
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_transform_elements.inx:14 inx/inkstitch_troubleshoot.inx:23
 #: inx/inkstitch_unlink_clone.inx:11 inx/inkstitch_zigzag_line_to_satin.inx:18
-#: inx/inkstitch_zip.inx:65
+#: inx/inkstitch_zip.inx:66
 msgid "Help"
 msgstr "Help"
 
@@ -4918,7 +4931,7 @@ msgstr "Wanneer de simulatie is ingeschakeld, wordt de snelheid aangepast aan he
 
 #: lib/gui/simulator/simulator_preferences.py:38
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
-#: inx/inkstitch_zip.inx:52
+#: inx/inkstitch_zip.inx:53
 msgid "Line width (mm)"
 msgstr "Lijnbreedte (mm)"
 
@@ -5881,7 +5894,7 @@ msgid "Yes"
 msgstr "Ja"
 
 #: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:113
-#: inx/inkstitch_letters_to_font.inx:59
+#: inx/inkstitch_letters_to_font.inx:61
 msgid "No"
 msgstr "Nee"
 
@@ -6313,7 +6326,7 @@ msgstr "Deze extensie probeert één enkel steekpad te maken door alle geselecte
 #: inx/inkstitch_lettering_generate_json.inx:167
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
-#: inx/inkstitch_letters_to_font.inx:77 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_letters_to_font.inx:79 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:37 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45
@@ -7380,7 +7393,7 @@ msgstr "QCC bestand omzetten naar handmatige Inkt-/Stitch steek paden"
 msgid "SEW file input"
 msgstr "SEW bestand invoer"
 
-#: inx/inkstitch_input_SEW.inx:8
+#: inx/inkstitch_input_SEW.inx:8 inx/inkstitch_output_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
 msgstr "Ink/Stitch: Janome Borduur Formaat (.sew)"
 
@@ -7870,7 +7883,7 @@ msgstr "Definieer een map met aangepaste lettertypen voor de letter tool"
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:14
-#: inx/inkstitch_letters_to_font.inx:88
+#: inx/inkstitch_letters_to_font.inx:90
 msgid "Font Management"
 msgstr "Lettertype beheer"
 
@@ -8217,47 +8230,47 @@ msgstr "Letters naar lettertype"
 msgid "File format"
 msgstr "Bestandsformaat"
 
-#: inx/inkstitch_letters_to_font.inx:52
+#: inx/inkstitch_letters_to_font.inx:54
 msgid "Font directory"
 msgstr "Lettertype map"
 
-#: inx/inkstitch_letters_to_font.inx:55
+#: inx/inkstitch_letters_to_font.inx:57
 msgid "Margin left (mm)"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:55
+#: inx/inkstitch_letters_to_font.inx:57
 msgid "With \"Use glyph width\" enabled in the json, the margin to the left page border defines the distance between glyphs"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:56
+#: inx/inkstitch_letters_to_font.inx:58
 msgid "Import commands"
 msgstr "Commando's importeren"
 
-#: inx/inkstitch_letters_to_font.inx:57
+#: inx/inkstitch_letters_to_font.inx:59
 msgid "As param"
 msgstr "Als instellingen"
 
-#: inx/inkstitch_letters_to_font.inx:58
+#: inx/inkstitch_letters_to_font.inx:60
 msgid "As symbol"
 msgstr "Als symbool"
 
-#: inx/inkstitch_letters_to_font.inx:63
+#: inx/inkstitch_letters_to_font.inx:65
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
 msgstr "Voegt alle letters van een vooraf gedigitaliseerd borduur letter type (één bestand voor elke letter) toe aan het document, zodat deze beschikbaar zijn voor het Ink/Stitch-letter systeem."
 
-#: inx/inkstitch_letters_to_font.inx:66
+#: inx/inkstitch_letters_to_font.inx:68
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
 msgstr "Borduur bestanden moeten de naam van de letter vóór het bestand extensie hebben. Bijvoorbeeld: A.dst of Example_Font_A.dst wordt herkend als de letter A."
 
-#: inx/inkstitch_letters_to_font.inx:71
+#: inx/inkstitch_letters_to_font.inx:73
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
 msgstr "⚠ Nadat u deze functie hebt uitgevoerd, sleept u de basis lijn naar de gewenste positie en plaatst u de letters dien overeenkomstig. Sla uw lettertype op in een aparte map. Genereer vervolgens het json bestand (met \"Autoroute Satijn\" uitgeschakeld)."
 
-#: inx/inkstitch_letters_to_font.inx:78
+#: inx/inkstitch_letters_to_font.inx:80
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:85
+#: inx/inkstitch_letters_to_font.inx:87
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
 msgstr "Voegt alle beschikbare tekens van een vooraf gedigitaliseerd letter type in het document in om ze beschikbaar te maken voor de letter tool"
 
@@ -8621,6 +8634,14 @@ msgstr "Ink/Stitch: Qcc - QuiltEZ [QUILTING] (.qcc)"
 msgid "Save design in QCC format using Ink/Stitch"
 msgstr "Ontwerp opslaan in QCC formaat met Ink/Stitch"
 
+#: inx/inkstitch_output_SEW.inx:3
+msgid "SEW file output"
+msgstr ""
+
+#: inx/inkstitch_output_SEW.inx:9
+msgid "Save design in SEW format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
 msgstr "SVG bestand uitvoer"
@@ -8722,7 +8743,7 @@ msgid "Create a PNG file with a realistic embroidery representation using Ink/St
 msgstr "Maak een PNG bestand met een realistische borduur weergave met behulp van Ink/Stitch"
 
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
-#: inx/inkstitch_zip.inx:50 inx/inkstitch_zip.inx:53
+#: inx/inkstitch_zip.inx:51 inx/inkstitch_zip.inx:54
 msgid "DPI"
 msgstr "DPI"
 
@@ -9492,94 +9513,98 @@ msgid ".XXX: Singer Embroidery Format"
 msgstr ".XXX: Singer Borduur Bestand"
 
 #: inx/inkstitch_zip.inx:28
+msgid ".SEW: Janome Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:29
 msgid ".U01: Barudan Embroidery Format"
 msgstr ".U01: Barudan Borduur Bestand"
 
-#: inx/inkstitch_zip.inx:29
+#: inx/inkstitch_zip.inx:30
 msgid ".TBF: Tajima Embroidery Format"
 msgstr ".TBF: Tajima Borduur Bestand"
 
-#: inx/inkstitch_zip.inx:30
+#: inx/inkstitch_zip.inx:31
 msgid ".PMV: Brother Stitch Format [STITCH]"
 msgstr ".PMV: Brother Steek formaat [STEEK]"
 
-#: inx/inkstitch_zip.inx:36
+#: inx/inkstitch_zip.inx:37
 msgid ".GCODE: gcode Format, Text File"
 msgstr ".GCODE: gcode indeling, tekstbestand"
 
-#: inx/inkstitch_zip.inx:37
+#: inx/inkstitch_zip.inx:38
 msgid ".PLT: Plt - HPGL [QUILTING]"
 msgstr ".PLT: Plt - HPGL [QUILTEN]"
 
-#: inx/inkstitch_zip.inx:38
+#: inx/inkstitch_zip.inx:39
 msgid ".QCC: Qcc - QuiltEZ [QUILTING]"
 msgstr ".QCC: Qcc - QuiltEZ [QUILTEN]"
 
-#: inx/inkstitch_zip.inx:39
+#: inx/inkstitch_zip.inx:40
 msgid ".EDR: Edr Color Format [COLOR]"
 msgstr ".EDR: Edr kleurformaat [KLEUR]"
 
-#: inx/inkstitch_zip.inx:40
+#: inx/inkstitch_zip.inx:41
 msgid ".COL: Col Color Format [COLOR]"
 msgstr ".COL: Col Kleurformaat [KLEUR]"
 
-#: inx/inkstitch_zip.inx:41
+#: inx/inkstitch_zip.inx:42
 msgid ".INF: Inf Color Format [COLOR]"
 msgstr ".INF: Inf kleurformaat [KLEUR]"
 
-#: inx/inkstitch_zip.inx:42
+#: inx/inkstitch_zip.inx:43
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ".TXT: Garenlijst [KLEUR]"
 
-#: inx/inkstitch_zip.inx:48
+#: inx/inkstitch_zip.inx:49
 msgid ".SVG: Scalable Vector Graphic"
 msgstr ".SVG: Scalable Vector Graphic"
 
-#: inx/inkstitch_zip.inx:49
+#: inx/inkstitch_zip.inx:50
 msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
 msgstr ".PNG: Draagbare netwerk graphics (realistisch) [AFBEELDING]"
 
-#: inx/inkstitch_zip.inx:51
+#: inx/inkstitch_zip.inx:52
 msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
 msgstr ".PNG: Draagbare netwerk graphics (eenvoudig) [AFBEELDING]"
 
-#: inx/inkstitch_zip.inx:57
+#: inx/inkstitch_zip.inx:58
 msgid "Panelization Options"
 msgstr "Panelisatie opties"
 
-#: inx/inkstitch_zip.inx:58
+#: inx/inkstitch_zip.inx:59
 msgid "For single design set horizontal and vertical repeats to 1"
 msgstr "Voor enkel ontwerp zet horizontale en verticale herhaling op 1"
 
-#: inx/inkstitch_zip.inx:60
+#: inx/inkstitch_zip.inx:61
 msgid "Horizontal repeats"
 msgstr "Horizontale herhaling"
 
-#: inx/inkstitch_zip.inx:61
+#: inx/inkstitch_zip.inx:62
 msgid "Horizontal spacing (mm)"
 msgstr "Horizontale afstand (mm)"
 
-#: inx/inkstitch_zip.inx:62
+#: inx/inkstitch_zip.inx:63
 msgid "Vertical repeats"
 msgstr "Verticale herhaling"
 
-#: inx/inkstitch_zip.inx:63
+#: inx/inkstitch_zip.inx:64
 msgid "Vertical spacing (mm)"
 msgstr "Verticale afstand (mm)"
 
-#: inx/inkstitch_zip.inx:66
+#: inx/inkstitch_zip.inx:67
 msgid "Zip File Export"
 msgstr "Zip bestand exporteren"
 
-#: inx/inkstitch_zip.inx:67
+#: inx/inkstitch_zip.inx:68
 msgid "Export multiple embroidery file formats at once."
 msgstr "Exporteer meerdere borduur bestanden tegelijk."
 
-#: inx/inkstitch_zip.inx:69
+#: inx/inkstitch_zip.inx:70
 msgid "Read more on our website:"
 msgstr "Lees meer op ons website:"
 
-#: inx/inkstitch_zip.inx:70
+#: inx/inkstitch_zip.inx:71
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
 msgstr ""
 

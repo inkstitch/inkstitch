@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-16 04:25+0000\n"
-"PO-Revision-Date: 2026-06-16 04:26\n"
+"POT-Creation-Date: 2026-06-21 04:25+0000\n"
+"PO-Revision-Date: 2026-06-21 04:25\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-16 04:25+0000\n"
+"POT-Creation-Date: 2026-06-21 04:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -285,8 +285,8 @@ msgstr "Una fuente Grove Jawn. El ancho de satín es de 2.5 mm en las letras may
 #. description of font in fonts/egyptian
 #. description of font in fonts/heavenly
 #. description of font in fonts/noble
-#: inkstitch-fonts-metadata.py:102 inkstitch-fonts-metadata.py:144
-#: inkstitch-fonts-metadata.py:222
+#: inkstitch-fonts-metadata.py:102 inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:224
 msgid "small cross stitch font"
 msgstr ""
 
@@ -295,155 +295,160 @@ msgstr ""
 msgid "This font is an altered version of Egyptian, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
-#. description of font in fonts/eloquent
+#. description of font in fonts/ellenika
 #: inkstitch-fonts-metadata.py:106
+msgid "Clara Bold Greek subset with punctuation and symbol support."
+msgstr ""
+
+#. description of font in fonts/eloquent
+#: inkstitch-fonts-metadata.py:108
 msgid "small cursive crosstitch font"
 msgstr ""
 
 #. description of font in fonts/eloquent_small
-#: inkstitch-fonts-metadata.py:108
+#: inkstitch-fonts-metadata.py:110
 msgid "This font is an altered version of Eloquent, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/emilio_20
-#: inkstitch-fonts-metadata.py:110
+#: inkstitch-fonts-metadata.py:112
 msgid "Emilio 20 contains only capitals and numbers. Every satin has zigzag underlay."
 msgstr "Emilio 20 contiene solo letras mayúsculas y números. Cada satín tiene un refuerzo en zigzag."
 
 #. description of font in fonts/emilio_20_applique
-#: inkstitch-fonts-metadata.py:112
+#: inkstitch-fonts-metadata.py:114
 msgid "Emilio 20 Applique is an Applique font. This font is an altered version (larger satin columns) of Emilio_20 while Emilio_20_Bold is  Emilio_20_applique without the applique."
 msgstr "Emilio 20 Applique es una fuente de aplique. Esta fuente es una versión modificada (columnas de satín más grandes) de Emilio_20, mientras que Emilio_20_Bold es Emilio_20_Applique sin el aplique."
 
 #. description of font in fonts/emilio_20_bold
-#: inkstitch-fonts-metadata.py:114
+#: inkstitch-fonts-metadata.py:116
 msgid "Emilio_20_Bold is an altered version of Emilio_20."
 msgstr "Emilio_20_Bold es una versión modificada de Emilio_20."
 
 #. description of font in fonts/emilio_20_simple
-#: inkstitch-fonts-metadata.py:116
+#: inkstitch-fonts-metadata.py:118
 msgid "Emilio is a font with capital only and numbers. Every satin has zigzag underlay."
 msgstr "Emilio es una fuente que contiene solo letras mayúsculas y números. Cada satín tiene un refuerzo en zigzag."
 
 #. description of font in fonts/emilio_20_simple_small
-#: inkstitch-fonts-metadata.py:118
+#: inkstitch-fonts-metadata.py:120
 msgid "This font is an altered version  of Emilio 20 simple, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Esta fuente es una versión modificada de Emilio 20 simple, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/emilio_20_tartan
-#: inkstitch-fonts-metadata.py:120
+#: inkstitch-fonts-metadata.py:122
 msgid "Emilio 20 Tartan uses tartan fill for a colorful font."
 msgstr "Emilio 20 Tartan utiliza un relleno tartán para crear una fuente colorida."
 
 #. description of font in fonts/emilio_20_tricolore
-#: inkstitch-fonts-metadata.py:122
+#: inkstitch-fonts-metadata.py:124
 msgid "Emilio 20 tricolore is a large tricolor fill stitches and satin columns font. It contains 36 glyphs including the numbers and the 26 capitals  A-Z."
 msgstr "Emilio 20 Tricolore es una fuente con puntadas de relleno tricolor y columnas de satín de gran tamaño. Contiene 36 glifos, incluyendo los números y las 26 letras mayúsculas A-Z."
 
 #. description of font in fonts/excalibur_KOR
-#: inkstitch-fonts-metadata.py:124
+#: inkstitch-fonts-metadata.py:126
 msgid "Excalibur KOR is a small satin column manuscript font. It contains 144 glyphs, covering most western European languages needs."
 msgstr "Excalibur KOR es una fuente manuscrita de columnas de satín pequeñas. Contiene 144 glifos, cubriendo la mayoría de las necesidades de los idiomas de Europa occidental."
 
 #. description of font in fonts/excalibur_small
-#: inkstitch-fonts-metadata.py:126
+#: inkstitch-fonts-metadata.py:128
 msgid "This font is an altered version  of Excalibur KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Esta fuente es una versión modificada de Excalibur KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/flowery_crosses
-#: inkstitch-fonts-metadata.py:128
+#: inkstitch-fonts-metadata.py:130
 msgid "Very large cross stitch font. "
 msgstr ""
 
 #. description of font in fonts/flowery_multicolor
-#: inkstitch-fonts-metadata.py:130
+#: inkstitch-fonts-metadata.py:132
 msgid "Very large multicolor cross stitch font. "
 msgstr ""
 
 #. description of font in fonts/fold_inkstitch
-#: inkstitch-fonts-metadata.py:132
+#: inkstitch-fonts-metadata.py:134
 msgid "Fold Ink/Stitch is a large triple and quintuple running stitches capital font. It contains 40 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr "Fold Ink/Stitch es una fuente de mayúsculas con puntadas de corrido triples y quíntuples de gran tamaño. Contiene 40 glifos, incluyendo todos los números y las 26 letras mayúsculas de la A a la Z."
 
 #. description of font in fonts/geneva_rounded
-#: inkstitch-fonts-metadata.py:134
+#: inkstitch-fonts-metadata.py:136
 msgid "Geneva Simple Sans Rounded is a satin font."
 msgstr "Geneva Simple Sans Rounded es una fuente de satín."
 
 #. description of font in fonts/geneva_simple
-#: inkstitch-fonts-metadata.py:136
+#: inkstitch-fonts-metadata.py:138
 msgid "Geneva Simple Sans is a satin font."
 msgstr "Geneva Simple Sans es una fuente de satín."
 
 #. description of font in fonts/gingo200
-#: inkstitch-fonts-metadata.py:138
+#: inkstitch-fonts-metadata.py:140
 msgid "Gingo 200 is playful satin font with 158 glyphs."
 msgstr "Gingo 200 es una fuente de satín divertida con 158 glifos."
 
 #. description of font in fonts/glacial_tiny
-#: inkstitch-fonts-metadata.py:140
+#: inkstitch-fonts-metadata.py:142
 msgid "Glacial is a very tiny font. Thin thread (60 wt ) and thin needle (8/60) are mandatory. The glyphs cover many European languages."
 msgstr "Glacial es una fuente muy pequeña. El uso de hilo delgado (60 wt) y aguja delgada (8/60) es obligatorio. Los glifos cubren muchos idiomas europeos."
 
 #. description of font in fonts/handkerchief
-#: inkstitch-fonts-metadata.py:142
+#: inkstitch-fonts-metadata.py:144
 msgid "Cross stitch font. Initially intended to embroider handkerchiefs corners."
 msgstr ""
 
 #. description of font in fonts/heavenly_small
-#: inkstitch-fonts-metadata.py:146
+#: inkstitch-fonts-metadata.py:148
 msgid "This font is an altered version of Heavenly, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/hebrew_font_large
-#: inkstitch-fonts-metadata.py:148
+#: inkstitch-fonts-metadata.py:150
 msgid "Large size Hebrew satin font"
 msgstr "Fuente Hebrew en tamaño grande en satín"
 
 #. description of font in fonts/hebrew_font_medium
-#: inkstitch-fonts-metadata.py:150
+#: inkstitch-fonts-metadata.py:152
 msgid "Medium size hebrew satin font"
 msgstr "Fuente de satín hebrea de tamaño mediano"
 
 #. description of font in fonts/hebrew_simple_rounded
-#: inkstitch-fonts-metadata.py:152
+#: inkstitch-fonts-metadata.py:154
 msgid "A simple rounded hebrew font"
 msgstr "Una fuente hebrea simple y redondeada"
 
 #. description of font in fonts/hebrew_simple_rounded_small
-#: inkstitch-fonts-metadata.py:154
+#: inkstitch-fonts-metadata.py:156
 msgid "A simple rounded hebrew font, small version to be embroidered with 60wt thread and 60 needle"
 msgstr "Fuente hebrea simple y redondeada, versión pequeña para ser bordada con hilo 60wt y aguja 60"
 
 #. description of font in fonts/honoka
-#: inkstitch-fonts-metadata.py:156
+#: inkstitch-fonts-metadata.py:158
 msgid "コルの書きこも is a satin column japanese script font. It contains all hiragana, katakana and punctuation glyphs plus 80 kanjis."
 msgstr "コルの書きこも es una fuente de escritura japonesa de columnas de satín. Contiene todos los glifos de hiragana, katakana y puntuación, además de 80 kanjis."
 
 #. description of font in fonts/infinipicto
-#: inkstitch-fonts-metadata.py:158
+#: inkstitch-fonts-metadata.py:160
 msgid "InfiniPicto is a fun font containing only the 26 A-Z glyph. Each letter is a pictogram of an object whose name begins with that very letter..... in French"
 msgstr "InfiniPicto es una fuente divertida que contiene solo los 26 glifos de la A a la Z. Cada letra es un pictograma de un objeto cuyo nombre comienza con esa misma letra..... en francés"
 
 #. description of font in fonts/initials_XL
-#: inkstitch-fonts-metadata.py:160
+#: inkstitch-fonts-metadata.py:162
 #, python-brace-format
 msgid "Initials XL is a very large satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; )  to obtain a framed Capital or Number. Warning: for a few large letters you will need to manually enlarge the frame."
 msgstr ""
 
 #. description of font in fonts/initials_medium
-#: inkstitch-fonts-metadata.py:162
+#: inkstitch-fonts-metadata.py:164
 #, python-brace-format
 msgid "Initials Medium is a satin stitch Capital font. It contains the 37 glyphs :ampersand, A-Z and 0-9. In addition the ten glyphs (){}[],;.: are used to store frames. Type any letter followed by any frame (e.g. A( or B; or 7, ) to obtain a framed Capital or Number. Some manual arranging of the frame around the letter may be required."
 msgstr ""
 
 #. description of font in fonts/inkstitch_masego
-#: inkstitch-fonts-metadata.py:164
+#: inkstitch-fonts-metadata.py:166
 msgid "Masego is a display san-serif typeface."
 msgstr "Masego es una tipografía sans-serif de exhibición."
 
 #. description of font in fonts/invercelia
-#: inkstitch-fonts-metadata.py:166
+#: inkstitch-fonts-metadata.py:168
 msgid "Invercelia is a modern two letters monogram font. Enter two letters to get a simple monogram.  Add an ')' at the end and the monogram is framed with a circle (for instance 'AC)'), add an '(' to start (for instance '(AC)' and your monogram is ready for applique, or  try something like '!AC)' to replace the appliqué by knockdown stitches.\n\n"
 "Please use exactly two letters,  if you use more, only the first and the last letters will be rendered."
 msgstr "Invercelia es una moderna fuente de monogramas de dos letras. Ingresa dos letras para obtener un monograma simple. Agrega un ')' al final y el monograma se enmarcará con un círculo (por ejemplo, 'AC)'), agrega un '(' al principio (por ejemplo, '(AC)') y tu monograma estará listo para aplique, o prueba algo como '!AC)' para reemplazar el aplique por puntadas de relleno base.\n\n"
@@ -451,267 +456,267 @@ msgstr "Invercelia es una moderna fuente de monogramas de dos letras. Ingresa do
 
 #. description of font in fonts/jacquard_12
 #. description of font in fonts/jersey_15
-#: inkstitch-fonts-metadata.py:168 inkstitch-fonts-metadata.py:172
+#: inkstitch-fonts-metadata.py:170 inkstitch-fonts-metadata.py:174
 msgid "cross stitch font"
 msgstr ""
 
 #. description of font in fonts/jaquarda_bastarda_9
-#: inkstitch-fonts-metadata.py:170
+#: inkstitch-fonts-metadata.py:172
 msgid "small cross stitch font derived from a victorian needlepoint alphabet"
 msgstr ""
 
 #. description of font in fonts/kum_tsoan_AGS
-#: inkstitch-fonts-metadata.py:174
+#: inkstitch-fonts-metadata.py:176
 msgid " Kum Tsoan AGS is a large applique font. It contains 43 glyphs including all numbers and the 26 capitals  A-Z."
 msgstr ""
 
 #. description of font in fonts/kum_tsoan_relief
-#: inkstitch-fonts-metadata.py:176
+#: inkstitch-fonts-metadata.py:178
 msgid "Kum Tsoan Relief is an altered version of Kum Tsoan AGS for embossed letters."
 msgstr ""
 
 #. description of font in fonts/kum_tsoan_tartan
-#: inkstitch-fonts-metadata.py:178
+#: inkstitch-fonts-metadata.py:180
 msgid "Kum Tsoan Tartan is a tartan fill font. It contains 43 glyphs including all numbers and the 26 capitals."
 msgstr ""
 
 #. description of font in fonts/ladies_present
-#: inkstitch-fonts-metadata.py:180
+#: inkstitch-fonts-metadata.py:182
 msgid "A  rectangular crosses font"
 msgstr ""
 
 #. description of font in fonts/learning_curve
-#: inkstitch-fonts-metadata.py:182
+#: inkstitch-fonts-metadata.py:184
 msgid "Learning curve is a small running stitch script font."
 msgstr "Learning curve es una fuente manuscrita pequeña de puntada de corrido."
 
 #. description of font in fonts/magic_crosses
-#: inkstitch-fonts-metadata.py:184
+#: inkstitch-fonts-metadata.py:186
 msgid "Cross stitch font. "
 msgstr ""
 
 #. description of font in fonts/magnolia_KOR
-#: inkstitch-fonts-metadata.py:186
+#: inkstitch-fonts-metadata.py:188
 msgid "Magnolia KOR is a script satin font."
 msgstr "Magnolia KOR es una fuente manuscrita de satín."
 
 #. description of font in fonts/magnolia_bicolor
-#: inkstitch-fonts-metadata.py:188
+#: inkstitch-fonts-metadata.py:190
 msgid "Magnolia bicolor is a  larger  bicolor variation of Magnolia font."
 msgstr "Magnolia bicolor es una variación bicolor y de mayor tamaño de la fuente Magnolia."
 
 #. description of font in fonts/magnolia_small
-#: inkstitch-fonts-metadata.py:190
+#: inkstitch-fonts-metadata.py:192
 msgid "Magnolia Small is an altered version  of Magnolia KOR, to allow a greater scaling down. The use of both  thin thread (60) and thin needle (60) is mandatory."
 msgstr "Magnolia Small es una versión modificada de Magnolia KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/magnolia_tamed
-#: inkstitch-fonts-metadata.py:192
+#: inkstitch-fonts-metadata.py:194
 msgid "This is a less wild bicolor variation of Magnolia font"
 msgstr "Esta es una variación bicolor menos extravagante de la fuente Magnolia"
 
 #. description of font in fonts/mai_en_fleur
-#: inkstitch-fonts-metadata.py:194
+#: inkstitch-fonts-metadata.py:196
 msgid "Mai en Fleur AGS is a monogram font."
 msgstr ""
 
 #. description of font in fonts/malika
-#: inkstitch-fonts-metadata.py:196
+#: inkstitch-fonts-metadata.py:198
 msgid "Malika is an arabic satin font.   Non  mandatory diacritics should not be  typed within the text but   rather separately  and then manually  moved  to the correct position. The three sets of brackets host embellishments if you want to add an extra ornamental touch."
 msgstr "Malika es una fuente de satín árabe. Los diacríticos no obligatorios no deben teclearse dentro del texto, sino por separado y luego ser movidos manualmente a la posición correcta. Los tres juegos de paréntesis contienen adornos si deseas añadir un toque ornamental extra."
 
 #. description of font in fonts/mam_script
-#: inkstitch-fonts-metadata.py:198
+#: inkstitch-fonts-metadata.py:200
 msgid "MAM Script is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/manga_impact
-#: inkstitch-fonts-metadata.py:200
+#: inkstitch-fonts-metadata.py:202
 msgid "Manga Impact is a manga like satin font."
 msgstr ""
 
 #. description of font in fonts/medium_font
-#: inkstitch-fonts-metadata.py:202
+#: inkstitch-fonts-metadata.py:204
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr "Ink/Stitch Medium Font es una fuente de satín básica adecuada para caracteres de tamaño mediano. Cada satín tiene una base de contorno."
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:204
+#: inkstitch-fonts-metadata.py:206
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr "Millimarif-bold20 es una fuente de satín en negrita."
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:208
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr "Mimosa Large es una fuente de satín que parece una fuente de puntos   "
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:210
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr "Mimosa Medium es una fuente de satín que parece de puntos."
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:212
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr "Monicha es una fuente manuscrita de satín. Además de los glifos que cubren la mayoría de los idiomas de Europa Occidental, contiene letras ornamentales alternativas con florituras. Estas letras ornamentales deben usarse con precaución para evitar superposiciones. En particular, no uses dos letras ornamentales seguidas. Por favor, consulta la documentación para obtener información sobre cómo acceder a las letras ornamentales."
 
 #. description of font in fonts/montecarlo
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:214
 msgid "Montecarlo is a script satin font with lots of alternates. It also contains  swoops , swashes and  more, see the documentation  for details."
 msgstr ""
 
 #. description of font in fonts/nautical
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:216
 msgid "Cross Stitch Nautical Flag Alphabet"
 msgstr ""
 
 #. description of font in fonts/neon
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:218
 msgid "Satin font. Each letter or accent is a single satin."
 msgstr "Fuente de satín. Cada letra o acento es un solo satín."
 
 #. description of font in fonts/neon_blinking
-#: inkstitch-fonts-metadata.py:218
+#: inkstitch-fonts-metadata.py:220
 msgid "Bean stitch font."
 msgstr "Fuente de puntada tipo Frijol."
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:220
+#: inkstitch-fonts-metadata.py:222
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr "NickAinley es un alfabeto diminuto de puntada tipo Frijol, basado en jawn de 24pt de Seniors Studio."
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:224
+#: inkstitch-fonts-metadata.py:226
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr "Ondulamarif M es una versión modificada de Ondulamarif XL.  Los parámetros de bordado modificados de esta fuente permiten reducir su tamaño."
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:226
+#: inkstitch-fonts-metadata.py:228
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr "Ondulamarif S es una versión modificada de Ondulamarif XL, para permitir una mayor reducción de escala."
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:228
+#: inkstitch-fonts-metadata.py:230
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr "Ondulamarif XL es una fuente de puntada ondulada, úsala tan grande como puedas, pero no la reduzcas."
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:230
+#: inkstitch-fonts-metadata.py:232
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr "Pacificlo es una fuente manuscrita de columnas de satín pequeñas. Contiene 120 glifos, cubriendo la mayoría de las necesidades de los idiomas de Europa occidental. "
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:232
+#: inkstitch-fonts-metadata.py:234
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Pacificlo tiny es una versión modificada de Pacificlo, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/paquerette
-#: inkstitch-fonts-metadata.py:234
+#: inkstitch-fonts-metadata.py:236
 msgid "Paquerette font is created with manual sitch. Do not change the size or very little."
 msgstr ""
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:236
+#: inkstitch-fonts-metadata.py:238
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr "Perspective tricolore KOR es una fuente tricolor sombreada, solo con letras mayúsculas, números y puntuación."
 
 #. description of font in fonts/pisankris
-#: inkstitch-fonts-metadata.py:238
+#: inkstitch-fonts-metadata.py:240
 msgid "Pisankris is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:240
+#: inkstitch-fonts-metadata.py:242
 msgid "Pixel 10 is a satin pixel font."
 msgstr "Pixel 10 es una fuente pixel de satín."
 
 #. description of font in fonts/precious
-#: inkstitch-fonts-metadata.py:242
+#: inkstitch-fonts-metadata.py:244
 msgid "Precious is a decorative satin column round cursive font."
 msgstr ""
 
 #. description of font in fonts/priscilla
-#: inkstitch-fonts-metadata.py:244
+#: inkstitch-fonts-metadata.py:246
 msgid "Large bicolor cross stitch font"
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:246
+#: inkstitch-fonts-metadata.py:248
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr "Roaring Twenties KOR es una mezcla de puntadas de satín y de tipo Frijol."
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:248
+#: inkstitch-fonts-metadata.py:250
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Roaring Twenties KOR Small es una versión modificada de Roaring Twenties KOR, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo delgado (60) como de aguja delgada (60)."
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:250
+#: inkstitch-fonts-metadata.py:252
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr "Roman AGS está basado en Latin Modern Roman 10 Bold italic. Cada satín tiene una base en zigzag."
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:252
+#: inkstitch-fonts-metadata.py:254
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr "Roman Bicolor AGS es una versión modificada de Roman AGS. Las letras mayúsculas son bicolor."
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:254
+#: inkstitch-fonts-metadata.py:256
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr "Sacramarif es una fuente muy pequeña en puntada de corrido, basada en la fuente Sacramento."
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:256
+#: inkstitch-fonts-metadata.py:258
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr "Ink/Stitch Small Font es adecuada para caracteres pequeños."
 
 #. description of font in fonts/stebor_AGS
-#: inkstitch-fonts-metadata.py:258
+#: inkstitch-fonts-metadata.py:260
 msgid "Stebor AGS is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:260
+#: inkstitch-fonts-metadata.py:262
 msgid "3 colors satin column font"
 msgstr "Fuente en columnas de satín a 3 colores"
 
 #. description of font in fonts/tieralphabet
-#: inkstitch-fonts-metadata.py:262
+#: inkstitch-fonts-metadata.py:264
 msgid "cross stitch font, each letter includes an animal with german name starting with the letter"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:264
+#: inkstitch-fonts-metadata.py:266
 msgid "TT  Directors is a satin font suited for directing."
 msgstr "TT Directors es una fuente en satín adecuada para señalización o dirección."
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:266
+#: inkstitch-fonts-metadata.py:268
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr "TT Masters es una fuente en satín adecuada para escribir mucho :)"
 
 #. description of font in fonts/venezia
-#: inkstitch-fonts-metadata.py:268
+#: inkstitch-fonts-metadata.py:270
 msgid "A serif satin font"
 msgstr "Fuente con serifas en satín"
 
 #. description of font in fonts/venezia_small
-#: inkstitch-fonts-metadata.py:270
+#: inkstitch-fonts-metadata.py:272
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Venezia Small es una versión modificada de Venezia, para permitir una mayor reducción de escala. Es obligatorio el uso tanto de hilo fino (60) como de aguja fina (60)."
 
 #. description of font in fonts/very_crossy
-#: inkstitch-fonts-metadata.py:272
+#: inkstitch-fonts-metadata.py:274
 msgid "Medium size cross stitch font"
 msgstr ""
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:274
+#: inkstitch-fonts-metadata.py:276
 msgid "Violin Serif is a condensed serif satin font."
 msgstr "Violin Serif es una fuente con serifas condensada en satín."
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:276
+#: inkstitch-fonts-metadata.py:278
 msgid "Western light is a light fill western style font."
 msgstr "Western Light es una fuente de estilo western con relleno ligero."
 
@@ -1375,7 +1380,7 @@ msgstr "Deténgase después"
 msgid "Add a STOP command after stitching this object."
 msgstr "Añade un comando PARAR después de coser este objeto."
 
-#: lib/elements/element.py:783
+#: lib/elements/element.py:808
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Por favor, ejecute Extensiones > Ink/Stitch > Solucionar problemas > Solucionar problemas de objetos. Esto le mostrará la ubicación exacta del problema."
 
@@ -1395,718 +1400,726 @@ msgstr "* Ejecutar Extensiones > Ink/Stitch > Solucionar problemas > Limpiar doc
 msgid "Empty Path"
 msgstr "Trayectoria vacía"
 
-#: lib/elements/fill_stitch.py:38
+#: lib/elements/fill_stitch.py:37
 msgid "Small Fill"
 msgstr "Relleno Pequeño"
 
-#: lib/elements/fill_stitch.py:39
+#: lib/elements/fill_stitch.py:38
 msgid "This fill object is so small that it would probably look better as running stitch or satin column. For very small shapes, fill stitch is not possible, and Ink/Stitch will use running stitch around the outline instead."
 msgstr "Este objeto para relleno es tan pequeño que probablemente sería mejor en puntada recta o columna de satín. Para formas muy pequeñas, no es posible usar la puntada de relleno, e Ink/Stitch usará puntada recta a lo largo de contorno."
 
-#: lib/elements/fill_stitch.py:45 lib/elements/fill_stitch.py:278
+#: lib/elements/fill_stitch.py:44 lib/elements/fill_stitch.py:277
 msgid "Expand"
 msgstr "Expandir"
 
-#: lib/elements/fill_stitch.py:46
+#: lib/elements/fill_stitch.py:45
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "No se puede aplicar el parámetro de expansión para este objeto de relleno. Ink/Stitch lo ignorará y utilizará el tamaño original en su lugar."
 
-#: lib/elements/fill_stitch.py:51 lib/elements/fill_stitch.py:699
+#: lib/elements/fill_stitch.py:50 lib/elements/fill_stitch.py:717
 msgid "Inset"
 msgstr "Recuadro"
 
-#: lib/elements/fill_stitch.py:52
+#: lib/elements/fill_stitch.py:51
 msgid "The underlay inset parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use the original size instead."
 msgstr "No se puede aplicar el parámetro de inserción de refuerzo para este objeto de relleno. Ink/Stitch lo ignorará y utilizará el tamaño original en su lugar."
 
-#: lib/elements/fill_stitch.py:57
+#: lib/elements/fill_stitch.py:56
 msgid "Missing Guideline"
 msgstr "Falta una directiva"
 
-#: lib/elements/fill_stitch.py:58
+#: lib/elements/fill_stitch.py:57
 msgid "This object is set to \"Guided Fill\", but has no guide line."
 msgstr "Este objeto está ajustado a \"Relleno guiado\", pero no tiene línea guía."
 
-#: lib/elements/fill_stitch.py:60
+#: lib/elements/fill_stitch.py:59
 msgid "* Create a stroke object"
 msgstr "* Crear un objeto de trazo"
 
-#: lib/elements/fill_stitch.py:61
+#: lib/elements/fill_stitch.py:60
 msgid "* Select this object and run Extensions > Ink/Stitch > Edit > Selection to guide line"
 msgstr "Selecciona este objeto y ve a Extensiones > Ink/Stitch > Editar > Selección de patrón"
 
-#: lib/elements/fill_stitch.py:66
+#: lib/elements/fill_stitch.py:65
 msgid "Disjointed Guide Line"
 msgstr "Línea guía discontinua"
 
-#: lib/elements/fill_stitch.py:67
+#: lib/elements/fill_stitch.py:66
 msgid "The guide line of this object isn't within the object borders. The guide line works best, if it is within the target element."
 msgstr "La línea guía de este objeto no está dentro de los bordes del objeto. La línea guía funciona mejor si está dentro del elemento de destino."
 
-#: lib/elements/fill_stitch.py:70
+#: lib/elements/fill_stitch.py:69
 msgid "* Move the guide line into the element"
 msgstr "Mover la línea guía dentro del elemento"
 
-#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:29
+#: lib/elements/fill_stitch.py:74 lib/elements/stroke.py:30
 msgid "Multiple Guide Lines"
 msgstr "Líneas guía múltiples"
 
-#: lib/elements/fill_stitch.py:76 lib/elements/stroke.py:30
+#: lib/elements/fill_stitch.py:75 lib/elements/stroke.py:31
 msgid "This object has multiple guide lines, but only the first one will be used."
 msgstr "Este objeto tiene múltiples líneas guía, pero solo se utilizará la primera."
 
-#: lib/elements/fill_stitch.py:78 lib/elements/stroke.py:31
+#: lib/elements/fill_stitch.py:77 lib/elements/stroke.py:32
 msgid "* Remove all guide lines, except for one."
 msgstr "Eliminar todas las líneas guía, excepto una."
 
-#: lib/elements/fill_stitch.py:83
+#: lib/elements/fill_stitch.py:82
 msgid "Unconnected"
 msgstr "Desconectado"
 
-#: lib/elements/fill_stitch.py:84
+#: lib/elements/fill_stitch.py:83
 msgid "Fill: This object is made up of unconnected shapes. Ink/Stitch doesn't know what order to stitch them in.  Please break this object up into separate shapes."
 msgstr "Relleno: Este objeto está compuesto por formas inconexas. inkstitch no sabe en qué orden bordarlas. Por favor, divide este objeto en formas separadas."
 
-#: lib/elements/fill_stitch.py:88 lib/elements/fill_stitch.py:97
-#: lib/elements/fill_stitch.py:154
+#: lib/elements/fill_stitch.py:87 lib/elements/fill_stitch.py:96
+#: lib/elements/fill_stitch.py:153
 msgid "* Extensions > Ink/Stitch > Fill Tools > Break Apart Fill Objects"
 msgstr "* Extensiones > Ink/Stitch > Herramientas de relleno > Separar objetos de relleno"
 
-#: lib/elements/fill_stitch.py:93
+#: lib/elements/fill_stitch.py:92
 msgid "Border crosses itself"
 msgstr "El borde se cruza a sí mismo"
 
-#: lib/elements/fill_stitch.py:94
+#: lib/elements/fill_stitch.py:93
 msgid "Fill: The border crosses over itself. This may lead into unconnected shapes. Please break this object into separate shapes to indicate in which order it should be stitched in."
 msgstr "Relleno: El borde se cruza sobre sí mismo. Esto puede dar lugar a formas inconexas. Por favor, divide este objeto en formas separadas para indicar en qué orden se deben bordar."
 
-#: lib/elements/fill_stitch.py:102
+#: lib/elements/fill_stitch.py:101
 msgid "Fill and Stroke color"
 msgstr "Color de relleno y de trazo"
 
-#: lib/elements/fill_stitch.py:103
+#: lib/elements/fill_stitch.py:102
 msgid "Element has both a fill and a stroke color. It is recommended to use two separate elements instead."
 msgstr "El elemento tiene tanto un color de relleno como de trazo. Se recomienda usar dos elementos separados en su lugar."
 
-#: lib/elements/fill_stitch.py:105
+#: lib/elements/fill_stitch.py:104
 msgid "* Duplicate the element. Remove stroke color from the first and fill color from the second."
 msgstr "* Duplica el elemento. Elimina el color de trazo del primero y el color de relleno del segundo."
 
-#: lib/elements/fill_stitch.py:106
+#: lib/elements/fill_stitch.py:105
 msgid "* Adapt the shape of the second element to compensate for push and pull fabric distortion."
 msgstr "* Adapta la forma del segundo elemento para compensar la distorsión de la tela por el efecto de empuje y tirón."
 
-#: lib/elements/fill_stitch.py:111
+#: lib/elements/fill_stitch.py:110
 msgid "No linear gradient color"
 msgstr "Color sin degradado lineal"
 
-#: lib/elements/fill_stitch.py:112
+#: lib/elements/fill_stitch.py:111
 msgid "Linear Gradient has no linear gradient color."
 msgstr "El degradado lineal no tiene un color de degradado lineal."
 
-#: lib/elements/fill_stitch.py:114
+#: lib/elements/fill_stitch.py:113
 msgid "* Open the Fill and Stroke dialog."
 msgstr "* Abre el diálogo de Relleno y Trazo."
 
-#: lib/elements/fill_stitch.py:115
+#: lib/elements/fill_stitch.py:114
 msgid "* Set a linear gradient as a fill and adapt colors to your liking."
 msgstr "* Establece un degradado lineal como relleno y adapta los colores a tu gusto."
 
-#: lib/elements/fill_stitch.py:120
+#: lib/elements/fill_stitch.py:119
 msgid "No stripes to render"
 msgstr "No hay franjas para renderizar"
 
-#: lib/elements/fill_stitch.py:121
+#: lib/elements/fill_stitch.py:120
 msgid "Tartan fill: There is no active fill stripe to render"
 msgstr "Relleno tipo tartán: No hay una franja de relleno activa para renderizar"
 
-#: lib/elements/fill_stitch.py:123
+#: lib/elements/fill_stitch.py:122
 msgid "Go to Extensions > Ink/Stitch > Fill Tools > Tartan and adjust stripe settings:"
 msgstr "Ve a Extensiones > inkstitch > Herramientas de relleno > Tartán y ajusta la configuración de las franjas:"
 
-#: lib/elements/fill_stitch.py:124
+#: lib/elements/fill_stitch.py:123
 msgid "* Check if stripes are active"
 msgstr "* Verifica si las franjas están activas"
 
-#: lib/elements/fill_stitch.py:125
+#: lib/elements/fill_stitch.py:124
 msgid "* Check the minimum stripe width setting and the scale factor"
 msgstr "*Verifica la configuración del ancho mínimo de la franja y el factor de escala"
 
-#: lib/elements/fill_stitch.py:130
+#: lib/elements/fill_stitch.py:129
 msgid "No customized pattern"
 msgstr "No hay patrón personalizado"
 
-#: lib/elements/fill_stitch.py:131
+#: lib/elements/fill_stitch.py:130
 msgid "Tartan fill: Using default pattern"
 msgstr "Relleno tipo tartán: Usando el patrón predeterminado"
 
-#: lib/elements/fill_stitch.py:133
+#: lib/elements/fill_stitch.py:132
 msgid "Go to Extensions > Ink/Stitch > Tools: Fill > Tartan and adjust stripe settings:"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:134
+#: lib/elements/fill_stitch.py:133
 msgid "* Customize your pattern"
 msgstr "Personaliza tu patrón"
 
-#: lib/elements/fill_stitch.py:139
+#: lib/elements/fill_stitch.py:138
 msgid "Cross stitch: shape too small"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:140
+#: lib/elements/fill_stitch.py:139
 msgid "This shape is too small to fit a cross. Please adapt params and/or shape."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:142
+#: lib/elements/fill_stitch.py:141
 msgid "* Change the pattern size"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:143
+#: lib/elements/fill_stitch.py:142
 msgid "* Or adapt the grid offset or move the shape"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:144
+#: lib/elements/fill_stitch.py:143
 msgid "* Or increase the expand value or increase shape size"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:145
+#: lib/elements/fill_stitch.py:144
 msgid "* Or decrease the fill coverage value"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:146
+#: lib/elements/fill_stitch.py:145
 msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant, adapt settings and pixelate the shape"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:151
+#: lib/elements/fill_stitch.py:150
 msgid "This shape is invalid"
 msgstr "Esta forma es inválida"
 
-#: lib/elements/fill_stitch.py:152
+#: lib/elements/fill_stitch.py:151
 msgid "Fill: This shape cannot be stitched out. Please try to repair it with the \"Break Apart Fill Objects\" extension."
 msgstr "Relleno: Esta forma no se puede bordar. Por favor, intenta repararla con la extensión \"Dividir objetos de relleno\"."
 
-#: lib/elements/fill_stitch.py:160
+#: lib/elements/fill_stitch.py:159
 msgid "FillStitch"
 msgstr "Puntada de relleno"
 
-#: lib/elements/fill_stitch.py:163
+#: lib/elements/fill_stitch.py:162
 msgid "Fill stitching"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:167 lib/gui/tartan/embroidery_panel.py:202
+#: lib/elements/fill_stitch.py:166 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:55
 msgid "Tatami Fill"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:168 inx/inkstitch_select_elements.inx:56
+#: lib/elements/fill_stitch.py:167 inx/inkstitch_select_elements.inx:56
 msgid "Circular Fill"
 msgstr "Relleno circular"
 
-#: lib/elements/fill_stitch.py:169 inx/inkstitch_select_elements.inx:57
+#: lib/elements/fill_stitch.py:168 inx/inkstitch_select_elements.inx:57
 msgid "Contour Fill"
 msgstr "Relleno de contorno"
 
-#: lib/elements/fill_stitch.py:170 lib/lettering/categories.py:20
+#: lib/elements/fill_stitch.py:169 lib/lettering/categories.py:20
 #: inx/inkstitch_lettering_generate_json.inx:60
 msgid "Cross Stitch"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:171 inx/inkstitch_select_elements.inx:58
+#: lib/elements/fill_stitch.py:170 inx/inkstitch_select_elements.inx:58
 msgid "Guided Fill"
 msgstr "Relleno guiado"
 
-#: lib/elements/fill_stitch.py:172 inx/inkstitch_select_elements.inx:59
+#: lib/elements/fill_stitch.py:171 inx/inkstitch_select_elements.inx:59
 msgid "Linear Gradient Fill"
 msgstr "Relleno con degradado lineal"
 
-#: lib/elements/fill_stitch.py:173 inx/inkstitch_select_elements.inx:60
+#: lib/elements/fill_stitch.py:172 inx/inkstitch_select_elements.inx:60
 msgid "Meander Fill"
 msgstr "Relleno en meandro"
 
-#: lib/elements/fill_stitch.py:174 inx/inkstitch_select_elements.inx:61
+#: lib/elements/fill_stitch.py:173 inx/inkstitch_select_elements.inx:61
 msgid "Tartan Fill"
 msgstr "Relleno tipo tartán"
 
-#: lib/elements/fill_stitch.py:175 lib/gui/tartan/embroidery_panel.py:203
+#: lib/elements/fill_stitch.py:174 lib/gui/tartan/embroidery_panel.py:203
 #: inx/inkstitch_select_elements.inx:62
 msgid "Legacy Fill"
 msgstr "Relleno heredado"
 
-#: lib/elements/fill_stitch.py:179
+#: lib/elements/fill_stitch.py:178
 msgid "Fill method"
 msgstr "Método de rellenado"
 
-#: lib/elements/fill_stitch.py:188
+#: lib/elements/fill_stitch.py:187
 msgid "Guided Fill Strategy"
 msgstr "Relleno con Estrategia Guiada"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:188
 msgid "Copy"
 msgstr "Copiar"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:188
 msgid "Parallel Offset"
 msgstr "Desplazamiento paralelo"
 
-#: lib/elements/fill_stitch.py:189
+#: lib/elements/fill_stitch.py:188
 msgid "Buffer"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:190
+#: lib/elements/fill_stitch.py:189
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
 msgstr "Copia (la predeterminada): llenará la forma con copias desplazadas de la línea. Desplazamiento paralelo garantizará que cada línea mantenga siempre una distancia consistente de su vecina. Se pueden introducir esquinas afiladas."
 
-#: lib/elements/fill_stitch.py:197
+#: lib/elements/fill_stitch.py:196
 msgid "Contour Fill Strategy"
 msgstr "Relleno con Estrategia de Contorno"
 
-#: lib/elements/fill_stitch.py:198
+#: lib/elements/fill_stitch.py:197
 msgid "Inner to Outer"
 msgstr "De adentro hacia afuera"
 
-#: lib/elements/fill_stitch.py:198
+#: lib/elements/fill_stitch.py:197
 msgid "Single spiral"
 msgstr "Espiral simple"
 
-#: lib/elements/fill_stitch.py:198
+#: lib/elements/fill_stitch.py:197
 msgid "Double spiral"
 msgstr "Espiral doble"
 
-#: lib/elements/fill_stitch.py:203
+#: lib/elements/fill_stitch.py:202
 msgid "Join Style"
 msgstr "Estilo de unión"
 
-#: lib/elements/fill_stitch.py:204 inx/inkstitch_knockdown_fill.inx:22
+#: lib/elements/fill_stitch.py:203 inx/inkstitch_knockdown_fill.inx:22
 #: inx/inkstitch_knockdown_fill.inx:41
 msgid "Round"
 msgstr "Redondo"
 
-#: lib/elements/fill_stitch.py:204
+#: lib/elements/fill_stitch.py:203
 msgid "Mitered"
 msgstr "Ingletado"
 
-#: lib/elements/fill_stitch.py:204
+#: lib/elements/fill_stitch.py:203
 msgid "Beveled"
 msgstr "Biselado"
 
-#: lib/elements/fill_stitch.py:210
+#: lib/elements/fill_stitch.py:209
 msgid "Avoid self-crossing"
 msgstr "Evitar cruce automático"
 
-#: lib/elements/fill_stitch.py:219
+#: lib/elements/fill_stitch.py:218
 msgid "Clockwise"
 msgstr "En el sentido de las agujas del reloj"
 
-#: lib/elements/fill_stitch.py:224
+#: lib/elements/fill_stitch.py:223
 msgid "Meander Pattern"
 msgstr "Patrón de meandro"
 
-#: lib/elements/fill_stitch.py:231
+#: lib/elements/fill_stitch.py:230
 msgid "Meander pattern angle"
 msgstr "Ángulo del patrón de meandro"
 
-#: lib/elements/fill_stitch.py:241
+#: lib/elements/fill_stitch.py:240
 msgid "Meander pattern scale"
 msgstr "Escala del patrón de meandro"
 
-#: lib/elements/fill_stitch.py:242
+#: lib/elements/fill_stitch.py:241
 msgid "Percentage to stretch or compress the meander pattern.  You can scale horizontally and vertically individually by giving two percentages separated by a space. "
 msgstr "Porcentaje para estirar o comprimir el patrón del meandro.  Puede escalar horizontal y verticalmente de forma individual dando dos porcentajes separados por un espacio. "
 
-#: lib/elements/fill_stitch.py:252
+#: lib/elements/fill_stitch.py:251
 msgid "Clip path"
 msgstr "Trayectoria del clip"
 
-#: lib/elements/fill_stitch.py:253
+#: lib/elements/fill_stitch.py:252
 msgid "Constrain stitching to the shape.  Useful when smoothing and expand are used."
 msgstr "Limita la costura a la forma.  Útil cuando se utiliza el alisado y la expansión."
 
-#: lib/elements/fill_stitch.py:262
+#: lib/elements/fill_stitch.py:261
 msgid "Smoothness"
 msgstr "Suavidad"
 
-#: lib/elements/fill_stitch.py:264
+#: lib/elements/fill_stitch.py:263
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
 msgstr "Suavice la trayectoria de la puntada.  La suavidad limita la desviación de la trayectoria de puntada suavizada con respecto a la trayectoria original.  Pruebe con números bajos como 0,2.  Sugerencia: también puede ser necesaria una tolerancia de puntada más baja."
 
-#: lib/elements/fill_stitch.py:279
+#: lib/elements/fill_stitch.py:278
 msgid "Expand the shape before fill stitching, to compensate for gaps between shapes.  Negative values contract instead."
 msgstr "Expande la forma antes de la costura de relleno, para compensar los vacíos entre las formas.  Los valores negativos se contraen en su lugar."
 
-#: lib/elements/fill_stitch.py:289
+#: lib/elements/fill_stitch.py:288
 msgid "Gap Filling"
 msgstr "Llenado de vacíos"
 
-#: lib/elements/fill_stitch.py:290
+#: lib/elements/fill_stitch.py:289
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
 msgstr "Añada filas adicionales para compensar los huecos entre secciones causados por la distorsión. Las filas siempre se añaden de dos en dos, por lo que este número se redondeará al múltiplo de 2 más cercano."
 
-#: lib/elements/fill_stitch.py:302 lib/elements/fill_stitch.py:315
+#: lib/elements/fill_stitch.py:301 lib/elements/fill_stitch.py:333
 #: lib/gui/tartan/embroidery_panel.py:35
 msgid "Angle of lines of stitches"
 msgstr "Ángulo de líneas de puntadas"
 
-#: lib/elements/fill_stitch.py:303
+#: lib/elements/fill_stitch.py:302
 msgid "The angle increases in a counter-clockwise direction.  0 is horizontal.  Negative angles are allowed."
 msgstr "El ángulo aumenta en sentido antihorario. 0 es horizontal. Se permiten ángulos negativos."
 
-#: lib/elements/fill_stitch.py:316 lib/gui/tartan/embroidery_panel.py:36
+#: lib/elements/fill_stitch.py:315
+msgid "Guide copy angle"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:316
+msgid "Angle for guide line shifting. Changing the angle may have a huge impact on the actual spacing between the rows. Ensure the guide line is large enough to fill the area when shifted into the given angle."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:334 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
 msgstr "En relación con la dirección de la raya de tartán."
 
-#: lib/elements/fill_stitch.py:328
+#: lib/elements/fill_stitch.py:346
 msgid "Maximum fill stitch length"
 msgstr "Longitud máxima de puntada de relleno"
 
-#: lib/elements/fill_stitch.py:330 lib/elements/fill_stitch.py:876
+#: lib/elements/fill_stitch.py:348 lib/elements/fill_stitch.py:894
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "La longitud de cada puntada en una fila. Se puede usar una puntada más corta al principio o al final de una fila."
 
-#: lib/elements/fill_stitch.py:346
+#: lib/elements/fill_stitch.py:364
 msgid "Spacing between rows"
 msgstr "Espaciamiento entre filas"
 
-#: lib/elements/fill_stitch.py:347
+#: lib/elements/fill_stitch.py:365
 msgid "Distance between rows of stitches."
 msgstr "Distancia entre filas de puntadas."
 
-#: lib/elements/fill_stitch.py:364 inx/inkstitch_gradient_blocks.inx:24
+#: lib/elements/fill_stitch.py:382 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
 msgstr "Espaciado al final de la fila"
 
-#: lib/elements/fill_stitch.py:365
+#: lib/elements/fill_stitch.py:383
 msgid "Increases or decreases the row spacing towards the end."
 msgstr "Aumenta o disminuye el espaciado de la fila hacia el final."
 
-#: lib/elements/fill_stitch.py:379
+#: lib/elements/fill_stitch.py:397
 msgid "Stagger rows this many times before repeating"
 msgstr "Alterne las filas esto muchas veces antes de repetir"
 
-#: lib/elements/fill_stitch.py:380 lib/elements/satin_column.py:227
+#: lib/elements/fill_stitch.py:398 lib/elements/satin_column.py:227
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Longitud del ciclo por el cual las filas de puntadas sucesivas se desfasan. Se permiten valores fraccionarios y pueden generar diagonales menos visibles con respecto a los valores enteros."
 
-#: lib/elements/fill_stitch.py:396 lib/elements/fill_stitch.py:711
+#: lib/elements/fill_stitch.py:414 lib/elements/fill_stitch.py:729
 msgid "Skip last stitch in each row"
 msgstr "Saltar última puntada de cada fila"
 
-#: lib/elements/fill_stitch.py:397 lib/elements/fill_stitch.py:712
+#: lib/elements/fill_stitch.py:415 lib/elements/fill_stitch.py:730
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "La última puntada de cada fila está bastante cerca de la primera puntada de la siguiente fila. Omitirlo reduce el número de puntadas y la densidad."
 
-#: lib/elements/fill_stitch.py:412
+#: lib/elements/fill_stitch.py:430
 msgid "Flip fill (start right-to-left)"
 msgstr "Voltear relleno (comenzar de derecha a izquierda)"
 
-#: lib/elements/fill_stitch.py:413
+#: lib/elements/fill_stitch.py:431
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr "La opción de voltear puede ayudarlo a enrutar su ruta de puntada. Cuando habilita el giro, la costura va de derecha a izquierda en lugar de izquierda a derecha."
 
-#: lib/elements/fill_stitch.py:425
+#: lib/elements/fill_stitch.py:443
 msgid "Reverse fill"
 msgstr "Relleno invertido"
 
-#: lib/elements/fill_stitch.py:426
+#: lib/elements/fill_stitch.py:444
 msgid "Reverses fill path."
 msgstr "Invierte la trayectoria del relleno."
 
-#: lib/elements/fill_stitch.py:437
+#: lib/elements/fill_stitch.py:455
 msgid "Stop at ending point"
 msgstr "Detenerse en el punto final"
 
-#: lib/elements/fill_stitch.py:438
+#: lib/elements/fill_stitch.py:456
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr "Si esta opción está desactivada, el punto final solo se utilizará para definir una dirección general del recorrido de la puntada. Cuando está activada, la última sección terminará en el punto definido."
 
-#: lib/elements/fill_stitch.py:450 lib/elements/fill_stitch.py:723
+#: lib/elements/fill_stitch.py:468 lib/elements/fill_stitch.py:741
 msgid "Underpath"
 msgstr "Capa base"
 
-#: lib/elements/fill_stitch.py:451 lib/elements/fill_stitch.py:724
+#: lib/elements/fill_stitch.py:469 lib/elements/fill_stitch.py:742
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Viaja dentro de la forma al pasar de una sección a otra. Las puntadas subterráneas evitan viajar en la dirección del ángulo de la fila para que no sean visibles. Esto les da una apariencia irregular."
 
-#: lib/elements/fill_stitch.py:463 lib/elements/satin_column.py:389
-#: lib/elements/stroke.py:155
+#: lib/elements/fill_stitch.py:481 lib/elements/satin_column.py:389
+#: lib/elements/stroke.py:156
 msgid "Running stitch length"
 msgstr "Corriendo longitud de puntada"
 
-#: lib/elements/fill_stitch.py:464
+#: lib/elements/fill_stitch.py:482
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr "Longitud de las puntadas alrededor del contorno de la región de relleno, utilizada al pasar de una sección a otra. También se utiliza para relleno en meandro y relleno circular."
 
-#: lib/elements/fill_stitch.py:481 lib/elements/satin_column.py:400
+#: lib/elements/fill_stitch.py:499 lib/elements/satin_column.py:400
 msgid "Running stitch tolerance"
 msgstr "Tolerancia de puntada de corrido"
 
-#: lib/elements/fill_stitch.py:482 lib/elements/satin_column.py:401
+#: lib/elements/fill_stitch.py:500 lib/elements/satin_column.py:401
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Determina cuán estrictamente Ink/Stitch intenta evitar bordar fuera de la forma. Números más bajos disminuyen la probabilidad de bordar fuera de la forma, pero requieren más puntadas."
 
-#: lib/elements/fill_stitch.py:500 lib/elements/stroke.py:199
+#: lib/elements/fill_stitch.py:518 lib/elements/stroke.py:200
 msgid "Randomize stitch length"
 msgstr "Variar la longitud de las puntadas"
 
-#: lib/elements/fill_stitch.py:501 lib/elements/stroke.py:201
+#: lib/elements/fill_stitch.py:519 lib/elements/stroke.py:202
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr "Variar la longitud y la fase de las puntadas en lugar de dividirlas de manera uniforme o escalonada. Esto se recomienda para rellenos curvos muy juntos, para evitar artefactos tipo Moiré."
 
-#: lib/elements/fill_stitch.py:517 lib/elements/stroke.py:220
+#: lib/elements/fill_stitch.py:535 lib/elements/stroke.py:221
 msgid "Random stitch length jitter"
 msgstr "Variación aleatoria de la longitud de las puntadas"
 
-#: lib/elements/fill_stitch.py:518 lib/elements/stroke.py:221
+#: lib/elements/fill_stitch.py:536 lib/elements/stroke.py:222
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Cantidad para variar la longitud de cada puntada al usar la variación aleatoria."
 
-#: lib/elements/fill_stitch.py:533 lib/elements/satin_column.py:525
-#: lib/elements/stroke.py:98
+#: lib/elements/fill_stitch.py:551 lib/elements/satin_column.py:525
+#: lib/elements/stroke.py:99
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:33
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:35
 msgid "Repeats"
 msgstr "Repetir"
 
-#: lib/elements/fill_stitch.py:534 lib/elements/stroke.py:99
+#: lib/elements/fill_stitch.py:552 lib/elements/stroke.py:100
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:36
 msgid "Defines how many times to run down and back along the path."
 msgstr "Define cuántas veces baja y sube a lo largo del patrón."
 
-#: lib/elements/fill_stitch.py:546 lib/elements/stroke.py:116
+#: lib/elements/fill_stitch.py:564 lib/elements/stroke.py:117
 msgid "Bean stitch number of repeats"
 msgstr "Número de repeticiones por puntada triple"
 
-#: lib/elements/fill_stitch.py:547 lib/elements/stroke.py:118
+#: lib/elements/fill_stitch.py:565 lib/elements/stroke.py:119
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Retroceder sobre cada puntada este número de veces. Un valor de 1 triplicaría cada puntada (adelante, atrás, adelante). Un valor de 2 quintuplicaría cada puntada, etc. \n\n"
 "Se puede crear un patrón con varias repeticiones con una lista de valores separados por un espacio."
 
-#: lib/elements/fill_stitch.py:564 lib/elements/satin_column.py:264
-#: lib/elements/stroke.py:255
+#: lib/elements/fill_stitch.py:582 lib/elements/satin_column.py:264
+#: lib/elements/stroke.py:256
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Espaciado en zig-zag (pico a pico)"
 
-#: lib/elements/fill_stitch.py:565 lib/elements/stroke.py:256
+#: lib/elements/fill_stitch.py:583 lib/elements/stroke.py:257
 msgid "Length of stitches in zig-zag mode."
 msgstr "Longitud de las puntadas en modo Zig-Zag."
 
-#: lib/elements/fill_stitch.py:577
+#: lib/elements/fill_stitch.py:595
 msgid "Zig-zag width"
 msgstr "Ancho de zigzag"
 
-#: lib/elements/fill_stitch.py:578
+#: lib/elements/fill_stitch.py:596
 msgid "Width of the zig-zag line."
 msgstr "Ancho de la línea de zigzag."
 
-#: lib/elements/fill_stitch.py:591 lib/gui/tartan/embroidery_panel.py:42
+#: lib/elements/fill_stitch.py:609 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
 msgstr "Filas por hilo tartán"
 
-#: lib/elements/fill_stitch.py:592 lib/gui/tartan/embroidery_panel.py:44
+#: lib/elements/fill_stitch.py:610 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
 msgstr "Filas consecutivas del mismo color"
 
-#: lib/elements/fill_stitch.py:603
+#: lib/elements/fill_stitch.py:621
 msgid "Herringbone width"
 msgstr "Ancho de espiga"
 
-#: lib/elements/fill_stitch.py:604
+#: lib/elements/fill_stitch.py:622
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Define el ancho de un patrón de espiga. Usa 0 para filas regulares."
 
-#: lib/elements/fill_stitch.py:616 lib/elements/satin_column.py:292
-#: lib/elements/stroke.py:271
+#: lib/elements/fill_stitch.py:634 lib/elements/satin_column.py:292
+#: lib/elements/stroke.py:272
 msgid "Pull compensation"
 msgstr "Compensación de tracción"
 
-#: lib/elements/fill_stitch.py:617
+#: lib/elements/fill_stitch.py:635
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "La puntada de relleno puede fruncir la tela, resultando en una forma más estrecha de la que dibujas en Inkscape. Esta configuración expande cada fila de puntadas hacia afuera desde el centro de la fila en una longitud fija.  Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
-#: lib/elements/fill_stitch.py:621 lib/elements/satin_column.py:296
+#: lib/elements/fill_stitch.py:639 lib/elements/satin_column.py:296
 #: lib/elements/satin_column.py:318 lib/elements/satin_column.py:470
-#: lib/elements/satin_column.py:564 lib/elements/stroke.py:277
+#: lib/elements/satin_column.py:564 lib/elements/stroke.py:278
 msgid "mm (each side)"
 msgstr "mm (cada lado)"
 
-#: lib/elements/fill_stitch.py:632 lib/elements/satin_column.py:277
+#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:277
 msgid "Pull compensation percentage"
 msgstr "Porcentaje de compensación de tire"
 
-#: lib/elements/fill_stitch.py:633
+#: lib/elements/fill_stitch.py:651
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Compensación de tire adicional que varía como un porcentaje del ancho de la fila. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
-#: lib/elements/fill_stitch.py:636 lib/elements/satin_column.py:144
+#: lib/elements/fill_stitch.py:654 lib/elements/satin_column.py:144
 #: lib/elements/satin_column.py:154 lib/elements/satin_column.py:280
 #: lib/elements/satin_column.py:485 lib/elements/satin_column.py:584
 msgid "% (each side)"
 msgstr "% (cada lado)"
 
-#: lib/elements/fill_stitch.py:645 lib/elements/fill_stitch.py:654
-#: lib/elements/fill_stitch.py:681 lib/elements/fill_stitch.py:692
-#: lib/elements/fill_stitch.py:702 lib/elements/fill_stitch.py:714
-#: lib/elements/fill_stitch.py:727
+#: lib/elements/fill_stitch.py:663 lib/elements/fill_stitch.py:672
+#: lib/elements/fill_stitch.py:699 lib/elements/fill_stitch.py:710
+#: lib/elements/fill_stitch.py:720 lib/elements/fill_stitch.py:732
+#: lib/elements/fill_stitch.py:745
 msgid "Fill Underlay"
 msgstr "Base de Relleno"
 
-#: lib/elements/fill_stitch.py:645 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:663 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr "Capa base"
 
-#: lib/elements/fill_stitch.py:651
+#: lib/elements/fill_stitch.py:669
 msgid "Fill angle"
 msgstr "Ángulo de relleno"
 
-#: lib/elements/fill_stitch.py:652
+#: lib/elements/fill_stitch.py:670
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Por defecto: ángulo de relleno + 90 grados. Inserta una lista para múltiples capas separada por un espacio."
 
-#: lib/elements/fill_stitch.py:678 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:696 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr "Espaciado de la fila"
 
-#: lib/elements/fill_stitch.py:679
+#: lib/elements/fill_stitch.py:697
 msgid "default: 3x fill row spacing"
 msgstr "por defecto: rellenar el espaciado de línea x3"
 
-#: lib/elements/fill_stitch.py:689 lib/elements/stroke.py:238
+#: lib/elements/fill_stitch.py:707 lib/elements/stroke.py:239
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr "Longitud de puntada máxima"
 
-#: lib/elements/fill_stitch.py:690
+#: lib/elements/fill_stitch.py:708
 msgid "default: equal to fill max stitch length"
 msgstr "por defecto: igual a rellenar la longitud máxima de puntada"
 
-#: lib/elements/fill_stitch.py:700
+#: lib/elements/fill_stitch.py:718
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Reduzca la forma antes de aplicar la capa base, para evitar que la capa base se vea alrededor del exterior del relleno."
 
-#: lib/elements/fill_stitch.py:735 lib/elements/satin_column.py:606
-#: lib/elements/stroke.py:619 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/fill_stitch.py:753 lib/elements/satin_column.py:606
+#: lib/elements/stroke.py:620 lib/gui/satin_multicolor/colorize_panel.py:61
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Semilla aleatoria"
 
-#: lib/elements/fill_stitch.py:736 lib/elements/satin_column.py:607
-#: lib/elements/stroke.py:620
+#: lib/elements/fill_stitch.py:754 lib/elements/satin_column.py:607
+#: lib/elements/stroke.py:621
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Utiliza una semilla específica para atributos aleatorios. Utiliza el ID del elemento si está vacío."
 
-#: lib/elements/fill_stitch.py:756 lib/stitch_plan/lock_stitch.py:218
+#: lib/elements/fill_stitch.py:774 lib/stitch_plan/lock_stitch.py:218
 msgid "Cross"
 msgstr "Cruz"
 
-#: lib/elements/fill_stitch.py:757
+#: lib/elements/fill_stitch.py:775
 msgid "Cross Flipped"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:758
+#: lib/elements/fill_stitch.py:776
 msgid "Half Cross"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:759
+#: lib/elements/fill_stitch.py:777
 msgid "Half Cross Flipped"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:760
+#: lib/elements/fill_stitch.py:778
 msgid "Upright Cross"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:761
+#: lib/elements/fill_stitch.py:779
 msgid "Upright Cross Flipped"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:762
+#: lib/elements/fill_stitch.py:780
 msgid "Dense Upright Cross"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:763
+#: lib/elements/fill_stitch.py:781
 msgid "Dense Upright Cross Flipped"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:764
+#: lib/elements/fill_stitch.py:782
 msgid "Double Cross"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:765
+#: lib/elements/fill_stitch.py:783
 msgid "Double Cross Flipped"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:766
+#: lib/elements/fill_stitch.py:784
 msgid "Smyrna Cross"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:767
+#: lib/elements/fill_stitch.py:785
 msgid "Smyrna Cross Flipped"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:772 lib/gui/cross_stitch_assistant.py:112
+#: lib/elements/fill_stitch.py:790 lib/gui/cross_stitch_assistant.py:112
 msgid "Cross stitch method"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:783
+#: lib/elements/fill_stitch.py:801
 msgid "Thread count"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:784
+#: lib/elements/fill_stitch.py:802
 msgid "Defines the thread count for each stitch.\n"
 "Thread count must be an even number.\n"
 "Half crosses are stitched with an odd thread count."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:797
+#: lib/elements/fill_stitch.py:815
 msgid "Pattern size"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:798
+#: lib/elements/fill_stitch.py:816
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:801 lib/elements/fill_stitch.py:834
+#: lib/elements/fill_stitch.py:819 lib/elements/fill_stitch.py:852
 msgid "mm (x y)"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:813
+#: lib/elements/fill_stitch.py:831
 msgid "Align grid with canvas"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:814
+#: lib/elements/fill_stitch.py:832
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:830
+#: lib/elements/fill_stitch.py:848
 msgid "Grid Offset"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:831
+#: lib/elements/fill_stitch.py:849
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:846
+#: lib/elements/fill_stitch.py:864
 msgid "Grid Rotation"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:847
+#: lib/elements/fill_stitch.py:865
 msgid "Rotates the cross stitch grid by the given value."
 msgstr ""
 
-#: lib/elements/fill_stitch.py:849
+#: lib/elements/fill_stitch.py:867
 msgid "deg"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:861
+#: lib/elements/fill_stitch.py:879
 msgid "Fill coverage"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:862
+#: lib/elements/fill_stitch.py:880
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:874 lib/elements/satin_column.py:185
+#: lib/elements/fill_stitch.py:892 lib/elements/satin_column.py:185
 #: lib/elements/satin_column.py:595
 msgid "Maximum stitch length"
 msgstr "Longitud de puntada máxima"
@@ -2244,7 +2257,7 @@ msgstr ""
 msgid "This element renders as a satin, but it is too narrow."
 msgstr ""
 
-#: lib/elements/satin_column.py:87 lib/elements/stroke.py:40
+#: lib/elements/satin_column.py:87 lib/elements/stroke.py:41
 msgid "* Increase stroke width."
 msgstr ""
 
@@ -2301,7 +2314,7 @@ msgstr "Puntada tipo \"S\""
 msgid "Zig-zag"
 msgstr "Zigzag"
 
-#: lib/elements/satin_column.py:131 lib/elements/stroke.py:85
+#: lib/elements/satin_column.py:131 lib/elements/stroke.py:86
 #: inx/inkstitch_break_apart.inx:9
 msgid "Method"
 msgstr "Método"
@@ -2411,23 +2424,23 @@ msgstr "Compensación de tire adicional que varía como porcentaje del ancho de 
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Las puntadas de satín tiran de la tela, lo que resulta en una columna más estrecha de lo que se dibuja en Inkscape. Esta configuración expande cada par de perforaciones de aguja hacia afuera desde el centro de la columna de satín por una longitud fija. Se pueden usar dos valores separados por un espacio para un efecto asimétrico."
 
-#: lib/elements/satin_column.py:307 lib/elements/stroke.py:472
+#: lib/elements/satin_column.py:307 lib/elements/stroke.py:473
 msgid "Automatic"
 msgstr "Automático"
 
-#: lib/elements/satin_column.py:308 lib/elements/stroke.py:473
+#: lib/elements/satin_column.py:308 lib/elements/stroke.py:474
 msgid "Don't reverse"
 msgstr "No Invertir"
 
-#: lib/elements/satin_column.py:309 lib/elements/stroke.py:474
+#: lib/elements/satin_column.py:309 lib/elements/stroke.py:475
 msgid "Reverse first rail"
 msgstr "Invertir primer riel"
 
-#: lib/elements/satin_column.py:310 lib/elements/stroke.py:475
+#: lib/elements/satin_column.py:310 lib/elements/stroke.py:476
 msgid "Reverse second rail"
 msgstr "Invertir segundo riel"
 
-#: lib/elements/satin_column.py:311 lib/elements/stroke.py:476
+#: lib/elements/satin_column.py:311 lib/elements/stroke.py:477
 msgid "Reverse both rails"
 msgstr "Invertir ambos rieles"
 
@@ -2439,7 +2452,7 @@ msgstr ""
 msgid "Shrinks the column at start and/or end."
 msgstr ""
 
-#: lib/elements/satin_column.py:328 lib/elements/stroke.py:482
+#: lib/elements/satin_column.py:328 lib/elements/stroke.py:483
 msgid "Reverse rails"
 msgstr "Invertir rieles"
 
@@ -2447,7 +2460,7 @@ msgstr "Invertir rieles"
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
 msgstr "Esto puede ser útil si tu satín se renderiza de forma muy extraña. Por defecto: detecta y corrige automáticamente un riel invertido."
 
-#: lib/elements/satin_column.py:378 lib/elements/stroke.py:497
+#: lib/elements/satin_column.py:378 lib/elements/stroke.py:498
 msgid "Swap rails"
 msgstr "Invertir raíles"
 
@@ -2501,7 +2514,7 @@ msgid "Stitch length"
 msgstr "Longitud de la Puntada"
 
 #: lib/elements/satin_column.py:450 lib/elements/satin_column.py:507
-#: lib/elements/stroke.py:177
+#: lib/elements/stroke.py:178
 msgid "Stitch tolerance"
 msgstr "Tolerancia de puntada"
 
@@ -2586,251 +2599,251 @@ msgstr "Cantidad de contracción (proporcional)"
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Dividir si se excede el máximo de longitud de puntada"
 
-#: lib/elements/stroke.py:37
+#: lib/elements/stroke.py:38
 msgid "Too narrow satin"
 msgstr ""
 
-#: lib/elements/stroke.py:38
+#: lib/elements/stroke.py:39
 msgid "This element renders as running stitch while it has a satin column parameter."
 msgstr "Este elemento se renderiza como puntada de corrido mientras tiene un parámetro de columna de satín."
 
-#: lib/elements/stroke.py:41
+#: lib/elements/stroke.py:42
 msgid "Whether or not a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
 msgstr ""
 
-#: lib/elements/stroke.py:51 lib/extensions/params.py:633
+#: lib/elements/stroke.py:52 lib/extensions/params.py:633
 #: inx/inkstitch_select_elements.inx:12
 msgid "Stroke"
 msgstr "Trazo"
 
-#: lib/elements/stroke.py:54 lib/extensions/params.py:312
+#: lib/elements/stroke.py:55 lib/extensions/params.py:312
 msgid "Running stitch along paths"
 msgstr "Puntada de corrido a lo largo de las trayectorias"
 
-#: lib/elements/stroke.py:76
+#: lib/elements/stroke.py:77
 msgid "Running Stitch / Bean Stitch"
 msgstr "Puntada de corrido / Puntada tipo Frijol"
 
-#: lib/elements/stroke.py:77 lib/lettering/categories.py:26
+#: lib/elements/stroke.py:78 lib/lettering/categories.py:26
 #: inx/inkstitch_lettering_generate_json.inx:70
 msgid "Ripple Stitch"
 msgstr "Puntada ondulada"
 
-#: lib/elements/stroke.py:78 inx/inkstitch_select_elements.inx:23
+#: lib/elements/stroke.py:79 inx/inkstitch_select_elements.inx:23
 msgid "ZigZag Stitch"
 msgstr "Puntada en zigzag"
 
-#: lib/elements/stroke.py:79 inx/inkstitch_select_elements.inx:24
+#: lib/elements/stroke.py:80 inx/inkstitch_select_elements.inx:24
 msgid "Manual Stitch"
 msgstr "Puntada manual"
 
-#: lib/elements/stroke.py:141
+#: lib/elements/stroke.py:142
 msgid "Manual stitch placement"
 msgstr "Colocación manual de puntada"
 
-#: lib/elements/stroke.py:142
+#: lib/elements/stroke.py:143
 msgid "No extra stitches will be added to the original ripple pattern and the running stitch length value will be ignored."
 msgstr "No se añadirán puntadas extra al patrón de puntada ondulada original y el valor de longitud de la puntada de corrido será ignorado."
 
-#: lib/elements/stroke.py:157
+#: lib/elements/stroke.py:158
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
 "It is possible to create stitch length patterns by adding multiple values separately."
 msgstr ""
 
-#: lib/elements/stroke.py:179
+#: lib/elements/stroke.py:180
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
 msgstr "Todas las puntadas deben estar dentro de esta distancia del trazado. Una tolerancia menor significa que las puntadas estarán más juntas. Una tolerancia mayor significa que las esquinas afiladas pueden redondearse."
 
-#: lib/elements/stroke.py:239
+#: lib/elements/stroke.py:240
 msgid "Split stitches longer than this."
 msgstr "Dividir puntadas más largas que esto."
 
-#: lib/elements/stroke.py:273
+#: lib/elements/stroke.py:274
 msgid "Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This widens the zigzag line width."
 msgstr "Las puntadas en zigzag tiran de la tela, lo que resulta en una columna más estrecha de lo que se dibuja en Inkscape. Esto amplía el ancho de la línea de zigzag."
 
-#: lib/elements/stroke.py:291
+#: lib/elements/stroke.py:292
 msgid "Zig-zag angle"
 msgstr ""
 
-#: lib/elements/stroke.py:293
+#: lib/elements/stroke.py:294
 msgid "Rotate zig-zag direction by this angle (degrees). Creates spoke/radial effects on curves."
 msgstr ""
 
-#: lib/elements/stroke.py:311
+#: lib/elements/stroke.py:312
 msgid "Number of lines"
 msgstr "Número de líneas"
 
-#: lib/elements/stroke.py:312
+#: lib/elements/stroke.py:313
 msgid "Number of lines from start to finish"
 msgstr "Número de líneas de principio a fin"
 
-#: lib/elements/stroke.py:326
+#: lib/elements/stroke.py:327
 msgid "Minimum line distance"
 msgstr "Distancia mínima entre líneas"
 
-#: lib/elements/stroke.py:327
+#: lib/elements/stroke.py:328
 msgid "Overrides the number of lines setting."
 msgstr "Anula la configuración del número de líneas."
 
-#: lib/elements/stroke.py:342
+#: lib/elements/stroke.py:343
 msgid "Line count / Minimum line distance"
 msgstr "Conteo de líneas / Distancia mínima entre líneas"
 
-#: lib/elements/stroke.py:343
+#: lib/elements/stroke.py:344
 msgid "Render at rungs"
 msgstr "Renderizar en los peldaños"
 
-#: lib/elements/stroke.py:344
+#: lib/elements/stroke.py:345
 msgid "Adaptive + minimum line distance"
 msgstr "Adaptativo + distancia mínima entre líneas"
 
-#: lib/elements/stroke.py:350
+#: lib/elements/stroke.py:351
 msgid "Pattern position"
 msgstr "Posición del patrón"
 
-#: lib/elements/stroke.py:351
+#: lib/elements/stroke.py:352
 msgid "Pattern position for satin guided ripples."
 msgstr "Posición del patrón para las ondas guiadas por satín."
 
-#: lib/elements/stroke.py:365
+#: lib/elements/stroke.py:366
 msgid "Stagger lines this many times before repeating"
 msgstr "Escalonar las líneas esta cantidad de veces antes de repetir"
 
-#: lib/elements/stroke.py:367
+#: lib/elements/stroke.py:368
 msgid "Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. A value of 0 (default) disables staggering and instead stitches evenly.For linear ripples only."
 msgstr "Longitud del ciclo por el cual las sucesivas líneas de puntadas se escalonan. Se permiten valores fraccionarios y pueden tener diagonales menos visibles que los valores enteros. Un valor de 0 (por defecto) desactiva el escalonamiento y, en su lugar, cose de manera uniforme. Solo para ondas lineales."
 
-#: lib/elements/stroke.py:385
+#: lib/elements/stroke.py:386
 msgid "Skip first lines"
 msgstr "Omitir las primeras líneas"
 
-#: lib/elements/stroke.py:386
+#: lib/elements/stroke.py:387
 msgid "Skip this number of lines at the beginning."
 msgstr "Omitir este número de líneas al principio."
 
-#: lib/elements/stroke.py:400
+#: lib/elements/stroke.py:401
 msgid "Skip last lines"
 msgstr "Omitir las últimas líneas"
 
-#: lib/elements/stroke.py:401
+#: lib/elements/stroke.py:402
 msgid "Skip this number of lines at the end"
 msgstr "Omitir este número de líneas al final"
 
-#: lib/elements/stroke.py:415
+#: lib/elements/stroke.py:416
 msgid "Flip every second line"
 msgstr "Voltear cada segunda línea"
 
-#: lib/elements/stroke.py:416
+#: lib/elements/stroke.py:417
 msgid "Linear ripple: wether to flip the pattern every second line or not."
 msgstr "Onda lineal: si se debe voltear o no el patrón en cada segunda línea."
 
-#: lib/elements/stroke.py:429
+#: lib/elements/stroke.py:430
 msgid "Line distance exponent"
 msgstr "Exponente de distancia de línea"
 
-#: lib/elements/stroke.py:430
+#: lib/elements/stroke.py:431
 msgid "Increase density towards one side."
 msgstr "Aumentar la densidad hacia un lado."
 
-#: lib/elements/stroke.py:444
+#: lib/elements/stroke.py:445
 msgid "Flip exponent"
 msgstr "Invertir exponente"
 
-#: lib/elements/stroke.py:445
+#: lib/elements/stroke.py:446
 msgid "Reverse exponent effect."
 msgstr "Invertir efecto de exponente."
 
-#: lib/elements/stroke.py:459
+#: lib/elements/stroke.py:460
 msgid "Reverse"
 msgstr "Invertir"
 
-#: lib/elements/stroke.py:460
+#: lib/elements/stroke.py:461
 msgid "Flip start and end point"
 msgstr "Invertir punto inicial y final"
 
-#: lib/elements/stroke.py:483
+#: lib/elements/stroke.py:484
 msgid "Reverse satin ripple rails. Default: automatically detect and fix a reversed rail."
 msgstr ""
 
-#: lib/elements/stroke.py:498
+#: lib/elements/stroke.py:499
 msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
 msgstr ""
 
-#: lib/elements/stroke.py:511
+#: lib/elements/stroke.py:512
 msgid "Grid size"
 msgstr "Tamaño de la cuadrícula"
 
-#: lib/elements/stroke.py:512
+#: lib/elements/stroke.py:513
 msgid "Render as grid. Use with care and watch your stitch density."
 msgstr "Renderizar como cuadrícula. Úsalo con cuidado y vigila la densidad de la puntada."
 
-#: lib/elements/stroke.py:527
+#: lib/elements/stroke.py:528
 msgid "Stitch grid first"
 msgstr "Coser cuadrícula primero"
 
-#: lib/elements/stroke.py:528
+#: lib/elements/stroke.py:529
 msgid "Reverse the stitch paths, so that the grid will be stitched first"
 msgstr "Invierte los trazados de puntada para que la cuadrícula se cosa primero"
 
-#: lib/elements/stroke.py:542
+#: lib/elements/stroke.py:543
 msgid "Scale axis"
 msgstr "Escala de eje"
 
-#: lib/elements/stroke.py:543
+#: lib/elements/stroke.py:544
 msgid "Scale axis for satin guided ripple stitches."
 msgstr "Eje de escala para las puntadas de onda guiadas por satín."
 
-#: lib/elements/stroke.py:547 lib/gui/edit_json/settings_panel.py:203
+#: lib/elements/stroke.py:548 lib/gui/edit_json/settings_panel.py:203
 #: print/templates/ui.html:180 inx/inkstitch_knockdown_fill.inx:33
 #: inx/inkstitch_remove_embroidery_settings.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:117
 msgid "None"
 msgstr "Ninguno"
 
-#: lib/elements/stroke.py:558
+#: lib/elements/stroke.py:559
 msgid "Starting scale"
 msgstr "Escala inicial"
 
-#: lib/elements/stroke.py:559
+#: lib/elements/stroke.py:560
 msgid "How big the first copy of the line should be, in percent."
 msgstr "Qué tan grande debe ser la primera copia de la línea, en porcentaje."
 
-#: lib/elements/stroke.py:559 lib/elements/stroke.py:574
+#: lib/elements/stroke.py:560 lib/elements/stroke.py:575
 msgid "Used only for ripple stitch with a guide line."
 msgstr "Usado solo para la puntada ondulada con una línea guía."
 
-#: lib/elements/stroke.py:573
+#: lib/elements/stroke.py:574
 msgid "Ending scale"
 msgstr "Escala final"
 
-#: lib/elements/stroke.py:574
+#: lib/elements/stroke.py:575
 msgid "How big the last copy of the line should be, in percent."
 msgstr "Qué tan grande debe ser la última copia de la línea, en porcentaje."
 
-#: lib/elements/stroke.py:588 lib/gui/tartan/customize_panel.py:43
+#: lib/elements/stroke.py:589 lib/gui/tartan/customize_panel.py:43
 #: inx/inkstitch_transform_elements.inx:10
 msgid "Rotate"
 msgstr "Rotar"
 
-#: lib/elements/stroke.py:589
+#: lib/elements/stroke.py:590
 msgid "Rotate satin guided ripple stitches"
 msgstr "Girar puntadas de onda guiadas por satín"
 
-#: lib/elements/stroke.py:603 inx/inkstitch_knockdown_fill.inx:21
+#: lib/elements/stroke.py:604 inx/inkstitch_knockdown_fill.inx:21
 #: inx/inkstitch_knockdown_fill.inx:40
 msgid "Join style"
 msgstr "Estilo de unión"
 
-#: lib/elements/stroke.py:604
+#: lib/elements/stroke.py:605
 msgid "Join style for non circular ripples."
 msgstr "Estilo de unión para ondas no circulares."
 
-#: lib/elements/stroke.py:607
+#: lib/elements/stroke.py:608
 msgid "flat"
 msgstr "plano"
 
-#: lib/elements/stroke.py:607
+#: lib/elements/stroke.py:608
 msgid "point"
 msgstr "punto"
 
@@ -3840,7 +3853,7 @@ msgstr "Aplicar"
 #: inx/inkstitch_lettering_organize_glyphs.inx:27
 #: inx/inkstitch_lettering_remove_kerning.inx:12
 #: inx/inkstitch_lettering_set_color_sort_index.inx:11
-#: inx/inkstitch_letters_to_font.inx:62 inx/inkstitch_outline.inx:25
+#: inx/inkstitch_letters_to_font.inx:64 inx/inkstitch_outline.inx:25
 #: inx/inkstitch_palette_to_text.inx:21 inx/inkstitch_png_realistic.inx:17
 #: inx/inkstitch_png_simple.inx:18 inx/inkstitch_redwork.inx:33
 #: inx/inkstitch_remove_duplicated_points.inx:14
@@ -3850,7 +3863,7 @@ msgstr "Aplicar"
 #: inx/inkstitch_stroke_to_lpe_satin.inx:26
 #: inx/inkstitch_transform_elements.inx:14 inx/inkstitch_troubleshoot.inx:23
 #: inx/inkstitch_unlink_clone.inx:11 inx/inkstitch_zigzag_line_to_satin.inx:18
-#: inx/inkstitch_zip.inx:65
+#: inx/inkstitch_zip.inx:66
 msgid "Help"
 msgstr "Ayuda"
 
@@ -4900,7 +4913,7 @@ msgstr "Cuando está activado, la velocidad de simulación se adapta al número 
 
 #: lib/gui/simulator/simulator_preferences.py:38
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
-#: inx/inkstitch_zip.inx:52
+#: inx/inkstitch_zip.inx:53
 msgid "Line width (mm)"
 msgstr "Ancho de línea (mm)"
 
@@ -5860,7 +5873,7 @@ msgid "Yes"
 msgstr "Si"
 
 #: print/templates/ui.html:200 inx/inkstitch_lettering_generate_json.inx:113
-#: inx/inkstitch_letters_to_font.inx:59
+#: inx/inkstitch_letters_to_font.inx:61
 msgid "No"
 msgstr "No"
 
@@ -6292,7 +6305,7 @@ msgstr "Esta extensión intenta crear un único trazado de puntada a través de 
 #: inx/inkstitch_lettering_generate_json.inx:167
 #: inx/inkstitch_lettering_remove_kerning.inx:22
 #: inx/inkstitch_lettering_set_color_sort_index.inx:19
-#: inx/inkstitch_letters_to_font.inx:77 inx/inkstitch_outline.inx:28
+#: inx/inkstitch_letters_to_font.inx:79 inx/inkstitch_outline.inx:28
 #: inx/inkstitch_redwork.inx:37 inx/inkstitch_remove_duplicated_points.inx:24
 #: inx/inkstitch_satin_to_stroke.inx:15
 #: inx/inkstitch_stitch_plan_preview.inx:45
@@ -7359,7 +7372,7 @@ msgstr "convertir archivo QCC a trazados de puntada manual de Ink/Stitch"
 msgid "SEW file input"
 msgstr "Entrada de archivo SEW"
 
-#: inx/inkstitch_input_SEW.inx:8
+#: inx/inkstitch_input_SEW.inx:8 inx/inkstitch_output_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
 msgstr "Ink/Stitch: Formato de bordado Janome (.sew)"
 
@@ -7849,7 +7862,7 @@ msgstr "Definir un directorio con fuentes personalizadas para la herramienta de 
 #: inx/inkstitch_lettering_remove_kerning.inx:33
 #: inx/inkstitch_lettering_set_color_sort_index.inx:30
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:14
-#: inx/inkstitch_letters_to_font.inx:88
+#: inx/inkstitch_letters_to_font.inx:90
 msgid "Font Management"
 msgstr "Gestión de fuentes"
 
@@ -8196,47 +8209,47 @@ msgstr "Letras a fuente"
 msgid "File format"
 msgstr "Formato de Archivo"
 
-#: inx/inkstitch_letters_to_font.inx:52
+#: inx/inkstitch_letters_to_font.inx:54
 msgid "Font directory"
 msgstr "Carpeta de Fuentes"
 
-#: inx/inkstitch_letters_to_font.inx:55
+#: inx/inkstitch_letters_to_font.inx:57
 msgid "Margin left (mm)"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:55
+#: inx/inkstitch_letters_to_font.inx:57
 msgid "With \"Use glyph width\" enabled in the json, the margin to the left page border defines the distance between glyphs"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:56
+#: inx/inkstitch_letters_to_font.inx:58
 msgid "Import commands"
 msgstr "Importar comandos"
 
-#: inx/inkstitch_letters_to_font.inx:57
+#: inx/inkstitch_letters_to_font.inx:59
 msgid "As param"
 msgstr "Como parámetro"
 
-#: inx/inkstitch_letters_to_font.inx:58
+#: inx/inkstitch_letters_to_font.inx:60
 msgid "As symbol"
 msgstr "Como símbolo"
 
-#: inx/inkstitch_letters_to_font.inx:63
+#: inx/inkstitch_letters_to_font.inx:65
 msgid "Includes all letters of a predigitized embroidery font (one file for each letter) into the document in order to make it available for the Ink/Stitch lettering system."
 msgstr "Incluye todas las letras de una fuente de bordado predigitalizada (un archivo para cada letra) en el documento para que esté disponible para el sistema de letras de Ink/Stitch."
 
-#: inx/inkstitch_letters_to_font.inx:66
+#: inx/inkstitch_letters_to_font.inx:68
 msgid "Embroidery files need to have the name of the letter right before the file extension. E.g. A.dst or Example_Font_A.dst will be recognized as the letter A."
 msgstr "Los archivos de bordado necesitan tener el nombre de la letra justo antes de la extensión del archivo. Por ejemplo, A.dst o Example_Font_A.dst se reconocerán como la letra A."
 
-#: inx/inkstitch_letters_to_font.inx:71
+#: inx/inkstitch_letters_to_font.inx:73
 msgid "⚠ After running this function, drag the baseline into the desired position and place the letters accordingly. Save your font in a separate folder. Then generate the json file (with \"Autoroute Satin\" unchecked)."
 msgstr "⚠ Después de ejecutar esta función, arrastra la línea base a la posición deseada y coloca las letras en consecuencia. Guarda la fuente en una carpeta separada. Luego genera el archivo json (con \"Autoruta de Satín\" desmarcado)."
 
-#: inx/inkstitch_letters_to_font.inx:78
+#: inx/inkstitch_letters_to_font.inx:80
 msgid "https://inkstitch.org/docs/font-tools/#letters-to-font"
 msgstr ""
 
-#: inx/inkstitch_letters_to_font.inx:85
+#: inx/inkstitch_letters_to_font.inx:87
 msgid "Inserts all available glyphs of a pre-digitized font into the document to make them available for the lettering tool"
 msgstr "Inserta todos los glifos disponibles de una fuente pre-digitalizada en el documento para que estén disponibles en la herramienta de letras"
 
@@ -8600,6 +8613,14 @@ msgstr "Ink/Stitch: QCC - QuiltEZ [COLCHADO] (.qcc)"
 msgid "Save design in QCC format using Ink/Stitch"
 msgstr "Guardar el diseño en formato QCC usando Ink/Stitch"
 
+#: inx/inkstitch_output_SEW.inx:3
+msgid "SEW file output"
+msgstr ""
+
+#: inx/inkstitch_output_SEW.inx:9
+msgid "Save design in SEW format using Ink/Stitch"
+msgstr ""
+
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
 msgstr "Archivo de salida SVG"
@@ -8701,7 +8722,7 @@ msgid "Create a PNG file with a realistic embroidery representation using Ink/St
 msgstr "Crear un archivo PNG con una representación realista del bordado usando Ink/Stitch"
 
 #: inx/inkstitch_png_realistic.inx:15 inx/inkstitch_png_simple.inx:16
-#: inx/inkstitch_zip.inx:50 inx/inkstitch_zip.inx:53
+#: inx/inkstitch_zip.inx:51 inx/inkstitch_zip.inx:54
 msgid "DPI"
 msgstr "ppp"
 
@@ -9471,94 +9492,98 @@ msgid ".XXX: Singer Embroidery Format"
 msgstr ".XXX: Formato de bordado Singer"
 
 #: inx/inkstitch_zip.inx:28
+msgid ".SEW: Janome Embroidery Format"
+msgstr ""
+
+#: inx/inkstitch_zip.inx:29
 msgid ".U01: Barudan Embroidery Format"
 msgstr ".U01: Formato de bordado Barudan"
 
-#: inx/inkstitch_zip.inx:29
+#: inx/inkstitch_zip.inx:30
 msgid ".TBF: Tajima Embroidery Format"
 msgstr ".TBF: Formato de bordado Tajima"
 
-#: inx/inkstitch_zip.inx:30
+#: inx/inkstitch_zip.inx:31
 msgid ".PMV: Brother Stitch Format [STITCH]"
 msgstr ".PMV: Formato de puntadas Brother [STITCH]"
 
-#: inx/inkstitch_zip.inx:36
+#: inx/inkstitch_zip.inx:37
 msgid ".GCODE: gcode Format, Text File"
 msgstr ".GCODE: Formato GCODE, archivo de texto"
 
-#: inx/inkstitch_zip.inx:37
+#: inx/inkstitch_zip.inx:38
 msgid ".PLT: Plt - HPGL [QUILTING]"
 msgstr ".PLT: PLT - HPGL [COLCHADO]"
 
-#: inx/inkstitch_zip.inx:38
+#: inx/inkstitch_zip.inx:39
 msgid ".QCC: Qcc - QuiltEZ [QUILTING]"
 msgstr ".QCC: Qcc - QuiltEZ [COLCHADO]"
 
-#: inx/inkstitch_zip.inx:39
+#: inx/inkstitch_zip.inx:40
 msgid ".EDR: Edr Color Format [COLOR]"
 msgstr ".EDR: Formato EDR de color [COLOR]"
 
-#: inx/inkstitch_zip.inx:40
+#: inx/inkstitch_zip.inx:41
 msgid ".COL: Col Color Format [COLOR]"
 msgstr ".COL: Formato COL de color [COLOR]"
 
-#: inx/inkstitch_zip.inx:41
+#: inx/inkstitch_zip.inx:42
 msgid ".INF: Inf Color Format [COLOR]"
 msgstr ".INF: Formato INF de color [COLOR]"
 
-#: inx/inkstitch_zip.inx:42
+#: inx/inkstitch_zip.inx:43
 msgid ".TXT: Threadlist [COLOR]"
 msgstr ".TXT: Lista de hilos [COLOR]"
 
-#: inx/inkstitch_zip.inx:48
+#: inx/inkstitch_zip.inx:49
 msgid ".SVG: Scalable Vector Graphic"
 msgstr ".SVG: Scalable Vector Graphic"
 
-#: inx/inkstitch_zip.inx:49
+#: inx/inkstitch_zip.inx:50
 msgid ".PNG: Portable Network Graphics (Realistic) [IMAGE]"
 msgstr ".PNG: Gráficos de red portables (realista) [IMAGEN]"
 
-#: inx/inkstitch_zip.inx:51
+#: inx/inkstitch_zip.inx:52
 msgid ".PNG: Portable Network Graphics (Simple) [IMAGE]"
 msgstr ".PNG: Gráficos de red portables (simple) [IMAGEN]"
 
-#: inx/inkstitch_zip.inx:57
+#: inx/inkstitch_zip.inx:58
 msgid "Panelization Options"
 msgstr "Opciones de panelización"
 
-#: inx/inkstitch_zip.inx:58
+#: inx/inkstitch_zip.inx:59
 msgid "For single design set horizontal and vertical repeats to 1"
 msgstr "Para un solo diseño, establece repeticiones horizontales y verticales en 1"
 
-#: inx/inkstitch_zip.inx:60
+#: inx/inkstitch_zip.inx:61
 msgid "Horizontal repeats"
 msgstr "Repeticiones horizontales"
 
-#: inx/inkstitch_zip.inx:61
+#: inx/inkstitch_zip.inx:62
 msgid "Horizontal spacing (mm)"
 msgstr "Espaciado horizontal (mm)"
 
-#: inx/inkstitch_zip.inx:62
+#: inx/inkstitch_zip.inx:63
 msgid "Vertical repeats"
 msgstr "Repeticiones verticales"
 
-#: inx/inkstitch_zip.inx:63
+#: inx/inkstitch_zip.inx:64
 msgid "Vertical spacing (mm)"
 msgstr "Espaciado vertical (mm)"
 
-#: inx/inkstitch_zip.inx:66
+#: inx/inkstitch_zip.inx:67
 msgid "Zip File Export"
 msgstr "Exportar a Archivo Zip"
 
-#: inx/inkstitch_zip.inx:67
+#: inx/inkstitch_zip.inx:68
 msgid "Export multiple embroidery file formats at once."
 msgstr "Exportar varios formatos de archivo de bordado a la vez."
 
-#: inx/inkstitch_zip.inx:69
+#: inx/inkstitch_zip.inx:70
 msgid "Read more on our website:"
 msgstr "Más información en nuestro sitio web:"
 
-#: inx/inkstitch_zip.inx:70
+#: inx/inkstitch_zip.inx:71
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
 msgstr ""
 
