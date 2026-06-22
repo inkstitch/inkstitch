@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/butterfly-template/
+permalink: /fr/tutorials/butterfly-template/
 title: "Stitch library butterfly template"
 language: fr
 last_modified_at: 2026-06-18

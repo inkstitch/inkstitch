@@ -291,7 +291,7 @@ Diese Erweiterung hilft Schriftautoren ihre Arbeit in verschiedene Schritte zu u
 
 [Mehr erfahren](/de/docs/font-tools/#glyphen-organisieren)
 
-### Kreuzstich-Helfer
+### Kreuzstich-Assistent
 
 Diese Erweiterung assistiert bei der Erstellung von Kreuzstichen in Ink/Stitch. Sie kann:
 
@@ -302,7 +302,7 @@ Diese Erweiterung assistiert bei der Erstellung von Kreuzstichen in Ink/Stitch. 
 * Bilder in Füllstich-Elemente umwandeln
 * Überlappungen entfernen
 
-[Mehr erfahren](/de/docs/fill-tools/#kreuzstich-helfer)
+[Mehr erfahren](/de/docs/fill-tools/#kreuzstich-assistent)
 
 ## Aktualisierte Erweiterungen
 
