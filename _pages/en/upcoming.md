@@ -296,18 +296,18 @@ Helps font digitizers to organize their work in steps so that they can reuse pre
 
 [Read more](/docs/font-tools/#organize-glyphs)
 
-### Cross Stitch Helper
+### Cross Stitch Assistant
 
 This extension helps to generate cross stitches in Ink/Stitch. It can:
 
-* Calculate stitch length for given grid spacing values
+* Calculate and adapt stitch length according to grid spacing values
 * Apply cross stitch parameters to selected fill elements
 * Pixelize outlines of selected fill elements
 * Apply spacing values to page grid
 * Convert images to fill stitch elements
 * Remove overlaps
 
-[Read more](/docs/fill-tools/#cross-stitch-helper)
+[Read more](/docs/fill-tools/#cross-stitch-assistant)
 
 ## Updated Extensions
 
