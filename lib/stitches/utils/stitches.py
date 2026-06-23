@@ -6,6 +6,8 @@
 import numpy as np
 from shapely.geometry import LineString, Point
 
+from ...stitch_plan import Stitch
+
 
 def apply_stitches(
         line: LineString,
@@ -47,3 +49,22 @@ def apply_stitches(
         points = np.insert(points, indices, extra_points, axis=0)
 
     return LineString(points)
+
+
+def filter_small_stitches(stitches: list[Stitch], min_stitch_len: float = 0.1) -> list[Stitch]:
+    if not stitches:
+        return stitches
+
+    if min_stitch_len is None:
+        min_stitch_len = 0.1
+
+    filtered_stitches = [stitches[0]]
+    for stitch in stitches[1:]:
+        length = (stitch - filtered_stitches[-1]).length()
+        if length <= min_stitch_len:
+            # duplicate stitch, skip this one
+            continue
+
+        filtered_stitches.append(stitch)
+
+    return filtered_stitches
