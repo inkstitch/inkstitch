@@ -20,7 +20,7 @@ accessibility:
                 Das bedeutet, dass es für jeden immer kostenlos sein wird: nutzen, teilen und verändern.<br><br>
 
                 Das heißt nicht, dass es für die Mitwirkenden immer kostenfrei ist.
-                Spenden für die Arbeit und die Ausgaben, die wir in das Programm gesteckt stecken, sind willkommen
+                Spenden für die Arbeit und die Ausgaben, die wir in das Programm stecken, sind willkommen
                 (sobald wir herausgefunden haben, wie wir die Finanzen organisieren können)."
 
 lettering:
@@ -31,17 +31,18 @@ lettering:
 
               Das [Text-Modul](/de/docs/lettering/) bietet viele interessante Funktionen:
 
-              * Text direkt mit der Tastatur hinzufügen
-              * Zahlreichen vordigitalisierten [Schriftarten](/de/fonts/font-library/)
+              * Text direkt über die Tastatur hinzufügen
 
-              * Die Möglichkeit eigene Schriftarten zu digitalisieren und in das System zu integrieren (und/oder mit allen zu teilen)
+              * Zahlreiche vordigitalisierte [Schriftarten](/de/fonts/font-library/)
 
-              * Im Text-Modul kann die Schrift innerhalb der vom Schriftautor vorgegebenen Parameter skaliert werden
+              * Eigene Schriftarten digitalisieren und in das System integrieren. Wenn du deine Schrift teilen magst, freuen wir uns über Zuwachs in der Schriftbibliothek)
+
+              * Zur Sicherung der Schriftqualtität, kann die Schrift im Textmodul innerhalb der vom Schriftautor vorgegebenen Parameter skaliert werden
 
               * Geeignete Schriften für das jeweilige Stickprojekt können einfach über die Nutzung der Schriftfilter gefunden werden:<br>
                 **Kategoriefilter**: Der Schriftartkategoriefilter hilft Schriftarten mit bestimmten Sticharten oder -stilen zu finden.<br>
                 **Schriftgrößenfilter**: Der Schriftgrößenfilter hilft die Schriften zu finden, die genau in das Design passen. Die gewählte Schriftart wird automatisch auf die passende Größe skaliert.<br>
-                **Schriftzeichenfilter**: Mit dem Schriftzeichenfilter werden nur Schriftarten mit allen erforderlichen Zeichen für den angegebenen Text angezeigen
+                **Schriftzeichenfilter**: Mit dem Schriftzeichenfilter werden nur Schriftarten mit allen erforderlichen Zeichen für den angegebenen Text angezeigt
 
               Nachdem der Text in das Dokument eingefügt wurde, können die Pfade und Stickparameter nach Belieben angepasst werden.
 
@@ -51,7 +52,7 @@ lettering:
 stitches:
   - image_path: /assets/images/galleries/fonts/mai_en_fleur/WAbril.jpg
     alt: "Gestickter Buchstabe mit verschiedenen Sticharten"
-    title: "Manuelles Setzen von Stichpositionen und komplexe Stichmuster"
+    title: "Manuelle Stichpositionen bis hin zu komplexen Stichmustern"
     excerpt: "Die in Ink/Stitch verfügbaren [Sticharten](/docs/stitch-library/) eröffnen eine Welt voller kreativer Möglichkeiten.
 
               * **[Manuelle Stichplatzierung]((/docs/stitches/manual-stitch/))**: jeden Stich genau dort platzieren, wo er sein soll
@@ -79,12 +80,11 @@ stitches:
                 usw.<br>
                 Das Aussehen kann durch verschiedene Parameter wie beispielsweise Stichlänge, Reihenabstand, Winkel, etc. angepasst werden.
 
-              Benutzerdefinierte [Muster](/de/docs/stitches/patterns/) können auf alle verfügbaren Sticharten angewendet werden.
-              Dies gilt natürlich auch für Unterlagen.
+              * **Benutzerdefinierte [Muster](/de/docs/stitches/patterns/)** können auf alle verfügbaren Sticharten angewendet werden.
+                Dies gilt natürlich auch für Unterlagen.
 
-              Jeder Stichtyp verfügt über einen eigenen Satz an Werkzeugen ([Strichwerkzeuge](/de/docs/stroke-tools/),
-              [Satinwerkzeuge](/de/docs/satin-tools/), [Füllwerkzeuge](/de/docs/fill-tools/))
-              für Konvertierung, Optimierung und Routing."
+              * Jeder Stichtyp verfügt über einen eigenen **Satz an Werkzeugen** ([Strichwerkzeuge](/de/docs/stroke-tools/),
+                [Satinwerkzeuge](/de/docs/satin-tools/), [Füllwerkzeuge](/de/docs/fill-tools/)) für Konvertierung, Optimierung und Routing."
 
 tools:
   - image_path: /assets/images/tutorials/cookie_cutter_tiling/Tshirt.png
@@ -94,7 +94,7 @@ tools:
 
               Das bedeutet, es gibt neben den Ink/Stitch Werkzeugen, unzählige Werkzeuge und Erweiterungen die genutzt werden können.
 
-              Werdet kreativ und berichtet über eure Funde, denn sogar wir haben noch nicht alle Möglichkeiten entdeckt.
+              Werde kreativ und berichte über deine Funde, denn sogar wir haben noch nicht alle Möglichkeiten entdeckt.
              "
 
 preview:
@@ -114,11 +114,15 @@ thread:
   - image_path: /assets/images/docs/zigzagmeander_grumpycat.jpg
     alt: "Katze mit einem Zick-Zack-Mäandermuster gestickt mit mehrfarbigem Garn"
     title: "Garnfarbenverwaltung"
-    excerpt: 'Ink/Stitch hat eine Sektion "[Garnfarben Verwaltung](/de/docs/thread-color/)" mit verschiedenen Funktionen
-              * Über 60 Farbpaletten verschiedener Hersteller
+    excerpt: 'In der "[Garnfarben Verwaltung](/de/docs/thread-color/)" kannst du bspw. die Farbpaletten an vorhandene Garne anpassen und auf ein Dokument anwenden
+
+              * Über 60 vordefinierte Farbpaletten verschiedener Hersteller
 
                 Farbnamen und Katalognummern können über den PDF-Export ausgegeben werden
+
               * Werkzeuge zur einfachen Erstellung eigener Farbpaletten
+
+              * Eine Farbpalette auf das geöffnete Dokumente anwenden
              '
 
 import_export:
@@ -136,14 +140,15 @@ import_export:
 
 resources:
   - image_path: /assets/images/galleries/fonts/magnolia_KOR/bicolor2.jpg
-    alt: "Multicolor satin font. Text: La vie est belle."
+    alt: "Mehrfarbige Satinsäulenschrift. Text: La vie est belle."
     title: "Lernmaterialien und die Open Source Community"
     excerpt: "Ink/Stitch ist ein Gemeinschaftsprojekt. Jeder kann mit hilfreichen Informationen und Tutorials beitragen.
 
 
-              Daher gibt es eine wachsende Anzahl von [Tutorials](/de/tutorials/) über die verschiedensten Aspekte auf der Ink/Stitch-Webseite.
-              Lerne über bestimmte Nutzungsweisen bestimmter Sticharten oder Sticktechniken. Lerne wie ein Stickdesign optimiert werden kann oder
-              wie Inkscape Features für die Stickerei eingesetzt werden können.
+              In den [Tutorials](/de/tutorials/) findest du vielfältige Anwenderhilfen und zusammenhängende Workflow-Beschreibungen,
+              die über das reine Benutzerhandbuch hinausgehen.
+              Es stehen Beispieldateien und tiefergehende Informationen über Sticharten oder Sticktechniken zur Verfügung.
+              Lerne wie ein Stickdesign optimiert werden kann oder wie Inkscape Features für die Stickerei eingesetzt werden können.
 
 
               Die [Community](/de/faq/) ist immer bereit bei Problemen Hilfestellungen zu geben, egal ob du Anfänger oder bereits ein erfahrener Nutzer bist.
