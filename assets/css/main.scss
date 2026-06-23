@@ -223,6 +223,10 @@ table.inline-table {
    font-family: monospace !important;
 }
 
+table p {
+  font-size: inherit !important;
+}
+
 /* Table of Contents */
   .toc .nav__title {
     background: #808080;

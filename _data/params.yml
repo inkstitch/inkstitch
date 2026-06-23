@@ -1,0 +1,345 @@
+en:
+  # Param table headline
+  - headline:
+    - 'Settings'
+    - 'Description'
+  # Running stitch options
+  - name: satin_column
+    title: Running stitch along paths
+    image: 
+      url: 
+      alt: 
+      title: 
+    description: Must be selected to use these settings.
+    applies-to:
+      - 'running-stitch'
+  - name: stroke_method
+    title: Method
+    description: Determines which stitch type to use.
+    add-descr:
+      - stitch-type: 'running-stitch'
+        info: "Select `Running stitch / Bean stitch`"
+    applies-to:
+      - 'running-stitch'
+  - name: repeats
+    title: Repeats
+    description: |
+      Defines how many times to stitch  along the path
+      ◦ Default: 1 (traveling once from the start to the end of the path)
+      ◦ Odd number: stitches will end at the end of the path
+      ◦ Even number: stitching will return to the start of the path
+    applies-to:
+      - 'running-stitch'
+  - name: bean_stitch_repeats
+    title: Bean stitch number of repeats
+    description: |
+      Determines the number of times to repeat each stitch.
+      ◦ A value of `0` does not repeat the stitch (normal stitch)
+      ◦ A value of `1` repeats each stitch three times (forward, back, forward).
+      ◦ A value of `2` repeats the stitch six times.
+      ◦ By entering multiple numbers, it is possible to define a custom repeat pattern. For instance `0 1` will create alternating single and triple stitches (`≡-≡-≡`).
+    applies-to:
+      - 'running-stitch'
+  - name: running_stitch_length_mm
+    title: Running stitch length
+    description: |
+      Determines the length of stitches. By entering multiple values, it is possible to define a custom stitch length pattern.
+      For instance  `2 4`  will create stitches of length alternatively 2 and 4 mm.
+    applies-to:
+      - 'running-stitch'
+  - name: running_stitch_tolerance_mm
+    title: Running stitch tolerance
+    description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
+    applies-to:
+      - 'running-stitch'
+  # Random options
+  - name: enable_random_stitch_length
+    title: Randomize stitch length
+    description: Allows for randomize stitch length.
+    applies-to:
+      - 'running-stitch'
+  - name: random_stitch_length_jitter_percent
+    title: Random stitch length jitter
+    description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
+    applies-to:
+      - 'running-stitch'
+  - name: random_seed
+    title: Random seed
+    description: Rolling the dice or setting a new value will change the random stitches
+    applies-to:
+      - 'running-stitch'
+  # All stitch types
+  - name: min_stitch_length_mm
+    title: Minimum stitch length
+    description: Overwrites the global minimum stitch length setting. Stitches small than this value will be removed.
+    applies-to:
+      - 'running-stitch'
+  - name: min_jump_stitch_length_mm
+    title: Minimum jump stitch length
+    description: Overwrites the global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
+    applies-to:
+      - 'running-stitch'
+  - name: ties
+    title: Allow lock stitches
+    description: Enables lock stitches in only desired positions
+    applies-to:
+      - 'running-stitch'
+  - name: force_lock_stitches
+    title: Force lock stitches
+    description: If checked, lock stitches are sewn after this element,regardless of the minimum jump stitch length value.
+    applies-to:
+      - 'running-stitch'
+  - name: lock_start
+    title: Tack stitch
+    description: |
+      Determines the type of tack stitch.
+      Tack stitches are small stitches at the beginning of a stitch. They help to secure the beginning of the thread. [Read more](/docs/stitches/lock-stitches/)
+    applies-to:
+      - 'running-stitch'
+  - name: lock_end
+    title: Lock stitch
+    description: |
+      Determines the type of lock stitch.
+      Lock stitches are small stitches at the end of stitch. They help to secure the end of the thread. [Read more](/docs/stitches/lock-stitches/)
+    applies-to:
+      - 'running-stitch'
+  - name: trim_after
+    title: Trim After
+    description: Determines if the thread is trimmed after sewing this object.
+    applies-to:
+      - 'running-stitch'
+  - name: stop_after
+    title: Stop After
+    description: Determines if the machine is stopped after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+    applies-to:
+      - 'running-stitch'
+
+
+
+de:
+  # Param table headline
+  - headline:
+    - 'Einstellung'
+    - 'Beschreibung'
+  # Running stitch options
+  - name: satin_column
+    title: Geradstich
+    description: Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+    applies-to:
+      - 'running-stitch'
+  - name: stroke_method
+    title: Methode
+    description: Bestimmt welche Stichart verwendet wird.
+    add-descr:
+      - stitch-type: 'running-stitch'
+        info: "`Geradstich / Mehrfachgeradstich` auswählen"
+    applies-to:
+      - 'running-stitch'
+  - name: repeats
+    title: Wiederholungen
+    description: |
+      ◦ Legt fest, wie oft der Pfad durchlaufen werden soll
+      ◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)
+      ◦ Ungerade Zahl: Stiche enden am Ende des Pfades
+      ◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
+    applies-to:
+      - 'running-stitch'
+  - name: bean_stitch_repeats
+    title: Mehrfachgeradstich Wiederholungen
+    description: |
+      ◦ Jeden Stich vervielfachen.
+      ◦ Ein Wert von `0` wiederholt den Stich nicht, er wird einal gestickt.
+      ◦ Ein Wert von `1` verdreifaht den Stich (vorwärts, rückwärts, vorwärts).
+      ◦ Ein Wert von `2` führt jeden Stich fünffach aus, usw.<br/>◦ Die Eingabe mehrerer durch ein Leerzeichen getrennte Werte erzeugt ein Muster (z.B ergibt der Wert `1 0` einen Wechsel von einfachen Geradstichen und Dreifachstichen: `≡-≡-≡`)
+    applies-to:
+      - 'running-stitch'
+  - name: running_stitch_length_mm
+    title: Stichlänge
+    description: |
+      Länge der Stiche. Durch Eingabe mehrerer Werte kann ein Stichlängenmuster erstellt werden.
+      Beispielsweise werden bei einem Wert von `2 4` eine Abfolge von Stichen erstellt, die abwechselnd eine Länge von 2mm und 4mm haben.
+    add-descr:
+      - stitch-type: 
+        info: 
+    applies-to:
+      - 'running-stitch'
+  - name: running_stitch_tolerance_mm
+    title: Geradstich Toleranz
+    description: Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
+    applies-to:
+      - 'running-stitch'
+  # Random options
+  - name: enable_random_stitch_length
+    title: Zufällige Stichlänge
+    description: Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
+    applies-to:
+      - 'running-stitch'
+  - name: random_stitch_length_jitter_percent
+    title: Zufallsabweichung von der Stichlänge
+    description: Maximale randomisierte Abweichung der Stichabstände in Prozent. Zufällige Stichlänge randomisieren muss aktiviert sein.
+    applies-to:
+      - 'running-stitch'
+  - name: random_seed
+    title: Zuffalszahl
+    description: Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
+    applies-to:
+      - 'running-stitch'
+  # All stitch types
+  - name: min_stitch_length_mm
+    title: Minimale Stichlänge
+    description: Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+    applies-to:
+      - 'running-stitch'
+  - name: min_jump_stitch_length_mm
+    title: Minimale Länge für Sprungstiche
+    description: Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+    applies-to:
+      - 'running-stitch'
+  - name: ties
+    title: Vernähen erlauben
+    description: Vernäht bei Bedarf an den ausgewählten Positionen
+    applies-to:
+      - 'running-stitch'
+  - name: force_lock_stitches
+    title: Vernähen erzwingen
+    description: Vernäht den Faden nach diesem Element, unabhängig vom Wert für die Minimale Länge für Sprungstiche
+    applies-to:
+      - 'running-stitch'
+  - name: lock_start
+    title: Anstecher
+    description: |
+      Bestimmt die Art des Anstehers.
+      Ansteche sind kleine Stiche zu Beginn des Stickpfades. Sie sichern so den Faden. [Mehr lesen](/de/docs/stitches/lock-stitches/)
+    applies-to:
+      - 'running-stitch'
+  - name: lock_end
+    title: Verstecher
+    description: |
+      Bestimmt die Art des Verstechers.
+      Verstecher sind kleine Stiche am Ende des Stickpfades. Sie sichern so den Faden. [Mehr lesen](/de/docs/stitches/lock-stitches/)
+    applies-to:
+      - 'running-stitch'
+  - name: trim_after
+    title: Fadenschnitt
+    description: Schneidet den Faden nachdem dieses Objekt genäht wurde
+    applies-to:
+      - 'running-stitch'
+  - name: stop_after
+    title: Stopp
+    description: Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+    applies-to:
+      - 'running-stitch'
+
+
+
+fr:
+  # Param table headline
+  - headline:
+    - 'Paramètres'
+    - 'Description'
+  # Running stitch options
+  - name: satin_column
+    title: Points droits le long des chemins
+    description: Doit être activé pour que ces paramètres prennent effet
+    applies-to:
+       - 'running-stitch'
+  - name: stroke_method
+    title: Méthode
+    description: Determines which stitch type to use.
+    add-descr:
+      - stitch-type: 'running-stitch'
+        info: "Choisir `Point droit / Point multiple`"
+    applies-to:
+      - 'running-stitch'
+  - name: repeats
+    title: Répétitions
+    description: |
+      Définir combien de fois aller et revenir le long du chemin
+      ◦ Par défaut: 1 (aller une fois du début à la fin du chemin)
+      ◦ Nombre impair: les points se termineront à la fin du chemin
+      ◦ Nombre pair: la broderie va revenir au début du chemin
+    applies-to:
+      - 'running-stitch'
+  - name: bean_stitch_repeats
+    title: Nombre de répétitions du point triple
+    description: |
+      ◦ Repasse sur chaque point le nombre de fois indiqué.
+      ◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).
+      ◦ Une valeur de 2 permettra de quintupler chaque point, etc..
+      ◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace (ces valeurs seront utilisées alternativement par les points)
+    applies-to:
+      - 'running-stitch'
+  - name: running_stitch_length_mm
+    title: Longueur du point droit
+    description: |
+      Détermine la longueur des points. En saisissant plusieurs valeurs, il est possible de définir un motif répétitif personnalisé.
+      Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
+    add-descr:
+      - stitch-type: 
+        info: 
+    applies-to:
+      - 'running-stitch'
+  - name: running_stitch_tolerance_mm
+    title: Tolerance du point droit
+    description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
+    applies-to:
+      - 'running-stitch'
+  - name: enable_random_stitch_length
+    title: Rendre aléatoire
+    description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement.
+    applies-to:
+      - 'running-stitch'
+  - name: random_stitch_length_jitter_percent
+    title: Mouvement aléatoire de la longueur du point
+    description: Pourcentage maximum de variation de la longueur du point (appliqué si la longueur est rendue aléatoire).
+    applies-to:
+      - 'running-stitch'
+  - name: random_seed
+    title: Graine Aléatoire
+    description: Rouler le dé ou entrer une valeur modifie les points aléatoires
+    applies-to:
+      - 'running-stitch'
+  # All stitch types
+  - name: min_stitch_length_mm
+    title: Longueur minimum de point
+    description: Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
+    applies-to:
+      - 'running-stitch'
+  - name: min_jump_stitch_length_mm
+    title: Longueur minimum de saut
+    description: Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
+    applies-to:
+      - 'running-stitch'
+  - name: ties
+    title: Autoriser des points d'arrêts
+    description: Permet l'ajout d'un point d'arrêt à la ou les positions choisies si la longueur minimum de saut (locale ou à défaut globale au fichier) l'impose.
+    applies-to:
+      - 'running-stitch'
+  - name: force_lock_stitches
+    title: Forcer des points d'arrêts
+    description: Force un point d'arrêt après l'objet indépendament de la valeur de "longueur minimum de saut".
+    applies-to:
+      - 'running-stitch'
+  - name: lock_start
+    title: Point d'arrêt initial
+    description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
+    applies-to:
+      - 'running-stitch'
+  - name: lock_end
+    title: Point d'arrêt final
+    description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
+    applies-to:
+      - 'running-stitch'
+  - name: trim_after
+    title: Couper après
+    description: Couper le fil après avoir brodé cet objet
+    applies-to:
+      - 'running-stitch'
+  - name: stop_after
+    title: Arrêter après
+    description: Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
+    applies-to:
+      - 'running-stitch'
+
+
+

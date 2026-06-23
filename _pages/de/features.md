@@ -157,9 +157,9 @@ resources:
               Und natürlich bist auch du herzlich eingeladen, dich [einzubringen](/developers/introduction/) und zu sehen, was getan werden kann, um Ink/Stitch voranzubringen.
              "
 ---
-## Noticeable Ink/Stitch Features
+## Ink/Stitch Features
 
-Ink/Stitch: digitize machine embroidery designs using Inkscape (SVG)
+Ink/Stitch: digitalisiere Stickmotive mit Inkscape (SVG)
 {: .notice--info }
 
 {% include feature_row id="accessibility" type="left" %}

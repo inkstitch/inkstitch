@@ -1,0 +1,25 @@
+{% assign stitch_type = include.stitch_type %}
+{%- assign params = site.data.params[page.lang] | where_exp:"param", "param.applies-to contains stitch_type" -%}
+
+<table class="params-table">
+  <thead>
+    <tr>
+      <th>{{ site.data.params[page.lang][0]['headline'][0] }}</th>
+      <th>&nbsp;</th>
+      <th>{{ site.data.params[page.lang][0]['headline'][1] }}</th>
+    </tr>
+  </thead>
+  <tbody>
+
+{% for param in params %}
+
+    <tr>
+      <td>{{ param.title }}</td>
+      <td><img src="{{ param.image.url }}" alt="{{ param.image.alt }}" title="{{ param.image.title }}" /></td>
+      <td>{{ param.description | newline_to_br | markdownify }} {{ add_info[0].info }}</td>
+    </tr>
+
+{% endfor %}
+
+  </tbody>
+</table>
