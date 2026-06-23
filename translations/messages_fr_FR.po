@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-06-21 04:25+0000\n"
-"PO-Revision-Date: 2026-06-21 04:25\n"
+"PO-Revision-Date: 2026-06-23 03:47\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -298,7 +298,7 @@ msgstr "Cette fonte est une version modifiée de Egyptian pour permettre une plu
 #. description of font in fonts/ellenika
 #: inkstitch-fonts-metadata.py:106
 msgid "Clara Bold Greek subset with punctuation and symbol support."
-msgstr ""
+msgstr "Caractères grecs et ponctuation de Clara Bold."
 
 #. description of font in fonts/eloquent
 #: inkstitch-fonts-metadata.py:108
@@ -1756,11 +1756,11 @@ msgstr "L’angle augmente dans un sens anti-horaire.  0 est horizontal.  Les an
 
 #: lib/elements/fill_stitch.py:315
 msgid "Guide copy angle"
-msgstr ""
+msgstr "Angle de décalage de la ligne guide"
 
 #: lib/elements/fill_stitch.py:316
 msgid "Angle for guide line shifting. Changing the angle may have a huge impact on the actual spacing between the rows. Ensure the guide line is large enough to fill the area when shifted into the given angle."
-msgstr ""
+msgstr "Angle de décalage de la ligne guide. Modifier cet angle peut avoir un impact considérable sur l'espacement réel entre les rangées. Assurez-vous que la ligne guide est suffisamment longue pour couvrir toute la zone une fois décalée selon l'angle indiqué."
 
 #: lib/elements/fill_stitch.py:334 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
@@ -8640,11 +8640,11 @@ msgstr "Enregistrez le dessin au format QCC à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_SEW.inx:3
 msgid "SEW file output"
-msgstr ""
+msgstr "Sortie en fichier SEW"
 
 #: inx/inkstitch_output_SEW.inx:9
 msgid "Save design in SEW format using Ink/Stitch"
-msgstr ""
+msgstr "Enregistrez le dessin au format SEW à l'aide d'Ink/Stitch"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
@@ -9518,7 +9518,7 @@ msgstr ".XXX : Format de broderie Singer"
 
 #: inx/inkstitch_zip.inx:28
 msgid ".SEW: Janome Embroidery Format"
-msgstr ""
+msgstr ".SEW: Format de broderie Janome"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".U01: Barudan Embroidery Format"
