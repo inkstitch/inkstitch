@@ -1,0 +1,10 @@
+{% assign cat_params = include.params %}
+{% assign current_stitch_type = include.stitch_type %}
+
+{% for param_multilingual in cat_params %}
+  {%- assign param = param_multilingual[page.lang] -%}
+  {%- assign add_info = param.add-descr | where: "stitch-type", current_stitch_type -%}
+  <div>{{ param.title | newline_to_br | markdownify }}</div>
+  <div><img src="{{ param.image.url }}" alt="{{ param.image.alt }}" title="{{ param.image.title }}" />&nbsp;</div>
+  <div>{{ param.description | newline_to_br | markdownify }} {{ add_info[0].info | newline_to_br | markdownify }}</div>
+{% endfor %}

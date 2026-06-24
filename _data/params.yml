@@ -1,345 +1,762 @@
-en:
-  # Param table headline
-  - headline:
-    - 'Settings'
-    - 'Description'
-  # Running stitch options
+categories:
+  - id: general
+    en: General Settings
+    de: Allgemeine Einstellungen
+    fr: Paramètres généraux
+  - id: repeats
+    en: Repeats
+    de: Widerholungen
+    fr: Répétitions
+  - id: length_position
+    en: Stitch length and placement
+    de: Stichlänge und Position
+    fr: Longueur et emplacement des points
+    subs:
+      - id: pattern
+        en: Pattern
+        de: Muster
+        fr: Motif
+      - id: random
+        en: Randomizing
+        de: Randomisierung
+        fr: Randomisation
+      - id: short_stitches
+        en: Short stitches
+        de: Kurzstiche
+        fr: Points Courts
+      - id: split_stitches
+        en: Split stitches
+        de: Zwischenstiche
+        fr: Découpage des points
+  - id: density
+    en: Density
+    de: Dichte
+    fr: Densité
+  - id: direction
+    en: Stitch direction
+    de: Stichrichtung
+    fr: Stitch direction
+  - id: lock
+    en: Lock stitches
+    de: Vernähstiche
+    fr: Points d’arrêt
+  - id: commands
+    en: Commands
+    de: Befehle
+    fr: Commandes
+
+
+params:
   - name: satin_column
-    title: Running stitch along paths
-    image: 
-      url: 
-      alt: 
-      title: 
-    description: Must be selected to use these settings.
+    category: general
     applies-to:
-      - 'running-stitch'
+      - running-stitch
+      - ripple-stitch
+    en:
+      title: Running stitch along paths
+      description: Must be selected to use these settings.
+    de:
+      title: Geradstich
+      description: Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+    fr:
+      title: Points droits le long des chemins
+      description: Doit être activé pour que ces paramètres prennent effet
+  # Geradstich
   - name: stroke_method
-    title: Method
-    description: Determines which stitch type to use.
-    add-descr:
-      - stitch-type: 'running-stitch'
-        info: "Select `Running stitch / Bean stitch`"
+    category: general
     applies-to:
-      - 'running-stitch'
-  - name: repeats
-    title: Repeats
-    description: |
-      Defines how many times to stitch  along the path
-      ◦ Default: 1 (traveling once from the start to the end of the path)
-      ◦ Odd number: stitches will end at the end of the path
-      ◦ Even number: stitching will return to the start of the path
+      - running-stitch
+      - ripple-stitch
+    en:
+      title: Method
+      description: Determines which stitch type to use.
+      add-descr:
+        - stitch-type: running-stitch
+          info: Select `Running stitch / Bean stitch`
+        - stitch-type: ripple-stitch
+          info: Select `Ripple stitch`
+    de:
+      title: Methode
+      description: Bestimmt welche Stichart verwendet wird.
+      add-descr:
+        - stitch-type: running-stitch
+          info: "`Geradstich / Mehrfachgeradstich` auswählen"
+        - stitch-type: ripple-stitch
+          info: "`Ripple-Stich` auswählen"
+    fr:
+      title: Méthode
+      description: Determines which stitch type to use.
+      add-descr:
+        - stitch-type: running-stitch
+          info: Choisir `Point droit / Point multiple`
+        - stitch-type: ripple-stitch
+          info: Choisir `Broderie Ondulée`
+  - name: manual_pattern_placement
+    category: pattern
     applies-to:
-      - 'running-stitch'
-  - name: bean_stitch_repeats
-    title: Bean stitch number of repeats
-    description: |
-      Determines the number of times to repeat each stitch.
-      ◦ A value of `0` does not repeat the stitch (normal stitch)
-      ◦ A value of `1` repeats each stitch three times (forward, back, forward).
-      ◦ A value of `2` repeats the stitch six times.
-      ◦ By entering multiple numbers, it is possible to define a custom repeat pattern. For instance `0 1` will create alternating single and triple stitches (`≡-≡-≡`).
-    applies-to:
-      - 'running-stitch'
+      - ripple-stitch
+    en:
+      title: Manual stitch placement
+      description: If selected, extra stitches will not be added to the original ripple pattern and the running stich length value will be ignored.
+    de:
+      title: Manuelle Stichpositionierung
+      description: Es werden keine zusätzlichen Stiche zum Originalmuster hinzugefügt. Der Wert für die Stichlänge wird nicht beachtet.
+    fr:
+      title: Placement manuel de points
+      description: Aucun point ne sera ajouté au motif de départ, chaque motif sera traité comme un point manuel et la longueur du point droit sera ignoré.
   - name: running_stitch_length_mm
-    title: Running stitch length
-    description: |
-      Determines the length of stitches. By entering multiple values, it is possible to define a custom stitch length pattern.
-      For instance  `2 4`  will create stitches of length alternatively 2 and 4 mm.
+    category: length_position
     applies-to:
-      - 'running-stitch'
+      - running-stitch
+    en:
+      title: Running stitch length
+      description: |
+        Determines the length of stitches. By entering multiple values, it is possible to define a custom stitch length pattern.
+        For instance  `2 4`  will create stitches of length alternatively 2 and 4 mm.
+    de:
+      title: Stichlänge
+      description: |
+        Länge der Stiche. Durch Eingabe mehrerer Werte kann ein Stichlängenmuster erstellt werden.
+        Beispielsweise werden bei einem Wert von `2 4` eine Abfolge von Stichen erstellt, die abwechselnd eine Länge von 2mm und 4mm haben.
+    fr:
+      title: Longueur du point droit
+      description: |
+        Détermine la longueur des points. En saisissant plusieurs valeurs, il est possible de définir un motif répétitif personnalisé.
+        Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
   - name: running_stitch_tolerance_mm
-    title: Running stitch tolerance
-    description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
+    category: length_position
     applies-to:
-      - 'running-stitch'
+      - running-stitch
+      - ripple-stitch
+    en:
+      title: Running stitch tolerance
+      description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
+    de:
+      title: Geradstich Toleranz
+      description: Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
+    fr:
+      title: Tolerance du point droit
+      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
+  # Ripple
+  - name: line_count
+    category: density
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Number of lines
+      description: Determines the number of ripples. Increasing the number of lines will increase the density of the lines.
+      image: 
+        url: /assets/images/docs/ripple_only_lines.svg
+        alt: Line count
+        title: Line count
+    de:
+      title: Anzahl der Linien
+      description: "Anzahl der Wiederholungen der Ripple-Form. Voreinstellung: 10."
+      image: 
+        url: /assets/images/docs/ripple_only_lines.svg
+        alt: Anzahl der Linien
+        title: Anzahl der Linien
+    fr:
+      title: Nombre de lignes
+      description: Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
+      image: 
+        url: /assets/images/docs/ripple_only_lines.svg
+        alt: Nombre de lignes
+        title: Nombre de lignes
+  - name: min_line_dist_mm
+    category: density
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Minimum line distance
+      description: Sets the minimum distance between each line. Overrides the number of lines setting.
+    de:
+      title: Minimaler Linienabstand
+      description: Diese Einstellung überschreibt den Wert "Anzahl der Linien"
+    fr:
+      title: Distance minimum entre les lignes
+      description: Est prioritaire sur le nombre de lignes
+  - name: satin_guide_pattern_position
+    category: pattern
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Pattern position
+      description: |
+        Pattern position for satin guided ripples:
+        * Line count / Minimum line distance (default): uses either the value for line count or minium line distance (if given)
+        * Render at rungs renders a pattern at each rung
+        * Adaptive + Minimum line distance: adapts the pattern distance according to it's size
+    de:
+      title: Musterposition
+      description: |
+        Musterposition für Satinsäulen-geführte Ripplestiche
+        * Anzahl der Linien / Minimaler Linienabstand (Standard): nutzt entweder den Wert für die Linienanzahl oder - wenn angegeben - den minimalen Linienabstand
+        * Muster an Richtungsvektoren positionieren: positioniert ein Muster an jedem Richtungsvektor
+        * Adaptiv + minialer Linienabstand passt den Abstand der Muster an die jweilige Skalierung an
+    fr:
+      title: Position des ondulations
+      description: |
+        Position des ondulations lorsque guidées par un satin.
+        * Nombre de lignes / Distance entre les lignes (valeur par défaut): utilise soit la valeur du nombre de lignes ou la distance minimum entre les lignes si elle a été définie.
+        * Rendu aux traverses une ondulation à chaque traverse seulement
+        * Adaptatif et distance minimum entre les lignes adapte la distance entre les ondulations selon leur taille
+  - name: skip_start
+    category: pattern
+    applies-to:
+      - ripple-stitch
+    en:
+      title: |
+        Skip first lines
+        Skip last lines 
+      description: Set the number of lines to skip (do not embroider) at the and/or end of the run.
+      image: 
+        url: /assets/images/docs/ripple_only_skip.svg
+        alt: Ripples with skip values
+        title: Ripples with skip values
+    de:
+      title: |
+        Erste Linien überspringen
+        Letzte Linien überspringen
+      description: Die ersten / letzten Ripple-Wiederholungen werden übersprungen und die Gesamtanzahl der Wiederholungen verringert sich.
+      image: 
+        url: /assets/images/docs/ripple_only_skip.svg
+        alt: Ripple mit übersprungen Linien am Start / Ende
+        title: Ripple mit übersprungen Linien am Start / Ende
+    fr:
+      title: |
+        Sauter les premières lignes
+        Sauter les dernières lignes
+      image: 
+        url: /assets/images/docs/ripple_only_skip.svg
+        alt: Sauter
+        title: Sauter
+      description: Set the number of lines to skip (do not embroider) at the and/or end of the run.
+  - name: flip_copies
+    category: pattern
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Flip every second line
+      description: "Linear ripple only: whether to flip the pattern every second line or not"
+    de:
+      title: Jede zweite Reihe umkehren
+      description: "Nur für lineare Ripples: bestimmt ob jede zweite Reihe des Musters in umgekehrter oder immer in gleicher Richtung verläuft"
+    fr:
+      title: Inverser une ligne sur deux
+      description: "Seulement pour des ondulations linéaires: inverser les ondulations une fois sur deux ou pas."
+  - name: exponent
+    category: density
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Line distance exponent
+      image: 
+        url: /assets/images/docs/ripple_only_exponent.svg
+        alt: Exponent
+        title: Exponent
+      description: |
+        Doesn't apply to satin guided ripples
+        * Default 1: constant distance between lines
+        * Value > 1: the space between two consecutive replications increases
+        * Value < 1: the space between two consecutive replications decreases
+    de:
+      title: Linienabstand Exponent
+      image: 
+        url: /assets/images/docs/ripple_only_exponent.svg
+        alt: Exponent
+        title: Exponent
+      description: |
+        Gilt nicht für Satinsäulen-geführte Ripples
+        * Voreinstellung 1: der Abstand zwischen den Linien ist konstant
+        * Wert > 1: der Abstand zwischen den Linien erhöht sich sukzessiv
+        * Wert < 1: der Abstand zwischen den Linien erringert sich
+    fr:
+      title: Exposant de la distance entre les lignes
+      image: 
+        url: /assets/images/docs/ripple_only_exponent.svg
+        alt: Exposant
+        title: Exposant
+      description: |
+        Ne s'applique pas aux ondulations guidées par un satin
+        * La valeur par défaut de 1 espace les réplications de manière constante
+        * Avec une valeur supérieure à 1 l'espace entre deux réplications consécutives augmente au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation
+        * Avec une valeur inférieure à 1 l'espace entre deux réplications consécutives diminue au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation.
+  - name: flip_exponent
+    category: density
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Flip exponent
+      description: Exchange role of first and last line in the computation of line distance
+    de:
+      title: Exponent umkehren
+      description: Kehrt den Effekt des Exponent-Wertes um.
+    fr:
+      title: Inverser effet exposant
+      description: Échange le rôle de la première et de la dernière réplication pour le calcul de la distance entre les réplications
+  - name: reverse
+    category: direction
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Reverse
+      description: Flip start and end point and run the path in revese direction
+    de:
+      title: Umkehren
+      description: Start- und Endpunkt vertauschen. Läuft den Pfad in umgekehrte Richtung ab.
+    fr:
+      title: Changer le sens
+      description: Intervertit le début et la fin
+  - name: grid_size_mm
+    category: patten
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Grid size
+      description: If the size is strictly positive a grid effect is added. The grid size controls how far apart the new lines are.
+      image:
+        url: /assets/images/docs/ripple_only_grid.svg
+        alt: Grid
+        title: grid
+    de:
+      title: Größe des Gitters
+      description: Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
+      image:
+        url: /assets/images/docs/ripple_only_grid.svg
+        alt: 
+        title: 
+    fr:
+      title: Taille de la grille
+      description: Si une distance positive est spécifiée, les ondulations de la broderie sont complétées en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir n'a pas d'influence sur ce paramètre.
+      image:
+        url: /assets/images/docs/ripple_only_grid.svg
+        alt: 
+        title: 
+  - name: grid_first
+    category: pattern
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Stitch grid first
+      description: Reverse the stitch path, so that the grid is stitched first.
+    de:
+      title: Gitter zuerst sticken
+      description: Dreht den Stickpfad um, so dass da Gitter zuerst gestickt wird
+    fr:
+      title: Broder d'abord la grille
+      description: Brode en sens inverse de telle sorte que la grille est brodée en premier.
+  - name: scale_axis
+    category: pattern
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Scale axes
+      description: guided ripple only
+    de:
+      title: Skalieren
+      description: Nur für geführte Ripples
+    fr:
+      title: Mettre à l'echelle sur l'axe
+      description: seulement pour des ondulations guidées.
+  - name: scale_start
+    category: pattern
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Starting scale
+      description: |
+        Size of the first copy of the line in percent.
+        For guided ripple only
+    de:
+      title: Start-Skalierung
+      description: |
+        Skalierung der ersten Linie in Prozent.
+        Nur für geführte Ripples.
+    fr:
+      title: Démarrer à
+      description: |
+        Taille de la première ondulation en pourcentage.
+        Seulement pour des ondulations guidées
+  - name: scale_end
+    category: patten
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Ending scale
+      description: |
+        Size of the last copy of the line in percent.
+        For guided ripple only 
+    de:
+      title: End-Skalierung
+      description: |
+        Skalierung der letzten Linie in Prozent.
+        Nur für geführte Ripples.
+    fr:
+      title: Finir à
+      description: |
+        Taille de la dernière ondulation en pourcentage.
+        Seulement pour des ondulations guidées
+  - name: rotate_ripples
+    category: pattern
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Rotate
+      description: For guided ripple only
+    de:
+      title: Rotieren
+      description: Nur für geführte Ripples
+    fr:
+      title: Tourner
+      description: Seulement pour des ondulations guidées
+  - name: join_style
+    category: patten
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Join Style
+      description: "for non circular ripple, how the ripples are joined : Flat(top) or Point(bottom)"
+      image:
+        url: /assets/images/docs/flat_or_point.svg
+        alt: 
+        title: 
+    de:
+      title: Kantenstil
+      description: "Verbindungen zwischen den Linien: flach (oben) oder spitz (unten). Nur für offene Ripples."
+      image:
+        url: /assets/images/docs/flat_or_point.svg
+        alt: 
+        title: 
+    fr:
+      title: Style de Jointure
+      description: Pour des ondulations ouvertes,les réplications peuvent être jointes par un segment (en haut) ou en un seul point (en bas)
+      image:
+        url: /assets/images/docs/flat_or_point.svg
+        alt: 
+        title: 
+  # Satin column
+  - name: reverse_rails
+    category: direction
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Reverse rails
+      description: |
+        Enabling this may help if your satin renders very strangely. Options are:
+        * Automatic: detect and fix rails with opposing directions (default)
+        * Don't reverse , disable automatic detection
+        * Reverse first rail
+        * Reverse second rail
+        * Reverse both rails
+      image:
+        url: /assets/images/docs/satin-reverse-rung.png
+        alt: 
+        title: 
+      add-descr:
+        - stitch-type: ripple-stitch
+          info: Takes effect on a satin guide line.
+    de:
+      title: Konturlinien umkehren
+      description: |
+        Außenkonturen der Satin-Führungslinie umkehren. Optionen:
+        * Automatisch: gegenläufige Außenkonturen werden automatisch korrigiert (Standardeinstellung)
+        * Nicht umkehren, deaktiviert automatisches drehen
+        * Erste Konturlinie umkehren
+        * Zweite Konturlinie umkehren
+        * Beide Konturlinien umkehren
+      image:
+        url: /assets/images/docs/satin-reverse-rung.png
+        alt: 
+        title: 
+      add-descr:
+        - stitch-type: ripple-stitch
+          info: Nimmt Bezug auf Satin-Führungslinien.
+    fr:
+      title: Inverser la direction des rails
+      description: |
+        Ceci peut aider si le rendu de votre satin est étrange. Options:
+        * Automatique, valeur par défaut, cherche à détecter et corriger le cas des rails ayant des directions opposées.
+        * Ne pas inverser désactive la détection automatique
+        * Inverser la direction du premier rail
+        * Inverser la direction du second rail
+        * Inverser la direction des deux rails
+      image:
+        url: /assets/images/docs/satin-reverse-rung.png
+        alt: 
+        title: 
+      add-descr:
+        - stitch-type: ripple-stitch
+          info: Takes effect on a satin guide line.
+  - name: swap_rails
+    category: direction
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Swap rails
+      description: Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
+      add-descr:
+        - stitch-type: ripple-stitch
+          info: Takes effect on a satin guide line.
+    de:
+      title: Seiten umkehren
+      description: Kehrt die Seiten der Satinsäule um (links und rechts). Dies beeinflusst z.B. an welcher Seite der Faden startet und endet. Aber auch jede andere seitenbezogene Einstellung ist hiervon betroffen.
+      add-descr:
+        - stitch-type: ripple-stitch
+          info: Nimmt Bezug auf Satin-Führungslinien.
+    fr:
+      title: Échanger les rails
+      description: Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques
+      add-descr:
+        - stitch-type: ripple-stitch
+          info: Takes effect on a satin guide line.
+  # Fill
+  - name: staggers
+    category: length_position
+    applies-to:
+      - ripple-stitch
+    en:
+      title: Stagger rows this many times before repeating
+      image: 
+        url: 
+        alt: 
+        title: 
+      description: Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only.
+    de:
+      title: Stichversatz
+      image: 
+        url: 
+        alt: 
+        title: 
+      description: Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild.
+      add-descr:
+        - stitch-type: ripple-stitch
+          info: Nur für lineare Ripples.
+    fr:
+      title: Rendre aléatoire
+      image: 
+        url: 
+        alt: 
+        title: 
+      description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
+  # Wiederholungen
+  - name: repeats
+    category: repeats
+    applies-to:
+      - running-stitch
+      - ripple-stitch
+    en:
+      title: Repeats
+      description: |
+        Defines how many times to stitch  along the path
+        * Default: 1 (traveling once from the start to the end of the path)
+        * Odd number: stitches will end at the end of the path
+        * Even number: stitching will return to the start of the path
+    de:
+      title: Wiederholungen
+      description: |
+        * Legt fest, wie oft der Pfad durchlaufen werden soll
+        * Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)
+        * Ungerade Zahl: Stiche enden am Ende des Pfades
+        * Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
+    fr:
+      title: Répétitions
+      description: |
+        Définir combien de fois aller et revenir le long du chemin
+        * Par défaut: 1 (aller une fois du début à la fin du chemin)
+        * Nombre impair: les points se termineront à la fin du chemin
+        * Nombre pair: la broderie va revenir au début du chemin
+  - name: bean_stitch_repeats
+    category: repeats
+    applies-to:
+      - running-stitch
+      - ripple-stitch
+    en:
+      title: Bean stitch number of repeats
+      description: |
+        Determines the number of times to repeat each stitch.
+        * A value of `0` does not repeat the stitch (normal stitch)
+        * A value of `1` repeats each stitch three times (forward, back, forward).
+        * A value of `2` repeats the stitch six times.
+        * By entering multiple numbers, it is possible to define a custom repeat pattern. For instance `0 1` will create alternating single and triple stitches (`≡-≡-≡`).
+    de:
+      title: Mehrfachgeradstich Wiederholungen
+      description: |
+        * Jeden Stich vervielfachen.
+        * Ein Wert von `0` wiederholt den Stich nicht, er wird einal gestickt.
+        * Ein Wert von `1` verdreifaht den Stich (vorwärts, rückwärts, vorwärts).
+        * Ein Wert von `2` führt jeden Stich fünffach aus, usw.<br/>* Die Eingabe mehrerer durch ein Leerzeichen getrennte Werte erzeugt ein Muster (z.B ergibt der Wert `1 0` einen Wechsel von einfachen Geradstichen und Dreifachstichen: `≡-≡-≡`)
+    fr:
+      title: Nombre de répétitions du point triple
+      description: |
+        * Repasse sur chaque point le nombre de fois indiqué.
+        * Une valeur de 1 triplera chaque point (avant, arrière, avant).
+        * Une valeur de 2 permettra de quintupler chaque point, etc..
+        * Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace (ces valeurs seront utilisées alternativement par les points)
   # Random options
   - name: enable_random_stitch_length
-    title: Randomize stitch length
-    description: Allows for randomize stitch length.
+    category: random
     applies-to:
-      - 'running-stitch'
+      - running-stitch
+      - ripple-stitch
+    en:
+      title: Randomize stitch length
+      description: Allows for randomize stitch length.
+    de:
+      title: Zufällige Stichlänge
+      description: Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
+    fr:
+      title: Rendre aléatoire
+      description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement.
   - name: random_stitch_length_jitter_percent
-    title: Random stitch length jitter
-    description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
+    category: random
     applies-to:
-      - 'running-stitch'
+      - running-stitch
+      - ripple-stitch
+    en:
+      title: Random stitch length jitter
+      description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
+    de:
+      title: Zufallsabweichung von der Stichlänge
+      description: Maximale randomisierte Abweichung der Stichabstände in Prozent. Zufällige Stichlänge randomisieren muss aktiviert sein.
+    fr:
+      title: Mouvement aléatoire de la longueur du point
+      description: Pourcentage maximum de variation de la longueur du point (appliqué si la longueur est rendue aléatoire).
   - name: random_seed
-    title: Random seed
-    description: Rolling the dice or setting a new value will change the random stitches
+    category: random
     applies-to:
-      - 'running-stitch'
-  # All stitch types
+      - running-stitch
+    en:
+      title: Random seed
+      description: Rolling the dice or setting a new value will change the random stitches
+    de:
+      title: Zuffalszahl
+      description: Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
+    fr:
+      title: Graine Aléatoire
+      description: Rouler le dé ou entrer une valeur modifie les points aléatoires
+  # All elements
   - name: min_stitch_length_mm
-    title: Minimum stitch length
-    description: Overwrites the global minimum stitch length setting. Stitches small than this value will be removed.
+    category: length_position
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Minimum stitch length
+      description: Overwrites the global minimum stitch length setting. Stitches small than this value will be removed.
+    de:
+      title: Minimale Stichlänge
+      description: Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+    fr:
+      title: Longueur minimum de point
+      description: Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
   - name: min_jump_stitch_length_mm
-    title: Minimum jump stitch length
-    description: Overwrites the global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
+    category: lock
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Minimum jump stitch length
+      description: Overwrites the global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
+    de:
+      title: Minimale Länge für Sprungstiche
+      description: Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+    fr:
+      title: Longueur minimum de saut
+      description: Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
   - name: ties
-    title: Allow lock stitches
-    description: Enables lock stitches in only desired positions
+    category: lock
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Allow lock stitches
+      description: Enables lock stitches in only desired positions
+    de:
+      title: Vernähen erlauben
+      description: Vernäht bei Bedarf an den ausgewählten Positionen
+    fr:
+      title: Autoriser des points d'arrêts
+      description: Permet l'ajout d'un point d'arrêt à la ou les positions choisies si la longueur minimum de saut (locale ou à défaut globale au fichier) l'impose.
   - name: force_lock_stitches
-    title: Force lock stitches
-    description: If checked, lock stitches are sewn after this element,regardless of the minimum jump stitch length value.
+    category: lock
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Force lock stitches
+      description: If checked, lock stitches are sewn after this element,regardless of the minimum jump stitch length value.
+    de:
+      title: Vernähen erzwingen
+      description: Vernäht den Faden nach diesem Element, unabhängig vom Wert für die Minimale Länge für Sprungstiche
+    fr:
+      title: Forcer des points d'arrêts
+      description: Force un point d'arrêt après l'objet indépendament de la valeur de "longueur minimum de saut".
   - name: lock_start
-    title: Tack stitch
-    description: |
-      Determines the type of tack stitch.
-      Tack stitches are small stitches at the beginning of a stitch. They help to secure the beginning of the thread. [Read more](/docs/stitches/lock-stitches/)
+    category: lock
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Tack stitch
+      description: |
+        Determines the type of tack stitch.
+        Tack stitches are small stitches at the beginning of a stitch. They help to secure the beginning of the thread. [Read more](/docs/stitches/lock-stitches/)
+    de:
+      title: Anstecher
+      description: |
+        Bestimmt die Art des Anstehers.
+        Ansteche sind kleine Stiche zu Beginn des Stickpfades. Sie sichern so den Faden. [Mehr lesen](/de/docs/stitches/lock-stitches/)
+    fr:
+      title: Point d'arrêt initial
+      description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
   - name: lock_end
-    title: Lock stitch
-    description: |
-      Determines the type of lock stitch.
-      Lock stitches are small stitches at the end of stitch. They help to secure the end of the thread. [Read more](/docs/stitches/lock-stitches/)
+    category: lock
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Lock stitch
+      description: |
+        Determines the type of lock stitch.
+        Lock stitches are small stitches at the end of stitch. They help to secure the end of the thread. [Read more](/docs/stitches/lock-stitches/)
+    de:
+      title: Verstecher
+      description: |
+        Bestimmt die Art des Verstechers.
+        Verstecher sind kleine Stiche am Ende des Stickpfades. Sie sichern so den Faden. [Mehr lesen](/de/docs/stitches/lock-stitches/)
+    fr:
+      title: Point d'arrêt final
+      description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
   - name: trim_after
-    title: Trim After
-    description: Determines if the thread is trimmed after sewing this object.
+    category: commands
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Trim After
+      description: Determines if the thread is trimmed after sewing this object.
+    de:
+      title: Fadenschnitt
+      description: Schneidet den Faden nachdem dieses Objekt genäht wurde
+    fr:
+      title: Couper après
+      description: Couper le fil après avoir brodé cet objet
   - name: stop_after
-    title: Stop After
-    description: Determines if the machine is stopped after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+    category: commands
     applies-to:
-      - 'running-stitch'
+      - all-types
+    en:
+      title: Stop After
+      description: Determines if the machine is stopped after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
+    de:
+      title: Stopp
+      description: Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
+    fr:
+      title: Arrêter après
+      description: Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
 
 
 
-de:
-  # Param table headline
-  - headline:
-    - 'Einstellung'
-    - 'Beschreibung'
-  # Running stitch options
-  - name: satin_column
-    title: Geradstich
-    description: Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-    applies-to:
-      - 'running-stitch'
-  - name: stroke_method
-    title: Methode
-    description: Bestimmt welche Stichart verwendet wird.
-    add-descr:
-      - stitch-type: 'running-stitch'
-        info: "`Geradstich / Mehrfachgeradstich` auswählen"
-    applies-to:
-      - 'running-stitch'
-  - name: repeats
-    title: Wiederholungen
-    description: |
-      ◦ Legt fest, wie oft der Pfad durchlaufen werden soll
-      ◦ Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)
-      ◦ Ungerade Zahl: Stiche enden am Ende des Pfades
-      ◦ Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
-    applies-to:
-      - 'running-stitch'
-  - name: bean_stitch_repeats
-    title: Mehrfachgeradstich Wiederholungen
-    description: |
-      ◦ Jeden Stich vervielfachen.
-      ◦ Ein Wert von `0` wiederholt den Stich nicht, er wird einal gestickt.
-      ◦ Ein Wert von `1` verdreifaht den Stich (vorwärts, rückwärts, vorwärts).
-      ◦ Ein Wert von `2` führt jeden Stich fünffach aus, usw.<br/>◦ Die Eingabe mehrerer durch ein Leerzeichen getrennte Werte erzeugt ein Muster (z.B ergibt der Wert `1 0` einen Wechsel von einfachen Geradstichen und Dreifachstichen: `≡-≡-≡`)
-    applies-to:
-      - 'running-stitch'
-  - name: running_stitch_length_mm
-    title: Stichlänge
-    description: |
-      Länge der Stiche. Durch Eingabe mehrerer Werte kann ein Stichlängenmuster erstellt werden.
-      Beispielsweise werden bei einem Wert von `2 4` eine Abfolge von Stichen erstellt, die abwechselnd eine Länge von 2mm und 4mm haben.
-    add-descr:
-      - stitch-type: 
-        info: 
-    applies-to:
-      - 'running-stitch'
-  - name: running_stitch_tolerance_mm
-    title: Geradstich Toleranz
-    description: Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
-    applies-to:
-      - 'running-stitch'
-  # Random options
-  - name: enable_random_stitch_length
-    title: Zufällige Stichlänge
-    description: Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
-    applies-to:
-      - 'running-stitch'
-  - name: random_stitch_length_jitter_percent
-    title: Zufallsabweichung von der Stichlänge
-    description: Maximale randomisierte Abweichung der Stichabstände in Prozent. Zufällige Stichlänge randomisieren muss aktiviert sein.
-    applies-to:
-      - 'running-stitch'
-  - name: random_seed
-    title: Zuffalszahl
-    description: Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
-    applies-to:
-      - 'running-stitch'
-  # All stitch types
-  - name: min_stitch_length_mm
-    title: Minimale Stichlänge
-    description: Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
-    applies-to:
-      - 'running-stitch'
-  - name: min_jump_stitch_length_mm
-    title: Minimale Länge für Sprungstiche
-    description: Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
-    applies-to:
-      - 'running-stitch'
-  - name: ties
-    title: Vernähen erlauben
-    description: Vernäht bei Bedarf an den ausgewählten Positionen
-    applies-to:
-      - 'running-stitch'
-  - name: force_lock_stitches
-    title: Vernähen erzwingen
-    description: Vernäht den Faden nach diesem Element, unabhängig vom Wert für die Minimale Länge für Sprungstiche
-    applies-to:
-      - 'running-stitch'
-  - name: lock_start
-    title: Anstecher
-    description: |
-      Bestimmt die Art des Anstehers.
-      Ansteche sind kleine Stiche zu Beginn des Stickpfades. Sie sichern so den Faden. [Mehr lesen](/de/docs/stitches/lock-stitches/)
-    applies-to:
-      - 'running-stitch'
-  - name: lock_end
-    title: Verstecher
-    description: |
-      Bestimmt die Art des Verstechers.
-      Verstecher sind kleine Stiche am Ende des Stickpfades. Sie sichern so den Faden. [Mehr lesen](/de/docs/stitches/lock-stitches/)
-    applies-to:
-      - 'running-stitch'
-  - name: trim_after
-    title: Fadenschnitt
-    description: Schneidet den Faden nachdem dieses Objekt genäht wurde
-    applies-to:
-      - 'running-stitch'
-  - name: stop_after
-    title: Stopp
-    description: Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
-    applies-to:
-      - 'running-stitch'
 
 
 
-fr:
-  # Param table headline
-  - headline:
-    - 'Paramètres'
-    - 'Description'
-  # Running stitch options
-  - name: satin_column
-    title: Points droits le long des chemins
-    description: Doit être activé pour que ces paramètres prennent effet
-    applies-to:
-       - 'running-stitch'
-  - name: stroke_method
-    title: Méthode
-    description: Determines which stitch type to use.
-    add-descr:
-      - stitch-type: 'running-stitch'
-        info: "Choisir `Point droit / Point multiple`"
-    applies-to:
-      - 'running-stitch'
-  - name: repeats
-    title: Répétitions
-    description: |
-      Définir combien de fois aller et revenir le long du chemin
-      ◦ Par défaut: 1 (aller une fois du début à la fin du chemin)
-      ◦ Nombre impair: les points se termineront à la fin du chemin
-      ◦ Nombre pair: la broderie va revenir au début du chemin
-    applies-to:
-      - 'running-stitch'
-  - name: bean_stitch_repeats
-    title: Nombre de répétitions du point triple
-    description: |
-      ◦ Repasse sur chaque point le nombre de fois indiqué.
-      ◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).
-      ◦ Une valeur de 2 permettra de quintupler chaque point, etc..
-      ◦ Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace (ces valeurs seront utilisées alternativement par les points)
-    applies-to:
-      - 'running-stitch'
-  - name: running_stitch_length_mm
-    title: Longueur du point droit
-    description: |
-      Détermine la longueur des points. En saisissant plusieurs valeurs, il est possible de définir un motif répétitif personnalisé.
-      Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
-    add-descr:
-      - stitch-type: 
-        info: 
-    applies-to:
-      - 'running-stitch'
-  - name: running_stitch_tolerance_mm
-    title: Tolerance du point droit
-    description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
-    applies-to:
-      - 'running-stitch'
-  - name: enable_random_stitch_length
-    title: Rendre aléatoire
-    description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement.
-    applies-to:
-      - 'running-stitch'
-  - name: random_stitch_length_jitter_percent
-    title: Mouvement aléatoire de la longueur du point
-    description: Pourcentage maximum de variation de la longueur du point (appliqué si la longueur est rendue aléatoire).
-    applies-to:
-      - 'running-stitch'
-  - name: random_seed
-    title: Graine Aléatoire
-    description: Rouler le dé ou entrer une valeur modifie les points aléatoires
-    applies-to:
-      - 'running-stitch'
-  # All stitch types
-  - name: min_stitch_length_mm
-    title: Longueur minimum de point
-    description: Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
-    applies-to:
-      - 'running-stitch'
-  - name: min_jump_stitch_length_mm
-    title: Longueur minimum de saut
-    description: Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
-    applies-to:
-      - 'running-stitch'
-  - name: ties
-    title: Autoriser des points d'arrêts
-    description: Permet l'ajout d'un point d'arrêt à la ou les positions choisies si la longueur minimum de saut (locale ou à défaut globale au fichier) l'impose.
-    applies-to:
-      - 'running-stitch'
-  - name: force_lock_stitches
-    title: Forcer des points d'arrêts
-    description: Force un point d'arrêt après l'objet indépendament de la valeur de "longueur minimum de saut".
-    applies-to:
-      - 'running-stitch'
-  - name: lock_start
-    title: Point d'arrêt initial
-    description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
-    applies-to:
-      - 'running-stitch'
-  - name: lock_end
-    title: Point d'arrêt final
-    description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
-    applies-to:
-      - 'running-stitch'
-  - name: trim_after
-    title: Couper après
-    description: Couper le fil après avoir brodé cet objet
-    applies-to:
-      - 'running-stitch'
-  - name: stop_after
-    title: Arrêter après
-    description: Arrêter (pause machine) après avoir brodé cet objet. Avant l'arrêt, il y aura un saut vers la position d'arrêt si elle a été définie
-    applies-to:
-      - 'running-stitch'
+
+
+
 
 
 

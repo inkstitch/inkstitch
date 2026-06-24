@@ -20,14 +20,6 @@ Bean stitch is a repeated running stitch which creates a thicker line.
 
 [Learn more](/docs/stitches/running-stitch/){: .btn .btn--primary}
 
-### Manual Stitch
-
-Manual stitch creates stitches using each node of a path as a needle penetration point.
-
-{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
-
-[Learn more](/docs/stitches/manual-stitch/){: .btn .btn--primary}
-
 ### Ripple Stitch
 
 Ripple stitch creates a pattern of stitches in sprirals, rows, or grids.
@@ -43,6 +35,14 @@ Zigzag stitch creates running stitches that stitch back and forth. It works best
 {% include folder-galleries path="butterfly-fill-project/zigzag/" captions="1:Zig-zag with an angle;2: Zig-zag on a hexagonal meanderpath" %}
 
 [Learn more](/docs/stitches/zigzag-stitch/){: .btn .btn--primary}
+
+### Manual Stitch
+
+Manual stitch creates stitches using each node of a path as a needle penetration point.
+
+{% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
+
+[Learn more](/docs/stitches/manual-stitch/){: .btn .btn--primary}
 
 ## Satin
 

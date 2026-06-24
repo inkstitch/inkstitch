@@ -1,22 +1,35 @@
 {% assign stitch_type = include.stitch_type %}
-{%- assign params = site.data.params[page.lang] | where_exp:"param", "param.applies-to contains stitch_type" -%}
+{% comment %}
+I'd like to filter the params like this:
+site.data.params.params | where_exp:"param", "param.applies-to contains stitch_type or param.applies-to contains 'all-types'"
+But this will return an error. So we need to run them separately and combine. Hopefully it will not destroy the order. But usually all global params are at the bottom.
+{% endcomment %}
+{%- assign stitch_params = site.data.params.params | where_exp:"param", "param.applies-to contains stitch_type" -%}
+{%- assign global_params = site.data.params.params | where_exp:"param", "param.applies-to contains 'all-types'" -%}
+{%- assign params = stitch_params | concat: global_params -%}
+{% assign categories = site.data.params.categories %}
 
-<table class="params-table">
-  <thead>
-    <tr>
-      <th>{{ site.data.params[page.lang][0]['headline'][0] }}</th>
-      <th>&nbsp;</th>
-      <th>{{ site.data.params[page.lang][0]['headline'][1] }}</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for param in params %}
-    {%- assign add_info = param.add-descr | where_exp:"item", "item.stitch-type == stitch_type" -%}
-    <tr>
-      <td>{{ param.title }}</td>
-      <td><img src="{{ param.image.url }}" alt="{{ param.image.alt }}" title="{{ param.image.title }}" /></td>
-      <td>{{ param.description | newline_to_br | markdownify }} {{ add_info[0].info | newline_to_br | markdownify }}</td>
-    </tr>
-  {% endfor %}
-  </tbody>
-</table>
+<div class="params-container">
+{%- for category in categories %}
+  {%- assign cat_params = params | where: "category", category.id -%}
+  {%- assign headline_assigned = false -%}
+  {% if cat_params.size > 0 %}
+    {%- assign headline_assigned = true -%}
+<div class="cat main-cat">{{ category[page.lang] }}</div>
+{% include param_table.html stitch_type=stitch_type params=cat_params %}
+  {% endif %}
+  {% if category.subs.size > 0 %}
+    {% if headline_assigned == false %}
+<div class="cat main-cat">{{ category[page.lang] }}</div>
+    {% endif %}
+    {% for sub_cat in category.subs %}
+    {% assign cat_id = category.id %}
+      {%- assign cat_params = params | where: "category", sub_cat.id -%}
+      {% if cat_params.size > 0 %}
+<div class="cat sub-cat">{{ sub_cat[page.lang] }}</div>
+{% include param_table.html stitch_type=stitch_type params=cat_params %}
+      {%- endif -%}
+    {% endfor %}
+  {% endif %}
+{% endfor -%}
+</div>

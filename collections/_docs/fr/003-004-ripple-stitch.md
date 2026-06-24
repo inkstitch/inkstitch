@@ -17,6 +17,7 @@ Regardez cette video de présentation:
 Si le chemin initial est fermé, la forme sera remplie par une spirale (ondulations circulaires). S'il est ouvert, la broderie se fera en va et vient (ondulations linéaires)
 
 ## Création
+
 ### Ondulations circulaires 
 
 * Créer **un chemin fermé simple avec une couleur de contour et sans couleur de remplissage** (pas une combinaison de sous-chemins)
@@ -107,44 +108,7 @@ La broderie ondulée peut être limitée à une zone donnée en utilisant une d�
 
 {% include upcoming_release_params.html %}
 
-Paramètres||Description
----|---|---
-Points droits le long des chemins | ☑ |Doit être activé pour que ces paramètres prennent effet.
-Méthode || Choisir Broderie Ondulée
-Répétitions || Définir combien de fois le chemin final de broderie est exécuté en va et vient le long du parcours <br />◦ par défaut: 1 (aller une fois du début à la fin du chemin)<br />◦ Nombre impair: les points se termineront à la fin du chemin<br />◦ Nombre pair: la couture va revenir au début du chemin
-Nombre de répétitions du point triple || Activer [Mode point triple](/fr/docs/stitches/bean-stitch/)<br />◦ Repasse sur chaque point le nombre de fois indiqué.<br />◦ Une valeur de 1 triplera chaque point (avant, arrière, avant).<br />◦ Une valeur de 2 permettra de quintupler chaque point, etc..<br />
-Placement manuel de points || Aucun point ne sera ajouté au motif de départ, chaque motif sera traité comme un point manuel et la longueur du point droit sera ignoré.
-Longueur du point droit ||Détermine la longueur des points. En saisissant plusieurs valeurs, il est possible de définir un motif répétitif personnalisé. Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
-Tolérance du point droit ||Tous les points doivent rester au plus à cette distance du chemin. Une tolérance plus faible signifie que les points seront plus rapprochés. Une tolérance plus élevée signifie que les angles vifs peuvent être arrondis.
-Nombre de lignes|<img src="/assets/images/docs/ripple_only_lines.svg" alt="Nombre de lignes"/>|Choisir le nombre de réplications de l'ondulation dans la broderie. La valeur par défaut est 10.
-Distance minimum entre les lignes || Est prioritaire sur le nombre de lignes
-Position des ondulations |◦ Nombre de lignes / Distance entre les lignes (valeur par défaut): utilise soit la valeur du nombre de lignes ou la distance minimum entre les lignes si elle a été définie. <br>◦ Rendu aux traverses: une ondulation à chaque traverse seulement <br>◦ Adaptatif et distance minimum entre les lignes: adapte la distance entre les ondulations selon leur taille| Position des ondulations lorsque guidées par un satin.
-Rendre aléatoire ||Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
-Mouvement aléatoire de la longueur du point ||Pourcentage maximum de variation de la longueur du point appliqué si la longueur est rendue aléatoire.<br>Exemple: Pour une longueur de point standard de 4mm,un mouvement aléatoire de 50% va ajouter ou supprimer jusqu'à 2mm (50% de 4mm = 2mm). Cela signifie que la longueur de point résultant variera entre 2 et 6 mm.
-Décaler les lignes ce nombre de fois avant de répéter. || Longueur du cycle de décalage des lignes successives. Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières. La valeur par défaut (0) désactive le décalage. Ne concerne que les ondulations linéaires.
-◦Sauter les premières lignes <br /> ◦Sauter les dernières lignes |<img src="/assets/images/docs/ripple_only_skip.svg" alt="Sauter"/>| Permet de sauter (ne pas broder) ce nombre de réplications au début et/ou à la fin. Sans effet sur les ondulations circulaires.
-Inverser une ligne sur deux | ☑ or ▢|Seulement pour des ondulations linéaires: inverser les ondulations une fois sur deux ou pas.
-Exposant de la distance entre les lignes |<img src="/assets/images/docs/ripple_only_exponent.svg" alt="Exposant"/>|Ne s'applique pas aux ondulations guidées par un satin<br> ◦ La valeur par défaut de 1 espace les réplications de manière constante<br />◦ Avec une valeur supérieure à 1 l'espace entre deux réplications consécutives augmente au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation <br />◦ Avec une valeur inférieure à 1 l'espace entre deux réplications consécutives diminue au fur et à mesure qu'on s'éloigne du chemin qui définit l'ondulation.
-Inverser effet exposant |☑ ou ▢| Échange le rôle de la première et de la dernière réplication pour le calcul de la distance entre les réplications
-Changer le sens |☑ ou ▢| Change le sens du chemin final de broderie . N'a pas d'effet sur les autres paramètres.
-Inverser la direction des rails||Inverse les rails d'une ondulation satin. Par défaut détecte automatiquement, et corrige la direction d'un des rails.
-Échanger les rails |☑ |Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques
-Taille de la grille |<img src="/assets/images/docs/ripple_only_grid.svg" alt="Distance"/>| Si une distance positive est spécifiée, les ondulations de la broderie sont complétées en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir n'a pas d'influence sur ce paramètre.
-Broder d'abord la grille |Brode en sens inverse de telle sorte que la grille est brodée en premier.
-Mettre à l'echelle sur l'axe |XY ou X ou Y ou rien|seulement pour des ondulations guidées.
-Démarrer à | seulement pour des ondulations guidées|Taille de la première ondulation en pourcentage.
-Finir à | seulement pour des ondulations guidées |Taille de la dernière ondulation en pourcentage.
-Tourner | ☑ ou ▢| seulement pour des ondulations guidées
-Style de Jointure |<img src="/assets/images/docs/flat_or_point.svg" alt="Join Stile"/> |pour des ondulations ouvertes,les réplications peuvent être jointes par un segment (en haut) ou en un seul point (en bas)
-Longueur minimum de point ||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
-Longueur minimum de saut ||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
-Autoriser les points d'arrêts | ☑ ou ▢|Choix de l'ajout d'un point d'arrêt en début et en fin de broderie.
-Forcer les points d'arrêts | ☑ ou ▢| Force un point d'arrêt après l'objet indépendamment de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.
-Point d'arrêt initial ||Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
-Point d'arrêt final ||Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
-Couper après | ☑ ou ▢| Si coché, le fil est coupé après avoir brodé cet objet
-Arrêter après | ☑ ou ▢|Si coché, la machine fait une pause après avoir brodé cet objet. Si une position d'arrêt a été définie, la machine la rejoint avant de s'arrêter.
-{: .params-table }
+{% include params.html stitch_type='ripple-stitch'%}
 
 Il existe de nombreuses manières d'exploiter toutes les possibilitéss :
 
