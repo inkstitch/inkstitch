@@ -13,6 +13,7 @@ from lib.utils import prng
 
 from ..debug.debug import debug
 from ..stitch_plan import Stitch
+from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point as InkstitchPoint
 from ..utils.geometry import (ensure_geometry_collection,
                               ensure_multi_line_string, ensure_multi_point,
@@ -24,6 +25,7 @@ from .tatami_fill import (build_fill_stitch_graph, build_travel_graph,
                           collapse_sequential_outline_edges, find_stitch_path,
                           graph_make_valid, tatami_fill, travel)
 from .utils.connect_geometries import connect_offset_lines
+from .utils.stitches import filter_small_stitches
 
 
 def guided_fill(fill, shape, guideline, anchor_line, starting_point, ending_point):
@@ -60,6 +62,12 @@ def guided_fill(fill, shape, guideline, anchor_line, starting_point, ending_poin
         stitches = path_to_stitches(fill, shape, path, travel_graph, guided_graph)
 
         if any(fill.bean_stitch_repeats):
+            # remove small stitches before applying any bean stitches
+            # otherwise the back stitch may not end up at the correct position
+            metadata = fill.get_inkstitch_metadata()
+            min_stitch_length = fill.min_stitch_length or metadata.get('min_stitch_len_mm') * PIXELS_PER_MM
+            stitches = filter_small_stitches(stitches, min_stitch_length)
+
             # add bean stitches, but ignore travel stitches
             stitches = bean_stitch(stitches, fill.bean_stitch_repeats, ['travel', 'fill_row_start'])
         result.append(stitches)

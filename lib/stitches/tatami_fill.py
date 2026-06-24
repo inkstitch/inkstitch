@@ -908,7 +908,7 @@ def travel(shape, travel_graph, edge, running_stitch_length, running_stitch_tole
     stitches = [Stitch(point) for point in points]
 
     for stitch in stitches:
-        stitch.add_tag('tatami_fill_travel')
+        stitch.add_tag('travel')
 
     # The path's first stitch will start at the end of a row of stitches.  We
     # don't want to double that last stitch, so we'd like to skip it.
