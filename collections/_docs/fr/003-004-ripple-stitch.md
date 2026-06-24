@@ -106,14 +106,11 @@ La broderie ondulée peut être limitée à une zone donnée en utilisant une d�
 
 ## Paramétrage
 
+Ouvrir `Extensions > Ink/Stitch  > Paramétres` pour paramétrer selon vos besoins.
+
 {% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='ripple-stitch'%}
-
-Il existe de nombreuses manières d'exploiter toutes les possibilitéss :
-
-![Ondulations diverses](/assets/images/docs/fr/rippleways_fr.svg)
-[Download](/assets/images/docs/en/rippleways_fr.svg){: download="rippleways.svg" }
 
 ## Exemples de fichiers qui utilisent la broderie ondulée 
 

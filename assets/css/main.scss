@@ -52,23 +52,25 @@
 }
 
 html:not([lang="ru"]) body {
-    font-family         : 'Barlow', sans-serif;
-    
+    font-family         : 'Barlow', sans-serif !important;
+    h2 {
+        font-family: 'Barlow', sans-serif !important;
+    }
     tt, code, kbd, samp, pre, ul, ul li a, .masthead__inner-wrap,
     .btn {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', sans-serif !important;
     }
     a[lang="ru"] {
-      font-family: 'FiraSans', sans-serif;
+      font-family: 'FiraSans', sans-serif !important;
     }
 }
 
 html[lang="ru"] body{
-    font-family         : 'FiraSans', sans-serif;
+    font-family         : 'FiraSans', sans-serif !important;
 
     tt, code, kbd, samp, pre, ul, ul li a, .masthead__inner-wrap,
     .btn {
-      font-family: 'FiraSans Condensed', sans-serif;
+      font-family: 'FiraSans Condensed', sans-serif !important;
     }
 }
 
@@ -142,7 +144,6 @@ $text-color: #000;
 .page__content h2 {
   border-bottom: 3px solid #ccc;
   background: rgb(242, 243, 243);
-  border-radius: 10px 10px 0 0;
   padding: 10px;
 }
 

@@ -28,10 +28,14 @@ categories:
         en: Split stitches
         de: Zwischenstiche
         fr: Découpage des points
-  - id: density
-    en: Density
-    de: Dichte
-    fr: Densité
+      - id: compensation
+        en: Pull compensation
+        de: Verzugsausgleich
+        fr: Compensation d’étirement
+      - id: density
+        en: Density
+        de: Dichte
+        fr: Densité
   - id: direction
     en: Stitch direction
     de: Stichrichtung
@@ -52,6 +56,8 @@ params:
     applies-to:
       - running-stitch
       - ripple-stitch
+      - zigzag-stitch
+      - manual-stitch
     en:
       title: Running stitch along paths
       description: Must be selected to use these settings.
@@ -67,6 +73,8 @@ params:
     applies-to:
       - running-stitch
       - ripple-stitch
+      - zigzag-stitch
+      - manual-stitch
     en:
       title: Method
       description: Determines which stitch type to use.
@@ -75,6 +83,10 @@ params:
           info: Select `Running stitch / Bean stitch`
         - stitch-type: ripple-stitch
           info: Select `Ripple stitch`
+        - stitch-type: zigzag-stitch
+          info: Select `ZigZag Stitch`
+        - stitch-type: manual-stitch
+          info: Select `Manual stitch`
     de:
       title: Methode
       description: Bestimmt welche Stichart verwendet wird.
@@ -83,6 +95,10 @@ params:
           info: "`Geradstich / Mehrfachgeradstich` auswählen"
         - stitch-type: ripple-stitch
           info: "`Ripple-Stich` auswählen"
+        - stitch-type: zigzag-stitch
+          info: "`Zickzack-Stich` auswählen"
+        - stitch-type: manual-stitch
+          info: "`Manuelle Stichpositionierung` auswählen"
     fr:
       title: Méthode
       description: Determines which stitch type to use.
@@ -91,6 +107,8 @@ params:
           info: Choisir `Point droit / Point multiple`
         - stitch-type: ripple-stitch
           info: Choisir `Broderie Ondulée`
+        - stitch-type: manual-stitch
+          info: Choisir `Point manuel`
   - name: manual_pattern_placement
     category: pattern
     applies-to:
@@ -435,7 +453,65 @@ params:
         url: /assets/images/docs/flat_or_point.svg
         alt: 
         title: 
+  # Zigzag
+  - name: zigzag_angle
+    category: length_position
+    applies-to:
+      - zigzag-stitch
+    en:
+      title: Zig-zag angle
+      description: Creates spoke/radial effects on curves by rotating the zig-zag direction by this angle (degrees).
+    de:
+      title: Zickzack Winkel
+      description: Erzeugt einen Strahleneffekt bei Kurven, indem die Zickzack-Richtung um diesen Winkel gedreht wird (Grad).
+    fr:
+      title: Angle du Zig-Zag
+      description: Tourner la direction des zig-zags de cet angle (en degrés). Crée des effets de rayons sur les courbes.
+  - name: stroke_pull_compensation_mm
+    category: length_position
+    applies-to:
+      - zigzag-stitch
+    en:
+      title: Pull compensation
+      description: |
+        Zigzag stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape.
+        This widens the zigzag line. You can use it to change the width of your zigzag. Negative values are allowed.
+    de:
+      title: Zugausgleich
+      description: |
+        Zickzack-Stitche ziehen den Stoff zusammen und werden dadurch schmaller als in Inkscape gezeichnet.
+        Diese Einstellung erweitert die Zickzack-Linie. Negative Werte sind erlaubt und haben den gegenteiligen Effekt.
+    fr:
+      title: Compensation d'étirement
+      description: |
+        Peut-être utilisée pour modifier la largeur du zigzag, s'ajoute  à la largeur définie par l'épaisseur du trait.
+        Peut être négative
   # Satin column
+  - name: zigzag_spacing_mm
+    category: density
+    applies-to:
+      - zigzag-stitch
+    en:
+      title: Zig-zag spacing (peak-to-peak)
+      description: 
+      image:
+        url: 
+        alt: 
+        title: 
+    de:
+      title: 
+      description: 
+      image:
+        url: 
+        alt: 
+        title: 
+    fr:
+      title: 
+      description: 
+      image:
+        url: 
+        alt: 
+        title: 
   - name: reverse_rails
     category: direction
     applies-to:
@@ -510,6 +586,22 @@ params:
       add-descr:
         - stitch-type: ripple-stitch
           info: Takes effect on a satin guide line.
+  # Manual
+  - name: max_stitch_length_mm
+    category: length_position
+    applies-to:
+      - manual-stitch
+    en:
+      title: Max stitch length
+      description: Stitches longer than this will be subdivided. Leave empty for no subdivision. 
+    de:
+      title: Maximale Stitchlänge
+      description: |
+        Unterteilt Stiche die länger sind als dieser Wert. Leer lassen für keine Unterteilungen.
+        Kurze Stiche werden entsprechend den [Einstellungen](/docs/preferences/) herausgefiltert.
+    fr:
+      title: Longueur maximum de point
+      description: Les points plus longs  seront subdivisés. Laissez vide si vous ne souhaitez pas de subdivision.
   # Fill
   - name: staggers
     category: length_position
@@ -545,6 +637,7 @@ params:
     applies-to:
       - running-stitch
       - ripple-stitch
+      - zigzag-stitch
     en:
       title: Repeats
       description: |
@@ -571,6 +664,8 @@ params:
     applies-to:
       - running-stitch
       - ripple-stitch
+      - zigzag-stitch
+      - manual-stitch
     en:
       title: Bean stitch number of repeats
       description: |
@@ -642,26 +737,38 @@ params:
       - all-types
     en:
       title: Minimum stitch length
-      description: Overwrites the global minimum stitch length setting. Stitches small than this value will be removed.
+      description: |
+        Stitches smaller than this value will be removed.
+        Overwrites the global minimum stitch length setting.
     de:
       title: Minimale Stichlänge
-      description: Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
+      description: |
+        Stiche, die kleiner sind als dieser Wert werden entfernt.
+        Überschreibt die globale Einstellung für die minimale Stichlänge.
     fr:
       title: Longueur minimum de point
-      description: Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences. Les points plus courts seront supprimés.
+      description: |
+        Les points plus courts seront supprimés.
+        Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les préférences.
   - name: min_jump_stitch_length_mm
     category: lock
     applies-to:
       - all-types
     en:
       title: Minimum jump stitch length
-      description: Overwrites the global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches.
+      description: |
+        Shorter distances to the next object will have no lock stitches.
+        Overwrites the global minimum jump stitch length setting.
     de:
       title: Minimale Länge für Sprungstiche
-      description: Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+      description: |
+        Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
+        Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche.
     fr:
       title: Longueur minimum de saut
-      description: Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences. Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
+      description: |
+        Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.
+        Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les préférences.
   - name: ties
     category: lock
     applies-to:
@@ -696,7 +803,8 @@ params:
       title: Tack stitch
       description: |
         Determines the type of tack stitch.
-        Tack stitches are small stitches at the beginning of a stitch. They help to secure the beginning of the thread. [Read more](/docs/stitches/lock-stitches/)
+        Tack stitches are small stitches at the beginning of a stitch. They help to secure the beginning of the thread.
+        [Read more](/docs/stitches/lock-stitches/)
     de:
       title: Anstecher
       description: |
@@ -713,12 +821,14 @@ params:
       title: Lock stitch
       description: |
         Determines the type of lock stitch.
-        Lock stitches are small stitches at the end of stitch. They help to secure the end of the thread. [Read more](/docs/stitches/lock-stitches/)
+        Lock stitches are small stitches at the end of stitch. They help to secure the end of the thread.
+        [Read more](/docs/stitches/lock-stitches/)
     de:
       title: Verstecher
       description: |
         Bestimmt die Art des Verstechers.
-        Verstecher sind kleine Stiche am Ende des Stickpfades. Sie sichern so den Faden. [Mehr lesen](/de/docs/stitches/lock-stitches/)
+        Verstecher sind kleine Stiche am Ende des Stickpfades. Sie sichern so den Faden.
+        [Mehr lesen](/de/docs/stitches/lock-stitches/)
     fr:
       title: Point d'arrêt final
       description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
