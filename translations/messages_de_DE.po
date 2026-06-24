@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-06-21 04:25+0000\n"
-"PO-Revision-Date: 2026-06-21 04:25\n"
+"PO-Revision-Date: 2026-06-24 03:49\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -298,7 +298,7 @@ msgstr "Diese Schrift ist eine abgewandelte, kleinere Form von Egyptian. Diese S
 #. description of font in fonts/ellenika
 #: inkstitch-fonts-metadata.py:106
 msgid "Clara Bold Greek subset with punctuation and symbol support."
-msgstr ""
+msgstr "Griechische Glyphen der Clara Bold Schrift mit Unterstützung für Satzzeichen und Symbole."
 
 #. description of font in fonts/eloquent
 #: inkstitch-fonts-metadata.py:108
@@ -1758,11 +1758,11 @@ msgstr "Der Winkel nimmt gegen den Uhrzeigersinn zu. 0 ist horizontal. Negative 
 
 #: lib/elements/fill_stitch.py:315
 msgid "Guide copy angle"
-msgstr ""
+msgstr "Führungslinien-Kopierwinkel"
 
 #: lib/elements/fill_stitch.py:316
 msgid "Angle for guide line shifting. Changing the angle may have a huge impact on the actual spacing between the rows. Ensure the guide line is large enough to fill the area when shifted into the given angle."
-msgstr ""
+msgstr "Winkel für die Verschiebung der Führungslinie. Eine Änderung des Winkels kann sich erheblich auf den tatsächlichen Abstand zwischen den Reihen auswirken. Stelle sicher, dass die Führungslinie lang genug ist, um die Fläche auszufüllen, wenn sie in den entsprechenden Winkel verschoben wird."
 
 #: lib/elements/fill_stitch.py:334 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
@@ -8638,11 +8638,11 @@ msgstr "Design mit Ink/Stitch im QCC-Format speichern"
 
 #: inx/inkstitch_output_SEW.inx:3
 msgid "SEW file output"
-msgstr ""
+msgstr "SEW Datei exportieren"
 
 #: inx/inkstitch_output_SEW.inx:9
 msgid "Save design in SEW format using Ink/Stitch"
-msgstr ""
+msgstr "Design mit Ink/Stitch im SEW-Format speichern"
 
 #: inx/inkstitch_output_SVG.inx:3
 msgid "SVG file output"
@@ -9516,7 +9516,7 @@ msgstr ".XXX: Singer Stickformat"
 
 #: inx/inkstitch_zip.inx:28
 msgid ".SEW: Janome Embroidery Format"
-msgstr ""
+msgstr ".SEW: Janome Stickformat"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".U01: Barudan Embroidery Format"
