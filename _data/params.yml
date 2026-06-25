@@ -488,6 +488,9 @@ params:
     category: split_stitches
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
       - satin_zigzag_underlay
     en:
       title: Maximum stitch length
@@ -515,6 +518,9 @@ params:
     category: split_stitches
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Split Method
       description: |
@@ -553,6 +559,9 @@ params:
     category: split_stitches
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Random Jitter for split stitches
       description: Randomizes split stitch length if random phase is enabled, stitch position if disabled.
@@ -581,6 +590,8 @@ params:
     category: split_stitches
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
     en:
       title: Random Phase for split stitches
       description: Controls whether split stitches are centered or with a random phase (which may increase stitch count).
@@ -595,6 +606,8 @@ params:
     category: split_stitches
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
     en:
       title: Stagger this many times before repeating
       description: |
@@ -687,8 +700,11 @@ params:
     category: general
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
-      title: Cusom satin column
+      title: Custom satin column
       description: Must be enabled for these settings to take effect.
     de:
       title: Benutzerdefinierte Satinsäule
@@ -701,20 +717,53 @@ params:
     category: general
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Method
-      description: Chose `Satin Column`
+      description: 
+      add-descr:
+        - stitch-type: satin
+          info: Chose `Satin Column`
+        - stitch-type: e-stitch
+          info: Chose `E-Stitch`
+        - stitch-type: s-stitch
+          info: Chose `S-Stitch`
+        - stitch-type: zigzag-satin
+          info: Chose `Zigzag`
     de:
       title: Methode
-      description: "`Satinsäule` auswählen"
+      description: 
+      add-descr:
+        - stitch-type: satin
+          info: "`Satinsäule` auswählen"
+        - stitch-type: e-stitch
+          info: "`E-Stitch` auswählen"
+        - stitch-type: s-stitch
+          info: "`S-Stitch` auswählen"
+        - stitch-type: zigzag-satin
+          info: "`Zickzack` auswählen"
     fr:
       title: Méthode
-      description: Choisir `Colonne Satin`
+      description: 
+      add-descr:
+        - stitch-type: satin
+          info: Choisir `Colonne Satin`
+        - stitch-type: e-stitch
+          info: Choisir `Point en E`
+        - stitch-type: s-stitch
+          info: Choisir `Point en S`
+        - stitch-type: zigzag_satin
+          info: Choisir `Zigzag`
 
   - name: short_stitch_distance_mm
     category: short_stitch
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Short stitch distance
       description: Shortens stitchen when the distance between consecutive stitches is smaller than this value (mm).
@@ -741,6 +790,9 @@ params:
     category: short_stitch
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Short stitch inset
       description: |
@@ -775,6 +827,9 @@ params:
     applies-to:
       - zigzag-stitch
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
       - satin_zigzag_underlay
     en:
       title: Zig-zag spacing (peak-to-peak)
@@ -802,6 +857,8 @@ params:
     category: density
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
     en:
       title: Random zig-zag spacing percentage
       description: Amount of random jitter added to zigzag spacing
@@ -828,6 +885,9 @@ params:
     category: compensation
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Pull compensation (%)
       description: Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymetric effect.
@@ -854,6 +914,9 @@ params:
     category: compensation
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Pull compensation (mm)
       description: |
@@ -932,6 +995,9 @@ params:
     applies-to:
       - ripple-stitch
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Reverse rails
       description: |
@@ -986,6 +1052,9 @@ params:
     applies-to:
       - ripple-stitch
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Swap rails
       description: Swaps the first and the second rails of a satin column. Affecting which side the thread finishes on as well as any other sided property.
@@ -1068,6 +1137,9 @@ params:
     category: satin_width
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Random percentage of satin width increase
       description: Lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymetric effect.
@@ -1094,6 +1166,9 @@ params:
     category: satin_width
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Random percentage of satin width decrease
       description: Shorten stitch across rails at most this percent. Two values separated by a space may be used for an aysmmetric effect.
@@ -1120,6 +1195,9 @@ params:
     category: split_stitches
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Minimum length for random-phase split
       description: Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch.
@@ -1331,6 +1409,9 @@ params:
     applies-to:
       - running-stitch
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag-satin
     en:
       title: Random seed
       description: |

@@ -138,9 +138,6 @@ Z.B. `Zufälliger Prozentwert (Erweitern)` ist ein solcher Parameter. Wird ein e
 
 ### Satinsäule
 
-Einige dieser Einstellungen sind Teil einer zukünftigen Version von Ink/Stitch und noch nicht in der derzeitigen Version enthalten.
-{: .notive--info }
-
 {% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='satin'%}
