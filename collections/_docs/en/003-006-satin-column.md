@@ -148,13 +148,7 @@ This is a row of running stitch down the center of the column and back. This may
 
 ![Params - Center-Walk Underlay Example](/assets/images/docs/params-center-walk-underlay-example.jpg)
 
-Settings      |Description
----|---
-Stitch length |Length of stitches (in mm)
-Tolerance     |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
-Repeats       |Odd numbers of repeats will reverse the stitch direction of the satin column, causing it to start and end at the same position.
-Position      |Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
-{: .table-full-width }
+{% include params.html stitch_type='satin_center_underlay'%}
 
 ### Contour Underlay
 
@@ -162,12 +156,7 @@ This is a row of running stitch up one side of the column and back down the othe
 
 ![Params - Contour Underlay Example](/assets/images/docs/params-contour-underlay-example.jpg)
 
-Settings      |Description
----|---
-Stitch length           |Length of stitches (in mm)
-Tolerance         |Decreasing tolerance helps the underlay to stay behind the top level. However too small a tolerance may create very short stitches.
-Inset distance (fixed)  |Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column. Negative values are possible.
-Inset distance (proportional |Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column. Negative values are possible.
+{% include params.html stitch_type='satin_contour_underlay'%}
 
 ### Zig-Zag Underlay
 
@@ -175,12 +164,7 @@ This is essentially a lower-density satin column sewn to the end of the column a
 
 ![Params - Zig-Zag Underlay Example](/assets/images/docs/params-zigzag-underlay-example.jpg)
 
-Settings      |Description
----|---
-Inset amount (proportional) |Inset to cover the underlay entirely by the top layer. Negative values are possible. Default: half of contour underlay inset. It is possible to enter two space separated values to define different values for each side.
-Inset amount (fixed)    |Inset to cover the underlay entirely by the top layer. Negative values are possible. Default: half of contour underlay inset. It is possible to enter two space separated values to define different values for each side.
-Maximum stitch length   | ![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stitches wider than this will be split up (split stitches).
-Zig-Zag spacing         |The peak-to-peak distance between zig-zags.
+{% include params.html stitch_type='satin_zigzag_underlay'%}
 
 ## Satin Tools
 

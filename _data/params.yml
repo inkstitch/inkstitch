@@ -56,7 +56,6 @@ categories:
 
 
 params:
-
   - name: satin_column
     category: general
     applies-to:
@@ -159,6 +158,8 @@ params:
       - running-stitch
       - ripple-stitch
       - satin
+      - satin_center_underlay
+      - satin_contour_underlay
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -487,6 +488,7 @@ params:
     category: split_stitches
     applies-to:
       - satin
+      - satin_zigzag_underlay
     en:
       title: Maximum stitch length
       description: Stitches wider than this will be split up (split stitches).
@@ -529,7 +531,7 @@ params:
       description: |
         Optionen:
         * Standard
-        *Einfach
+        * Einfach
         * Stichversatz
       image:
         url: /assets/images/docs/param_split_satin.png
@@ -771,8 +773,9 @@ params:
   - name: zigzag_spacing_mm
     category: density
     applies-to:
-      - satin
       - zigzag-stitch
+      - satin
+      - satin_zigzag_underlay
     en:
       title: Zig-zag spacing (peak-to-peak)
       description: The peak-to-peak distance between zig-zags
@@ -1006,6 +1009,8 @@ params:
     category: length_position
     applies-to:
       - satin
+      - satin_center_underlay
+      - satin_contour_underlay
     en:
       title: Stitch length
       description: Stitch length (in mm) of the underpaths (connecting lines to the start or end point)
@@ -1020,6 +1025,7 @@ params:
     category: length_position
     applies-to:
       - satin
+      - satin_center_underlay
     en:
       title: Running stitch position
       description: Position of underpath from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
@@ -1124,6 +1130,72 @@ params:
       title: Longueur minimum du point si découpage totalement aléatoire
       description: Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés.
 
+  - name: underlay_inset_mm
+    category: length_position
+    applies-to:
+      - satin_contour_underlay
+      - satin_zigzag_underlay
+    en:
+      title: Inset distance (fixed)
+      description: |
+        Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column.
+        Negative values are possible.
+        It is possible to enter two space separated values to define different values for each side
+      add-descr:
+        stitch-type: satin_zigzag_underlay
+        info: "Default: half of contour underlay inset."
+    de:
+      title: Einzug (fest)
+      description: |
+        Einrückung um die Unterlage vollständig von der obenliegenden Schicht zu überdecken.
+        Negative Werte sind möglich.
+        Durch die Eingabe zweier, durch ein Leerzeichen getrennter Werte, können verschiedene Vorgaben für jede Seite erzeugt werden
+      add-descr:
+        stitch-type: satin_zigzag_underlay
+        info: "Voreinstellung: Hälfte des Einzuges der Konturunterlage."
+    fr:
+      title: Décalage de sous-couche contour (fixe)
+      description: |
+        Décale d'une valeur fixe pour couvrir la sous-couche entièrement par la couche supérieure.
+        Les valeurs négatives sont possibles.
+        Il est possible d'entrer deux valeurs séparées par un espace pour un effet asymétrique.
+      add-descr:
+        stitch-type: satin_zigzag_underlay
+        info: Par défaut la moitié de la valeur est appliquée de chaque coté.
+
+  - name: underlay_inset_percent
+    category: length_position
+    applies-to:
+      - satin_contour_underlay
+      - satin_zigzag_underlay
+    en:
+      title: Inset distance (proportional)
+      description: |
+        Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column.
+        Negative values are possible.
+        It is possible to enter two space separated values to define different values for each side
+      add-descr:
+        stitch-type: satin_zigzag_underlay
+        info: "Default: half of contour underlay inset."
+    de:
+      title: Einzug (proportional)
+      description: |
+        Rückt die Unterlage um einen Prozentwert der jeweiligen eigentlichen Länge ein. Dies verhindert das entstehen von Lücken um die Satinsäule herum.
+        Negative Werte sind erlaubt.
+        Durch die Eingabe zweier, durch ein Leerzeichen getrennter Werte, können verschiedene Vorgaben für jede Seite erzeugt werden
+      add-descr:
+        stitch-type: satin_zigzag_underlay
+        info: "Voreinstellung: Hälfte des Einzuges der Konturunterlage."
+    fr:
+      title: Décalage de sous-couche contour (proportionel)
+      description: |
+        Décale proportionellement à la largeur du satin pour couvrir la sous-couche entièrement par la couche supérieure.
+        Les valeurs négatives sont possibles.
+        Il est possible d'entrer deux valeurs séparées par un espace pour un effet asymétrique.
+      add-descr:
+        stitch-type: satin_zigzag_underlay
+        info: Par défaut la moitié de la valeur est appliquée de chaque coté.
+
   # Fill
 
   - name: staggers
@@ -1163,27 +1235,34 @@ params:
       - running-stitch
       - ripple-stitch
       - zigzag-stitch
+      - satin_center_underlay
     en:
       title: Repeats
       description: |
         Defines how many times to stitch  along the path
-        * Default: 1 (traveling once from the start to the end of the path)
         * Odd number: stitches will end at the end of the path
         * Even number: stitching will return to the start of the path
+      add-descr:
+        - stitch-type: satin_center_underlay
+          info: Odd numbers of repeats will reverse the stitch direction of the satin column, causing it to start and end at the same position.
     de:
       title: Wiederholungen
       description: |
-        * Legt fest, wie oft der Pfad durchlaufen werden soll
-        * Standard: 1 (einmal vom Anfang bis zum Ende des Pfades)
+        Legt fest, wie oft der Pfad durchlaufen werden soll
         * Ungerade Zahl: Stiche enden am Ende des Pfades
-        * Gerade Zahl: Die Naht kehrt zum Anfang des Pfades zurück
+        * Gerade Zahl: Stiche starten und Enden am gleichen Punkt
+      add-descr:
+        - stitch-type: satin_center_underlay
+          info: Bei einer ungeraden Anzahl an Wiederholungen wird die Richtung, in die die Satinsäule verläft umgekehrt. Sie endet entsprechend wieder am Startpunkt.
     fr:
       title: Répétitions
       description: |
         Définir combien de fois aller et revenir le long du chemin
-        * Par défaut: 1 (aller une fois du début à la fin du chemin)
         * Nombre impair: les points se termineront à la fin du chemin
         * Nombre pair: la broderie va revenir au début du chemin
+      add-descr:
+        - stitch-type: satin_center_underlay
+          info: Un nombre impair renverse la direction de broderie de la colonne satin, la broderie commencera et terminera au même endroit.
 
   - name: bean_stitch_repeats
     category: repeats

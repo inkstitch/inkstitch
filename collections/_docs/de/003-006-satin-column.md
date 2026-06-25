@@ -151,13 +151,7 @@ Dies ist eine Reihe von Geradstichen in der Mitte der Säule und zurück. Sie ka
 
 ![Params - Center-Walk Underlay Example](/assets/images/docs/params-center-walk-underlay-example.jpg)
 
-Einstellung      |Beschreibung
----|---
-Stichlänge       |Stichlänge (in mm)
-Stichtoleranz    |Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen.
-Wiederholungen   |Bei einer ungeraden Anzahl an Wiederholungen wird die Richtung, in die die Satinsäule verläft umgekehrt. Sie endet entsprechend wieder am Startpunkt.
-Position         |Position der Unterlage zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite.
-{: .table-full-width }
+{% include params.html stitch_type='satin_center_underlay'%}
 
 ### Konturunterlage
 
@@ -165,12 +159,7 @@ Dies ist eine Reihe von Geradstichen die auf einer Seite der Säule hoch und auf
 
 ![Params - Contour Underlay Example](/assets/images/docs/params-contour-underlay-example.jpg)
 
-Einstellung    |Beschreibung
----|---
-Stichlänge     |Stichlänge (in mm)
-Stichtoleranz  |Alle Stiche müssen innerhalb dieser Toleranzgrenze zum Pfad liegen. Eine niedrigere Toleranz bedeutet, dass sich die Stichlänge reduziert. Eine größere Toleranz kann zur Abrundung scharfer Ecken führen.
-Einzug (fest)  |Einrückung um die Unterlage vollständig von der obenliegenden Schicht zu überdecken. Negative Werte sind möglich.
-Einzug (proportional) |Rückt die Unterlage um einen Prozentwert der jeweiligen eigentlichen Länge ein. Dies verhindert das entstehen von Lücken um die Satinsäule herum. Negative Werte sind erlaubt.
+{% include params.html stitch_type='satin_contour_underlay'%}
 
 ### Zick-Zack Unterlage
 
@@ -178,12 +167,7 @@ Dies ist im Wesentlichen ein Satinstich mit geringerer Dichte, der an das Ende d
 
 ![Params - Zig-Zag Underlay Example](/assets/images/docs/params-zigzag-underlay-example.jpg)
 
-Einstellung          ||Beschreibung
----|---|---
-Einzug (proportional)||Einrückung um die Unterlage vollständig von der obenliegenden Schicht zu überdecken. Negative Werte sind möglich. Voreinstellung: Hälfte des Einzuges der Konturunterlage.
-Einzug (fest)        ||Einrückung um die Unterlage vollständig von der obenliegenden Schicht zu überdecken. Negative Werte sind möglich. Voreinstellung: Hälfte des Einzuges der Konturunterlage
-Maximale Stichlänge  |![Maximum stitch length](/assets/images/docs/params-satin-maximum_stitch_length.png) | Stiche die diesen Wert übersteigen, werden geteilt.
-Zick-Zack Abstand    ||Der Spitze zu Spitze Abstand zwischen den Zick-Zack-Stichen.
+{% include params.html stitch_type='satin_zigzag_underlay'%}
 
 ## Satin Werkzeuge
 

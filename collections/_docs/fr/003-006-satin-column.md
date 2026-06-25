@@ -163,17 +163,10 @@ Par exemple l'augmentation aléatoire de la largeur du satin est un paramètre a
 ### Sous-couche centrale
 
 C'est une rangée aller-retour de points droits au centre de la colonne. C'est peut-être tout ce dont vous avez besoin pour de fines colonnes de satin. Vous pouvez également l'utiliser comme base pour une sous-couche plus élaborée.
+
 ![Exemple de paramètres de sous-couche centrée](/assets/images/docs/params-center-walk-underlay-example.jpg)
 
-![Paramètres de sous-couche centrée](/assets/images/docs/fr/params-satincolumn-underlay-centerwalk.jpg)
-
-|Paramètre |Description|
-|---|---|
-|Longueur de point |Longueur de point (en mm)|
-|Tolérance |Choisir une valeur suffisement faible pour que la sous-couche reste bien sous le satin, mais une très petite tolérance peut conduire localement à une forte diminution de la longueur de point. |
-|Répéter | Un nombre impair renverse la direction de broderie de la colonne satin, la broderie commencera et terminera au même endroit.|
-|Position |Position de la sous-couche entre les rails. 0% est le long du premier rail, 50% est centré, 100% est le long du second rail.|
-{: .table-full-width }
+{% include params.html stitch_type='satin_center_underlay'%}
 
 #### Sous-couche de contour
 
@@ -181,15 +174,7 @@ Il s’agit d’une rangée de points droits d’un bout de la colonne à l’au
 
 ![Exemple de sous-couche contour](/assets/images/docs/params-contour-underlay-example.jpg)
 
-![Paramètres de sous-couche contour](/assets/images/docs/fr/params-satincolumn-underlay-contour.jpg)
-
-|Paramètres |Description|
-|---|---|
-|Longueur de point |Longueur de point (en mm)|
-|Tolérance |Choisir une valeur suffisement faible pour que la sous-couche reste bien sous le satin, mais une très petite tolérance peut conduire localement à une forte diminution de la longueur de point. |
-|Décalage de sous-couche contour (fixe) |décale d'une valeur fixe pour couvrir la sous-couche entièrement par la couche supérieure. Les valeurs négatives sont possibles.|
-|Décalage de sous-couche contour (proportionel) |décale proportionellement à la largeur du satin pour couvrir la sous-couche entièrement par la couche supérieure. Les valeurs négatives sont possibles.|
-{: .table-full-width }
+{% include params.html stitch_type='satin_contour_underlay'%}
 
 #### Sous-couche zig-zag
 
@@ -197,15 +182,7 @@ Il s’agit essentiellement d’un aller-retour en point satin de faible densit�
 
 ![Exemple de paramètres de sous-couche zig-zag](/assets/images/docs/params-zigzag-underlay-example.jpg)
 
-![Paramètres sous-couche zig-zag](/assets/images/docs/fr/params-satincolumn-underlay-zigzag.jpg)
-
-|Paramètres |Description|
-|---|---|
-|Décalage(proportionel) |Décalage en pourcentage de la largeur pour couvrir la sous-couche entièrement par la couche supérieure. Valeurs négatives possibles. Par défaut la moitié de la valeur est appliquée de chaque coté. Il est possible d'entrer deux valeurs séparées par un espace pour un effet asymétrique.|
-|Décalage(fixe) |Décalage pour couvrir la sous-couche entièrement par la couche supérieure. Valeurs négatives possibles. Par défaut la moitié de la valeur est appliquée de chaque coté. Il est possible d'entrer deux valeurs séparées par un espace pour un effet asymétrique.|
-|Longueur maximum du point | ![Longueur maximum du point](/assets/images/docs/params-satin-maximum_stitch_length.png) | Les points plus longs seront découpés en plusieurs points|
-|Espacement Zig-Zag |La distance crête à crête entre zig-zags.|
-{: .table-full-width }
+{% include params.html stitch_type='satin_zigzag_underlay'%}
 
 ## Outils Satin
 

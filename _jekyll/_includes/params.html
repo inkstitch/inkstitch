@@ -4,9 +4,11 @@ I'd like to filter the params like this:
 site.data.params.params | where_exp:"param", "param.applies-to contains stitch_type or param.applies-to contains 'all-types'"
 But this will return an error. So we need to run them separately and combine. Hopefully it will not destroy the order. But usually all global params are at the bottom.
 {% endcomment %}
-{%- assign stitch_params = site.data.params.params | where_exp:"param", "param.applies-to contains stitch_type" -%}
+{%- assign params = site.data.params.params | where_exp:"param", "param.applies-to contains stitch_type" -%}
 {%- assign global_params = site.data.params.params | where_exp:"param", "param.applies-to contains 'all-types'" -%}
-{%- assign params = stitch_params | concat: global_params -%}
+{%- unless stitch_type contains 'underlay' -%}
+    {%- assign params = params | concat: global_params -%}
+{% endunless %}
 {% assign categories = site.data.params.categories %}
 
 <div class="params-container">
