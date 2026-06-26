@@ -13,7 +13,10 @@ on:
               required: true
               type: boolean
               default: false
-
+# Fix for linux32 build
+# Allow runners to contunue to use node20 until fall of 2026
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 jobs:
   linux64:
     runs-on: ubuntu-22.04
