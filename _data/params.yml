@@ -32,10 +32,18 @@ categories:
         en: Satin width
         de: Breite der Satinsäule
         fr: Satin width
+      - id: size
+        en: Size
+        de: Größe
+        fr: Size
       - id: density
         en: Density
         de: Dichte
         fr: Densité
+      - id: travel
+        en: Travel stitches
+        de: Verbindungsstiche
+        fr: Travel stitches
       - id: random
         en: Randomizing
         de: Randomisierung
@@ -157,18 +165,29 @@ params:
     applies-to:
       - running-stitch
       - ripple-stitch
-      - satin
       - satin_center_underlay
       - satin_contour_underlay
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
+      image:
+        url: /assets/images/docs/run-tolerance.jpg
+        alt: 
+        title: 
     de:
       title: Geradstich Toleranz
       description: Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
+      image:
+        url: /assets/images/docs/run-tolerance.jpg
+        alt: 
+        title: 
     fr:
       title: Tolerance du point droit
       description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
+      image:
+        url: /assets/images/docs/run-tolerance.jpg
+        alt: 
+        title: 
 
   # Ripple
 
@@ -1075,25 +1094,85 @@ params:
           info: Takes effect on a satin guide line.
 
   - name: running_stitch_length_mm
-    category: length_position
+    category: travel
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag_satin
+      - tatami
+    en:
+      title: Stitch length
+      description: Stitch length (in mm) of the underpaths from section to section
+    de:
+      title: Stichlänge
+      description: Stichlänge (in mm) der Unterpfade von Segment zu Segment
+    fr:
+      title: Longueur de point droit
+      description: Longueur du point (in mm) des chemins de dessous (connexions)
+
+  - name: running_stitch_length_mm
+    category: length_position
+    applies-to:
       - satin_center_underlay
       - satin_contour_underlay
     en:
       title: Stitch length
-      description: Stitch length (in mm) of the underpaths (connecting lines to the start or end point)
+      description: Stitch length (in mm)
     de:
       title: Stichlänge
-      description: Stichlänge (in mm) der Unterpfade (Verbindungslinien zum Start- oder Endpunkt)
+      description: Stichlänge (in mm)
     fr:
       title: Longueur de point droit
-      description: Longueur du point (in mm) des chemins de dessous (connexions au point de debut ou de fin)
+      description: Longueur du point (in mm)
+
+  - name: running_stitch_tolerance_mm
+    category: travel
+    applies-to:
+      - satin
+      - tatami
+    en:
+      title: Running stitch tolerance
+      description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
+      image:
+        url: /assets/images/docs/run-tolerance.jpg
+        alt: 
+        title: 
+    de:
+      title: Geradstich Toleranz
+      description: Alle Stiche müssen innerhalb dieser Distanz zum Pfad liegen. Eine niedrigere Toleranz verkürzt die Stiche. Eine höhere Toleranz kann scharfe Ecken abrunden.
+      image:
+        url: /assets/images/docs/run-tolerance.jpg
+        alt: 
+        title: 
+    fr:
+      title: Tolerance du point droit
+      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
+      image:
+        url: /assets/images/docs/run-tolerance.jpg
+        alt: 
+        title: 
+
+  - name: running_stitch_position
+    category: travel
+    applies-to:
+      - satin
+      - e-stitch
+      - s-stitch
+      - zigzag_satin
+    en:
+      title: Running stitch position
+      description: Position of underpath from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail.
+    de:
+      title: Geradstich Position
+      description: Position der Verbindungslinien zwischen den Außenseiten. 0% liegt genau auf der ersten Seite, 50% in der Mitte, 100% auf der zweiten Seite.
+    fr:
+      title: Position du point droit
+      description: Position du chemin de dessous vis à vis des rails. À 0% il suit le premier rail, à 50% il est centré, à 100% il suit le second rail.
 
   - name: running_stitch_position
     category: length_position
     applies-to:
-      - satin
       - satin_center_underlay
     en:
       title: Running stitch position
@@ -1109,6 +1188,9 @@ params:
     category: direction
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag_satin
     en:
       title: Start at nearest point
       description: Start at nearest point to the previous element. A start position command will overwrite this setting.
@@ -1123,6 +1205,9 @@ params:
     category: direction
     applies-to:
       - satin
+      - e-stitch
+      - s-stitch
+      - zigzag_satin
     en:
       title: End at nearest point
       description: End at nearest point to the next element. An end position command will overwrite this setting.
@@ -1276,34 +1361,429 @@ params:
 
   # Fill
 
+  - name: fill
+    category: general
+    applies-to:
+      - tatami
+      - legacy-fill
+    en:
+      title: Fill stitching
+      description: Enables or disables fill stitches for the selected object(s)
+    de:
+      title: Fill stitching
+      description: Must be enabled for these settings to take effect.
+    fr:
+      title: Remplissage
+      description: Doit être activé pour que ces paramètres prennent effet.
+
+  - name: fill_underlay
+    category: general
+    applies-to:
+      - tatami-underlay
+    en:
+      title: Underlay
+      description: Must be enabled for these settings to take effect.
+    de:
+      title: Unterlage
+      description: Muss aktiviert sein, damit diese Einstellungen wirksam werden.
+    fr:
+      title: Sous-couche
+      description: Doit être activé pour que ces paramètre fassent effet.
+
+  - name: fill_method
+    category: general
+    applies-to:
+      - tatami
+      - legacy-fill
+    en:
+      title: Fill method
+      description: 
+      add-descr:
+        - stitch-type: tatami
+          ino: Must be set to `Tatami` to fill the object with rows of stitches.
+        - stitch-type: legacy-fill
+          ino: Must be set to `legacy fill`
+    de:
+      title: Flächenstickerei
+      description: 
+      add-descr:
+        - stitch-type: tatami
+          ino: "`Tatami-Füllung` auswählen"
+        - stitch-type: legacy-fill
+          ino: "`Veraltete Füllung` auswählen"
+    fr:
+      title: Méthode de remplissage
+      description: 
+      add-descr:
+        - stitch-type: tatami
+          ino: Doit être sur Remplissage Tatami.
+        - stitch-type: legacy-fill
+          ino: Doit être sur Remplissage Manuel Legacy
+
+  - name: expand_mm
+    category: size
+    applies-to:
+      - tatami
+      - legacy-fill
+    en:
+      title: Expand
+      description: Expand the shape before fill stitching, to compensate for gaps between shapes.
+      image:
+        url: /assets/images/docs/params-fill-expand.png
+        alt: 
+        title: 
+    de:
+      title: Erweitern
+      description:  Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.
+      image:
+        url: /assets/images/docs/params-fill-expand.png
+        alt: 
+        title: 
+    fr:
+      title: Élargir
+      description: Etend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.
+      image:
+        url: /assets/images/docs/params-fill-expand.png
+        alt: 
+        title: 
+
+  - name: angle
+    category: pattern
+    applies-to:
+      - tatami
+      - tatami-underlay
+      - legacy-fill
+    en:
+      title: Angle of lines of stitches
+      description: |
+        The angle of the rows of stitches, in degrees.
+        0 is horizontal, and the angle increases in a counter-clockwise direction.
+        Negative angles are allowed.
+      image:
+        url: /assets/images/docs/params-fill-angle.png
+        alt: 
+        title: 
+    de:
+      title: Winkel der Stichlinien
+      description: |
+        Der Winkel nimmt gegen den Uhrzeigersinn zu.
+        0 ist horizontal.
+        Negative Winkel sind erlaubt.
+      image:
+        url: /assets/images/docs/params-fill-angle.png
+        alt: 
+        title: 
+    fr:
+      title: Angle des rangées de points
+      description: |
+        L'angle des rangées de points, en degrés.
+        0 est horizontal et l'angle augmente dans le sens contraire des aiguilles d'une montre.
+        Les angles négatifs sont autorisés.
+      image:
+        url: /assets/images/docs/params-fill-angle.png
+        alt: 
+        title: 
+
+  - name: gap_fill_rows
+    category: compensation
+    applies-to:
+      - tatami
+    en:
+      title: Gap Filling
+      description: Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2.
+      image:
+        url: /assets/images/docs/fill_gap_filling.jpg
+        alt: 
+        title: 
+    de:
+      title: Lücken schließen
+      description: Fügt zusätzliche Reihen zwischen Abschnitten hinzu, um Verzug auszugleichen. Reihen werden immer in Paaren hinzugefügt. Ungerade Eingaben werden aufgerundet.
+      image:
+        url: /assets/images/docs/fill_gap_filling.jpg
+        alt: 
+        title: 
+    fr:
+      title: Boucher les espaces entre sections
+      description: Ajoute des rangées supplémentaires pour compenser les espaces entre les sections causés par la distorsion. Les rangées sont toujours ajoutées par paires donc ce nombre sera arrondi au nombre pair supérieur le plus proche.
+      image:
+        url: /assets/images/docs/fill_gap_filling.jpg
+        alt: 
+        title: 
+
+  - name: max_stitch_length_mm
+    category: length_position
+    applies-to:
+      - tatami
+      - tatami-underlay
+      - legacy-fill
+    en:
+      title: Maximum fill stitch length
+      description: The length of each stitch in a row. "Max" is because a shorter stitch may be used at the start or end of a row.
+      image:
+        url: /assets/images/docs/params-fill-stitch_length.png
+        alt: 
+        title: 
+    de:
+      title: Maximale Füll-Stichlänge
+      description: Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
+      image:
+        url: /assets/images/docs/params-fill-stitch_length.png
+        alt: 
+        title: 
+    fr:
+      title: Longueur maximale du point de remplissage
+      description: La longueur de chaque point dans une rangée. "Max", c'est parce qu'un point plus court peut être utilisé au début ou à la fin d'une ligne.
+      image:
+        url: /assets/images/docs/params-fill-stitch_length.png
+        alt: 
+        title: 
+
+  - name: row_spacing
+    category: density
+    applies-to:
+      - tatami
+      - tatami-underlay
+      - legacy-fill
+    en:
+      title: Spacing between rows
+      description: Distance between rows of stitches
+      image:
+        url: /assets/images/docs/params-fill-spacing_between_rows.png
+        alt: 
+        title: 
+    de:
+      title: Reihenabstand
+      description: Abstand zwischen den Stichreihen.
+      image:
+        url: /assets/images/docs/params-fill-spacing_between_rows.png
+        alt: 
+        title: 
+    fr:
+      title: Espacement entre les rangées
+      description: Espacement entre les rangées de points.
+      image:
+        url: /assets/images/docs/params-fill-spacing_between_rows.png
+        alt: 
+        title: 
+
+  - name: end_row_spacing_mm
+    category: density
+    applies-to:
+      - tatami
+      - legacy-fill
+    en:
+      title: End row spacing
+      description: If set, increases or decreases the row spacing towards the end
+      image:
+        url: /assets/images/docs/params-fill-end_row_spacing.png
+        alt: 
+        title: 
+    de:
+      title: Reihenabstand (Ende)
+      description: Erhöht oder verringert den Reihenabstand zum Ende hin.
+      image:
+        url: /assets/images/docs/params-fill-end_row_spacing.png
+        alt: 
+        title: 
+    fr:
+      title: Espacement final entre les rangées
+      description: Si une valeur est saisie, l'espacement entre les rangées augmente ou diminue au fur et à mesure jusqu'à atteindre la valeur finale.
+      image:
+        url: /assets/images/docs/params-fill-end_row_spacing.png
+        alt: 
+        title: 
+
   - name: staggers
     category: length_position
     applies-to:
+      - tatami
       - ripple-stitch
+      - legacy-fill
     en:
       title: Stagger rows this many times before repeating
       image: 
-        url: 
+        url: /assets/images/docs/params-fill-stagger.png
         alt: 
         title: 
-      description: Length of the cycle by which successive stitch lines are staggered. Fractional values are allowed and can have less visible diagonals than integer values. For linear ripples only.
+      description: |
+        Stitches are staggered so that neighboring rows of stitches don't all fall in the same column (which would create a distracting valley effect).
+        Setting this dictates the length of the cycle by which successive stitch rows are staggered.
+        Fractional values are allowed and can have less visible diagonals than integer values.
+      add-desc:
+        - stitch-type: ripple-stitch
+          info: For linear ripples only.
     de:
       title: Stichversatz
       image: 
-        url: 
+        url: /assets/images/docs/params-fill-stagger.png
         alt: 
         title: 
-      description: Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild.
+      description: Dieser Wert beschreibt, nach wie vielen Reihen die Einstichstellen von benachbarten Reihen wieder übereinander liegen. Dezimalwerte sind zulässig und zeigen weniger deutliche Diagonalen im Stickbild.
       add-descr:
         - stitch-type: ripple-stitch
           info: Nur für lineare Ripples.
     fr:
-      title: Rendre aléatoire
+      title: Décaler autant de fois avant de répéter
       image: 
-        url: 
+        url: /assets/images/docs/params-fill-stagger.png
         alt: 
         title: 
-      description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
+      description: |
+        Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée).
+        Ce paramètre détermine la longueur du cycle de décalage des rangées.
+        Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières.
+      add-desc:
+        - stitch-type: ripple-stitch
+          info: For linear ripples only.
+
+  - name: pull_compensation_mm
+    category: compensation
+    applies-to:
+      - tatami
+    en:
+      title: Pull compensation
+      description: Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect.
+      image:
+        url: /assets/images/docs/fill-pull_comp_mm.jpg
+        alt: 
+        title: 
+    de:
+      title: Zugausgleich
+      description: Füllstitche ziehen den Stoff zusammen. Dadurch wird das Stickbild schmaler, als die in Inkscape gezeichnete Form. Diese Einstellung erweitert jede Reihe um einen festen Wert, um diesen Effekt auszugleichen. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt genutzt werden.
+      image:
+        url: /assets/images/docs/fill-pull_comp_mm.jpg
+        alt: 
+        title: 
+    fr:
+      title: Compensation d'étirement
+      description: Les points de remplissage resserrent le tissu, ce qui entraîne une forme plus étroite que celle que vous dessinez dans Inkscape. Ce paramètre allonge d'une valeur fixe chaque rangée de ponts. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.
+      image:
+        url: /assets/images/docs/fill-pull_comp_mm.jpg
+        alt: 
+        title: 
+
+  - name: pull_compensation_percent
+    category: compensation
+    applies-to:
+      - tatami
+    en:
+      title: Pull compensation percent
+      description: Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect.
+      image:
+        url: /assets/images/docs/fill-pull_comp_percent.jpg
+        alt: 
+        title: 
+    de:
+      title: Zugausgleich (%)
+      description: Zusätzliche Zugkompensation, die als Prozentwert der ursprünglichen Länge variiert. Zwei durch ein Leerzeichen getrennte Werte können für einen asymmetrischen Effekt verwendet werden.
+      image:
+        url: /assets/images/docs/fill-pull_comp_percent.jpg
+        alt: 
+        title: 
+    fr:
+      title: ourcentage de compensation d'étirement
+      description: Compensation d'étirement supplémentaire qui varie comme un pourcentage de la longueur de la rangée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.
+      image:
+        url: /assets/images/docs/fill-pull_comp_percent.jpg
+        alt: 
+        title: 
+
+  - name: skip_last
+    category: density
+    applies-to:
+      - tatami
+      - tatami-underlay
+      - legacy-fill
+    en:
+      title: Skip last stitch in each row
+      description: The last stitch in each row is quite close to the first stitch in the next row. Skipping it decreases stitch count and density.
+      image:
+        url: /assets/images/docs/params-fill-skip_stitches.png
+        alt: 
+        title: 
+    de:
+      title: Letzten Stich in jeder Reihe überspringen
+      description: Der letzte Stich in jeder Reihe ist dem darauffolgenden Stich sehr nah. Ihn zu überspringen verringert die Stichanzahl und Dichte.
+      image:
+        url: /assets/images/docs/params-fill-skip_stitches.png
+        alt: 
+        title: 
+    fr:
+      title: Sauter le dernier point dans chaque rangée
+      description: Le dernier point de chaque rangée est assez proche du premier point de la rangée suivante. Le sauter diminue le nombre de points et la densité.
+      image:
+        url: /assets/images/docs/params-fill-skip_stitches.png
+        alt: 
+        title: 
+
+  - name: underpath
+    category: travel
+    applies-to:
+      - tatami
+      - tatami-underlay
+    en:
+      title: Underpath
+      description: Must be enabled to let running stitches travel inside shape instead of around the border when moving from section to section
+      image:
+        url: /assets/images/docs/params-fill-underpathing.png
+        alt: 
+        title: 
+    de:
+      title: Verbindungsstiche innerhalb des Objektes
+      description: Muss aktiviert sein, um Geradstiche zum Verbinden der Abschnitte innerhalb des Objekts verlaufen zu lassen, anstatt sie am Rand entlang zu führen.
+      image:
+        url: /assets/images/docs/params-fill-underpathing.png
+        alt: 
+        title: 
+    fr:
+      title: Chemin de dessous
+      description: Doit être activé pour permettre aux points droits de se placer à l'intérieur de la forme plutôt que de suivre la bordure lors du déplacement d'une section à l'autre.
+      image:
+        url: /assets/images/docs/params-fill-underpathing.png
+        alt: 
+        title: 
+
+  - name: fill_underlay_inset_mm
+    category: length_position
+    applies-to:
+      - tatami-underlay
+    en:
+      title: Inset
+      description: Inset to cover the underlay entirely by the top layer. Negative values are possible (usefull for "knockdown" stitches).
+    de:
+      title: Einzug
+      description: Einzug, um die Unterlage vollständig durch die oberste Schicht abzudecken. Negative Werte sind möglich (nützlich für "Knockdown-Stiche").
+    fr:
+      title: Décalage
+      description: Décalage pour que la sous-couche soit totalement masquée par la couche supérieure. Une valeur négative est possible (utile pour les "knockdown" - par exemple pour broder sur de l'éponge).
+
+  - name: flip
+    category: length_position
+    applies-to:
+      - legacy-fill
+    en:
+      title: Flip fill
+      description: The flip option can help you with routing your stitch path. When you enable flip, stitching goes from right-to-left instead of left-to-right. Using flip and rotating 180 additional degrees (by adding or subtracting 180 from **angle**), you can cause fill stitching for a given shape to start from any of the four possible corners.
+    de:
+      title: Füllung umkehren (von rechts nach links)
+      description: Die Umkehr-Option kann bei der Reihenfolge des Stichpfads helfen. Wenn Umdrehen aktiviert wird, wird das Sticken von rechts nach links anstatt von links nach rechts ausgeführt.
+    fr:
+      title: Inverser le remplissage (début à la droite vers la gauche) 
+      description: L’option intervertir peut vous aider avec l'agencement de votre chemin de broderie. Lorsque vous activez l'inversion, la broderie va de droite à gauche au lieu de gauche à droite. En utilisant cette option conjointement avec une modification de l'angle (en ajoutant ou soustrayant 180 degrés), vous pouvez choisir n'importe lequel des quatre coins comme point de départ.
+
+  - name: reverse
+    category: length_position
+    applies-to:
+      - legacy-fill
+    en:
+      title: Reverse fill
+      description: Reverses fill path
+    de:
+      title: Rückwärtsfüllung
+      description: Stickt den Pfad rückwärts 
+    fr:
+      title: Inverser le remplissage
+      description: Inverse le chemin de remplissage.
 
   # Wiederholungen
 
@@ -1379,6 +1859,7 @@ params:
     applies-to:
       - running-stitch
       - ripple-stitch
+      - tatami
     en:
       title: Randomize stitch length
       description: Allows for randomize stitch length.
@@ -1387,13 +1868,14 @@ params:
       description: Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
     fr:
       title: Rendre aléatoire
-      description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement.
+      description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
 
   - name: random_stitch_length_jitter_percent
     category: random
     applies-to:
       - running-stitch
       - ripple-stitch
+      - tatami
     en:
       title: Random stitch length jitter
       description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
@@ -1408,10 +1890,12 @@ params:
     category: random
     applies-to:
       - running-stitch
+      - ripple-stitch
       - satin
       - e-stitch
       - s-stitch
       - zigzag-satin
+      - tatami
     en:
       title: Random seed
       description: |
