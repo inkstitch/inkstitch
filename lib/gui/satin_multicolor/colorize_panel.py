@@ -16,6 +16,7 @@ class ColorizePanel(ScrolledPanel):
 
     def __init__(self, parent, panel):
         self.panel = panel
+        self.parent = parent
         ScrolledPanel.__init__(self, parent)
 
         self.colorize_sizer = wx.BoxSizer(wx.VERTICAL)
@@ -126,10 +127,16 @@ class ColorizePanel(ScrolledPanel):
     def _add_color_event(self, event):
         self.add_color()
 
-    def add_color(self, color='black'):
+    def add_color(self, color='black', width=None, margin_right=None):
         color_panel = ColorPanel(self, color)
+        color_panel.colorpicker.Bind(wx.EVT_COLOURPICKER_CHANGED, self._update_colors)
+
         self.color_sizer.Add(color_panel, 0, wx.EXPAND | wx.ALL, 10)
 
+        if width:
+            color_panel.color_width.SetValue(width)
+        if margin_right:
+            color_panel.color_margin_right.SetValue(margin_right)
         if self.equististance.GetValue():
             color_panel.color_margin_right.Enable(False)
             color_panel.color_width.Enable(False)
@@ -215,10 +222,15 @@ class ColorizePanel(ScrolledPanel):
     def get_total_width(self):
         width = 0
         colors = self.color_sizer.GetChildren()
+
+        color_panel = None
         for color in colors:
             color_panel = color.GetWindow()
             width += color_panel.color_width.GetValue()
             width += color_panel.color_margin_right.GetValue()
+
+        if not color_panel:
+            return 0
         last_margin = color_panel.color_margin_right.GetValue()
         width -= last_margin
         return round(width, 2)
@@ -239,7 +251,7 @@ class ColorizePanel(ScrolledPanel):
             self.total_width.SetForegroundColour(wx.NullColour)
         self.panel.update_preview()
 
-    def _update_colors(self):
+    def _update_colors(self, event=None):
         equidistance = self.equististance.GetValue()
         num_colors = len(self.color_sizer.GetChildren())
         if equidistance:
@@ -252,6 +264,7 @@ class ColorizePanel(ScrolledPanel):
                 self._set_widget_width_value(monochrome_value, margin)
             self.monochrome_width.SetMax(max_width)
         self.Refresh()
+
         self._update()
 
     def _update_underlay(self, event):
