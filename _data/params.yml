@@ -12,10 +12,10 @@ categories:
     de: Stichlänge und Position
     fr: Longueur et emplacement des points
     subs:
-      - id: pattern
-        en: Pattern
-        de: Muster
-        fr: Motif
+      - id: stitch_length
+        en: Stitch length
+        de: Stichlänge
+        fr: Longueur du point
       - id: split_stitches
         en: Split stitches
         de: Zwischenstiche
@@ -24,6 +24,14 @@ categories:
         en: Short stitches
         de: Kurzstiche
         fr: Points Courts
+      - id: placement
+        en: Stitch placement
+        de: Stichpositionierung
+        fr: Stitch placement
+      - id: pattern
+        en: Pattern
+        de: Muster
+        fr: Motif
       - id: compensation
         en: Pull compensation
         de: Verzugsausgleich
@@ -43,7 +51,7 @@ categories:
       - id: travel
         en: Travel stitches
         de: Verbindungsstiche
-        fr: Travel stitches
+        fr: chemins de liaison
       - id: random
         en: Randomizing
         de: Randomisierung
@@ -140,10 +148,10 @@ params:
       description: Aucun point ne sera ajouté au motif de départ, chaque motif sera traité comme un point manuel et la longueur du point droit sera ignoré.
 
   - name: running_stitch_length_mm
-    category: length_position
+    category: stitch_length
     applies-to:
       - running-stitch
-      - ripple
+      - ripple-stitch
     en:
       title: Running stitch length
       description: |
@@ -161,7 +169,7 @@ params:
         Par exemple, `2 4` créera des points de longueur 2 et 4 mm en alternance.
 
   - name: running_stitch_tolerance_mm
-    category: length_position
+    category: stitch_length
     applies-to:
       - running-stitch
       - ripple-stitch
@@ -504,7 +512,7 @@ params:
         title: 
 
   - name: max_stitch_length_mm
-    category: split_stitches
+    category: stitch_length
     applies-to:
       - satin
       - e-stitch
@@ -543,7 +551,7 @@ params:
     en:
       title: Split Method
       description: |
-        Options:
+        Split stitches apply, when a maximum stitch length is set and the stitch length exceeds this value. Options:
         * default
         * Simple
         * Staggered
@@ -554,7 +562,7 @@ params:
     de:
       title: Zwischenstich-Methode
       description: |
-        Optionen:
+        Zwischenstiche werden gesetzt, wenn ein Wert für die maximale Stichlänge festgelegt wurde und die Stichlänge diesen Wert überschreitet. Optionen:
         * Standard
         * Einfach
         * Stichversatz
@@ -565,7 +573,7 @@ params:
     fr:
       title: Méthode de découpage
       description: |
-        Options:
+        Split stitches apply, when a maximum stitch length is set and the stitch length exceeds this value. Options:
         * Par défaut
         * Simple
         * Décalé
@@ -662,7 +670,7 @@ params:
   # Zigzag
 
   - name: zigzag_angle
-    category: length_position
+    category: pattern
     applies-to:
       - zigzag-stitch
     en:
@@ -676,7 +684,7 @@ params:
       description: Tourner la direction des zig-zags de cet angle (en degrés). Crée des effets de rayons sur les courbes.
 
   - name: stroke_pull_compensation_mm
-    category: length_position
+    category: compensation
     applies-to:
       - zigzag-stitch
     en:
@@ -698,7 +706,7 @@ params:
   # Manual
 
   - name: max_stitch_length_mm
-    category: length_position
+    category: stitch_length
     applies-to:
       - manual-stitch
     en:
@@ -1112,7 +1120,7 @@ params:
       description: Longueur du point (in mm) des chemins de dessous (connexions)
 
   - name: running_stitch_length_mm
-    category: length_position
+    category: stitch_length
     applies-to:
       - satin_center_underlay
       - satin_contour_underlay
@@ -1171,7 +1179,7 @@ params:
       description: Position du chemin de dessous vis à vis des rails. À 0% il suit le premier rail, à 50% il est centré, à 100% il suit le second rail.
 
   - name: running_stitch_position
-    category: length_position
+    category: placement
     applies-to:
       - satin_center_underlay
     en:
@@ -1294,7 +1302,7 @@ params:
       description: Par défaut, prend la valeur de la longueur maximum du point. Une valeur inférieure permet une meilleure transition entre les points découpés et les points non découpés.
 
   - name: underlay_inset_mm
-    category: length_position
+    category: size
     applies-to:
       - satin_contour_underlay
       - satin_zigzag_underlay
@@ -1327,7 +1335,7 @@ params:
         info: Par défaut la moitié de la valeur est appliquée de chaque coté.
 
   - name: underlay_inset_percent
-    category: length_position
+    category: size
     applies-to:
       - satin_contour_underlay
       - satin_zigzag_underlay
@@ -1511,7 +1519,7 @@ params:
         title: 
 
   - name: max_stitch_length_mm
-    category: length_position
+    category: stitch_length
     applies-to:
       - tatami
       - tatami-underlay
@@ -1594,7 +1602,7 @@ params:
         title: 
 
   - name: staggers
-    category: length_position
+    category: placement
     applies-to:
       - tatami
       - ripple-stitch
@@ -1744,7 +1752,7 @@ params:
         title: 
 
   - name: fill_underlay_inset_mm
-    category: length_position
+    category: size
     applies-to:
       - tatami-underlay
     en:
@@ -1758,7 +1766,7 @@ params:
       description: Décalage pour que la sous-couche soit totalement masquée par la couche supérieure. Une valeur négative est possible (utile pour les "knockdown" - par exemple pour broder sur de l'éponge).
 
   - name: flip
-    category: length_position
+    category: direction
     applies-to:
       - legacy-fill
     en:
@@ -1772,7 +1780,7 @@ params:
       description: L’option intervertir peut vous aider avec l'agencement de votre chemin de broderie. Lorsque vous activez l'inversion, la broderie va de droite à gauche au lieu de gauche à droite. En utilisant cette option conjointement avec une modification de l'angle (en ajoutant ou soustrayant 180 degrés), vous pouvez choisir n'importe lequel des quatre coins comme point de départ.
 
   - name: reverse
-    category: length_position
+    category: direction
     applies-to:
       - legacy-fill
     en:
@@ -1855,7 +1863,7 @@ params:
   # Random options (running)
 
   - name: enable_random_stitch_length
-    category: random
+    category: stitch_length
     applies-to:
       - running-stitch
       - ripple-stitch
@@ -1871,7 +1879,7 @@ params:
       description: Rendre la longueur du point aléatoire plutôt que de découper ou décaler régulièrement. Ceci est recommandé lorsque le remplissage est dense pour éviter les effets de moiré.
 
   - name: random_stitch_length_jitter_percent
-    category: random
+    category: stitch_length
     applies-to:
       - running-stitch
       - ripple-stitch
@@ -1918,7 +1926,7 @@ params:
   # All elements
 
   - name: min_stitch_length_mm
-    category: length_position
+    category: stitch_length
     applies-to:
       - all-types
     en:
