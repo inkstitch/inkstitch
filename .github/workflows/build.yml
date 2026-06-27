@@ -13,7 +13,6 @@ on:
               required: true
               type: boolean
               default: false
-
 jobs:
   linux64:
     runs-on: ubuntu-22.04
@@ -149,6 +148,10 @@ jobs:
     # We can't update the actions for this one because newer versions expect to use Node 24 at `/__e/node24/bin/node`.
     # Perhaps this will need to be replaced with an x64 image that builds this with an x86 toolchain with x86 python?
     runs-on: ubuntu-latest
+    # Fix for linux32 build
+    # Allow runners to contunue to use node20 until fall of 2026
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     container:
       image: linuxmintd/lmde6-i386
       volumes:
