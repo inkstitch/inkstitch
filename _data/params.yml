@@ -1110,6 +1110,7 @@ params:
       - tatami
       - circular_fill
       - guided_fill
+      - linear_gradient_fill
     en:
       title: Stitch length
       description: Stitch length (in mm) of the underpaths from section to section
@@ -1149,6 +1150,7 @@ params:
     applies-to:
       - satin
       - tatami
+      - linear_gradient_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -1387,6 +1389,7 @@ params:
       - contour_fill
       - cross_stitch
       - guided_fill
+      - linear_gradient_fill
       - legacy-fill
     en:
       title: Fill stitching
@@ -1420,6 +1423,7 @@ params:
       - contour_fill
       - cross_stitch
       - guided_fill
+      - linear_gradient_fill
       - legacy-fill
     en:
       title: Fill method
@@ -1435,6 +1439,8 @@ params:
           info: Select `Cross stitch`
         - stitch-type: guided_fill
           info: Select `Guided Fill`
+        - stitch-type: linear_gradient_fill
+          info: Select `Linear Gradient Fill`
         - stitch-type: legacy-fill
           info: Select `Legacy Fill`
     de:
@@ -1451,6 +1457,8 @@ params:
           info: "`Kreuzstich` auswählen"
         - stitch-type: guided_fill
           info: "`Kurvenfüllung` auswählen"
+        - stitch-type: linar_guided_fill
+          info: "`Lineare Verlaufsfüllung` auswählen"
         - stitch-type: legacy-fill
           info: "`Veraltete Füllung` auswählen"
     fr:
@@ -1548,6 +1556,7 @@ params:
       - contour_fill
       - cross_stitch
       - guided_fill
+      - linear_gradient_fill
       - legacy-fill
     en:
       title: Expand
@@ -1650,6 +1659,7 @@ params:
       - contour_fill
       - cross_stitch
       - guided_fill
+      - linear_gradient_fill
       - tatami-underlay
       - legacy-fill
     en:
@@ -1681,6 +1691,7 @@ params:
       - circular_fill
       - contour_fill
       - guided_fill
+      - linear_gradient_fill
       - legacy-fill
       - tatami-underlay
     en:
@@ -1739,6 +1750,7 @@ params:
       - tatami
       - ripple-stitch
       - guided_fill
+      - linear_gradient_fill
       - legacy-fill
     en:
       title: Stagger rows this many times before repeating
@@ -1834,6 +1846,7 @@ params:
     applies-to:
       - tatami
       - guided_fill
+      - linear_gradient_fill
       - tatami-underlay
       - legacy-fill
     en:
@@ -2153,6 +2166,20 @@ params:
         Le lissage détermine la mesure dans laquelle le chemin lissé peut s'éloigner du chemin originel. Essayez de petites valeurs comme 0.2.
         Attention, il est possible qu'il faille aussi modifier la tolérance du point droit.
 
+  - name: stop_at_ending_point
+    category: direction
+    applies-to:
+      - linear_gradient_fill
+    en:
+      title: Stop at ending point
+      description: If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot.
+    de:
+      title: Endposition erzwingen
+      description: Ist diese Option deaktivert, gibt der Endpunkt nur eine generelle Stickrichtung an. Bei aktivierter Option endet der letzte Farbabschnitt genau an diesem Punnkt.
+    fr:
+      title: Terminer à la position de fin
+      description: Si cette option est désélectionnée, la position de fin ne sera utilisée que pour déterminer la direction générale de la broderie. Si sélectionné, la dernière section terminera au point désigné.
+
   # Random options (running)
 
   - name: enable_random_stitch_length
@@ -2164,6 +2191,7 @@ params:
       - circular_fill
       - cotour_fill
       - guided_fill
+      - linear_gradient_fill
     en:
       title: Randomize stitch length
       description: Allows for randomize stitch length.
@@ -2183,6 +2211,7 @@ params:
       - circular_fill
       - cotour_fill
       - guided_fill
+      - linear_gradient_fill
     en:
       title: Random stitch length jitter
       description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
@@ -2206,6 +2235,7 @@ params:
       - circula_fill
       - contour_fill
       - guided_fill
+      - linear_gradient_fill
     en:
       title: Random seed
       description: |

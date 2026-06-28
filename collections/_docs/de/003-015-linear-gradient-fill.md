@@ -28,30 +28,7 @@ Ink/Stitch erlaubt es über visuelle Befehle den [Anfangs- und Endpunkt eines F�
 
 Öffne das Parameter-Dialogfenster (`Erweiterungen > Ink/Stitch  > Parameter`, um die Einstellungen zu verfeinern.
 
-Einstellung                     ||Beschreibung
----|---|---
-Flächenstickerei | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Füllmethode                     | Lineare Verlaufsfüllung | Hier bitte `Lineare Verlaufsfüllung` auswählen
-Erweitern                       |![Expand example](/assets/images/docs/params-fill-expand.png) | Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.
-Maximale Füll-Stichlänge        |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) | Die Stichlänge in einer Reihe. Ein kürzerer Stich kann am Anfang oder am Ende einer Reihe verwendet werden.
-Reihenabstand                   |![Spacing example](/assets/images/docs/params-fill-spacing_between_rows.png) | Abstand zwischen den Stichreihen.
-Reihenanzahl bis sich das Muster wiederholt |![Stagger example](/assets/images/docs/params-fill-stagger.png) | Die Einstellung bestimmt, wie viele Reihen die Stiche voneinander entfernt sind, bevor sie in die gleiche Position münden.  Fractional values are allowed and can have less visible diagonals than integer values.
-Letzten Stich in jeder Reihe überspringen | Der letzte Stich in jeder Reihe ist dem darauffolgenden Stich sehr nah. Ihn zu überspringen verringert die Stichanzahl und Dichte.
-Endposition erzwingen           | ☑ |Ist diese Option deaktivert, gibt der Endpunkt nur eine generelle Stickrichtung an. Bei aktivierter Option endet der letzte Farbabschnitt genau an diesem Punnkt.
-Stichlänge                      |![Running stitch length example](/assets/images/docs/params-fill-running_stitch_length.png) | Stichlänge für Geradstiche beim Übergang von Abschnitt zu Abschnitt.
-Geradstich-Toleranz             ||Alle Stiche müssen innerhalb dieses Abstandes zum Pfad befinden. Ein niedrigerer Toleranzwert führt zu kürzeren Stichen. Ein höherer Wert könnte Ecken abrunden. Dezimalzahlen führen ggf. zu weniger deutlichen Diagonalen als Ganzzahlen.
-Zufällige Stichlänge            ||Anstatt einer gleichmäßigen Verteilung, erfolgt die Stichlänge und -phase nach dem Zufallsprinzip. Dies wird besonders für eng beieinander liegende Kurvenfüllungen empfohlen, um Moiré-Artefakte zu vermeiden.
-Zufallsabweichung von der Stichlänge|| Betrag (%), um den die Länge jedes Stichs zufällig variiert werden soll.
-Zufallszahl                     || Zufallswert für randomisierte Attribute. Verwendet die Element-ID, falls leer.
-Minimale Stichlänge             || Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
-Minimale Länge für Sprungstiche || Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche
-Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
-Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
-Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
-Verstecher                      || Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
-Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
-Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
-{: .params-table }
+{% include params.html stitch_type='linear_gradient_fill'%}
 
 ## Unterlage
 
