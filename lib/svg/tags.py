@@ -189,6 +189,7 @@ inkstitch_attribs = [
     'invisible_layers',
     'layer_visibility',
     # All elements
+    'ignore_object',
     'trim_after',
     'stop_after',
     'random_seed',

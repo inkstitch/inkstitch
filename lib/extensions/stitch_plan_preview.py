@@ -150,6 +150,8 @@ class StitchPlanPreview(InkstitchExtension):
                         "height": str(height),
                         "width":  str(width),
                     })
+                    if self.options.ignore_layer:
+                        image.set(INKSTITCH_ATTRIBS['ignore_object'], True)
                     layer.replace_with(image)
                     return image
 

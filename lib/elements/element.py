@@ -448,6 +448,10 @@ class EmbroideryElement(object):
         return self.get_float_param('lock_end_scale_percent', 100)
 
     @property
+    def ignore_object(self):
+        return self.get_boolean_param('ignore_object', False)
+
+    @property
     @param('trim_after',
            _('Trim After'),
            tooltip=_('Add a TRIM command after stitching this object.'),
