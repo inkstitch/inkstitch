@@ -94,7 +94,7 @@ def iterate_nodes(node: BaseElement,  # noqa: C901
 
         element = EmbroideryElement(node)
 
-        if element.has_command('ignore_object'):
+        if element.has_command('ignore_object') or element.ignore_object:
             return []
 
         if node.tag == SVG_GROUP_TAG and node.get(INKSCAPE_GROUPMODE) == "layer":
