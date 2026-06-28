@@ -174,6 +174,7 @@ params:
       - circular_fill
       - contour_fill
       - guided_fill
+      - meander_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -857,9 +858,13 @@ params:
       - s-stitch
       - zigzag-satin
       - satin_zigzag_underlay
+      - meander_fill
     en:
       title: Zig-zag spacing (peak-to-peak)
       description: The peak-to-peak distance between zig-zags
+      add-descr:
+        - stitch-type: meander_fill
+          info: A non null value turns the running stitch innto zigzag with the corresponding zigzag spacing.
       image:
         url: /assets/images/docs/params-satin-zig-zag-spacing.png
         alt: 
@@ -867,13 +872,19 @@ params:
     de:
       title: Zick-Zack Abstand (Spitze zu Spitze)
       description: Der Abstand von Spitze zu Spitze auf einer gerade Linie
+      add-descr:
+        - stitch-type: meander_fill
+          info: Ein Wert größer als Null nutzt Zick-zack Linien anstelle auf Geradstichen mit dem entsprechenden Zick-Zack-Abstand
       image:
         url: /assets/images/docs/params-satin-zig-zag-spacing.png
         alt: 
         title: 
     fr:
       title: Espacement de Zig-zag
-      description: la distance de crête à crête entre les zig-za
+      description: la distance de crête à crête entre les zig-zag
+      add-descr:
+        - stitch-type: meander_fill
+          info: Une valeur non nulle déclenche la transformation du point droit des méandres en zigzag et en défini l'espacement.
       image:
         url: /assets/images/docs/params-satin-zig-zag-spacing.png
         alt: 
@@ -1111,24 +1122,32 @@ params:
       - circular_fill
       - guided_fill
       - linear_gradient_fill
+      - meander_fill
+      - tartan_fill
     en:
       title: Stitch length
       description: Stitch length (in mm) of the underpaths from section to section
       add-descr:
         - stitch-type: circular_fill
           info: For circular fill this is the overall stitch length.
+        - stitch-type: meander_fill
+          info: For meander fill this is the overall stitch length.
     de:
       title: Stichlänge
       description: Stichlänge (in mm) der Unterpfade von Segment zu Segment
       add-descr:
         - stitch-type: circular_fill
           info: Bei der Spiralfüllung ist dies der Wert für die Stichlänge des gesamten Füllelements.
+        - stitch-type: meander_fill
+          info: Bei der Meanderfüllung ist dies der Wert für die Stichlänge des gesamten Füllelements.
     fr:
       title: Longueur de point droit
       description: Longueur du point (in mm) des chemins de dessous (connexions)
       add-descr:
         - stitch-type: circular_fill
           info: Pour le remplissage circulaire il s'agit de longueur du point droit résultant.
+        - stitch-type: meander_fill
+          info: Pour le remplissage en méandres il s'agit de longueur du point droit résultant.
 
   - name: running_stitch_length_mm
     category: stitch_length
@@ -1151,6 +1170,7 @@ params:
       - satin
       - tatami
       - linear_gradient_fill
+      - tartan_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -1390,6 +1410,8 @@ params:
       - cross_stitch
       - guided_fill
       - linear_gradient_fill
+      - meander_fill
+      - tartan_fill
       - legacy-fill
     en:
       title: Fill stitching
@@ -1424,6 +1446,8 @@ params:
       - cross_stitch
       - guided_fill
       - linear_gradient_fill
+      - meander_fill
+      - tartan_fill
       - legacy-fill
     en:
       title: Fill method
@@ -1441,6 +1465,10 @@ params:
           info: Select `Guided Fill`
         - stitch-type: linear_gradient_fill
           info: Select `Linear Gradient Fill`
+        - stitch-type: meander_fill
+          info: Select `Meander Fill`
+        - stitch-type: tartan_fill
+          info: Select `Tartan Fill`
         - stitch-type: legacy-fill
           info: Select `Legacy Fill`
     de:
@@ -1459,6 +1487,10 @@ params:
           info: "`Kurvenfüllung` auswählen"
         - stitch-type: linar_guided_fill
           info: "`Lineare Verlaufsfüllung` auswählen"
+        - stitch-type: meander_fill
+          info: "`Meanderfüllung` auswählen"
+        - stitch-type: tartan_fill
+          info: "`Tartanfüllung` auswählen"
         - stitch-type: legacy-fill
           info: "`Veraltete Füllung` auswählen"
     fr:
@@ -1475,6 +1507,10 @@ params:
           info: Doit être sur `Point de Croix`
         - stitch-type: guided_fill
           info: Doit être sur `Remplissage guidé`
+        - stitch-type: meander_fill
+          info: Doit être sur `Remplissage en méandres`
+        - stitch-type: tartan_fill
+          info: Doit être sur `Remplissage Tartan`
         - stitch-type: legacy-fill
           info: Doit être sur Remplissage `Manuel Legacy`
 
@@ -1557,6 +1593,8 @@ params:
       - cross_stitch
       - guided_fill
       - linear_gradient_fill
+      - meander_fill
+      - tartan_fill
       - legacy-fill
     en:
       title: Expand
@@ -1593,6 +1631,7 @@ params:
     category: pattern
     applies-to:
       - tatami
+      - tartan_fill
       - tatami-underlay
       - legacy-fill
     en:
@@ -1660,6 +1699,7 @@ params:
       - cross_stitch
       - guided_fill
       - linear_gradient_fill
+      - tartan_fill
       - tatami-underlay
       - legacy-fill
     en:
@@ -1692,6 +1732,7 @@ params:
       - contour_fill
       - guided_fill
       - linear_gradient_fill
+      - tartan_fill
       - legacy-fill
       - tatami-underlay
     en:
@@ -1751,6 +1792,7 @@ params:
       - ripple-stitch
       - guided_fill
       - linear_gradient_fill
+      - tartan_fill
       - legacy-fill
     en:
       title: Stagger rows this many times before repeating
@@ -2018,6 +2060,62 @@ params:
       title: Couverture du remplissage
       description: Pourcentage de superposition avec le remplissage nécessaire à la création d'une croix
 
+  - name: meander_pattern
+    category: pattern
+    applies-to:
+      - meander_fill
+    en:
+      title: Meander Pattern
+      description: Various patterns to choose from
+    de:
+      title: Muster
+      description: Various patterns to choose from
+    fr:
+      title: Motif de méandre
+      description: Divers motifs au choix
+
+  - name: meander_angle
+    category: pattern
+    applies-to:
+      - meander_fill
+    en:
+      title: Meander pattern angle
+      description: Rotates Pattern
+    de:
+      title: Winkel des Musters
+      description: Rotiert das Muster
+    fr:
+      title: Angle du motif de méandre
+      description: en degré
+
+  - name: meander_scale_percent
+    category: pattern
+    applies-to:
+      - meander_fill
+    en:
+      title: Meander pattern scale
+      description: Scale the pattern (%)
+    de:
+      title: Muster skalieren
+      description: Skaliert das Muster (%)
+    fr:
+      title: Angle du motif de méandre
+      description: 
+
+  - name: clip
+    category: pattern
+    applies-to:
+      - meander_fill
+    en:
+      title: Clip path
+      description: Constrain stitching to the shape.  Useful when smoothing and expand are used. 
+    de:
+      title: Pfad auf Form beschränken
+      description: Nützlich bei der Verwendung von Glätten und Erweitern. Sorgt dafür, dass keine Stiche außerhalb der ursprünglichen Form liegen.
+    fr:
+      title: Échelle du motif de méandre
+      description: Mise à l'échelle du motif (en %)
+
   # Wiederholungen
 
   - name: repeats
@@ -2027,7 +2125,8 @@ params:
       - ripple-stitch
       - zigzag-stitch
       - satin_center_underlay
-      - circula_fill
+      - circular_fill
+      - meander_fill
     en:
       title: Repeats
       description: |
@@ -2066,6 +2165,8 @@ params:
       - circular_fill
       - cross_stitch
       - guided_fill
+      - meander_fill
+      - tartan_fill
     en:
       title: Bean stitch number of repeats
       description: |
@@ -2147,6 +2248,7 @@ params:
     category: pattern
     applies-to:
       - contour_fill
+      - meander_fill
     en:
       title: Smoothness
       description: |
@@ -2180,6 +2282,59 @@ params:
       title: Terminer à la position de fin
       description: Si cette option est désélectionnée, la position de fin ne sera utilisée que pour déterminer la direction générale de la broderie. Si sélectionné, la dernière section terminera au point désigné.
 
+  - name: zigzag_width_mm
+    category: pattern
+    applies-to:
+      - meander_fill
+    en:
+      title: Zigzag width
+      description: |
+        Width of zigzag if spacing is non null
+    de:
+      title: Zick-Zack Breite
+      description: Die Breite der Zick-Zack-Linie, bzw. deren Höhe
+    fr:
+      title: Largeur du zigzag
+      description: La largeur du zigzag est définie ici
+
+  - name: rows_per_thread
+    category: pattern
+    applies-to:
+      - tartan_fill
+    en:
+      title: Rows per tartan thread
+      description: Consecutive rows of the same color
+    de:
+      title: Reihen pro Tartan-Faden
+      description: Aufeinanderfolgende Reihen gleicher Farbe
+    fr:
+      title: Nombre de rangées par fil du Tartan
+      description: Nombre de rangées consécutives de la même couleur
+
+  - name: 
+    category: 
+    applies-to:
+      - tartan_fill
+    en:
+      title: Herringbone width
+      description: |
+        Defines the width of a herringbone pattern.
+        Use 0 for regular rows.
+        It is recommended to use a multiple or a fraction of the defined stripe width (or to use only one color on warp and an other color on weft).
+    de:
+      title: Fischgrätenmuster-Breite
+      description: |
+        Definiert die Breite des Frischgrätenmusters.
+        Nutze 0 für das klassische Tartanmuster.
+        Es wird empfohlen ein mehrfaches oder einen teilbaren Wert der Streifen-Breite zu nutzen.
+        Ein schönes Ergebnis lässt sich auch erzielen, wenn für Kette und Schuss jeweils nur eine Farbe definiert wurde.
+    fr:
+      title: Largeur de chevron
+      description: |
+        Defini la largeur du motif en chevron.
+        Choisir 0 pour des bandes normales.
+        Il est recommandé d'utiliser un multiple ou une fraction de la largeur de bande (ou d'utiliser seulement une couleur pour la trame et une autre couleur pour la chaîne).
+
   # Random options (running)
 
   - name: enable_random_stitch_length
@@ -2192,6 +2347,7 @@ params:
       - cotour_fill
       - guided_fill
       - linear_gradient_fill
+      - meander_fill
     en:
       title: Randomize stitch length
       description: Allows for randomize stitch length.
@@ -2212,6 +2368,7 @@ params:
       - cotour_fill
       - guided_fill
       - linear_gradient_fill
+      - meander_fill
     en:
       title: Random stitch length jitter
       description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
@@ -2236,6 +2393,7 @@ params:
       - contour_fill
       - guided_fill
       - linear_gradient_fill
+      - meande_fill
     en:
       title: Random seed
       description: |
