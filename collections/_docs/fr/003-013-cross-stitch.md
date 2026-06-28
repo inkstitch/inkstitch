@@ -21,7 +21,7 @@ Il se caractérise par de petites croix régulières, ce qui donne à l'image br
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Point de croix" %}
 
-# Création
+## Création
 
 * Dessinez une forme fermée avec une couleur de remplissage.
 * Ouvrez la boîte de dialogue des paramètres.
@@ -114,7 +114,7 @@ L'extension calcule et affiche également la longueur des points en fonction des
 
 [En savoir plus](/fr/docs/tools-fill/#cross-stitch-assistant)
 
-## Définir les points de départ et de fin
+### Définir les points de départ et de fin
 
 Par défaut, le remplissage automatique commence au plus près de l'élément de broderie précédent et se termine au plus près de l'élément suivant.
 
@@ -124,30 +124,8 @@ Pour modifier ce comportement, définissez les points de départ et de fin des o
 
 Exécutez **Extensions > Ink/Stitch > Paramétres** pour ajuster les paramètres selon vos besoins.
 
-|Paramètres||Description|
-|---|---|---|
-|Remplissage| ☑ |Doit être activé pour que ces paramètres prennent effet.|
-|Méthode de remplissage |Point de Croix| Point de Croix  doit être sélectionné.|
-|Dimension des cellules|| Défini les dimensions de la grille de point de croix|
-|Méthode de Point de Croix||Choisir la méthode (voir ci-dessus pour des informations détaillées)|
-|Aligner la grille avec le canevas            ||Cela garantit un bon alignement des zones de point de croix adjacentes, mais cela signifie également que le résultat peut changer lorsque l'élément est déplacé hors de la grille. Désactivez cette option pour garantir que cet élément soit brodé de la même manière, quelle que soit sa position sur le canevas.|
-|Décalage de la grille                       || Translate la grille de point de croix selon des valeurs données X et Y séparées par un espace. Une valeur unique induit une translation identique sur les axes horizontaux et verticaux|
-|Couverture du remplissage                    ||Pourcentage de superposition avec le remplissage nécessaire à la création d'une croix|
-|Élargir|![Expand example](/assets/images/docs/params-fill-expand.png) |dilate la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu. Il est recommandé d'utiliser au moins une petite valeur d'expansion (par exemple 0,2) sur les éléments de point de croix.|
-|Longueur  maximum du point droit||Pour un aspect de point de croix, indiquez ici une valeur plus grande que la longueur des diagonales des cellules de la grille. Pour de très grandes croix, choisir une valeur plus petite  pour  eviter de  trop longs points|
-|Nombre de répétitions du point triple ||Détermine combien de fois chaque point doit être répété.<br />◦ Une valeur de `0` ne produit aucune répétition<br/>◦ Une valeur de `1` répète chaque point trois fois  (avant, arrière, avant).<br />◦ Une valeur de `2` répète le point 5 fois.|
-|Longueur minimum du point||Est prioritaire par rapport à la valeur de la longueur minimum de point définie dans les [préférences](/fr/docs/preferences/#longueur-minimum-de-points-mm). Les points plus courts seront supprimés.|
-|Longueur minimum de saut||Est prioritaire par rapport à la valeur de la longueur minimum de saut définie dans les [préférences](/fr/docs/preferences/#sauts-de-fil-mm). Si la distance à l'objet suivant est inférieure, il n'y aura pas de points d'arrêt, sauf si les points d'arrêts sont forcés.|
-|Autoriser les points d'arrêts | ☑|Ajoute un point d'arrêt à la ou les positions choisies.|
-|Forcer les points d'arrêts |☑|Force un point d'arrêt après l'objet indépendamment de la valeur de "Saut de fil" dans les Préférences d'Ink/Stitch.|
-|Point d'arrêt initial       ||Sélectionnez le type du  [point d'ancrage](/fr/docs/stitches/lock-stitches).|
-|Point d'arrêt final       ||Sélectionnez le type du [point d'arrêt](/fr/docs/stitches/lock-stitches).|
-|Arrêter après                       |☑ |Faire faire une pause à la machine après avoir brodé cet objet. Si une position d'arrêt a été définie, elle est rejointe par un saut avant la pause. |
-|Couper après                        |☑ |Couper le fil après avoir brodé cet objet.
-{: .params-table}
+{% include params.html stitch_type='cross_stitch'%}
 
-
-
-### Fichiers d'exemple incluant des points de croix
+## Fichiers d'exemple incluant des points de croix
 
 {% include tutorials/tutorial_list key="stitch-type" value="Cross Stitch" %}

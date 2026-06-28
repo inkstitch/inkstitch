@@ -20,7 +20,7 @@ Cross-stitch is characterized by small, even crosses, which give the embroidered
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Cross stitch with a black bean stitch outline" %}
 
-# Creation
+## Creation
 
 * Draw a closed shape with a fill color
 * Open the params dialog
@@ -101,7 +101,7 @@ It also computes and displays the stitch length given the grid dimensions. Maxim
 
 [Read more](/docs/tools-fill/#cross-stitch-assistant)
 
-## Set Start and End Point
+### Set Start and End Point
 
 By default, an automatic fill starts as close as possible to the previous embroidery element and ends as close as possible to the next embroidery element.
 
@@ -111,30 +111,8 @@ To change this behavior, set start and end points for autofill objects with [Vis
 
 Run `Extensions > Ink/Stitch  > Params` to tweak the settings to your needs.
 
-Settings||Description
----|---|---
-Fill stitching| ☑      |Must be enabled for these settings to take effect.
-Fill method                        |Cross Stitch|Must be set to cross stitch.
-Cross stitch method                ||Choose method (for detailed information see above)
-Pattern size                       ||Defines the size of the cross stitch (grid)
-Align grid with canvas             ||This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.<br>Disable this option to ensure, that this element stitches the same, independently on its position on the canvas.
-Grid Offset                        ||Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y.
-Fill coverage                      ||Percentage of overlap for each cross with the fill area.
-Expand                             |![Expand example](/assets/images/docs/params-fill-expand.png) |Expand the shape before fill stitching, to compensate for gaps between shapes.<br>It is recommended to use at least a small expand value (e.g. 0.2) on cross stitch elements.
-Maximum fill stitch length         |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png) |Usually set to at least the length of a cross diagonal. For huge crosses chose a smaller value.
-Bean stitch number of repeats      ||Determines the number of times to repeat each stitch.<br />◦ A value of `0` does not repeat the stitch (normal stitch)<br/>◦ A value of `1` repeats each stitch three times (forward, back, forward).<br />◦ A value of `2` repeats the stitch five times.
-Minimum stitch length              ||Overwrite global minimum stitch length setting. Shorter stitches than that will be removed.
-Minimum  jump stitch  length       ||Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches
-Allow lock stitches                ||Enables lock stitches in only desired positions
-Force lock stitches                |☑ |Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the collapse length value in the Ink/Stitch preferences.
-Tack stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Scale Tack stitch                  ||
-Lock stitch                        ||Chose your [favorite style](/docs/stitches/lock-stitches/)
-Scale Lock stitch                  ||
-Trim After                         |☑ |Trim the thread after sewing this object.
-Stop After                         |☑ |Stop the machine after sewing this object. Before stopping it will jump to the stop position (frame out) if defined.
-{: .params-table }
+{% include params.html stitch_type='cross_stitch'%}
 
-### Sample Files Including Cross Stitches
+## Sample Files Including Cross Stitches
 
 {% include tutorials/tutorial_list key="stitch-type" value="Cross Stitch" %}

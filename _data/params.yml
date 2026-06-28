@@ -176,6 +176,7 @@ params:
       - satin_center_underlay
       - satin_contour_underlay
       - circular_fill
+      - contour_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -1150,7 +1151,6 @@ params:
     applies-to:
       - satin
       - tatami
-      - contour_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -1387,6 +1387,7 @@ params:
       - tatami
       - circular_fill
       - contour_fill
+      - cross_stitch
       - legacy-fill
     en:
       title: Fill stitching
@@ -1418,6 +1419,7 @@ params:
       - tatami
       - circular_fill
       - contour_fill
+      - cross_stitch
       - legacy-fill
     en:
       title: Fill method
@@ -1430,6 +1432,8 @@ params:
         - stitch-type: contour_fill
           info: Select `Contour Fill`
         - stitch-type: legacy-fill
+          info: Select `Cross stitch`
+        - stitch-type: legacy-fill
           info: Select `Legacy Fill`
     de:
       title: Flächenstickerei
@@ -1441,6 +1445,8 @@ params:
           info: "`Spiralfüllung` auswählen"
         - stitch-type: contour_fill
           info: "`Konturfüllung` auswählen"
+        - stitch-type: cross_stitch
+          info: "`Kreuzstich` auswählen"
         - stitch-type: legacy-fill
           info: "`Veraltete Füllung` auswählen"
     fr:
@@ -1451,6 +1457,10 @@ params:
           info: Doit être sur Remplissage Tatami.
         - stitch-type: circular_fill
           info: Doit être sur Remplissage circulaire
+        - stitch-type: contour_fill
+          info: Doit être sur Remplissage selon contour
+        - stitch-type: cross_stitch
+          info: Doit être sur Point de Croix
         - stitch-type: legacy-fill
           info: Doit être sur Remplissage Manuel Legacy
 
@@ -1460,10 +1470,14 @@ params:
       - tatami
       - circular_fill
       - contour_fill
+      - cross_stitch
       - legacy-fill
     en:
       title: Expand
       description: Expand the shape before fill stitching, to compensate for gaps between shapes.
+      add-descr:
+        - stitch-type: cross_stitch
+          info: It is recommended to use at least a small expand value (e.g. 0.2) on cross stitch elements.
       image:
         url: /assets/images/docs/params-fill-expand.png
         alt: 
@@ -1471,6 +1485,9 @@ params:
     de:
       title: Erweitern
       description:  Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.
+      add-descr:
+        - stitch-type: cross_stitch
+          info: Für den Kreuzstich wird ein kleiner Wert (z.B. 0.1) empfohlen.
       image:
         url: /assets/images/docs/params-fill-expand.png
         alt: 
@@ -1478,6 +1495,9 @@ params:
     fr:
       title: Élargir
       description: Etend la forme avant le point de remplissage pour compenser les écarts entre les formes en raison de l'étirement du tissu.
+      add-descr:
+        - stitch-type: cross_stitch
+          info: Il est recommandé d'utiliser au moins une petite valeur d'expansion (par exemple 0,2) sur les éléments de point de croix.
       image:
         url: /assets/images/docs/params-fill-expand.png
         alt: 
@@ -1551,6 +1571,7 @@ params:
     applies-to:
       - tatami
       - contour_fill
+      - cross_stitch
       - tatami-underlay
       - legacy-fill
     en:
@@ -1826,6 +1847,108 @@ params:
       title: Inverser le remplissage
       description: Inverse le chemin de remplissage.
 
+  - name: cross_stitch_method
+    category: pattern
+    applies-to:
+      - cross_stitch
+    en:
+      title: Cross stitch method
+      description: Choose method (for detailed information see above)
+    de:
+      title: Kreuzstich-Methode
+      description: Wähle eine Methode. Für detailierte Informationen siehe oben.
+    fr:
+      title: Méthode de Point de Croix
+      description: Choisir la méthode (voir ci-dessus pour des informations détaillées)
+
+  - name: pattern_size_mm
+    category: patten
+    applies-to:
+      - cross_stitch
+    en:
+      title: Pattern size
+      description: Defines the size of the cross stitch (grid)
+    de:
+      title: Mustergröße
+      description: Definiert die Größe des Kreuzstichgitters
+    fr:
+      title: Dimension des cellules
+      description: Défini les dimensions de la grille de point de croix
+
+  - name: canvas_grid_origin
+    category: pattern
+    applies-to:
+      - cross_stitch
+    en:
+      title: Align grid with canvas
+      description: |
+        This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.
+        Disable this option to ensure, that this element stitches the same, independently on its position on the canvas.
+    de:
+      title: Gitter an Arbeitsfläche ausrichten
+      description: |
+        Dies gewährleistet eine gute Ausrichtung benachbarter Kreuzstichbereiche, bedeutet jedoch auch, dass sich das Ergebnis ändern kann, wenn das Element verschoben wird.
+        Ist die Option deaktiviert, wird das Element unabhängig von seiner Position auf der Leinwand immer gleich gestickt wird.
+    fr:
+      title: Aligner la grille avec le canevas
+      description: |
+        Cela garantit un bon alignement des zones de point de croix adjacentes, mais cela signifie également que le résultat peut changer lorsque l'élément est déplacé hors de la grille. 
+        Désactivez cette option pour garantir que cet élément soit brodé de la même manière, quelle que soit sa position sur le canevas.
+
+  - name: cross_offset_mm
+    category: pattern
+    applies-to:
+      - cross_stitch
+    en:
+      title: Grid Offset
+      description: Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y.
+    de:
+      title: Gitter-Versatz
+      description: Verschiebt das Gitter um die angebenen Werte. X und Y Werte werden durch ein Leerzeichen getrennt angegeben. Ist nur ein Wert definiert, wird er für beide Richtungen verwendet.
+    fr:
+      title: Décalage de la grille
+      description: Translate la grille de point de croix selon des valeurs données X et Y séparées par un espace. Une valeur unique induit une translation identique sur les axes horizontaux et verticaux
+
+  - name: fill_coverage
+    category: pattern
+    applies-to:
+      - cross_stitch
+    en:
+      title: Fill coverage
+      description: Percentage of overlap for each cross with the fill area.
+    de:
+      title: Füllabdeckung
+      description: Prozentuale Überlappung für jeden Kreuzstich mit der Füllfläche
+    fr:
+      title: Couverture du remplissage
+      description: Pourcentage de superposition avec le remplissage nécessaire à la création d'une croix
+
+  - name: 
+    category: 
+    applies-to:
+      - cross_stitch
+    en:
+      title: 
+      description: 
+      image:
+        url: 
+        alt: 
+        title: 
+    de:
+      title: 
+      description: 
+      image:
+        url: 
+        alt: 
+        title: 
+    fr:
+      title: 
+      description: 
+      image:
+        url: 
+        alt: 
+        title: 
+
   # Wiederholungen
 
   - name: repeats
@@ -1872,6 +1995,7 @@ params:
       - zigzag-stitch
       - manual-stitch
       - circular_fill
+      - cross_stitch
     en:
       title: Bean stitch number of repeats
       description: |

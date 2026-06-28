@@ -20,7 +20,7 @@ Kreuzstich zeichnet sich durch kleine, gleichmäßige Kreuze aus, die dem gestic
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Kreuzstich mit einem schwarzen Rand mit Mehrfachgeradstichen" %}
 
-# Funktionsweise
+## Funktionsweise
 
 * Zeichne eine geschlossene Form mit einer Füllfarbe
 * Öffne den Parameter-Dialog
@@ -110,27 +110,8 @@ Dieses Verhalten kann durch das Setzen von manuellen [Anfangs- bzw. Endpunken](/
 
 Öffne das Parameter-Dialogfenster (`Erweiterungen > Ink/Stitch  > Parameter`, um die Einstellungen zu verfeinern.
 
-Einstellung                        ||Beschreibung
----|---|---
-Flächenstickerei   | ☑ |Muss aktiviert sein, damit diese Einstellungen wirksam werden.
-Füllmethode                        |Kreuzstich| `Kreuzstich` auswählen
-Kreuzstich-Methode                 ||Wähle eine Methode. Für detailierte Informationen siehe oben.
-Mustergröße                        ||Definiert die Größe des Kreuzstichgitters
-Gitter an Arbeitsfläche ausrichten ||Dies gewährleistet eine gute Ausrichtung benachbarter Kreuzstichbereiche, bedeutet jedoch auch, dass sich das Ergebnis ändern kann, wenn das Element verschoben wird.<br>Ist die Option deaktiviert, wird das Element unabhängig von seiner Position auf der Leinwand immer gleich gestickt wird.
-Gitter-Versatz                     ||Verschiebt das Gitter um die angebenen Werte. X und Y Werte werden durch ein Leerzeichen getrennt angegeben. Ist nur ein Wert definiert, wird er für beide Richtungen verwendet.
-Erweitern                          |![Expand example](/assets/images/docs/params-fill-expand.png) |Erweitern der Form vor dem Füllstich, um Lücken zwischen den Formen auszugleichen.<br>Für den Kreuzstich wird ein kleiner Wert (z.B. 0.1) empfohlen.
-Maximale Füllstichlänge            |![Stitch length example](/assets/images/docs/params-fill-stitch_length.png)|Normalerweise mindestens die Länge der Kreuzstichdiagonalen. Große Kreuze können mit einem kleineren Wert unterteilt werden.
-Mehrfachgeradstich Anzahl der Wiederholungen || ◦ Jeden Stich vervielfachen.<br/>◦ Ein Wert von 1 würde jeden Stich verdreifachen (vorwärts, rückwärts, vorwärts).<br/>◦ Ein Wert von 2 würde jeden Stich fünffach ausführen, usw.<br/>◦ Gilt nur für den Geradstich.
-Minimale Stichlänge             || Überschreibt die globale Einstellung für die minimale Stichlänge. Stiche, die kleiner sind als dieser Wert werden entfernt.
-Minimale Länge für Sprungstiche || Überschreibt die globale Einstellung für die minimale Länge für Sprungstiche. Kleinere Entfernungen zum nächsten Objekt haben keine Vernähstiche.
-Vernähen erlauben               || Vernäht bei Bedarf an den ausgewählten Positionen
-Vernähen erzwingen              || Vernäht den Faden nach diesem Element, auch dann, wenn der Abstand zum Folgeobjekt geringer ist als in den [Ink/Stitch Einstellungen](/de/docs/preferences/) definiert.
-Anstecher                       || Wähle die [Anstecher](/de/docs/stitches/lock-stitches) Variante (Anfang).
-Verstecher                      || Wähle die [Verstecher](/de/docs/stitches/lock-stitches) Variante (Ende).
-Stopp                           || Stoppt die Maschine nachdem dieses Objekt genäht wurde und springt zur Stopp-Position (sofern vorhanden)
-Fadenschnitt                    || Schneidet den Faden nachdem dieses Objekt genäht wurde
-{: .params-table }
+{% include params.html stitch_type='cross_stitch'%}
 
-### Beispieldateien mit Kreuzstichen
+## Beispieldateien mit Kreuzstichen
 
 {% include tutorials/tutorial_list key="stichart" value="Kreuzstich" %}
