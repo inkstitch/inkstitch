@@ -24,14 +24,10 @@ categories:
         en: Short stitches
         de: Kurzstiche
         fr: Points Courts
-      - id: placement
-        en: Stitch placement
-        de: Stichpositionierung
-        fr: Stitch placement
       - id: pattern
-        en: Pattern
-        de: Muster
-        fr: Motif
+        en: Stitch placement / Pattern
+        de: Stichpositionierung / Muster
+        fr: Stitch placement / Motif
       - id: compensation
         en: Pull compensation
         de: Verzugsausgleich
@@ -177,6 +173,7 @@ params:
       - satin_contour_underlay
       - circular_fill
       - contour_fill
+      - guided_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -1112,6 +1109,7 @@ params:
       - zigzag_satin
       - tatami
       - circular_fill
+      - guided_fill
     en:
       title: Stitch length
       description: Stitch length (in mm) of the underpaths from section to section
@@ -1191,7 +1189,7 @@ params:
       description: Position du chemin de dessous vis à vis des rails. À 0% il suit le premier rail, à 50% il est centré, à 100% il suit le second rail.
 
   - name: running_stitch_position
-    category: placement
+    category: pattern
     applies-to:
       - satin_center_underlay
     en:
@@ -1388,6 +1386,7 @@ params:
       - circular_fill
       - contour_fill
       - cross_stitch
+      - guided_fill
       - legacy-fill
     en:
       title: Fill stitching
@@ -1420,6 +1419,7 @@ params:
       - circular_fill
       - contour_fill
       - cross_stitch
+      - guided_fill
       - legacy-fill
     en:
       title: Fill method
@@ -1433,6 +1433,8 @@ params:
           info: Select `Contour Fill`
         - stitch-type: legacy-fill
           info: Select `Cross stitch`
+        - stitch-type: guided_fill
+          info: Select `Guided Fill`
         - stitch-type: legacy-fill
           info: Select `Legacy Fill`
     de:
@@ -1447,6 +1449,8 @@ params:
           info: "`Konturfüllung` auswählen"
         - stitch-type: cross_stitch
           info: "`Kreuzstich` auswählen"
+        - stitch-type: guided_fill
+          info: "`Kurvenfüllung` auswählen"
         - stitch-type: legacy-fill
           info: "`Veraltete Füllung` auswählen"
     fr:
@@ -1454,15 +1458,87 @@ params:
       description: 
       add-descr:
         - stitch-type: tatami
-          info: Doit être sur Remplissage Tatami.
+          info: Doit être sur `Remplissage Tatami`.
         - stitch-type: circular_fill
-          info: Doit être sur Remplissage circulaire
+          info: Doit être sur `Remplissage circulaire`
         - stitch-type: contour_fill
-          info: Doit être sur Remplissage selon contour
+          info: Doit être sur `Remplissage selon contour`
         - stitch-type: cross_stitch
-          info: Doit être sur Point de Croix
+          info: Doit être sur `Point de Croix`
+        - stitch-type: guided_fill
+          info: Doit être sur `Remplissage guidé`
         - stitch-type: legacy-fill
-          info: Doit être sur Remplissage Manuel Legacy
+          info: Doit être sur Remplissage `Manuel Legacy`
+
+  - name: contour_strategy
+    category: pattern
+    applies-to:
+      - contour_fill
+    en:
+      title: Contour Fill Strategy
+      description: |
+        **Inner to outer** (default) is able to fill shapes with bottlenecks
+        **Single spiral** fills a shape with a single spiral from the outside to the inside
+        **Double spiral** fills a shape with a double spiral, starts and ends at the outside border of the shape.
+      image:
+        url: /assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg
+        alt: 
+        title: 
+    de:
+      title: Strategie
+      description: |
+        **Von Innen nach Außen** (Standard) kann auch Formen mit Engpässen füllen
+        **Einfach Spirale** füllt eine Fläche mit einer einfachen Spirale von außen nach innen
+        **Doppelte Spirale** füllt eine Fläche mit einer doppelten Spirale, die Außen beginnt und endet.
+      image:
+        url: /assets/images/docs/contour-fill-spirals.jpg
+        alt: 
+        title: 
+    fr:
+      title: Stratégie de remplissage selon le contour
+      description: |
+        **Intérieur vers extérieur** (valeur par défaut) est capable de remplir des formes avec un goulot d'étranglement
+        **Spirale Simple** remplit une forme avec une spirale unique de l'extérieur vers l'intérieur
+        **Spirale doublel** remplit une forme avec une double spirale, en commençant et terminant sur la frontière extérieure de la forme.
+      image:
+        url: /assets/images/docs/contour-fill-spirals.jpg
+        alt: 
+        title: 
+
+  - name: guided_fill_strategy
+    category: pattern
+    applies-to:
+      - guided_fill
+    en:
+      title: Guided Fill Strategy
+      description: |
+        * Copy( default), top, fill the shape with copies of the guide lines.
+        * Parallel offset, bottom, will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced.
+        * Buffer
+      image:
+        url: /assets/images/docs/guidedfillstrategies.svg
+        alt: 
+        title: 
+    de:
+      title: Strategie
+      description: |
+        * Kopieren (Standard), oben, füllt die Form mit Hilfe von Kopien der Führungslinie.
+        * Parallelverschiebung, unten, stellt sicher, dass die Abstände gleich bleiben (dies kann zu scharfen Kanten führen).
+        * Buffer
+      image:
+        url: /assets/images/docs/guidedfillstrategies.svg
+        alt: 
+        title: 
+    fr:
+      title: Stratégie pour le remplissage guidé
+      description: |
+        * Copier(valeur par défaut), en haut sur le dessin, remplit la forme avec des copies translatées de la ligne guide.
+        * Décalage parallèle, en bas sur le dessin, remplit avec des lignes qui sont calculées à partir de la ligne guide pour que chaque ligne soit a distance constante de la ligne précédente. Cette stratégie peut introduire des angles aigus.
+        * Buffer
+      image:
+        url: /assets/images/docs/guidedfillstrategies.svg
+        alt: 
+        title: 
 
   - name: expand_mm
     category: size
@@ -1471,6 +1547,7 @@ params:
       - circular_fill
       - contour_fill
       - cross_stitch
+      - guided_fill
       - legacy-fill
     en:
       title: Expand
@@ -1572,6 +1649,7 @@ params:
       - tatami
       - contour_fill
       - cross_stitch
+      - guided_fill
       - tatami-underlay
       - legacy-fill
     en:
@@ -1602,6 +1680,7 @@ params:
       - tatami
       - circular_fill
       - contour_fill
+      - guided_fill
       - legacy-fill
       - tatami-underlay
     en:
@@ -1655,10 +1734,11 @@ params:
         title: 
 
   - name: staggers
-    category: placement
+    category: pattern
     applies-to:
       - tatami
       - ripple-stitch
+      - guided_fill
       - legacy-fill
     en:
       title: Stagger rows this many times before repeating
@@ -1753,6 +1833,7 @@ params:
     category: density
     applies-to:
       - tatami
+      - guided_fill
       - tatami-underlay
       - legacy-fill
     en:
@@ -1782,6 +1863,7 @@ params:
     applies-to:
       - tatami
       - circula_fill
+      - guided_fill
       - tatami-underlay
     en:
       title: Underpath
@@ -1923,32 +2005,6 @@ params:
       title: Couverture du remplissage
       description: Pourcentage de superposition avec le remplissage nécessaire à la création d'une croix
 
-  - name: 
-    category: 
-    applies-to:
-      - cross_stitch
-    en:
-      title: 
-      description: 
-      image:
-        url: 
-        alt: 
-        title: 
-    de:
-      title: 
-      description: 
-      image:
-        url: 
-        alt: 
-        title: 
-    fr:
-      title: 
-      description: 
-      image:
-        url: 
-        alt: 
-        title: 
-
   # Wiederholungen
 
   - name: repeats
@@ -1996,6 +2052,7 @@ params:
       - manual-stitch
       - circular_fill
       - cross_stitch
+      - guided_fill
     en:
       title: Bean stitch number of repeats
       description: |
@@ -2018,41 +2075,6 @@ params:
         * Une valeur de 1 triplera chaque point (avant, arrière, avant).
         * Une valeur de 2 permettra de quintupler chaque point, etc..
         * Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace (ces valeurs seront utilisées alternativement par les points)
-
-  - name: contour_strategy
-    category: pattern
-    applies-to:
-      - contour_fill
-    en:
-      title: Contour Fill Strategy
-      description: |
-        **Inner to outer** (default) is able to fill shapes with bottlenecks
-        **Single spiral** fills a shape with a single spiral from the outside to the inside
-        **Double spiral** fills a shape with a double spiral, starts and ends at the outside border of the shape.
-      image:
-        url: /assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg
-        alt: 
-        title: 
-    de:
-      title: Strategie
-      description: |
-        **Von Innen nach Außen** (Standard) kann auch Formen mit Engpässen füllen
-        **Einfach Spirale** füllt eine Fläche mit einer einfachen Spirale von außen nach innen
-        **Doppelte Spirale** füllt eine Fläche mit einer doppelten Spirale, die Außen beginnt und endet.
-      image:
-        url: /assets/images/docs/contour-fill-spirals.jpg
-        alt: 
-        title: 
-    fr:
-      title: Stratégie de remplissage selon le contour
-      description: |
-        **Intérieur vers extérieur** (valeur par défaut) est capable de remplir des formes avec un goulot d'étranglement
-        **Spirale Simple** remplit une forme avec une spirale unique de l'extérieur vers l'intérieur
-        **Spirale doublel** remplit une forme avec une double spirale, en commençant et terminant sur la frontière extérieure de la forme.
-      image:
-        url: /assets/images/docs/contour-fill-spirals.jpg
-        alt: 
-        title: 
 
   - name: join_style
     category: pattern
@@ -2141,6 +2163,7 @@ params:
       - tatami
       - circular_fill
       - cotour_fill
+      - guided_fill
     en:
       title: Randomize stitch length
       description: Allows for randomize stitch length.
@@ -2159,6 +2182,7 @@ params:
       - tatami
       - circular_fill
       - cotour_fill
+      - guided_fill
     en:
       title: Random stitch length jitter
       description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
@@ -2181,6 +2205,7 @@ params:
       - tatami
       - circula_fill
       - contour_fill
+      - guided_fill
     en:
       title: Random seed
       description: |
