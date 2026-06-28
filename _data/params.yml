@@ -175,6 +175,7 @@ params:
       - ripple-stitch
       - satin_center_underlay
       - satin_contour_underlay
+      - circular_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -752,13 +753,13 @@ params:
       description: 
       add-descr:
         - stitch-type: satin
-          info: Chose `Satin Column`
+          info: Select `Satin Column`
         - stitch-type: e-stitch
-          info: Chose `E-Stitch`
+          info: Select `E-Stitch`
         - stitch-type: s-stitch
-          info: Chose `S-Stitch`
+          info: Select `S-Stitch`
         - stitch-type: zigzag-satin
-          info: Chose `Zigzag`
+          info: Select `Zigzag`
     de:
       title: Methode
       description: 
@@ -1109,15 +1110,25 @@ params:
       - s-stitch
       - zigzag_satin
       - tatami
+      - circular_fill
     en:
       title: Stitch length
       description: Stitch length (in mm) of the underpaths from section to section
+      add-descr:
+        - stitch-type: circular_fill
+          info: For circular fill this is the overall stitch length.
     de:
       title: Stichlänge
       description: Stichlänge (in mm) der Unterpfade von Segment zu Segment
+      add-descr:
+        - stitch-type: circular_fill
+          info: Bei der Spiralfüllung ist dies der Wert für die Stichlänge des gesamten Füllelements.
     fr:
       title: Longueur de point droit
       description: Longueur du point (in mm) des chemins de dessous (connexions)
+      add-descr:
+        - stitch-type: circular_fill
+          info: Pour le remplissage circulaire il s'agit de longueur du point droit résultant.
 
   - name: running_stitch_length_mm
     category: stitch_length
@@ -1139,6 +1150,7 @@ params:
     applies-to:
       - satin
       - tatami
+      - contour_fill
     en:
       title: Running stitch tolerance
       description: Determines the acceptable distance from the path. A lower tolerance will bring the stitches closer together. A higher tolerance allows for stitches to be farther away from the path.  A higher tolerance may mean sharp corners may be rounded.
@@ -1373,6 +1385,8 @@ params:
     category: general
     applies-to:
       - tatami
+      - circular_fill
+      - contour_fill
       - legacy-fill
     en:
       title: Fill stitching
@@ -1402,36 +1416,50 @@ params:
     category: general
     applies-to:
       - tatami
+      - circular_fill
+      - contour_fill
       - legacy-fill
     en:
       title: Fill method
       description: 
       add-descr:
         - stitch-type: tatami
-          ino: Must be set to `Tatami` to fill the object with rows of stitches.
+          info: Select `Tatami`
+        - stitch-type: circular_fill
+          info: Select `Circular Fill`
+        - stitch-type: contour_fill
+          info: Select `Contour Fill`
         - stitch-type: legacy-fill
-          ino: Must be set to `legacy fill`
+          info: Select `Legacy Fill`
     de:
       title: Flächenstickerei
       description: 
       add-descr:
         - stitch-type: tatami
-          ino: "`Tatami-Füllung` auswählen"
+          info: "`Tatami-Füllung` auswählen"
+        - stitch-type: circular_fill
+          info: "`Spiralfüllung` auswählen"
+        - stitch-type: contour_fill
+          info: "`Konturfüllung` auswählen"
         - stitch-type: legacy-fill
-          ino: "`Veraltete Füllung` auswählen"
+          info: "`Veraltete Füllung` auswählen"
     fr:
       title: Méthode de remplissage
       description: 
       add-descr:
         - stitch-type: tatami
-          ino: Doit être sur Remplissage Tatami.
+          info: Doit être sur Remplissage Tatami.
+        - stitch-type: circular_fill
+          info: Doit être sur Remplissage circulaire
         - stitch-type: legacy-fill
-          ino: Doit être sur Remplissage Manuel Legacy
+          info: Doit être sur Remplissage Manuel Legacy
 
   - name: expand_mm
     category: size
     applies-to:
       - tatami
+      - circular_fill
+      - contour_fill
       - legacy-fill
     en:
       title: Expand
@@ -1522,6 +1550,7 @@ params:
     category: stitch_length
     applies-to:
       - tatami
+      - contour_fill
       - tatami-underlay
       - legacy-fill
     en:
@@ -1550,8 +1579,10 @@ params:
     category: density
     applies-to:
       - tatami
-      - tatami-underlay
+      - circular_fill
+      - contour_fill
       - legacy-fill
+      - tatami-underlay
     en:
       title: Spacing between rows
       description: Distance between rows of stitches
@@ -1578,6 +1609,7 @@ params:
     category: density
     applies-to:
       - tatami
+      - circular_fill
       - legacy-fill
     en:
       title: End row spacing
@@ -1728,6 +1760,7 @@ params:
     category: travel
     applies-to:
       - tatami
+      - circula_fill
       - tatami-underlay
     en:
       title: Underpath
@@ -1802,6 +1835,7 @@ params:
       - ripple-stitch
       - zigzag-stitch
       - satin_center_underlay
+      - circula_fill
     en:
       title: Repeats
       description: |
@@ -1837,6 +1871,7 @@ params:
       - ripple-stitch
       - zigzag-stitch
       - manual-stitch
+      - circular_fill
     en:
       title: Bean stitch number of repeats
       description: |
@@ -1860,6 +1895,118 @@ params:
         * Une valeur de 2 permettra de quintupler chaque point, etc..
         * Il est possible de définir un motif de répétitions en entrant plusieurs valeurs séparées par un espace (ces valeurs seront utilisées alternativement par les points)
 
+  - name: contour_strategy
+    category: pattern
+    applies-to:
+      - contour_fill
+    en:
+      title: Contour Fill Strategy
+      description: |
+        **Inner to outer** (default) is able to fill shapes with bottlenecks
+        **Single spiral** fills a shape with a single spiral from the outside to the inside
+        **Double spiral** fills a shape with a double spiral, starts and ends at the outside border of the shape.
+      image:
+        url: /assets/images/docs/contour-fill-innertoouter-bottlenecks.jpg
+        alt: 
+        title: 
+    de:
+      title: Strategie
+      description: |
+        **Von Innen nach Außen** (Standard) kann auch Formen mit Engpässen füllen
+        **Einfach Spirale** füllt eine Fläche mit einer einfachen Spirale von außen nach innen
+        **Doppelte Spirale** füllt eine Fläche mit einer doppelten Spirale, die Außen beginnt und endet.
+      image:
+        url: /assets/images/docs/contour-fill-spirals.jpg
+        alt: 
+        title: 
+    fr:
+      title: Stratégie de remplissage selon le contour
+      description: |
+        **Intérieur vers extérieur** (valeur par défaut) est capable de remplir des formes avec un goulot d'étranglement
+        **Spirale Simple** remplit une forme avec une spirale unique de l'extérieur vers l'intérieur
+        **Spirale doublel** remplit une forme avec une double spirale, en commençant et terminant sur la frontière extérieure de la forme.
+      image:
+        url: /assets/images/docs/contour-fill-spirals.jpg
+        alt: 
+        title: 
+
+  - name: join_style
+    category: pattern
+    applies-to:
+      - contour_fill
+    en:
+      title: Join Style
+      description: Method to handle the edges when the size the contour is reduced for the inner spirals (Round, Mitered, Beveled)
+    de:
+      title: Stil der Verbindungen
+      description: Legt fest, wie Ecken beim Herunterskalieren der Kontur für die inneren Spiralen behandelt werden sollen (rund, spitz oder abgeschrägt)
+    fr:
+      title: Style de jointure
+      description: Rond, à onglet, biseauté|Méthode pour gérer les arêtes lorsque la taille du contour est réduite pour les spirales intérieures
+
+  - name: avoid_self_crossing
+    category: pattern
+    applies-to:
+      - contour_fill
+    en:
+      title: Avoid self-crossing 
+      description: Wheter inner to outer is allowed to cross itself or not
+      image:
+        url: /assets/images/docs/contour-fill-self-crossing.jpg
+        alt: 
+        title: 
+    de:
+      title: Selbstüberschneidungen vermeiden
+      description: Legt fest, ob die Pfade sich bei der Methode `Von Innen nach Außen` überkreuzen dürfen oder nicht
+      image:
+        url: /assets/images/docs/contour-fill-self-crossing.jpg
+        alt: 
+        title: 
+    fr:
+      title: Eviter l'auto croisement
+      description: Choisir si intérieur vers extérieur est autorisé à se croiser, ne s'applique pas aux autres stratégies de remplissage.
+      image:
+        url: /assets/images/docs/contour-fill-self-crossing.jpg
+        alt: 
+        title: 
+
+  - name: clockwise
+    category: pattern
+    applies-to:
+      - contour_fill
+    en:
+      title: Clockwise
+      description: Direction to move around the contour
+    de:
+      title: Uhrzeigersinn
+      description: Bestimmt die Richtung in der die Kontur gestickt wird
+    fr:
+      title: Sens des aiguilles d'une montre
+      description: Direction de déplacement autour du contour.
+
+  - name: smoothness_mm
+    category: pattern
+    applies-to:
+      - contour_fill
+    en:
+      title: Smoothness
+      description: |
+        Smooth the stitch path.
+        Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path. Try low numbers like 0.2.
+        Hint: a lower running stitch tolerance may be needed too.
+    de:
+      title: Glätten
+      description: |
+        Glättet den Stichpfad.
+        Diese Einstellung definiert, wie weit der geglättete Stichpfad vom ursprünglichen Pfad abweichen darf. Versuche niedrige Zahlen wie z.B. 0.2.
+        Hinweis: Eventuell ist auch eine geringere Geradstich-Toleranz erforderlich.
+    fr:
+      title: Lissage
+      description: |
+        Lisse la broderie.
+        Le lissage détermine la mesure dans laquelle le chemin lissé peut s'éloigner du chemin originel. Essayez de petites valeurs comme 0.2.
+        Attention, il est possible qu'il faille aussi modifier la tolérance du point droit.
+
   # Random options (running)
 
   - name: enable_random_stitch_length
@@ -1868,6 +2015,8 @@ params:
       - running-stitch
       - ripple-stitch
       - tatami
+      - circular_fill
+      - cotour_fill
     en:
       title: Randomize stitch length
       description: Allows for randomize stitch length.
@@ -1884,6 +2033,8 @@ params:
       - running-stitch
       - ripple-stitch
       - tatami
+      - circular_fill
+      - cotour_fill
     en:
       title: Random stitch length jitter
       description: Only available if `Randomize stitch length` is selected. Determines the variation in the length of each stitch.
@@ -1904,6 +2055,8 @@ params:
       - s-stitch
       - zigzag-satin
       - tatami
+      - circula_fill
+      - contour_fill
     en:
       title: Random seed
       description: |
