@@ -27,7 +27,7 @@ categories:
       - id: pattern
         en: Stitch placement / Pattern
         de: Stichpositionierung / Muster
-        fr: Stitch placement / Texture
+        fr: Position des points / Texture
       - id: compensation
         en: Pull compensation
         de: Verzugsausgleich
