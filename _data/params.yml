@@ -15,7 +15,7 @@ categories:
       - id: stitch_length
         en: Stitch length
         de: Stichlänge
-        fr: Longueur du point
+        fr: Longueur des points
       - id: split_stitches
         en: Split stitches
         de: Zwischenstiche
@@ -27,7 +27,7 @@ categories:
       - id: pattern
         en: Stitch placement / Pattern
         de: Stichpositionierung / Muster
-        fr: Stitch placement / Motif
+        fr: Stitch placement / Texture
       - id: compensation
         en: Pull compensation
         de: Verzugsausgleich
@@ -35,11 +35,11 @@ categories:
       - id: satin_width
         en: Satin width
         de: Breite der Satinsäule
-        fr: Satin width
+        fr: Largeur du satin
       - id: size
         en: Size
         de: Größe
-        fr: Size
+        fr: Taille
       - id: density
         en: Density
         de: Dichte
@@ -55,7 +55,7 @@ categories:
   - id: direction
     en: Stitch direction, starting and ending position
     de: Stichrichtung, Start- und Endposition
-    fr: Stitch direction, starting and ending position
+    fr: Sens de la broderie, position de début et de fin
   - id: lock
     en: Lock stitches
     de: Vernähstiche
@@ -120,7 +120,7 @@ params:
           info: "`Manuelle Stichpositionierung` auswählen"
     fr:
       title: Méthode
-      description: Determines which stitch type to use.
+      description: Détermines quel type de point utiliser.
       add-descr:
         - stitch-type: running-stitch
           info: Choisir `Point droit / Point multiple`
@@ -190,8 +190,8 @@ params:
         alt: 
         title: 
     fr:
-      title: Tolerance du point droit
-      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
+      title: Tolérance du point droit
+      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolérance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
       image:
         url: /assets/images/docs/run-tolerance.jpg
         alt: 
@@ -262,8 +262,8 @@ params:
       description: |
         Position des ondulations lorsque guidées par un satin.
         * Nombre de lignes / Distance entre les lignes (valeur par défaut): utilise soit la valeur du nombre de lignes ou la distance minimum entre les lignes si elle a été définie.
-        * Rendu aux traverses une ondulation à chaque traverse seulement
-        * Adaptatif et distance minimum entre les lignes adapte la distance entre les ondulations selon leur taille
+        * Rendu aux traverses: une ondulation à chaque traverse seulement
+        * Adaptatif et distance minimum entre les lignes : adapte la distance entre les ondulations selon leur taille
 
   - name: skip_start
     category: pattern
@@ -295,7 +295,7 @@ params:
         url: /assets/images/docs/ripple_only_skip.svg
         alt: Sauter
         title: Sauter
-      description: Set the number of lines to skip (do not embroider) at the and/or end of the run.
+      description: Détermine le nombre d'ondulations à sauter (ne pas broder) au début et à la fin de la broderie.
 
   - name: flip_copies
     category: pattern
@@ -393,15 +393,15 @@ params:
       description: Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
       image:
         url: /assets/images/docs/ripple_only_grid.svg
-        alt: 
-        title: 
+        alt: Gitter
+        title: gitter
     fr:
       title: Taille de la grille
       description: Si une distance positive est spécifiée, les ondulations de la broderie sont complétées en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir n'a pas d'influence sur ce paramètre.
       image:
         url: /assets/images/docs/ripple_only_grid.svg
-        alt: 
-        title: 
+        alt: Grille
+        title: grille
 
   - name: grid_first
     category: pattern
@@ -573,7 +573,7 @@ params:
     fr:
       title: Méthode de découpage
       description: |
-        Split stitches apply, when a maximum stitch length is set and the stitch length exceeds this value. Options:
+        Le découpage des points ne s'applique que si une longueur maximum des points a été fixée et que le point dépasse cette longueur. Options:
         * Par défaut
         * Simple
         * Décalé
