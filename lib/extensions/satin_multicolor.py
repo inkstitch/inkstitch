@@ -44,7 +44,7 @@ class SatinMulticolor(InkstitchExtension):
         frame = SplitSimulatorWindow(
             title=_("Ink/Stitch Multicolor Satin"),
             panel_class=MultiColorSatinPanel,
-            elements=satins,
+            selected_elements=satins,
             on_cancel=self.cancel,
             metadata=metadata,
             background_color=background_color,
