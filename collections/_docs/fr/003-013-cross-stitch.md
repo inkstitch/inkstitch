@@ -112,7 +112,7 @@ Ink/Stitch inclut une extension qui vous permet d'effectuer toutes les tâches s
   
 L'extension calcule et affiche également la longueur des points en fonction des dimensions de la grille;  dans le paramétrage, la longueur maximale du point devrait être supérieure à cette valeur.
 
-[En savoir plus](/fr/docs/tools-fill/#cross-stitch-assistant)
+[En savoir plus](/fr/docs/fill-tools/#assistant-point-de-croix)
 
 ### Définir les points de départ et de fin
 

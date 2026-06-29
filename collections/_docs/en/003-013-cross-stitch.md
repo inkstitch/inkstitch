@@ -99,7 +99,7 @@ Ink/Stitch comes with an extension which helps you to perform cross stitch speci
 
 It also computes and displays the stitch length given the grid dimensions. Maximum stitch length in the cross stitches parameters should be larger than this value.
 
-[Read more](/docs/tools-fill/#cross-stitch-assistant)
+[Read more](/docs/fill-tools/#cross-stitch-assistant)
 
 ### Set Start and End Point
 
