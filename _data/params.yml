@@ -1016,7 +1016,7 @@ params:
         alt: 
         title: 
     fr:
-      title: Push compensation
+      title: Compensation d'élongation
       description: |
         Les colonnes satins [poussent le tissu vers le extrémités](/fr/tutorials/push-pull-compensation/),  ce qui résulte en des colonnes plus longues que ce qui a été déssiné dans inkscapewhich results into a longer columns than drawn in Inkscape.
         Ce paramètre racourci la colonne de la valeur indiquée au début et/ou à la fin.
