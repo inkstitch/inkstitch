@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-21 04:25+0000\n"
-"PO-Revision-Date: 2026-06-21 04:25\n"
+"POT-Creation-Date: 2026-06-29 04:09+0000\n"
+"PO-Revision-Date: 2026-06-29 04:09\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-21 04:25+0000\n"
+"POT-Creation-Date: 2026-06-29 04:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 #. description of font in fonts/abecedaire
 #: inkstitch-fonts-metadata.py:2
 msgid "Abécédaire AGS is a cross stitch font."
-msgstr ""
+msgstr "Abécédaire AGS is een kruissteek lettertype."
 
 #. description of font in fonts/abecedaire_small
 #: inkstitch-fonts-metadata.py:4
@@ -298,7 +298,7 @@ msgstr "Dit lettertype is een aangepaste versie van het Egyptische lettertype, w
 #. description of font in fonts/ellenika
 #: inkstitch-fonts-metadata.py:106
 msgid "Clara Bold Greek subset with punctuation and symbol support."
-msgstr ""
+msgstr "Clara Bold Griekse subset met ondersteuning voor leestekens en symbolen."
 
 #. description of font in fonts/eloquent
 #: inkstitch-fonts-metadata.py:108
@@ -1364,23 +1364,23 @@ msgstr "Lengte van de vergrendeling instellen (mm)."
 msgid "Scale lock stitch by this percentage."
 msgstr "Schaal de vergrendel steek met dit percentage."
 
-#: lib/elements/element.py:452
+#: lib/elements/element.py:456
 msgid "Trim After"
 msgstr "Afhechten na"
 
-#: lib/elements/element.py:453
+#: lib/elements/element.py:457
 msgid "Add a TRIM command after stitching this object."
 msgstr "Voeg een AFHECHT opdracht toe nadat dit object is geborduurd."
 
-#: lib/elements/element.py:462
+#: lib/elements/element.py:466
 msgid "Stop After"
 msgstr "Stop na"
 
-#: lib/elements/element.py:463
+#: lib/elements/element.py:467
 msgid "Add a STOP command after stitching this object."
 msgstr "Voeg een STOP opdracht toe nadat dit object is geborduurd."
 
-#: lib/elements/element.py:808
+#: lib/elements/element.py:812
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Voer 'Extensies > Ink/Stitch > Problemen oplossen > Problemen met objecten oplossen' uit. Dit toont u de exacte locatie van het probleem."
 
@@ -1579,7 +1579,7 @@ msgstr "* Of verlaag de vul dekkings-waarde"
 
 #: lib/elements/fill_stitch.py:145
 msgid "* Or use Extensions > Ink/Stitch > Tools: Fill > Cross Stitch Assistant, adapt settings and pixelate the shape"
-msgstr ""
+msgstr "* Of gebruik Extensies > Ink/Stitch > Gereedschappen: Vulling > Kruissteek Assistent, pas de instellingen aan en pixelateer de vorm"
 
 #: lib/elements/fill_stitch.py:150
 msgid "This shape is invalid"
@@ -1595,7 +1595,7 @@ msgstr "Vulsteek"
 
 #: lib/elements/fill_stitch.py:162
 msgid "Fill stitching"
-msgstr ""
+msgstr "Opvul steken"
 
 #: lib/elements/fill_stitch.py:166 lib/gui/tartan/embroidery_panel.py:202
 #: inx/inkstitch_select_elements.inx:55
@@ -1654,7 +1654,7 @@ msgstr "Parallelle verschuiving"
 
 #: lib/elements/fill_stitch.py:188
 msgid "Buffer"
-msgstr ""
+msgstr "Buffer"
 
 #: lib/elements/fill_stitch.py:189
 msgid "Copy (the default) will fill the shape with shifted copies of the line. Parallel offset will ensure that each line is always a consistent distance from its neighbor. Sharp corners may be introduced."
@@ -1760,7 +1760,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:316
 msgid "Angle for guide line shifting. Changing the angle may have a huge impact on the actual spacing between the rows. Ensure the guide line is large enough to fill the area when shifted into the given angle."
-msgstr ""
+msgstr "Hoek voor het verschuiven van de hulplijn. Het wijzigen van de hoek kan een grote invloed hebben op de werkelijke afstand tussen de rijen. Zorg ervoor dat de hulplijn groot genoeg is om het gebied te vullen wanneer deze onder de betreffende hoek wordt verschoven."
 
 #: lib/elements/fill_stitch.py:334 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
@@ -2145,7 +2145,7 @@ msgstr "* U kunt uw afbeelding ook omzetten naar een pad: Pad > Bitmap traceren.
 
 #: lib/elements/image.py:24
 msgid "* To convert the image for cross stitching, use Tools: Fill > Cross Stitch Assistant"
-msgstr ""
+msgstr "* Om de afbeelding om te zetten voor kruissteek, gebruikt u Gereedschap: Opvullen > Kruissteek assistent"
 
 #: lib/elements/marker.py:14
 msgid "Marker Element"
@@ -3950,7 +3950,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:172
 msgid "Defines whether the outlines of selected fill shapes should be pixelated or not."
-msgstr ""
+msgstr "Bepaalt of de omtrekken van geselecteerde gevulde vormen al dan niet gepixeleerd moeten worden."
 
 #: lib/gui/cross_stitch_assistant.py:177
 msgid "Add nodes"
@@ -4070,7 +4070,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:303
 msgid "Maxcoverage"
-msgstr ""
+msgstr "Maximale dekking"
 
 #: lib/gui/cross_stitch_assistant.py:303
 msgid "Fastoctree"
@@ -4146,11 +4146,11 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:443
 msgid "Preview image (if applicable)"
-msgstr ""
+msgstr "Voorbeeld afbeelding (indien van toepassing)"
 
 #: lib/gui/cross_stitch_assistant.py:449
 msgid "SVG Preview (slow)"
-msgstr ""
+msgstr "SVG Voorbeeld (traag)"
 
 #: lib/gui/cross_stitch_assistant.py:466
 msgid "Reset values"
@@ -4167,7 +4167,7 @@ msgstr ""
 
 #: lib/gui/edit_json/main_panel.py:435
 msgid "Could not find the json file for this font. Please create one with Font Management > Generate JSON"
-msgstr ""
+msgstr "Het JSON bestand voor dit lettertype is niet gevonden. Maak er een aan via Fontbeheer > JSON genereren"
 
 #: lib/gui/edit_json/main_panel.py:441
 msgid "Changes will not be saved: cannot write to json file (permission denied)."
@@ -4175,7 +4175,7 @@ msgstr "Wijzigingen worden niet opgeslagen: kan niet naar het json bestand schri
 
 #: lib/gui/edit_json/main_panel.py:451
 msgid "Could not find a json file for this font. Please create one with Font Management > Generate JSON"
-msgstr ""
+msgstr "Er is geen JSON bestand voor dit lettertype gevonden. Maak er een aan via Fontbeheer > JSON genereren"
 
 #: lib/gui/edit_json/main_panel.py:458
 msgid "Could not write to json file: permission denied."
@@ -4191,7 +4191,7 @@ msgstr "Tekst erna"
 
 #: lib/gui/edit_json/settings_panel.py:33
 msgid "Second line"
-msgstr ""
+msgstr "Tweede regel"
 
 #: lib/gui/edit_json/settings_panel.py:56
 msgid "Font Info"
@@ -4941,15 +4941,15 @@ msgstr "Grootte van de naald penetratie punt (mm)"
 
 #: lib/gui/simulator/simulator_preferences.py:54
 msgid "Crosshair radius (px)"
-msgstr ""
+msgstr "Straal van het dradenkruis (px)"
 
 #: lib/gui/simulator/simulator_preferences.py:58
 msgid "Crosshair thickness (px)"
-msgstr ""
+msgstr "Dikte van het dradenkruis (px)"
 
 #: lib/gui/simulator/simulator_preferences.py:66
 msgid "Crosshair colour"
-msgstr ""
+msgstr "Kleur van het dradenkruis"
 
 #: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
@@ -5308,7 +5308,7 @@ msgstr "Genereer het JSON bestand via:\n"
 #: lib/lettering/font.py:130
 #, python-brace-format
 msgid "Failed to read the JSON file ({exception}):"
-msgstr ""
+msgstr "Het lezen van het JSON bestand is mislukt ({exception}):"
 
 #: lib/lettering/font.py:138
 msgid "Corrupt JSON file"
@@ -6399,7 +6399,7 @@ msgstr "Belettering langs pad"
 
 #: inx/inkstitch_batch_lettering.inx:59
 msgid "Horizontal text position"
-msgstr ""
+msgstr "Horizontale tekstpositie"
 
 #: inx/inkstitch_batch_lettering.inx:59 inx/inkstitch_batch_lettering.inx:66
 msgid "Uses this text position when using lettering along path"
@@ -6412,22 +6412,22 @@ msgstr "Strekken"
 
 #: inx/inkstitch_batch_lettering.inx:66
 msgid "Vertical text position"
-msgstr ""
+msgstr "Verticale tekstpositie"
 
 #: inx/inkstitch_batch_lettering.inx:67
 #: inx/inkstitch_lettering_along_path.inx:25
 msgid "Top"
-msgstr ""
+msgstr "Bovenkant"
 
 #: inx/inkstitch_batch_lettering.inx:68
 #: inx/inkstitch_lettering_along_path.inx:26
 msgid "Baseline"
-msgstr ""
+msgstr "Grondlijn"
 
 #: inx/inkstitch_batch_lettering.inx:69
 #: inx/inkstitch_lettering_along_path.inx:27
 msgid "Bottom"
-msgstr ""
+msgstr "Onderkant"
 
 #: inx/inkstitch_batch_lettering.inx:74
 msgid "File formats"
@@ -6525,7 +6525,7 @@ msgstr "Verwijdert kleine lijnen korter dan de grenswaarde."
 
 #: inx/inkstitch_cleanup.inx:14
 msgid "Stroke threshold (mm)"
-msgstr ""
+msgstr "Lijn drempel (mm)"
 
 #: inx/inkstitch_cleanup.inx:16
 msgid "Remove Small satins"
@@ -6537,7 +6537,7 @@ msgstr "Verwijdert kleine satijn kolommen die korter zijn dan de drempelwaarde."
 
 #: inx/inkstitch_cleanup.inx:17
 msgid "Satin threshold (mm)"
-msgstr ""
+msgstr "Satijn drempel (mm)"
 
 #: inx/inkstitch_cleanup.inx:18
 msgid "Remove empty layers and groups"
@@ -6589,7 +6589,7 @@ msgstr "Bekijk"
 
 #: inx/inkstitch_cross_stitch_assistant.inx:3
 msgid "Cross Stitch Assistant"
-msgstr ""
+msgstr "Kruis Steek Assistent"
 
 #: inx/inkstitch_cross_stitch_assistant.inx:9
 msgid "Prepare your shapes and document for cross stitching"
@@ -7607,7 +7607,7 @@ msgstr "Zet sprongen langer dan (mm) om"
 
 #: inx/inkstitch_jump_to_stroke.inx:19
 msgid "A value of 0 defaults to the actual minimum jump stitch length."
-msgstr ""
+msgstr "Een waarde van 0 resulteert standaard in de werkelijke minimale lengte van een sprong steek."
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "Convert jumps shorter than (mm)"
@@ -7615,7 +7615,7 @@ msgstr "Zet sprongen korter dan (mm) om"
 
 #: inx/inkstitch_jump_to_stroke.inx:21
 msgid "A value of 0 means no size limit."
-msgstr ""
+msgstr "Een waarde van 0 betekent geen groottebeperking."
 
 #: inx/inkstitch_jump_to_stroke.inx:22
 msgid "Connect"
@@ -7759,11 +7759,11 @@ msgstr "Cirkel"
 
 #: inx/inkstitch_knockdown_fill.inx:38
 msgid "Use only shape"
-msgstr ""
+msgstr "Gebruik alleen de vorm"
 
 #: inx/inkstitch_knockdown_fill.inx:38
 msgid "Whether or not the motif should be cut out of the shape."
-msgstr ""
+msgstr "Of het motief al dan niet uit de vorm moet worden gesneden."
 
 #: inx/inkstitch_knockdown_fill.inx:39
 msgid "Shape offset"
@@ -7823,7 +7823,7 @@ msgstr "Tekst positie"
 
 #: inx/inkstitch_lettering_along_path.inx:24
 msgid "Vertical alignment"
-msgstr ""
+msgstr "Verticale uitlijning"
 
 #: inx/inkstitch_lettering_along_path.inx:31
 msgid "This extension bends an Ink/Stitch text to a path."

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-21 04:25+0000\n"
-"PO-Revision-Date: 2026-06-24 03:49\n"
+"POT-Creation-Date: 2026-06-29 04:09+0000\n"
+"PO-Revision-Date: 2026-06-29 04:09\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-21 04:25+0000\n"
+"POT-Creation-Date: 2026-06-29 04:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1366,23 +1366,23 @@ msgstr "Stichlänge des Verstechers festlegen (mm)."
 msgid "Scale lock stitch by this percentage."
 msgstr "Verstecher um diesen Prozentwert skalieren."
 
-#: lib/elements/element.py:452
+#: lib/elements/element.py:456
 msgid "Trim After"
 msgstr "Fadenschnitt"
 
-#: lib/elements/element.py:453
+#: lib/elements/element.py:457
 msgid "Add a TRIM command after stitching this object."
 msgstr "Füge Fadenschnitt-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:462
+#: lib/elements/element.py:466
 msgid "Stop After"
 msgstr "Stopp"
 
-#: lib/elements/element.py:463
+#: lib/elements/element.py:467
 msgid "Add a STOP command after stitching this object."
 msgstr "Füge einen Stopp-Befehl nach diesem Objekt hinzu."
 
-#: lib/elements/element.py:808
+#: lib/elements/element.py:812
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Bitte rufe die Funktion Erweiterungen > Ink/Stitch > Fehlerbehebung > Fehlerbehebung an Objekten auf. Diese Erweiterung zeigt fehlerhafte Stellen an und gibt am rechten Seitenrand Vorschläge zum Lösen des Problems."
 
