@@ -153,23 +153,25 @@ class MultiColorSatinPanel(wx.Panel):
             parent = element.node.getparent()
             if parent and INKSTITCH_SATIN_MULTICOLOR in parent.attrib:
                 if parent not in visited_groups:
+                    # to preserve underlay settings we need to take the very first element in the group and not just any element
+                    node = parent.getchildren()[0]
                     # Elements being a part of a satin group are considered as a "reedit" and are squashed into a single element,
                     # preserving the shape properties etc.
                     group_parent = parent.getparent()
                     assert group_parent is not None, "The multicolor group always has a parent (at least the svg element)."
                     group_transform = parent.transform
                     index = group_parent.index(parent)
-                    group_parent.insert(index, element.node)
-                    element.node.transform @= group_transform
-                    elements.append(self._apply_reverse_rail_option(element))
+                    group_parent.insert(index, node)
+                    node.transform @= group_transform
+                    elements.append(self._apply_reverse_rail_option(SatinColumn(node)))
                     visited_groups.append(parent)
                     # Set reedit attribute, so we can indentify the squashed element later
-                    element.node.set('is-reedit', True)
+                    node.set('is-reedit', True)
 
                     # reset underlay position and inset values
-                    element.node.pop('inkstitch:center_walk_underlay_position', None)
-                    element.node.pop('inkstitch:contour_underlay_inset_percent', None)
-                    element.node.pop('inkstitch:zigzag_underlay_inset_percent', None)
+                    node.pop('inkstitch:center_walk_underlay_position', None)
+                    node.pop('inkstitch:contour_underlay_inset_percent', None)
+                    node.pop('inkstitch:zigzag_underlay_inset_percent', None)
 
             else:
                 elements.append(self._apply_reverse_rail_option(element))
