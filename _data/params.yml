@@ -997,7 +997,7 @@ params:
       title: Push compensation
       description: |
         Satin stitches [push out to the ends](/tutorials/push-pull-compensation/), which results into a longer columns than drawn in Inkscape.
-        This settings shortens the column by the given amound (mm) at start and/or end.
+        This setting shortens the column by the given amound (mm) at start and/or end.
         Two values separated by a space may be used for an asymetric effect.
         Negative values lead to the opposite effect.
       image:
@@ -1018,8 +1018,8 @@ params:
     fr:
       title: Push compensation
       description: |
-        Satin stitches [push the fabric out to the ends](/tutorials/push-pull-compensation/), which results into a longer columns than drawn in Inkscape.
-        This settings shortens the column by the given amound (mm) at start and/or end.
+        Les colonnes satins [poussent le tissu vers le extrémités](/fr/tutorials/push-pull-compensation/),  ce qui résulte en des colonnes plus longues que ce qui a été déssiné dans inkscapewhich results into a longer columns than drawn in Inkscape.
+        Ce paramètre racourci la colonne de la valeur indiquée au début et/ou à la fin.
         Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.
         Une valeur négative contracte.
       image:
@@ -1109,7 +1109,7 @@ params:
       description: Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques
       add-descr:
         - stitch-type: ripple-stitch
-          info: Takes effect on a satin guide line.
+          info: Affecte la colonne satin guide.
 
   - name: running_stitch_length_mm
     category: travel
@@ -1186,8 +1186,8 @@ params:
         alt: 
         title: 
     fr:
-      title: Tolerance du point droit
-      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
+      title: Tolérance du point droit
+      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolérance basse peut impliquer des points plus courts dans les courbes. Une tolérance haute entraine un arrondissement des angles aigus.
       image:
         url: /assets/images/docs/run-tolerance.jpg
         alt: 
@@ -1824,7 +1824,7 @@ params:
         alt: 
         title: 
       description: |
-        Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée).
+        Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallées).
         Ce paramètre détermine la longueur du cycle de décalage des rangées.
         Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières.
       add-desc:
@@ -2099,8 +2099,8 @@ params:
       title: Muster skalieren
       description: Skaliert das Muster (%)
     fr:
-      title: Angle du motif de méandre
-      description: 
+      title: Échelle du motif de méandre
+      description:  Mise à l'échelle du motif (en %)
 
   - name: clip
     category: pattern
@@ -2113,8 +2113,8 @@ params:
       title: Pfad auf Form beschränken
       description: Nützlich bei der Verwendung von Glätten und Erweitern. Sorgt dafür, dass keine Stiche außerhalb der ursprünglichen Form liegen.
     fr:
-      title: Échelle du motif de méandre
-      description: Mise à l'échelle du motif (en %)
+      title: Contraindre le chemin à la forme
+      description: Contraint le chemin à la forme. Utile en cas d'utilisation d' expansion ou de lissage
 
   # Wiederholungen
 
