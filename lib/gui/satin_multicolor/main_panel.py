@@ -165,6 +165,12 @@ class MultiColorSatinPanel(wx.Panel):
                     visited_groups.append(parent)
                     # Set reedit attribute, so we can indentify the squashed element later
                     element.node.set('is-reedit', True)
+
+                    # reset underlay position and inset values
+                    element.node.pop('inkstitch:center_walk_underlay_position', None)
+                    element.node.pop('inkstitch:contour_underlay_inset_percent', None)
+                    element.node.pop('inkstitch:zigzag_underlay_inset_percent', None)
+
             else:
                 elements.append(self._apply_reverse_rail_option(element))
 
