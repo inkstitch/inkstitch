@@ -1876,7 +1876,7 @@ params:
         alt: 
         title: 
     fr:
-      title: ourcentage de compensation d'étirement
+      title: Pourcentage de compensation d'étirement
       description: Compensation d'étirement supplémentaire qui varie comme un pourcentage de la longueur de la rangée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.
       image:
         url: /assets/images/docs/fill-pull_comp_percent.jpg
