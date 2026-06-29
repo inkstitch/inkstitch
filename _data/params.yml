@@ -378,7 +378,7 @@ params:
       description: Intervertit le début et la fin
 
   - name: grid_size_mm
-    category: patten
+    category: pattern
     applies-to:
       - ripple-stitch
     en:
@@ -452,7 +452,7 @@ params:
         Seulement pour des ondulations guidées
 
   - name: scale_end
-    category: patten
+    category: pattern
     applies-to:
       - ripple-stitch
     en:
@@ -486,7 +486,7 @@ params:
       description: Seulement pour des ondulations guidées
 
   - name: join_style
-    category: patten
+    category: pattern
     applies-to:
       - ripple-stitch
     en:
@@ -1999,7 +1999,7 @@ params:
       description: Choisir la méthode (voir ci-dessus pour des informations détaillées)
 
   - name: pattern_size_mm
-    category: patten
+    category: pattern
     applies-to:
       - cross_stitch
     en:
