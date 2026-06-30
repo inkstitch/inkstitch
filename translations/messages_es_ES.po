@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-29 04:09+0000\n"
-"PO-Revision-Date: 2026-06-29 04:09\n"
+"POT-Creation-Date: 2026-06-30 03:52+0000\n"
+"PO-Revision-Date: 2026-06-30 03:52\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 04:09+0000\n"
+"POT-Creation-Date: 2026-06-30 03:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1998,7 +1998,7 @@ msgid "Shrink the shape before doing underlay, to prevent underlay from showing 
 msgstr "Reduzca la forma antes de aplicar la capa base, para evitar que la capa base se vea alrededor del exterior del relleno."
 
 #: lib/elements/fill_stitch.py:753 lib/elements/satin_column.py:606
-#: lib/elements/stroke.py:620 lib/gui/satin_multicolor/colorize_panel.py:61
+#: lib/elements/stroke.py:620 lib/gui/satin_multicolor/colorize_panel.py:62
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Semilla aleatoria"
@@ -3128,7 +3128,7 @@ msgid "All Selected Elements"
 msgstr "Todos los elementos seleccionados"
 
 #: lib/extensions/element_info.py:175 lib/extensions/thread_list.py:57
-#: lib/gui/satin_multicolor/colorize_panel.py:77
+#: lib/gui/satin_multicolor/colorize_panel.py:78
 msgid "Colors"
 msgstr "Colores"
 
@@ -3495,7 +3495,7 @@ msgstr "Este parámetro se guardará cuando haga clic en \"Aplicar y salir\""
 #: lib/extensions/params.py:580 lib/extensions/sew_stack_editor.py:118
 #: lib/gui/cross_stitch_assistant.py:468 lib/gui/edit_json/settings_panel.py:74
 #: lib/gui/lettering/main_panel.py:58 lib/gui/lettering_font_sample.py:70
-#: lib/gui/satin_multicolor/main_panel.py:54 lib/gui/selection_to_pattern.py:87
+#: lib/gui/satin_multicolor/main_panel.py:69 lib/gui/selection_to_pattern.py:87
 #: lib/gui/simulator/simulator_preferences.py:73
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
 #: print/templates/custom-page.html:27 print/templates/custom-page.html:33
@@ -3825,7 +3825,7 @@ msgstr "Seleccionar paleta de color"
 
 #: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_assistant.py:470
 #: lib/gui/edit_json/settings_panel.py:76 lib/gui/lettering_font_sample.py:72
-#: lib/gui/satin_multicolor/main_panel.py:56 lib/gui/selection_to_pattern.py:89
+#: lib/gui/satin_multicolor/main_panel.py:71 lib/gui/selection_to_pattern.py:89
 #: lib/gui/simulator/simulator_preferences.py:75
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
@@ -3834,7 +3834,7 @@ msgstr "Aplicar"
 #: lib/gui/apply_palette.py:49 lib/gui/cross_stitch_assistant.py:405
 #: lib/gui/edit_json/main_panel.py:77 lib/gui/element_info.py:42
 #: lib/gui/lettering/main_panel.py:48 lib/gui/lettering_font_sample.py:83
-#: lib/gui/satin_multicolor/main_panel.py:51 lib/gui/selection_to_pattern.py:55
+#: lib/gui/satin_multicolor/main_panel.py:66 lib/gui/selection_to_pattern.py:55
 #: lib/gui/tartan/main_panel.py:64 lib/gui/test_swatches.py:83
 #: inx/inkstitch_apply_attribute.inx:24 inx/inkstitch_apply_threadlist.inx:91
 #: inx/inkstitch_auto_run.inx:25 inx/inkstitch_auto_satin.inx:16
@@ -4630,7 +4630,7 @@ msgstr "Preajustes"
 msgid "Load"
 msgstr "Cargar"
 
-#: lib/gui/presets.py:60 lib/gui/satin_multicolor/colorize_panel.py:83
+#: lib/gui/presets.py:60 lib/gui/satin_multicolor/colorize_panel.py:84
 #: lib/gui/tartan/customize_panel.py:64 lib/gui/tartan/customize_panel.py:66
 msgid "Add"
 msgstr "Añadir"
@@ -4708,56 +4708,56 @@ msgstr "Margen derecho (sección bicolor). Puede cambiarse individualmente cuand
 msgid "Remove color"
 msgstr "Eliminar color"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:27
+#: lib/gui/satin_multicolor/colorize_panel.py:28
 msgid "General Settings"
 msgstr "Configuración general"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:30
+#: lib/gui/satin_multicolor/colorize_panel.py:31
 msgid "Equidistant colors"
 msgstr "Colores equidistantes"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:31
+#: lib/gui/satin_multicolor/colorize_panel.py:32
 msgid "Whether colors should be equidistant or have varying widths."
 msgstr "Si los colores deben ser equidistantes o tener anchos variables."
 
-#: lib/gui/satin_multicolor/colorize_panel.py:36
+#: lib/gui/satin_multicolor/colorize_panel.py:37
 msgid "Monochrome color width"
 msgstr "Ancho de color monocromático"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:37
+#: lib/gui/satin_multicolor/colorize_panel.py:38
 msgid "Adapt color width here when equidistance is enabled."
 msgstr "Adapta aquí el ancho del color cuando la equidistancia esté activada."
 
-#: lib/gui/satin_multicolor/colorize_panel.py:43
+#: lib/gui/satin_multicolor/colorize_panel.py:44
 msgid "Overflow left"
 msgstr "Desbordamiento a la izquierda"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:49
+#: lib/gui/satin_multicolor/colorize_panel.py:50
 msgid "Overflow right"
 msgstr "Desbordamiento a la derecha"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:55
+#: lib/gui/satin_multicolor/colorize_panel.py:56
 #: inx/inkstitch_fill_to_satin.inx:14
 msgid "Pull compensation (mm)"
 msgstr "Compensación de tire (mm)"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:67
+#: lib/gui/satin_multicolor/colorize_panel.py:68
 msgid "Keep original satin"
 msgstr "Mantener satín original"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:71
+#: lib/gui/satin_multicolor/colorize_panel.py:72
 msgid "Adjust underlay per color"
 msgstr "Ajustar refuerzo por color"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:74
+#: lib/gui/satin_multicolor/colorize_panel.py:75
 msgid "When disabled existing underlay is applied only to the first color."
 msgstr "Cuando está desactivado, el refuerzo existente se aplica solo al primer color."
 
-#: lib/gui/satin_multicolor/colorize_panel.py:81
+#: lib/gui/satin_multicolor/colorize_panel.py:82
 msgid "Overflow excluded"
 msgstr "Desbordamiento excluido"
 
-#: lib/gui/satin_multicolor/colorize_panel.py:235
+#: lib/gui/satin_multicolor/colorize_panel.py:247
 #, python-brace-format
 msgid "Total width: {width}%"
 msgstr "Ancho total: {width}%"
@@ -4766,11 +4766,11 @@ msgstr "Ancho total: {width}%"
 msgid "This extension simulates a multicolor satin by creating colored copies of the selected satin(s)."
 msgstr "Esta extensión simula un satín multicolor creando copias coloreadas de los satines seleccionados."
 
-#: lib/gui/satin_multicolor/main_panel.py:47
+#: lib/gui/satin_multicolor/main_panel.py:62
 msgid "Colorize"
 msgstr "Colorear"
 
-#: lib/gui/satin_multicolor/main_panel.py:151
+#: lib/gui/satin_multicolor/main_panel.py:297
 msgid "Multicolor Satin Group"
 msgstr "Grupo de satín multicolor"
 
