@@ -3,18 +3,15 @@
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import time
-import math
-from typing import Protocol, Tuple, Optional, Union, List, Dict, Any, cast
+from typing import Protocol, Tuple, Optional, List, Dict, Any, cast
 
 import wx
-from numpy import split
 
-from ...debug.debug import debug
 from ...i18n import _
-from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
 from ...stitch_plan import StitchPlan
-from ...threads import ThreadColor
+
+from .drawing_panel_simple import SimpleDrawingPanel
 
 
 # L10N command label at bottom of simulator window
@@ -32,7 +29,8 @@ class DrawingPanelParameterHolder(Protocol):
     # that it can use to look up the current render settings.
     # It should use this as the source of truth and only save values for e.g. caching reasons.
 
-    current_stitch: int
+    @property
+    def current_stitch() -> int: ...
 
     # Camera settings
     zoom: float
@@ -46,7 +44,7 @@ class DrawingPanelParameterHolder(Protocol):
     show_page: bool
 
     @property
-    def draw_cursor(self) ->  bool: ...
+    def draw_cursor(self) -> bool: ...
 
     @property
     def render_jumps(self) -> bool: ...
@@ -59,235 +57,16 @@ class DrawingPanelProto(Protocol):
     # Any drawing panel must implement these methods
     def set_stitch_plan(self, stitch_plan: StitchPlan) -> None: ...
 
-class SimpleDrawingPanel(wx.Panel):
-    # It's not possible to specify a line thickness less than 1 pixel, even
-    # though we're drawing anti-aliased lines.  To get around this we scale
-    # the stitch positions up by this factor and then scale down by a
-    # corresponding amount during rendering.
-    PIXEL_DENSITY = 10
-
-    def __init__(self, parent: wx.Window, params: DrawingPanelParameterHolder, stitch_plan: StitchPlan) -> None:
-        wx.Panel.__init__(self, parent)
-
-        self.params = params
-        self.set_stitch_plan(stitch_plan)
-        
-        self.SetBackgroundColour('#FFFFFF')
-        self.SetDoubleBuffered(True)
-
-        # ... This isn't actually a black pen.
-        self.black_pen = wx.Pen((128, 128, 128))
-
-        self.Bind(wx.EVT_PAINT, self.OnPaint)
-
-    def OnPaint(self, e: wx.PaintEvent) -> None:
-        dc = wx.PaintDC(self)
-
-        canvas = wx.GraphicsContext.Create(dc)
-
-        self.draw_stitches(canvas)
-        self.draw_scale(canvas)
-
-    def draw_page(self, canvas: wx.GraphicsContext) -> None:
-        self._update_background_color()
-
-        page_specs = self.params.page_specs
-        if not page_specs or not self.params.show_page:
-            return
-
-        with debug.log_exceptions():
-            border_color = wx.Colour(page_specs['border_color'])
-            if page_specs['show_page_shadow']:
-                # wx.TRANSPARENT_PEN does exist, but isn't in the types apparently.
-                canvas.SetPen(wx.TRANSPARENT_PEN)  # type:ignore[attr-defined]
-                canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(border_color.Red(), border_color.Green(), border_color.Blue(), alpha=65))))
-                canvas.DrawRoundedRectangle(
-                    (-page_specs['x'] + 4) * self.PIXEL_DENSITY, (-page_specs['y'] + 4) * self.PIXEL_DENSITY,
-                    page_specs['width'] * self.PIXEL_DENSITY, page_specs['height'] * self.PIXEL_DENSITY,
-                    1 * self.PIXEL_DENSITY
-                )
-
-            pen = canvas.CreatePen(
-                wx.GraphicsPenInfo().Colour(wx.Colour(border_color)).Width(1 * self.PIXEL_DENSITY).Join(wx.JOIN_MITER)
-            )
-            canvas.SetPen(pen)
-            canvas.SetBrush(wx.Brush(wx.Colour(self.params.background_color or page_specs['page_color'])))
-
-            canvas.DrawRectangle(
-                -page_specs['x'] * self.PIXEL_DENSITY, -page_specs['y'] * self.PIXEL_DENSITY,
-                page_specs['width'] * self.PIXEL_DENSITY, page_specs['height'] * self.PIXEL_DENSITY
-            )
-
-    def draw_stitches(self, canvas: wx.GraphicsContext) -> None:
-        canvas.BeginLayer(1)
-
-        transform = canvas.GetTransform()
-        transform.Translate(*self.params.pan)
-        transform.Scale(self.params.zoom / self.PIXEL_DENSITY, self.params.zoom / self.PIXEL_DENSITY)
-        canvas.SetTransform(transform)
-
-        self.draw_page(canvas)
-
-        stitch = 0
-        last_stitch = None
-
-        current_stitch = self.params.current_stitch
-
-        for pen, stitches, jumps in zip(self.pens, self.stitch_blocks, self.jumps):
-            canvas.SetPen(pen)
-            if stitch + len(stitches) < current_stitch:
-                stitch += len(stitches)
-                if len(stitches) > 1:
-                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
-                    self.draw_needle_penetration_points(canvas, pen, stitches)
-                    last_stitch = stitches[-1]
-            else:
-                stitches = stitches[:int(current_stitch) - stitch]
-                if len(stitches) > 1:
-                    self.draw_stitch_lines(canvas, pen, stitches, jumps)
-                    self.draw_needle_penetration_points(canvas, pen, stitches)
-                    last_stitch = stitches[-1]
-                break
-
-        if last_stitch and self.params.draw_cursor:
-            self.draw_crosshair(last_stitch[0], last_stitch[1], canvas, transform)
-
-        canvas.EndLayer()
-
-    def draw_crosshair(self, x: float, y: float, canvas: wx.GraphicsContext, transform: wx.GraphicsMatrix) -> None:
-        x, y = transform.TransformPoint(float(x), float(y))
-        canvas.SetTransform(canvas.CreateMatrix())
-        crosshair_radius = global_settings['simulator_crosshair_radius']
-        crosshair_pen = wx.Pen(wx.Colour(global_settings['simulator_crosshair_colour']), width=global_settings['simulator_crosshair_thickness'])
-        canvas.SetPen(crosshair_pen)
-        canvas.StrokeLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
-        canvas.StrokeLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
-
-    def draw_scale(self, canvas: wx.GraphicsContext) -> None:
-        canvas.SetTransform(canvas.CreateMatrix())
-        canvas.BeginLayer(1)
-
-        # types-wxpython 0.9.7 incorrectly says GetClientSize() has type Rect (???)
-        size = cast(wx.Size, self.GetClientSize())
-
-        one_mm = PIXELS_PER_MM * self.params.zoom
-        scale_width = one_mm
-        scale_width_mm = 1
-        max_width = min(size.width * 0.5, 300)
-        min_width = 50
-
-        if scale_width > max_width:
-            # max_width = one_mm * 2 ^ x
-            # x = log2(max_width/one_mm)
-            exponent = math.floor(math.log2(max_width/one_mm))
-            if exponent < -6:
-                canvas.EndLayer()
-                return
-
-            scale_width = one_mm * 2 ** exponent
-            scale_width_mm = round(2 ** exponent, 2)
-
-        if scale_width < min_width:
-            scale_width_mm = int(min_width / one_mm)
-            scale_width = one_mm * scale_width_mm
-
-        # The scale bar looks like this:
-        #
-        # |           |
-        # |_____|_____|
-
-        scale_lower_left_x = 20
-        scale_lower_left_y = size.height - 30
-
-        canvas.SetPen(self.black_pen)
-        canvas.StrokeLines(((scale_lower_left_x, scale_lower_left_y - 6),
-                            (scale_lower_left_x, scale_lower_left_y),
-                            (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
-                            (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y - 3),
-                            (scale_lower_left_x + scale_width / 2.0, scale_lower_left_y),
-                            (scale_lower_left_x + scale_width, scale_lower_left_y),
-                            (scale_lower_left_x + scale_width, scale_lower_left_y - 6)))
-
-        canvas.SetFont(wx.Font(12, wx.DEFAULT, wx.NORMAL, wx.NORMAL), wx.Colour((0, 0, 0)))
-        canvas.DrawText("%s mm" % scale_width_mm, scale_lower_left_x, scale_lower_left_y + 5)
-
-        canvas.EndLayer()
-
-    def draw_stitch_lines(self, canvas: wx.GraphicsContext, pen: wx.Pen, stitches: List[Tuple[float, float]], jumps: List[int]) -> None:
-        if self.params.render_jumps:
-            canvas.StrokeLines(stitches)
-        else:
-            stitch_blocks = split(stitches, jumps)
-            for i, block in enumerate(stitch_blocks):
-                if len(block) > 1:
-                    canvas.StrokeLines(block)
-
-    def draw_needle_penetration_points(self, canvas: wx.GraphicsContext, pen: wx.Pen, stitches: List[Tuple[float, float]]) -> None:
-        if self.params.render_needle_pen_points:
-            npp_size = global_settings['simulator_npp_size'] * PIXELS_PER_MM * self.PIXEL_DENSITY
-            npp_pen = wx.Pen(pen.GetColour(), width=int(npp_size))
-            canvas.SetPen(npp_pen)
-            canvas.StrokeLineSegments(stitches, [(stitch[0] + 0.001, stitch[1]) for stitch in stitches])
-
-    def _update_background_color(self) -> None:
-        if not self.params.page_specs:
-            self.SetBackgroundColour(self.params.background_color or "#FFFFFF")
-        else:
-            if self.params.show_page:
-                self.SetBackgroundColour(self.params.page_specs['desk_color'])
-            else:
-                self.SetBackgroundColour(self.params.background_color or self.params.page_specs['page_color'])
-
-    def set_stitch_plan(self, stitch_plan: StitchPlan) -> None:
-        self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
-
-        self.pens: List[wx.Pen] = []
-        self.stitch_blocks: List[List[Tuple[float, float]]] = []
-        self.jumps: List[List[int]] = []
-
-        for color_block in stitch_plan:
-            pen = self.color_to_pen(color_block.color)
-            stitch_block: List[Tuple[float, float]] = []
-            jumps: List[int] = []
-            stitch_index = 0
-
-            for stitch in color_block:
-                # trim any whitespace on the left and top and scale to the
-                # pixel density
-                stitch_block.append((self.PIXEL_DENSITY * (stitch.x - self.minx),
-                                     self.PIXEL_DENSITY * (stitch.y - self.miny)))
-
-                if stitch.jump:
-                    jumps.append(stitch_index)
-
-                if stitch.trim or stitch.stop or stitch.color_change:
-                    self.pens.append(pen)
-                    self.stitch_blocks.append(stitch_block)
-                    stitch_block = []
-                    self.jumps.append(jumps)
-                    jumps = []
-                    stitch_index = 0
-                else:
-                    stitch_index += 1
-
-            if stitch_block:
-                self.pens.append(pen)
-                self.stitch_blocks.append(stitch_block)
-                self.jumps.append(jumps)
-
-    def color_to_pen(self, color: ThreadColor) -> wx.Pen:
-        line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
-        background_color = self.GetBackgroundColour().GetAsString()
-        return wx.Pen(list(map(int, color.visible_on_background(background_color).rgb)), int(line_width))
-
-    def update_pen_size(self) -> None:
-        line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
-        for pen in self.pens:
-            pen.SetWidth(int(line_width))
-
 
 class DrawingPanel(wx.Panel):
-    """"""
+    """
+    Essentially, a holder for an element that does the actual rendering,
+    that maintains the renderer state. This way we can switch renderers on
+    the fly and keep the same settings.
+
+    This state information probably does not belong in a UI element quite like this, but
+    that's a bigger refactor for a later day.
+    """
 
     # render no faster than this many frames per second
     TARGET_FPS = 30
@@ -300,6 +79,10 @@ class DrawingPanel(wx.Panel):
 
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
+        # Drawing panel can really be any size, but without this wxpython likes
+        # to allow the status bar and control panel to get squished.
+        self.SetMinSize((300, 300))
+
         self.control_panel = parent.cp
         self.view_panel = parent.vp
 
@@ -309,16 +92,12 @@ class DrawingPanel(wx.Panel):
         self.SetSizer(self.sizer)
         self.Layout()
 
-        # Drawing panel can really be any size, but without this wxpython likes
-        # to allow the status bar and control panel to get squished.
-        # self.SetMinSize((300, 300))
-
         self.animating = False
         self.timer = wx.Timer(self)
         self.last_frame_start = 0.0
         self.target_frame_period = 1.0 / self.TARGET_FPS
         self.direction = 1
-        self.current_stitch = 0
+        self._current_stitch: float = 0  # Ideally this would be an int, but the animation code as it is now expects this to be a float
         self.width = 0
         self.height = 0
         self.loaded = False
@@ -347,24 +126,24 @@ class DrawingPanel(wx.Panel):
         self.Refresh()
 
     def clamp_current_stitch(self) -> None:
-        if self.current_stitch < 1:
-            self.current_stitch = 1
-        elif self.current_stitch > self.num_stitches:
-            self.current_stitch = self.num_stitches
+        if self._current_stitch < 1:
+            self._current_stitch = 1
+        elif self._current_stitch > self.num_stitches:
+            self._current_stitch = self.num_stitches
 
     def stop_if_at_end(self) -> None:
-        if self.direction == -1 and self.current_stitch == 1:
+        if self.direction == -1 and self._current_stitch == 1:
             self.stop()
-        elif self.direction == 1 and self.current_stitch == self.num_stitches:
+        elif self.direction == 1 and self._current_stitch == self.num_stitches:
             self.stop()
 
     def start_if_not_at_end(self) -> None:
-        if self.direction == -1 and self.current_stitch > 1:
+        if self.direction == -1 and self._current_stitch > 1:
             self.go()
-        elif self.direction == 1 and self.current_stitch < self.num_stitches:
+        elif self.direction == 1 and self._current_stitch < self.num_stitches:
             self.go()
 
-    def animate(self, event: Optional[wx.TimerEvent]=None) -> None:
+    def animate(self, event: Optional[wx.TimerEvent] = None) -> None:
         if not self.animating:
             return
 
@@ -387,15 +166,14 @@ class DrawingPanel(wx.Panel):
         self.last_frame_start = now
 
         stitch_increment = self.speed * frame_time
-        self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
-
+        self.set_current_stitch(self._current_stitch + self.direction * stitch_increment)
 
     def clear(self) -> None:
         self.loaded = False
         self.Refresh()
 
     def load(self, stitch_plan: StitchPlan) -> None:
-        self.current_stitch = 1
+        self._current_stitch = 1.0
         self.direction = 1
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
         self.width = self.maxx - self.minx
@@ -437,13 +215,15 @@ class DrawingPanel(wx.Panel):
             self.view_panel.info_panel.update()
 
     def set_status_bar(self, msg: str, pos: int) -> None:
-        # This doesn't really belong here.
+        """
+        Set a status bar field on the top level parent, if it exists.
+        This probably belongs with that top level parent that creates the status bar instead of here.
+        """
         tlp = self.GetTopLevelParent()
         if isinstance(tlp, wx.Frame):
             statusbar = tlp.GetStatusBar()
             if statusbar is not None:
                 statusbar.SetStatusText(msg, pos)
-
 
     def parse_stitch_plan(self, stitch_plan: StitchPlan) -> None:
         # There is no 0th stitch, so add a place-holder.
@@ -521,32 +301,32 @@ class DrawingPanel(wx.Panel):
         self.direction = -1
         self.start_if_not_at_end()
 
-    def set_current_stitch(self, stitch: Union[int, float]) -> None: # Todo: Hunt down who's passing `float`s to this
-        self.current_stitch = int(stitch)
+    def set_current_stitch(self, stitch: float) -> None:
+        self._current_stitch = stitch
         self.clamp_current_stitch()
         try:
-            command = self.commands[int(self.current_stitch)]
+            command = self.commands[int(self._current_stitch)]
         except IndexError:
             # no stitch plan loaded yet, do nothing for now
             return
-        self.control_panel.on_current_stitch(int(self.current_stitch), command)
+        self.control_panel.on_current_stitch(int(self._current_stitch), command)
         self.set_status_bar(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()
         self.Refresh()
 
     def restart(self) -> None:
         if self.direction == 1:
-            self.current_stitch = 1
+            self._current_stitch = 1
         elif self.direction == -1:
-            self.current_stitch = self.num_stitches
+            self._current_stitch = self.num_stitches
 
         self.go()
 
     def one_stitch_forward(self) -> None:
-        self.set_current_stitch(self.current_stitch + 1)
+        self.set_current_stitch(self._current_stitch + 1)
 
     def one_stitch_backward(self) -> None:
-        self.set_current_stitch(self.current_stitch - 1)
+        self.set_current_stitch(self._current_stitch - 1)
 
     def on_left_mouse_button_down(self, event: wx.MouseEvent) -> None:
         obj = event.GetEventObject()
@@ -563,7 +343,7 @@ class DrawingPanel(wx.Panel):
         if obj.HasCapture() and event.Dragging():
             delta = event.GetPosition()
             offset = (
-                delta.x - self.drag_start[0], 
+                delta.x - self.drag_start[0],
                 delta.y - self.drag_start[1]
             )
             self.pan = (self.drag_original_pan[0] + offset[0], self.drag_original_pan[1] + offset[1])
@@ -620,9 +400,13 @@ class DrawingPanel(wx.Panel):
         self.Refresh()
 
     @property
+    def current_stitch(self) -> int:
+        return int(self._current_stitch)
+
+    @property
     def draw_cursor(self) -> bool:
         return self.view_panel.btnCursor.GetValue()
-    
+
     @property
     def render_jumps(self) -> bool:
         return self.view_panel.btnJump.GetValue()
