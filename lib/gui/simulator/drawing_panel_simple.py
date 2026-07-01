@@ -90,6 +90,7 @@ class SimpleDrawingPanel(wx.Panel):
         canvas.SetTransform(transform)
 
         self.draw_page(canvas)
+        self.update_pen_size()
 
         stitch = 0
         last_stitch = None
@@ -239,11 +240,11 @@ class SimpleDrawingPanel(wx.Panel):
                 self.jumps.append(jumps)
 
     def color_to_pen(self, color: ThreadColor) -> wx.Pen:
-        line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
+        line_width = self.params.line_width * PIXELS_PER_MM * self.PIXEL_DENSITY
         background_color = self.GetBackgroundColour().GetAsString()
         return wx.Pen(list(map(int, color.visible_on_background(background_color).rgb)), int(line_width))
 
     def update_pen_size(self) -> None:
-        line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
+        line_width = self.params.line_width * PIXELS_PER_MM * self.PIXEL_DENSITY
         for pen in self.pens:
             pen.SetWidth(int(line_width))

@@ -41,6 +41,7 @@ class DrawingPanelParameterHolder(Protocol):
     background_color: Optional[wx.Colour]
 
     # Render options
+    line_width: float
     show_page: bool
 
     @property
@@ -104,6 +105,7 @@ class DrawingPanel(wx.Panel):
         self.page_specs: Dict[str, Any] = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color: Optional[wx.Colour] = None
+        self.line_width: float = global_settings['simulator_line_width']
 
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
@@ -397,6 +399,10 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
+        self.Refresh()
+
+    def update_pen_size(self) -> None:
+        self.line_width = global_settings['simulator_line_width']
         self.Refresh()
 
     @property
