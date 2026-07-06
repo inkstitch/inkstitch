@@ -58,7 +58,7 @@ En mode point manuel Ink/Stitch utilise chaque nœud d’un chemin comme point d
 Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
 Une colonne satin est créée à l'aide d'un point zigzag entre deux lignes de contour (rails). La distance entre ces lignes détermine la largeur de la colonne, vous pouvez donc faire varier cette largeur à votre guise. Ink/Stitch dessine des zig-zags entre les deux lignes ce contour. 
 
-{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Bordure en colonne satin ;2:Satin avec longueur de point aléatoire et décalage;3: Satin Multicolore" %}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Tourbillon de satin;2:Satin avec longueur de point aléatoire et décalage;3:Satin Multicolore;4:Tourbillon de satin" %}
 
 [En savoir plus](/fr/docs/stitches/satin-column/){: .btn .btn--primary}
 
@@ -87,8 +87,8 @@ Le satin en “zigzag” est une colonne satin avec un air de zigzag.
 [En savoir plus](/fr/docs/stitches/zigzag-satin-stitch/){: .btn .btn--primary}
 
 ## Remplissage
-Les points de remplissage sont utilisés pour remplir une grande surface avec une couleur.
 
+Les points de remplissage sont utilisés pour remplir une grande surface avec une couleur.
 
 ### Tatami
 

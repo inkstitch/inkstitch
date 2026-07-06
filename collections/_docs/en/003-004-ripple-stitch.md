@@ -12,6 +12,8 @@ Closed shapes will be filled with a spiral (circular ripples). Open shapes will 
 
 {% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Simple ripple from a closed shape;2:Satin guided ripple" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/ripple_stitch.zip)
+
 ## Creation
 
 {% include video id="cyvby3KJM10" provider="youtube" %}

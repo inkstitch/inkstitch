@@ -7,7 +7,10 @@ toc: true
 ## Description
 
 En mode point manuel Ink / Stitch utilise chaque nœud d’un chemin comme point de pénétration de l’aiguille, exactement comme vous les avez placés, ni plus, ni moins.
+
 {% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Chemin manuel - chaque noeud représente un point." %}
+
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/manual_stitch.zip)
 
 Si vous ouvrez un fichier de broderie machine, vous y trouverez des points manuels.  Lorsque vous concevrez un fichier de broderie en svg, vous utiliserez très rarement les points manuels.
 

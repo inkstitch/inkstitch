@@ -11,6 +11,8 @@ A simple repetition is most of the time too thin, so that the running stitch is 
 
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Running stitch mandala (redwork)" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/running_stitch.zip)
+
 ## Creation
 
 Running stitch is created from a path with a stroke color.

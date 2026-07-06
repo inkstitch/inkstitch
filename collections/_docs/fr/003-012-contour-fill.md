@@ -10,14 +10,14 @@ Le remplissage selon le contour remplit les objets en suivant leur contour.
 
 {% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Remplissage selon contour appliqué à toute la forme;2:Remplissage selon contour appliqué par sections" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/contour_fill.zip)
 
 ## Création
 
 Créez une **forme fermée avec une couleur de remplissage**
 
-
-
 ## Définir le point de départ et d'arrivée
+
 Seul le point de départ peut être défini avec les [commandes visuelles](/fr/docs/commands/). La commande point d'arrivée est sans effet sur les remplissages selon contour.
 
 ## Paramètres

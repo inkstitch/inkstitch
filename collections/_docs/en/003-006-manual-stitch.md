@@ -10,6 +10,8 @@ Manual stitches are create by using each node of a path as a needle penetration 
 
 {% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manual path - each node represents one stitch" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/manual_stitch.zip)
+
 ## Creation
 
 1. Create a path. The line style or width are not used in the creation of a manual stitch. 

@@ -10,6 +10,8 @@ Die lineare Verlaufsfüllung nutzt die in Inkscape gesetzte Farbe "linearer Verl
 
 {% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1:Blau-Lila-Farbverlauf;2:Rot-Gelb-Farbverlauf" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/linear_gradient_fill.zip)
+
 ## Funktionsweise
 
 * Erstelle einen geschlossenen Pfad. Der Pfad darf Löcher enthalten.

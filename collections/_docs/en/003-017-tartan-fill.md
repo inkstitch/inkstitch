@@ -10,6 +10,8 @@ Tartan is a patterned fabric with colored horizontal and vertical stripes. It is
 
 {% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Single color tartan;2:Multi-color tartan" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/tartan.zip)
+
 ## Creation
 
 * Create a **closed path with a fill color**. The shape may have holes.

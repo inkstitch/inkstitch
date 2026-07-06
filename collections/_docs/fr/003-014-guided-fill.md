@@ -11,6 +11,8 @@ Tout comme le remplissage usuel, le remplissage guidé est composé de rangées 
 
 {% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Remplissage guidé avec fil multicolore;2: Superposition de zones en remplissage guidés pour un effet d'aquarelle;3:remplissage guidé avec la méthode Buffer" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/guided_fill.zip)
+
 ## Création
 
 * Créez une **forme fermée avec une couleur de remplissage**. Cette forme  peut comporter des trous.

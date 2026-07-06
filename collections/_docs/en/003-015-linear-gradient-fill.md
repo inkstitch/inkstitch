@@ -10,6 +10,8 @@ Linear gradient fill uses Inkscapes linear gradient color to create seamless gra
 
 {% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1:Blue-purple-gradient;2:Red-yellow-gradient" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/linear_gradient_fill.zip)
+
 ## Creation
 
 * Create a closed path. The shape may have holes.

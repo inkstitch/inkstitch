@@ -10,6 +10,8 @@ Kurvige Füllflächen mit Hilfe von Führungslinien.
 
 {% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Kurvenfüllung mit mehrfarbigem Garn;2:Übereinandergelagerte Flächen mit loser Kurvenfüllung für einen Wasserfarben-Effekt;3:Kurvenfüllung mit der Buffer-Methode" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/guided_fill.zip)
+
 ## Funktionsweise
 
 * Erstelle einen geschlossenen Pfad mit einer Füllung.

@@ -10,6 +10,8 @@ Mäanderfüllung hat seinen Ursprung in Quilt-Techniken. Für das Maschinenstick
 
 {% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Mäanderfüllung mit mehrfarbigem Garn;2:Mäanderfüllung mit Zickzack" %}
 
+[<i class="fa fa-download"></i>  Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/meander_fill.zip)
+
 ## Funktionsweise
 
 * Erstelle einen geschlossenen Pfad mit einer Füllung. Aussparungen innerhalb der Form sind möglich.

@@ -10,6 +10,8 @@ Im manuellen Stichmodus stellt jeder Knoten des Pfades einen Nadeleinstich dar. 
 
 {% include folder-galleries path="butterfly-fill-project/manual/" captions="1:Manueller Pfad - jeder Knotenpunkt ein Stich" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/manual_stitch.zip)
+
 ## Funktionsweise
 
 1. Erstelle einen Pfad mit mehreren Knoten. Breite und Strichlinien-Einstellung haben keine Auswirkungen im manuellen Stichmodus.

@@ -11,6 +11,8 @@ Häufig ist eine einfache Wiederholung zu dünn und der Geradstich wird stattdes
 
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Geradstich Mandala (Redwork)" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/running_stitch.zip)
+
 ## Funktionsweise
 
 Geradstich wird durch einen Pfad mit einer Konturfarbe erstellt.

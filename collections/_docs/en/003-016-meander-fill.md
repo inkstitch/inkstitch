@@ -10,6 +10,8 @@ Meander fill has its origins in quilting techniques. A beautiful patterned effec
 
 {% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Meander fill using variegated thread;2:Meander fill with zick-zack spacing" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/meander_fill.zip)
+
 ## Creation
 
 * Create a **closed path with a fill color**. This shape may have holes.

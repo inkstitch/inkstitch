@@ -10,6 +10,8 @@ Contour fill covers areas with stitches following the contour of an object.
 
 {% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Contour fill applied to the entire shape;2:Contour fill applied to shape sections" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/contour_fill.zip)
+
 ## Creation
 
 Create a **closed path with a fill color**.

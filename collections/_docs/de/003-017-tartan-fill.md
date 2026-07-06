@@ -10,6 +10,8 @@ Tartan ist ein gemusterter Stoff mit farbigen horizontalen und vertikalen Streif
 
 {% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Einfarbiger Tartan;2:Mehrfarbiger Tartan" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/tartan.zip)
+
 ## Funktionsweise
 
 * Erstelle einen **geschlossenen Pfad mit Füllfarbe**. Die Form darf Löcher enthalten.

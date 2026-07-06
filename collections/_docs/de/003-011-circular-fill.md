@@ -10,6 +10,8 @@ Eine Spiralfüllung füllt eine Form mit einer gestickten Spirale. Der Mittelpun
 
 {% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Spiralfüllung in mehreren Schichten;2:Spiralfüllung mit unauffälligem Farbverlauf" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/circular_fill.zip)
+
 ## Funktionsweise
 
 * Erstelle einen geschlossenen Pfad mit einer Füllung. Aussparungen innerhalb der Form sind möglich.

@@ -20,6 +20,8 @@ Kreuzstich zeichnet sich durch kleine, gleichmäßige Kreuze aus, die dem gestic
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Kreuzstich mit einem schwarzen Rand mit Mehrfachgeradstichen" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/cross_stitch.zip)
+
 ## Funktionsweise
 
 * Zeichne eine geschlossene Form mit einer Füllfarbe

@@ -12,6 +12,8 @@ E-Stich dient als einfacher (und doch festem) Deckstich für Applikationen. Er i
 
 {% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stich Applikation" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/e_stitch.zip)
+
 ## Funktionsweise
 
 Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches/satin-column) tun würdest. Dann aktiviere die Funktion "E Stich" im [Parameter-Dialogfenster](/de/docs/params/#satinsäule). Gleichzeitig macht es Sinn, den Wert "Zick-Zack Abstand" für diese Stichart zu erhöhen.

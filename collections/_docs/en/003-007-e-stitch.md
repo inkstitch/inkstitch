@@ -12,6 +12,8 @@ It's biggest purpose is for a simple (and yet deceivingly strong) cover stitch f
 
 {% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/e_stitch.zip)
+
 ## Creation
 
 Prepare your path exactly as you would with a [Satin Column](/docs/stitches/satin-column). But in Params enable `"E" stitch`. Don't forget to enlarge the zig-zag spacing for this stitch type.

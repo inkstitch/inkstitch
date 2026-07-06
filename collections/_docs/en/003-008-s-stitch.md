@@ -12,6 +12,8 @@ toc: true
 
 {% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stitch application" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/s_stitch.zip)
+
 ## Creation
 
 Prepare your path exactly as you would with a [Satin Column](/docs/stitches/satin-column). 

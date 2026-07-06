@@ -20,6 +20,8 @@ Cross-stitch is characterized by small, even crosses, which give the embroidered
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Cross stitch with a black bean stitch outline" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/cross_stitch.zip)
+
 ## Creation
 
 * Draw a closed shape with a fill color

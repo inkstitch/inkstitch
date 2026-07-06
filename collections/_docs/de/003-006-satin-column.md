@@ -8,7 +8,9 @@ toc: true
 
 Satinsäulen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbereiche verwendet.
 
-{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin Umrandung;2:Satin mit randomisierter Stichlänge und versetzten Zwischenstichen;3: Mehrfarbige Satinsäulen" %}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satinwirbel;2:Satin mit randomisierter Stichlänge und versetzten Zwischenstichen;3: Mehrfarbige Satinsäulen" %}
+
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/satin_column.zip)
 
 ## Funktionsweise
 

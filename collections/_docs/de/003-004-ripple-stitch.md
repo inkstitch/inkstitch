@@ -12,6 +12,8 @@ Geschlossene Formen werden mit einer Spirale gefüllt (z.B. Kreis). Bei offenen 
 
 {% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Einfacher Ripple mit geschlossener Form;2:Satingeführter Ripplestich" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/ripple_stitch.zip)
+
 ## Funktionsweise
 
 {% include video id="cyvby3KJM10" provider="youtube" %}

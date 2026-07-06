@@ -12,6 +12,8 @@ Die Standard-Satinsäule verläuft in einem Sägezahnmuster. "Zick-Zack" ist ein
 
 {% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zick-Zack-Satin Applikation" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/zigzag_satin.zip)
+
 ## Funktionsweise
 
 Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches/satin-column) tun würdest. 

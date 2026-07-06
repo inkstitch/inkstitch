@@ -12,6 +12,8 @@ S-Stich ist eine Satinsäule die wie eine Füllung aussieht.
 
 {% include folder-galleries path="butterfly-fill-project/s_stitch/" captions="1:S-Stich Applikation" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/s_stitch.zip)
+
 ## Funktionsweise
 
 Bereite deinen Pfad genauso vor, wie du es für [Satinsäulen](/de/docs/stitches/satin-column) tun würdest. 

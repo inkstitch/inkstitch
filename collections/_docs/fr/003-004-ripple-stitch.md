@@ -10,6 +10,8 @@ La broderie ondulée tient à la fois du point droit et du remplissage : elle se
 
 {% include folder-galleries path="butterfly-fill-project/ripple/" captions="1:Ondulation à partir d'une forme fermée ;2:Ondulation guidée par un satin" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/ripple_stitch.zip)
+
 Regardez cette video de présentation:
 
 {% include video id="cyvby3KJM10" provider="youtube" %}

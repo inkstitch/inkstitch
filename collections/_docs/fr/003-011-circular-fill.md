@@ -10,6 +10,8 @@ Le remplissage circulaire remplit une forme avec une spirale. Le centre de la sp
 
 {% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Plusieurs couches de remplissage circulaire;2:Remplissages circulaires avec effet de dégradé circulaire" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/circular_fill.zip)
+
 ## Création
 
 * Créez **un chemin fermé avec une couleur de remplissage**. Cette forme peut avoir des trous.

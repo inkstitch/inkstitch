@@ -10,6 +10,8 @@ Generate curved fill using guide lines.
 
 {% include folder-galleries path="butterfly-fill-project/guided/" captions="1:Guided fill with variegated thread;2:Layered areas using guided fill for a watercolor effect;3:Guided fill using the buffer method" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/guided_fill.zip)
+
 ## Creation
 
 * Create a **closed path with a fill color**. This shape may have holes.

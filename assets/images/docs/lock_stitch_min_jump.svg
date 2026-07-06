@@ -144,7 +144,7 @@
            style="font-family:Barlow;stroke-width:0.3"
            x="77.565018"
            y="47.443893"
-           id="tspan7">☒ Keine Anstecher</tspan></text>
+           id="tspan7">☒ Anstecher</tspan></text>
       <text
          systemLanguage="fr"
          style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
@@ -154,7 +154,7 @@
            style="font-family:Barlow;stroke-width:0.3"
            x="77.565018"
            y="47.443893"
-           id="tspan8">☒Pas de point d’arrêt initial</tspan></text>
+           id="tspan8">☒ Point d’arrêt initial</tspan></text>
       <text
          style="font-size:3.175px;font-family:Barlow;display:inline;fill:#ff0000"
          x="77.565018"
@@ -163,7 +163,7 @@
            style="font-family:Barlow;stroke-width:0.3"
            x="77.565018"
            y="47.443893"
-           id="tspan14-0">☒ No tack stitches</tspan></text>
+           id="tspan14-0">☒ Tack stitches</tspan></text>
     </switch>
     <switch
        id="switch10">
@@ -176,7 +176,7 @@
            style="font-family:Barlow;stroke-width:0.3"
            x="36.403015"
            y="52.324272"
-           id="tspan9">☒ Keine Verstecher</tspan></text>
+           id="tspan9">☒ Verstecher</tspan></text>
       <text
          systemLanguage="fr"
          style="font-size:3.175px;font-family:Barlow;fill:#ff0000"
@@ -186,7 +186,7 @@
            style="font-family:Barlow;stroke-width:0.3"
            x="36.403015"
            y="52.324272"
-           id="tspan10">☒ Pas de point d’arrêt final</tspan></text>
+           id="tspan10">☒ Point d’arrêt final</tspan></text>
       <text
          style="font-size:3.175px;font-family:Barlow;display:inline;fill:#ff0000"
          x="36.403015"
@@ -195,7 +195,7 @@
            style="font-family:Barlow;stroke-width:0.3"
            x="36.403015"
            y="52.324272"
-           id="tspan16-1">☒ No lock stitches</tspan></text>
+           id="tspan16-1">☒ Lock stitches</tspan></text>
     </switch>
     <switch
        id="switch12">
@@ -208,7 +208,7 @@
            id="tspan11"
            style="font-family:Barlow;fill:#009d0f;fill-opacity:1;stroke-width:0.3"
            x="36.403015"
-           y="47.443893">☑ Verstecher</tspan></text>
+           y="47.443893">☑ Anstecher</tspan></text>
       <text
          systemLanguage="fr"
          style="font-size:3.175px;font-family:Barlow;fill:#009d0f"

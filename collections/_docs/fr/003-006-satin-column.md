@@ -9,8 +9,9 @@ toc: true
 Le point satin est principalement utilisé pour les bordures, les lettres ou les petites zones de remplissage.
 
 
-{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Bordure en colonne satin ;2:Satin avec longueur de point aléatoire et décalage;3: Satin Multicolore" %}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Tourbillon de satin;2:Satin avec longueur de point aléatoire et décalage;3:Satin Multicolore;4:Tourbillon de satin" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/satin_column.zip)
 
 ## Création
 

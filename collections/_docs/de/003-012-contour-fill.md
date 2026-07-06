@@ -10,6 +10,8 @@ Konturfüllung füllt eine Fläche der Kontur folgend.
 
 {% include folder-galleries path="butterfly-fill-project/contour/" captions="1:Konturfüllung auf die Gesamtform;2:Konturfüllung mit Unterteilungen" %}
 
+[<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/contour_fill.zip)
+
 ### Funktionsweise
 
 Erstelle einen geschlossenen Pfad mit einer Füllfarbe.

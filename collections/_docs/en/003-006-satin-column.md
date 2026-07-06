@@ -8,7 +8,9 @@ toc: true
 
 Satin column are used for borders, letters or small fill areas.
 
-{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin border;2:Satin with randomized stitch length and staggered split stitches;3: Mutlicolor-Satin" %}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin swirl;2:Satin with randomized stitch length and staggered split stitches;3: Mutlicolor-Satin" %}
+
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/satin_column.zip)
 
 ## Creation
 

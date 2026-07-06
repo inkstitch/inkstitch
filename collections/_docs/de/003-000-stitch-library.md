@@ -52,7 +52,7 @@ Satinsäulen werden meistens für Ränder, Buchstaben oder sehr kleine Füllbere
 
 Ink/Stitch produziert Zick-Zack-Linien zwischen zwei Randlinien. Dabei ist es möglich die Breite der Säule zu variieren.
 
-{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satin Umrandung;2:Satin mit randomisierter Stichlänge und versetzten Zwischenstichen;3: Mehrfarbige Satinsäulen" %}
+{% include folder-galleries path="butterfly-fill-project/satin/" captions="1:Satinwirbel;2:Satin mit randomisierter Stichlänge und versetzten Zwischenstichen;3: Mehrfarbige Satinsäulen" %}
 
 [Mehr lesen](/de/docs/stitches/satin-column/){: .btn .btn--primary}
 

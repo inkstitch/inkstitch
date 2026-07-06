@@ -10,6 +10,7 @@ Le remplissage en dégradé linéaire utilise la couleur du dégradé linéaire 
 
 {% include folder-galleries path="butterfly-fill-project/linear_gradient/" captions="1: Dégradé Bleu PourpreB;2:Dégradé Rouge Jaune" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/linear_gradient_fill.zip)
 
 ## Creation
 

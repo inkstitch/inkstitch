@@ -10,6 +10,8 @@ Circular fill fills a shape with an embroidered spiral. The center of the spiral
 
 {% include folder-galleries path="butterfly-fill-project/circular/" captions="1:Circular fill using multiple layers;2:Circular fill with subtle color gradient" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/circular_fill.zip)
+
 ## Creation
 
 * Create a **closed path with a fill color**. The shape may have holes.

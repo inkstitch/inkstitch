@@ -15,7 +15,7 @@ categories:
       - id: stitch_length
         en: Stitch length
         de: Stichlänge
-        fr: Longueur des points
+        fr: Longueur du point
       - id: split_stitches
         en: Split stitches
         de: Zwischenstiche
@@ -27,7 +27,7 @@ categories:
       - id: pattern
         en: Stitch placement / Pattern
         de: Stichpositionierung / Muster
-        fr: Position des points / Texture
+        fr: Stitch placement / Motif
       - id: compensation
         en: Pull compensation
         de: Verzugsausgleich
@@ -35,11 +35,11 @@ categories:
       - id: satin_width
         en: Satin width
         de: Breite der Satinsäule
-        fr: Largeur du satin
+        fr: Satin width
       - id: size
         en: Size
         de: Größe
-        fr: Taille
+        fr: Size
       - id: density
         en: Density
         de: Dichte
@@ -47,7 +47,7 @@ categories:
       - id: travel
         en: Travel stitches
         de: Verbindungsstiche
-        fr: Chemins de liaison
+        fr: chemins de liaison
       - id: random
         en: Randomizing
         de: Randomisierung
@@ -55,7 +55,7 @@ categories:
   - id: direction
     en: Stitch direction, starting and ending position
     de: Stichrichtung, Start- und Endposition
-    fr: Sens de la broderie, position de début et de fin
+    fr: Stitch direction, starting and ending position
   - id: lock
     en: Lock stitches
     de: Vernähstiche
@@ -120,7 +120,7 @@ params:
           info: "`Manuelle Stichpositionierung` auswählen"
     fr:
       title: Méthode
-      description: Détermines quel type de point utiliser.
+      description: Determines which stitch type to use.
       add-descr:
         - stitch-type: running-stitch
           info: Choisir `Point droit / Point multiple`
@@ -190,8 +190,8 @@ params:
         alt: 
         title: 
     fr:
-      title: Tolérance du point droit
-      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolérance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
+      title: Tolerance du point droit
+      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
       image:
         url: /assets/images/docs/run-tolerance.jpg
         alt: 
@@ -262,8 +262,8 @@ params:
       description: |
         Position des ondulations lorsque guidées par un satin.
         * Nombre de lignes / Distance entre les lignes (valeur par défaut): utilise soit la valeur du nombre de lignes ou la distance minimum entre les lignes si elle a été définie.
-        * Rendu aux traverses: une ondulation à chaque traverse seulement
-        * Adaptatif et distance minimum entre les lignes : adapte la distance entre les ondulations selon leur taille
+        * Rendu aux traverses une ondulation à chaque traverse seulement
+        * Adaptatif et distance minimum entre les lignes adapte la distance entre les ondulations selon leur taille
 
   - name: skip_start
     category: pattern
@@ -295,7 +295,7 @@ params:
         url: /assets/images/docs/ripple_only_skip.svg
         alt: Sauter
         title: Sauter
-      description: Détermine le nombre d'ondulations à sauter (ne pas broder) au début et à la fin de la broderie.
+      description: Set the number of lines to skip (do not embroider) at the and/or end of the run.
 
   - name: flip_copies
     category: pattern
@@ -393,15 +393,15 @@ params:
       description: Fügt quer verlaufende Linien hinzu, die zu einem Gittereffekt führen. Die Größe des Gitters kann auch Auswirkungen auf die Genauigkeit des Linienverlaufs haben.
       image:
         url: /assets/images/docs/ripple_only_grid.svg
-        alt: Gitter
-        title: gitter
+        alt: 
+        title: 
     fr:
       title: Taille de la grille
       description: Si une distance positive est spécifiée, les ondulations de la broderie sont complétées en une "grille", par un chemin "perpendiculaire" aux ondulations. Le paramètre contrôle l'écart de ces perpendiculaires. Intervertir n'a pas d'influence sur ce paramètre.
       image:
         url: /assets/images/docs/ripple_only_grid.svg
-        alt: Grille
-        title: grille
+        alt: 
+        title: 
 
   - name: grid_first
     category: pattern
@@ -573,7 +573,7 @@ params:
     fr:
       title: Méthode de découpage
       description: |
-        Le découpage des points ne s'applique que si une longueur maximum des points a été fixée et que le point dépasse cette longueur. Options:
+        Split stitches apply, when a maximum stitch length is set and the stitch length exceeds this value. Options:
         * Par défaut
         * Simple
         * Décalé
@@ -997,7 +997,7 @@ params:
       title: Push compensation
       description: |
         Satin stitches [push out to the ends](/tutorials/push-pull-compensation/), which results into a longer columns than drawn in Inkscape.
-        This setting shortens the column by the given amound (mm) at start and/or end.
+        This settings shortens the column by the given amound (mm) at start and/or end.
         Two values separated by a space may be used for an asymetric effect.
         Negative values lead to the opposite effect.
       image:
@@ -1016,10 +1016,10 @@ params:
         alt: 
         title: 
     fr:
-      title: Compensation d'élongation
+      title: Push compensation
       description: |
-        Les colonnes satins [poussent le tissu vers le extrémités](/fr/tutorials/push-pull-compensation/),  ce qui résulte en des colonnes plus longues que ce qui a été déssiné dans inkscapewhich results into a longer columns than drawn in Inkscape.
-        Ce paramètre racourci la colonne de la valeur indiquée au début et/ou à la fin.
+        Satin stitches [push the fabric out to the ends](/tutorials/push-pull-compensation/), which results into a longer columns than drawn in Inkscape.
+        This settings shortens the column by the given amound (mm) at start and/or end.
         Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.
         Une valeur négative contracte.
       image:
@@ -1109,7 +1109,7 @@ params:
       description: Échange les deux rails de la colonne satin, ce qui affecte le côté de fin de broderie ainsi que tous les paramètres asymétriques
       add-descr:
         - stitch-type: ripple-stitch
-          info: Affecte la colonne satin guide.
+          info: Takes effect on a satin guide line.
 
   - name: running_stitch_length_mm
     category: travel
@@ -1186,8 +1186,8 @@ params:
         alt: 
         title: 
     fr:
-      title: Tolérance du point droit
-      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolérance basse peut impliquer des points plus courts dans les courbes. Une tolérance haute entraine un arrondissement des angles aigus.
+      title: Tolerance du point droit
+      description: Les points ne peuvent pas être éloignés du chemin de plus que cette distance. Une tolerance basse peut impliquer des points plus courts dans les courbes. Une tolerance haute entraine un arrondissement des angles aigus.
       image:
         url: /assets/images/docs/run-tolerance.jpg
         alt: 
@@ -1824,7 +1824,7 @@ params:
         alt: 
         title: 
       description: |
-        Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallées).
+        Les points sont décalés de manière à ce que les rangées de points voisines ne tombent pas toutes dans la même colonne (ce qui créerait un effet de vallée).
         Ce paramètre détermine la longueur du cycle de décalage des rangées.
         Les fractions sont autorisées et peuvent produire des diagonales moins visibles que les valeurs entières.
       add-desc:
@@ -1876,7 +1876,7 @@ params:
         alt: 
         title: 
     fr:
-      title: Pourcentage de compensation d'étirement
+      title: ourcentage de compensation d'étirement
       description: Compensation d'étirement supplémentaire qui varie comme un pourcentage de la longueur de la rangée. Deux valeurs séparées par un espace peuvent être utilisées pour un effet asymétrique.
       image:
         url: /assets/images/docs/fill-pull_comp_percent.jpg
@@ -2099,8 +2099,8 @@ params:
       title: Muster skalieren
       description: Skaliert das Muster (%)
     fr:
-      title: Échelle du motif de méandre
-      description:  Mise à l'échelle du motif (en %)
+      title: Angle du motif de méandre
+      description: 
 
   - name: clip
     category: pattern
@@ -2113,8 +2113,8 @@ params:
       title: Pfad auf Form beschränken
       description: Nützlich bei der Verwendung von Glätten und Erweitern. Sorgt dafür, dass keine Stiche außerhalb der ursprünglichen Form liegen.
     fr:
-      title: Contraindre le chemin à la forme
-      description: Contraint le chemin à la forme. Utile en cas d'utilisation d' expansion ou de lissage
+      title: Échelle du motif de méandre
+      description: Mise à l'échelle du motif (en %)
 
   # Wiederholungen
 
@@ -2521,6 +2521,46 @@ params:
     fr:
       title: Point d'arrêt final
       description: Choisir le [style désiré](/fr/docs/stitches/lock-stitches/)
+
+  - name: lock_scale
+    category: lock
+    applies-to:
+      - all-types
+    en:
+      title: Scale tack stitch / Scale lock stitch
+      description: Some lock stitches have a scaling option in either mm or percent.
+    de:
+      title: Anstecher / Verstecher skalieren
+      description: Manche Vernähstiche können in Prozent- oder Milimeterwerten skaliert werden
+    fr:
+      title: Échelle du point d'arrêt initial / final
+      description: Some lock stitches have a scaling option in either mm or percent.
+
+  - name: lock_custom_start
+    category: lock
+    applies-to:
+      - all-types
+    en:
+      title: Custom path
+      description: |
+        This setting is only available for custom lock stitches.
+        Enter a custom mm or svg path.
+        The first node of an svg path will not be emboirdered, but represents the first (tack) or last (lock) stitch of the element.
+        [Read more](/docs/stitches/lock-stitches/#custom-svg-path)
+    de:
+      title: Benutzerdefinierter Pfad
+      description: |
+        Diese Einstellung bezieht sich auf benutzerdefinierte Vernähstiche.
+        Füge einen benutzerdefinierten Milimeter- oder SVG-Pfad ein.
+        Der erste Knoten eines SVG-Pfads wird nicht gestickt, sondern repräsentiert den ersten (Anstecher) oder letzten (Verstecher) Stich des Elements.
+        [Mehr lesen](/de/docs/stitches/lock-stitches/#benutzerdefinierte-vernähstiche)
+    fr:
+      title: Chemin personnalisé
+      description: |
+        This setting is only available for custom lock stitches.
+        Entrez un chemin personnalisé.
+        Pour les chemins svg, le dernier nœud ne sera pas brodé, mais représente le premier point de l'élément.
+        [En savoir plus](/fr/docs/stitches/lock-stitches/#points-darrêt-personnalisés)
 
   - name: trim_after
     category: commands

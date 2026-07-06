@@ -12,6 +12,8 @@ Le satin en  "zigzag" est une colonne satin avec un air de zigzag
 
 {% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Appliqué avec un Satin Zig-Zag" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/zigzag_satin.zip)
+
 ## Création
 
 Préparez votre chemin exactement comme vous le feriez pour une [Colonne Satin](/fr/docs/stitches/satin-column). 

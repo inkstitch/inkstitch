@@ -12,6 +12,8 @@ toc: true
 
 {% include folder-galleries path="butterfly-fill-project/zigzag_satin/" captions="1:Zig-Zag-Satin application" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/zigzag_satin.zip)
+
 ## Creation
 
 Prepare your path exactly as you would with a [Satin Column](/docs/stitches/satin-column). 

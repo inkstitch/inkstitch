@@ -21,6 +21,8 @@ Il se caractérise par de petites croix régulières, ce qui donne à l'image br
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Point de croix" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/cross_stitch.zip)
+
 ## Création
 
 * Dessinez une forme fermée avec une couleur de remplissage.

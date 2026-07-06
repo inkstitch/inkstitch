@@ -10,6 +10,8 @@ Le remplissage en méandres est originaire des techniques de quilting. Il produi
 
 {% include folder-galleries path="butterfly-fill-project/meander/" captions="1:Remplissage en méandres avec fil multicolore;2:Remplissage en méandres avec zigzag" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/meander_fill.zip)
+
 ## Création
 
 * Créez un **chemin fermé avec une couleur de remplissage**.  Cette forme peut contenir des trous.

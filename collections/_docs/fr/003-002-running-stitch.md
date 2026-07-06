@@ -14,6 +14,8 @@ Cela rend la ligne plus large et plus visible.
 
 {% include folder-galleries path="butterfly-fill-project/running/" captions="1:Mandala au point droit(redwork)" %}
 
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/running_stitch.zip)
+
 ## Création
 
 Un point droit est créé à l'aide d'un chemin muni d'une couleur de contour.

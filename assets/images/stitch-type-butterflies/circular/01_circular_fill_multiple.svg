@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="circular.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:inkstitch="http://inkstitch.org/namespace">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.78"
+     inkscape:cx="221.06742"
+     inkscape:cy="188.20225"
+     inkscape:window-width="1920"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2">
+    <inkscape:grid
+       id="grid3"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="0.99999986"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#00d9e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1">
+    <inkstitch:min_stitch_len_mm>0.3</inkstitch:min_stitch_len_mm>
+    <inkstitch:collapse_len_mm>11.0</inkstitch:collapse_len_mm>
+    <inkstitch:min_satin_stroke_width_mm>1.0</inkstitch:min_satin_stroke_width_mm>
+    <inkstitch:inkstitch_svg_version>4</inkstitch:inkstitch_svg_version>
+  </metadata>
+  <defs
+     id="defs1">
+    <symbol
+       id="inkstitch_target_point"
+       style="display:inline;opacity:0.7"
+       transform="scale(0.25, 0.25)">
+      <title
+         id="inkstitch_title9427-9">Target point</title>
+      <path
+         id="inkstitch_circle13166-9"
+         d="m 9.220113,0.07922893 c -1.9e-6,5.10672897 -4.1398241,9.24654997 -9.24655297,9.24654997 -5.10672933,0 -9.24655213,-4.139821 -9.24655403,-9.24654997 1e-7,-2.45233803 0.9741879,-4.80423503 2.7082531,-6.53830103 1.7340653,-1.734065 4.0859624,-2.708252 6.53830093,-2.708252 5.10673007,0 9.24655277,4.139823 9.24655297,9.24655303 0,0 0,0 0,0"
+         style="opacity:1;vector-effect:none;fill:#fafafa;fill-opacity:1;fill-rule:evenodd;stroke:#003399;stroke-width:1.06500006;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.19500017, 3.19500017;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:connector-curvature="0"
+         inkstitch:max_stitch_length_mm="3" />
+      <path
+         style="opacity:1;fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+         d="m -4.1361006,-3.9974292 8.224564,8.224564 m 0,-8.224564 -8.224564,8.224564 m 9.927927,-4.112282 h -11.63129 m 5.81564501,-5.815645 v 11.63129"
+         id="inkstitch_rect5371-2-9"
+         inkscape:connector-curvature="0" />
+    </symbol>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Circular Fill">
+    <g
+       id="g3601"
+       transform="matrix(-1 0 0 1 102.486 -15.3453)"
+       inkscape:label="both">
+      <path
+         d="M 51.209411,62.917704 C 51.143974,62.826906 51.087053,62.739827 51.040946,62.657772 50.863769,62.342456 50.683596,61.972509 50.499893,61.547245 50.499893,61.547245 35.799433,42.811132 24.88957,43.132349 23.331018,43.178239 21.84958,43.61334 20.499657,44.547249 17.986592,46.72071 23.499991,55.547095 23.499991,55.547095 23.499991,55.547095 23.95149,63.937444 25.717427,65.295854 27.929305,68.346724 34.048417,67.299723 33.393961,67.592354 27.709558,70.551275 26.258381,76.069134 30.500081,83.546936 33.488591,88.029696 41.499926,87.547209 41.499926,87.547209 48.835358,86.528399 50.499893,71.547152 50.499893,71.547152 50.523387,71.481685 50.546728,71.417209 50.570173,71.353882 51.063271,70.612761 51.677283,70.303584 52.4855,70.316219 53.293717,70.303584 53.907729,70.612761 54.400827,71.353882 54.424272,71.417209 54.447613,71.481685 54.471107,71.547152 54.471107,71.547152 56.135642,86.528399 63.471074,87.547209 63.471074,87.547209 71.482409,88.029696 74.470919,83.546936 78.712619,76.069134 77.261442,70.551275 71.577039,67.592354 70.922583,67.299723 77.041695,68.346724 79.253573,65.295854 81.01951,63.937444 81.471009,55.547095 81.471009,55.547095 81.471009,55.547095 86.984408,46.72071 84.471343,44.547249 83.12142,43.61334 81.639982,43.178239 80.08143,43.132349 69.171567,42.811132 54.471107,61.547245 54.471107,61.547245 54.287404,61.972509 54.107231,62.342456 53.930054,62.657772 53.883947,62.739827 53.827026,62.826906 53.761589,62.917704 53.408491,63.399697 53.059178,63.899056 52.4855,63.997742 51.911822,63.899056 51.562509,63.399697 51.209411,62.917704 Z"
+         style="display:inline;opacity:1;fill:#9c1718;stroke-width:0.4;paint-order:fill markers stroke"
+         id="path3585"
+         inkstitch:fill_underlay="False"
+         inkstitch:fill_method="circular_fill"
+         inkstitch:underpath="False"
+         inkstitch:row_spacing_mm="1.25"
+         inkstitch:running_stitch_length_mm="4"
+         inkstitch:staggers="2"
+         inkstitch:max_stitch_length_mm="3"
+         sodipodi:nodetypes="cscscccccccccccccccccscsccc"
+         transform="matrix(-1 0 0 1 104.971 -4.16667e-07)" />
+      <g
+         id="command_group9384"
+         inkscape:label="Ink/Stitch Befehl: Zielposition"
+         transform="matrix(0 0.264583 0.264583 0 -109.562 39.4947)">
+        <path
+           id="command_connector9034"
+           d="M 101.52173,613.19008 97.703201,612.46376"
+           style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use9223"
+           inkscape:connection-end="#path3585"
+           inkscape:label="Verknüpfung"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use9223"
+           xlink:href="#inkstitch_target_point"
+           height="100%"
+           width="100%"
+           x="22.746885"
+           y="642.02496"
+           inkscape:label="Befehlszeichen"
+           transform="translate(78.7808, -28.8636)" />
+      </g>
+    </g>
+    <g
+       id="g3602"
+       transform="matrix(-1 0 0 1 102.486 -15.3453)"
+       inkscape:label="left 1">
+      <path
+         d="M 52.381432,70.316219 52.344225,63.997742 C 51.911822,63.899056 51.562509,63.399697 51.209411,62.917704 51.143974,62.826906 51.087053,62.739827 51.040946,62.657772 50.863769,62.342456 50.683596,61.972509 50.499893,61.547245 50.499893,61.547245 35.799433,42.811132 24.88957,43.132349 23.331018,43.178239 21.84958,43.61334 20.499657,44.547249 17.986592,46.72071 23.499991,55.547095 23.499991,55.547095 23.499991,55.547095 23.95149,63.937444 25.717427,65.295854 27.929305,68.346724 34.048417,67.299723 33.393961,67.592354 26.618944,71.000596 27.001979,78.058262 30.500081,83.546936 33.488591,88.029696 41.499926,87.547209 41.499926,87.547209 48.835358,86.528399 50.499893,71.547152 50.499893,71.547152 50.523387,71.481685 50.546728,71.417209 50.570173,71.353882 51.063271,70.612761 51.677283,70.303584 52.381432,70.316219 Z"
+         style="display:inline;opacity:1;fill:#ffdf00;stroke-width:0.4;paint-order:fill markers stroke"
+         id="path3575"
+         inkstitch:fill_underlay="False"
+         inkstitch:fill_method="circular_fill"
+         inkstitch:underpath="False"
+         inkstitch:row_spacing_mm="1.25"
+         inkstitch:running_stitch_length_mm="4"
+         inkstitch:staggers="2"
+         inkstitch:max_stitch_length_mm="3"
+         sodipodi:nodetypes="cccscsccccccccc"
+         transform="matrix(-1 0 0 1 104.971 -4.16667e-07)" />
+      <g
+         id="command_group9614"
+         inkscape:label="Ink/Stitch Befehl: Zielposition"
+         transform="matrix(0 0.264583 0.264583 0 -85.573 38.4166)"
+         style="display:inline;opacity:1">
+        <path
+           id="command_connector8690"
+           d="M 152.89193,576.07958 101.77792,583.67938"
+           style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use658"
+           inkscape:connection-end="#path3575"
+           inkscape:label="Verknüpfung"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use658"
+           xlink:href="#inkstitch_target_point"
+           height="100%"
+           width="100%"
+           x="22.746887"
+           y="642.02496"
+           inkscape:label="Befehlszeichen"
+           transform="translate(130.151, -65.9741)" />
+      </g>
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3602"
+       id="use1"
+       transform="matrix(-1 0 0 1 100.105 0)"
+       inkscape:label="right 1" />
+    <g
+       id="g3603"
+       transform="matrix(-1 0 0 1 102.486 -15.3453)"
+       inkscape:label="left 2">
+      <path
+         d="M 52.381432,70.316219 52.344225,63.997742 C 51.911822,63.899056 51.562509,63.399697 51.209411,62.917704 51.143974,62.826906 51.087053,62.739827 51.040946,62.657772 50.863769,62.342456 50.683596,61.972509 50.499893,61.547245 50.499893,61.547245 35.799433,42.811132 24.88957,43.132349 23.331018,43.178239 21.84958,43.61334 20.499657,44.547249 17.986592,46.72071 23.499991,55.547095 23.499991,55.547095 23.499991,55.547095 23.95149,63.937444 25.717427,65.295854 27.929305,68.346724 34.048417,67.299723 33.393961,67.592354 27.709558,70.551275 26.258381,76.069134 30.500081,83.546936 33.488591,88.029696 41.499926,87.547209 41.499926,87.547209 48.835358,86.528399 50.499893,71.547152 50.499893,71.547152 50.523387,71.481685 50.546728,71.417209 50.570173,71.353882 51.063271,70.612761 51.677283,70.303584 52.381432,70.316219 Z"
+         style="display:inline;opacity:1;fill:#f76800;stroke-width:0.4;paint-order:fill markers stroke"
+         id="path3577"
+         inkstitch:fill_underlay="False"
+         inkstitch:fill_method="circular_fill"
+         inkstitch:underpath="False"
+         inkstitch:row_spacing_mm="1.25"
+         inkstitch:running_stitch_length_mm="4"
+         inkstitch:staggers="2"
+         inkstitch:max_stitch_length_mm="3"
+         sodipodi:nodetypes="cccscsccccccccc"
+         transform="matrix(-1 0 0 1 104.971 -4.16667e-07)" />
+      <g
+         id="command_group942"
+         inkscape:label="Ink/Stitch Befehl: Zielposition"
+         transform="matrix(0 0.264583 0.264583 0 -81.09 36.1752)"
+         style="display:inline;opacity:1">
+        <path
+           id="command_connector519"
+           d="M 50.208733,602.00718 110.24936,566.73573"
+           style="vector-effect:non-scaling-stroke;fill:none;stroke:#000000;stroke-width:1;stroke-opacity:0.5;-inkscape-stroke:hairline"
+           inkscape:connection-start="#command_use8168"
+           inkscape:connection-end="#path3577"
+           inkscape:label="Verknüpfung"
+           inkscape:connector-type="polyline"
+           inkscape:connector-curvature="0" />
+        <use
+           id="command_use8168"
+           xlink:href="#inkstitch_target_point"
+           height="100%"
+           width="100%"
+           x="22.746887"
+           y="642.02496"
+           inkscape:label="Befehlszeichen"
+           transform="translate(27.4678, -40.0465)" />
+      </g>
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3603"
+       id="use2"
+       transform="matrix(-1 0 0 1 100.031 0)"
+       inkscape:label="right 2" />
+  </g>
+  <g
+     inkscape:label="Outline"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path139"
+       style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#222421;stroke-width:0.4;stroke-dasharray:none;paint-order:fill markers stroke"
+       d="M 51.505236,54.88124 C 51.671858,55.26228 51.837008,55.70329 52.000367,56.20184 52.000367,56.20184 53.664903,71.183085 61.000335,72.201895 61.000335,72.201895 69.01167,72.684395 72.00018,68.201625 78.996009,56.17967 69.000363,52.20157 69.000363,52.20157 69.000363,52.20157 74.813135,52.66738 76.782834,49.95055 78.548771,48.59214 79.00027,40.20179 79.00027,40.20179 79.00027,40.20179 84.513152,31.375402 82.000087,29.201941 71.2007,21.730667 52.000367,46.20194 52.000367,46.20194 50.53106,47.82236 49.379357,47.94768 48.000095,46.20194 48.000095,46.20194 33.299635,27.465824 22.389772,27.787041 20.83122,27.832931 19.349782,28.268032 17.999859,29.201941 15.486794,31.375402 21.000192,40.20179 21.000192,40.20179 21.000192,40.20179 21.451691,48.59214 23.217628,49.95055 25.187327,52.66738 31.000099,52.20157 31.000099,52.20157 31.000099,52.20157 21.004453,56.17967 28.000282,68.201625 30.988792,72.684395 39.000127,72.201895 39.000127,72.201895 46.335559,71.183085 48.000095,56.20184 48.000095,56.20184 48.15136,55.7193 48.303178,55.29611 48.455331,54.9306"
+       inkscape:label="Outline"
+       sodipodi:nodetypes="ccccccccccscccccccc"
+       inkstitch:satin_column="True"
+       inkstitch:bean_stitch_repeats="1" />
+    <path
+       id="path3584"
+       style="fill:none;stroke:#222421;stroke-width:0.264583"
+       d="M 50.410838,42.794787 C 50.410838,42.794787 51.769253,43.100427 51.837174,44.594677 51.905092,46.088937 51.939054,49.484967 51.939054,49.484967 51.939054,49.484967 52.142815,54.035657 52.074894,54.375257 52.006976,54.714857 52.040935,57.261887 52.040935,57.601487 52.040935,57.941097 52.040935,60.114557 51.939054,60.759797 51.837174,61.405047 51.395687,62.865337 50.376878,63.714347 M 49.881334,42.794787 C 49.881334,42.794787 48.319157,43.032507 48.251236,44.526757 48.183318,46.021017 48.149356,49.417047 48.149356,49.417047 48.149356,49.417047 47.945595,53.967737 48.013516,54.307337 48.081434,54.646937 48.047475,57.193967 48.047475,57.533567 48.047475,57.873177 48.047475,60.046637 48.149356,60.691877 48.251236,61.337127 48.760644,62.933257 49.779453,63.782267 M 47.809753,43.915477 H 52.122716 M 47.402229,50.911307 H 52.700042 M 48.48896,63.001187 H 51.851033"
+       sodipodi:nodetypes="cscsssccscsssccccccc"
+       inkscape:label="Satin"
+       inkstitch:satin_column="True"
+       inkstitch:contour_underlay="True"
+       inkstitch:zigzag_underlay="True"
+       inkstitch:zigzag_underlay_max_stitch_length_mm="2" />
+  </g>
+</svg>

@@ -10,7 +10,7 @@ Un Tartan et un tissu dont le tissage produit des rayures horizontales et vertic
 
 {% include folder-galleries path="butterfly-fill-project/tartan/" captions="1:Tartan monochrome;2:Tartan multicolore" %}
 
-
+[<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/tartan.zip)
 
 ## Creation
 
