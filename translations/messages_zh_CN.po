@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-06-30 03:52+0000\n"
-"PO-Revision-Date: 2026-06-30 03:52\n"
+"PO-Revision-Date: 2026-07-07 03:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1726,7 +1726,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:261
 msgid "Smoothness"
-msgstr ""
+msgstr "平滑度"
 
 #: lib/elements/fill_stitch.py:263
 msgid "Smooth the stitch path.  Smoothness limits how far the smoothed stitch path is allowed to deviate from the original path.  Try low numbers like 0.2.  Hint: a lower running stitch tolerance may be needed too."
@@ -2088,7 +2088,8 @@ msgstr ""
 #: lib/elements/fill_stitch.py:832
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
-msgstr ""
+msgstr "这确保了相邻十字绣区域的良好对齐，但也意味着当元素移出网格时，结果可能会改变。\n"
+"关闭此选项以确保该元素在画布上的位置上独立缝合。"
 
 #: lib/elements/fill_stitch.py:848
 msgid "Grid Offset"
@@ -2286,7 +2287,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:106
 msgid "Rungs control the stitch direction in satin columns."
-msgstr ""
+msgstr "角度线控制缎柱的针迹方向。"
 
 #: lib/elements/satin_column.py:108
 msgid "* Hold \"Shift\" while drawing the rung."
@@ -2365,7 +2366,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:186
 msgid "Maximum stitch length for split stitches."
-msgstr ""
+msgstr "分割针迹的最大长度。"
 
 #: lib/elements/satin_column.py:195
 msgid "Random jitter for split stitches"
@@ -2377,7 +2378,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:204
 msgid "Random phase for split stitches"
-msgstr ""
+msgstr "随机分割针迹"
 
 #: lib/elements/satin_column.py:205
 msgid "Controls whether split stitches are centered or with a random phase (which may increase stitch count)."
@@ -2457,7 +2458,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:329
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
-msgstr ""
+msgstr "如果你的缎面渲染非常奇怪，这可能会有帮助。 默认：自动检测并修复反向轨道。"
 
 #: lib/elements/satin_column.py:378 lib/elements/stroke.py:498
 msgid "Swap rails"
@@ -2553,7 +2554,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:526
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
-msgstr ""
+msgstr "对于奇数次重复，缎面柱的缝合方向会反转，使得缝制既从起点开始又在起点结束。"
 
 #: lib/elements/satin_column.py:536 lib/gui/tartan/customize_panel.py:38
 msgid "Position"
@@ -2580,7 +2581,7 @@ msgstr ""
 
 #: lib/elements/satin_column.py:552
 msgid "Distance between peaks of the zig-zags."
-msgstr ""
+msgstr "锯齿形边针迹点之间的距离。"
 
 #: lib/elements/satin_column.py:562
 msgid "Inset amount (fixed)"
@@ -2588,7 +2589,7 @@ msgstr "插入量(数值)"
 
 #: lib/elements/satin_column.py:563 lib/elements/satin_column.py:583
 msgid "default: half of contour underlay inset"
-msgstr ""
+msgstr "默认：轮廓底衬嵌入一半"
 
 #: lib/elements/satin_column.py:582
 msgid "Inset amount (proportional)"
@@ -2667,7 +2668,7 @@ msgstr ""
 
 #: lib/elements/stroke.py:294
 msgid "Rotate zig-zag direction by this angle (degrees). Creates spoke/radial effects on curves."
-msgstr ""
+msgstr "将锯齿形方向旋转至此角度（°）。在曲线上制造辐条/径向效果。"
 
 #: lib/elements/stroke.py:312
 msgid "Number of lines"
@@ -2882,16 +2883,16 @@ msgstr ""
 
 #: lib/exceptions.py:61
 msgid "Include the error description and also (if possible) the svg file."
-msgstr ""
+msgstr "包含错误描述，并且（如果可能的话）包含 svg 文件。"
 
 #: lib/extensions/apply_attribute.py:27 lib/extensions/element_info.py:20
 #: lib/extensions/selection_to_pattern.py:25
 msgid "Please select at least one element."
-msgstr ""
+msgstr "至少需要选择一个元素。"
 
 #: lib/extensions/apply_attribute.py:31
 msgid "Please enter the attribute name."
-msgstr ""
+msgstr "请输入属性名称。"
 
 #: lib/extensions/apply_attribute.py:44
 msgid "Please enter a value."
@@ -2899,7 +2900,7 @@ msgstr ""
 
 #: lib/extensions/apply_palette.py:29
 msgid "There is no stitchable element in the document."
-msgstr ""
+msgstr "文档中没有可缝合的元素。"
 
 #: lib/extensions/apply_palette.py:30
 msgid "https://inkstitch.org/"
@@ -3309,7 +3310,7 @@ msgstr ""
 
 #: lib/extensions/lettering_generate_json.py:58
 msgid "Please specify a font file."
-msgstr ""
+msgstr "请指定字体文件。"
 
 #: lib/extensions/lettering_organize_glyphs.py:51
 msgid "Upper Case Letters"
@@ -3629,7 +3630,7 @@ msgstr ""
 
 #: lib/extensions/stroke_to_lpe_satin.py:136
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
-msgstr ""
+msgstr "无法将缎面柱转换为路径效果的缎面。请选择一个笔画。"
 
 #: lib/extensions/stroke_to_satin.py:28
 msgid "Please select at least one line to convert to a satin column."
@@ -3952,7 +3953,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:196
 msgid "Remove overlaps"
-msgstr ""
+msgstr "去除重叠"
 
 #: lib/gui/cross_stitch_assistant.py:199
 msgid "Inserts a new set of non-overlapping shapes and removes selected fill elements"
@@ -4165,7 +4166,7 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:29
 msgid "Text after"
-msgstr ""
+msgstr "文本后"
 
 #: lib/gui/edit_json/settings_panel.py:33
 msgid "Second line"
@@ -4238,7 +4239,7 @@ msgstr ""
 #: lib/gui/edit_json/settings_panel.py:195
 #: inx/inkstitch_lettering_generate_json.inx:104
 msgid "Scale cross stitch pattern"
-msgstr ""
+msgstr "比例十字绣图案"
 
 #: lib/gui/edit_json/settings_panel.py:202
 msgid "Letter case"
