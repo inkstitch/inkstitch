@@ -34,7 +34,7 @@ Another highlight is the simplified creation of even-width **satin columns**.
 Simple strokes can now directly be used as satins without an explicit path conversion.
 
 Guided Fill has a new strategy, named **buffer**.
-With this strategy it is possible to apply a guide line with multiple subpaths which in turn opens up the stitch type for a variety of artistic possibilities.
+With this strategy it is possible to apply a guide line with multiple subpaths, opening it up for a variety of artistic possibilities.
 
 Explore the full list of changes below. If you find a bug, please report it on GitHub.
 Let's improve Ink/Stitch together!
