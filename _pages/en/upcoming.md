@@ -6,7 +6,36 @@ sidebar:
   nav: pages
 toc: true
 ---
-Ink/Stitch is in constant development. Here you can see all the changes made after the last official release.
+This page summarizes the changes included in Ink/Stitch v3.3.0.
+
+The main feature of Ink/Stitch v3.3.0 is the new **Cross Stitch** stitch type.
+It is a fill stitch type, and using the new Cross Stitch Assistant, it is easy to set up.
+For more detailed guidance, see the tutorials covering various cross stitch creation workflows:
+* [From hand cross stitch embroidery chart to cross stitch fills](/tutorials/cross_stitch_chart_to_cross_stitch_fills/)
+* [QR Code](/tutorials/qr-code/)
+* [From image to Cross Stitch ](/tutorials/image_to_cross_stitch/)
+
+Another major focus of this release is **lettering**.
+
+This version includes many new and updated fonts.
+Please note that some fonts have been renamed; a list of the name changes is provided below.
+
+Some of the key lettering improvements include:
+
+* Lettering tool: new spacing options added
+* Lettering along Path / Batch lettering export:
+  * automatically rotates crosses of cross stitch fonts
+  * added option for vertical text positioning
+* Font creation: the new Organize Glyphs extension to simplify font development
+
+Another highlight is the simplified creation of even-width **satin columns**.
+Simple strokes can now directly be used as satins without an explicit path conversion.
+
+Guided Fill has a new strategy, named **buffer**.
+With this strategy it is possible to apply a guide line with multiple subpaths, opening it up for a variety of artistic possibilities.
+
+Explore the full list of changes below. If you find a bug, please report it on GitHub.
+Let's improve Ink/Stitch together!
 
 ## [Fonts](/fonts/font-library)
 
