@@ -1,7 +1,7 @@
 ---
 title: "Changements, Mises à jour et Corrections pour la prochaine  version Ink/Stitch"
 permalink: /fr/upcoming/
-last_modified_at: 2026-07-07
+last_modified_at: 2026-07-08
 sidebar:
   nav: pages
 toc: true
@@ -225,9 +225,9 @@ Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
   Cette nouvelle méthode permet l'usage de chemins qui s'autointersectent comme ligne guide. Il est ausssi possible d'utiliser des chemins composés de plusieurs sous-chemins.
 
   ![A turtle and a bird using the buffer strategy](/assets/images/upcoming/3.3.0/buffer.jpg)
-* Copy strategy: add angle option [#4435](https://github.com/inkstitch/inkstitch/issues/4435)
+* Stratégie Copier: ajout d'une option "Angle de décalage de la ligne guide" [#4435](https://github.com/inkstitch/inkstitch/issues/4435)
 
-  The copy strategy allows now to manually adapt the angle in which copies of the guide line are shifted.
+La stratégie Copier permet désormais d'adapter manuellement l'angle selon lequel les copies de la ligne de guidage sont décalées.
 
   ![Guided fill with strategy copy and two different angles applied](/assets/images/upcoming/3.3.0/copy_angle.jpg)
 
@@ -394,7 +394,7 @@ Un outil pour collecter les informations de broderie.
 
 ### Redwork
 
-A tool to optimize routing over running stitches without jumps. Runs on every path exactly twice.
+Un outil pour optimiser la broderie des points droits sans sauts. Chaque chemin est parcouru exactement deux fois.
 
 * Le redwork a  maintenant l'option de traiter les couleurs séparement (#4426)
 
