@@ -6,38 +6,37 @@ sidebar:
   nav: pages
 toc: true
 ---
-Ink/Stitch befindet sich stets in Enwicklung. Hier sind alle Änderungen seit der letzten offiziellen Version gelistet.
+Diese Seite fasst alle Änderungen für Ink/Stitch v3.3.0 zusammen.
 
-This page summarizes the changes included in Ink/Stitch v3.3.0.
+Die größte Neuerung von Ink/Stitch v3.3.0 ist die Einführung einer neuen Stichart: **Kreuzstich**.
+Kreuzstich ist eine Füllstichart, die mit Hilfe des Kreuzstich-Assistenten leicht zu realisieren ist.
+Für verschiedene Anwendungsbereiche gibt es bereits detaillierte Tutorials:
+* [Von einer Kreuzstichvorlage für Handstickerei zu Kreuzstich-Füllungen](/de/tutorials/cross_stitch_chart_to_cross_stitch_fills/)
+* [QR-Code](/de/tutorials/qr-code/)
+* [Vom Bild zum Kreuzstich](/de/tutorials/image_to_cross_stitch/)
+* [Kreuzstich Lettering](/de/tutorials/cross_stitch_lettering/)
 
-The main feature of Ink/Stitch v3.3.0 is the new **Cross Stitch** stitch type.
-It is a fill stitch type, and using the new Cross Stitch Assistant, it is easy to set up.
-For more detailed guidance, see the tutorials covering various cross stitch creation workflows:
-* [From hand cross stitch embroidery chart to cross stitch fills](/tutorials/cross_stitch_chart_to_cross_stitch_fills/)
-* [QR Code](/tutorials/qr-code/)
-* [From image to Cross Stitch ](/tutorials/image_to_cross_stitch/)
+Ein weiterer Schwerpunkt liegt auf den **Textfunktionen**
 
-Another major focus of this release is **lettering**.
+Diese Version enthält viele neue und aktualisierte Schriften.
+Bitte beachte, dass einige Schriften umbenannt werden mussten; eine Liste der Namensänderungen befindet sich unten auf dieser Seite.
 
-This version includes many new and updated fonts.
-Please note that some fonts have been renamed; a list of the name changes is provided below.
+Änderungen der Textfunktionen sind u.a.:
 
-Some of the key lettering improvements include:
+* Textwerkzeug: neue Funktionen zur Anpassung der Abstände
+* Text entlang Pfad / Batch-Lettering:
+  * automatische Rotierung der Kreuze bei Kreuzstichschriften
+  * neue Funktion zur Anpassung der vertikalen Ausrichtung zum Pfad
+* Schriftenerstellung: eine neue Erweiterung (Glyphen organisieren) erleichtert das geordnete Vorgehen bei der Digitalisierung von Schriften
 
-* Lettering tool: new spacing options added
-* Lettering along Path / Batch lettering export:
-  * automatically rotates crosses of cross stitch fonts
-  * added option for vertical text positioning
-* Font creation: the new Organize Glyphs extension to simplify font development
+Ein Feature auf das viele gewartet haben, erleichtert die Erstelung von dickengleichen **Satinsäulen**.
+Einfache Linien können nun direkt als Satinsäule genutzt werden - ohne eine explizite Umwandlung des Pfades.
 
-Another highlight is the simplified creation of even-width **satin columns**.
-Simple strokes can now directly be used as satins without an explicit path conversion.
+Für die Kurvenfüllung wurde eine neue Strategie eingeführt: **Buffer**.
+Mit dieser Methode ist es möglich, Führungslinien mit mehreren Unterpfaden zu nutzen. Dies eröffnet einen weiten kreativen Raum mit künstlerischen Effekten.
 
-Guided Fill has a new strategy, named **buffer**.
-With this strategy it is possible to apply a guide line with multiple subpaths, opening it up for a variety of artistic possibilities.
-
-Explore the full list of changes below. If you find a bug, please report it on GitHub.
-Let's improve Ink/Stitch together!
+Auf dieser Seite sind alle Änderungen für die neue Ink/Stitch Version beschrieben.
+Findest du einen Fehler, bitte berichte davon auf GitHub. Lasst uns Ink/Stitch gemeinsam verbessern!
 
 ## [Schriften](/de/fonts/font-library)
 
@@ -188,6 +187,8 @@ Neue Übersetzungen in den folgenden Sprachen wurden uns zur Verfügung gestellt
 
 ### Kreuzstich
 
+Kreuzstich ist eine neue Füllstichart. Wir empfehlen die Verwendung in Kombination mit dem [Kreuzstich-Assistenten](#kreuzstich-assistent).
+
 ![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
 
 [Mehr erfahren](/docs/stitches/cross-stitch)
@@ -203,16 +204,24 @@ Alte Dateien werden automatisch aktualisiert und behalten ihre bisherigen Einste
 
 * Füllstich wurde in Tatami **umbenannt** [#4454](https://github.com/inkstitch/inkstitch/pull/4454)
 
+[Mehr erfahren](/docs/stitches/fill-stitch/)
+
 ### Konturfüllung
 
-* Wiederholungsfunktionen hinzugefügt [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
+* Wiederholungsfunktionen für dickere Linien hinzugefügt [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
+
+[Mehr erfahren](/de/docs/stitches/contour-fill/)
 
 ### Kurvenfüllung
 
-* Füge Option für den Mehrfachgeradstich hinzu [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
+* Option für den Mehrfachgeradstich hinzugefügt [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
 * Neue Strategie: Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
 
-  Diese Strategie erlaubt es auch sich selbst kreuzende Pfade als Führungslinie zu verwenden. Auch Pfade mit mehreren Unterpfaden sind zulässig.
+  Diese Strategie erlaubt es auch sich selbst kreuzende Pfade als Führungslinie zu verwenden und sogar Pfade mit mehreren Unterpfaden sind zulässig.
+
+  ![A turtle and a bird using the buffer strategy](/assets/images/upcoming/3.3.0/buffer.jpg)
+
+[Read more about guided fill](/docs/stitches/guided-fill/)
 
 ### Manuelle Füllung
 
@@ -332,6 +341,8 @@ Diese Erweiterung assistiert bei der Erstellung von Kreuzstichen in Ink/Stitch. 
 * Das Seitengitter entsprechend der Einstellungen anpassen
 * Bilder in Füllstich-Elemente umwandeln
 * Überlappungen entfernen
+
+![Pixelated mushrom](/assets/images/docs/cross_stitch_assistant.jpg)
 
 [Mehr erfahren](/de/docs/fill-tools/#kreuzstich-assistent)
 

@@ -14,6 +14,7 @@ For more detailed guidance, see the tutorials covering various cross stitch crea
 * [From hand cross stitch embroidery chart to cross stitch fills](/tutorials/cross_stitch_chart_to_cross_stitch_fills/)
 * [QR Code](/tutorials/qr-code/)
 * [From image to Cross Stitch ](/tutorials/image_to_cross_stitch/)
+* [Cross Stitch Lettering](/tutorials/cross_stitch_lettering/)
 
 Another major focus of this release is **lettering**.
 
@@ -190,6 +191,8 @@ A big thank you to all translators. We've received new translations into:
 
 ### Cross Stitch
 
+Cross stitch is a new fill stitch stitch type. It is best to use it in combination with the [cross stitch assistant](#cross-stitch-assistant).
+
 ![Cross stitch frog](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
 
 [Read more about cross stitch](/docs/stitches/cross-stitch)
@@ -205,16 +208,24 @@ Old files will be automatically updated to keep the previous setting.
 
 * AutoFill was **renamed** to Tatami [#4454](https://github.com/inkstitch/inkstitch/pull/4454)
 
+[Read more about tatami fill](/docs/stitches/fill-stitch/)
+
 ### Contour fill
 
-* add repeat options [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
+* Repeat options [#4440](https://github.com/inkstitch/inkstitch/pull/4440) for more pronounced lines
+
+[Read more about contour fill](/docs/stitches/contour-fill/)
 
 ### Guided Fill
 
-* Add bean stitch option [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
+* Add bean stitch option [#4352](https://github.com/inkstitch/inkstitch/pull/4352) for more pronounced lines
 * New strategy: Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
 
   This strategy allows even self-intersecting paths to be used as guide lines. Paths containing multiple subpaths are also permitted.
+
+  ![A turtle and a bird using the buffer strategy](/assets/images/upcoming/3.3.0/buffer.jpg)
+
+[Read more about guided fill](/docs/stitches/guided-fill/)
 
 ### Legacy Fill
 
@@ -335,6 +346,8 @@ This extension helps to generate cross stitches in Ink/Stitch. It can:
 * Apply spacing values to page grid
 * Convert images to fill stitch elements
 * Remove overlaps
+
+![Pixelated mushrom](/assets/images/docs/cross_stitch_assistant.jpg)
 
 [Read more](/docs/fill-tools/#cross-stitch-assistant)
 
@@ -531,7 +544,7 @@ Defines global settings or settings for the currently open SVG document.
 
 Points to troublesome (or potentially troublesome) spots in the design.
 
-* add display options (errors, warnings, type warnings) [#3969](https://github.com/inkstitch/inkstitch/pull/3969)
+* Add options to filter by message type (errors, warnings, type warnings) [#3969](https://github.com/inkstitch/inkstitch/pull/3969)
 
 [Read more](/docs/troubleshoot/#troubleshoot-objects)
 

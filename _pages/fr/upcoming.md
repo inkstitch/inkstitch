@@ -15,6 +15,7 @@ For more detailed guidance, see the tutorials covering various cross stitch crea
 * [From hand cross stitch embroidery chart to cross stitch fills](/tutorials/cross_stitch_chart_to_cross_stitch_fills/)
 * [QR Code](/tutorials/qr-code/)
 * [From image to Cross Stitch ](/tutorials/image_to_cross_stitch/)
+* [Cross Stitch Lettering](/tutorials/cross_stitch_lettering/)
 
 Another major focus of this release is **lettering**.
 
@@ -143,13 +144,9 @@ Let's improve Ink/Stitch together!
   ![Very Crossy](/assets/images/fonts/very_crossy.png)
 
 
-
-  
-  ### Renommage
+### Renommage
 
 Pour nous conformer aux noms de polices réservés dans certaines licences OFL, nous avons dû renommer certaines polices Ink/Stitch.
-
-
 
 |Ancien Nom|Nouveau Nom|
 |---|---|
@@ -194,6 +191,8 @@ Un grand merci à tous les traducteurs. Nous avons reçu de nouvelles traduction
 
 ### Point de croix
 
+Cross stitch is a new fill stitch stitch type. It is best to use it in combination with the [cross stitch assistant](#cross-stitch-assistant).
+
 ![Grenouille au point de croix](/assets/images/upcoming/3.3.0/cross_stitch.jpg){: width="600px" }
 
 [En savoir plus sur le point de croix](/fr/docs/stitches/cross-stitch)
@@ -210,16 +209,24 @@ Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
 
 * AutoFill a été **renommé**  Tatami [#4454](https://github.com/inkstitch/inkstitch/pull/4454)
 
+[En savoir plus sur le point de remplissage](/fr/docs/stitches/fill-stitch/)
+
 ### Remplissage selon contour
 
 * ajout des options de répétition [#4440](https://github.com/inkstitch/inkstitch/pull/4440)
+
+[En savoir plus sur le remplissage selon contour](/fr/docs/stitches/contour-fill/)
 
 ### Remplissage guidé
 
 * Ajout de l'option "Nombre de répétitions pour le point multiple " [#4352](https://github.com/inkstitch/inkstitch/pull/4352)
 * Nouvelle méthode :  Buffer [#4392](https://github.com/inkstitch/inkstitch/pull/4392)
 
-Cette nouvelle méthode permet l'usage de chemins qui s'autointersectent comme ligne guide. Il est ausssi possible d'utiliser des chemins composés de plusieurs sous-chemins.
+  Cette nouvelle méthode permet l'usage de chemins qui s'autointersectent comme ligne guide. Il est ausssi possible d'utiliser des chemins composés de plusieurs sous-chemins.
+
+  ![A turtle and a bird using the buffer strategy](/assets/images/upcoming/3.3.0/buffer.jpg)
+
+[En savoir plus sur le remplissage guidé](/fr/docs/stitches/guided-fill/)
 
 ### Remplissage Manuel (Legacy)
 
@@ -341,6 +348,7 @@ Cette extension facilite la création de points de croix dans Ink/Stitch. Elle p
 * Convertir des images en éléments de remplissage
 * Supprimer les superpositions
 
+![Pixelated mushrom](/assets/images/docs/cross_stitch_assistant.jpg)
 
 [En savoir plus](/fr/docs/fill-tools/#cross-stitch-helper)
 
