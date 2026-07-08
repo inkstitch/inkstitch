@@ -10,7 +10,7 @@ It's biggest purpose is for a simple (and yet deceivingly strong) cover stitch f
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
 
-{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application" %}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application;2:E-Stitch with randomized Params" %}
 
 [<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/e_stitch.zip)
 

@@ -10,7 +10,7 @@ E-Stich dient als einfacher (und doch festem) Deckstich für Applikationen. Er i
 
 ![E-Stich Detail](/assets/images/docs/e-stitch-detail.jpg)
 
-{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stich Applikation" %}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stich Applikation;2:E-Stich mit randomisierten Parametern" %}
 
 [<i class="fa fa-download"></i> Beispieldateien herunterladen](/assets/images/stitch-type-butterflies/e_stitch.zip)
 

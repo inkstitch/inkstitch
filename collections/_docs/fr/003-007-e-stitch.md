@@ -11,7 +11,7 @@ Le point "E" est un point de recouvrement simple mais solide pour les éléments
 
 ![E-Stitch Detail](/assets/images/docs/e-stitch-detail.jpg)
 
-{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1: Appliqué avec point en E" %}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1: Appliqué avec point en E;1:E-Stitch with randomized params" %}
 
 [<i class="fa fa-download"></i> Download sample files](/assets/images/stitch-type-butterflies/e_stitch.zip)
 

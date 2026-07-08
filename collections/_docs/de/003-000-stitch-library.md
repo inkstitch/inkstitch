@@ -60,7 +60,7 @@ Ink/Stitch produziert Zick-Zack-Linien zwischen zwei Randlinien. Dabei ist es m�
 
 E-Stich dient als einfacher (und dennoch fester) Deckstich für Applikationen. Er ist besonders geeignet für Baby-Kleidung, da ihre Haut besonders empfindlich ist.
 
-{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stich Applikation" %}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stich Applikation;2: E-Stich mit randomisierten Parametern" %}
 
 [Mehr lesen](/de/docs/stitches/e-stitch/){: .btn .btn--primary}
 

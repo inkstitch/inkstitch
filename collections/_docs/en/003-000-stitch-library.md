@@ -60,7 +60,7 @@ A satin column is created using a zigzag stitch between two boundary lines. The 
 
 E-stitch is a simple but strong stitch used to hold appliques. Because this is not as thick of a stitch (unlike satin) it is often used for baby clothes as their skin tends to be more sensitive.
 
-{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application" %}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1:E-Stitch application;2:E-Stitch with randomized Params" %}
 
 [Learn more](/docs/stitches/e-stitch/){: .btn .btn--primary}
 

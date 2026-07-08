@@ -66,7 +66,7 @@ Une colonne satin est créée à l'aide d'un point zigzag entre deux lignes de c
 
 Le point "E" est un point de recouvrement simple mais solide pour les éléments appliqués. Principalement pour les vêtements de bébé car leur peau a tendance à être plus sensible.
 
-{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1: Appliqué avec point en E" %}
+{% include folder-galleries path="butterfly-fill-project/e_stitch/" captions="1: Appliqué avec point en E;2:E-Stitch with randomized Params" %}
 
 [En savoir plus](/fr/docs/stitches/e-stitch/){: .btn .btn--primary}
 
