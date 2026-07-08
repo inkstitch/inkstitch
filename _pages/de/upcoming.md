@@ -220,6 +220,11 @@ Alte Dateien werden automatisch aktualisiert und behalten ihre bisherigen Einste
   Diese Strategie erlaubt es auch sich selbst kreuzende Pfade als Führungslinie zu verwenden und sogar Pfade mit mehreren Unterpfaden sind zulässig.
 
   ![A turtle and a bird using the buffer strategy](/assets/images/upcoming/3.3.0/buffer.jpg)
+* Copy strategy: add angle option [#4435](https://github.com/inkstitch/inkstitch/issues/4435)
+
+  The copy strategy allows now to manually adapt the angle in which copies of the guide line are shifted.
+
+  ![Guided fill with strategy copy and two different angles applied](/assets/images/upcoming/3.3.0/copy_angle.jpg)
 
 [Read more about guided fill](/docs/stitches/guided-fill/)
 
@@ -372,6 +377,20 @@ Ein Werkzeug zur Darstellung von Stickinformationen.
 * Option zum Kopieren der Liste in die Zwischenablage (im Hilfe-Tab) [#3817](https://github.com/inkstitch/inkstitch/pull/3817)
 
 [Mehr erfahren](/de/docs/troubleshoot/#element-info)
+
+### Mehrfarbige Satinsäule
+
+* Mehrfahrbige Satinsäulen können auch nachträglich noch angepasst werden [#4475](https://github.com/inkstitch/inkstitch/pull/4475)
+
+[Mehr erfahren](/de/docs/satin-tools/#mehrfarbige-satinsäule)
+
+### Redwork
+
+Ein Werkzeug zur Optimierung der Pfadführung ohne Sprungstiche. Fährt jeden Pfad genau zweimal ab.
+
+* Option um nach Farben getrennt zu verfahren [#4426](https://github.com/inkstitch/inkstitch/pull/4426)
+
+[Mehr erfahren](/de/docs/stroke-tools/#redwork)
 
 ### Schriftverwaltung
 
@@ -556,6 +575,7 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Bugfixes
 
+* realistic preview image: add ignore object attribute when ignore layer was selected (to avoid a object type warning in troubleshoot) [#4477](https://github.com/inkstitch/inkstitch/pull/4477)
 * meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
 * Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)
 * redwork: fix element style when moved out of original grouping [#4427](https://github.com/inkstitch/inkstitch/pull/4427)

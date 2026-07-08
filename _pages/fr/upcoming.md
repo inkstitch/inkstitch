@@ -225,6 +225,11 @@ Les anciens fichiers seront mis à jour pour conserver leur paramétrage.
   Cette nouvelle méthode permet l'usage de chemins qui s'autointersectent comme ligne guide. Il est ausssi possible d'utiliser des chemins composés de plusieurs sous-chemins.
 
   ![A turtle and a bird using the buffer strategy](/assets/images/upcoming/3.3.0/buffer.jpg)
+* Copy strategy: add angle option [#4435](https://github.com/inkstitch/inkstitch/issues/4435)
+
+  The copy strategy allows now to manually adapt the angle in which copies of the guide line are shifted.
+
+  ![Guided fill with strategy copy and two different angles applied](/assets/images/upcoming/3.3.0/copy_angle.jpg)
 
 [En savoir plus sur le remplissage guidé](/fr/docs/stitches/guided-fill/)
 
@@ -381,8 +386,19 @@ Un outil pour collecter les informations de broderie.
 
 [En savoir plus](/fr/docs/troubleshoot/#element-info)
 
+### Multicolor satin
+
+* Re-edit multicolor satin [#4475](https://github.com/inkstitch/inkstitch/pull/4475) makes it much easier to adapt the result once multicolor satin has been applied
+
+[En savoir plus](/fr/docs/satin-tools/#multicolor-satin)
+
 ### Redwork
+
+A tool to optimize routing over running stitches without jumps. Runs on every path exactly twice.
+
 * Le redwork a  maintenant l'option de traiter les couleurs séparement (#4426)
+
+[En savoir plus](/fr/docs/stroke-tools/#redwork)
 
 ### Gestion des polices
 
@@ -569,6 +585,7 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Corrections de bugs
 
+* realistic preview image: add ignore object attribute when ignore layer was selected (to avoid a object type warning in troubleshoot) [#4477](https://github.com/inkstitch/inkstitch/pull/4477)
 * meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
 * Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)
 * redwork: fix element style when moved out of original grouping [#4427](https://github.com/inkstitch/inkstitch/pull/4427)

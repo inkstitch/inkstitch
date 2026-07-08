@@ -224,6 +224,11 @@ Old files will be automatically updated to keep the previous setting.
   This strategy allows even self-intersecting paths to be used as guide lines. Paths containing multiple subpaths are also permitted.
 
   ![A turtle and a bird using the buffer strategy](/assets/images/upcoming/3.3.0/buffer.jpg)
+* Copy strategy: add angle option [#4435](https://github.com/inkstitch/inkstitch/issues/4435)
+
+  The copy strategy allows now to manually adapt the angle in which copies of the guide line are shifted.
+
+  ![Guided fill with strategy copy and two different angles applied](/assets/images/upcoming/3.3.0/copy_angle.jpg)
 
 [Read more about guided fill](/docs/stitches/guided-fill/)
 
@@ -380,9 +385,19 @@ A tool to gather embroidery information.
 
 [Read more](/docs/troubleshoot/#element-info)
 
+### Multicolor satin
+
+* Re-edit multicolor satin [#4475](https://github.com/inkstitch/inkstitch/pull/4475) makes it much easier to adapt the result once multicolor satin has been applied
+
+[Read more](/docs/satin-tools/#multicolor-satin)
+
 ### Redwork
 
+A tool to optimize routing over running stitches without jumps. Runs on every path exactly twice.
+
 * Redwork optionally runs now on selected colors separately and groups by color (#4426)
+
+[Read more](/docs/stroke-tools/#redwork)
 
 ### Font Management
 
@@ -559,10 +574,9 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 * VP3: fix rounding error [pystitch:129](https://github.com/inkstitch/pystitch/pull/129)
 
-  **TODO before the release**: update pyembroidery!
-
 ## Bugfixes
 
+* realistic preview image: add ignore object attribute when ignore layer was selected (to avoid a object type warning in troubleshoot) [#4477](https://github.com/inkstitch/inkstitch/pull/4477)
 * meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
 * Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)
 * redwork: fix element style when moved out of original grouping [#4427](https://github.com/inkstitch/inkstitch/pull/4427)
