@@ -6,38 +6,38 @@ sidebar:
   nav: pages
 toc: true
 ---
+Cette page résume les changements apportés par Ink/Stitch v3.3.0.
 
-This page summarizes the changes included in Ink/Stitch v3.3.0.
+La nouveauté majeure d'Ink/Stitch v3.3.0 est le nouveau type de point : **le Point de croix**.
+Il s'agit d'un point de remplissage, facile à configurer grâce à l'assistant « Point de croix ».
+Pour des instructions détaillées, consultez les tutoriels couvrant différents flux de travail de création au point de croix :
+* [D'une grille de point de croix manuel au remplissage en point de croix](/tutorials/cross_stitch_chart_to_cross_stitch_fills/)
+* [Code QR](/tutorials/qr-code/)
+* [De l'image au point de croix](/tutorials/image_to_cross_stitch/)
+* [Lettrage au point de croix](/tutorials/cross_stitch_lettering/)
 
-The main feature of Ink/Stitch v3.3.0 is the new **Cross Stitch** stitch type.
-It is a fill stitch type, and using the new Cross Stitch Assistant, it is easy to set up.
-For more detailed guidance, see the tutorials covering various cross stitch creation workflows:
-* [From hand cross stitch embroidery chart to cross stitch fills](/tutorials/cross_stitch_chart_to_cross_stitch_fills/)
-* [QR Code](/tutorials/qr-code/)
-* [From image to Cross Stitch ](/tutorials/image_to_cross_stitch/)
-* [Cross Stitch Lettering](/tutorials/cross_stitch_lettering/)
+Un autre point fort de cette version concerne le **lettrage**.
 
-Another major focus of this release is **lettering**.
+Cette version inclut de nombreuses polices nouvelles ou mises à jour.
+Veuillez noter que certaines polices ont été renommées ; une liste des changements de noms est fournie ci-dessous.
 
-This version includes many new and updated fonts.
-Please note that some fonts have been renamed; a list of the name changes is provided below.
+Parmi les principales améliorations apportées au lettrage, citons :
 
-Some of the key lettering improvements include:
+* Outil de lettrage : ajout de nouvelles options d'espacement
+* Lettrage le long d'un chemin / Exportation par lots de lettrage :
+  * rotation automatique des croix pour les polices au point de croix
+  * ajout d'une option pour le positionnement vertical du texte
+* Création de polices : nouvelle extension « Organiser les glyphes » pour simplifier le développement de polices
 
-* Lettering tool: new spacing options added
-* Lettering along Path / Batch lettering export:
-  * automatically rotates crosses of cross stitch fonts
-  * added option for vertical text positioning
-* Font creation: the new Organize Glyphs extension to simplify font development
+Une autre nouveauté marquante est la création simplifiée de **colonnes satin** de largeur constante.
+Les tracés simples peuvent désormais être utilisés directement comme points satin, sans conversion explicite du chemin.
 
-Another highlight is the simplified creation of even-width **satin columns**.
-Simple strokes can now directly be used as satins without an explicit path conversion.
+Le remplissage guidé (Guided Fill) dispose d'une nouvelle stratégie appelée **buffer**.
+Cette stratégie permet d'utiliser une ligne de guidage composée de plusieurs sous-chemins, ouvrant ainsi la voie à diverses possibilités artistiques.
 
-Guided Fill has a new strategy, named **buffer**.
-With this strategy it is possible to apply a guide line with multiple subpaths, opening it up for a variety of artistic possibilities.
+Découvrez la liste complète des modifications ci-dessous. Si vous rencontrez un bug, merci de le signaler sur GitHub.
+Améliorons Ink/Stitch ensemble !
 
-Explore the full list of changes below. If you find a bug, please report it on GitHub.
-Let's improve Ink/Stitch together!
 
 ## [Fontes](/fr/fonts/font-library)
 
