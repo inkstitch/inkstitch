@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-06-30 03:52+0000\n"
-"PO-Revision-Date: 2026-07-07 03:36\n"
+"PO-Revision-Date: 2026-07-09 03:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -4454,7 +4454,7 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:24
 msgid "Whole text"
-msgstr ""
+msgstr "全部字母"
 
 #: lib/gui/lettering/option_panel.py:148 inx/inkstitch_batch_lettering.inx:25
 msgid "Line"
