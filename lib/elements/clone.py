@@ -107,6 +107,14 @@ class Clone(EmbroideryElement):
             return stitch_groups
 
     @property
+    # TODO: insert type annotation
+    def color(self):  # type: ignore[no-untyped-def]
+        first, last = self.first_and_last_element()
+        if first:
+            return first.color
+        return 'black'
+
+    @property
     def first_stitch(self) -> Optional[ShapelyPoint]:
         first, last = self.first_and_last_element()
         if first:

@@ -632,6 +632,9 @@ class EmbroideryElement(object):
     def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
+    def color(self):
+        raise NotImplementedError("%s must implement color()" % self.__class__.__name__)
+
     @debug.time
     def _load_cached_stitch_groups(self, previous_stitch, next_element):
         if is_cache_disabled():

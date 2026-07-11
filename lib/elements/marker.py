@@ -29,6 +29,11 @@ class MarkerObject(EmbroideryElement):
         repr_point = next(inkex.Path(self.parse_path()).end_points)
         yield MarkerWarning(repr_point)
 
+    @property
+    def color(self):
+        # We will not sitch this element, but we need to implement a color definition.
+        return 'black'
+
     def to_stitch_groups(self, last_stitch_group, next_element=None):
         return []
 

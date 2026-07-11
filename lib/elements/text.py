@@ -30,6 +30,12 @@ class TextObject(EmbroideryElement):
 
         return point
 
+    @property
+    def color(self):
+        # We are not able to sitch this element, but we need to implement a color definition.
+        # So let's simply define a black color
+        return 'black'
+
     def validation_warnings(self):
         yield TextTypeWarning(self.pointer())
 
