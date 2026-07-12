@@ -381,7 +381,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython --no-binary wxPython
+          # pip install wxPython --no-binary wxPython
           pip install -r requirements.txt
 
           pip install pyinstaller
@@ -443,7 +443,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython --no-binary wxPython
+          # pip install wxPython --no-binary wxPython
           pip install -r requirements.txt
 
           pip install pyinstaller
