@@ -379,6 +379,8 @@ jobs:
 
           pip install --upgrade pip
           pip --version
+          # temp for removing binary of wxpython
+          pip cache purge
           pip install wheel
           pip install PyGObject
           pip install wxPython --no-binary wxPython
@@ -441,6 +443,8 @@ jobs:
 
           pip install --upgrade pip
           pip --version
+          # temp for removing binary of wxpython
+          pip cache purge
           pip install wheel
           pip install PyGObject
           pip install wxPython --no-binary wxPython
