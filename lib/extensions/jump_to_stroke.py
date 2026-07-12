@@ -154,7 +154,7 @@ class JumpToStroke(InkstitchExtension):
                 element2.node.get_id() not in self.svg.selection.ids):
             return True
         if (self.options.merge and
-                element1.node.TAG == "path" and
+                (element1.node.TAG == "path" and not element1.node.get('sodipodi:type') and not element1.node.get('inkscape:path-effect')) and
                 element1.get_param('stroke_method', None) == element2.get_param('stroke_method', None) and
                 not element1.get_param('stroke_method', '') == 'ripple_stitch'):
             return True
