@@ -381,6 +381,8 @@ jobs:
           pip --version
           # temp for removing binary of wxpython
           pip cache purge
+          # install numpy binary before wxPython to prevent current version install
+          pip install numpy==2.3.5
           pip install wheel
           pip install PyGObject
           pip install wxPython --no-binary wxPython
@@ -445,6 +447,8 @@ jobs:
           pip --version
           # temp for removing binary of wxpython
           pip cache purge
+          # install numpy binary before wxPython to prevent current version install
+          pip install numpy==2.3.5
           pip install wheel
           pip install PyGObject
           pip install wxPython --no-binary wxPython
