@@ -68,6 +68,10 @@ class ImageObject(EmbroideryElement):
             shape = MultiPolygon([paths])
         return shape
 
+    @property
+    def color(self):
+        return "black"
+
     def center(self):
         parent = self.node.getparent()
         assert parent is not None, "This should be part of a tree and therefore have a parent"
