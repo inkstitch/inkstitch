@@ -58,7 +58,7 @@ fi
 # Run command to build the inkstich program
 ${PYTHON:-python} -m PyInstaller $pyinstaller_args inkstitch.py
 
-if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32"]; then
+if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
 	# Delete some GTK icons that pyinstaller shouldn't have pulled in
 	rm -rf dist/inkstitch/bin/share/icons
 fi
