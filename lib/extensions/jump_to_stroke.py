@@ -119,7 +119,8 @@ class JumpToStroke(InkstitchExtension):
     def _split_stroke_elements_with_subpaths(self) -> None:
         elements = []
         for element in self.elements:
-            if isinstance(element, Stroke) and len(element.paths) > 1:
+            if (isinstance(element, Stroke) and element.node.TAG == "path" and
+                    not element.node.get('sodipodi:type') and not element.node.get('inkscape:path-effect') and len(element.paths) > 1):
                 if element.get_param('stroke_method', None) in ['ripple_stitch']:
                     elements.append(element)
                     continue
