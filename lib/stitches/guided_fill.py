@@ -31,12 +31,15 @@ from .utils.stitches import filter_small_stitches
 def guided_fill(fill, shape, guideline, anchor_line, starting_point, ending_point):
     guide_line = prepare_guide_line(guideline, shape, fill.guided_fill_strategy)
 
+    metadata = fill.get_inkstitch_metadata()
+    min_stitch_length = fill.min_stitch_length or metadata.get('min_stitch_len_mm') * PIXELS_PER_MM
+
     segments = intersect_region_with_grating_guideline(fill, shape, guide_line)
 
     if fill.guided_fill_strategy > 0 and segments:
         segments = connect_offset_lines(shape, segments, fill.row_spacing, fill.skip_last, fill.max_stitch_length)
 
-    segments = _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line)
+    segments = _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line, min_stitch_length)
 
     if not segments:
         return fallback(fill, shape, guideline, starting_point, ending_point)
@@ -64,8 +67,6 @@ def guided_fill(fill, shape, guideline, anchor_line, starting_point, ending_poin
         if any(fill.bean_stitch_repeats):
             # remove small stitches before applying any bean stitches
             # otherwise the back stitch may not end up at the correct position
-            metadata = fill.get_inkstitch_metadata()
-            min_stitch_length = fill.min_stitch_length or metadata.get('min_stitch_len_mm') * PIXELS_PER_MM
             stitches = filter_small_stitches(stitches, min_stitch_length)
 
             # add bean stitches, but ignore travel stitches
@@ -85,7 +86,7 @@ def fallback(fill, shape, guideline, starting_point, ending_point,):
     )]
 
 
-def _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line) -> list[list[tuple[float, ...]]]:
+def _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line, min_stitch_length) -> list[list[tuple[float, ...]]]:
 
     # sort segments so that they are well prepared for staggering
     segments = _sort_segments(shape, segments, fill.guided_fill_strategy, guide_line)
@@ -107,7 +108,7 @@ def _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line) ->
             # users have the option to use an anchor line to help defining the start and end of the linestrings
             # for the stitch positioning task
             if anchor_line is not None:
-                linestring, rolled = _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i)
+                linestring, rolled = _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i, min_stitch_length)
             if not rolled:
                 # we assume that all lines which possibly ends within the shape are actually rings (even when not recognized as such)
                 # take exterior of the shape, ignoring the holes. we connected everything to the exterior, so this should work
@@ -115,9 +116,11 @@ def _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line) ->
                 diff = linestring.difference(Polygon(shape.exterior))
                 if not diff.is_empty:
                     outside_point = take_only_line_strings(diff).geoms[0].interpolate(0.5, True)
-                    linestring = _apply_stagger(fill, LineString(roll_linear_ring(linestring, linestring.project(outside_point))), guide_line, i)
+                    linestring = _apply_stagger(
+                        fill, LineString(roll_linear_ring(linestring, linestring.project(outside_point))), guide_line, i, min_stitch_length
+                    )
         else:
-            linestring = _apply_stagger(fill, linestring, guide_line, i)
+            linestring = _apply_stagger(fill, linestring, guide_line, i, min_stitch_length)
 
         debug.log_line_string(linestring, "row", "blue")
 
@@ -135,7 +138,7 @@ def _stagger_and_cut_segments(fill, shape, segments, guide_line, anchor_line) ->
     return new_segments
 
 
-def _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i) -> tuple[LineString, bool]:
+def _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i, min_stitch_length) -> tuple[LineString, bool]:
     rolled = False
 
     # get intersection points
@@ -151,7 +154,7 @@ def _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i) -> t
 
     if len(intersection.geoms) == 1:
         # there is only one intersection, we can simply apply stitches
-        linestring = _apply_stagger(fill, linestring, guide_line, i)
+        linestring = _apply_stagger(fill, linestring, guide_line, i, min_stitch_length)
     else:
         # more than one intersection
         # split the segment into multiple paths and apply stitches individually
@@ -162,13 +165,13 @@ def _get_anchored_stitch_line(fill, linestring, guide_line, anchor_line, i) -> t
         linestring_coords: list[Point] = []
         for start, end in zip(projections[:-1], projections[1:]):
             line = substring(linestring, start, end)
-            stitched_line = _apply_stagger(fill, line, guide_line, i)
+            stitched_line = _apply_stagger(fill, line, guide_line, i, min_stitch_length)
             linestring_coords.extend(get_coordinates(stitched_line).tolist())
         linestring = LineString(linestring_coords)
     return linestring, rolled
 
 
-def _apply_stagger(fill, linestring, guide_line, i) -> LineString:
+def _apply_stagger(fill, linestring, guide_line, i, min_stitch_length) -> LineString:
     # we stagger by using a substring of the original line
     # then we reappend the first point (just in case we actually need it)
     num_staggers = fill.staggers
@@ -199,6 +202,7 @@ def _apply_stagger(fill, linestring, guide_line, i) -> LineString:
             fill.enable_random_stitch_length,
             fill.random_stitch_length_jitter,
             prng.join_args(fill.random_seed, i),
+            min_stitch_length,
             False)
     )
 
