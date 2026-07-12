@@ -245,14 +245,18 @@ def take_stitch(
     return points[-1], None
 
 
-def stitch_curve_evenly_strict(
+def stitch_curve_evenly_strict(  # noqa C901
     points: typing.Sequence[Point],
     stitch_length: typing.List[float],
     tolerance: float,
+    min_stitch_length: float,
     stitch_length_pos: int = 0,
-    stitch_distance_passed: float = 0
+    stitch_distance_passed: float = 0,
 ) -> typing.Tuple[typing.List[Point], int, float]:
     """Split a curve into even-length stitches while handling curves correctly.
+
+    Adapts stitch lengths to the distance that already has been passed,
+    to keep a consistant stitch positioning when stitching rows of lines (with staggers).
 
     Includes end point but not start point.
     """
@@ -269,9 +273,18 @@ def stitch_curve_evenly_strict(
             stitch_len = max(0.1, stitch_len)
 
         stitch, newidx = take_stitch(last, points, i, stitch_len, tolerance)
-        i = newidx
         if stitch is not None:
-            stitches.append(stitch)
+            if not stitches or (stitches and stitch.distance(stitches[-1]) >= min_stitch_length):
+                if stitches and i is not None:
+                    distance_to_last_stitch = stitch.distance(stitches[-1])
+                    if distance_to_last_stitch > stitch_length[stitch_length_pos] + 0.001 and distance_to_last_stitch >= 2 * min_stitch_length:
+                        # we exceeded the maximum length and are able to split split the stitch in half
+                        # but we want don't want to simply split the stitch, but also to keep the original path in mind
+                        split_stitch, _ = take_stitch(last, points, i, distance_to_last_stitch / 2, tolerance)
+                        if split_stitch:
+                            stitches.append(split_stitch)
+                # skip when minimum stitch length isn't met
+                stitches.append(stitch)
             stitch_distance_passed += last.distance(stitch)
             # when we use this for fill stitch type such as guided fill where rows of lines are visibile,
             # we do not want to break the stitch pattern through shortcoming stitches
@@ -281,7 +294,13 @@ def stitch_curve_evenly_strict(
                 stitch_length_pos += 1
                 if stitch_length_pos >= len(stitch_length):
                     stitch_length_pos = 0
+            i = newidx
             last = stitch
+    distance_to_last_point = last.distance(points[-1])
+    if stitches and distance_to_last_point < min_stitch_length:
+        stitches.pop()
+    stitches.append(points[-1])
+    stitch_distance_passed += distance_to_last_point
     return stitches, stitch_length_pos, stitch_distance_passed
 
 
@@ -406,7 +425,7 @@ def path_to_curves(points: typing.List[Point], min_len: float):
     return curves
 
 
-def even_running_stitch(points, stitch_length, tolerance, adapt_to_length=True):
+def even_running_stitch(points, stitch_length, tolerance, min_stitch_length=0.1, adapt_to_length=True):
     """Turn a continuous path into a running stitch with even length.
 
     Creates stitches as close to even length as possible (including first and
@@ -429,7 +448,7 @@ def even_running_stitch(points, stitch_length, tolerance, adapt_to_length=True):
             )
         else:
             stitched_curve, last_stitch_length_pos, stitch_distance_passed = stitch_curve_evenly_strict(
-                curve, stitch_length, tolerance, last_stitch_length_pos, stitch_distance_passed
+                curve, stitch_length, tolerance, min_stitch_length, last_stitch_length_pos, stitch_distance_passed
             )
         stitches.extend(stitched_curve)
     return stitches
@@ -460,12 +479,12 @@ def random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma,
     return stitches
 
 
-def running_stitch(points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed, adapt_to_length=True):
+def running_stitch(points, stitch_length, tolerance, is_random, stitch_length_sigma, random_seed, min_stitch_length=0.1, adapt_to_length=True):
     """Create a running stitch with a choice of algorithm."""
     if is_random:
         return random_running_stitch(points, stitch_length, tolerance, stitch_length_sigma, random_seed)
     else:
-        return even_running_stitch(points, stitch_length, tolerance, adapt_to_length)
+        return even_running_stitch(points, stitch_length, tolerance, min_stitch_length, adapt_to_length)
 
 
 def bean_stitch(stitches, repeats, tags_to_ignore=None):
