@@ -280,7 +280,7 @@ class DrawingPanel(wx.Panel):
             npp_brush = canvas.CreateBrush(wx.Brush(pen.GetColour()))
             canvas.SetBrush(npp_brush)
             for stitch in stitches:
-                canvas.DrawEllipse(stitch[0]-(npp_size // 2), stitch[1]-(npp_size // 2), npp_size, npp_size)
+                canvas.DrawEllipse(stitch[0]-(npp_size / 2), stitch[1]-(npp_size / 2), npp_size, npp_size)
 
     def clear(self):
         self.loaded = False
