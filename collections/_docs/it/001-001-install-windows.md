@@ -64,23 +64,23 @@ Eseguire il programma di installazione scaricato.
 
 Windows potrebbe impedire l'esecuzione automatica del programma finché il certificato di Windows non avrà acquisito sufficiente attendibilità. Fino ad allora, sarà necessario concedere l'autorizzazione per l'esecuzione del programma di installazione.
 
-Select `More info` when this message appears.
+Seleziona `Più informazioni` quando viene visualizzato questo messaggio.
 
 ![Installatore di inchiostro/punti](/assets/images/docs/en/windows-install/installer01.png)
 
-Select `Run anyway`.
+Seleziona `Esegui comunque` .
 
 ![Installatore di inchiostro/punti](/assets/images/docs/en/windows-install/installer02.png)
 
-The installer will point to the Inkscape extensions folder automatically. The path is already set for you. You do not need to change this folder. Select `Next`.
+Il programma di installazione indicherà automaticamente la cartella delle estensioni di Inkscape. Il percorso è già impostato. Non è necessario modificarlo. Seleziona `Avanti` .
 
 ![Installatore di inchiostro/punti](/assets/images/docs/en/windows-install/installer03.png)
 
-Since Inkscape is already installed, the extensions folder already exists. Select `Yes` to continue.
+Poiché Inkscape è già installato, la cartella delle estensioni esiste già. Seleziona `Si` per continuare.
 
 ![Installatore di inchiostro/punti](/assets/images/docs/en/windows-install/installer04.png)
 
-The installer shows you a summary of the installation settings. Select `Install`.
+Il programma di installazione mostra un riepilogo delle impostazioni di installazione. Seleziona `Installa` .
 
 ![Installatore di inchiostro/punti](/assets/images/docs/en/windows-install/installer05.png)
 
@@ -90,7 +90,7 @@ Al termine del processo, Ink/Stitch è pronto per l'uso.
 
 ## Run Ink/Stitch
 
-Open Inkscape to start using Ink/Stitch. You can find Ink/Stitch under `Extensions > Ink/Stitch`.
+Apri Inkscape per iniziare a usare Ink/Stitch. Puoi trovare Ink/Stitch in `Estensioni > Ink/Stitch` .
 
 ![Menu Inchiostro/Punto](/assets/images/docs/en/windows-install/inkstitch-extensions-menu.png)
 
@@ -98,7 +98,7 @@ Open Inkscape to start using Ink/Stitch. You can find Ink/Stitch under `Extensio
 
 ### Disinstallare Ink/Stitch (v2.1.0 e versioni successive)
 
-Open the start menu in Windows and select `Settings`.
+Apri il menu Start di Windows e seleziona `Impostazioni` .
 
 ![Disinstallare Inchiostro/Punto](/assets/images/docs/en/windows-install/uninstall01.png)
 
@@ -106,7 +106,7 @@ Seleziona `Apps` .
 
 ![Disinstallare Inchiostro/Punto](/assets/images/docs/en/windows-install/uninstall02.png)
 
-Scroll to Ink/Stitch. Select `Ink/Stitch` and then select `Uninstall`.
+Scorri fino a Inchiostro/Cucitura. Seleziona `Ink/Stitch` e poi seleziona `Disinstalla` .
 
 ![Disinstallare Inchiostro/Punto](/assets/images/docs/en/windows-install/uninstall03.png)
 
@@ -122,7 +122,7 @@ Ink/Stitch è stato rimosso dal computer. Fare clic su `Ok` .
 
 Se si utilizza una versione precedente di Ink/Stitch, è necessario rimuoverla manualmente dalla cartella delle estensioni di Inkscape.
 
-Open Inkscape and go to `Edit` then `Preferences`, then`System`. Select the button to open the extensions folder. Once it opens, find the the Ink/Stitch folder and delete it.  You may need to delete any subfolders and files first.
+Apri Inkscape e vai su `Modifica` , poi `Preferenze` e infine `Sistema` . Seleziona il pulsante per aprire la cartella delle estensioni. Una volta aperta, trova la cartella Ink/Stitch ed eliminala. Potrebbe essere necessario eliminare prima eventuali sottocartelle e file.
 
 ![cartella delle estensioni di Inkscape](/assets/images/docs/en/extensions-folder-location-win.jpg)
 
@@ -151,7 +151,7 @@ Se questo messaggio continua a comparire, la cartella delle estensioni di Inksca
 
 - oppure scarica il file zip [Ink/Stitch]({{ site.github.releases_url }}/latest/download/inkstitch-{{ site.github.latest_release.tag_name }}-windows-64bit.zip) ed estrailo nella cartella delle estensioni di Inkscape.
 
-    You can find the extensions folder by opening Inkscape. Within Inkscape go to `Edit > Preferences > System`. This will show the system paths. In the line of `User extensions` click `open`.
+    Puoi trovare la cartella delle estensioni aprendo Inkscape. All'interno di Inkscape, vai su `Modifica > Preferenze > Sistema` . Verranno visualizzati i percorsi di sistema. Nella riga `Estensioni utente` fai clic `apri` .
 
 ### Inchiostro/Punto non compare nel menu delle estensioni oppure è disattivato (in grigio).
 
@@ -192,7 +192,7 @@ Reinstalla Inkscape. Assicurati che l'opzione "Aggiungi al percorso" sia selezio
 
 Se visualizzi questi due messaggi di errore su Windows 8, scarica e installa [i pacchetti ridistribuibili di Microsoft Visual C++](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) . Scegli il file corrispondente all'architettura del tuo sistema.
 
-### Ink/Stitch is displayed in English
+### Ink/Stitch è visualizzato in inglese
 
 **Traduzioni incomplete**
 
