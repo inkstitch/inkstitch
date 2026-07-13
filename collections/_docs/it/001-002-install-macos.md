@@ -138,7 +138,7 @@ Se Inkscape/Stitch non è sicuro di quale lingua supportare, utilizzerà l'ingle
 
 ## Disinstallare Ink/Stitch
 
-Vai su `Inkscape > Preferences > System` e apri la cartella delle estensioni.
+Vai su `Inkscape > Preferenze > Sistema` e apri la cartella delle estensioni.
 
 ![cartella delle estensioni di Inkscape](/assets/images/docs/en/extensions-folder-location-macos.jpg)
 
