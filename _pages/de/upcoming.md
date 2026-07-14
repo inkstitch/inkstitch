@@ -6,6 +6,10 @@ sidebar:
   nav: pages
 toc: true
 ---
+Wichtige Information für Beta-Tester auf macOS-Systemen: unsere Betaversion ist nicht signiert und notarisiert.
+Daher müssen die [Anweisungen für Entwicklerversionen](/de/docs/install-macos/#xxxx-kann-nicht-geöffnet-werden-da-es-von-einem-nicht-verifizierten-entwickler-stammt) bei der Installation beachtet werden.
+{: .notice--warning}
+
 Diese Seite fasst alle Änderungen für Ink/Stitch v3.3.0 zusammen.
 
 Die größte Neuerung von Ink/Stitch v3.3.0 ist die Einführung einer neuen Stichart: **Kreuzstich**.

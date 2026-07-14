@@ -112,6 +112,9 @@ Diese Meldung wird für ältere macOS Betriebssysteme als auch für Entwicklerve
 * Wähle `Öffnen` im Kontextmenü
 * Auf Nachfrage Admin-Passwort eingeben um das Installationsprogramm zu starten
 
+Für genaue Anweisungen für deine spezifische macOS-Version, folge bitte den Anweisungen auf der Apple-Webseite: [Öffnen einer Mac-App eines unbekannten Entwicklungsteams](https://support.apple.com/de-de/guide/mac-help/mh40616/mac).
+{: .notice--info}
+
 ### Installation fails
 
 We also provide a zip download file which can be extraced in the the user extensions folder (see below: confirm installation path).

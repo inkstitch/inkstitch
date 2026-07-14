@@ -6,6 +6,10 @@ sidebar:
   nav: pages
 toc: true
 ---
+Information importante pour les testeurs bêta sur macOS : notre version bêta n’est ni signée ni notariée.
+Par conséquent, veuillez suivre les [Instructions pour les versions développeur](/fr/docs/install-macos/#xxxx-ne-peut-pas-être-ouvert-car-lidentité-du-développeur-ne-peut-pas-être-confirmée) lors de l’installation.
+{: .notice--warning}
+
 Cette page résume les changements apportés par Ink/Stitch v3.3.0.
 
 La nouveauté majeure d'Ink/Stitch v3.3.0 est le nouveau type de point : **le Point de croix**.
@@ -36,6 +40,7 @@ Le remplissage guidé (Guided Fill) dispose d'une nouvelle stratégie appelée *
 Cette stratégie permet d'utiliser une ligne de guidage composée de plusieurs sous-chemins, ouvrant ainsi la voie à diverses possibilités artistiques.
 
 Découvrez la liste complète des modifications ci-dessous. Si vous rencontrez un bug, merci de le signaler sur GitHub.
+
 Améliorons Ink/Stitch ensemble !
 
 

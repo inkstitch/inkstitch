@@ -101,6 +101,8 @@ Ce message est montré lors de l'installation de la version pour les anciens sys
 * Choisir Ouvrir dans le menu  contextuel
 * Si nécessaire, entrer votre identifiant et mot de  passe administrateur pour démarrer l'installation
 
+Pour obtenir des instructions détaillées spécifiques à votre version de macOS, veuillez consulter la page: [Ouvrir une app Mac provenant d’un développeur inconnu](https://support.apple.com/fr-fr/guide/mac-help/mh40616/mac).
+
 ### Si l'installation échoue
 
 Nous vous offrons aussi la possibilité de télécharger un zip qui peut être extrait dans le dossier d'extension utilisateur (voir ci-dessous: vérifier le chemin d'installation)

@@ -6,6 +6,10 @@ sidebar:
   nav: pages
 toc: true
 ---
+Important information for beta testers on macOS systems: Our beta version is not signed or notarized.
+Therefore, the [Instructions for Developer Versions](/docs/install-macos/#xxxx-cannot-be-opened-because-the-developer-cannot-be-verified) must be followed during installation.
+{: .notice--warning}
+
 This page summarizes the changes included in Ink/Stitch v3.3.0.
 
 The main feature of Ink/Stitch v3.3.0 is the new **Cross Stitch** stitch type.

@@ -111,6 +111,9 @@ This message is shown for releases for older macOS systems and development relea
 * Choose `Open` from the context menu
 * If prompted enter your admin name and password to start the installation programm
 
+For detailed instructions specific to your macOS version, please follow the instructions on the Apple website: [Open a Mac app from an unidentified developer](https://support.apple.com/en-us/guide/mac-help/mh40616/mac).
+{: .notice--info}
+
 ### Installation fails
 
 We also provide a zip download file which can be extraced in the the user extensions folder (see below: confirm installation path).
