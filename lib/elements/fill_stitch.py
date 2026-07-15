@@ -319,7 +319,8 @@ class FillStitch(EmbroideryElement):
         unit='deg',
         type='float',
         sort_index=21,
-        select_items=[('guided_fill_strategy', 0)],
+        select_items=[('fill_method', 'guided_fill'),
+                      ('guided_fill_strategy', 0)],
         default=None)
     @cache
     def guided_fill_angle(self):
