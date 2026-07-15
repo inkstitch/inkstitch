@@ -12,7 +12,7 @@ techniques:
 field-of-use:
 user-level: 
 ---
-![Butterfly card with envelope](/assets/images/tutorials/stitch-library-template/envelope.jpg){: style="max-width:400px;" .align-left} This templates serves as a versatile template for the sample images within the stitch library.
+![Butterfly card with envelope](/assets/images/tutorials/stitch-library-template/envelope.jpg){: style="max-width:400px;" .align-left} This templates serves as a versatile source for the sample images of the stitch library.
 
 ## Usage
 
@@ -39,7 +39,7 @@ user-level:
 ### Embroidery
 
 * Fill: use for fill patterns
-* Detail: Lines for cutting the fill area
+* Detail: lines for cutting the fill area (shape builder tool)
   * simple: cut fill into two or four sections
   * complex: more detailed sections
 * Outlines: a selection of borders for the butterfly. Every border is a bean stitch.
