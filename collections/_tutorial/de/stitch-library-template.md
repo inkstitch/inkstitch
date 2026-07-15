@@ -7,6 +7,7 @@ excerpt: "Template zur Erstellung der Schmetterlinge für die Stichbibliothek"
 image: "/assets/images/galleries/butterfly-fill-project/running/01_running_stitch_mandala.png"
 tutorial-typ:
   - Beispieldatei
+  - Template
 stichart:
 techniques:
 field-of-use:

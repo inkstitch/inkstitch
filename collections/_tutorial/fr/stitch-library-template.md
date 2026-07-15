@@ -7,6 +7,7 @@ excerpt: "Modele pour le papillon de la bibliothèque de points"
 image: "/assets/images/galleries/butterfly-fill-project/running/01_running_stitch_mandala.png"
 tutorial-type:
   - Sample File
+  - Template
 stitch-type:
 techniques:
 field-of-use:
