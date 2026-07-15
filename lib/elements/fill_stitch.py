@@ -408,7 +408,7 @@ class FillStitch(EmbroideryElement):
            select_items=[('fill_method', 'guided_fill')],
            sort_index=25)
     def stitch_position_method(self):
-        return self.get_param('stitch_position_method', 'flexible_stagger')
+        return self.get_param('stitch_position_method', 'flexible')
 
     @property
     @param('staggers',
