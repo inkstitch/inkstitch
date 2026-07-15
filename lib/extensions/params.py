@@ -719,12 +719,11 @@ class SettingsPanel(wx.Panel):
         sizer_3.Add(self.use_last_button, 0, wx.RIGHT | wx.BOTTOM, 5)
         sizer_3.Add(self.apply_button, 0, wx.RIGHT | wx.BOTTOM, 5)
         sizer_1.Add(sizer_3, 0, wx.ALIGN_RIGHT, 0)
-        self.SetSizer(sizer_1)
-        sizer_1.Fit(self)
 
         # prevent the param dialog to become smaller than 350*100
         self.SetSizeHints(350, 100)
 
+        self.SetSizerAndFit(sizer_1)
         self.Layout()
         # end wxGlade
 

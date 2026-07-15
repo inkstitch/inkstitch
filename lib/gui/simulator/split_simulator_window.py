@@ -55,6 +55,8 @@ class SplitSimulatorWindow(wx.Frame):
         if global_settings['pop_out_simulator']:
             self.detach_simulator()
 
+        self.settings_panel.Layout()
+
     def splitter_resize(self, event):
         self.statusbar.SetStatusWidths((self.simulator_panel.GetScreenPosition()[0], -1, -1))
 
