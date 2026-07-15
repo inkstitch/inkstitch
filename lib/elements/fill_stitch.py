@@ -392,13 +392,31 @@ class FillStitch(EmbroideryElement):
         end_row_spacing = self.get_float_param("end_row_spacing_mm")
         return max(end_row_spacing, 0) if end_row_spacing else None
 
+    stitch_position_options = [
+        ParamOption('flexible', _("Flexible")),
+        ParamOption('flexible_stagger', _("Flexible (stagger)")),
+    ]
+
+    @property
+    @param('stitch_position_method',
+           _('Stitch position method'),
+           tooltip=_('Flexible: adapts stitch lenghts accordingly to the tolerance value while keeping stitch length consistent on each curve '
+                     'segment.\nFlexible (stagger): adapts stitch length accordingly to the tolerance value while also optimizing for stagger.'),
+           type='combo',
+           default=0,
+           options=stitch_position_options,
+           select_items=[('fill_method', 'guided_fill')],
+           sort_index=25)
+    def stitch_position_method(self):
+        return self.get_param('stitch_position_method', 'flexible')
+
     @property
     @param('staggers',
            _('Stagger rows this many times before repeating'),
            tooltip=_('Length of the cycle by which successive stitch rows are staggered. '
                      'Fractional values are allowed and can have less visible diagonals than integer values.'),
            type='int',
-           sort_index=25,
+           sort_index=26,
            select_items=[('fill_method', 'tatami_fill'),
                          ('fill_method', 'guided_fill'),
                          ('fill_method', 'linear_gradient_fill'),
