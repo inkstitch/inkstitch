@@ -52,13 +52,14 @@ class PreviewRenderer(Thread):
                 self.stop.clear()
 
     def render_stitch_plan(self):
+        stitch_plan = None
         try:
             stitch_plan = self.render_stitch_plan_hook()
-            if stitch_plan:
-                # rendering_completed() will be called in the main thread.
-                wx.CallAfter(self.rendering_completed_hook, stitch_plan)
         except ExitThread:
             raise
         except:  # noqa: E722
             import traceback
             debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())
+        finally:
+            # rendering_completed() will be called in the main thread.
+            wx.CallAfter(self.rendering_completed_hook, stitch_plan)

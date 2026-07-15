@@ -3,16 +3,20 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import wx
+from typing import Callable, Optional
 
 from . import ControlPanel, DrawingPanel, ViewPanel
+from .simulator_renderer import PreviewRenderer
+from ...stitch_plan import StitchPlan
 
 
 class SimulatorPanel(wx.Panel):
     """"""
-
     def __init__(self, parent, stitch_plan=None, background_color='white', target_duration=5, stitches_per_second=16, detach_callback=None):
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
+
+        self.preview_renderer = PreviewRenderer(self._call_render, self.on_stitch_plan_rendered)
 
         self.cp = ControlPanel(
             self,
@@ -80,6 +84,8 @@ class SimulatorPanel(wx.Panel):
         self.accel_table = wx.AcceleratorTable(self.accel_entries)
         self.SetAcceleratorTable(self.accel_table)
 
+        self.render_fn: Callable[[], Optional[StitchPlan]] = None
+
     def go(self):
         self.dp.go()
 
@@ -96,3 +102,31 @@ class SimulatorPanel(wx.Panel):
 
     def set_page_specs(self, page_specs):
         self.dp.set_page_specs(page_specs)
+
+    def set_render_fn(self, render_fn: Callable[[], Optional[StitchPlan]]) -> None:
+        self.render_fn = render_fn
+
+    def render(self) -> None:
+        if self.render_fn is None:
+            return
+
+        self.dp.set_loading(True)
+        self.preview_renderer.update()
+
+    def _call_render(self) -> None:
+        if self.render_fn is None:
+            return None
+
+        return self.render_fn()
+
+    def on_stitch_plan_rendered(self, stitch_plan: Optional[StitchPlan]) -> None:
+        try:
+            self.dp.set_loading(False)
+            if stitch_plan is not None:
+                self.stop()
+                self.load(stitch_plan)
+                self.go()
+        except RuntimeError:
+            # this can happen when they close the window at a bad time
+            pass
+

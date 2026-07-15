@@ -18,7 +18,7 @@ from ...stitch_plan import (StitchGroup, StitchPlan,
 from ...svg.tags import INKSTITCH_SATIN_MULTICOLOR
 from ...utils import DotDict
 from ...utils.threading import ExitThread, check_stop_flag
-from .. import PreviewRenderer, WarningPanel
+from .. import WarningPanel
 from . import ColorizePanel, HelpPanel
 
 
@@ -48,7 +48,7 @@ class MultiColorSatinPanel(wx.Panel):
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         # preview
-        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
+        self.simulator.set_render_fn(self.render_stitch_plan)
         # warnings
         self.warning_panel = WarningPanel(self)
         self.warning_panel.Hide()
@@ -215,7 +215,7 @@ class MultiColorSatinPanel(wx.Panel):
         self.Layout()
 
     def update_preview(self, event=None):
-        self.preview_renderer.update()
+        self.simulator.render()
 
     def close(self) -> None:
         self.simulator.stop()
@@ -349,11 +349,6 @@ class MultiColorSatinPanel(wx.Panel):
 
             parent.insert(index + 1, group)
             self.output_groups.append(group)
-
-    def on_stitch_plan_rendered(self, stitch_plan: StitchPlan) -> None:
-        self.simulator.stop()
-        self.simulator.load(stitch_plan)
-        self.simulator.go()
 
     def on_change(self, attribute, event) -> None:
         value = event.GetEventObject().GetValue()

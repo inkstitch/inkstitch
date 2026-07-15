@@ -7,6 +7,7 @@ import math
 
 import wx
 from numpy import split
+from typing import Optional, Tuple
 
 from ...debug.debug import debug
 from ...i18n import _
@@ -21,6 +22,24 @@ JUMP = 1
 TRIM = 2
 STOP = 3
 COLOR_CHANGE = 4
+
+class LoadingIndicator:
+    RENDERING = "Rendering..."
+
+    def __init__(self, panel: wx.Panel):
+        self.panel = panel
+
+        self.font = wx.Font(30, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
+        self.bounds: Optional[Tuple[float, float]] = None
+    
+    def paint(self, canvas: wx.GraphicsContext):
+        w, h = canvas.GetSize()
+
+        if self.bounds is None:
+            w, h, d, el = canvas.GetFullTextExtent(self.RENDERING)
+            self.bounds = (w, h)
+        
+
 
 
 class DrawingPanel(wx.Panel):
@@ -51,6 +70,8 @@ class DrawingPanel(wx.Panel):
         self.SetMinSize((300, 300))
         self.SetBackgroundColour('#FFFFFF')
         self.SetDoubleBuffered(True)
+
+        self.loading = False
 
         self.animating = False
         self.timer = wx.Timer(self)
@@ -134,15 +155,26 @@ class DrawingPanel(wx.Panel):
 
     def OnPaint(self, e):
         dc = wx.PaintDC(self)
+        canvas = wx.GraphicsContext.Create(dc)
 
         if not self.loaded:
             dc.Clear()
-            return
+        else:
+            self.draw_stitches(canvas)
+            self.draw_scale(canvas)
 
-        canvas = wx.GraphicsContext.Create(dc)
+        if self.loading:
+            panel_width, panel_height = self.GetClientSize()
+            canvas.SetFont(wx.Font(30, wx.DEFAULT, wx.NORMAL, wx.NORMAL), wx.WHITE)
+            RENDERING = "Rendering..."
+            w, h, d, el = canvas.GetFullTextExtent(RENDERING)
+            PADDING = 10
+            canvas.SetPen(wx.TRANSPARENT_PEN)
+            canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(0, 0, 0, alpha=65))))
+            canvas.DrawRoundedRectangle((panel_width-w)/2-PADDING, (panel_height-h)/2-PADDING, w+2*PADDING, h+2*PADDING, 7)
+            canvas.DrawText(RENDERING, (panel_width-w)/2, (panel_height-h)/2)
 
-        self.draw_stitches(canvas)
-        self.draw_scale(canvas)
+
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -530,4 +562,8 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
+        self.Refresh()
+
+    def set_loading(self, loading: bool) -> None:
+        self.loading = loading
         self.Refresh()
