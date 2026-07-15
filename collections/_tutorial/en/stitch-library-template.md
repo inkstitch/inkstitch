@@ -51,3 +51,7 @@ user-level:
 ![Template](/assets/images/tutorials/stitch-library-template/butterfly.svg)
 
 [Download Template](/assets/images/tutorials/stitch-library-template/butterfly.svg){: download="butterfly-template.svg"}
+
+### Get creative
+
+![Butterfly greeting card mass production](/assets/images/tutorials/stitch-library-template/mass-production.jpg)
