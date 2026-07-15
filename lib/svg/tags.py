@@ -100,6 +100,7 @@ inkstitch_attribs = [
     'row_spacing_mm',
     'end_row_spacing_mm',
     'skip_last',
+    'stitch_position_method',
     'staggers',
     'underlay_underpath',
     'underpath',

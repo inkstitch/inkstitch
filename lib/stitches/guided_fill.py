@@ -193,6 +193,11 @@ def _apply_stagger(fill, linestring, guide_line, i, min_stitch_length) -> LineSt
     first_point = get_point(linestring, 0)
     points = [InkstitchPoint(*coord) for coord in substring(linestring, start, linestring.length).coords]
 
+    # adapt to length will split curve sections more evenly, which we want to flexible stitch length optimization
+    # however, if we want to optimize for staggering, we want to stay closer to the original stitch positions while still adding extra points
+    # to stay within the tolerance value
+    adapt_to_length = fill.stitch_position_method == 'flexible'
+
     return LineString(
         [first_point] +
         running_stitch(
@@ -203,7 +208,7 @@ def _apply_stagger(fill, linestring, guide_line, i, min_stitch_length) -> LineSt
             fill.random_stitch_length_jitter,
             prng.join_args(fill.random_seed, i),
             min_stitch_length,
-            False)
+            adapt_to_length)
     )
 
 
