@@ -4,7 +4,7 @@ permalink: /de/docs/cutwork/
 last_modified_at: 2023-02-12
 toc: true
 ---
-Cutwork beschreibt eine Technick im Maschinensticken bei der mit speziellen Nadeln Löcher in den Stoff geschnitten werden. Meistens sind diese Nadeln in einem Vierer-Set erhältich, wobei jede Nadel nur in eine bestimmte Richtung schneiden kann. Daher ist es nötig, Elemente in Winkel-Segmente zu unterteilen.
+Cutwork beschreibt eine Technik im Maschinensticken bei der mit speziellen Nadeln Löcher in den Stoff geschnitten werden. Meistens sind diese Nadeln in einem Vierer-Set erhältich, wobei jede Nadel nur in eine bestimmte Richtung schneiden kann. Daher ist es nötig, Elemente in Winkel-Segmente zu unterteilen.
 
 ## Anwendung
 
