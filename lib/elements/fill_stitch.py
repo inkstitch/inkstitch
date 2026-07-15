@@ -400,8 +400,8 @@ class FillStitch(EmbroideryElement):
     @property
     @param('stitch_position_method',
            _('Stitch position method'),
-           tooltip=_('Flexible: adapts stitch lenghts accordingly to the tolerance value while keeping stitch length consistent on each curve segment.'
-                     'Flexible (stagger): adapts stitch length accordingly to the tolerance value while also optimizing for stagger.'),
+           tooltip=_('Flexible: adapts stitch lenghts accordingly to the tolerance value while keeping stitch length consistent on each curve '
+                     'segment.\nFlexible (stagger): adapts stitch length accordingly to the tolerance value while also optimizing for stagger.'),
            type='combo',
            default=0,
            options=stitch_position_options,
