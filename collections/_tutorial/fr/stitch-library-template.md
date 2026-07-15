@@ -55,6 +55,6 @@ user-level:
 
 [Télécharger](/assets/images/tutorials/stitch-library-template/butterfly.svg){: download="butterfly-template.svg"}
 
-### Laissez parler votre créativité
+## Laissez parler votre créativité
 
 ![Butterfly greeting card mass production](/assets/images/tutorials/stitch-library-template/mass-production.jpg)

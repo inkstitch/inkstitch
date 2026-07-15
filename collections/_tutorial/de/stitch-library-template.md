@@ -55,6 +55,6 @@ unteren Flügel
 
 [Download Template](/assets/images/tutorials/stitch-library-template/butterfly.svg){: download="butterfly-template.svg"}
 
-### Werde kreativ
+## Werde kreativ
 
 ![Butterfly greeting card mass production](/assets/images/tutorials/stitch-library-template/mass-production.jpg)
