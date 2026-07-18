@@ -77,13 +77,13 @@ Grâce au niveau de correction d'erreur élevé choisi, nous pouvons simplifier 
 
 - Commencez par utiliser l'outil **Ink/Stitch > Outils Remplissage > Assistant point de croix** (avec un **espacement de grille de 2,12 mm)** pour pixelliser le tracé du QR code : cela le divisera en plusieurs zones connectées.
 
-- Utilisez ensuite **Ink/Stitch > Dépannage > Nettoyer le document** pour supprimer les zones de surface inférieures à 65 pixels carrés (8 x 8 + 1). Cela supprimera toutes les formes carrées.
+- Utilisez ensuite **Ink/Stitch > Dépannage > Nettoyer le document** pour supprimer les zones de surface inférieures à 4,5 mm carrés . Cela supprimera toutes les formes réduites à un seul carré.
 
 - Dans mon exemple, 5 carrés sont supprimés.
 
 - Vérifiez que le QR code fonctionne toujours. C'est le cas, essayons de le simplifier davantage.
 
-- Répétez l'opération pour supprimer les zones de surface inférieures à 129 pixels carrés (2 x 64 + 1).
+- Répétez l'opération pour supprimer les zones de surface inférieures à 9 mm carrés.
 
 - Dans mon exemple, 4 formes sont supprimées.
 
