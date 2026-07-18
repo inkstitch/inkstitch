@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-30 03:52+0000\n"
-"PO-Revision-Date: 2026-06-30 03:52\n"
+"POT-Creation-Date: 2026-07-16 02:45+0000\n"
+"PO-Revision-Date: 2026-07-16 02:45\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-30 03:52+0000\n"
+"POT-Creation-Date: 2026-07-16 02:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1380,7 +1380,7 @@ msgstr "Stop na"
 msgid "Add a STOP command after stitching this object."
 msgstr "Voeg een STOP opdracht toe nadat dit object is geborduurd."
 
-#: lib/elements/element.py:812
+#: lib/elements/element.py:815
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Voer 'Extensies > Ink/Stitch > Problemen oplossen > Problemen met objecten oplossen' uit. Dit toont u de exacte locatie van het probleem."
 
@@ -1416,7 +1416,7 @@ msgstr "Uitbreiden"
 msgid "The expand parameter for this fill object cannot be applied. Ink/Stitch will ignore it and will use original size instead."
 msgstr "De instellingen Uitbreiden voor dit opvul object kan niet worden toegepast. Ink/Stitch zal deze negeren en in plaats daarvan de oorspronkelijke grootte gebruiken."
 
-#: lib/elements/fill_stitch.py:50 lib/elements/fill_stitch.py:717
+#: lib/elements/fill_stitch.py:50 lib/elements/fill_stitch.py:736
 msgid "Inset"
 msgstr "Inzet"
 
@@ -1745,7 +1745,7 @@ msgstr "Opvullen van gaten"
 msgid "Add extra rows to compensate for gaps between sections caused by distortion.Rows are always added in pairs, so this number will be rounded up to the nearest multiple of 2."
 msgstr "Voeg extra rijen toe om gaten tussen de secties te compenseren die door vervorming ontstaan. Rijen worden altijd in paren toegevoegd, dus dit aantal wordt afgerond op het dichtstbijzijnde veelvoud van 2."
 
-#: lib/elements/fill_stitch.py:301 lib/elements/fill_stitch.py:333
+#: lib/elements/fill_stitch.py:301 lib/elements/fill_stitch.py:334
 #: lib/gui/tartan/embroidery_panel.py:35
 msgid "Angle of lines of stitches"
 msgstr "Hoek van de lijnen van de steken"
@@ -1762,309 +1762,326 @@ msgstr ""
 msgid "Angle for guide line shifting. Changing the angle may have a huge impact on the actual spacing between the rows. Ensure the guide line is large enough to fill the area when shifted into the given angle."
 msgstr "Hoek voor het verschuiven van de hulplijn. Het wijzigen van de hoek kan een grote invloed hebben op de werkelijke afstand tussen de rijen. Zorg ervoor dat de hulplijn groot genoeg is om het gebied te vullen wanneer deze onder de betreffende hoek wordt verschoven."
 
-#: lib/elements/fill_stitch.py:334 lib/gui/tartan/embroidery_panel.py:36
+#: lib/elements/fill_stitch.py:335 lib/gui/tartan/embroidery_panel.py:36
 msgid "Relative to the tartan stripe direction."
 msgstr "Relatief ten opzichte van de richting van de schotse ruit streep."
 
-#: lib/elements/fill_stitch.py:346
+#: lib/elements/fill_stitch.py:347
 msgid "Maximum fill stitch length"
 msgstr "Maximale opvul steeklengte"
 
-#: lib/elements/fill_stitch.py:348 lib/elements/fill_stitch.py:894
+#: lib/elements/fill_stitch.py:349 lib/elements/fill_stitch.py:913
 msgid "The length of each stitch in a row.  Shorter stitch may be used at the start or end of a row."
 msgstr "De lengte van elke steek in een rij. Een kortere steek kan worden gebruikt aan het begin of einde van een rij."
 
-#: lib/elements/fill_stitch.py:364
+#: lib/elements/fill_stitch.py:365
 msgid "Spacing between rows"
 msgstr "Afstand tussen rijen"
 
-#: lib/elements/fill_stitch.py:365
+#: lib/elements/fill_stitch.py:366
 msgid "Distance between rows of stitches."
 msgstr "Afstand tussen rijen van steken."
 
-#: lib/elements/fill_stitch.py:382 inx/inkstitch_gradient_blocks.inx:24
+#: lib/elements/fill_stitch.py:383 inx/inkstitch_gradient_blocks.inx:24
 msgid "End row spacing"
 msgstr "Eind rijafstand"
 
-#: lib/elements/fill_stitch.py:383
+#: lib/elements/fill_stitch.py:384
 msgid "Increases or decreases the row spacing towards the end."
 msgstr "Vergroot of verkleint de rijafstand richting het einde."
 
 #: lib/elements/fill_stitch.py:397
+msgid "Flexible"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:398
+msgid "Flexible (stagger)"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:403
+msgid "Stitch position method"
+msgstr ""
+
+#: lib/elements/fill_stitch.py:404
+msgid "Flexible: adapts stitch lenghts accordingly to the tolerance value while keeping stitch length consistent on each curve segment.\n"
+"Flexible (stagger): adapts stitch length accordingly to the tolerance value while also optimizing for stagger."
+msgstr ""
+
+#: lib/elements/fill_stitch.py:416
 msgid "Stagger rows this many times before repeating"
 msgstr "Spring rijen zoveel keer in voordat herhaald wordt"
 
-#: lib/elements/fill_stitch.py:398 lib/elements/satin_column.py:227
+#: lib/elements/fill_stitch.py:417 lib/elements/satin_column.py:227
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Lengte van de cyclus waarmee opeenvolgende steekrijen verspringen. Fractionele waarden zijn toegestaan ​​en kunnen minder zichtbare diagonalen hebben dan gehele getallen."
 
-#: lib/elements/fill_stitch.py:414 lib/elements/fill_stitch.py:729
+#: lib/elements/fill_stitch.py:433 lib/elements/fill_stitch.py:748
 msgid "Skip last stitch in each row"
 msgstr "Sla de laatste steek in elke rij over"
 
-#: lib/elements/fill_stitch.py:415 lib/elements/fill_stitch.py:730
+#: lib/elements/fill_stitch.py:434 lib/elements/fill_stitch.py:749
 msgid "The last stitch in each row is quite close to the first stitch in the next row.  Skipping it decreases stitch count and density."
 msgstr "De laatste steek in elke rij is vrij dicht op de eerste steek in de volgende rij. Door deze over te slaan wordt de dichtheid en het aantal steken verkleind."
 
-#: lib/elements/fill_stitch.py:430
+#: lib/elements/fill_stitch.py:449
 msgid "Flip fill (start right-to-left)"
 msgstr "Draai opvulling om (start rechts naar links)"
 
-#: lib/elements/fill_stitch.py:431
+#: lib/elements/fill_stitch.py:450
 msgid "The flip option can help you with routing your stitch path.  When you enable flip, stitching goes from right-to-left instead of left-to-right."
 msgstr "De omdraai optie kan je helpen met het routeren van je steekpad. Als je omdraaien kiest, gaat het borduren van rechts naar links in plaats van van links naar rechts."
 
-#: lib/elements/fill_stitch.py:443
+#: lib/elements/fill_stitch.py:462
 msgid "Reverse fill"
 msgstr "Vulling Omkeren"
 
-#: lib/elements/fill_stitch.py:444
+#: lib/elements/fill_stitch.py:463
 msgid "Reverses fill path."
 msgstr "Keert het vul pad om."
 
-#: lib/elements/fill_stitch.py:455
+#: lib/elements/fill_stitch.py:474
 msgid "Stop at ending point"
 msgstr "Stop bij het eindpunt"
 
-#: lib/elements/fill_stitch.py:456
+#: lib/elements/fill_stitch.py:475
 msgid "If this option is disabled, the ending point will only be used to define a general direction for stitch routing. When enabled the last section will end at the defined spot."
 msgstr "Als deze optie is uitgeschakeld, wordt het eindpunt alleen gebruikt om een ​​algemene richting voor de steek route te definiëren. Indien ingeschakeld, eindigt het laatste gedeelte op de gedefinieerde plek."
 
-#: lib/elements/fill_stitch.py:468 lib/elements/fill_stitch.py:741
+#: lib/elements/fill_stitch.py:487 lib/elements/fill_stitch.py:760
 msgid "Underpath"
 msgstr "Onder pad"
 
-#: lib/elements/fill_stitch.py:469 lib/elements/fill_stitch.py:742
+#: lib/elements/fill_stitch.py:488 lib/elements/fill_stitch.py:761
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Beweeg binnen de vorm bij verplaatsen tussen secties. Onder pad steken vermijden de richting van de rijhoek zodat ze niet zichtbaar zijn. Dit geeft ze een gekarteld uiterlijk."
 
-#: lib/elements/fill_stitch.py:481 lib/elements/satin_column.py:389
+#: lib/elements/fill_stitch.py:500 lib/elements/satin_column.py:389
 #: lib/elements/stroke.py:156
 msgid "Running stitch length"
 msgstr "Doorlopende steek lengte"
 
-#: lib/elements/fill_stitch.py:482
+#: lib/elements/fill_stitch.py:501
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr "Lengte van de steken rond de omtrek van het vulgebied, gebruikt bij het verplaatsen van sectie naar sectie. Ook gebruikt voor kronkel en cirkelvormige vulling."
 
-#: lib/elements/fill_stitch.py:499 lib/elements/satin_column.py:400
+#: lib/elements/fill_stitch.py:518 lib/elements/satin_column.py:400
 msgid "Running stitch tolerance"
 msgstr "Tolerantie lopende steek"
 
-#: lib/elements/fill_stitch.py:500 lib/elements/satin_column.py:401
+#: lib/elements/fill_stitch.py:519 lib/elements/satin_column.py:401
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Bepaalt hoe hard Ink/Stitch probeert te voorkomen dat er buiten de vorm wordt geborduurd. Bij lagere getallen is de kans kleiner dat er buiten de vorm wordt geborduurd, maar zijn er meer steken nodig."
 
-#: lib/elements/fill_stitch.py:518 lib/elements/stroke.py:200
+#: lib/elements/fill_stitch.py:537 lib/elements/stroke.py:200
 msgid "Randomize stitch length"
 msgstr "Willekeurige steeklengte"
 
-#: lib/elements/fill_stitch.py:519 lib/elements/stroke.py:202
+#: lib/elements/fill_stitch.py:538 lib/elements/stroke.py:202
 msgid "Randomize stitch length and phase instead of dividing evenly or staggering. This is recommended for closely-spaced curved fills to avoid Moiré artefacts."
 msgstr "Maak de steeklengte en fase willekeurig in plaats van ze gelijkmatig te verdelen of te verspringen. Dit wordt aanbevolen voor dicht op elkaar geplaatste gebogen vullingen om moiré artefacten te voorkomen."
 
-#: lib/elements/fill_stitch.py:535 lib/elements/stroke.py:221
+#: lib/elements/fill_stitch.py:554 lib/elements/stroke.py:221
 msgid "Random stitch length jitter"
 msgstr "Willekeurige steeklengte jitter"
 
-#: lib/elements/fill_stitch.py:536 lib/elements/stroke.py:222
+#: lib/elements/fill_stitch.py:555 lib/elements/stroke.py:222
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Hoeveelheid om de lengte van elke steek te variëren bij het willekeurig maken."
 
-#: lib/elements/fill_stitch.py:551 lib/elements/satin_column.py:525
+#: lib/elements/fill_stitch.py:570 lib/elements/satin_column.py:525
 #: lib/elements/stroke.py:99
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:33
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:35
 msgid "Repeats"
 msgstr "Herhalingen"
 
-#: lib/elements/fill_stitch.py:552 lib/elements/stroke.py:100
+#: lib/elements/fill_stitch.py:571 lib/elements/stroke.py:100
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:36
 msgid "Defines how many times to run down and back along the path."
 msgstr "Bepaalt hoe vaak op en neer langs een pad wordt gegaan."
 
-#: lib/elements/fill_stitch.py:564 lib/elements/stroke.py:117
+#: lib/elements/fill_stitch.py:583 lib/elements/stroke.py:117
 msgid "Bean stitch number of repeats"
 msgstr "Drievoudige loopsteek aantal herhalingen"
 
-#: lib/elements/fill_stitch.py:565 lib/elements/stroke.py:119
+#: lib/elements/fill_stitch.py:584 lib/elements/stroke.py:119
 msgid "Backtrack each stitch this many times.  A value of 1 would triple each stitch (forward, back, forward).  A value of 2 would quintuple each stitch, etc.\n\n"
 "A pattern with various repeats can be created with a list of values separated by a space."
 msgstr "Trek elke steek zoveel keer terug. Een waarde van 1 verdrievoudigt elke steek (vooruit, achteruit, vooruit). Een waarde van 2 vervijfvoudigt elke steek, enz.\n\n"
 "U kunt een patroon met verschillende herhalingen maken met behulp van een lijst met waarden die door een spatie worden gescheiden."
 
-#: lib/elements/fill_stitch.py:582 lib/elements/satin_column.py:264
+#: lib/elements/fill_stitch.py:601 lib/elements/satin_column.py:264
 #: lib/elements/stroke.py:256
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Zig zag afstand (piek naar piek)"
 
-#: lib/elements/fill_stitch.py:583 lib/elements/stroke.py:257
+#: lib/elements/fill_stitch.py:602 lib/elements/stroke.py:257
 msgid "Length of stitches in zig-zag mode."
 msgstr "Lengte van steken in zig zag modus."
 
-#: lib/elements/fill_stitch.py:595
+#: lib/elements/fill_stitch.py:614
 msgid "Zig-zag width"
 msgstr "Zig zag breedte"
 
-#: lib/elements/fill_stitch.py:596
+#: lib/elements/fill_stitch.py:615
 msgid "Width of the zig-zag line."
 msgstr "De breedte van de zig-zag lijn."
 
-#: lib/elements/fill_stitch.py:609 lib/gui/tartan/embroidery_panel.py:42
+#: lib/elements/fill_stitch.py:628 lib/gui/tartan/embroidery_panel.py:42
 msgid "Rows per tartan thread"
 msgstr "Rijen per schotse ruit draad"
 
-#: lib/elements/fill_stitch.py:610 lib/gui/tartan/embroidery_panel.py:44
+#: lib/elements/fill_stitch.py:629 lib/gui/tartan/embroidery_panel.py:44
 msgid "Consecutive rows of the same color"
 msgstr "Aaneengesloten rijen van dezelfde kleur"
 
-#: lib/elements/fill_stitch.py:621
+#: lib/elements/fill_stitch.py:640
 msgid "Herringbone width"
 msgstr "Visgraat breedte"
 
-#: lib/elements/fill_stitch.py:622
+#: lib/elements/fill_stitch.py:641
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Definieert de breedte van een visgraatpatroon. Gebruik 0 voor regelmatige rijen."
 
-#: lib/elements/fill_stitch.py:634 lib/elements/satin_column.py:292
+#: lib/elements/fill_stitch.py:653 lib/elements/satin_column.py:292
 #: lib/elements/stroke.py:272
 msgid "Pull compensation"
 msgstr "Trek compensatie"
 
-#: lib/elements/fill_stitch.py:635
+#: lib/elements/fill_stitch.py:654
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Met een vulsteek kan de stof worden samengetrokken, wat resulteert in een vorm die smaller is dan die u in Inkscape tekent. Deze instelling breidt elke rij steken vanuit het midden van de rij met een vaste lengte uit. Twee waarden gescheiden door een spatie kunnen worden gebruikt voor een asymmetrisch effect."
 
-#: lib/elements/fill_stitch.py:639 lib/elements/satin_column.py:296
+#: lib/elements/fill_stitch.py:658 lib/elements/satin_column.py:296
 #: lib/elements/satin_column.py:318 lib/elements/satin_column.py:470
 #: lib/elements/satin_column.py:564 lib/elements/stroke.py:278
 msgid "mm (each side)"
 msgstr "mm (elke kant)"
 
-#: lib/elements/fill_stitch.py:650 lib/elements/satin_column.py:277
+#: lib/elements/fill_stitch.py:669 lib/elements/satin_column.py:277
 msgid "Pull compensation percentage"
 msgstr "Trekcompensatie percentage"
 
-#: lib/elements/fill_stitch.py:651
+#: lib/elements/fill_stitch.py:670
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Extra trekcompensatie die varieert als percentage van de rijbreedte. Twee waarden gescheiden door een spatie kunnen worden gebruikt voor een asymmetrisch effect."
 
-#: lib/elements/fill_stitch.py:654 lib/elements/satin_column.py:144
+#: lib/elements/fill_stitch.py:673 lib/elements/satin_column.py:144
 #: lib/elements/satin_column.py:154 lib/elements/satin_column.py:280
 #: lib/elements/satin_column.py:485 lib/elements/satin_column.py:584
 msgid "% (each side)"
 msgstr "% (elke kant)"
 
-#: lib/elements/fill_stitch.py:663 lib/elements/fill_stitch.py:672
-#: lib/elements/fill_stitch.py:699 lib/elements/fill_stitch.py:710
-#: lib/elements/fill_stitch.py:720 lib/elements/fill_stitch.py:732
-#: lib/elements/fill_stitch.py:745
+#: lib/elements/fill_stitch.py:682 lib/elements/fill_stitch.py:691
+#: lib/elements/fill_stitch.py:718 lib/elements/fill_stitch.py:729
+#: lib/elements/fill_stitch.py:739 lib/elements/fill_stitch.py:751
+#: lib/elements/fill_stitch.py:764
 msgid "Fill Underlay"
 msgstr "Vulling onderlaag"
 
-#: lib/elements/fill_stitch.py:663 lib/gui/tartan/embroidery_panel.py:55
+#: lib/elements/fill_stitch.py:682 lib/gui/tartan/embroidery_panel.py:55
 #: inx/inkstitch_select_elements.inx:36 inx/inkstitch_select_elements.inx:64
 #: inx/inkstitch_select_elements.inx:66
 msgid "Underlay"
 msgstr "Versteviging"
 
-#: lib/elements/fill_stitch.py:669
+#: lib/elements/fill_stitch.py:688
 msgid "Fill angle"
 msgstr "Opvul hoek"
 
-#: lib/elements/fill_stitch.py:670
+#: lib/elements/fill_stitch.py:689
 msgid "Default: fill angle + 90 deg. Insert a list for multiple layers separated by a space."
 msgstr "Standaard: vulhoek + 90 graden. Voeg een lijst in voor meerdere lagen, gescheiden door een spatie."
 
-#: lib/elements/fill_stitch.py:696 lib/gui/tartan/embroidery_panel.py:77
+#: lib/elements/fill_stitch.py:715 lib/gui/tartan/embroidery_panel.py:77
 msgid "Row spacing"
 msgstr "Opvulrij afstand"
 
-#: lib/elements/fill_stitch.py:697
+#: lib/elements/fill_stitch.py:716
 msgid "default: 3x fill row spacing"
 msgstr "standaard: 3x opvulrij afstand"
 
-#: lib/elements/fill_stitch.py:707 lib/elements/stroke.py:239
+#: lib/elements/fill_stitch.py:726 lib/elements/stroke.py:239
 #: lib/extensions/element_info.py:144 lib/extensions/element_info.py:203
 msgid "Max stitch length"
 msgstr "Max steek lengte"
 
-#: lib/elements/fill_stitch.py:708
+#: lib/elements/fill_stitch.py:727
 msgid "default: equal to fill max stitch length"
 msgstr "standaard: gelijk aan max steek lengte"
 
-#: lib/elements/fill_stitch.py:718
+#: lib/elements/fill_stitch.py:737
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Verklein de vorm van de versteviging om te voorkomen dat de versteviging zichtbaar is aan de buitenkant van de opvulling."
 
-#: lib/elements/fill_stitch.py:753 lib/elements/satin_column.py:606
+#: lib/elements/fill_stitch.py:772 lib/elements/satin_column.py:606
 #: lib/elements/stroke.py:620 lib/gui/satin_multicolor/colorize_panel.py:62
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr "Willekeurig zaad"
 
-#: lib/elements/fill_stitch.py:754 lib/elements/satin_column.py:607
+#: lib/elements/fill_stitch.py:773 lib/elements/satin_column.py:607
 #: lib/elements/stroke.py:621
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Gebruik een specifieke zaad voor willekeurige kenmerken. Gebruikt de element ID als deze leeg is."
 
-#: lib/elements/fill_stitch.py:774 lib/stitch_plan/lock_stitch.py:218
+#: lib/elements/fill_stitch.py:793 lib/stitch_plan/lock_stitch.py:218
 msgid "Cross"
 msgstr "Kruis"
 
-#: lib/elements/fill_stitch.py:775
+#: lib/elements/fill_stitch.py:794
 msgid "Cross Flipped"
 msgstr "Kruissteek Gedraaid"
 
-#: lib/elements/fill_stitch.py:776
+#: lib/elements/fill_stitch.py:795
 msgid "Half Cross"
 msgstr "Half Kruis"
 
-#: lib/elements/fill_stitch.py:777
+#: lib/elements/fill_stitch.py:796
 msgid "Half Cross Flipped"
 msgstr "Half Kruis Gedraaid"
 
-#: lib/elements/fill_stitch.py:778
+#: lib/elements/fill_stitch.py:797
 msgid "Upright Cross"
 msgstr "Vertikaal Kruis"
 
-#: lib/elements/fill_stitch.py:779
+#: lib/elements/fill_stitch.py:798
 msgid "Upright Cross Flipped"
 msgstr "Vertikaal Gedraaid Kruis"
 
-#: lib/elements/fill_stitch.py:780
+#: lib/elements/fill_stitch.py:799
 msgid "Dense Upright Cross"
 msgstr "Dicht rechtopstaand kruis"
 
-#: lib/elements/fill_stitch.py:781
+#: lib/elements/fill_stitch.py:800
 msgid "Dense Upright Cross Flipped"
 msgstr "Dicht rechtopstaand kruis omgedraaid"
 
-#: lib/elements/fill_stitch.py:782
+#: lib/elements/fill_stitch.py:801
 msgid "Double Cross"
 msgstr "Dubbel Kruis"
 
-#: lib/elements/fill_stitch.py:783
+#: lib/elements/fill_stitch.py:802
 msgid "Double Cross Flipped"
 msgstr "Dubbel kruis omgedraaid"
 
-#: lib/elements/fill_stitch.py:784
+#: lib/elements/fill_stitch.py:803
 msgid "Smyrna Cross"
 msgstr "Smyrna-kruis"
 
-#: lib/elements/fill_stitch.py:785
+#: lib/elements/fill_stitch.py:804
 msgid "Smyrna Cross Flipped"
 msgstr "Smyrna-kruis omgedraaid"
 
-#: lib/elements/fill_stitch.py:790 lib/gui/cross_stitch_assistant.py:112
+#: lib/elements/fill_stitch.py:809 lib/gui/cross_stitch_assistant.py:112
 msgid "Cross stitch method"
 msgstr "Kruis steek methode"
 
-#: lib/elements/fill_stitch.py:801
+#: lib/elements/fill_stitch.py:820
 msgid "Thread count"
 msgstr "Draad telling"
 
-#: lib/elements/fill_stitch.py:802
+#: lib/elements/fill_stitch.py:821
 msgid "Defines the thread count for each stitch.\n"
 "Thread count must be an even number.\n"
 "Half crosses are stitched with an odd thread count."
@@ -2072,57 +2089,57 @@ msgstr "Definieert het aantal draden per steek.\n"
 "Het aantal draden moet een even getal zijn.\n"
 "Halve kruisjes worden geborduurd met een oneven aantal draden."
 
-#: lib/elements/fill_stitch.py:815
+#: lib/elements/fill_stitch.py:834
 msgid "Pattern size"
 msgstr "Patroon grote"
 
-#: lib/elements/fill_stitch.py:816
+#: lib/elements/fill_stitch.py:835
 msgid "Cross stitch pattern size in mm, x and y values are separated by a space. Only one input value returns a square pattern."
 msgstr "De afmetingen van het kruissteekpatroon worden in mm aangegeven; de x- en y-waarden worden gescheiden door een spatie. Slechts één invoerwaarde levert een vierkant patroon op."
 
-#: lib/elements/fill_stitch.py:819 lib/elements/fill_stitch.py:852
+#: lib/elements/fill_stitch.py:838 lib/elements/fill_stitch.py:871
 msgid "mm (x y)"
 msgstr "mm (x y)"
 
-#: lib/elements/fill_stitch.py:831
+#: lib/elements/fill_stitch.py:850
 msgid "Align grid with canvas"
 msgstr "Lijn het raster op met het canvas"
 
-#: lib/elements/fill_stitch.py:832
+#: lib/elements/fill_stitch.py:851
 msgid "This ensures good alignment for adjacent cross stitch areas, but it also means that the outcome may change when the element is moved off the grid.\n\n"
 "Disable this option to ensure, that this element stitches the same, independently on its position on the canvas."
 msgstr "Dit zorgt voor een goede uitlijning van aangrenzende kruissteekgebieden, maar het betekent ook dat het resultaat kan veranderen wanneer het element buiten het raster wordt verplaatst.\n\n"
 "Schakel deze optie uit om ervoor te zorgen dat dit element op dezelfde manier wordt geborduurd, ongeacht de positie op het canvas."
 
-#: lib/elements/fill_stitch.py:848
+#: lib/elements/fill_stitch.py:867
 msgid "Grid Offset"
 msgstr "Raster Compensatie"
 
-#: lib/elements/fill_stitch.py:849
+#: lib/elements/fill_stitch.py:868
 msgid "Shifts the cross stitch grid by given values. X and Y values are separated by a space. Only one input value offsets the pattern evenly for x and y."
 msgstr "Verschuift het kruissteek raster met de opgegeven waarden. De X- en Y-waarden worden gescheiden door een spatie. Slechts één invoerwaarde verschuift het patroon gelijkmatig in de x- en y-richting."
 
-#: lib/elements/fill_stitch.py:864
+#: lib/elements/fill_stitch.py:883
 msgid "Grid Rotation"
 msgstr "Raster rotatie"
 
-#: lib/elements/fill_stitch.py:865
+#: lib/elements/fill_stitch.py:884
 msgid "Rotates the cross stitch grid by the given value."
 msgstr "Draait het kruissteek raster met de opgegeven waarde."
 
-#: lib/elements/fill_stitch.py:867
+#: lib/elements/fill_stitch.py:886
 msgid "deg"
 msgstr "graden"
 
-#: lib/elements/fill_stitch.py:879
+#: lib/elements/fill_stitch.py:898
 msgid "Fill coverage"
 msgstr "Vul dekking"
 
-#: lib/elements/fill_stitch.py:880
+#: lib/elements/fill_stitch.py:899
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr "Percentage van de overlap van elk kruis met het vulgebied"
 
-#: lib/elements/fill_stitch.py:892 lib/elements/satin_column.py:185
+#: lib/elements/fill_stitch.py:911 lib/elements/satin_column.py:185
 #: lib/elements/satin_column.py:595
 msgid "Maximum stitch length"
 msgstr "Maximale steeklengte"
@@ -3267,7 +3284,7 @@ msgstr "Verkeerd bestandstype. Ink/Stitch accepteert alleen gpl kleuren paletten
 msgid "Ink/Stitch cannot find your palette folder automatically. Please install your palette manually."
 msgstr "Ink/Stitch kan uw palet map niet automatisch vinden. Installeer uw palet handmatig."
 
-#: lib/extensions/jump_to_stroke.py:200 lib/lettering/categories.py:27
+#: lib/extensions/jump_to_stroke.py:214 lib/lettering/categories.py:27
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:19
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:67
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:68
@@ -4911,12 +4928,12 @@ msgstr "STOP"
 msgid "COLOR CHANGE"
 msgstr "KLEUR WISSEL"
 
-#: lib/gui/simulator/drawing_panel.py:305
+#: lib/gui/simulator/drawing_panel.py:306
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Afmetingen: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:451
+#: lib/gui/simulator/drawing_panel.py:452
 #, python-format
 msgid "Command: %s"
 msgstr "Opdracht: %s"
