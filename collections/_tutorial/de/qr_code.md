@@ -83,11 +83,12 @@ Aufgrund des hohen Levels für die Fehlerrate, können wir es uns erlauben, klei
 - Nutze zunächst den Kreuzstich-Assistent unter `Erweiterungen > Ink/Stitch > Werkzeuge: Füllung > Kreuzstich-Assistent`.
 
   Setze die Mustergröße auf 2.12 und aktiviere die Checkbox `Verpixeln` in den Ausgabe-Einstellungen. Dies wird die einzelnen Teilbereiche der Form auseinanderbrechen.
-- Nutze nun `Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen` und setze die minimale Größe für Fülstichobjekte auf 65 (8x8+1).
+- Nutze nun `Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen` und setze die minimale Größe für Fülstichobjekte auf 4.5.
+  
   So werden alle alleinstehenden Quadrate entfernt.
 - In diesem Beispiel werden 5 Quadrate entfernt.
 - Teste, ob dein QR-Code noch funktionsfähig ist. Ist er das, versuchen wir ihn noch weiter zu vereinfachen.
-- Wiederhole den Prozess und entferne nun Bereiche die kleiner als 129 (2x64+1) sind.
+- Wiederhole den Prozess und entferne nun Bereiche die kleiner als 9 sind.
 - In meinem Beispiel werden weitere 4 Formen entfernt.
 - Überprüfe, ob der QR-Code noch funktioniert.
 
