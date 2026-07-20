@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from itertools import chain
-from typing import List
+from typing import Optional
 
 import inkex
 from shapely import geometry as shgeo
@@ -22,11 +22,11 @@ class StrokeToSatin(InkstitchExtension):
     """Convert a line to a satin column of the same width."""
 
     @staticmethod
-    def _get_target_path_label(element: EmbroideryElement, paths: List[Stroke], i: int) -> str:
+    def _get_target_path_label(element: EmbroideryElement, i: int, has_multiple_paths: bool) -> Optional[str]:
         if element.node.label is None:
             return None
 
-        if len(paths) == 1:
+        if not has_multiple_paths:
             return element.node.label
 
         return f"{element.node.label} ({i + 1})"
@@ -66,7 +66,7 @@ class StrokeToSatin(InkstitchExtension):
                     path_element.set('id', self.uniqueId("path"))
                     path_element.set('transform', correction_transform)
                     path_element.set('style', path_style)
-                    path_element.label = self._get_target_path_label(element, paths, i)
+                    path_element.label = self._get_target_path_label(element, i, has_multiple_paths=len(paths) > 1)
 
                     parent.insert(index, path_element)
 
