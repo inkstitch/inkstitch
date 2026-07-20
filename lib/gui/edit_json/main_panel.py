@@ -547,10 +547,10 @@ class LetteringEditJsonPanel(wx.Panel):
                     last_character = None
                     continue
 
-                last_character = glyph.name
                 position_x = self._render_glyph(glyph, position_x, position_y, glyph.name, last_character)
                 if glyph is not None and j == 0 and self.font_meta['horiz_adv_x_default'] is None:
                     position_x += glyph.min_x
+                last_character = glyph.name
             position_x += self.font_meta['horiz_adv_x_space']
         position_x -= self.font_meta['horiz_adv_x_space']
         return position_x
