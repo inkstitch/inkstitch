@@ -25,6 +25,10 @@ def generate_stitch_plan(embroidery_file, import_commands="symbols"):  # noqa: C
     except pystitch.exceptions.NoStitchesError:
         inkex.errormsg(_("Could not open the file: no stitch information found."))
         sys.exit(0)
+    except Exception as exc:
+        inkex.errormsg(_("Could not read embroidery information from this file."))
+        inkex.errormsg(f"\nError: {exc}")
+        sys.exit(0)
     if pattern.count_stitches() < 2:
         inkex.errormsg(_("Could not open the file: no stitch information found."))
         sys.exit(0)
