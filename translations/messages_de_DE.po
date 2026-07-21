@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-07-16 02:45+0000\n"
-"PO-Revision-Date: 2026-07-16 02:45\n"
+"PO-Revision-Date: 2026-07-21 02:51\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -1794,20 +1794,21 @@ msgstr "Erhöht oder verringert den Reihenabstand zum Ende hin."
 
 #: lib/elements/fill_stitch.py:397
 msgid "Flexible"
-msgstr ""
+msgstr "Fexibel"
 
 #: lib/elements/fill_stitch.py:398
 msgid "Flexible (stagger)"
-msgstr ""
+msgstr "Flexibel (Versatz)"
 
 #: lib/elements/fill_stitch.py:403
 msgid "Stitch position method"
-msgstr ""
+msgstr "Stichpositionsmethode"
 
 #: lib/elements/fill_stitch.py:404
 msgid "Flexible: adapts stitch lenghts accordingly to the tolerance value while keeping stitch length consistent on each curve segment.\n"
 "Flexible (stagger): adapts stitch length accordingly to the tolerance value while also optimizing for stagger."
-msgstr ""
+msgstr "Flexibel: Passt die Stichlängen entsprechend dem Toleranzwert an und sorgt für eine gleichmäßige Länge der Stiche auf einem Kurvensegment.\n"
+"Flexibel (versetzt): Passt die Stichlänge entsprechend dem Toleranzwert an und optimiert gleichzeitig die Stichversatz-Position."
 
 #: lib/elements/fill_stitch.py:416
 msgid "Stagger rows this many times before repeating"
