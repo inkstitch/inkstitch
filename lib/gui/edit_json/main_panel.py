@@ -504,21 +504,23 @@ class LetteringEditJsonPanel(wx.Panel):
             return
 
         position_x = 0
+        last_character = None
         if self.text_before:
-            position_x = self._render_text(self.text_before, 0, 0, True)
-            position_x -= self.kerning_pairs.get(f'{self.text_before[-1]} {text[0]}', 0)
-        position_x = self._render_text(text, position_x, 0, False)
+            position_x = self._render_text(self.text_before, position_x, 0, last_character, True)
+            last_character = self.text_before[-1]
+        if text:
+            position_x = self._render_text(text, position_x, 0, last_character, False)
+            last_character = text[-1]
         if self.text_after:
-            position_x -= self.kerning_pairs.get(f'{text[-1]} {self.text_after[0]}', 0)
-            self._render_text(self.text_after, position_x, 0, True)
-        self._render_text(self.text_multiline, 0, self.font_meta['leading'], True)
+            self._render_text(self.text_after, position_x, 0, last_character, True)
+        self._render_text(self.text_multiline, 0, self.font_meta['leading'], None, True)
 
         if self.default_variant.variant == FontVariant.RIGHT_TO_LEFT:
             self.layer[:] = reversed(self.layer)
             for group in self.layer:
                 group[:] = reversed(group)
 
-    def _render_text(self, text, position_x, position_y, use_character_position):
+    def _render_text(self, text, position_x, position_y, last_character, use_character_position):
         words = text.split()
         for j, word in enumerate(words):
             # forced letter case
@@ -540,7 +542,6 @@ class LetteringEditJsonPanel(wx.Panel):
                 glyphs.append(glyph)
                 skip = list(range(i, i+glyph_len))
 
-            last_character = None
             for glyph in glyphs:
                 if glyph is None:
                     position_x += self.font_meta['horiz_adv_x_space']
