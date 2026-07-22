@@ -31,7 +31,6 @@ class StrokeToSatin(InkstitchExtension):
 
         return f"{element.node.label} ({i + 1})"
 
-
     def effect(self):
         if not self.get_elements():
             return
