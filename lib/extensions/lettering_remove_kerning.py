@@ -26,8 +26,9 @@ class LetteringRemoveKerning(InkstitchExtension):
         for path in paths:
             if not os.path.isfile(path):
                 continue
+            parser = etree.XMLParser(resolve_entities=False, no_network=True, load_dtd=False)
             with open(path, 'r+', encoding="utf-8") as fontfile:
-                svg = etree.parse(fontfile)
+                svg = etree.parse(fontfile, parser)
                 xpath = ".//svg:font[1]"
                 kerning = svg.xpath(xpath, namespaces=NSS)
                 if kerning:
