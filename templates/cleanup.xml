@@ -23,7 +23,8 @@
                 gui-description="Only display labels and ids of affected elements and groups without removing them.">true</param>
         </page>
         <page name="info" gui-text="Help">
-            <label>Use this extension to remove small objects from the document.</label>
+            <label>Use this extension to remove small objects from the selection.
+                   With no selection, small element from the entire document will be removed.</label>
             <spacer />
             <label>More information on our website</label>
             <label appearance="url">https://inkstitch.org/docs/troubleshoot/#cleanup-document</label>

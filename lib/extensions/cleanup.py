@@ -35,7 +35,6 @@ class Cleanup(InkstitchExtension):
         self.rm_groups = self.options.rm_groups
         self.dry_run = self.options.dry_run
 
-        self.svg.selection.clear()
         self.get_elements()
 
         self.elements_to_remove = set()
