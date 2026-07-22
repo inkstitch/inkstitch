@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-07-16 02:45+0000\n"
-"PO-Revision-Date: 2026-07-21 02:51\n"
+"PO-Revision-Date: 2026-07-22 02:48\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -2093,7 +2093,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:838 lib/elements/fill_stitch.py:871
 msgid "mm (x y)"
-msgstr ""
+msgstr "χλστ. (x y)"
 
 #: lib/elements/fill_stitch.py:850
 msgid "Align grid with canvas"
@@ -2114,7 +2114,7 @@ msgstr ""
 
 #: lib/elements/fill_stitch.py:883
 msgid "Grid Rotation"
-msgstr ""
+msgstr "Περιστροφή πλέγματος"
 
 #: lib/elements/fill_stitch.py:884
 msgid "Rotates the cross stitch grid by the given value."
@@ -2901,7 +2901,7 @@ msgstr ""
 #: lib/extensions/apply_attribute.py:27 lib/extensions/element_info.py:20
 #: lib/extensions/selection_to_pattern.py:25
 msgid "Please select at least one element."
-msgstr ""
+msgstr "Παρακαλώ εισαγάγετε τουλάχιστον ένα στοιχείο."
 
 #: lib/extensions/apply_attribute.py:31
 msgid "Please enter the attribute name."
@@ -2909,7 +2909,7 @@ msgstr ""
 
 #: lib/extensions/apply_attribute.py:44
 msgid "Please enter a value."
-msgstr ""
+msgstr "Παρακαλώ εισαγάγετε μια τιμή."
 
 #: lib/extensions/apply_palette.py:29
 msgid "There is no stitchable element in the document."
@@ -2981,11 +2981,11 @@ msgstr ""
 
 #: lib/extensions/batch_lettering.py:60
 msgid "Please specify a text"
-msgstr ""
+msgstr "Παρακαλώ καθορίστε ένα κείμενο"
 
 #: lib/extensions/batch_lettering.py:65
 msgid "Please specify a font"
-msgstr ""
+msgstr "Παρακαλώ καθορίστε μια γραμματοσειρά"
 
 #: lib/extensions/batch_lettering.py:69
 msgid "Please specify a valid font name."
@@ -3926,7 +3926,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:148
 msgid "Output options"
-msgstr ""
+msgstr "Επιλογές εξόδου"
 
 #: lib/gui/cross_stitch_assistant.py:153
 msgid "Apply grid settings to"
@@ -4022,7 +4022,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:272
 msgid "GIMP color palette"
-msgstr ""
+msgstr "Παλέτα χρωμάτων GIMP"
 
 #: lib/gui/cross_stitch_assistant.py:274
 msgid "Color selection"
@@ -4035,7 +4035,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:287
 msgid "RGB value list"
-msgstr ""
+msgstr "Λίστα τιμών RGB"
 
 #: lib/gui/cross_stitch_assistant.py:289
 msgid "A comma separated list with rgb values: r g b, r, g, b\n"
@@ -4044,7 +4044,7 @@ msgstr ""
 
 #: lib/gui/cross_stitch_assistant.py:295
 msgid "Gimp palette file"
-msgstr ""
+msgstr "Αρχείο παλέτας GIMP"
 
 #: lib/gui/cross_stitch_assistant.py:296
 msgid "Select a Gimp palette file"
@@ -4239,7 +4239,7 @@ msgstr ""
 
 #: lib/gui/edit_json/settings_panel.py:181
 msgid "Default glyph"
-msgstr ""
+msgstr "Προεπιλεγμένη γλυφή"
 
 #: lib/gui/edit_json/settings_panel.py:188
 msgid "AutoSatin"
@@ -4423,7 +4423,7 @@ msgstr ""
 
 #: lib/gui/lettering/option_panel.py:89
 msgid "Sizing and alignment"
-msgstr ""
+msgstr "Μέγεθος και στοίχιση"
 
 #: lib/gui/lettering/option_panel.py:90
 msgid "Letter spacing (mm)"
@@ -4530,7 +4530,7 @@ msgstr ""
 #: lib/gui/lettering/option_panel.py:146 lib/gui/lettering/option_panel.py:148
 #: lib/gui/lettering_font_sample.py:57 inx/inkstitch_batch_lettering.inx:22
 msgid "Color sort"
-msgstr ""
+msgstr "Ταξινόμηση χρωμάτων"
 
 #: lib/gui/lettering_font_sample.py:90
 msgid "    This extension helps font creators to generate an output of every glyph from a selected font."
@@ -4845,7 +4845,7 @@ msgstr ""
 
 #: lib/gui/simulator/design_info.py:25
 msgid "Design dimensions (mm)"
-msgstr ""
+msgstr "Διαστάσεις σχεδίου (mm)"
 
 #: lib/gui/simulator/design_info.py:28
 msgid "# Stitches"
@@ -4955,11 +4955,11 @@ msgstr ""
 
 #: lib/gui/simulator/view_panel.py:73
 msgid "Open info dialog"
-msgstr ""
+msgstr "Άνοιγμα πλαισίου διαλόγου πληροφοριών"
 
 #: lib/gui/simulator/view_panel.py:78
 msgid "Change background color"
-msgstr ""
+msgstr "Αλλαγή χρώματος φόντου"
 
 #: lib/gui/simulator/view_panel.py:82
 msgid "Show crosshair"
@@ -4971,7 +4971,7 @@ msgstr "Εμφάνιση σελίδας"
 
 #: lib/gui/simulator/view_panel.py:95
 msgid "Open settings dialog"
-msgstr ""
+msgstr "Άνοιγμα πλαισίου διαλόγου ρυθμίσεων"
 
 #: lib/gui/simulator/view_panel.py:101
 msgid "Detach/attach simulator window"
@@ -4987,7 +4987,7 @@ msgstr ""
 
 #: lib/gui/simulator/view_panel.py:193
 msgid "Design Info"
-msgstr ""
+msgstr "Πληροφορίες σχεδίου"
 
 #: lib/gui/tartan/code_panel.py:24
 msgid "1 Tartan thread equals (mm)"
@@ -5088,7 +5088,7 @@ msgstr ""
 
 #: lib/gui/tartan/embroidery_panel.py:197
 msgid "SVG Elements"
-msgstr ""
+msgstr "Στοιχεία SVG"
 
 #: lib/gui/tartan/help_panel.py:19
 msgid "This extension fills shapes with a tartan (or tartan like) pattern."
@@ -5283,7 +5283,7 @@ msgstr ""
 #: lib/lettering/font.py:130
 #, python-brace-format
 msgid "Failed to read the JSON file ({exception}):"
-msgstr ""
+msgstr "Απέτυχε η ανάγνωση του αρχείου JSON ({exception}):"
 
 #: lib/lettering/font.py:138
 msgid "Corrupt JSON file"
@@ -5486,11 +5486,11 @@ msgstr ""
 #: lib/utils/version.py:16
 #, python-format
 msgid "Ink/Stitch Version: %s"
-msgstr ""
+msgstr "Έκδοση Ink/Stitch: %s"
 
 #: lib/utils/version.py:18
 msgid "Ink/Stitch Version: unknown"
-msgstr ""
+msgstr "Έκδοση Ink/Stitch: άγνωστη"
 
 #: print/templates/color_swatch.html:8 print/templates/color_swatch.html:40
 #: print/templates/operator_detailedview.html:9
@@ -5893,7 +5893,7 @@ msgstr ""
 #: pystitch-format-descriptions.py:2 pystitch-format-descriptions.py:4
 #: pystitch-format-descriptions.py:58 pystitch-format-descriptions.py:60
 msgid "Brother Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Brother"
 
 #. description for pystitch file format: exp
 #: pystitch-format-descriptions.py:6
@@ -5904,7 +5904,7 @@ msgstr ""
 #. description for pystitch file format: tbf
 #: pystitch-format-descriptions.py:8 pystitch-format-descriptions.py:48
 msgid "Tajima Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Tajima"
 
 #. description for pystitch file format: jef
 #. description for pystitch file format: sew
@@ -5912,7 +5912,7 @@ msgstr ""
 #: pystitch-format-descriptions.py:10 pystitch-format-descriptions.py:20
 #: pystitch-format-descriptions.py:76
 msgid "Janome Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Janome"
 
 #. description for pystitch file format: vp3
 #. description for pystitch file format: ksm
@@ -5927,7 +5927,7 @@ msgstr ""
 #: pystitch-format-descriptions.py:68 pystitch-format-descriptions.py:70
 #: pystitch-format-descriptions.py:72 pystitch-format-descriptions.py:74
 msgid "Pfaff Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Pfaff"
 
 #. description for pystitch file format: svg
 #: pystitch-format-descriptions.py:14
@@ -5942,58 +5942,58 @@ msgstr ""
 #. description for pystitch file format: xxx
 #: pystitch-format-descriptions.py:18
 msgid "Singer Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Singer"
 
 #. description for pystitch file format: u01
 #: pystitch-format-descriptions.py:22
 msgid "Barudan Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Barudan"
 
 #. description for pystitch file format: shv
 #: pystitch-format-descriptions.py:24
 msgid "Husqvarna Viking Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Husqvarna Viking"
 
 #. description for pystitch file format: 10o
 #. description for pystitch file format: 100
 #: pystitch-format-descriptions.py:26 pystitch-format-descriptions.py:28
 msgid "Toyota Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Toyota"
 
 #. description for pystitch file format: bro
 #: pystitch-format-descriptions.py:30
 msgid "Bits & Volts Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Bits & Volts"
 
 #. description for pystitch file format: dat
 #: pystitch-format-descriptions.py:32
 msgid "Sunstar or Barudan Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Sunstar ή Barudan"
 
 #. description for pystitch file format: dsb
 #: pystitch-format-descriptions.py:34
 msgid "Tajima(Barudan) Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Tajima(Barudan)"
 
 #. description for pystitch file format: dsz
 #: pystitch-format-descriptions.py:36
 msgid "ZSK USA Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος ZSK USA"
 
 #. description for pystitch file format: emd
 #: pystitch-format-descriptions.py:38
 msgid "Elna Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Elna"
 
 #. description for pystitch file format: exy
 #: pystitch-format-descriptions.py:40
 msgid "Eltac Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Eltac"
 
 #. description for pystitch file format: fxy
 #: pystitch-format-descriptions.py:42
 msgid "Fortron Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Fortron"
 
 #. description for pystitch file format: gt
 #: pystitch-format-descriptions.py:44
@@ -6003,12 +6003,12 @@ msgstr ""
 #. description for pystitch file format: inb
 #: pystitch-format-descriptions.py:46
 msgid "Inbro Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Inbro"
 
 #. description for pystitch file format: tap
 #: pystitch-format-descriptions.py:52
 msgid "Happy Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Happy"
 
 #. description for pystitch file format: stx
 #: pystitch-format-descriptions.py:56
@@ -6018,27 +6018,27 @@ msgstr ""
 #. description for pystitch file format: new
 #: pystitch-format-descriptions.py:62
 msgid "Ameco Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Ameco"
 
 #. description for pystitch file format: mit
 #: pystitch-format-descriptions.py:66
 msgid "Mitsubishi Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Mitsubishi"
 
 #. description for pystitch file format: stc
 #: pystitch-format-descriptions.py:78
 msgid "Gunold Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Gunold"
 
 #. description for pystitch file format: zhs
 #: pystitch-format-descriptions.py:80
 msgid "Zeng Hsing Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Zeng Hsing"
 
 #. description for pystitch file format: zxy
 #: pystitch-format-descriptions.py:82
 msgid "ZSK TC Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος ZSK TC"
 
 #. description for pystitch file format: pmv
 #: pystitch-format-descriptions.py:84
@@ -6063,7 +6063,7 @@ msgstr ""
 #. description for pystitch file format: hus
 #: pystitch-format-descriptions.py:92
 msgid "Husqvarna Embroidery Format"
-msgstr ""
+msgstr "Μορφή κεντήματος Husqvarna"
 
 #. description for pystitch file format: iqp
 #: pystitch-format-descriptions.py:94
@@ -6910,7 +6910,7 @@ msgstr "Είσοδος αρχείου 100"
 
 #: inx/inkstitch_input_100.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.100)"
-msgstr ""
+msgstr "Ink/Stitch: Μοφή κεντήματος Toyota (.100)"
 
 #: inx/inkstitch_input_100.inx:9
 msgid "convert 100 file to Ink/Stitch manual-stitch paths"
@@ -6922,7 +6922,7 @@ msgstr "Είσοδος αρχείου 10O"
 
 #: inx/inkstitch_input_10O.inx:8
 msgid "Ink/Stitch: Toyota Embroidery Format (.10o)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Toyota (.10o)"
 
 #: inx/inkstitch_input_10O.inx:9
 msgid "convert 10O file to Ink/Stitch manual-stitch paths"
@@ -6934,7 +6934,7 @@ msgstr "Είσοδος αρχείου BRO"
 
 #: inx/inkstitch_input_BRO.inx:8
 msgid "Ink/Stitch: Bits & Volts Embroidery Format (.bro)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Bits & Volts (.bro)"
 
 #: inx/inkstitch_input_BRO.inx:9
 msgid "convert BRO file to Ink/Stitch manual-stitch paths"
@@ -6970,7 +6970,7 @@ msgstr "Είσοδος αρχείου DAT"
 
 #: inx/inkstitch_input_DAT.inx:8
 msgid "Ink/Stitch: Sunstar or Barudan Embroidery Format (.dat)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Sunstar ή Barudan (.dat)"
 
 #: inx/inkstitch_input_DAT.inx:9
 msgid "convert DAT file to Ink/Stitch manual-stitch paths"
@@ -6982,7 +6982,7 @@ msgstr "Είσοδος αρχείου DSB"
 
 #: inx/inkstitch_input_DSB.inx:8
 msgid "Ink/Stitch: Tajima(Barudan) Embroidery Format (.dsb)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Tajima(Barudan) (.dsb)"
 
 #: inx/inkstitch_input_DSB.inx:9
 msgid "convert DSB file to Ink/Stitch manual-stitch paths"
@@ -6994,7 +6994,7 @@ msgstr "Είσοδος αρχείου DST"
 
 #: inx/inkstitch_input_DST.inx:8 inx/inkstitch_output_DST.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.dst)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Tajima (.dst)"
 
 #: inx/inkstitch_input_DST.inx:9
 msgid "convert DST file to Ink/Stitch manual-stitch paths"
@@ -7006,7 +7006,7 @@ msgstr "Είσοδος αρχείου DSZ"
 
 #: inx/inkstitch_input_DSZ.inx:8
 msgid "Ink/Stitch: ZSK USA Embroidery Format (.dsz)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος ZSK USA (.dsz)"
 
 #: inx/inkstitch_input_DSZ.inx:9
 msgid "convert DSZ file to Ink/Stitch manual-stitch paths"
@@ -7030,7 +7030,7 @@ msgstr "Είσοδος αρχείου EMD"
 
 #: inx/inkstitch_input_EMD.inx:8
 msgid "Ink/Stitch: Elna Embroidery Format (.emd)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Elna (.emd)"
 
 #: inx/inkstitch_input_EMD.inx:9
 msgid "convert EMD file to Ink/Stitch manual-stitch paths"
@@ -7054,7 +7054,7 @@ msgstr "Είσοδος αρχείου EXY"
 
 #: inx/inkstitch_input_EXY.inx:8
 msgid "Ink/Stitch: Eltac Embroidery Format (.exy)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Eltac (.exy)"
 
 #: inx/inkstitch_input_EXY.inx:9
 msgid "convert EXY file to Ink/Stitch manual-stitch paths"
@@ -7066,7 +7066,7 @@ msgstr "Είσοδος αρχείου FXY"
 
 #: inx/inkstitch_input_FXY.inx:8
 msgid "Ink/Stitch: Fortron Embroidery Format (.fxy)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Fortron (.fxy)"
 
 #: inx/inkstitch_input_FXY.inx:9
 msgid "convert FXY file to Ink/Stitch manual-stitch paths"
@@ -7078,7 +7078,7 @@ msgstr "Είσοδος αρχείου GCODE"
 
 #: inx/inkstitch_input_GCODE.inx:8 inx/inkstitch_output_GCODE.inx:8
 msgid "Ink/Stitch: gcode Format, Text File (.gcode)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή gcode, αρχείο κειμένου (.gcode)"
 
 #: inx/inkstitch_input_GCODE.inx:9
 msgid "convert GCODE file to Ink/Stitch manual-stitch paths"
@@ -7102,7 +7102,7 @@ msgstr "Είσοδος αρχείου HUS"
 
 #: inx/inkstitch_input_HUS.inx:8
 msgid "Ink/Stitch: Husqvarna Embroidery Format (.hus)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Husqvarna (.hus)"
 
 #: inx/inkstitch_input_HUS.inx:9
 msgid "convert HUS file to Ink/Stitch manual-stitch paths"
@@ -7114,7 +7114,7 @@ msgstr "Είσοδος αρχείου INB"
 
 #: inx/inkstitch_input_INB.inx:8
 msgid "Ink/Stitch: Inbro Embroidery Format (.inb)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Inbro (.inb)"
 
 #: inx/inkstitch_input_INB.inx:9
 msgid "convert INB file to Ink/Stitch manual-stitch paths"
@@ -7150,7 +7150,7 @@ msgstr "Είσοδος αρχείου JEF"
 
 #: inx/inkstitch_input_JEF.inx:8 inx/inkstitch_output_JEF.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jef)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Janome (.jef)"
 
 #: inx/inkstitch_input_JEF.inx:9
 msgid "convert JEF file to Ink/Stitch manual-stitch paths"
@@ -7162,7 +7162,7 @@ msgstr "Είσοδος αρχείου JPX"
 
 #: inx/inkstitch_input_JPX.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.jpx)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Janome (.jpx)"
 
 #: inx/inkstitch_input_JPX.inx:9
 msgid "convert JPX file to Ink/Stitch manual-stitch paths"
@@ -7186,7 +7186,7 @@ msgstr "Είσοδος αρχείου KSM"
 
 #: inx/inkstitch_input_KSM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.ksm)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.ksm)"
 
 #: inx/inkstitch_input_KSM.inx:9
 msgid "convert KSM file to Ink/Stitch manual-stitch paths"
@@ -7198,7 +7198,7 @@ msgstr "Είσοδος αρχείου MAX"
 
 #: inx/inkstitch_input_MAX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.max)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.max)"
 
 #: inx/inkstitch_input_MAX.inx:9
 msgid "convert MAX file to Ink/Stitch manual-stitch paths"
@@ -7210,7 +7210,7 @@ msgstr "Είσοδος αρχείου MIT"
 
 #: inx/inkstitch_input_MIT.inx:8
 msgid "Ink/Stitch: Mitsubishi Embroidery Format (.mit)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Mitsubishi (.mit)"
 
 #: inx/inkstitch_input_MIT.inx:9
 msgid "convert MIT file to Ink/Stitch manual-stitch paths"
@@ -7222,7 +7222,7 @@ msgstr "Είσοδος αρχείου NEW"
 
 #: inx/inkstitch_input_NEW.inx:8
 msgid "Ink/Stitch: Ameco Embroidery Format (.new)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Ameco (.new)"
 
 #: inx/inkstitch_input_NEW.inx:9
 msgid "convert NEW file to Ink/Stitch manual-stitch paths"
@@ -7234,7 +7234,7 @@ msgstr "Είσοδος αρχείου PCD"
 
 #: inx/inkstitch_input_PCD.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcd)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.pcd)"
 
 #: inx/inkstitch_input_PCD.inx:9
 msgid "convert PCD file to Ink/Stitch manual-stitch paths"
@@ -7246,7 +7246,7 @@ msgstr "Είσοδος αρχείου PCM"
 
 #: inx/inkstitch_input_PCM.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcm)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.pcm)"
 
 #: inx/inkstitch_input_PCM.inx:9
 msgid "convert PCM file to Ink/Stitch manual-stitch paths"
@@ -7258,7 +7258,7 @@ msgstr "Είσοδος αρχείου PCQ"
 
 #: inx/inkstitch_input_PCQ.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcq)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.pcq)"
 
 #: inx/inkstitch_input_PCQ.inx:9
 msgid "convert PCQ file to Ink/Stitch manual-stitch paths"
@@ -7270,7 +7270,7 @@ msgstr "Είσοδος αρχείου PCS"
 
 #: inx/inkstitch_input_PCS.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.pcs)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.pcs)"
 
 #: inx/inkstitch_input_PCS.inx:9
 msgid "convert PCS file to Ink/Stitch manual-stitch paths"
@@ -7282,7 +7282,7 @@ msgstr "Είσοδος αρχείου PEC"
 
 #: inx/inkstitch_input_PEC.inx:8 inx/inkstitch_output_PEC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pec)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Brother (.pec)"
 
 #: inx/inkstitch_input_PEC.inx:9
 msgid "convert PEC file to Ink/Stitch manual-stitch paths"
@@ -7294,7 +7294,7 @@ msgstr "Είσοδος αρχείου PES"
 
 #: inx/inkstitch_input_PES.inx:8 inx/inkstitch_output_PES.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.pes)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Brother (.pes)"
 
 #: inx/inkstitch_input_PES.inx:9
 msgid "convert PES file to Ink/Stitch manual-stitch paths"
@@ -7306,7 +7306,7 @@ msgstr "Είσοδος αρχείου PHB"
 
 #: inx/inkstitch_input_PHB.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phb)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Brother (.phb)"
 
 #: inx/inkstitch_input_PHB.inx:9
 msgid "convert PHB file to Ink/Stitch manual-stitch paths"
@@ -7318,7 +7318,7 @@ msgstr "Είσοδος αρχείου PHC"
 
 #: inx/inkstitch_input_PHC.inx:8
 msgid "Ink/Stitch: Brother Embroidery Format (.phc)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Brother (.phc)"
 
 #: inx/inkstitch_input_PHC.inx:9
 msgid "convert PHC file to Ink/Stitch manual-stitch paths"
@@ -7366,7 +7366,7 @@ msgstr "Είσοδος αρχείου SEW"
 
 #: inx/inkstitch_input_SEW.inx:8 inx/inkstitch_output_SEW.inx:8
 msgid "Ink/Stitch: Janome Embroidery Format (.sew)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Janome (.sew)"
 
 #: inx/inkstitch_input_SEW.inx:9
 msgid "convert SEW file to Ink/Stitch manual-stitch paths"
@@ -7378,7 +7378,7 @@ msgstr "Είσοδος αρχείου SHV"
 
 #: inx/inkstitch_input_SHV.inx:8
 msgid "Ink/Stitch: Husqvarna Viking Embroidery Format (.shv)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Husqvarna Viking (.shv)"
 
 #: inx/inkstitch_input_SHV.inx:9
 msgid "convert SHV file to Ink/Stitch manual-stitch paths"
@@ -7390,7 +7390,7 @@ msgstr "Είσοδος αρχείου SPX"
 
 #: inx/inkstitch_input_SPX.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.spx)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.spx)"
 
 #: inx/inkstitch_input_SPX.inx:9
 msgid "convert SPX file to Ink/Stitch manual-stitch paths"
@@ -7402,7 +7402,7 @@ msgstr "Είσοδος αρχείου STC"
 
 #: inx/inkstitch_input_STC.inx:8
 msgid "Ink/Stitch: Gunold Embroidery Format (.stc)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Gunold (.stc)"
 
 #: inx/inkstitch_input_STC.inx:9
 msgid "convert STC file to Ink/Stitch manual-stitch paths"
@@ -7426,7 +7426,7 @@ msgstr "Είσοδος αρχείου TAP"
 
 #: inx/inkstitch_input_TAP.inx:8
 msgid "Ink/Stitch: Happy Embroidery Format (.tap)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Happy (.tap)"
 
 #: inx/inkstitch_input_TAP.inx:9
 msgid "convert TAP file to Ink/Stitch manual-stitch paths"
@@ -7438,7 +7438,7 @@ msgstr "Είσοδος αρχείου TBF"
 
 #: inx/inkstitch_input_TBF.inx:8 inx/inkstitch_output_TBF.inx:8
 msgid "Ink/Stitch: Tajima Embroidery Format (.tbf)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Tajima (.tbf)"
 
 #: inx/inkstitch_input_TBF.inx:9
 msgid "convert TBF file to Ink/Stitch manual-stitch paths"
@@ -7450,7 +7450,7 @@ msgstr "Είσοδος αρχείου U01"
 
 #: inx/inkstitch_input_U01.inx:8 inx/inkstitch_output_U01.inx:8
 msgid "Ink/Stitch: Barudan Embroidery Format (.u01)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Barudan (.u01)"
 
 #: inx/inkstitch_input_U01.inx:9
 msgid "convert U01 file to Ink/Stitch manual-stitch paths"
@@ -7462,7 +7462,7 @@ msgstr "Είσοδος αρχείου VP3"
 
 #: inx/inkstitch_input_VP3.inx:8 inx/inkstitch_output_VP3.inx:8
 msgid "Ink/Stitch: Pfaff Embroidery Format (.vp3)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Pfaff (.vp3)"
 
 #: inx/inkstitch_input_VP3.inx:9
 msgid "convert VP3 file to Ink/Stitch manual-stitch paths"
@@ -7474,7 +7474,7 @@ msgstr "Είσοδος αρχείου XXX"
 
 #: inx/inkstitch_input_XXX.inx:8 inx/inkstitch_output_XXX.inx:8
 msgid "Ink/Stitch: Singer Embroidery Format (.xxx)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Singer (.xxx)"
 
 #: inx/inkstitch_input_XXX.inx:9
 msgid "convert XXX file to Ink/Stitch manual-stitch paths"
@@ -7486,7 +7486,7 @@ msgstr "Είσοδος αρχείου ZHS"
 
 #: inx/inkstitch_input_ZHS.inx:8
 msgid "Ink/Stitch: Zeng Hsing Embroidery Format (.zhs)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος Zeng Hsing (.zhs)"
 
 #: inx/inkstitch_input_ZHS.inx:9
 msgid "convert ZHS file to Ink/Stitch manual-stitch paths"
@@ -7498,7 +7498,7 @@ msgstr "Είσοδος αρχείου ZXY"
 
 #: inx/inkstitch_input_ZXY.inx:8
 msgid "Ink/Stitch: ZSK TC Embroidery Format (.zxy)"
-msgstr ""
+msgstr "Ink/Stitch: Μορφή κεντήματος ZSK TC (.zxy)"
 
 #: inx/inkstitch_input_ZXY.inx:9
 msgid "convert ZXY file to Ink/Stitch manual-stitch paths"
@@ -7506,7 +7506,7 @@ msgstr ""
 
 #: inx/inkstitch_install.inx:3
 msgid "Install Addons for Inkscape"
-msgstr ""
+msgstr "Εγκατάσταση πρόσθετων για το Inkscape"
 
 #: inx/inkstitch_install.inx:10
 msgid "Install thread color palettes"
@@ -7794,7 +7794,7 @@ msgstr "Θέση κειμένου"
 
 #: inx/inkstitch_lettering_along_path.inx:24
 msgid "Vertical alignment"
-msgstr ""
+msgstr "Κατακόρυφη στοίχιση"
 
 #: inx/inkstitch_lettering_along_path.inx:31
 msgid "This extension bends an Ink/Stitch text to a path."
@@ -8071,7 +8071,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:3
 msgid "Organize Glyphs"
-msgstr ""
+msgstr "Οργάνωση γλυφών"
 
 #: inx/inkstitch_lettering_organize_glyphs.inx:12
 msgid "Choose action"
@@ -8179,7 +8179,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:3
 msgid "Convert SVG Font to Glyph Layers"
-msgstr ""
+msgstr "Μετατροπή γραμματοσειράς SVG σε επίπεδα γλυφών"
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:6
 msgid "Use this character to define size"
@@ -8191,7 +8191,7 @@ msgstr ""
 
 #: inx/inkstitch_lettering_svg_font_to_layers.inx:11
 msgid "Converts a svg font to glyph layers"
-msgstr ""
+msgstr "Μετατρέπει μια γραμματοσειρά svg σε επίπεδα γλυφών"
 
 #: inx/inkstitch_letters_to_font.inx:3
 msgid "Letters to font"
@@ -8343,7 +8343,7 @@ msgstr ""
 
 #: inx/inkstitch_output_COL.inx:9
 msgid "Save design in COL format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή COL με το Ink/Stitch"
 
 #: inx/inkstitch_output_CSV.inx:3
 msgid "CSV file output"
@@ -8355,7 +8355,7 @@ msgstr ""
 
 #: inx/inkstitch_output_CSV.inx:9
 msgid "Save design in CSV format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή CSV με το Ink/Stitch"
 
 #: inx/inkstitch_output_DST.inx:3
 msgid "DST file output"
@@ -8363,7 +8363,7 @@ msgstr "Έξοδος αρχείου DST"
 
 #: inx/inkstitch_output_DST.inx:9
 msgid "Save design in DST format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή DST με το Ink/Stitch"
 
 #: inx/inkstitch_output_EDR.inx:3
 msgid "EDR file output"
@@ -8375,7 +8375,7 @@ msgstr ""
 
 #: inx/inkstitch_output_EDR.inx:9
 msgid "Save design in EDR format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή EDR με το Ink/Stitch"
 
 #: inx/inkstitch_output_EXP.inx:3
 msgid "EXP file output"
@@ -8383,7 +8383,7 @@ msgstr "Έξοδος αρχείου EXP"
 
 #: inx/inkstitch_output_EXP.inx:9
 msgid "Save design in EXP format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή EXP με το Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:3
 msgid "GCODE file output"
@@ -8391,7 +8391,7 @@ msgstr "Έξοδος αρχείου GCODE"
 
 #: inx/inkstitch_output_GCODE.inx:9
 msgid "Save design in GCODE format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή GCODE με το Ink/Stitch"
 
 #: inx/inkstitch_output_GCODE.inx:17
 msgid "Coordinate Settings"
@@ -8531,7 +8531,7 @@ msgstr ""
 
 #: inx/inkstitch_output_INF.inx:9
 msgid "Save design in INF format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή INF με το Ink/Stitch"
 
 #: inx/inkstitch_output_JEF.inx:3
 msgid "JEF file output"
@@ -8539,7 +8539,7 @@ msgstr "Έξοδος αρχείου JEF"
 
 #: inx/inkstitch_output_JEF.inx:9
 msgid "Save design in JEF format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή JEF με το Ink/Stitch"
 
 #: inx/inkstitch_output_JSON.inx:3
 msgid "JSON file output"
@@ -8551,7 +8551,7 @@ msgstr ""
 
 #: inx/inkstitch_output_JSON.inx:9
 msgid "Save design in JSON format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή JSON με το Ink/Stitch"
 
 #: inx/inkstitch_output_PEC.inx:3
 msgid "PEC file output"
@@ -8559,7 +8559,7 @@ msgstr "Έξοδος αρχείου PEC"
 
 #: inx/inkstitch_output_PEC.inx:9
 msgid "Save design in PEC format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή PEC με το Ink/Stitch"
 
 #: inx/inkstitch_output_PES.inx:3
 msgid "PES file output"
@@ -8567,7 +8567,7 @@ msgstr "Έξοδος αρχείου PES"
 
 #: inx/inkstitch_output_PES.inx:9
 msgid "Save design in PES format using Ink/Stitch"
-msgstr ""
+msgstr "Αποθήκευση σχεδίου σε μορφή PES με το Ink/Stitch"
 
 #: inx/inkstitch_output_PLT.inx:3
 msgid "PLT file output"
@@ -8691,7 +8691,7 @@ msgstr ""
 
 #: inx/inkstitch_palette_to_text.inx:25
 msgid "Read more on our webiste:"
-msgstr ""
+msgstr "Διαβάστε περισσότερα στον ιστότοπό μας:"
 
 #: inx/inkstitch_palette_to_text.inx:26
 msgid "https://inkstitch.org/docs/thread-color#palette-to-text"
@@ -9095,11 +9095,11 @@ msgstr ""
 
 #: inx/inkstitch_stitch_plan_preview.inx:17
 msgid "Realistic View"
-msgstr ""
+msgstr "Ρεαλιστική προβολή"
 
 #: inx/inkstitch_stitch_plan_preview.inx:18
 msgid "Realistic View (High Quality)"
-msgstr ""
+msgstr "Ρεαλιστική προβολή (Υψηλή ποιότητα)"
 
 #: inx/inkstitch_stitch_plan_preview.inx:19
 msgid "Realistic Vector (slow)"
@@ -9372,7 +9372,7 @@ msgstr ""
 
 #: inx/inkstitch_update_svg.inx:23
 msgid "Update from version"
-msgstr ""
+msgstr "Ενημέρωση από την έκδοση"
 
 #: inx/inkstitch_zigzag_line_to_satin.inx:3
 msgid "Zig-Zag Line to Satin"
@@ -9457,11 +9457,11 @@ msgstr "Μορφές εξόδου:"
 
 #: inx/inkstitch_zip.inx:21
 msgid ".PEC: Brother Embroidery Format"
-msgstr ""
+msgstr "PEC: Μορφή κεντήματος Brother"
 
 #: inx/inkstitch_zip.inx:22
 msgid ".PES: Brother Embroidery Format"
-msgstr ""
+msgstr ".PES: Μορφή κεντήματος Brother"
 
 #: inx/inkstitch_zip.inx:23
 msgid ".EXP: Melco Expanded Embroidery Format"
@@ -9469,31 +9469,31 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:24
 msgid ".DST: Tajima Embroidery Format"
-msgstr ""
+msgstr ".DST: Μορφή κεντήματος Tajima"
 
 #: inx/inkstitch_zip.inx:25
 msgid ".JEF: Janome Embroidery Format"
-msgstr ""
+msgstr ".JEF: Μορφή κεντήματος Janome"
 
 #: inx/inkstitch_zip.inx:26
 msgid ".VP3: Pfaff Embroidery Format"
-msgstr ""
+msgstr ".VP3: Μορφή κεντήματος Pfaff"
 
 #: inx/inkstitch_zip.inx:27
 msgid ".XXX: Singer Embroidery Format"
-msgstr ""
+msgstr ".XXX: Μορφή κεντήματος Singer"
 
 #: inx/inkstitch_zip.inx:28
 msgid ".SEW: Janome Embroidery Format"
-msgstr ""
+msgstr ".SEW: Μορφή κεντήματος Janome"
 
 #: inx/inkstitch_zip.inx:29
 msgid ".U01: Barudan Embroidery Format"
-msgstr ""
+msgstr ".U01: Μορφή κεντήματος Barudan"
 
 #: inx/inkstitch_zip.inx:30
 msgid ".TBF: Tajima Embroidery Format"
-msgstr ""
+msgstr ".TBF: Μορφή κεντήματος Tajima"
 
 #: inx/inkstitch_zip.inx:31
 msgid ".PMV: Brother Stitch Format [STITCH]"
@@ -9573,7 +9573,7 @@ msgstr ""
 
 #: inx/inkstitch_zip.inx:70
 msgid "Read more on our website:"
-msgstr ""
+msgstr "Διαβάστε περισσότερα στον ιστότοπό μας:"
 
 #: inx/inkstitch_zip.inx:71
 msgid "https://inkstitch.org/docs/import-export/#batch-export"
