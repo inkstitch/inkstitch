@@ -18,8 +18,14 @@
             <spacer />
             <separator />
             <spacer />
-            <param name="keep_originals" type="boolean" gui-text="Keep original fills"
-                   gui-description="Deletes the original paths for rungs, but keeps the fill elements">false</param>
+            <param name="keep" type="optiongroup" appearance="combo" gui-text="Keep (do not remove)" 
+                   gui-description="Define which elements from the original selection will be removed after conversion.
+                                    Fills with no rung interesection are neither converted nor removed.">
+               <option value="none">None (remove entire selection)</option>
+               <option value="original_fills">Fills (remove rungs only)</option>
+               <option value="original_fills_and_rungs">Fills and rungs (keep entire selection)</option>
+               <option value="unused_subpaths" default="true">Unconverted disconnected fill subpaths</option>
+            </param>
         </page>
         <page name="info" gui-text="Help">
             <label>This extension takes in a fill and rung elements and converts them into satin(s).</label>

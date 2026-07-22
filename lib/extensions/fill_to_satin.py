@@ -16,6 +16,7 @@ from ..i18n import _
 from ..svg import get_correction_transform
 from ..utils import ensure_multi_line_string, roll_linear_ring
 from .base import InkstitchExtension
+from copy import copy
 
 
 class FillToSatin(InkstitchExtension):
@@ -27,7 +28,7 @@ class FillToSatin(InkstitchExtension):
         self.arg_parser.add_argument("--center", dest="center", type=Boolean, default=False)
         self.arg_parser.add_argument("--contour", dest="contour", type=Boolean, default=False)
         self.arg_parser.add_argument("--zigzag", dest="zigzag", type=Boolean, default=False)
-        self.arg_parser.add_argument("--keep_originals", dest="keep_originals", type=Boolean, default=False)
+        self.arg_parser.add_argument("--keep", dest="keep", type=str, default='none')
 
         self.satin_index = 0
 
@@ -54,7 +55,7 @@ class FillToSatin(InkstitchExtension):
             self.print_error(message)
             return
 
-        self._validate_fill_rung_intersections(fill_elements, selected_rungs)
+        fill_elements = self._validate_fill_rung_intersections(fill_elements, selected_rungs)
 
         settings = {
             'skip_end_section': self.options.skip_end_section
@@ -62,25 +63,31 @@ class FillToSatin(InkstitchExtension):
 
         for fill_element in fill_elements:
             fill_shape = fill_element.shape
-
-            fill_linestrings = self._fill_to_linestrings(fill_shape)
+            fill_linestrings, unused_subpaths = self._fill_to_linestrings(fill_shape, selected_rungs)
             for linestrings in fill_linestrings:
                 fill_to_satin = FillElementToSatin(self.svg, settings, fill_element, fill_shape, linestrings, selected_rungs)
                 satins = fill_to_satin.convert_to_satin()
                 self._insert_satins(fill_element, satins)
+            if self.options.keep == "unused_subpaths":
+                self._insert_subpath_element(fill_element, unused_subpaths)
 
-        self._remove_originals()
+        self._remove_originals(fill_elements)
 
     def _validate_fill_rung_intersections(self, fills, rungs):
         fills_with_no_rung = []
+        valid_fills = []
         rungs = MultiLineString(rungs)
         for fill in fills:
             if not fill.shape.intersects(rungs):
                 fills_with_no_rung.append(f"{fill.node.label} ({fill.node.get_id()})")
+            else:
+                valid_fills.append(fill)
+
         if fills_with_no_rung:
             message = _("These fill elements do not intersect with any of the selected rungs and will not be converted:")
             message += "\n\n- " + '\n- '.join(fills_with_no_rung)
             self.print_error(message)
+        return valid_fills
 
     def _get_shapes(self):
         '''Filter selected elements. Take rungs and fills.'''
@@ -116,13 +123,18 @@ class FillToSatin(InkstitchExtension):
 
         return fill_elements, selected_rungs
 
-    def _fill_to_linestrings(self, fill_shape):
+    def _fill_to_linestrings(self, fill_shape, rungs):
         '''Takes a fill shape (Multipolygon) and returns the shape as a list of linestrings'''
         fill_linestrings = []
+        unused_subpaths = []
+        rung_linestring = MultiLineString(rungs)
         for polygon in fill_shape.geoms:
+            if not polygon.intersects(rung_linestring):
+                unused_subpaths.append(polygon)
+                continue
             linestrings = ensure_multi_line_string(polygon.boundary, 1)
             fill_linestrings.append(list(linestrings.geoms))
-        return fill_linestrings
+        return fill_linestrings, unused_subpaths
 
     def _insert_satins(self, fill_element, satins):
         '''Insert satin elements into the document'''
@@ -161,14 +173,46 @@ class FillToSatin(InkstitchExtension):
             group.insert(index, node)
             self.satin_index += 1
 
-    def _remove_originals(self):
-        '''Remove original elements - if requested'''
+    def _insert_subpath_element(self, element, unused_subpaths):
+        group = element.node.getparent()
+        index = group.index(element.node)
+        subpath = copy(element.node)
+        transform = get_correction_transform(element.node, True)
+
+        d = ''
+        # we cannot just use Path(get_coordinates(polygon).tolist()) as this won't properly close the subpaths
+        for polygon in unused_subpaths:
+            path = Path(polygon.exterior.coords)
+            path.close()
+            d += str(path)
+            for interior in polygon.interiors:
+                path = Path(interior.coords)
+                path.close()
+                d += str(path)
+        subpath.set('d', d)
+        subpath.set('transform', transform)
+
+        if d:
+            group.insert(index, subpath)
+
+    def _remove_originals(self, valid_fills):
+        '''Removes original elements (optionally)
+        '''
+        # user selected to keep all original elements, even strokes, abort deletion
+        if self.options.keep == "original_fills_and_rungs":
+            return
+
         for element in self.elements:
-            if not self.options.keep_originals or element.name == "Stroke":
-                try:
-                    element.node.delete()
-                except AttributeError:
-                    pass
+            # keep only fills option has been selected
+            if self.options.keep == "original_fills" and element.name == "FillStitch":
+                continue
+            # keep fills which have no rung intersection
+            if element not in valid_fills and element.name == "FillStitch":
+                continue
+            try:
+                element.node.delete()
+            except AttributeError:
+                pass
 
     def print_error(self, message=_("Please select a fill object and rungs.")):
         '''We did not receive the rigth elements, inform user'''
