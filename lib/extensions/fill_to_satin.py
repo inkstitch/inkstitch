@@ -177,6 +177,7 @@ class FillToSatin(InkstitchExtension):
         group = element.node.getparent()
         index = group.index(element.node)
         subpath = copy(element.node)
+        transform = get_correction_transform(element.node, True)
 
         d = ''
         # we cannot just use Path(get_coordinates(polygon).tolist()) as this won't properly close the subpaths
@@ -189,6 +190,7 @@ class FillToSatin(InkstitchExtension):
                 path.close()
                 d += str(path)
         subpath.set('d', d)
+        subpath.set('transform', transform)
 
         if d:
             group.insert(index, subpath)
