@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-16 02:45+0000\n"
-"PO-Revision-Date: 2026-07-22 02:48\n"
+"POT-Creation-Date: 2026-07-23 02:54+0000\n"
+"PO-Revision-Date: 2026-07-23 02:54\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-16 02:45+0000\n"
+"POT-Creation-Date: 2026-07-23 02:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3020,22 +3020,22 @@ msgstr "κλίμακα"
 msgid "Please select one or more fill areas to break apart."
 msgstr ""
 
-#: lib/extensions/cleanup.py:69
+#: lib/extensions/cleanup.py:68
 #, python-format
 msgid "%s elements to remove:"
 msgstr "%s στοιχεία για αφαίρεση:"
 
-#: lib/extensions/cleanup.py:77
+#: lib/extensions/cleanup.py:76
 #, python-format
 msgid "%s groups/layers to remove:"
 msgstr "%s ομάδες/επίπεδα για αφαίρεση:"
 
-#: lib/extensions/cleanup.py:85
+#: lib/extensions/cleanup.py:84
 #, python-brace-format
 msgid "{num_elements_removed} elements removed"
 msgstr "{num_elements_removed} στοιχεία αφαιρέθηκαν"
 
-#: lib/extensions/cleanup.py:89
+#: lib/extensions/cleanup.py:88
 #, python-brace-format
 msgid "{num_groups_removed} groups/layers removed"
 msgstr "{num_groups_removed} ομάδες/επίπεδα αφαιρέθηκαν"
@@ -3157,47 +3157,47 @@ msgstr "Διακοπές"
 msgid "Filter stitches smaller than (mm)"
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:45
+#: lib/extensions/fill_to_satin.py:46
 msgid "No fill element selected. Please select a fill element."
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:47
+#: lib/extensions/fill_to_satin.py:48
 msgid "A fill element has a fill color and serves as the outline of the satin column."
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:51
+#: lib/extensions/fill_to_satin.py:52
 msgid "No rungs selected. Please select rungs."
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:53
+#: lib/extensions/fill_to_satin.py:54
 msgid "Rungs are elements with a stroke color. They serve as the stitch direction for a satin column."
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:81
+#: lib/extensions/fill_to_satin.py:87
 msgid "These fill elements do not intersect with any of the selected rungs and will not be converted:"
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:110
+#: lib/extensions/fill_to_satin.py:117
 msgid "The selection contains elements with both, a fill and a stroke.\n"
 "Rungs only have a stroke color and fill elements a fill color.\n\n"
 "The operation will still be performed. In case of unwanted results, check the following elements and remove either the stroke or the fill color:"
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:139
+#: lib/extensions/fill_to_satin.py:151
 msgid "Satin Group"
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:160 lib/lettering/categories.py:29
+#: lib/extensions/fill_to_satin.py:172 lib/lettering/categories.py:29
 #: inx/inkstitch_lettering_generate_json.inx:73
 #: inx/inkstitch_select_elements.inx:30
 msgid "Satin"
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:173
+#: lib/extensions/fill_to_satin.py:217
 msgid "Please select a fill object and rungs."
 msgstr ""
 
-#: lib/extensions/fill_to_satin.py:177 inx/inkstitch_fill_to_satin.inx:28
+#: lib/extensions/fill_to_satin.py:221 inx/inkstitch_fill_to_satin.inx:34
 msgid "https://inkstitch.org/docs/satin-tools/#fill-to-satin"
 msgstr ""
 
@@ -3727,7 +3727,7 @@ msgid "Description"
 msgstr "Περιγραφή"
 
 #: lib/extensions/troubleshoot.py:153 lib/extensions/troubleshoot.py:202
-#: inx/inkstitch_cleanup.inx:39 inx/inkstitch_element_info.inx:12
+#: inx/inkstitch_cleanup.inx:40 inx/inkstitch_element_info.inx:12
 #: inx/inkstitch_remove_embroidery_settings.inx:155
 #: inx/inkstitch_select_elements.inx:91 inx/inkstitch_troubleshoot.inx:37
 #: inx/inkstitch_update_svg.inx:11
@@ -3842,7 +3842,7 @@ msgstr "Εφαρμογή"
 #: inx/inkstitch_batch_lettering.inx:79 inx/inkstitch_break_apart.inx:19
 #: inx/inkstitch_cleanup.inx:25 inx/inkstitch_cutwork_segmentation.inx:44
 #: inx/inkstitch_density_map.inx:26 inx/inkstitch_display_stacking_order.inx:11
-#: inx/inkstitch_fill_to_satin.inx:24 inx/inkstitch_fill_to_stroke.inx:24
+#: inx/inkstitch_fill_to_satin.inx:30 inx/inkstitch_fill_to_stroke.inx:24
 #: inx/inkstitch_generate_palette.inx:26 inx/inkstitch_gradient_blocks.inx:26
 #: inx/inkstitch_install.inx:14 inx/inkstitch_install_custom_palette.inx:14
 #: inx/inkstitch_jump_to_stroke.inx:42 inx/inkstitch_jump_to_trim.inx:31
@@ -6286,9 +6286,9 @@ msgid "This extension tries to create a single stitch path through all selected 
 msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:19 inx/inkstitch_batch_lettering.inx:84
-#: inx/inkstitch_break_apart.inx:25 inx/inkstitch_cleanup.inx:28
+#: inx/inkstitch_break_apart.inx:25 inx/inkstitch_cleanup.inx:29
 #: inx/inkstitch_density_map.inx:29 inx/inkstitch_display_stacking_order.inx:14
-#: inx/inkstitch_fill_to_satin.inx:27 inx/inkstitch_install.inx:18
+#: inx/inkstitch_fill_to_satin.inx:33 inx/inkstitch_install.inx:18
 #: inx/inkstitch_install_custom_palette.inx:17
 #: inx/inkstitch_knockdown_fill.inx:52
 #: inx/inkstitch_lettering_along_path.inx:40
@@ -6315,7 +6315,7 @@ msgid "Generates a continuous path through selected satin elements"
 msgstr ""
 
 #: inx/inkstitch_auto_satin.inx:30 inx/inkstitch_cut_satin.inx:12
-#: inx/inkstitch_fill_to_satin.inx:38 inx/inkstitch_flip.inx:11
+#: inx/inkstitch_fill_to_satin.inx:44 inx/inkstitch_flip.inx:11
 #: inx/inkstitch_satin_multicolor.inx:12
 #: inx/inkstitch_stroke_to_lpe_satin.inx:41
 #: inx/inkstitch_stroke_to_satin.inx:11
@@ -6523,14 +6523,14 @@ msgid "Only display labels and ids of affected elements and groups without remov
 msgstr ""
 
 #: inx/inkstitch_cleanup.inx:26
-msgid "Use this extension to remove small objects from the document."
+msgid "Use this extension to remove small objects from the selection. With no selection, small element from the entire document will be removed."
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:29
+#: inx/inkstitch_cleanup.inx:30
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
 msgstr ""
 
-#: inx/inkstitch_cleanup.inx:36
+#: inx/inkstitch_cleanup.inx:37
 msgid "Remove small unstitchable elements"
 msgstr ""
 
@@ -6767,19 +6767,35 @@ msgstr ""
 msgid "Needs at least 2 rungs"
 msgstr ""
 
-#: inx/inkstitch_fill_to_satin.inx:22
-msgid "Keep original fills"
+#: inx/inkstitch_fill_to_satin.inx:23
+msgid "Keep (do not remove)"
 msgstr ""
 
-#: inx/inkstitch_fill_to_satin.inx:22
-msgid "Deletes the original paths for rungs, but keeps the fill elements"
+#: inx/inkstitch_fill_to_satin.inx:23
+msgid "Define which elements from the original selection will be removed after conversion. Fills with no rung interesection are neither converted nor removed."
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:24
+msgid "None (remove entire selection)"
 msgstr ""
 
 #: inx/inkstitch_fill_to_satin.inx:25
+msgid "Fills (remove rungs only)"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:26
+msgid "Fills and rungs (keep entire selection)"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:27
+msgid "Unconverted disconnected fill subpaths"
+msgstr ""
+
+#: inx/inkstitch_fill_to_satin.inx:31
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
 msgstr ""
 
-#: inx/inkstitch_fill_to_satin.inx:35
+#: inx/inkstitch_fill_to_satin.inx:41
 msgid "Convert fill elements to satin"
 msgstr ""
 
