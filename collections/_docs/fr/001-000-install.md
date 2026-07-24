@@ -8,11 +8,11 @@ classes:
     - wide
 ---
 <div>
-    <a href="/docs/install-linux/" class="btn btn--info btn--large"><i class="fab fa-linux " ></i> Linux</a>
+    <a href="/fr/docs/install-linux/" class="btn btn--info btn--large"><i class="fab fa-linux " ></i> Linux</a>
 
-    <a href="/docs/install-macos/" class="btn btn--info btn--large"><i class="fab fa-apple " ></i> macOS</a>
+    <a href="/fr/docs/install-macos/" class="btn btn--info btn--large"><i class="fab fa-apple " ></i> macOS</a>
 
-    <a href="/docs/install-windows/" class="btn btn--info btn--large"><i class="fab fa-windows " ></i> Windows</a>
+    <a href="/fr/docs/install-windows/" class="btn btn--info btn--large"><i class="fab fa-windows " ></i> Windows</a>
 </div>
 
 ## Installation manuelle
