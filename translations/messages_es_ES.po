@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-23 02:54+0000\n"
-"PO-Revision-Date: 2026-07-23 02:54\n"
+"POT-Creation-Date: 2026-07-24 02:49+0000\n"
+"PO-Revision-Date: 2026-07-24 02:49\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-23 02:54+0000\n"
+"POT-Creation-Date: 2026-07-24 02:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3657,13 +3657,13 @@ msgstr "No se pudo encontrar el patrón especificado."
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "No se puede convertir una columna de satín en un satín de efecto de trazado en vivo. Por favor, selecciona un trazo."
 
-#: lib/extensions/stroke_to_satin.py:28
+#: lib/extensions/stroke_to_satin.py:39
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Seleccione al menos una línea para convertirla en una columna de satín."
 
 #. : Convert To Satin extension, user selected only objects that were not
 #. lines.
-#: lib/extensions/stroke_to_satin.py:64
+#: lib/extensions/stroke_to_satin.py:77
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Sólo las líneas simples se pueden convertir en columnas de satín."
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-23 02:54+0000\n"
-"PO-Revision-Date: 2026-07-23 02:54\n"
+"POT-Creation-Date: 2026-07-24 02:49+0000\n"
+"PO-Revision-Date: 2026-07-24 02:49\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-23 02:54+0000\n"
+"POT-Creation-Date: 2026-07-24 02:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3665,13 +3665,13 @@ msgstr "Konnte das gewählte Muster nicht finden."
 msgid "Cannot convert a satin column into a live path effect satin. Please select a stroke."
 msgstr "Eine Satinsäule kann nicht in einen Pfadeffekt-Satinstich umgewandelt werden. Bitte eine Linie auswählen."
 
-#: lib/extensions/stroke_to_satin.py:28
+#: lib/extensions/stroke_to_satin.py:39
 msgid "Please select at least one line to convert to a satin column."
 msgstr "Bitte wähle mindestens eine Zeile aus, die in eine Satinsäule konvertiert werden soll."
 
 #. : Convert To Satin extension, user selected only objects that were not
 #. lines.
-#: lib/extensions/stroke_to_satin.py:64
+#: lib/extensions/stroke_to_satin.py:77
 msgid "Only simple lines may be converted to satin columns."
 msgstr "Nur einfache Linien können in Satinsäulen konvertiert werden."
 
@@ -6573,7 +6573,7 @@ msgstr "Gibt eine Liste von zu entfernenden Elementen und Ebenen aus, ohne diese
 
 #: inx/inkstitch_cleanup.inx:26
 msgid "Use this extension to remove small objects from the selection. With no selection, small element from the entire document will be removed."
-msgstr ""
+msgstr "Nutze diese Erweiterung, um kleine Objekte aus der Auswahl zu entfernen. Ist keine Auswahl aktiv, werden kleine Objekte aus dem gesamten Dokument entfernt."
 
 #: inx/inkstitch_cleanup.inx:30
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
@@ -6818,27 +6818,27 @@ msgstr "Benötigt mindestens 2 Richtungsvektoren"
 
 #: inx/inkstitch_fill_to_satin.inx:23
 msgid "Keep (do not remove)"
-msgstr ""
+msgstr "Behalten (nicht entfernen)"
 
 #: inx/inkstitch_fill_to_satin.inx:23
 msgid "Define which elements from the original selection will be removed after conversion. Fills with no rung interesection are neither converted nor removed."
-msgstr ""
+msgstr "Definiert Objekte aus der ursprünglichen Auswahl nach der Konvertierung behalten werden sollen. Füllungen die keine Überschneidungen mit Richtungsvektoren haben, werden weder konvertiert noch entfernt."
 
 #: inx/inkstitch_fill_to_satin.inx:24
 msgid "None (remove entire selection)"
-msgstr ""
+msgstr "Keine (entfernt die gesamte Auswahl)"
 
 #: inx/inkstitch_fill_to_satin.inx:25
 msgid "Fills (remove rungs only)"
-msgstr ""
+msgstr "Füllungen (entfernt nur Richtungsvektoren)"
 
 #: inx/inkstitch_fill_to_satin.inx:26
 msgid "Fills and rungs (keep entire selection)"
-msgstr ""
+msgstr "Füllungen und Richtungsvektoren (gesamte Auswahl bleibt erhalten)"
 
 #: inx/inkstitch_fill_to_satin.inx:27
 msgid "Unconverted disconnected fill subpaths"
-msgstr ""
+msgstr "Nicht konvertierte Teilpfade (Füllung)"
 
 #: inx/inkstitch_fill_to_satin.inx:31
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
