@@ -316,7 +316,7 @@ def stitch_curve_evenly(
     """
     if len(points) < 2:
         return [], stitch_length_pos
-    dist_left = [0] * len(points)
+    dist_left = [0.0] * len(points)
     for j in reversed(range(0, len(points) - 1)):
         dist_left[j] = dist_left[j + 1] + points[j].distance(points[j + 1])
 

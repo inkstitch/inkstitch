@@ -6,8 +6,10 @@
 import math
 import typing
 from itertools import groupby
+from typing import Iterable, Iterator, overload
 
 import numpy
+from inkex import Vector2d
 from shapely.geometry import (GeometryCollection, LinearRing, LineString,
                               MultiLineString, MultiPoint, MultiPolygon, Polygon)
 from shapely.geometry.base import BaseGeometry
@@ -258,8 +260,14 @@ def remove_duplicate_points(path):
     return [point for point, repeats in groupby(path)]
 
 
+COORDINATE_TYPE = typing.Union[float, numpy.float64]
+
+
 class Point:
-    def __init__(self, x: typing.Union[float, numpy.float64], y: typing.Union[float, numpy.float64]):
+    x: float
+    y: float
+
+    def __init__(self, x: COORDINATE_TYPE, y: COORDINATE_TYPE):
         self.x = float(x)
         self.y = float(y)
 
@@ -268,22 +276,30 @@ class Point:
         return cls(point.x, point.y)
 
     @classmethod
-    def from_tuple(cls, point):
+    def from_tuple(cls, point: tuple[COORDINATE_TYPE, COORDINATE_TYPE]):
         return cls(point[0], point[1])
+
+    @classmethod
+    def from_vector2d(cls, vec: Vector2d):
+        return cls(vec.x, vec.y)
 
     def __json__(self):
         return vars(self)
 
-    def __add__(self, other):
+    def __add__(self, other: 'Point'):
         return self.__class__(self.x + other.x, self.y + other.y)
 
-    def __sub__(self, other):
+    def __sub__(self, other: 'Point'):
         return self.__class__(self.x - other.x, self.y - other.y)
 
     def mul(self, scalar):
         return self.__class__(self.x * scalar, self.y * scalar)
 
-    def __mul__(self, other):
+    @overload
+    def __mul__(self, other: 'Point') -> float: ...
+    @overload
+    def __mul__(self, other: int | float) -> 'Point': ...
+    def __mul__(self, other: 'Point | int | float'):
         if isinstance(other, Point):
             # dot product
             return self.x * other.x + self.y * other.y
@@ -295,52 +311,54 @@ class Point:
     def __neg__(self):
         return self * -1
 
-    def __rmul__(self, other):
+    def __rmul__(self, other: int | float):
         if isinstance(other, (int, float)):
             return self.__mul__(other)
         else:
             raise ValueError("cannot multiply %s by %s" % (type(self), type(other)))
 
-    def __truediv__(self, other):
+    def __truediv__(self, other: int | float):
         if isinstance(other, (int, float)):
             return self * (1.0 / other)
         else:
             raise ValueError("cannot divide %s by %s" % (type(self), type(other)))
 
-    def __eq__(self, other):
-        return self.x == other.x and self.y == other.y
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, Point):
+            return self.x == other.x and self.y == other.y
+        return False
 
     def __repr__(self):
         return "%s(%s,%s)" % (type(self), self.x, self.y)
 
-    def length(self):
+    def length(self) -> float:
         return (self.x ** 2 + self.y ** 2) ** 0.5
 
-    def distance(self, other):
+    def distance(self, other: 'Point') -> float:
         return (other - self).length()
 
-    def unit(self):
+    def unit(self) -> 'Point':
         length = self.length()
         if length == 0:
             return self.__class__(0, 0)
         return self.__class__(self.x / length, self.y / length)
 
-    def angle(self):
+    def angle(self) -> float:
         return math.atan2(self.y, self.x)
 
-    def rotate_left(self):
+    def rotate_left(self) -> 'Point':
         return self.__class__(-self.y, self.x)
 
-    def rotate(self, angle):
+    def rotate(self, angle: float) -> 'Point':
         return self.__class__(self.x * math.cos(angle) - self.y * math.sin(angle), self.y * math.cos(angle) + self.x * math.sin(angle))
 
-    def scale(self, x_scale, y_scale):
+    def scale(self, x_scale: float, y_scale: float) -> 'Point':
         return self.__class__(self.x * x_scale, self.y * y_scale)
 
-    def as_int(self):
+    def as_int(self) -> 'Point':
         return self.__class__(int(round(self.x)), int(round(self.y)))
 
-    def as_tuple(self):
+    def as_tuple(self) -> tuple[float, float]:
         return (self.x, self.y)
 
     def __getitem__(self, item):
@@ -352,10 +370,22 @@ class Point:
     def __str__(self):
         return "({0:.3f}, {1:.3f})".format(self.x, self.y)
 
+    def clone(self) -> 'Point':
+        return self.__class__(self.x, self.y)
 
-def line_string_to_point_list(line_string):
+    def __iter__(self) -> Iterator[float]:
+        """
+        We pass Point objects into shapely classes in many places, which works at runtime with just
+        __len__ and __getitem__ since python uses that as a fallback when the class doesn't have __iter__.
+        But mypy doesn't recognize that as a valid iterable, so we implement __iter__ to make mypy happy.
+        """
+        yield self.x
+        yield self.y
+
+
+def line_string_to_point_list(line_string) -> list[Point]:
     return [Point(*point) for point in line_string.coords]
 
 
-def coordinate_list_to_point_list(coordinate_list):
+def coordinate_list_to_point_list(coordinate_list: Iterable[tuple[COORDINATE_TYPE, COORDINATE_TYPE]]) -> list[Point]:
     return [Point.from_tuple(coords) for coords in coordinate_list]

@@ -7,6 +7,7 @@ from copy import copy
 from typing import List, Tuple, Union
 
 from inkex import Path, errormsg
+from mypyc.ir.ops import Sequence
 from shapely import make_valid
 from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union
@@ -69,7 +70,7 @@ class BreakApart(InkstitchExtension):
             if recombined_polygons:
                 self.polygons_to_nodes(recombined_polygons, element)
 
-    def break_apart_paths(self, paths: List[List[Union[List[float], Tuple[float, float]]]]) -> List[Polygon]:
+    def break_apart_paths(self, paths: Sequence[Sequence[Sequence[float]]]) -> List[Polygon]:
         polygons = []
         for path in paths:
             if len(path) < 3:

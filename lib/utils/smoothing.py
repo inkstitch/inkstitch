@@ -1,4 +1,5 @@
 import numpy as np
+from shapely.coords import CoordinateSequence
 
 from ..stitches.running_stitch import stitch_curve_evenly
 from .geometry import Point, coordinate_list_to_point_list
@@ -21,7 +22,7 @@ def _remove_duplicate_coordinates(coords_array):
     return coords_array[keepers]
 
 
-def smooth_path(path, smoothness=1.0, iterations=5):
+def smooth_path(path, smoothness: float=1.0, iterations: int=5):
     """Smooth a path of coordinates.
 
     Arguments:
@@ -44,10 +45,10 @@ def smooth_path(path, smoothness=1.0, iterations=5):
     #
     # Fortunately, we can convert the path to segments that are mostly the same
     # length by using the running stitch algorithm.
-    points, _ = stitch_curve_evenly(points, [smoothness * 5], smoothness * 2)
-    points = np.array(points)
+    curve_points, _ = stitch_curve_evenly(points, [smoothness * 5], smoothness * 2)
+    points_np = np.array(curve_points)
     for _ in range(iterations):
-        ll = points.repeat(2, axis=0)
+        ll = points_np.repeat(2, axis=0)
         r = np.empty_like(ll)
         if len(r) == 0:
             continue
@@ -55,10 +56,10 @@ def smooth_path(path, smoothness=1.0, iterations=5):
         r[2::2] = ll[1:-1:2]
         r[1:-1:2] = ll[2::2]
         r[-1] = ll[-1]
-        points = ll * 0.75 + r * 0.25
+        points_np = ll * 0.75 + r * 0.25
 
     # we want to keep the old start and end points
     start = [Point(* path[0])]
     end = [Point(* path[-1])]
 
-    return start + [Point(*coord) for coord in points] + end
+    return start + [Point(*coord) for coord in points_np] + end

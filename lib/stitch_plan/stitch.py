@@ -123,6 +123,12 @@ class Stitch(Point):
         if base_stitch is not None:
             self.add_tags(base_stitch.tags)
 
+    @classmethod
+    def from_coordinates(cls, coords: tuple[float, ...]):
+        if len(coords) < 2:
+            raise ValueError("Coordinates must have at least 2 elements")
+        return cls(coords[0], coords[1])
+
     def __new__(cls: Type[Stitch], *args, **kwargs) -> Stitch:
         instance = super().__new__(cls)
 

@@ -55,7 +55,7 @@ class Clone(EmbroideryElement):
            unit='deg',
            type='float')
     @cache
-    def clone_fill_angle(self) -> float:
+    def clone_fill_angle(self) -> float | None:
         return self.get_float_param('angle')
 
     @property

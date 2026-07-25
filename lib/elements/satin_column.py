@@ -6,10 +6,10 @@
 import itertools
 from copy import deepcopy
 from itertools import chain
-from typing import List, Tuple
+from typing import List, Tuple, Optional, cast, Sequence, overload
 
 import numpy as np
-from inkex import Path
+from inkex import Path, Vector2d
 from shapely import affinity as shaffinity
 from shapely import geometry as shgeo
 from shapely import set_precision
@@ -28,6 +28,9 @@ from ..utils.threading import check_stop_flag
 from .element import PIXELS_PER_MM, EmbroideryElement, param
 from .utils.stroke_to_satin import convert_path_to_satin, set_first_node
 from .validation import ValidationError, ValidationWarning
+
+
+ListOfPairs = list[tuple[Point, Point]]
 
 
 class NotStitchableError(ValidationError):
@@ -188,7 +191,7 @@ class SatinColumn(EmbroideryElement):
            unit="mm",
            sort_index=94)
     def max_stitch_length_px(self):
-        return self.get_float_param("max_stitch_length_mm") or None
+        return self.get_float_param("max_stitch_length_mm")
 
     @property
     @param('random_split_jitter_percent',
@@ -215,9 +218,10 @@ class SatinColumn(EmbroideryElement):
            select_items=[('split_method', 'default')],
            default='', type='float', unit='mm', sort_index=97)
     def min_random_split_length_px(self):
-        if self.max_stitch_length_px is None:
+        max_stitch_length_px = self.max_stitch_length_px
+        if max_stitch_length_px is None:
             return None
-        return min(self.max_stitch_length_px, self.get_float_param('min_random_split_length_mm', self.max_stitch_length_px))
+        return min(max_stitch_length_px, self.get_float_param('min_random_split_length_mm', max_stitch_length_px))
 
     @property
     @param('split_staggers',
@@ -335,7 +339,7 @@ class SatinColumn(EmbroideryElement):
     def reverse_rails(self):
         return self.get_param('reverse_rails', 'automatic')
 
-    def _get_rails_to_reverse(self):
+    def _get_rails_to_reverse(self) -> tuple[bool, bool]:
         choice = self.reverse_rails
 
         if choice == 'first':
@@ -708,7 +712,7 @@ class SatinColumn(EmbroideryElement):
 
     @property
     @cache
-    def line_string_rails(self):
+    def line_string_rails(self) -> tuple[shgeo.LineString, ...]:
         """The rails, as LineStrings."""
         paths = [set_precision(shgeo.LineString(rail), 0.00001) for rail in self.rails]
 
@@ -748,7 +752,7 @@ class SatinColumn(EmbroideryElement):
 
     @cache
     def _synthesize_rungs(self):
-        # self.rails may contain additoinal nodes through flattening
+        # self.rails may contain additional nodes through flattening
         # at this point we know that we only have two paths, both paths are rails
         # so we can access the original nodes by parsing and filtering the original path
         paths = Path(self.parse_path()).break_apart()
@@ -989,7 +993,11 @@ class SatinColumn(EmbroideryElement):
 
         return self._coordinates_to_satin(self.filtered_subpaths)
 
-    def split(self, split_point, cut_points=None):
+    @overload
+    def split(self, split_point: float | Point | Vector2d, cut_points: Optional[Sequence[Point | shgeo.Point]]=None): ...
+    @overload
+    def split(self, split_point: None, cut_points: Sequence[Point | shgeo.Point]): ...
+    def split(self, split_point: Optional[float | Point | Vector2d], cut_points: Optional[Sequence[Point | shgeo.Point]]=None):
         """Split a satin into two satins at the specified point
 
         split_point is a point on or near one of the rails, not at one of the
@@ -1008,25 +1016,23 @@ class SatinColumn(EmbroideryElement):
         """
 
         if cut_points is None:
+            if split_point is None:
+                raise ValueError("split_point cannot be None when cut_points is None")
             cut_points = self.find_cut_points(split_point)
-        path_lists = self._cut_rails(cut_points)
 
         # prevent error when split points lies at the start or end of the satin column
-        cleaned_path_lists = path_lists
-        for i, path_list in enumerate(path_lists):
-            if None in path_list:
-                cleaned_path_lists[i] = None
-                continue
-            for path in path_list:
-                if shgeo.LineString(path).length < self.zigzag_spacing:
-                    cleaned_path_lists[i] = None
-        path_lists = cleaned_path_lists
+        path_lists: list[Optional[list[shgeo.LineString]]] = []
+        for path_list in self._cut_rails(cut_points):
+            if any(path is None or shgeo.LineString(path).length < self.zigzag_spacing for path in path_list):
+                path_lists.append(None)
+            else:
+                path_lists.append(path_list)
 
         self._assign_rungs_to_split_rails(path_lists)
         self._add_rungs_if_necessary(path_lists)
         return [self._path_list_to_satins(path_list) for path_list in path_lists]
 
-    def find_cut_points(self, split_point):
+    def find_cut_points(self, split_point: float | Point | Vector2d):
         """Find the points on each satin corresponding to the split point.
 
         split_point is a point that is near but not necessarily touching one
@@ -1042,7 +1048,7 @@ class SatinColumn(EmbroideryElement):
         """
 
         # like in do_satin()
-        points = list(chain.from_iterable(self.plot_points_on_rails(self.zigzag_spacing)))
+        points: list[Point] = list(chain.from_iterable(self.plot_points_on_rails(self.zigzag_spacing)))
 
         if isinstance(split_point, float):
             index_of_closest_stitch = int(round(len(points) * split_point))
@@ -1059,19 +1065,19 @@ class SatinColumn(EmbroideryElement):
             return (points[index_of_closest_stitch - 1],
                     points[index_of_closest_stitch])
 
-    def _cut_rails(self, cut_points):
+    def _cut_rails(self, cut_points) -> tuple[list[shgeo.LineString], list[shgeo.LineString]]:
         """Cut the rails of this satin at the specified points.
 
         cut_points is a list of two elements, corresponding to the cut points
         for each rail in order.
 
-        Returns: A list of two elements, corresponding two the two new sets of
+        Returns: A list of two elements, corresponding to the two new sets of
           rails.  Each element is a list of two rails of type LineString.
         """
 
         rails = [shgeo.LineString(rail) for rail in self.rails]
 
-        path_lists = [[], []]
+        path_lists: tuple[list[shgeo.LineString], list[shgeo.LineString]] = ([], [])
 
         rails_to_reverse = self._get_rails_to_reverse()
 
@@ -1092,7 +1098,7 @@ class SatinColumn(EmbroideryElement):
             path_lists[0].append(after)
 
         if rails_to_reverse[0]:
-            path_lists = [path_lists[1], path_lists[0]]
+            path_lists = (path_lists[1], path_lists[0])
 
         return path_lists
 
@@ -1212,7 +1218,7 @@ class SatinColumn(EmbroideryElement):
 
         return stitches
 
-    def _stitch_distance(self, pos0, pos1, previous_pos0, previous_pos1):
+    def _stitch_distance(self, pos0: Point, pos1: Point, previous_pos0: Point, previous_pos1: Point) -> float:
         """Return the distance from one stitch to the next."""
 
         previous_stitch = previous_pos1 - previous_pos0
@@ -1235,7 +1241,7 @@ class SatinColumn(EmbroideryElement):
             return max(abs(d0 * normal), abs(d1 * normal))
 
     @debug.time
-    def plot_points_on_rails(self, spacing, offset_px=(0, 0), offset_proportional=(0, 0), use_random=False,
+    def plot_points_on_rails(self, spacing: float | int, offset_px: tuple[float, float]=(0, 0), offset_proportional: tuple[float, float]=(0, 0), use_random: bool=False,
                              ) -> List[Tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
@@ -1346,7 +1352,7 @@ class SatinColumn(EmbroideryElement):
 
         return pairs
 
-    def _connect_stitch_group_with_point(self, first_stitch_group, start_point, end_point=None):
+    def _connect_stitch_group_with_point(self, first_stitch_group: StitchGroup, start_point: Point | Vector2d, end_point: Optional[Point | Vector2d]= None) -> StitchGroup:
         start_stitch_group = StitchGroup(
             color=self.color,
             stitches=[Stitch(*start_point)]
@@ -1366,7 +1372,7 @@ class SatinColumn(EmbroideryElement):
             end = connector.project(nearest_points(split_line, connector)[1])
 
         start_path = substring(connector, start, end)
-        stitches = [Stitch(*coord) for coord in start_path.coords]
+        stitches = [Stitch.from_coordinates(coord) for coord in start_path.coords]
         stitch_group = StitchGroup(
             color=self.color,
             stitches=stitches
@@ -1978,13 +1984,11 @@ class SatinColumn(EmbroideryElement):
         else:
             return True
 
-    def _get_command_point(self, command):
-        point = self.get_command(command)
-        if point is not None:
-            point = point.target_point
-        return point
+    def _get_command_point(self, command_id: str) -> Optional[Vector2d]:
+        command = self.get_command(command_id)
+        return command.target_point if command is not None else None
 
-    def _sort_stitch_groups(self, stitch_groups, end_point):
+    def _sort_stitch_groups(self, stitch_groups: list[StitchGroup], end_point):
         if end_point:
             ordered_stitch_groups = []
             ordered_stitch_groups.extend(stitch_groups[::2])
@@ -1993,7 +1997,7 @@ class SatinColumn(EmbroideryElement):
             return ordered_stitch_groups
         return stitch_groups
 
-    def to_stitch_groups(self, last_stitch_group=None, next_element=None):
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup]=None, next_element: Optional[EmbroideryElement]=None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
@@ -2042,7 +2046,7 @@ class SatinColumn(EmbroideryElement):
 
 
 class SatinProcessor:
-    def __init__(self, satin, offset_px, offset_proportional, use_random):
+    def __init__(self, satin: 'SatinColumn', offset_px: tuple[float, float], offset_proportional: tuple[float, float], use_random: bool):
         self.satin = satin
         self.use_random = use_random
         self.offset_px = offset_px
@@ -2055,7 +2059,7 @@ class SatinProcessor:
             self.offset_range = (satin.random_width_increase + satin.random_width_decrease)
             self.cycle = 0
 
-    def process_points(self, pos0, pos1):
+    def process_points(self, pos0: Point, pos1: Point) -> tuple[Point, Point]:
         if self.use_random:
             roll = prng.uniform_floats(self.seed, self.cycle)
             self.cycle += 1
