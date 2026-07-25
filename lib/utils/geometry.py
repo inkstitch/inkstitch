@@ -299,6 +299,7 @@ class Point:
     def __mul__(self, other: 'Point') -> float: ...
     @overload
     def __mul__(self, other: int | float) -> 'Point': ...
+
     def __mul__(self, other: 'Point | int | float'):
         if isinstance(other, Point):
             # dot product

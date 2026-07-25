@@ -4,10 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from copy import copy
-from typing import List, Tuple, Union
+from typing import List, Sequence
 
 from inkex import Path, errormsg
-from mypyc.ir.ops import Sequence
 from shapely import make_valid
 from shapely.geometry import LinearRing, MultiPolygon, Polygon
 from shapely.ops import polygonize, unary_union

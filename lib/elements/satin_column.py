@@ -6,7 +6,7 @@
 import itertools
 from copy import deepcopy
 from itertools import chain
-from typing import List, Tuple, Optional, cast, Sequence, overload
+from typing import List, Tuple, Optional, Sequence, overload
 
 import numpy as np
 from inkex import Path, Vector2d
@@ -994,10 +994,11 @@ class SatinColumn(EmbroideryElement):
         return self._coordinates_to_satin(self.filtered_subpaths)
 
     @overload
-    def split(self, split_point: float | Point | Vector2d, cut_points: Optional[Sequence[Point | shgeo.Point]]=None): ...
+    def split(self, split_point: float | Point | Vector2d, cut_points: Optional[Sequence[Point | shgeo.Point]] = None): ...
     @overload
     def split(self, split_point: None, cut_points: Sequence[Point | shgeo.Point]): ...
-    def split(self, split_point: Optional[float | Point | Vector2d], cut_points: Optional[Sequence[Point | shgeo.Point]]=None):
+
+    def split(self, split_point: Optional[float | Point | Vector2d], cut_points: Optional[Sequence[Point | shgeo.Point]] = None):
         """Split a satin into two satins at the specified point
 
         split_point is a point on or near one of the rails, not at one of the
@@ -1241,7 +1242,8 @@ class SatinColumn(EmbroideryElement):
             return max(abs(d0 * normal), abs(d1 * normal))
 
     @debug.time
-    def plot_points_on_rails(self, spacing: float | int, offset_px: tuple[float, float]=(0, 0), offset_proportional: tuple[float, float]=(0, 0), use_random: bool=False,
+    def plot_points_on_rails(self, spacing: float | int, offset_px: tuple[float, float] = (0, 0),
+                             offset_proportional: tuple[float, float] = (0, 0), use_random: bool = False,
                              ) -> List[Tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
@@ -1352,7 +1354,8 @@ class SatinColumn(EmbroideryElement):
 
         return pairs
 
-    def _connect_stitch_group_with_point(self, first_stitch_group: StitchGroup, start_point: Point | Vector2d, end_point: Optional[Point | Vector2d]= None) -> StitchGroup:
+    def _connect_stitch_group_with_point(self, first_stitch_group: StitchGroup, start_point: Point | Vector2d,
+                                         end_point: Optional[Point | Vector2d] = None) -> StitchGroup:
         start_stitch_group = StitchGroup(
             color=self.color,
             stitches=[Stitch(*start_point)]
@@ -1997,7 +2000,7 @@ class SatinColumn(EmbroideryElement):
             return ordered_stitch_groups
         return stitch_groups
 
-    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup]=None, next_element: Optional[EmbroideryElement]=None):
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup] = None, next_element: Optional[EmbroideryElement] = None):
         # Stitch a variable-width satin column, zig-zagging between two paths.
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",

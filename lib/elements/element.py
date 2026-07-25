@@ -15,7 +15,6 @@ import numpy as np
 import shapely
 from inkex import BaseElement, Color, bezier, Path
 from shapely import Point as ShapelyPoint, Geometry
-from shapely.geometry.base import BaseGeometry
 from shapely.ops import nearest_points
 
 from ..commands import Command, find_commands
@@ -106,13 +105,14 @@ class EmbroideryElement(object):
     def get_param(self, param_id: str, default: TParam) -> str | TParam: ...
     @overload
     def get_param(self, param_id: str, default: None) -> Optional[str]: ...
+
     @cache
     def get_param(self, param_id: str, default: Optional[TParam]) -> str | Optional[TParam]:
         value = self.node.get(INKSTITCH_ATTRIBS[param_id], "").strip()
         return value or default
 
     @cache
-    def get_boolean_param(self, param_id: str, default: Optional[bool]=None) -> bool:
+    def get_boolean_param(self, param_id: str, default: Optional[bool] = None) -> bool:
         value = self.get_param(param_id, default)
 
         if isinstance(value, bool):
@@ -125,8 +125,9 @@ class EmbroideryElement(object):
     def get_float_param(self, param_id: str, default: float) -> float: ...
     @overload
     def get_float_param(self, param_id: str, default: None = None) -> Optional[float]: ...
+
     @cache
-    def get_float_param(self, param_id: str, default: Optional[float]=None) -> Optional[float]:
+    def get_float_param(self, param_id: str, default: Optional[float] = None) -> Optional[float]:
         value = None
         try:
             value_raw = self.get_param(param_id, default)
@@ -147,8 +148,9 @@ class EmbroideryElement(object):
     def get_int_param(self, param_id: str, default: int) -> int: ...
     @overload
     def get_int_param(self, param_id: str, default: None = None) -> Optional[int]: ...
+
     @cache
-    def get_int_param(self, param_id: str, default: Optional[int]=None) -> Optional[int]:
+    def get_int_param(self, param_id: str, default: Optional[int] = None) -> Optional[int]:
         try:
             value_raw = self.get_param(param_id, default)
             if value_raw is None:
@@ -166,7 +168,7 @@ class EmbroideryElement(object):
     # if a single number is given in the param, it will apply to both returned values.
     # Not cached the cache will crash if the default is a numpy array.
     # The property calling this will need to cache itself and can safely do so since it has no parameters
-    def get_split_float_param(self, param_id, default: tuple[float, float] | np.typing.NDArray[np.float64]=(0, 0)) -> np.typing.NDArray[np.float64]:
+    def get_split_float_param(self, param_id, default: tuple[float, float] | np.typing.NDArray[np.float64] = (0, 0)) -> np.typing.NDArray[np.float64]:
         default = np.array(default)
 
         raw = self.get_param(param_id, "")
@@ -190,7 +192,7 @@ class EmbroideryElement(object):
 
     # returns an array of multiple space separated int values
     @cache
-    def get_multiple_int_param(self, param_id: str, default: str="0"):
+    def get_multiple_int_param(self, param_id: str, default: str = "0"):
         try:
             value_parts_raw = self.get_param(param_id, default).split(" ")
             value_parts = [int(value) for value in value_parts_raw if value]
@@ -204,7 +206,7 @@ class EmbroideryElement(object):
 
     # returns an array of multiple space separated float values
     @cache
-    def get_multiple_float_param(self, param_id: str, default: str="0"):
+    def get_multiple_float_param(self, param_id: str, default: str = "0"):
         try:
             value_parts_raw = self.get_param(param_id, default).split(" ")
             value_parts = [float(value) for value in value_parts_raw if value]
@@ -216,7 +218,7 @@ class EmbroideryElement(object):
 
         return value_parts
 
-    def get_json_param(self, param_id: str, default: Optional[dict[TDictKey, TDictValue]]=None) -> dict[TDictKey, TDictValue]:
+    def get_json_param(self, param_id: str, default: Optional[dict[TDictKey, TDictValue]] = None) -> dict[TDictKey, TDictValue]:
         json_value = self.get_param(param_id, None)
         try:
             if json_value is not None:
@@ -835,7 +837,7 @@ class EmbroideryElement(object):
     def clip_shape(self):
         return get_clip_path(self.node)
 
-    def fatal(self, message: Optional[str], point_to_troubleshoot: bool=False):
+    def fatal(self, message: Optional[str], point_to_troubleshoot: bool = False):
         label = self.node.get(INKSCAPE_LABEL)
         node_id = self.node.get("id")
         if label:

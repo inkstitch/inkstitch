@@ -1,5 +1,4 @@
 import numpy as np
-from shapely.coords import CoordinateSequence
 
 from ..stitches.running_stitch import stitch_curve_evenly
 from .geometry import Point, coordinate_list_to_point_list
@@ -22,7 +21,7 @@ def _remove_duplicate_coordinates(coords_array):
     return coords_array[keepers]
 
 
-def smooth_path(path, smoothness: float=1.0, iterations: int=5):
+def smooth_path(path, smoothness: float = 1.0, iterations: int = 5):
     """Smooth a path of coordinates.
 
     Arguments:
