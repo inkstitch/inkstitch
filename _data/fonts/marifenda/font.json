@@ -8,7 +8,7 @@
         "handwriting",
         "satin"
     ],
-    "original_font": "Merienda-Bold.ttf",
+    "original_font": "Merienda-Bold",
     "original_font_url": "https://github.com/etunni/merienda",
     "leading": 226.59,
     "auto_satin": false,
@@ -18,7 +18,7 @@
     "combine_at_sort_indices": [],
     "letter_case": "",
     "default_glyph": "�",
-    "size": 90.0,
+    "size": 52.0,
     "min_scale": 0.5,
     "max_scale": 1.0,
     "horiz_adv_x_default": 140.49,
