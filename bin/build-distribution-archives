@@ -45,7 +45,7 @@ if [ "$BUILD" = "osx" ]; then
                         --timestamp \
                         dist/inkstitch.app -v
         echo "Running pkgbuild"
-        INSTALLER_IDENT="Developer ID Application: Rhett Allen (LBTQFB2Z4D)"
+        INSTALLER_IDENT="Developer ID Installer: Rhett Allen (LBTQFB2Z4D)"
         /usr/bin/pkgbuild --root dist/inkstitch.app \
                         -s "${INSTALLER_IDENT}" \
                         --ownership recommended \
