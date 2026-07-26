@@ -9,7 +9,6 @@ from typing import Optional
 
 import inkex
 import networkx as nx
-from click.types import OptionHelpExtra
 from inkex.units import convert_unit
 from shapely import geometry as shgeo
 from shapely import set_precision
@@ -48,7 +47,8 @@ class SatinSegment(object):
     reverse: bool
     original_satin: SatinColumn
 
-    def __init__(self, satin: SatinColumn, start: SatinSegmentPortionInput=0.0, end: SatinSegmentPortionInput=1.0, reverse: bool=False, original_satin: Optional[SatinColumn]=None):
+    def __init__(self, satin: SatinColumn, start: SatinSegmentPortionInput = 0.0, end: SatinSegmentPortionInput = 1.0,
+                 reverse: bool = False, original_satin: Optional[SatinColumn] = None):
         """Initialize a SatinEdge.
 
         Arguments:
@@ -325,7 +325,8 @@ class RunningStitch(object):
         return RunningStitch(new_path, self.original_element)
 
 
-def auto_satin(elements: list[SatinColumn], preserve_order: bool = False, starting_point: Optional[InkstitchPoint] = None, ending_point: Optional[InkstitchPoint] = None, trim: bool = False, keep_originals: bool = False, parent=None, index=None):
+def auto_satin(elements: list[SatinColumn], preserve_order: bool = False, starting_point: Optional[InkstitchPoint] = None,
+               ending_point: Optional[InkstitchPoint] = None, trim: bool = False, keep_originals: bool = False, parent=None, index=None):
     """Find an optimal order to stitch a list of SatinColumns.
 
     Add running stitch and jump stitches as necessary to construct a stitch

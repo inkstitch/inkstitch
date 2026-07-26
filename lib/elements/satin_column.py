@@ -1406,7 +1406,7 @@ class SatinColumn(EmbroideryElement):
 
         return stitch_groups
 
-    def _to_stitch_group(self, linestring: LineString, tags, reverse: bool=False) -> StitchGroup:
+    def _to_stitch_group(self, linestring: LineString, tags, reverse: bool = False) -> StitchGroup:
         if reverse:
             linestring = linestring.reverse()
         return StitchGroup(
@@ -1956,7 +1956,8 @@ class SatinColumn(EmbroideryElement):
             nearest_point = nearest_points(last_point, self.offset_center_line)[1]
             # if starting from the centerline will produce a jump stitch and the actual distance to the last element doesn't exceed the minimum jump
             # stitch length, allow this satin to start from the outline
-            if last_point.distance(nearest_point) > self.min_jump_stitch_len and self.compensated_shape.distance(last_point) < self.min_jump_stitch_len:
+            if (last_point.distance(nearest_point) > self.min_jump_stitch_len
+                    and self.compensated_shape.distance(last_point) < self.min_jump_stitch_len):
                 nearest_point = nearest_points(self.compensated_shape, last_point)[0]
             return Point(*list(nearest_point.coords[0]))
 
@@ -2006,7 +2007,8 @@ class SatinColumn(EmbroideryElement):
             return ordered_stitch_groups
         return stitch_groups
 
-    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup] = None, next_element: Optional[EmbroideryElement] = None) -> list[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup] = None,
+                         next_element: Optional[EmbroideryElement] = None) -> list[StitchGroup]:
         # Stitch a variable-width satin column, zig-zagging between two paths.
         # The algorithm will draw zigzags between each consecutive pair of
         # beziers.  The boundary points between beziers serve as "checkpoints",
