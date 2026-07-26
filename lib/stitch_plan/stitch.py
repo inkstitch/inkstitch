@@ -80,7 +80,7 @@ class Stitch(Point):
 
     def __init__(
         self,
-        x: Union[Stitch, float, Point],
+        x: Union[Stitch, float, Point, shgeo.Point],
         y: Optional[float] = None,
         color: Optional[Any] = None,
         jump: bool = False,

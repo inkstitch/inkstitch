@@ -40,14 +40,14 @@ def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_
     return [line.interpolate(x, normalized=True) for x in splits]
 
 
-def split_segment_even_dist(a, b, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
+def split_segment_even_dist(a: Point, b: Point, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
     """Split a segment into even parts with maximum length."""
     distance = shgeo.Point(a).distance(shgeo.Point(b))
     segments = math.ceil(distance / max_length)
     return split_segment_even_n(a, b, segments, jitter_sigma, random_seed)
 
 
-def split_segment_random_phase(a, b, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
+def split_segment_random_phase(a: Point, b: Point, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
     """Split a segment with randomized phase and length variation."""
     line = shgeo.LineString([a, b])
     progress = length * prng.uniform_floats(random_seed, "phase")[0]
@@ -64,8 +64,8 @@ def split_segment_random_phase(a, b, length: float, length_sigma: float, random_
 
 
 def split_segment_stagger_phase(
-    a,
-    b,
+    a: Point,
+    b: Point,
     segment_length: float,
     num_staggers: int,
     this_segment_num: int,

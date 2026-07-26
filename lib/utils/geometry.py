@@ -6,7 +6,7 @@
 import math
 import typing
 from itertools import groupby
-from typing import Iterable, Iterator, overload
+from typing import Iterable, Iterator, overload, NoReturn, TypeAlias
 
 import numpy
 from inkex import Vector2d
@@ -260,14 +260,15 @@ def remove_duplicate_points(path):
     return [point for point, repeats in groupby(path)]
 
 
-COORDINATE_TYPE = typing.Union[float, numpy.float64]
+CoordinateType = typing.Union[float, numpy.float64]
+AnyPointType: TypeAlias = Vector2d | tuple[CoordinateType, CoordinateType] | 'Point'
 
 
 class Point:
     x: float
     y: float
 
-    def __init__(self, x: COORDINATE_TYPE, y: COORDINATE_TYPE):
+    def __init__(self, x: CoordinateType, y: CoordinateType):
         self.x = float(x)
         self.y = float(y)
 
@@ -276,12 +277,38 @@ class Point:
         return cls(point.x, point.y)
 
     @classmethod
-    def from_tuple(cls, point: tuple[COORDINATE_TYPE, COORDINATE_TYPE]):
+    def from_tuple(cls, point: tuple[CoordinateType, CoordinateType]):
         return cls(point[0], point[1])
 
     @classmethod
     def from_vector2d(cls, vec: Vector2d):
         return cls(vec.x, vec.y)
+
+    @overload
+    @classmethod
+    def from_other(cls, other: None) -> None: ...
+    @overload
+    @classmethod
+    def from_other(cls, other: AnyPointType) -> 'Point': ...
+    @overload
+    @classmethod
+    def from_other(cls, other: object) -> NoReturn: ...
+
+    @classmethod
+    def from_other(cls, other: object):
+        """
+        When working with different point types, method return types get messy and end up as a union between the
+        different types. Instead, we can just return Point.from_other to normalize them into our Point type.
+        """
+        if other is None:
+            return None
+        if isinstance(other, Point):
+            return Point(other.x, other.y)
+        if isinstance(other, tuple) and len(other) == 2 and isinstance(other[0], float) and isinstance(other[1], float):
+            return Point.from_tuple(typing.cast(tuple[CoordinateType, CoordinateType], other))
+        if isinstance(other, Vector2d):
+            return Point.from_vector2d(other)
+        raise ValueError(f"Cannot convert {type(other)} to Point")
 
     def __json__(self):
         return vars(self)
@@ -388,5 +415,5 @@ def line_string_to_point_list(line_string) -> list[Point]:
     return [Point(*point) for point in line_string.coords]
 
 
-def coordinate_list_to_point_list(coordinate_list: Iterable[tuple[COORDINATE_TYPE, COORDINATE_TYPE]]) -> list[Point]:
+def coordinate_list_to_point_list(coordinate_list: Iterable[tuple[CoordinateType, CoordinateType]]) -> list[Point]:
     return [Point.from_tuple(coords) for coords in coordinate_list]
