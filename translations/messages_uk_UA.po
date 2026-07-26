@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-24 02:49+0000\n"
-"PO-Revision-Date: 2026-07-24 02:49\n"
+"POT-Creation-Date: 2026-07-26 17:53+0000\n"
+"PO-Revision-Date: 2026-07-26 17:54\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 02:49+0000\n"
+"POT-Creation-Date: 2026-07-26 17:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -284,7 +284,7 @@ msgstr ""
 #. description of font in fonts/heavenly
 #. description of font in fonts/noble
 #: inkstitch-fonts-metadata.py:102 inkstitch-fonts-metadata.py:146
-#: inkstitch-fonts-metadata.py:224
+#: inkstitch-fonts-metadata.py:226
 msgid "small cross stitch font"
 msgstr ""
 
@@ -532,188 +532,193 @@ msgstr ""
 msgid "Manga Impact is a manga like satin font."
 msgstr ""
 
-#. description of font in fonts/medium_font
+#. description of font in fonts/marifenda
 #: inkstitch-fonts-metadata.py:204
+msgid "Medium size font "
+msgstr ""
+
+#. description of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:206
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr ""
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:208
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr ""
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:210
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr ""
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:212
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr ""
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:214
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr ""
 
 #. description of font in fonts/montecarlo
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:216
 msgid "Montecarlo is a script satin font with lots of alternates. It also contains  swoops , swashes and  more, see the documentation  for details."
 msgstr ""
 
 #. description of font in fonts/nautical
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:218
 msgid "Cross Stitch Nautical Flag Alphabet"
 msgstr ""
 
 #. description of font in fonts/neon
-#: inkstitch-fonts-metadata.py:218
+#: inkstitch-fonts-metadata.py:220
 msgid "Satin font. Each letter or accent is a single satin."
 msgstr ""
 
 #. description of font in fonts/neon_blinking
-#: inkstitch-fonts-metadata.py:220
+#: inkstitch-fonts-metadata.py:222
 msgid "Bean stitch font."
 msgstr ""
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:222
+#: inkstitch-fonts-metadata.py:224
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:226
+#: inkstitch-fonts-metadata.py:228
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:228
+#: inkstitch-fonts-metadata.py:230
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr ""
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:230
+#: inkstitch-fonts-metadata.py:232
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr ""
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:232
+#: inkstitch-fonts-metadata.py:234
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr ""
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:234
+#: inkstitch-fonts-metadata.py:236
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/paquerette
-#: inkstitch-fonts-metadata.py:236
+#: inkstitch-fonts-metadata.py:238
 msgid "Paquerette font is created with manual sitch. Do not change the size or very little."
 msgstr ""
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:238
+#: inkstitch-fonts-metadata.py:240
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr ""
 
 #. description of font in fonts/pisankris
-#: inkstitch-fonts-metadata.py:240
+#: inkstitch-fonts-metadata.py:242
 msgid "Pisankris is a satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:242
+#: inkstitch-fonts-metadata.py:244
 msgid "Pixel 10 is a satin pixel font."
 msgstr ""
 
 #. description of font in fonts/precious
-#: inkstitch-fonts-metadata.py:244
+#: inkstitch-fonts-metadata.py:246
 msgid "Precious is a decorative satin column round cursive font."
 msgstr ""
 
 #. description of font in fonts/priscilla
-#: inkstitch-fonts-metadata.py:246
+#: inkstitch-fonts-metadata.py:248
 msgid "Large bicolor cross stitch font"
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:248
+#: inkstitch-fonts-metadata.py:250
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr ""
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:250
+#: inkstitch-fonts-metadata.py:252
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr ""
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:252
+#: inkstitch-fonts-metadata.py:254
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:254
+#: inkstitch-fonts-metadata.py:256
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr ""
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:256
+#: inkstitch-fonts-metadata.py:258
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr ""
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:258
+#: inkstitch-fonts-metadata.py:260
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr ""
 
 #. description of font in fonts/stebor_AGS
-#: inkstitch-fonts-metadata.py:260
+#: inkstitch-fonts-metadata.py:262
 msgid "Stebor AGS is a script satin font. Every satin has zigzag underlay."
 msgstr ""
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:262
+#: inkstitch-fonts-metadata.py:264
 msgid "3 colors satin column font"
 msgstr ""
 
 #. description of font in fonts/tieralphabet
-#: inkstitch-fonts-metadata.py:264
+#: inkstitch-fonts-metadata.py:266
 msgid "cross stitch font, each letter includes an animal with german name starting with the letter"
 msgstr ""
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:266
+#: inkstitch-fonts-metadata.py:268
 msgid "TT  Directors is a satin font suited for directing."
 msgstr ""
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:268
+#: inkstitch-fonts-metadata.py:270
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr ""
 
 #. description of font in fonts/venezia
-#: inkstitch-fonts-metadata.py:270
+#: inkstitch-fonts-metadata.py:272
 msgid "A serif satin font"
 msgstr ""
 
 #. description of font in fonts/venezia_small
-#: inkstitch-fonts-metadata.py:272
+#: inkstitch-fonts-metadata.py:274
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr ""
 
 #. description of font in fonts/very_crossy
-#: inkstitch-fonts-metadata.py:274
+#: inkstitch-fonts-metadata.py:276
 msgid "Medium size cross stitch font"
 msgstr ""
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:276
+#: inkstitch-fonts-metadata.py:278
 msgid "Violin Serif is a condensed serif satin font."
 msgstr ""
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:278
+#: inkstitch-fonts-metadata.py:280
 msgid "Western light is a light fill western style font."
 msgstr ""
 

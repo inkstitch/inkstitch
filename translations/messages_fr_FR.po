@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-24 02:49+0000\n"
-"PO-Revision-Date: 2026-07-24 02:49\n"
+"POT-Creation-Date: 2026-07-26 17:53+0000\n"
+"PO-Revision-Date: 2026-07-26 17:54\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 02:49+0000\n"
+"POT-Creation-Date: 2026-07-26 17:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -286,7 +286,7 @@ msgstr "Le satin mesure 2,5 mm de large sur les majuscules de 18 mm"
 #. description of font in fonts/heavenly
 #. description of font in fonts/noble
 #: inkstitch-fonts-metadata.py:102 inkstitch-fonts-metadata.py:146
-#: inkstitch-fonts-metadata.py:224
+#: inkstitch-fonts-metadata.py:226
 msgid "small cross stitch font"
 msgstr "petite fonte au point de croix"
 
@@ -534,189 +534,194 @@ msgstr "MAM Script est une police manuscrite en colonne satin. Chaque satin a un
 msgid "Manga Impact is a manga like satin font."
 msgstr "Kum Tsoan est une police manga en colonne satin."
 
-#. description of font in fonts/medium_font
+#. description of font in fonts/marifenda
 #: inkstitch-fonts-metadata.py:204
+msgid "Medium size font "
+msgstr ""
+
+#. description of font in fonts/medium_font
+#: inkstitch-fonts-metadata.py:206
 msgid "Ink/Stitch Medium Font is a basic satin font suited for medium-sized characters. Every satin has contour underlay."
 msgstr "Ink/Stitch Medium est une fonte basique en colonne satin destinée à des caractères de taille intermédiaire. Chaque satin a une sous-couche de contour."
 
 #. description of font in fonts/milli_marif_bold
-#: inkstitch-fonts-metadata.py:206
+#: inkstitch-fonts-metadata.py:208
 msgid "Millimarif-bold20 is a  bold satin font."
 msgstr "Millimarif bold 20 est une police bold en colonne satin."
 
 #. description of font in fonts/mimosa_large
-#: inkstitch-fonts-metadata.py:208
+#: inkstitch-fonts-metadata.py:210
 msgid "Mimosa Large is a satin font that looks like a dotty font.   "
 msgstr "Mimosa Large est une fonte de colonnes satin qui semble être à pois."
 
 #. description of font in fonts/mimosa_medium
-#: inkstitch-fonts-metadata.py:210
+#: inkstitch-fonts-metadata.py:212
 msgid "Mimosa Medium is a satin font that looks dotty."
 msgstr "Mimosa Medium est une fonte de colonnes satin qui semble être à pois."
 
 #. description of font in fonts/monicha
-#: inkstitch-fonts-metadata.py:212
+#: inkstitch-fonts-metadata.py:214
 msgid "Monicha is a script satin font. In addition to the glyphs covering most Western European languages it contains alternate ornemental letters with swashes. These ornemental letters should be used with caution to avoid overlays. In particular do not use two ornemental letters in a row. Please consult the documentation for information on how to access the ornemental letters."
 msgstr "Monicha est une police manuscrite en colonne satin. En plus des glyphes couvrant la plupart des langages d'Europe de l'Ouest, elle contient des lettres ornementales à écharpe. Ces lettres ornementales doivent être utilisées avec précaution pour éviter les surépaisseurs. Merci de consulter la documentation pour les informations sur l'accès à ces lettres ornementales."
 
 #. description of font in fonts/montecarlo
-#: inkstitch-fonts-metadata.py:214
+#: inkstitch-fonts-metadata.py:216
 msgid "Montecarlo is a script satin font with lots of alternates. It also contains  swoops , swashes and  more, see the documentation  for details."
 msgstr "Montecarlo  est une police d'écriture manuelle en colonne sati avec beaucoup de formes alternatives pour les lettres, ainsi que diverses arabesques.\n"
 "Voir la documenttaation  pour plus de détails."
 
 #. description of font in fonts/nautical
-#: inkstitch-fonts-metadata.py:216
+#: inkstitch-fonts-metadata.py:218
 msgid "Cross Stitch Nautical Flag Alphabet"
 msgstr "Alphabet nautique au point de croix"
 
 #. description of font in fonts/neon
-#: inkstitch-fonts-metadata.py:218
+#: inkstitch-fonts-metadata.py:220
 msgid "Satin font. Each letter or accent is a single satin."
 msgstr "Fonte en colonne satin, chaque lettre ou accent est constitué d'un unique satin."
 
 #. description of font in fonts/neon_blinking
-#: inkstitch-fonts-metadata.py:220
+#: inkstitch-fonts-metadata.py:222
 msgid "Bean stitch font."
 msgstr "Fonte en points droits avec répétition alternée 1, 3."
 
 #. description of font in fonts/nick_ainley
-#: inkstitch-fonts-metadata.py:222
+#: inkstitch-fonts-metadata.py:224
 msgid "NickAinley is a tiny bean alphabet based on a 24pt Seniors Studio jawn."
 msgstr "Un petit alphabet en point triple, basé sur une fonte de Senior Studio en 24 pt."
 
 #. description of font in fonts/ondulamarif_Medium
-#: inkstitch-fonts-metadata.py:226
+#: inkstitch-fonts-metadata.py:228
 msgid "Ondulamarif M is an altered version  of Ondulamarif XL. The altered embroidery parameters of this font allow for a smaller font."
 msgstr "Ondulamarif M  est une version modifiée d'Ondulamarif XL qui permet des caractères plus petits."
 
 #. description of font in fonts/ondulamarif_S
-#: inkstitch-fonts-metadata.py:228
+#: inkstitch-fonts-metadata.py:230
 msgid "Ondulamarif S is an altered version  of Ondulamarif XL, to allow a greater scaling down."
 msgstr "Ondulamarif S est une version modifiée d'Ondulamarif XL qui permet des caractères encore  plus petits que Ondulamarif M."
 
 #. description of font in fonts/ondulamarif_XL
-#: inkstitch-fonts-metadata.py:230
+#: inkstitch-fonts-metadata.py:232
 msgid "Ondulamarif XL is a ripple stitch font, use it as large as you can, but do not reduce it."
 msgstr "Ondulamarif XL est une police en broderie ondulée. Utilisez-la aussi grande que vous le souhaitez, mais ne la réduisez pas."
 
 #. description of font in fonts/pacificlo
-#: inkstitch-fonts-metadata.py:232
+#: inkstitch-fonts-metadata.py:234
 msgid "Pacificlo is a small satin column manuscript font. It contains 120 glyphs, covering most Western European Languages needs. "
 msgstr "Pacificlo est une petite police en colonne satin. Chaque satin a une sous-couche zig-zag. Elle contient 120 glyphes couvrant la plupart des langages d'Europe de l'Ouest. "
 
 #. description of font in fonts/pacificlo_tiny
-#: inkstitch-fonts-metadata.py:234
+#: inkstitch-fonts-metadata.py:236
 msgid "Pacificlo tiny is an altered version  of Pacificlo, to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Pacificlo tiny  est une  version  modifiée de Pacificlo  pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/paquerette
-#: inkstitch-fonts-metadata.py:236
+#: inkstitch-fonts-metadata.py:238
 msgid "Paquerette font is created with manual sitch. Do not change the size or very little."
 msgstr "Paquerette est une police créée en point manuel. Ne pas changer la taille ou alors très peu."
 
 #. description of font in fonts/perspective_tricolore_KOR
-#: inkstitch-fonts-metadata.py:238
+#: inkstitch-fonts-metadata.py:240
 msgid "Perspective tricolore KOR is a shaded tricolor font with capital letters only, numbers and ponctuation."
 msgstr "Perspective tricolore KOR est une police tricolore ombrée qui ne contient que des majuscules, les chiffres et de la ponctuation."
 
 #. description of font in fonts/pisankris
-#: inkstitch-fonts-metadata.py:240
+#: inkstitch-fonts-metadata.py:242
 msgid "Pisankris is a satin font. Every satin has zigzag underlay."
 msgstr "Pisankkris est une police en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/pixel10
-#: inkstitch-fonts-metadata.py:242
+#: inkstitch-fonts-metadata.py:244
 msgid "Pixel 10 is a satin pixel font."
 msgstr "Pixel 10 est une police pixelisée en colonne satin."
 
 #. description of font in fonts/precious
-#: inkstitch-fonts-metadata.py:244
+#: inkstitch-fonts-metadata.py:246
 msgid "Precious is a decorative satin column round cursive font."
 msgstr "Precious est une police décorative en colonne satin."
 
 #. description of font in fonts/priscilla
-#: inkstitch-fonts-metadata.py:246
+#: inkstitch-fonts-metadata.py:248
 msgid "Large bicolor cross stitch font"
 msgstr "Grande police de point de croix bicolore."
 
 #. description of font in fonts/roaring_twenties_KOR
-#: inkstitch-fonts-metadata.py:248
+#: inkstitch-fonts-metadata.py:250
 msgid "Roaring Twenties KOR is a mix of satin and bean stitches."
 msgstr "Roaring Twenties KOR est un mélange de colonnes satin et de points triples."
 
 #. description of font in fonts/roaring_twenties_KOR_small
-#: inkstitch-fonts-metadata.py:250
+#: inkstitch-fonts-metadata.py:252
 msgid "Roaring Twenties KOR Small is an altered version  of Roaring Twenties KOR, to allow a greater scaling down. The use of both thin thread (60) and thin needle (60) is mandatory."
 msgstr "Roaring Twenties KOR Small est une  version  modifiée de Roaring Twenties KOR  pour permettre une plus forte  réduction. L'usage d'un fil fin (60)  et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/roman_ags
-#: inkstitch-fonts-metadata.py:252
+#: inkstitch-fonts-metadata.py:254
 msgid "Roman AGS is based on Latin Modern Roman 10 Bold italic. Every satin has zigzag underlay."
 msgstr "Raman AGS est basée sur Latin Modern Roman 10 Gras italique. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/roman_ags_bicolor
-#: inkstitch-fonts-metadata.py:254
+#: inkstitch-fonts-metadata.py:256
 msgid "Roman bicolor AGS is an altered version of Roman AGS. Capital letters are bicolor."
 msgstr "Roman bicolor AGS est une version modifiée de Roman AGS où chaque majuscule est bicolore."
 
 #. description of font in fonts/sacramarif
-#: inkstitch-fonts-metadata.py:256
+#: inkstitch-fonts-metadata.py:258
 msgid "Sacramarif is a very small running stitch font based on Sacramento."
 msgstr "Sacramarif est une très petite police en point droit basée sur Sacramento."
 
 #. description of font in fonts/small_font
-#: inkstitch-fonts-metadata.py:258
+#: inkstitch-fonts-metadata.py:260
 msgid "Ink/Stitch Small Font is suited for small characters."
 msgstr "La police Ink/Stitch Small est prévue pour de petits caractères."
 
 #. description of font in fonts/stebor_AGS
-#: inkstitch-fonts-metadata.py:260
+#: inkstitch-fonts-metadata.py:262
 msgid "Stebor AGS is a script satin font. Every satin has zigzag underlay."
 msgstr "Stebor AGS est une police manuscrite en colonne satin. Chaque satin a une sous-couche zig-zag."
 
 #. description of font in fonts/sunset
-#: inkstitch-fonts-metadata.py:262
+#: inkstitch-fonts-metadata.py:264
 msgid "3 colors satin column font"
 msgstr "Sunset est une police tricolore en colonnes satin"
 
 #. description of font in fonts/tieralphabet
-#: inkstitch-fonts-metadata.py:264
+#: inkstitch-fonts-metadata.py:266
 msgid "cross stitch font, each letter includes an animal with german name starting with the letter"
 msgstr "Police en point de croix, chaque lettre inclus un animal dont le nom Allemand commence par elle"
 
 #. description of font in fonts/tt_directors
-#: inkstitch-fonts-metadata.py:266
+#: inkstitch-fonts-metadata.py:268
 msgid "TT  Directors is a satin font suited for directing."
 msgstr "TT Directors est une police en colonne satin."
 
 #. description of font in fonts/tt_masters
-#: inkstitch-fonts-metadata.py:268
+#: inkstitch-fonts-metadata.py:270
 msgid "TT Masters is a satin font suited for heavy typing :)"
 msgstr "TT Masters est une police en colonne satin adaptée à la frappe lourde :)"
 
 #. description of font in fonts/venezia
-#: inkstitch-fonts-metadata.py:270
+#: inkstitch-fonts-metadata.py:272
 msgid "A serif satin font"
 msgstr "Une fonte satin avec empâtements"
 
 #. description of font in fonts/venezia_small
-#: inkstitch-fonts-metadata.py:272
+#: inkstitch-fonts-metadata.py:274
 msgid "Venezia small is an altered version of Venezia to allow a greater scaling down. Both thin thread (60) and thin needle (60) are mandatory."
 msgstr "Venezia Small est une version modifiée de Venezia pour permettre une plus forte réduction. L'usage d'un fil fin (60) et d'une aiguille fine (60) est indispensable."
 
 #. description of font in fonts/very_crossy
-#: inkstitch-fonts-metadata.py:274
+#: inkstitch-fonts-metadata.py:276
 msgid "Medium size cross stitch font"
 msgstr "Fonte de point de croix de taille moyenne"
 
 #. description of font in fonts/violin_serif
-#: inkstitch-fonts-metadata.py:276
+#: inkstitch-fonts-metadata.py:278
 msgid "Violin Serif is a condensed serif satin font."
 msgstr "Violin Serif est une police serif condensée en colonne satin."
 
 #. description of font in fonts/western_light
-#: inkstitch-fonts-metadata.py:278
+#: inkstitch-fonts-metadata.py:280
 msgid "Western light is a light fill western style font."
 msgstr "Western light est une police en remplissage léger dans le style western."
 
@@ -6575,7 +6580,7 @@ msgstr "Montrer les étiquettes et les identifiants des éléments et groupes co
 
 #: inx/inkstitch_cleanup.inx:26
 msgid "Use this extension to remove small objects from the selection. With no selection, small element from the entire document will be removed."
-msgstr ""
+msgstr "Utilisez cette extension pour supprimer les petits objets de la sélection. Si rien n'est sélectionné, les petits objets sont supprimés du document entier."
 
 #: inx/inkstitch_cleanup.inx:30
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
@@ -6820,27 +6825,27 @@ msgstr "Nécessite au moins deux traverses"
 
 #: inx/inkstitch_fill_to_satin.inx:23
 msgid "Keep (do not remove)"
-msgstr ""
+msgstr "Garder (ne pas supprimer)"
 
 #: inx/inkstitch_fill_to_satin.inx:23
 msgid "Define which elements from the original selection will be removed after conversion. Fills with no rung interesection are neither converted nor removed."
-msgstr ""
+msgstr "Définit quels éléments de la sélection de départ sont supprimés après la conversion. Les remplissages qui n'intersectent aucune traverse ne sont ni convertis ni supprimés."
 
 #: inx/inkstitch_fill_to_satin.inx:24
 msgid "None (remove entire selection)"
-msgstr ""
+msgstr "Aucun (supprime tous les éléments séléctionnés)"
 
 #: inx/inkstitch_fill_to_satin.inx:25
 msgid "Fills (remove rungs only)"
-msgstr ""
+msgstr "Remplissages (ne supprime que les traverses)"
 
 #: inx/inkstitch_fill_to_satin.inx:26
 msgid "Fills and rungs (keep entire selection)"
-msgstr ""
+msgstr "Remplissages et traverses (tout garder)"
 
 #: inx/inkstitch_fill_to_satin.inx:27
 msgid "Unconverted disconnected fill subpaths"
-msgstr ""
+msgstr "Les remplissages disconnectés non convertis"
 
 #: inx/inkstitch_fill_to_satin.inx:31
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
