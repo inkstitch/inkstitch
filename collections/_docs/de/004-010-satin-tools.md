@@ -94,7 +94,8 @@ Beginne / Ende an Richtungsvektor  | Ist diese Funktion aktiviert, werden offene
 Mittellinien Unterlage             | Fügt eine Mittellinien-Unterlage hinzu
 Konturunterlage                    | Fügt eine Konturunterlage hinzu
 Zick-Zack Unterlage                | Fügt eine Zick-Zack-Unterlage hizu
-Original behalten                  | Behalte oder verwerfe die ausgewählten Original-Pfade
+Behalten (nicht entfernen) | Wählen Sie aus 4 Optionen : <br>• Keine (entfernt die gesamte Auswahl)<br>• Füllungen (entfernt nur Richtungsvektoren) <br>• Füllungen und Richtungsvektoren (gesamte Auswahl bleibt erhalten)<br>•Nicht konvertierte Teilpfade (Füllung)
+
 
 ### Brücken
 
