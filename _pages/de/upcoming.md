@@ -114,9 +114,10 @@ Findest du einen Fehler, bitte berichte davon auf GitHub. Lasst uns Ink/Stitch g
 * [Magic Crosses](/de/fonts/magic_crosses/)
 
   ![Magic Crosses](/assets/images/fonts/magic_crosses.png)
+* [Marifenda](/de/fonts/marifenda/)
 
+  ![Marifenda](/assets/images/fonts/marifenda.png)
 * [Montecarlo](/de/fonts/montecarlo/)
-
   ![Montecarlo](/assets/images/fonts/montecarlo.png)
 * [Nautical](/de/fonts/nautical/)
 
