@@ -117,7 +117,7 @@ Améliorons Ink/Stitch ensemble !
 * [Magic Crosses](/fr/fonts/magic_crosses/)
 
   ![Magic Crosses](/assets/images/fonts/magic_crosses.png)
-* [Marifenda](/fonts/marifenda/)
+* [Marifenda](/fr/fonts/marifenda/)
 
   ![Marifenda](/assets/images/fonts/marifenda.png)
 * [Montecarlo](/fr/fonts/montecarlo/)
