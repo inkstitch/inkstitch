@@ -1,7 +1,7 @@
 ---
 title: "Dépannage"
 permalink: /fr/docs/troubleshoot/
-last_modified_at: 2025-12-29
+last_modified_at: 2026-07-26
 toc: true
 ---
 ## Dépistage de problèmes avec des objets {#troubleshoot-objects}
@@ -56,6 +56,8 @@ Cette extension supprimera les paramètres de broderie de votre broderie toute e
 
 Parfois vous trouverez de très petites formes et des objets laissés par les différentes opération effectuées pendant la conception de votre fichier svg.
 Ink/Stitch  offre une fonction de nettoyage de votre document qui empêche ces objets de causer des problèmes.
+
+Si vous sélectionnez des éléments avant d'utiliser cette extension, le nettoyage ne s'appliquera qu'aux éléments sélectionnés. En l'absence de sélection, le nettoyage s'appliquera à l'ensemble du document.
 
 * Exécutez `Extensions > Ink/Stitch > Résolution de problèmes > Nettoyer le document...`
 * Choisissez quels types d'objets doivent être supprimés et définissez un seuil
