@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot"
 permalink: /docs/troubleshoot/
-last_modified_at: 2025-12-29
+last_modified_at: 2026-07-26
 toc: true
 ---
 
@@ -60,6 +60,9 @@ The extensions will remove embroidery settings from your entire design or from s
 ## Cleanup Document
 
 Sometimes you will find very small shapes and leftover objects from various operations during your designing process in your SVG file. Ink/Stitch offers a function to clean up your document and prevent those objects from causing trouble.
+
+If you select elements before using this extension, the cleanup will apply only to the selected elements. If nothing is selected, the cleanup will apply to the entire document.
+
 
 * Run `Extensions > Ink/Stitch > Troubleshoot > Cleanup Document...`
 * Choose which types of objects should be removed and define a threshold
