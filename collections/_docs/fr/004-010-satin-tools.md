@@ -91,7 +91,7 @@ Début / fin à la traverse | Lorsque cette option est activée, les sections d'
 Sous-couche de passage central | Ajoute une sous-couche centrale par défaut au(x) satin(s)
 Sous-couche de contour | Ajoute une sous-couche de contour par défaut au(x) satin(s)
 Sous-couche en zigzag | Ajoute une sous-couche zigzag par défaut au(x) satin(s)
-Conserver les chemins originels | Conserver ou supprimer les chemins sélectionnés
+Garder (ne pas supprimer) | Choisir entre les 4 options: <br>• Aucun (supprime tous les éléments séléctionnés)<br>• Remplissages (ne supprime que les traverses) <br>• Remplissages et traverses (tout garder)<br>• Les remplissages disconnectés non convertis
 
 ### Intersections
 
