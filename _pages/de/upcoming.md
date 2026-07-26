@@ -118,6 +118,7 @@ Findest du einen Fehler, bitte berichte davon auf GitHub. Lasst uns Ink/Stitch g
 
   ![Marifenda](/assets/images/fonts/marifenda.png)
 * [Montecarlo](/de/fonts/montecarlo/)
+
   ![Montecarlo](/assets/images/fonts/montecarlo.png)
 * [Nautical](/de/fonts/nautical/)
 
@@ -358,6 +359,14 @@ Diese Erweiterung assistiert bei der Erstellung von Kreuzstichen in Ink/Stitch. 
 
 ## Aktualisierte Erweiterungen
 
+### Cleanup document
+
+Ein Werkzeug um kleine Elemente aus dem Dokument zu entfernen.
+
+* Zuvor konnten nur das gesamte Dokument bereinigt werden. Die Erweiterung akzeptiert nun auch Auswahlbereiche und bereinigt nur diese (sofern vorhanden).
+
+[Mehr erfahren](/de/docs/troubleshoot/#stickeinstellungen-entfernen)
+
 ### Satinsäulen schneiden
 
 Ein Werkzeug um Satinsäulen an vordefinierten Stellen zu schneiden.
@@ -466,13 +475,19 @@ Ein Werkzeug für die Schriftarten-Digitaliserung. Es setzt automatisch den Vern
 
 [Mehr erfahren](/de/docs/font-tools/#vernähstiche-erzwingen)
 
+### Füllung zu Satin
+
+Ein Werkzeug zur Konvertierung von Sticharten.
+
+* Auwahl an Optionen, welche Originalelemente nach erfolreicher Konvertierung gelöscht, bzw. behalten werden sollen [4504](https://github.com/inkstitch/inkstitch/pull/4504)
+
+[Mehr erfahren](/de/docs/satin-tools/#füllung-zu-satin)
+
 ### Addons for Inkscape installiere
 
-Nee Symbol-Bibliothek für Füllstitchmuster hinzugefügt
+Neue Symbol-Bibliothek für Füllstitchmuster hinzugefügt [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
 
-Added new Library for fill-stitch-patterns [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
-
-[Read more](/de/docs/install-addons/)
+[Mehr erfahren](/de/docs/install-addons/)
 
 ### Sprungstich zu Linie
 
@@ -580,6 +595,9 @@ Zeigt auf fehlerhafte oder potentiell fehlerhafte Elemente im Design.
 
 ## Bugfixes
 
+* stroke to satin: preserve element label [#4500](https://github.com/inkstitch/inkstitch/pull/4500)
+* Edit json: fix kerning in simulator [#4505](https://github.com/inkstitch/inkstitch/pull/4505)
+* Fix several jump to stroke issues [#4486](https://github.com/inkstitch/inkstitch/pull/4486)
 * realistic preview image: add ignore object attribute when ignore layer was selected (to avoid a object type warning in troubleshoot) [#4477](https://github.com/inkstitch/inkstitch/pull/4477)
 * meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
 * Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)

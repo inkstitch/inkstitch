@@ -1,7 +1,7 @@
 ---
 title: "Satin Werkzeuge"
 permalink: /de/docs/satin-tools/
-last_modified_at: 2026-04-08
+last_modified_at: 2026-07-26
 toc: true
 ---
 Unter `Erweiterungen > Ink/Stitch  > Satin Tools` befindet sich eine kleine Anzahl nützlicher Helfer, die das Arbeiten mit [Satinsäulen](/docs/stitches/satin-column/) erleichtern sollen.
@@ -94,7 +94,7 @@ Beginne / Ende an Richtungsvektor  | Ist diese Funktion aktiviert, werden offene
 Mittellinien Unterlage             | Fügt eine Mittellinien-Unterlage hinzu
 Konturunterlage                    | Fügt eine Konturunterlage hinzu
 Zick-Zack Unterlage                | Fügt eine Zick-Zack-Unterlage hizu
-Behalten (nicht entfernen) | Wählen Sie aus 4 Optionen : <br>• Keine (entfernt die gesamte Auswahl)<br>• Füllungen (entfernt nur Richtungsvektoren) <br>• Füllungen und Richtungsvektoren (gesamte Auswahl bleibt erhalten)<br>•Nicht konvertierte Teilpfade (Füllung)
+Behalten (nicht entfernen)         | Wähle aus 4 Optionen : <br>• Keine (entfernt die gesamte Auswahl)<br>• Füllungen (entfernt nur Richtungsvektoren) <br>• Füllungen und Richtungsvektoren (gesamte Auswahl bleibt erhalten)<br>•Nicht konvertierte Teilpfade (Füllung)
 
 
 ### Brücken

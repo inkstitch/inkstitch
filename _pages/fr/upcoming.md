@@ -367,6 +367,14 @@ Cette extension facilite la création de points de croix dans Ink/Stitch. Elle p
 
 ## Extensions mises à jour
 
+### Nettoyer le document
+
+Un outil pour supprimer les petits éléments d'un document.
+
+Auparavant, il fonctionnait uniquement sur l'ensemble du document. Désormais, il permet de nettoyer une sélection spécifique (le cas échéant).
+
+[En savoir plus](/fr/docs/troubleshoot/#cleanup-document)
+
 ### Découpe du satin
 
 Un outil pour découper le satin à des endroits précis.
@@ -478,6 +486,20 @@ Un outil permettant aux auteurs de polices d'activer automatiquement l'option de
 
 [En savoir plus](/fr/docs/font-tools/#force-lock-stitches)
 
+### Remplissage en Satin
+
+Outil de conversion de type de points.
+
+* Ajout d'une option pour définir quels éléments originels doivent être conservés ou supprimés après une conversion réussie. [4504](https://github.com/inkstitch/inkstitch/pull/4504)
+
+[Read more](/docs/satin-tools/#fill-to-satin)
+
+### Installer des compléments pour Inkscape
+
+Ajout d'une nouvelle bibliiothèque de symboles pour des motifs de remplissage [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
+
+[En savoir plus](/fr/docs/install-addons/)
+
 ### Sauts en traits
 
 Les etiquettes des paramètres ont été réécrites et légérement modifiées [#4239](https://github.com/inkstitch/inkstitch/pull/4239):
@@ -485,11 +507,7 @@ Les etiquettes des paramètres ont été réécrites et légérement modifiées 
 * Convertir les sauts plus longs que  (mm):  Une valeur de 0 permet d'utiliser la valeur de la longeur minimum de saut.
 * Convertit les sauts plus courts que (mm): Une valeur de 0, signifie aucune limite
 
-### Installer des compléments pour Inkscape
-
-Ajout d'une nouvelle bibliiothèque de symboles pour des motifs de remplissage [#4296](https://github.com/inkstitch/inkstitch/pull/4296)
-
-[En savoir plus](/fr/docs/install-addons/)
+[En savoir plus](/fr/docs/stroke-tools/#jump-to-stroke)
 
 ### Conversion des sauts de point en commandes de coupe/arrêt
 
@@ -593,6 +611,9 @@ Signale les zones problématiques (ou potentiellement problématiques) du design
 
 ## Corrections de bugs
 
+* stroke to satin: preserve element label [#4500](https://github.com/inkstitch/inkstitch/pull/4500)
+* Edit json: fix kerning in simulator [#4505](https://github.com/inkstitch/inkstitch/pull/4505)
+* Fix several jump to stroke issues [#4486](https://github.com/inkstitch/inkstitch/pull/4486)
 * realistic preview image: add ignore object attribute when ignore layer was selected (to avoid a object type warning in troubleshoot) [#4477](https://github.com/inkstitch/inkstitch/pull/4477)
 * meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
 * Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)

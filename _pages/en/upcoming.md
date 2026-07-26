@@ -364,6 +364,14 @@ This extension helps to generate cross stitches in Ink/Stitch. It can:
 
 ## Updated Extensions
 
+### Cleanup document
+
+A tool to remove tiny elements from the document.
+
+* Previously only worked on the entire document. Now it will cleanup a specific selection (if applicable) 
+
+[Read more](/docs/troubleshoot/#cleanup-document)
+
 ### Cut Satin
 
 A tool to cut satins at specified spots.
@@ -469,6 +477,14 @@ A tool for font authors to automatically set the force lock stitch option when a
 * add option to apply forced lock stitches on the last element of each selected group [#3875](https://github.com/inkstitch/inkstitch/pull/3875)
 
 [Read more](/docs/font-tools/#force-lock-stitches)
+
+### Fill to Satin
+
+Stitch type conversion tool.
+
+* add option to define which original elements are to be kept / deleted after a successful conversion [4504](https://github.com/inkstitch/inkstitch/pull/4504)
+
+[Read more](/docs/satin-tools/#fill-to-satin)
 
 ### Install Addons for Inkscape
 
@@ -582,6 +598,9 @@ Points to troublesome (or potentially troublesome) spots in the design.
 
 ## Bugfixes
 
+* stroke to satin: preserve element label [#4500](https://github.com/inkstitch/inkstitch/pull/4500)
+* Edit json: fix kerning in simulator [#4505](https://github.com/inkstitch/inkstitch/pull/4505)
+* Fix several jump to stroke issues [#4486](https://github.com/inkstitch/inkstitch/pull/4486)
 * realistic preview image: add ignore object attribute when ignore layer was selected (to avoid a object type warning in troubleshoot) [#4477](https://github.com/inkstitch/inkstitch/pull/4477)
 * meander with zigzag spacing and clamping: fix stitch length [#4451](https://github.com/inkstitch/inkstitch/pull/4451)
 * Cleanup: use mm [#4445](https://github.com/inkstitch/inkstitch/pull/4445)
