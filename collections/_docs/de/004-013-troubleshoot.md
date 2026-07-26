@@ -1,7 +1,7 @@
 ---
 title: "Fehlerbehebung an Objekten"
 permalink: /de/docs/troubleshoot/
-last_modified_at: 2026-04-08
+last_modified_at: 2026-07-26
 toc: true
 ---
 ## Fehlerbehebung
@@ -59,6 +59,8 @@ Die Erweiterung entfernt alle Stickparameter aus dem gesamten Dokument oder von 
 ## Dokument bereinigen
 
 Manchmal entstehen während der Arbeit an SVG-Dateien sehr kleine Objekte, die gar nicht gewünscht sind (z.B. beim Bitmap-Tracing). Ink/Stitch bietet eine Funktion an, diese winzigen Objekte zu entfernen. So wird verhindert, dass sie Fehler in der Ausgabe produzieren.
+
+Besteht vor der Verwendung der Erweiterung eine aktive Auswahl, so wird nur diese bereinigt. Ist keine Auswahl vorhanden, werden kleine Elemente vom gesamten Dokument entfernt.
 
 * Öffne `Erweiterungen > Ink/Stitch > Fehlerbehebung > Dokument bereinigen...`
 * Wähle welche Objekttypen behandlet werden sollen und definiere den Schwellwert
