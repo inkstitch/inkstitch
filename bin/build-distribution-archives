@@ -29,13 +29,14 @@ if [ "$BUILD" = "osx" ]; then
         DEV_IDENT="Developer ID Application: Rhett Allen (LBTQFB2Z4D)"
         echo "Signing of inkstitch.app"
         # signing the binary may fix notary issue
-        /usr/bin/codesign -s "${DEV_IDENT}" \
-                        --deep \
-                        --force \
-                        --entitlements installer_scripts/entitlements.plist \
-                        -o runtime \
-                        --timestamp \
-                        dist/inkstitch.app/Contents/MacOS/inkstitch -v
+        ## temporary disabled inkstitch binary signing
+        #/usr/bin/codesign -s "${DEV_IDENT}" \
+        #                --deep \
+        #                --force \
+        #                --entitlements installer_scripts/entitlements.plist \
+        #                -o runtime \
+        #                --timestamp \
+        #               dist/inkstitch.app/Contents/MacOS/inkstitch -v
         # last signing before packaging
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
