@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-07-26 17:53+0000\n"
-"PO-Revision-Date: 2026-07-26 17:54\n"
+"PO-Revision-Date: 2026-07-26 18:22\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -540,7 +540,7 @@ msgstr "Manga Impact ist eine Satin-Schrift die an Mangas angelehnt ist."
 #. description of font in fonts/marifenda
 #: inkstitch-fonts-metadata.py:204
 msgid "Medium size font "
-msgstr ""
+msgstr "Schrift mittlerer Größe "
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:206
