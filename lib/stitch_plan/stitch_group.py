@@ -26,7 +26,7 @@ class StitchGroup:
     """
 
     color: Optional[Color] = None
-    stitches: list[Stitch] = []
+    stitches: list[Stitch]
     min_jump_stitch_length: bool = False
     trim_after: bool = False
     stop_after: bool = False
@@ -54,6 +54,7 @@ class StitchGroup:
         self.lock_stitches = lock_stitches or (None, None)
         self.force_lock_stitches = force_lock_stitches
         self.min_jump_stitch_length = min_jump_stitch_length
+        self.stitches = []
 
         if stitches:
             self.add_stitches(stitches)
