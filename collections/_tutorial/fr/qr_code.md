@@ -1,7 +1,7 @@
 ---
 title: QR code
 permalink: /fr/tutorials/qr-code/
-last_modified_at: 2026-01-11
+last_modified_at: 2027-07-27
 language: fr
 excerpt: "Créer un QR code fonctionnel en point de croix"
 image: "/assets/images/tutorials/qr-code/qr-code.jpg"
