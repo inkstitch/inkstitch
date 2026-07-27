@@ -42,4 +42,5 @@ classes: wide
 * <https://www.biodiversitylibrary.org>
 * <https://www.openculture.com/2016/05/1-8-million-free-works-of-art-from-world-class-museums-a-meta-list.html>
 * <https://www.freeimages.com/>
+* https://www.svgrepo.com
 
