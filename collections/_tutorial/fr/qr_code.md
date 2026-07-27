@@ -3,7 +3,7 @@ title: QR code
 permalink: /fr/tutorials/qr-code/
 last_modified_at: 2026-01-11
 language: fr
-excerpt: "Create a cross Stitch QR Code"
+excerpt: "Créer un QR code fonctionnel en point de croix"
 image: "/assets/images/tutorials/qr-code/qr-code.jpg"
 tutorial-type:
   - Sample File
