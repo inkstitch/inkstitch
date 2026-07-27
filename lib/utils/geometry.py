@@ -261,7 +261,7 @@ def remove_duplicate_points(path):
 
 
 CoordinateType = typing.Union[float, numpy.float64]
-AnyPointType: TypeAlias = Vector2d | tuple[CoordinateType, CoordinateType] | 'Point'
+AnyPointType: TypeAlias = 'Vector2d | tuple[CoordinateType, CoordinateType] | Point'
 
 
 class Point:
