@@ -5,7 +5,8 @@ OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 
 if [ "$BUILD" = "osx" ]; then
-    cp -a addons icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
+    cp -a addons icons locales print LICENSE VERSION palettes symbols tiles dbus inx dist/inkstitch.app/Contents/Resources
+    ditto fonts/src dist/inkstitch.app/Contents/Resources/fonts/src/
     time bin/compress-fonts dist/inkstitch.app/Contents/Resources/fonts/src
 
     # adding version to Info.plist
