@@ -95,3 +95,16 @@ Aufgrund des hohen Levels für die Fehlerrate, können wir es uns erlauben, klei
 Nun habe ich noch 9 Formen, die ich für das Sticken sinnvoll anordnen kann:
 
 ![Extension Menu](/assets/images/tutorials/qr-code/Second_trial.jpg)
+
+## Want more fun ?
+
+Thanks to the error correction built into QR codes, the code can be designed to look like an image.
+There is a great website for this: [QArt coder]( https://research.swtch.com/qr/draw/)
+
+![QR art coder](/assets/images/tutorials/qr-code/QR_art_coder.jpg)
+
+And yes, it works. You should start with a very simple image; it is also very helpful to [read the explanations provided there]( https://research.swtch.com/qart).
+Once you have downloaded the image from the website, all you need to do is adjust the size to match your desired cross size and use the cross-stitch assistant.
+In this case, I opted for Smyrna crosses with a width of 2.5 mm.
+
+![QR art embroidered](/assets/images/tutorials/qr-code/sewing_machine.jpg)
