@@ -421,6 +421,8 @@ jobs:
       - name: install dependencies
         shell: bash
         run: |
+          rm fonts/.git fonts/.gitignore
+
           brew update
 
           brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
