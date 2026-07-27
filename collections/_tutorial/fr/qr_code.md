@@ -92,3 +92,18 @@ Grâce au niveau de correction d'erreur élevé choisi, nous pouvons simplifier 
 Il ne me reste plus que 9 formes que je peux réordonner pour obtenir une broderie plus fluide, comme ceci :
 
 ![Extension Menu](/assets/images/tutorials/qr-code/Second_trial_fr.jpg)
+
+## Envie d'un peu plus de fantaisie ?
+
+Grâce au système de correction d'erreurs intégré aux QR codes, il est possible de concevoir un code qui ressemble à une image.
+Il existe un excellent site web pour cela : [QArt coder]( https://research.swtch.com/qr/draw/)
+
+![QR art coder](/assets/images/tutorials/qr-code/QR_art_coder.jpg)
+
+Et oui, cela fonctionne. Je vous conseille de commencer par une image très simple ; il est également très utile de [lire les explications fournies sur le site]( https://research.swtch.com/qart).
+Une fois l'image téléchargée depuis le site, il vous suffit d'ajuster sa taille pour qu'elle corresponde aux dimensions de croix souhaitées et d'utiliser l'assistant de création de motifs au point de croix.
+Dans ce cas précis, j'ai opté pour des points de Smyrne d'une largeur de 2,5 mm.
+
+![QR art embroidered](/assets/images/tutorials/qr-code/sewing_machine.jpg)
+
+
