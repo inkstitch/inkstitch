@@ -1,7 +1,7 @@
 ---
 title: QR code
 permalink: /tutorials/qr-code/
-last_modified_at: 2026-07-127
+last_modified_at: 2026-07-27
 language: en
 excerpt: "Create a cross Stitch QR Code"
 image: "/assets/images/tutorials/qr-code/qr-code.jpg"
