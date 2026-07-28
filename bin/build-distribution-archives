@@ -5,7 +5,8 @@ OS="${BUILD:-$(uname)}"
 ARCH="$(uname -m)"
 
 if [ "$BUILD" = "osx" ]; then
-    cp -a addons icons locales print LICENSE VERSION palettes symbols fonts tiles dbus inx dist/inkstitch.app/Contents/Resources
+    cp -a addons icons locales print LICENSE VERSION palettes symbols tiles dbus inx dist/inkstitch.app/Contents/Resources
+    ditto fonts/src dist/inkstitch.app/Contents/Resources/fonts/src/
     time bin/compress-fonts dist/inkstitch.app/Contents/Resources/fonts/src
 
     # adding version to Info.plist
@@ -26,7 +27,7 @@ if [ "$BUILD" = "osx" ]; then
 
     if [[ ! -z "${GITHUB_REF}" ]]; then
         # This code signs and notarize the inkstitch.app
-        DEV_IDENT="Developer ID Application: Lex Neva (929A568N58)"
+        DEV_IDENT="Developer ID Application: Rhett Allen (LBTQFB2Z4D)"
         echo "Signing of inkstitch.app"
         # signing the binary may fix notary issue
         /usr/bin/codesign -s "${DEV_IDENT}" \
@@ -35,7 +36,7 @@ if [ "$BUILD" = "osx" ]; then
                         --entitlements installer_scripts/entitlements.plist \
                         -o runtime \
                         --timestamp \
-                        dist/inkstitch.app/Contents/MacOS/inkstitch -v
+                       dist/inkstitch.app/Contents/MacOS/inkstitch -v
         # last signing before packaging
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
@@ -45,7 +46,7 @@ if [ "$BUILD" = "osx" ]; then
                         --timestamp \
                         dist/inkstitch.app -v
         echo "Running pkgbuild"
-        INSTALLER_IDENT="Developer ID Installer: Lex Neva (929A568N58)"
+        INSTALLER_IDENT="Developer ID Installer: Rhett Allen (LBTQFB2Z4D)"
         /usr/bin/pkgbuild --root dist/inkstitch.app \
                         -s "${INSTALLER_IDENT}" \
                         --ownership recommended \
@@ -59,7 +60,7 @@ if [ "$BUILD" = "osx" ]; then
             echo "Adding keychain item for notarytool"
             xcrun notarytool store-credentials "inkstitch-profile"  \
                                                 --apple-id "${NOTARY_ACCOUNT}" \
-                                                --team-id '929A568N58' \
+                                                --team-id 'LBTQFB2Z4D' \
                                                 --password "${NOTARY_PASSWORD}"
             echo "Invoking notary process"
             xcrun notarytool submit -f json --wait \
@@ -72,7 +73,7 @@ if [ "$BUILD" = "osx" ]; then
             status=$(jq -r .status </tmp/notarization_info.json)
             id=$(jq -r .id </tmp/notarization_info.json)
             echo "status=${status} id=${id}"
-            xcrun notarytool log --apple-id "${NOTARY_ACCOUNT}" --team-id '929A568N58'  --password "${NOTARY_PASSWORD}" ${id} -f json >/tmp/notarization_log.json
+            xcrun notarytool log --apple-id "${NOTARY_ACCOUNT}" --team-id 'LBTQFB2Z4D'  --password "${NOTARY_PASSWORD}" ${id} -f json >/tmp/notarization_log.json
             issues=$(jq -r .issues </tmp/notarization_log.json)
             if [ "$issues" != "null" ]; then
                 printf "There are issues with the notarization (${issues})\n"

@@ -15,7 +15,7 @@ virtualenv/bin/pip install PyGObject==3.50.0
 virtualenv/bin/pip install wxPython
 # install geos for shapely
 virtualenv/bin/pip install -v shapely
-
+virtualenv/bin/pip install -v wxPython==4.2.5
 virtualenv/bin/pip install -r requirements.txt
 
 virtualenv/bin/pip install pyinstaller
