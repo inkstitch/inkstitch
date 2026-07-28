@@ -118,6 +118,7 @@ jobs:
           python -m pip install pycairo
           python -m pip install PyGObject==3.50.0
           python -m pip install numpy --no-binary numpy
+          python -m pip install wxPython==4.2.5 --no-binary wxPython
 
           python -m pip install -r requirements.txt
 
@@ -272,7 +273,7 @@ jobs:
           git config --system core.longpaths true
           python -m pip install --upgrade pip
           python -m pip install wheel
-          pip install wxPython
+          pip install wxPython==4.2.5
           python -m pip install -r requirements.txt
 
           python -m pip install pyinstaller
@@ -381,7 +382,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython --no-binary wxPython
+          pip install wxPython==4.2.5 --no-binary wxPython
           pip install -r requirements.txt
 
           pip install pyinstaller
@@ -443,7 +444,7 @@ jobs:
           pip --version
           pip install wheel
           pip install PyGObject
-          pip install wxPython --no-binary wxPython
+          pip install wxPython==4.2.5 --no-binary wxPython
           pip install -r requirements.txt
 
           pip install pyinstaller
