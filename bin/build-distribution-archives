@@ -23,21 +23,20 @@ if [ "$BUILD" = "osx" ]; then
     # Build on GitHub will be handled differently from local builds.
     # Local builds will not be signed nor notarized. They are run to produce releases for legacy versions of macOS.
     # Notarization for development branches can be forced with this variable set to true
-    NOTARIZE_DEVELOPMENT_BUILDS=true
+    NOTARIZE_DEVELOPMENT_BUILDS=false
 
     if [[ ! -z "${GITHUB_REF}" ]]; then
         # This code signs and notarize the inkstitch.app
         DEV_IDENT="Developer ID Application: Rhett Allen (LBTQFB2Z4D)"
         echo "Signing of inkstitch.app"
         # signing the binary may fix notary issue
-        ## temporary disabled inkstitch binary signing
-        #/usr/bin/codesign -s "${DEV_IDENT}" \
-        #                --deep \
-        #                --force \
-        #                --entitlements installer_scripts/entitlements.plist \
-        #                -o runtime \
-        #                --timestamp \
-        #               dist/inkstitch.app/Contents/MacOS/inkstitch -v
+        /usr/bin/codesign -s "${DEV_IDENT}" \
+                        --deep \
+                        --force \
+                        --entitlements installer_scripts/entitlements.plist \
+                        -o runtime \
+                        --timestamp \
+                       dist/inkstitch.app/Contents/MacOS/inkstitch -v
         # last signing before packaging
         /usr/bin/codesign -s "${DEV_IDENT}" \
                         --deep \
