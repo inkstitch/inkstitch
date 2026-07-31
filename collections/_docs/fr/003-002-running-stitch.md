@@ -6,7 +6,6 @@ toc: true
 ---
 ## Description
 
-
 Le point droit produit une série de petits points suivant une ligne ou une courbe.
 
 Une simple répétition est généralement trop fine, c'est pourquoi le point droite est souvent réalisé en point triple ou plus généralement en point multiple. 
@@ -27,8 +26,6 @@ Si un objet est constitué de plusieurs chemins combinés, ils seront brodés l'
 ## Paramétres
 
 Ouvrir `Extensions > Ink/Stitch  > Paramètres` pour paramétrer selon vos besoins.
-
-{% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='running-stitch'%}
 

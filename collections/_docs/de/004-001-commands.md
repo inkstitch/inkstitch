@@ -109,11 +109,7 @@ Wähle die Gruppe mit dem Befehl und entferne sie.
 
 `Befehle > Sprungstich zu Fadenschnitt-Befehl` 
 
-Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden
-
-{% include upcoming_release.html %}
-
-Es kann zwischen Fadenschnitt- und Stoppbefehl entschiedene werden.
+Fügt Fadenschnitt-Befehle ein um Sprungstiche zu vermeiden. Es kann zwischen Fadenschnitt- und Stoppbefehl entschiedene werden.
 
 **Info**: Nutze diese Option nicht, wenn es die Möglichkeit gibt den Stickpfad weiter zu optimisieren. Das Fadenschneiden sollte so gut wie möglich vermieden werden. Lerne über Funktionen die Ink/Stitch für eine bessere [Pfadoptimisierung](/de/tutorials/routing/) bereithält.
 {: .notice--info }

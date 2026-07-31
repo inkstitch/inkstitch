@@ -14,8 +14,6 @@ field-of-use:
 user-level: 
 toc: true
 ---
-
-{% include upcoming_release.html %}
 ## Utiliser le module de lettrage
 
 La méthode la plus simple est d'utiliser une fonte prête pour la broderie du module de lettrage, parmi la vingtaine de fontes en point de croix présentes.

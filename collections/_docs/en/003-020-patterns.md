@@ -28,8 +28,6 @@ In Ink/Stitch you can generate patterns by either adding stitches or removing st
 
   ![Pattern groups](/assets/images/docs/en/pattern.png)
 
-  {% include upcoming_release.html %}
-
   Interval: An interval can be set for patterns with a stroke color. 
   This value determines at which pattern the addition of nodes at path intersections should be skipped.
   Multiple values are separated by spaces.

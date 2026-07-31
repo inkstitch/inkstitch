@@ -114,8 +114,6 @@ Le remplissage selon contour recouvre des zones en suivant leur contours.
 
 ### Point de croix
 
-{% include upcoming_release.html %}
-
 Le point de croix imite les techniques traditionnelles de broderie à la main.
 
 Il se caractérise par de petites croix régulières, ce qui donne à l'image brodée un aspect plat et géométrique.

@@ -110,8 +110,6 @@ Contour fill creates stitches that follow the contour of a shape as the fill pro
 
 ### Cross Stitch
 
-{% include upcoming_release.html %}
-
 Cross stitch mimics traditional hand embroidery techniques. Cross-stitch is characterized by small, even crosses, which give the embroidered image a flat, blockish look.
 
 {% include folder-galleries path="butterfly-fill-project/cross/" captions="1:Cross stitch" %}

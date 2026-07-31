@@ -89,8 +89,6 @@ Das Muster für Satinsäulen-geführte Ripples können mit Hilfe einer sogenannt
 
 ## Clipping
 
-{% include upcoming_release.html %}
-
 Ripple stitches can be clipped to form the outline.
 
 * Create the ripple stitch
@@ -98,8 +96,6 @@ Ripple stitches can be clipped to form the outline.
 * Select both and run `Objekt > Ausschneidepfad > Ausschneidemaske setzen`
 
 ## Parameter
-
-{% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='ripple-stitch'%}
 

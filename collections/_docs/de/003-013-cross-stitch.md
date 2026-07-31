@@ -10,9 +10,6 @@ feature_row:
   - image_path: /assets/images/docs/cross_stitch_coverage02.jpg
     alt: "Same image as before, but the fill element has moved. More crosses are build"
 ---
-
-{% include upcoming_release.html %}
-
 ## Beschreibung
 
 Kreuzstich ahmt traditionelle Handsticktechniken nach.

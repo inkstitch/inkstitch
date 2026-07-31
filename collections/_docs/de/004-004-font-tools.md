@@ -13,8 +13,6 @@ Ein Blick in das [Schriften für Ink/Stitch erstellen Tutorial](/de/tutorials/fo
 
 Diese Erweiterung erlaubt das Konvertieren einer SVG-Schriftart-Datei in Glyphen-Ebenen, so wie vom Textwerkzeug benötigt.
 
-{% include upcoming_release.html %}
-
 Die Schriftgröße kann über die Zielgröße eines bestimmten Zeichens definiert und angepasst werden.
 
 ## Benutzerdefinierter Ordner für Schriften
@@ -23,8 +21,6 @@ Diese Erweiterung erlaubt dir, einen Ordner zu definieren, in dem du zusätzlich
 
 Jede Schriftart sollte in einem eigenen Unterordner gespeichert werden und sollte mindestens folgende Dateien enthalten: eine Schriftdatei (svg) und eine json-Datei.
 Zusätzlich empfehlen wir eine Lizenz-Datei.
-
-{% include upcoming_release.html %}
 
 Die Schriftvarianten wurden in älteren Ink/Stitch-Versionen über Pfeile in den Dateinamen definiert (`→.svg`, `←.svg`, etc.).
 Jetzt geschieht dies über geänderte Dateinamen: `ltr.svg` steht beispielsweise für die Stickrichtung von links nach rechts (left-to-right, ltr). Die Dateinamen für die Schriftvarianten lauten demnach:
@@ -44,8 +40,6 @@ Außerdem wird bei Ausführung der Erweiterung die Liste der verfügbaren Zeiche
 
 Diese Erweiterung generiert eine Liste aller Zeichen einer Schrift.
 So können Schriftautoren schnell und einfach das Stickergebnis einer neuen Schrift prüfen.
-
-{% include upcoming_release.html %}
 
 Es werden nur entsperrte Glyphen gerendert (Schloß-Symbol). Dies ermöglicht eine Stichprobentestung während der Erstellung der Schriftart.
 
@@ -86,9 +80,7 @@ Diese Erweiterung soll dabei helfen, die Stickobjekte entsprechend zu bearbeiten
   * Maximaler Abstand (mm): füge keinen Vernähstiche erzwingen Befehl ein, wenn der Abstand zum nächsten Element größer ist als dieser Wert
 
 * Füge das Attribut "Vernähen erzwingen" dem jeweils letzten Element eines Schriftzeichens hinzu
-* {% include upcoming_release.html %}
-
-  Füge das Attribut "Vernähen erzwingen" zu dem jeweils letzten Element einer Gruppe hinzu
+* Füge das Attribut "Vernähen erzwingen" zu dem jeweils letzten Element einer Gruppe hinzu
 
 ## JSON-Datei erstellen
 
@@ -100,8 +92,6 @@ Lese nach [**wie man eine SVG-Schrift mit Kerning Information erstellt**](/de/tu
 Wenn du deine Schrift ohne Kerning erstellt hast, kannst du mit diesem Werkzeug immer noch eine JSON-Datei mit den Grundinformationen erstellen.
 
 ### Schriftinformationen
-
-{% include upcoming_release_params.html %}
 
 |Option                          |Beschreibung
 |--------------------------------|---------------------------------
@@ -161,8 +151,6 @@ Bei gekauften Schriften kommt es häufig vor, dass die Buchstaben in Unterordner
 * Wenn deine Schrift mehrfarbig ist, können Farbabschnitte mit einem [Farbsortierindex](#farbsortierindex-festlegen) belegt werden.
 
 ## Glyphen organisieren
-
-{% include upcoming_release.html %}
 
 Das Ziel dieser Erweiterung ist es, die Arbeitsschritte für das Digitalisieren einer gesamten Schriftart zu ordnen.
 

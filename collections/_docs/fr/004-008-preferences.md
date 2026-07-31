@@ -67,7 +67,6 @@ Les  **points manuels** sont eux aussi affectés  par *Longueur minimum de point
 {: .notice--warning }
 
 ### Seuil d'auto-conversion trait satin
-{% include upcoming_release.html %}
 
 La possibilité de rendre un trait en point satin dépend de sa largeur et de la valeur du seuil d'auto-conversion.
 
@@ -76,11 +75,8 @@ La largeur du trait doit être supérieure à la valeur du seuil ; sinon, le tr
 Pour éviter les points trop serrés, il est recommandé d'utiliser uniquement des satins d'une largeur supérieure à 1 mm.
 L'utilisation de fils fins constitue une exception à cette règle.
 
-
-
 ### Seulement pour le document courant : Tourner à l'export
 
-{% include upcoming_release.html %}
 Cette option permet de tourner le motif de 90°. Utile pour les brodeuses qui ne tournent pas automatiquement un motif qui nécessite une rotation pour tenir dans le cadre
 
 ### Seulement en global: Taille du cache (mb)

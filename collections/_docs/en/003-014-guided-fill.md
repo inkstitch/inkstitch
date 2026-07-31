@@ -44,8 +44,6 @@ Parallel offset will ensure that each line is always a consistent distance from 
 
 ### Buffer
 
-{% include upcoming_release.html %}
-
 The buffer mehods uses offsets around the guideline and even allows a guideline to consist out of multiple subpaths.
 
 ## Set Start and End Point

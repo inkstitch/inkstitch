@@ -13,9 +13,6 @@ stitch-type:
 field-of-use:
 user-level: Beginner
 ---
-
-{% include upcoming_release.html %}
-
 Grâce à l'extension Inkscape **Rendu > Code-barres - QR code > QR code** et au point de croix Ink/Stitch, vous pouvez facilement broder un QR code fonctionnel :
 
 ![Cross Stitch QR Code](/assets/images/tutorials/qr-code/qr-code.jpg)

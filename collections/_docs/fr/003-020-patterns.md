@@ -26,8 +26,6 @@ Dans Ink/Stitch il est possible de générer des textures en ajoutant ou en supp
 
   ![Pattern groups](/assets/images/docs/en/pattern.png)
 
-  {% include upcoming_release.html %}
-
   **Intervalle** : Un intervalle peut être défini pour les textures avec une couleur de contour.
   Cette valeur détermine quand l’ajout de nœuds aux intersections  doit être ignoré. Un intervalle de 2, ignorera la texture une fois sur deux.
 

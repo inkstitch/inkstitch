@@ -108,9 +108,7 @@ Select the command-group and delete.
 
 `Commands > Jump Stitch to Trim Command` 
 
-Inserts trim commands to avoid jump stitches
-{% include upcoming_release.html %}
-You can chose between trim or stop command.
+Inserts trim commands to avoid jump stitches. You can chose between trim or stop command.
 
 **Info**: Do not to use this option when you can optimize routing instead. Cutting threads should be avoided as much as possible. Learn about the options Ink/Stitch has to offer for a [better routing](/tutorials/routing/).
 {: .notice--info }

@@ -14,7 +14,6 @@ Ink/Stitch est livré avec une extension de dépannage, conçue pour vous aider 
 
 * (Optionnel) Sélectionnez les objets que vous souhaitez tester. Si vous n'en sélectionnez aucun, l'ensemble du document sera testé.
 * Lancer `Extensions > Ink/Stitch > Résolution de problèmes > Dépistage de problèmes avec des objets`
-  {% include upcoming_release.html %}
 * Choisissez ce que vous voulez détecter : erreurs, avertissements, ou aavertissements sur les types d'objet. 
 
 Vous recevrez soit un message indiquant qu'aucune erreur ne peut être trouvée, soit un nouveau calque contenant les informations de dépannage sera ajouté à votre document SVG. Utilisez le panneau des objets(Ctrl + Shift + O) pour supprimer le calque une fois que vous avez terminé.
@@ -36,7 +35,6 @@ Cette extension affiche des informations sur divers paramètres des éléments d
 
 ![Element info](/assets/images/docs/en/element_info.png)
 
-{% include upcoming_release.html %}
 Le bouton 'Copier' de l'onglet d'aide permet de copier toutes les informations dans le presse papier.
 
 

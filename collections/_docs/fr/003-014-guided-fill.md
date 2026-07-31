@@ -48,8 +48,6 @@ La stratégie "Décalage parallèle", remplit la forme avec des copies déformé
 
 ### Buffer
 
-{% include upcoming_release.html %}
-
 La méthode Buffer utilise des décalages autour de la ligne guide et contrairement aux autres méthodes permet  à une ligne guide d'être composée de plusieurs sous-chemins.
 
 ## Définir le point de départ et d'arrivée

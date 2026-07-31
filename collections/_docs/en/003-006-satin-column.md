@@ -27,8 +27,6 @@ Ink/Stitch offers several methods to create satin columns. Method 1 does no conv
 
 ### 1 - Render a stroke as satin
 
-{% include upcoming_release.html %}
-
 This method renders paths with a stroke color directly as satins and is therefore the easiest one to create uniform width satin columns.
 
 * Add a stroke color to a path object (with no fill).
@@ -139,8 +137,6 @@ Some of these params are not part of the recent release.
 {: .notice--info}
 
 ### Satin Top Layer
-
-{% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='satin'%}
 

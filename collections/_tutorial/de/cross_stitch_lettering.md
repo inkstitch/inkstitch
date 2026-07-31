@@ -14,9 +14,6 @@ field-of-use:
 user-level: 
 toc: true
 ---
-
-{% include upcoming_release.html %}
-
 ## Das Textwerkzeug nutzen
 
 Die einfachste Methode ist eine wiederverwendbare, stickfertige Schrift aus dem Textwerkzeug zu nutzen. Ink/Stitch bietet mittlerweile über 20 Schriftarten.

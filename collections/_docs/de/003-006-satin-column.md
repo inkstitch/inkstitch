@@ -27,8 +27,6 @@ Ink/Stitch bietet verschiedene Möglichkeiten Satinsäulen zu erstellen. Die Met
 
 ### 1. Linie als Satinsäule
 
-{% include upcoming_release.html %}
-
 Mit dieser Methode kann eine Linie mit Konturfarbe direkt und ohne Umwandlung als Satinsäule genutzt werden.
 Daher ist diese Methode die einfachste Methode zur Erstellung und Anpassung von Satinsäulen.
 
@@ -139,8 +137,6 @@ Z.B. `Zufälliger Prozentwert (Erweitern)` ist ein solcher Parameter. Wird ein e
 ![asymmetrical parameter](/assets/images/docs/asymetric_parameter.png)
 
 ### Satinsäule
-
-{% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='satin'%}
 

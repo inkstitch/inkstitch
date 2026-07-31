@@ -30,8 +30,6 @@ Bei dieser Stichart wird jeder Stich entsprechend der Anzahl des eingegebenen We
 
 Über [`Erweiterungen > Ink/Stitch  > Parameter`](/de/docs/params/#linie) können folgende Einstellungen vorgenommen werden.
 
-{% include upcoming_release_params.html %}
-
 {% include params.html stitch_type='running-stitch'%}
 
 ## Anordnen

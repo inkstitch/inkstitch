@@ -14,9 +14,6 @@ field-of-use:
 user-level: 
 toc: true
 ---
-
-{% include upcoming_release.html %}
-
 ## Using the Lettering Tool
 
 The simplest method is to use a ready-to-use cross stitch font from the lettering tool, chosen from the twenty or so available.

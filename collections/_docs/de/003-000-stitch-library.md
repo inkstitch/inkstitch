@@ -108,8 +108,6 @@ Konturfüllung füllt eine Fläche mit kleiner werdenden Kopien ihrer Kontur.
 
 ### Kreuzstitch
 
-{% include upcoming_release.html %}
-
 Kreuzstich imitiert eine traditionelle Handstick-Technik.
 Das charakteristische Merkmal dieser Stichart sind kleine, gleichmäßige Kreuze, die ein flaches, verpixeltes Gesamtbild ergeben.
 

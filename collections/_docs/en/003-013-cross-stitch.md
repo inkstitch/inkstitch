@@ -11,8 +11,6 @@ feature_row:
     alt: "Same image as before, but the fill element has moved. More crosses are build"
 ---
 
-{% include upcoming_release.html %}
-
 ## Description
 
 Cross stitch mimics traditional hand embroidery techniques.

@@ -26,8 +26,6 @@ Muster können in Ink/Stitch durch hinzufügen oder entfernen von Stichen aus ei
 
   ![Pattern groups](/assets/images/docs/en/pattern.png)
 
-  {% include upcoming_release.html %}
-
   Interval: für Muster mit Konturfarbe kann ein Interval festgelegt werden. Ein Interval bestimmt, in welchem Muster das Hinzufügen von Knoten an Pfadüberschneidungen übersprungen werden soll.
   Eine Eingabe von mehreren durch Leerzeichen getrennte Werte ist möglich.
 

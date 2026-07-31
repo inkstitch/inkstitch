@@ -14,17 +14,14 @@ techniques:
 field-of-use:
 user-level: 
 ---
-{% include upcoming_release.html %}
 Il existe de très nombreuses ressources de grilles de points croix prévues pour une broderie manuelle.
 Si vous avez le libre usage de ces grilles, vous pouvez utiliser l'assistant point de croix pour les transformer en broderie machine.
-
 
 Les résultats des différentes étapes de ce tutoriel se trouvent dans ce fichier :
 
 ![old bird](/assets/images/tutorials/tutorial-preview-images/cross_stitch_chart_to_fills.jpg)
 
 [Télécharger ](/assets/images/tutorials/samples/cross_stitch_chart_to_fills.svg){: download="cross_stitch_chart_to_fills.svg" }
-
 
 L'image de départ (à gauche) provient du livre [Muster altdeutscher Leinenstickerei : IV](https://archive.org/details/musteraltdeutsch1888less/page/n65/mode/2up) publié à Berlin en 1888, image qui est maintenant dans le domaine public.
 

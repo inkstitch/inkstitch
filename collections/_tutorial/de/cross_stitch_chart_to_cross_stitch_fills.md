@@ -14,7 +14,6 @@ techniques:
 field-of-use:
 user-level: 
 ---
-{% include upcoming_release.html %}
 Im Internet sind viele Vorlagen für Kreuzstich-Muster erhältlich.
 
 Wenn der Urheber der Vorlage es erlaubt, kann sie mit Hilfe des Kreuzstich-Assistenten schnell in eine Kreuzistch-Füllung für das Maschinensticken umgewandelt werden.

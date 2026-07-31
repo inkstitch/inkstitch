@@ -162,8 +162,6 @@ Hilfsmethode zur Erstellung von:
 * Auf `Anwenden` klicken
 * Füllparameter im Parameterdialog anpassen (`Erweiterungen > Ink/Stitch > Parameter`)
 
-{% include upcoming_release.html %}
-
 Der Reihenabstand wird automatisch an die gewählte Stichlänge angepasst.
 
 <!--

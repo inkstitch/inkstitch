@@ -14,7 +14,6 @@ techniques:
 field-of-use:
 user-level: 
 ---
-{% include upcoming_release.html %}
 Der Kreuzstich-Assistent ist eine große Hilfe, wenn es darum geht, Bilder in Kreuzstich-Füllungen umzuwandeln.
 
 Da Ergebnis der in diesem Tutorial beschriebenen Schritte, befindet sich in dieser Datei:
@@ -22,7 +21,6 @@ Da Ergebnis der in diesem Tutorial beschriebenen Schritte, befindet sich in dies
 ![SVG](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg)
 
 [Herunterladen](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg){: download="pawpedia.svg" }
-
 
 ## Ursprungsbild
 

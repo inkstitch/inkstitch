@@ -99,7 +99,6 @@ Avec un guidage satin, il est aussi possible d'ajuster la direction des ondulati
 
 ## Découpes
 
-{% include upcoming_release.html %}
 La broderie ondulée peut être limitée à une zone donnée en utilisant une découpe.
 
 * Créez la broderie ondulée.
@@ -109,8 +108,6 @@ La broderie ondulée peut être limitée à une zone donnée en utilisant une d�
 ## Paramétrage
 
 Ouvrir `Extensions > Ink/Stitch  > Paramétres` pour paramétrer selon vos besoins.
-
-{% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='ripple-stitch'%}
 

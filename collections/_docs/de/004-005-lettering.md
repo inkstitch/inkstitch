@@ -35,8 +35,6 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
 ### Optionen
 
-{% include upcoming_release_params.html %}
-
 * **Maßstab**
 
   Definiert die Größe des Textes im Vergleich zur Originalschrift (%).

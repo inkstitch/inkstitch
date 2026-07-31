@@ -26,7 +26,6 @@ Ink/Stitch offre plusieurs options pour créer des colonnes satin. La première 
 6. [Création manuelle de Colonne Satin ](#6-création-manuelle-de-colonne-satin): prendre tout le contrôle sur la colonne satin
 
 ### 1. Trait rendu en Satin
-{% include upcoming_release.html %}
 
 Cette option rend des traits suffisement épais ayant une couleur de contour directement comme des colonnes satin sans conversion, et est donc la plus facile à créer et à adapter.
 
@@ -156,8 +155,6 @@ Par exemple l'augmentation aléatoire de la largeur du satin est un paramètre a
 ![Parametre_asymetrique](/assets/images/docs/asymetric_parameter.png)
 
 ### Couche supérieure du satin
-
-{% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='satin'%}
 

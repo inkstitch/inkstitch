@@ -34,7 +34,6 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
   Filtre les fontes par famille, par exemple les fontes d'appliqué ou les fontes d'écriture manuelle.
 
 ### Options
-{% include upcoming_release_params.html %}
 
 * **Échelle**
 

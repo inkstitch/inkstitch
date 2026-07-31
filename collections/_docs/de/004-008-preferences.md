@@ -56,16 +56,12 @@ Stiche mit **manueller Stichpositionierung** werden ebenfalls entsprechend diese
 
 ### Minimale Satinsäulenbreite für Linien
 
-{% include upcoming_release.html %}
-
 Ob eine einfache Linie als Satinsäule ausgegeben werden kann, hängt von der Konturbreite der Linie und dem Wert für die minimale Satinsäulenbreite für Linien ab.
 Die Konturbreite der Linie muss breiter sein als dieser Wert, ansonsten wird das Element als Geradstich verwertet.
 
 Zur Vermeidung von harten Stichen wird empfohlen, diesen Wert nicht unter die 1mm-Marke zu senken. Die Verwendung von dünnem Faden stellt hier eine Ausnahme dar.
 
 ### Rotiere bei Export (nur dokumentbezogen)
-
-{% include upcoming_release.html %}
 
 Diese Option rotiert das Stickbild beim Export um 90°. Dies ist nützlich, wenn eine Stickmaschine ein Design nicht automatisch dreht um es in den Stickrahmen einzupassen.
 

@@ -29,8 +29,6 @@ Enable bean stitch by entering a value for the Param-Option `Bean stitch number 
 
 Open `Extensions > Ink/Stitch  > Params` to update the parameters.
 
-{% include upcoming_release_params.html %}
-
 {% include params.html stitch_type='running-stitch'%}
 
 ## Routing

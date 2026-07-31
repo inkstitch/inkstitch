@@ -15,7 +15,6 @@ Ink/Stitch comes with an troubleshoot extension, which is designed to help you t
 
 * (Optional) Select objects that you want to test. If you select none, the whole document will be tested.
 * Run `Extensions > Ink/Stitch > Troubleshoot > Troubleshoot Objects`
- {% include upcoming_release.html %}
 * Chose what you want to detect among errors, warnings and object type warning.
 
 
@@ -32,10 +31,7 @@ This extension informs about various parameters of selected stitch elements.
 
 ![Element info](/assets/images/docs/en/element_info.png)
 
-{% include upcoming_release.html %}
 The 'Copy' button on the help tab allows you to copy all the information to the clipboard.
-
-
 
 ## Remove embroidery settings
 

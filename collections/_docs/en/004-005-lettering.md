@@ -35,7 +35,7 @@ The text module creates multi-line text. Choose the right font for your project 
   Filter the fonts by categories, for example get only the applique fonts or only the script fonts
 
 ### Options
-{% include upcoming_release_params.html %}
+
 * **Scale**
 
   Defines the output size of the font compared to the original font size (%).

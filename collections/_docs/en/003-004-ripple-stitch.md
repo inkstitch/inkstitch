@@ -92,8 +92,6 @@ The pattern for satin guided ripples can be adjusted in its direction with the h
 
 ## Clipping
 
-{% include upcoming_release.html %}
-
 Ripple stitches can be clipped to form the outline.
 
 * Create the ripple stitch
@@ -101,8 +99,6 @@ Ripple stitches can be clipped to form the outline.
 * Select both and run `Object > Clip > Set clip`
 
 ## Parameters
-
-{% include upcoming_release_params.html %}
 
 {% include params.html stitch_type='ripple-stitch'%}
 

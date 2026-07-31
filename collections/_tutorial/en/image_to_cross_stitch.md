@@ -14,17 +14,13 @@ techniques:
 field-of-use:
 user-level: 
 ---
-{% include upcoming_release.html %}
-
 The cross stitch assistant helps you transform an image into Cross Stitch fills.
 
 The results of this tutorial different steps can be found in this file:
 
-
 ![SVG](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg)
 
 [Download](/assets/images/tutorials/image_to_cross_stitch/pawpedia.svg){: download="pawpedia.svg" }
-
 
 ## Starting Image
 
@@ -33,12 +29,10 @@ The simplier the original image, the less you will have to work to tweat the ass
 
 The starting image (top left above) is by Pawpedia on [Pixabay](https://pixabay.com/de/illustrations/image-10216974), licensed by Pixabay, which allows the creation of derivative works.
 
-
 You need to decide:
 
 - the desired size for the embroidery (180 mm in the example), and then reduce the image to this size
 - the size of the cross stitches (2 mm in the example)
-
 
 ## Using the Cross Stitch Assistant to generate Cross Stitch Fills
 

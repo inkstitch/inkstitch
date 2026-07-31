@@ -44,8 +44,6 @@ Die Methode Parallelverschiebung stellt sicher, dass die Abstände zwischen den 
 
 #### Buffer
 
-{% include upcoming_release.html %}
-
 Die Buffer-Methode ist ein fortgeführter Vesatz zur Führungslinie und erlaubt auch, dass die Führungslinie aus mehreren Unterpfaden besteht.
 
 ## Anfangs- und Endpunkt festlegen
