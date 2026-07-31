@@ -5,6 +5,7 @@
 
 import sys
 from math import acos, degrees
+from typing import cast
 
 from inkex import errormsg
 from numpy import convolve, diff, int32, setdiff1d, sign, zeros
@@ -12,6 +13,7 @@ from shapely import geometry as shgeo
 from shapely.affinity import rotate, scale
 from shapely.ops import substring
 
+from ..element import BasePath
 from ...i18n import _
 from ...svg import PIXELS_PER_MM
 from ...utils import Point, roll_linear_ring
@@ -22,7 +24,7 @@ class SelfIntersectionError(Exception):
     pass
 
 
-def convert_path_to_satin(path, stroke_width, style_args, rungs_at_nodes=False):
+def convert_path_to_satin(path: BasePath, stroke_width, style_args, rungs_at_nodes=False):
     path = remove_duplicate_points(fix_loop(path))
 
     if len(path) < 2:
@@ -39,7 +41,7 @@ def convert_path_to_satin(path, stroke_width, style_args, rungs_at_nodes=False):
     return None
 
 
-def convert_path_to_satins(path, stroke_width, style_args, rungs_at_nodes=False, depth=0):
+def convert_path_to_satins(path: BasePath, stroke_width, style_args, rungs_at_nodes=False, depth=0):
     try:
         rails, rungs = path_to_satin(path, stroke_width, style_args, rungs_at_nodes)
         yield (rails, rungs)
@@ -59,14 +61,14 @@ def convert_path_to_satins(path, stroke_width, style_args, rungs_at_nodes=False,
                 yield section
 
 
-def split_path(path):
+def split_path(path: BasePath) -> tuple[BasePath, BasePath]:
     linestring = shgeo.LineString(path)
-    halves = [
+    halves = (
         list(substring(linestring, 0, 0.5, normalized=True).coords),
         list(substring(linestring, 0.5, 1, normalized=True).coords),
-    ]
-
-    return halves
+    )
+    # without the cast each item is list[tuple[float, ...]] but we know that it is a BasePath since input is BasePath
+    return cast(tuple[BasePath, BasePath], halves)
 
 
 def fix_loop(path):

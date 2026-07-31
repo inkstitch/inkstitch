@@ -79,21 +79,21 @@ class CutSatin(InkstitchExtension):
             return new_satins
         return satin_elements
 
-    def _get_cut_points(self, satin: SatinColumn, cut_lines: list[LineString]) -> list[tuple[Point, Point]]:
+    def _get_cut_points(self, satin: SatinColumn, cut_lines: list[LineString]) -> list[list[Point]]:
         """Cut lines must intersect each rail once
         This filters cut lines and returns the cut points"""
         rails = satin.line_string_rails
-        filtered_cut_points = []
+        filtered_cut_points: list[list[Point]] = []
         for cut_line in cut_lines:
-            cut_points = []
+            cut_points: list[Point] = []
             cut_point1 = rails[0].intersection(cut_line)
-            if cut_point1.geom_type == "Point":
+            if isinstance(cut_point1, Point):
                 cut_points.append(cut_point1)
             cut_point2 = rails[1].intersection(cut_line)
-            if cut_point2.geom_type == "Point":
+            if isinstance(cut_point2, Point):
                 cut_points.append(cut_point2)
             if len(cut_points) > 0:
-                filtered_cut_points.append(tuple(cut_points))
+                filtered_cut_points.append(cut_points)
         return filtered_cut_points
 
     def _select_elements(self) -> tuple[list[LineString], list[inkex.BaseElement], list[SatinColumn]]:

@@ -80,7 +80,7 @@ class Stitch(Point):
 
     def __init__(
         self,
-        x: Union[Stitch, float, Point],
+        x: Union[Stitch, float, Point, shgeo.Point],
         y: Optional[float] = None,
         color: Optional[Any] = None,
         jump: bool = False,
@@ -122,6 +122,12 @@ class Stitch(Point):
         self.add_tags(tags or [])
         if base_stitch is not None:
             self.add_tags(base_stitch.tags)
+
+    @classmethod
+    def from_coordinates(cls, coords: tuple[float, ...]):
+        if len(coords) < 2:
+            raise ValueError("Coordinates must have at least 2 elements")
+        return cls(coords[0], coords[1])
 
     def __new__(cls: Type[Stitch], *args, **kwargs) -> Stitch:
         instance = super().__new__(cls)

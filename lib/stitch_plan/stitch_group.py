@@ -2,8 +2,16 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
+from typing import Optional, Literal, Sequence
 
+from inkex import Color
+from shapely import geometry as shgeo
+
+from .lock_stitch import LockStitch
 from .stitch import Stitch
+from ..utils import Point
+
+LockStitches = tuple[LockStitch | None, LockStitch | None]
 
 
 class StitchGroup:
@@ -17,16 +25,23 @@ class StitchGroup:
     between them by the stitch plan generation code.
     """
 
+    color: Optional[Color] = None
+    stitches: list[Stitch]
+    min_jump_stitch_length: bool = False
+    trim_after: bool = False
+    stop_after: bool = False
+    lock_stitches: LockStitches = (None, None)
+
     def __init__(
         self,
-        color=None,
-        stitches=None,
-        min_jump_stitch_length=False,
-        trim_after=False,
-        stop_after=False,
-        lock_stitches=(None, None),
-        force_lock_stitches=False,
-        tags=None
+        color: Optional[Color] = None,
+        stitches: Optional[list[Stitch]] = None,
+        min_jump_stitch_length: bool = False,
+        trim_after: bool = False,
+        stop_after: bool = False,
+        lock_stitches: Optional[tuple[LockStitch | None, LockStitch | None]] = None,
+        force_lock_stitches: bool = False,
+        tags: Optional[Sequence[str]] = None
     ):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
@@ -36,7 +51,7 @@ class StitchGroup:
         self.color = color
         self.trim_after = trim_after
         self.stop_after = stop_after
-        self.lock_stitches = lock_stitches
+        self.lock_stitches = lock_stitches or (None, None)
         self.force_lock_stitches = force_lock_stitches
         self.min_jump_stitch_length = min_jump_stitch_length
         self.stitches = []
@@ -53,7 +68,7 @@ class StitchGroup:
         # Set default values for any new attributes here (see note in __init__() above)
         # instance.foo = None
 
-        instance.lock_stitches = None
+        instance.lock_stitches = (None, None)
 
         return instance
 
@@ -72,34 +87,37 @@ class StitchGroup:
         for stitch in self.stitches:
             stitch.min_stitch_length = min_stitch_length
 
-    def add_stitches(self, stitches, tags=None):
+    def add_stitches(self, stitches: Sequence[Stitch | Point | shgeo.Point], tags: Optional[Sequence[str]] = None):
         for stitch in stitches:
             self.add_stitch(stitch, tags=tags)
 
-    def add_stitch(self, stitch, tags=None):
-        if not isinstance(stitch, Stitch):
-            # probably a Point
+    def add_stitch(self, stitch: Stitch | Point | shgeo.Point, tags: Optional[Sequence[str]] = None):
+        if isinstance(stitch, (Point, shgeo.Point)):
             stitch = Stitch(stitch, tags=tags)
+        elif not isinstance(stitch, Stitch):
+            raise TypeError("Expected a Stitch or Point object, got %s" % type(stitch))
+
         self.stitches.append(stitch)
 
     def reverse(self):
         return StitchGroup(self.color, self.stitches[::-1])
 
-    def add_tags(self, tags):
+    def add_tags(self, tags: Sequence[str]) -> None:
         for stitch in self.stitches:
             stitch.add_tags(tags)
 
-    def add_tag(self, tag):
+    def add_tag(self, tag: str) -> None:
         for stitch in self.stitches:
             stitch.add_tag(tag)
 
-    def get_lock_stitches(self, pos, disable_ties=False):
-        if len(self.stitches) < 2:
-            return []
+    def get_lock_stitches(self, pos: Literal['start'] | Literal['end'], disable_ties: bool = False) -> Optional[LockStitches]:
+        if disable_ties or len(self.stitches) < 2:
+            return None
 
         lock_pos = 0 if pos == "start" else 1
-        if disable_ties or self.lock_stitches[lock_pos] is None:
-            return
+        lock_stitches = self.lock_stitches[lock_pos]
+        if lock_stitches is None:
+            return None
 
-        stitches = self.lock_stitches[lock_pos].stitches(self.stitches, pos)
+        stitches = lock_stitches.stitches(self.stitches, pos)
         return stitches
