@@ -7,12 +7,11 @@ toc: true
 ---
 ## Télécharger
 
-Téléchargez la dernière version d'Ink/Stitch pour votre version de macOS :
-
-### Ventura ou plus récent
-
 {% assign tag_name = site.github.latest_release.tag_name %}
 {% assign tag_name = tag_name | slice: 1, tag_name.size %}
+
+Nous prenons en charge les versions de macOS à partir de Monterey (12). Malheureusement, nous ne pouvons pas proposer de version pour les systèmes macOS plus anciens.
+{. notice--info}
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Apple Silicon</a></p>
 

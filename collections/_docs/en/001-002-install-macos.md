@@ -15,20 +15,15 @@ Watch the installation process for <i class="fab fa-apple"></i> [macOS](https://
 
 ## Download
 
-Download the latest release for your macOS version.
-
-### Ventura and higher
-
 {% assign tag_name = site.github.latest_release.tag_name %}
 {% assign tag_name = tag_name | slice: 1, tag_name.size %}
+
+We support macOS versions up from Monterey (12). We sadly cannot provide a release for older macOS sytems.
+{. notice--info}
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Apple Silicon</a></p>
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Intel</a></p>
-
-### High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11), Monterey (12)
-
-<p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-old-osx-x86_64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Intel</a></p>
 
 **Latest release:** [Ink/Stitch v{{ tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d"  }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
