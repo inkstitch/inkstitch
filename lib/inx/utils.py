@@ -33,8 +33,17 @@ def build_environment():
         else:
             env.globals["command_tag"] = '<command location="inx">../bin/inkstitch</command>'
             env.globals["icon_path"] = '../bin/icons/'
+    elif "UV" in os.environ:
+        # User is running inkstitch.py directly as a developer in a venv managed by UV/
+        if sys.platform == "win32":
+            env.globals["command_tag"] = '<command location="inx">../inkstitch_uv.bat</command>'
+            env.globals["icon_path"] = '../icons/'
+        else:
+            env.globals["command_tag"] = '<command location="inx">../inkstitch_uv.sh</command>'
+            env.globals["icon_path"] = '../icons/'
     else:
-        # user is running inkstitch.py directly as a developer
+        # User is running inkstitch.py directly as a developer with dependencies installed systemwide.
+        # If other python runtimes are added to the Makefile, they will need their own cases added here.
         env.globals["command_tag"] = '<command location="inx" interpreter="python">../inkstitch.py</command>'
         env.globals["icon_path"] = '../icons/'
     return env
