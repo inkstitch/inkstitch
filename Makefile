@@ -10,6 +10,19 @@ OS=$(shell uname)
 # lowercase the OS name, required for comparison
 OS := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
 
+# if BUILD variable is not set, then set it based on current OS
+ifndef BUILD
+	ifeq ($(OS),darwin)
+		BUILD := osx
+	else ifeq ($(OS),linux)
+		BUILD := linux
+	else
+		BUILD := windows
+	endif
+endif
+# export BUILD variable to sub-processes
+export BUILD
+
 # Use uv run python when available so commands resolve to the uv-managed venv.
 # Falls back to plain python for environments that use pip/virtualenv directly.
 ifneq ($(shell command -v uv 2>/dev/null),)
@@ -26,7 +39,8 @@ distclean:
 	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip
 
 distlocal:
-	@case ${OS} in "darwin") export BUILD=osx ;; "linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
+	export VERSION=local-build; make distclean && make dist;
+
 manual:
 	make inx
 
