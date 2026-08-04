@@ -1,39 +1,89 @@
+#
+# Usable Makefile notes:
+#     .PHONY means always run this target even if the files are up to date
+#   Variable assignment:
+#     :=  immediate assignment (evaluated when read)
+#      =  lazy assignment (evaluated when used)
+
+# use bash instead of old sh
+SHELL := bash
+
 # used for distlocal
 OS=$(shell uname)
+# lowercase the OS name, required for comparison
+OS := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
+
+# if BUILD variable is not set, then set it based on current OS
+ifndef BUILD
+	ifeq ($(OS),darwin)
+		BUILD := osx
+	else ifeq ($(OS),linux)
+		BUILD := linux
+	else
+		BUILD := windows
+	endif
+endif
+# export BUILD variable to sub-processes
+export BUILD
 
 # Use uv run python when available so commands resolve to the uv-managed venv.
 # Falls back to plain python for environments that use pip/virtualenv directly.
+
+SYSTEM_PYTHON := $(shell command -v python3 2>/dev/null || command -v python 2>/dev/null || command -v py 2>/dev/null)
+
+# Note: to make this more generic to work with any virtual environment, we should check
+#       .venv/bin (linux/mac) or .venv/Scripts (windows) for python executable,
+#       but that would require more logic to determine the correct path based on OS.
 ifneq ($(shell command -v uv 2>/dev/null),)
     PYTHON_EXECUTABLE := uv run python
 else
-    PYTHON_EXECUTABLE := python
+    PYTHON_EXECUTABLE := $(SYSTEM_PYTHON)
 endif
+
+
+# default target - debugging info
+.PHONY: default
+default:
+	@echo "***************************"
+	@echo "SHELL: ${SHELL}"
+	@echo "Operating System: OS: ${OS}"
+	@echo "BUILD: ${BUILD}"
+	@echo "SYSTEM_PYTHON: ${SYSTEM_PYTHON}"
+	@echo "PYTHON_EXECUTABLE: ${PYTHON_EXECUTABLE}"
 
 dist: version locales inx
 	PYTHON="$(PYTHON_EXECUTABLE)" bash bin/build-python
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip
+	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip *.deb *.rpm VERSION
+	find . -type d -name "__pycache__" -exec rm -r {} +
 
 distlocal:
-	@case ${OS} in "Darwin") export BUILD=osx ;; "Linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
+# 	export VERSION=local-build; make distclean && make dist;
+	$(MAKE) distclean
+	$(MAKE) dist VERSION=local-build
+
 manual:
-	make inx
+	@echo "This target is deprecated. Use 'make inx' instead."
+	$(MAKE) inx
 
 .PHONY: inx
 inx: version locales
 	$(PYTHON_EXECUTABLE) bin/generate-inx-files;
 
+# see action: .github/workflows/translations.yml and https://translate.inkstitch.org
 .PHONY: messages.po
 messages.po: inx
 	rm -f messages.po
 	xgettext inx/*.inx --its=its/inx.its -o messages-inx.po
+
 	# There seems to be no proper way to set the charset to utf-8
 	sed -i 's/charset=CHARSET/charset=UTF-8/g' messages-inx.po
 	bin/pystitch-gettext > pystitch-format-descriptions.py
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
 	bin/inkstitch-tiles-gettext > inkstitch-tiles-metadata.py
+
 	# After the inx files are finished building, we don't need the src/ folder anymore.
 	# We don't want babel to grab possible translation strings from that folder, so let's remove it
 	rm -rf src/
@@ -56,6 +106,10 @@ locales:
 version:
 	bash bin/generate-version-file
 
+# -----------------------------------------------------------
+### Common development targets
+
+# flake8 - check python code style
 .PHONY: style
 style:
 	PYTHON="$(PYTHON_EXECUTABLE)" bash -x bin/style-check
@@ -67,3 +121,24 @@ type-check mypy:
 .PHONY: test
 test:
 	$(PYTHON_EXECUTABLE) -m pytest
+
+# show all files in the repo that are ignored by git
+# - skip .venv folder
+.PHONY: ignored
+ignored:
+	@git ls-files --others --ignored --exclude-standard | grep -v .venv
+
+
+# --------------------------------------------------------------------------------------------------------
+# example of how to use uv to create a venv and install wxPython 4.2.5 on Ubuntu 24.04
+# - it is still very tricky to get precompiled wxPython 4.2.5 installed on Ubuntu 24.04, so this target is provided as a reference for developers who want to try it out
+.PHONY: uv-ubuntu-24.04
+uv-ubuntu-24.04:
+	uv python pin 3.12
+	uv venv
+	uv pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04 wxPython==4.2.5
+	# overwrite the wxPython version to 4.2.5 in the lock file, so that uv doesn't try to upgrade it to 4.3.0 when syncing
+	uv lock --find-links https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04 --exclude-newer-package wxPython=2026-01-01
+	uv sync
+
+
