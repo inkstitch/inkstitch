@@ -53,7 +53,8 @@ dist: version locales inx
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip
+	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip *.deb *.rpm VERSION
+	find . -type d -name "__pycache__" -exec rm -r {} +
 
 distlocal:
 	export VERSION=local-build; make distclean && make dist;
