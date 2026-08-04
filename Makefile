@@ -69,15 +69,18 @@ manual:
 inx: version locales
 	$(PYTHON_EXECUTABLE) bin/generate-inx-files;
 
+# see action: .github/workflows/translations.yml and https://translate.inkstitch.org
 .PHONY: messages.po
 messages.po: inx
 	rm -f messages.po
 	xgettext inx/*.inx --its=its/inx.its -o messages-inx.po
+
 	# There seems to be no proper way to set the charset to utf-8
 	sed -i 's/charset=CHARSET/charset=UTF-8/g' messages-inx.po
 	bin/pystitch-gettext > pystitch-format-descriptions.py
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
 	bin/inkstitch-tiles-gettext > inkstitch-tiles-metadata.py
+
 	# After the inx files are finished building, we don't need the src/ folder anymore.
 	# We don't want babel to grab possible translation strings from that folder, so let's remove it
 	rm -rf src/
