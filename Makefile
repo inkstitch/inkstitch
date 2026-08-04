@@ -57,7 +57,9 @@ distclean:
 	find . -type d -name "__pycache__" -exec rm -r {} +
 
 distlocal:
-	export VERSION=local-build; make distclean && make dist;
+# 	export VERSION=local-build; make distclean && make dist;
+	$(MAKE) distclean
+	$(MAKE) dist VERSION=local-build
 
 manual:
 	make inx
