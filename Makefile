@@ -25,11 +25,25 @@ export BUILD
 
 # Use uv run python when available so commands resolve to the uv-managed venv.
 # Falls back to plain python for environments that use pip/virtualenv directly.
+
+SYSTEM_PYTHON := $(shell command -v python3 2>/dev/null || command -v python 2>/dev/null || command -v py 2>/dev/null)
+
 ifneq ($(shell command -v uv 2>/dev/null),)
     PYTHON_EXECUTABLE := uv run python
 else
-    PYTHON_EXECUTABLE := python
+    PYTHON_EXECUTABLE := $(SYSTEM_PYTHON)
 endif
+
+
+# default target - debugging info
+.PHONY: default
+default:
+	@echo "***************************"
+	@echo "SHELL: ${SHELL}"
+	@echo "Operating System: OS: ${OS}"
+	@echo "BUILD: ${BUILD}"
+	@echo "SYSTEM_PYTHON: ${SYSTEM_PYTHON}"
+	@echo "PYTHON_EXECUTABLE: ${PYTHON_EXECUTABLE}"
 
 dist: version locales inx
 	PYTHON="$(PYTHON_EXECUTABLE)" bash bin/build-python
