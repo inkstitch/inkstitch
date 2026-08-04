@@ -31,6 +31,9 @@ export BUILD
 
 SYSTEM_PYTHON := $(shell command -v python3 2>/dev/null || command -v python 2>/dev/null || command -v py 2>/dev/null)
 
+# Note: to make this more generic to work with any virtual environment, we should check
+#       .venv/bin (linux/mac) or .venv/Scripts (windows) for python executable,
+#       but that would require more logic to determine the correct path based on OS.
 ifneq ($(shell command -v uv 2>/dev/null),)
     PYTHON_EXECUTABLE := uv run python
 else
@@ -124,3 +127,18 @@ test:
 .PHONY: ignored
 ignored:
 	@git ls-files --others --ignored --exclude-standard | grep -v .venv
+
+
+# --------------------------------------------------------------------------------------------------------
+# example of how to use uv to create a venv and install wxPython 4.2.5 on Ubuntu 24.04
+# - it is still very tricky to get precompiled wxPython 4.2.5 installed on Ubuntu 24.04, so this target is provided as a reference for developers who want to try it out
+.PHONY: uv-ubuntu-24.04
+uv-ubuntu-24.04:
+	uv python pin 3.12
+	uv venv
+	uv pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04 wxPython==4.2.5
+	# overwrite the wxPython version to 4.2.5 in the lock file, so that uv doesn't try to upgrade it to 4.3.0 when syncing
+	uv lock --find-links https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04 --exclude-newer-package wxPython=2026-01-01
+	uv sync
+
+
