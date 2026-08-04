@@ -1,5 +1,7 @@
 # used for distlocal
 OS=$(shell uname)
+# lowercase the OS name, required for comparison
+OS := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
 
 # Use uv run python when available so commands resolve to the uv-managed venv.
 # Falls back to plain python for environments that use pip/virtualenv directly.
@@ -17,7 +19,7 @@ distclean:
 	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip
 
 distlocal:
-	@case ${OS} in "Darwin") export BUILD=osx ;; "Linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
+	@case ${OS} in "darwin") export BUILD=osx ;; "linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;
 manual:
 	make inx
 
