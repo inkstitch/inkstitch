@@ -62,7 +62,8 @@ distlocal:
 	$(MAKE) dist VERSION=local-build
 
 manual:
-	make inx
+	@echo "This target is deprecated. Use 'make inx' instead."
+	$(MAKE) inx
 
 .PHONY: inx
 inx: version locales
