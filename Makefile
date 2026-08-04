@@ -103,6 +103,10 @@ locales:
 version:
 	bash bin/generate-version-file
 
+# -----------------------------------------------------------
+### Common development targets
+
+# flake8 - check python code style
 .PHONY: style
 style:
 	PYTHON="$(PYTHON_EXECUTABLE)" bash -x bin/style-check
@@ -114,3 +118,9 @@ type-check mypy:
 .PHONY: test
 test:
 	$(PYTHON_EXECUTABLE) -m pytest
+
+# show all files in the repo that are ignored by git
+# - skip .venv folder
+.PHONY: ignored
+ignored:
+	@git ls-files --others --ignored --exclude-standard | grep -v .venv
