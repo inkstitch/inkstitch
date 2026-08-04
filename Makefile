@@ -1,3 +1,10 @@
+#
+# Usable Makefile notes:
+#     .PHONY means always run this target even if the files are up to date
+#   Variable assignment:
+#     :=  immediate assignment (evaluated when read)
+#      =  lazy assignment (evaluated when used)
+
 # used for distlocal
 OS=$(shell uname)
 # lowercase the OS name, required for comparison
