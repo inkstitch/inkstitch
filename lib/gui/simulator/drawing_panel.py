@@ -279,8 +279,22 @@ class DrawingPanel(wx.Panel):
             npp_size = global_settings['simulator_npp_size'] * PIXELS_PER_MM * self.PIXEL_DENSITY
             npp_brush = canvas.CreateBrush(wx.Brush(pen.GetColour()))
             canvas.SetBrush(npp_brush)
-            for stitch in stitches:
-                canvas.DrawEllipse(stitch[0]-(npp_size / 2), stitch[1]-(npp_size / 2), npp_size, npp_size)
+            # Drawing thousands of ellipses is expensive. Use fast squares by
+            # default and only switch to circles when heavily zoomed in.
+            canvas.SetPen(wx.TRANSPARENT_PEN)
+            square_size = max(1.0, float(npp_size))
+            half_size = square_size / 2.0
+            marker_screen_size = square_size * self.zoom / self.PIXEL_DENSITY
+
+            if marker_screen_size >= 6.0:
+                for x, y in stitches:
+                    canvas.DrawEllipse(x - half_size, y - half_size, square_size, square_size)
+            elif stitches:
+                # Batch draw all markers as a single filled path to reduce draw calls.
+                path = canvas.CreatePath()
+                for x, y in stitches:
+                    path.AddRectangle(x - half_size, y - half_size, square_size, square_size)
+                canvas.FillPath(path)
 
     def clear(self):
         self.loaded = False
