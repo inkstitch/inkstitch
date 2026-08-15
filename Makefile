@@ -130,15 +130,13 @@ ignored:
 
 
 # --------------------------------------------------------------------------------------------------------
-# example of how to use uv to create a venv and install wxPython 4.2.5 on Ubuntu 24.04
-# - it is still very tricky to get precompiled wxPython 4.2.5 installed on Ubuntu 24.04, so this target is provided as a reference for developers who want to try it out
+# example of how to use uv to create a venv and install  wxPython==4.2.5 on Ubuntu 24.04
+# - assuming wxPython>=4.3.0 is disabled for Linux in pyproject.toml !!!
 .PHONY: uv-ubuntu-24.04
 uv-ubuntu-24.04:
 	uv python pin 3.12
-	uv venv
-	uv pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04 wxPython==4.2.5
-	# overwrite the wxPython version to 4.2.5 in the lock file, so that uv doesn't try to upgrade it to 4.3.0 when syncing
-	uv lock --find-links https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04 --exclude-newer-package wxPython=2026-01-01
-	uv sync
+	uv sync --find-links https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04
+
+
 
 

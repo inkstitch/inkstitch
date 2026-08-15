@@ -11,7 +11,9 @@ dependencies = [
     # - see Makefile for an example of how to use uv to create a venv and install wxPython 4.2.5 on Ubuntu 24.04
     # Prebuilt packages: https://wxpython.org/pages/downloads/index.html
     #                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
-    "wxPython>=4.1.1",
+    # "wxPython>=4.1.1,<4.3.0",
+    "wxPython==4.2.5; sys_platform == 'linux'", # latest precompiled version for Linux
+    "wxPython>=4.1.1; sys_platform!= 'linux'",
     "networkx",
     "shapely>=2.0.0",
     "lxml",
