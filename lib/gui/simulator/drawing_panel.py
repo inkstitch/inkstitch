@@ -85,9 +85,11 @@ class DrawingPanel(wx.Panel):
         # to allow the status bar and control panel to get squished.
         self.SetMinSize((300, 300))
         self.SetBackgroundColour('#FFFFFF')
+        self.SetBackgroundStyle(wx.BG_STYLE_PAINT)
         self.SetDoubleBuffered(True)
 
         self.loading = False
+        self.loaded = False
         self.loading_indicator = LoadingIndicator()
 
         self.animating = False
@@ -102,6 +104,8 @@ class DrawingPanel(wx.Panel):
         self.page_specs: dict = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
+        self.stitch_buffer = None
+        self.buffer_pan = None
 
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
@@ -112,18 +116,23 @@ class DrawingPanel(wx.Panel):
         self.speed = global_settings['simulator_speed']
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
-        self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
+        self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_background)
+        self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
-        self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_TIMER, self.animate)
 
         if self.stitch_plan is not None:
             self.load(self.stitch_plan)
 
+    def on_erase_background(self, event):
+        pass
+
     def on_resize(self, event):
-        self.choose_zoom_and_pan()
+        self.choose_zoom_and_pan(event)
+        self.invalidate_stitch_buffer()
         self.Refresh()
+        event.Skip()
 
     def clamp_current_stitch(self):
         if self.current_stitch < 1:
@@ -169,15 +178,50 @@ class DrawingPanel(wx.Panel):
         self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
 
     def OnPaint(self, e):
-        dc = wx.PaintDC(self)
-        canvas = wx.GraphicsContext.Create(dc)
+        dc = wx.AutoBufferedPaintDC(self)
+        dc.SetBackground(wx.Brush(self.GetBackgroundColour()))
+        dc.Clear()
 
-        if self.stitch_plan is not None:
-            self.draw_stitches(canvas)
-            self.draw_scale(canvas)
+        canvas = wx.GraphicsContext.Create(dc)
 
         if self.loading:
             self.loading_indicator.paint(canvas)
+
+        if not self.loaded or self.stitch_plan is None:
+            return
+
+        if self.stitch_buffer is None:
+            self.rebuild_stitch_buffer()
+
+        if self.stitch_buffer is None:
+            return
+
+        buffer_offset = (
+            int(self.pan[0] - self.buffer_pan[0]),
+            int(self.pan[1] - self.buffer_pan[1])
+        )
+        dc.DrawBitmap(self.stitch_buffer, *buffer_offset, True)
+
+        self.draw_scale(canvas)
+
+    def invalidate_stitch_buffer(self):
+        self.stitch_buffer = None
+        self.buffer_pan = None
+
+    def rebuild_stitch_buffer(self):
+        width, height = self.GetClientSize()
+        if width < 1 or height < 1:
+            return
+
+        self.stitch_buffer = wx.Bitmap(width, height)
+        memory_dc = wx.MemoryDC(self.stitch_buffer)
+        memory_dc.SetBackground(wx.Brush(self.GetBackgroundColour()))
+        memory_dc.Clear()
+        canvas = wx.GraphicsContext.Create(memory_dc)
+        self.draw_stitches(canvas)
+        del canvas
+        del memory_dc
+        self.buffer_pan = self.pan
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -333,9 +377,12 @@ class DrawingPanel(wx.Panel):
 
     def clear(self):
         self.stitch_plan = None
+        self.loaded = False
+        self.invalidate_stitch_buffer()
         self.Refresh()
 
     def load(self, stitch_plan: StitchPlan) -> None:
+        self.invalidate_stitch_buffer()
         self.stitch_plan = stitch_plan
         self.current_stitch = 1
         self.direction = 1
@@ -360,6 +407,7 @@ class DrawingPanel(wx.Panel):
             ),
             1
         )
+        self.loaded = True
         self.go()
         if hasattr(self.view_panel, 'info_panel') and self.view_panel.info_panel is not None:
             self.view_panel.info_panel.update()
@@ -367,10 +415,14 @@ class DrawingPanel(wx.Panel):
     def set_page_specs(self, page_specs):
         self.SetBackgroundColour(page_specs['desk_color'])
         self.page_specs = page_specs
+        self.invalidate_stitch_buffer()
+        self.Refresh()
 
     def set_background_color(self, color):
         self.background_color = color
         self._update_background_color()
+        self.invalidate_stitch_buffer()
+        self.Refresh()
 
     def _update_background_color(self):
         if not self.page_specs:
@@ -384,6 +436,8 @@ class DrawingPanel(wx.Panel):
     def set_show_page(self, show_page):
         self.show_page = show_page
         self._update_background_color()
+        self.invalidate_stitch_buffer()
+        self.Refresh()
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
@@ -435,6 +489,8 @@ class DrawingPanel(wx.Panel):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
         for pen in self.pens:
             pen.SetWidth(int(line_width))
+        self.invalidate_stitch_buffer()
+        self.Refresh()
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
@@ -506,6 +562,7 @@ class DrawingPanel(wx.Panel):
         statusbar = self.GetTopLevelParent().statusbar
         statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()
+        self.invalidate_stitch_buffer()
         self.Refresh()
 
     def restart(self):
@@ -527,6 +584,8 @@ class DrawingPanel(wx.Panel):
             self.CaptureMouse()
             self.drag_start = event.GetPosition()
             self.drag_original_pan = self.pan
+            if self.stitch_buffer is None:
+                self.rebuild_stitch_buffer()
             self.Bind(wx.EVT_MOTION, self.on_drag)
             self.Bind(wx.EVT_MOUSE_CAPTURE_LOST, self.on_drag_end)
             self.Bind(wx.EVT_LEFT_UP, self.on_drag_end)
@@ -541,6 +600,9 @@ class DrawingPanel(wx.Panel):
     def on_drag_end(self, event):
         if self.HasCapture():
             self.ReleaseMouse()
+
+        self.invalidate_stitch_buffer()
+        self.Refresh()
 
         self.Unbind(wx.EVT_MOTION)
         self.Unbind(wx.EVT_MOUSE_CAPTURE_LOST)
@@ -585,6 +647,7 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
+        self.invalidate_stitch_buffer()
         self.Refresh()
 
     def set_loading(self, loading: bool) -> None:
