@@ -286,14 +286,14 @@ class DrawingPanel(wx.Panel):
             half_size = square_size / 2.0
             marker_screen_size = square_size * self.zoom / self.PIXEL_DENSITY
 
-            if marker_screen_size >= 6.0:
-                for x, y in stitches:
-                    canvas.DrawEllipse(x - half_size, y - half_size, square_size, square_size)
-            elif stitches:
+            if stitches:
                 # Batch draw all markers as a single filled path to reduce draw calls.
                 path = canvas.CreatePath()
                 for x, y in stitches:
-                    path.AddRectangle(x - half_size, y - half_size, square_size, square_size)
+                    if marker_screen_size >= 6.0:
+                        path.AddEllipse(x - half_size, y - half_size, square_size, square_size)
+                    else:
+                        path.AddRectangle(x - half_size, y - half_size, square_size, square_size)
                 canvas.FillPath(path)
 
     def clear(self):
