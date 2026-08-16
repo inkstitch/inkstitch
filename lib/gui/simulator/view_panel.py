@@ -159,12 +159,12 @@ class ViewPanel(ScrolledPanel):
         self.toggle_npp(event)
 
     def toggle_npp(self, event):
-        self.drawing_panel.Refresh()
         global_settings['npp_button_status'] = self.btnNpp.GetValue()
+        self.drawing_panel.Refresh()
 
     def on_cursor_button(self, event):
-        self.drawing_panel.Refresh()
         global_settings['display_crosshair'] = self.btnCursor.GetValue()
+        self.drawing_panel.Refresh()
 
     def toggle_page(self, event):
         debug.log("toggle page")
