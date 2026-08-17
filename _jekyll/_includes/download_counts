@@ -6,7 +6,6 @@
 {%- assign linuxtarxz = 0 -%}
 {%- assign windows = 0 -%}
 {%- assign osx = 0 -%}
-{%- assign oldosx = 0 -%}
 
 {% for asset in assets %}
     {%- if asset.name contains ".tar.xz" -%}
@@ -24,9 +23,6 @@
 
     {%- if asset.name contains "osx" -%}
         {%- assign osx = osx | plus: asset.download_count %}
-        {%- if asset.name contains "old" -%}
-            {%- assign oldosx = oldosx | plus: asset.download_count %}
-        {%- endif -%}
     {%- endif -%}
 
     {%- if asset.name contains "windows" -%}
@@ -44,8 +40,6 @@
   * SH: {{ linuxsh | delimited }}
   * TAR.XZ: {{ linuxtarxz }}
 * **macOS: {{ osx | delimited }}**
-  * Ventura +: {{ osx | minus: oldosx | delimited }}
-  * High Sierra +: {{ oldosx | delimited }}
 * **Windows: {{ windows | delimited }}**
 {: .monospace }
 
@@ -60,14 +54,17 @@
 {%- endfor -%}
 {% endcomment %}
 
-{% assign release_ids = "225392832,223823050,223803551,167470890,110551039,104369751,71601622,56965572,56961429,56773344,42376616" | split: "," -%}
+{% assign release_ids = "362987889,225392832,223823050,223803551,167470890,110551039,104369751,71601622,56965572,56961429,56773344,42376616" | split: "," -%}
 {%- for release_id in release_ids -%}
-{%- assign release = site.github.releases | where: "id", release_id -%}
+{%- assign release = site.github.releases | where: "id", release_id | first -%}
+
+{% if release %}
 {%- assign downloads = 0 -%}
-{%- for asset in release[0].assets -%}
+{%- for asset in release.assets -%}
     {%- assign downloads = downloads | plus: asset.download_count %}
 {%- endfor -%}
-* {{ release[0].tag_name }} ({{ release[0].published_at | date: "%Y-%m-%d" }}): {{ downloads | delimited }}
+* {{ release.tag_name }} ({{ release.published_at | date: "%Y-%m-%d" }}): {{ downloads | delimited }}
+{% endif %}
 {% endfor -%}
 {: .monospace }
 
