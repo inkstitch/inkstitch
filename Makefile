@@ -8,16 +8,18 @@
 # use bash instead of old sh
 SHELL := bash
 
-# used for distlocal
-OS=$(shell uname)
-# lowercase the OS name, required for comparison
-OS := $(shell echo $(OS) | tr '[:upper:]' '[:lower:]')
+# Detect OS cleanly without overwriting the environment's OS variable.
+ifeq ($(OS),Windows_NT) # on Windows, the OS variable is set to Windows_NT
+	DETECTED_OS := windows
+else                    # otherwise OS is not set
+	DETECTED_OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
+endif
 
 # if BUILD variable is not set, then set it based on current OS
 ifndef BUILD
-	ifeq ($(OS),darwin)
+	ifeq ($(DETECTED_OS),darwin)
 		BUILD := osx
-	else ifeq ($(OS),linux)
+	else ifeq ($(DETECTED_OS),linux)
 		BUILD := linux
 	else
 		BUILD := windows
@@ -46,7 +48,7 @@ endif
 default:
 	@echo "***************************"
 	@echo "SHELL: ${SHELL}"
-	@echo "Operating System: OS: ${OS}"
+	@echo "Operating System: ${DETECTED_OS}"
 	@echo "BUILD: ${BUILD}"
 	@echo "SYSTEM_PYTHON: ${SYSTEM_PYTHON}"
 	@echo "PYTHON_EXECUTABLE: ${PYTHON_EXECUTABLE}"
