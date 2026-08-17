@@ -25,21 +25,35 @@ ifndef BUILD
 		BUILD := windows
 	endif
 endif
-# export BUILD variable to sub-processes
+# Keep BUILD available to shell build scripts and standalone targets such as
+# BUILD=linux32 make version. INX mode is controlled separately by BUILD_DIST.
 export BUILD
 
-# Use uv run python when available so commands resolve to the uv-managed venv.
-# Falls back to plain python for environments that use pip/virtualenv directly.
+# Detect Python using standard virtual environment conventions.
+ifeq ($(OS),Windows_NT)
+	VENV_BIN := Scripts
+	PYTHON_EXE := python.exe
+else
+	VENV_BIN := bin
+	PYTHON_EXE := python
+endif
 
+ifneq ($(VIRTUAL_ENV),)
+	ACTIVE_PYTHON := $(VIRTUAL_ENV)/$(VENV_BIN)/$(PYTHON_EXE)
+endif
+
+LOCAL_VENV_PYTHON := $(firstword $(wildcard .venv/$(VENV_BIN)/$(PYTHON_EXE) venv/$(VENV_BIN)/$(PYTHON_EXE)))
 SYSTEM_PYTHON := $(shell command -v python3 2>/dev/null || command -v python 2>/dev/null || command -v py 2>/dev/null)
 
-# Note: to make this more generic to work with any virtual environment, we should check
-#       .venv/bin (linux/mac) or .venv/Scripts (windows) for python executable,
-#       but that would require more logic to determine the correct path based on OS.
-ifneq ($(shell command -v uv 2>/dev/null),)
-    PYTHON_EXECUTABLE := uv run python
+# Allow an explicitly supplied interpreter to take precedence over auto-detection.
+ifndef PYTHON_EXECUTABLE
+ifneq ($(wildcard $(ACTIVE_PYTHON)),)
+	PYTHON_EXECUTABLE := $(ACTIVE_PYTHON)
+else ifneq ($(LOCAL_VENV_PYTHON),)
+	PYTHON_EXECUTABLE := $(LOCAL_VENV_PYTHON)
 else
-    PYTHON_EXECUTABLE := $(SYSTEM_PYTHON)
+	PYTHON_EXECUTABLE := $(SYSTEM_PYTHON)
+endif
 endif
 
 
@@ -53,7 +67,15 @@ default:
 	@echo "SYSTEM_PYTHON: ${SYSTEM_PYTHON}"
 	@echo "PYTHON_EXECUTABLE: ${PYTHON_EXECUTABLE}"
 
-dist: version locales inx
+# BUILD identifies the target platform (linux, osx, or windows) and is also used
+# by build scripts. It must not select the INX layout: make inx is a development
+# operation, even when BUILD is set automatically.
+# BUILD_DIST is a separate flag for distribution builds. It makes INX generation
+# use packaged paths (../bin/...) and excludes development-only extensions.
+# This separation was introduced because testing BUILD alone made every regular
+# make inx look like a distribution build.
+dist:
+	BUILD_DIST=true $(MAKE) version locales inx
 	PYTHON="$(PYTHON_EXECUTABLE)" bash bin/build-python
 	bash bin/build-distribution-archives
 
