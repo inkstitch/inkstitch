@@ -154,12 +154,19 @@ ignored:
 
 
 # --------------------------------------------------------------------------------------------------------
-# example of how to use uv to create a venv and install  wxPython==4.2.5 on Ubuntu 24.04
-# - assuming wxPython>=4.3.0 is disabled for Linux in pyproject.toml !!!
+# example of how to use uv to create a venv and install wxPython==4.2.5 on Ubuntu 24.04
+# - installs wxPython explicitly via pip instead of relying on pyproject.toml
+#   pinning it with "==", since that pin can be missing or later removed
+WXPYTHON_VERSION := 4.2.5
+WXPYTHON_URL := https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04
+
 .PHONY: uv-ubuntu-24.04
 uv-ubuntu-24.04:
 	uv python pin 3.12
-	uv sync --find-links https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04
+	uv venv
+	uv pip install -f "$(WXPYTHON_URL)" "wxPython==$(WXPYTHON_VERSION)"
+	uv lock --find-links "$(WXPYTHON_URL)"
+	uv sync --find-links "$(WXPYTHON_URL)"
 
 
 
