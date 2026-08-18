@@ -69,6 +69,10 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
 
         f.write(f'# python version: {sys.version}\n')   # python version
 
+        # python interpreter that generated this script (used as first choice at runtime)
+        f.write(f'export SCRIPT_PYTHON="{sys.executable}"\n')
+        f.write(find_python_interpreter())  # fall back to venv/python3/py/python if SCRIPT_PYTHON is gone
+
         myargs = " ".join(sys.argv[1:])
         f.write(f'# script: {sys.argv[0]}  arguments: {myargs}\n')  # script name and arguments
 
@@ -108,7 +112,7 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
         f.write('export INKSTITCH_OFFLINE_SCRIPT="True"\n')
 
         f.write('# call inkstitch\n')
-        f.write(f'python3 inkstitch.py {myargs}\n')
+        f.write(f'"$INKSTITCH_PYTHON" inkstitch.py {myargs}\n')
     bash_file.chmod(0o0755)  # make file executable, hopefully ignored on Windows
 
 
@@ -138,6 +142,33 @@ while getopts ":dp" opt; do
         ;;
   esac
 done
+
+'''
+
+
+def find_python_interpreter() -> str:
+    return r'''
+# pick python interpreter to run inkstitch.py:
+#   1) SCRIPT_PYTHON - the interpreter that generated this script, if it still exists
+#   2) a .venv next to this script (Linux/macOS or Windows layout)
+#   3) python3 / py / python found in PATH
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -x "$SCRIPT_PYTHON" ]; then
+    INKSTITCH_PYTHON="$SCRIPT_PYTHON"
+elif [ -x "$SCRIPT_DIR/.venv/bin/python" ]; then
+    INKSTITCH_PYTHON="$SCRIPT_DIR/.venv/bin/python"
+elif [ -x "$SCRIPT_DIR/.venv/Scripts/python.exe" ]; then
+    INKSTITCH_PYTHON="$SCRIPT_DIR/.venv/Scripts/python.exe"
+elif command -v python3 >/dev/null 2>&1; then
+    INKSTITCH_PYTHON="python3"
+elif command -v py >/dev/null 2>&1; then
+    INKSTITCH_PYTHON="py"
+elif command -v python >/dev/null 2>&1; then
+    INKSTITCH_PYTHON="python"
+else
+    echo "ERROR: no python interpreter found (tried SCRIPT_PYTHON, .venv, python3, py, python)" >&2
+    exit 1
+fi
 
 '''
 
