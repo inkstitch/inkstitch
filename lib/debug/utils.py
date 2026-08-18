@@ -58,9 +58,20 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
         print("WARN: input svg file is same as output svg file. No script created in write debug script.", file=sys.stderr)
         return
 
+    if not os.access(debug_script_dir, os.W_OK):
+        logger.warning(f"No write permission to '{debug_script_dir}'. No script created in write debug script.")
+        return
+
     import shutil  # to copy svg file
     bash_file = debug_script_dir / bash_name
 
+    try:
+        _write_offline_debug_script(bash_file, bash_svg, svg_file, debug_script_dir, shutil)
+    except OSError as e:
+        logger.error(f"Failed to write offline debug script to '{debug_script_dir}': {e}")
+
+
+def _write_offline_debug_script(bash_file: Path, bash_svg: Path, svg_file: Path, debug_script_dir: Path, shutil) -> None:
     with open(bash_file, 'w') as f:  # "w" text mode, automatic conversion of \n to os.linesep
         f.write('#!/usr/bin/env bash\n')
 
