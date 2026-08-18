@@ -76,7 +76,7 @@ def _write_offline_debug_script(bash_file: Path, bash_svg: Path, svg_file: Path,
         f.write('#!/usr/bin/env bash\n')
 
         # cmd line arguments for debugging and profiling
-        f.write(bash_parser())  # parse cmd line arguments: -d -p
+        f.write(bash_arg_parser())  # parse cmd line arguments: -d -p
 
         f.write(f'# python version: {sys.version}\n')   # python version
 
@@ -95,13 +95,11 @@ def _write_offline_debug_script(bash_file: Path, bash_svg: Path, svg_file: Path,
 
         # python module path
         f.write('# python sys.path:\n')
-        for p in sys.path:
-            f.write(f'#   {p}\n')
+        f.writelines(f'#   {p}\n' for p in sys.path)
 
         # see static void set_extensions_env() in inkscape/src/inkscape-main.cpp
         f.write('# PYTHONPATH:\n')
-        for p in os.environ.get('PYTHONPATH', '').split(os.pathsep):  # PYTHONPATH to list
-            f.write(f'#   {p}\n')
+        f.writelines(f'#   {p}\n' for p in os.environ.get('PYTHONPATH', '').split(os.pathsep))  # PYTHONPATH to list
 
         f.write(f'# copy {svg_file} to {bash_svg}\n#\n')
         shutil.copy(svg_file, debug_script_dir / bash_svg)  # copy file to bash_svg
@@ -127,21 +125,29 @@ def _write_offline_debug_script(bash_file: Path, bash_svg: Path, svg_file: Path,
     bash_file.chmod(0o0755)  # make file executable, hopefully ignored on Windows
 
 
-def bash_parser() -> str:
+def bash_arg_parser() -> str:
     return r'''
 set -e   #  exit on error
 
 # parse cmd line arguments:
 #   -d enable debugging
 #   -p enable profiling
+#   -h show help and exit
 #             ":..." - silent error reporting
-while getopts ":dp" opt; do
+while getopts ":dph" opt; do
   case $opt in
     d)
         export INKSTITCH_DEBUG_ENABLE="True"
         ;;
     p)
         export INKSTITCH_PROFILE_ENABLE="True"
+        ;;
+    h)
+        echo "Usage: $(basename "$0") [-d] [-p] [-h]"
+        echo "  -d  enable debugging"
+        echo "  -p  enable profiling"
+        echo "  -h  show this help and exit"
+        exit 0
         ;;
     \?)
         echo "Invalid option: -$OPTARG" >&2
