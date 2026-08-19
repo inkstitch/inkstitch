@@ -35,6 +35,10 @@ class DrawingPanel(wx.Panel):
     # corresponding amount during rendering.
     PIXEL_DENSITY = 10
 
+    # Render beyond the visible area so that panning can reuse the cached
+    # image until the viewport approaches its edge.
+    RENDER_CACHE_PADDING = 200
+
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -70,6 +74,8 @@ class DrawingPanel(wx.Panel):
         self.render_cache_pan = None
         self.render_cache_zoom = None
         self.render_cache_state = None
+        self.render_cache_size = None
+        self.render_cache_padding = None
         self.zoom_rebuild_timer = None
 
         # Set initial values as they may be accessed before a stitch plan is available
@@ -154,18 +160,19 @@ class DrawingPanel(wx.Panel):
         if self.stitch_render_cache is None:
             return
 
-        buffer_offset = (
-            int(self.pan[0] - self.zoom / self.render_cache_zoom * self.render_cache_pan[0]),
-            int(self.pan[1] - self.zoom / self.render_cache_zoom * self.render_cache_pan[1])
-        )
-        buffer_scale = self.zoom / self.render_cache_zoom
-        width, height = self.GetClientSize()
+        cache_offset, cache_scale = self.get_stitch_render_cache_transform()
+        if not self.stitch_render_cache_covers_viewport(cache_offset, cache_scale):
+            self.rebuild_stitch_render_cache()
+            cache_offset, cache_scale = self.get_stitch_render_cache_transform()
+
+        cache_width, cache_height = self.render_cache_size
+        cache_offset = tuple(map(int, cache_offset))
         canvas = wx.GraphicsContext.Create(dc)
         canvas.DrawBitmap(
             self.stitch_render_cache,
-            *buffer_offset,
-            int(width * buffer_scale),
-            int(height * buffer_scale)
+            *cache_offset,
+            int(cache_width * cache_scale),
+            int(cache_height * cache_scale)
         )
 
         self.draw_scale(canvas)
@@ -178,6 +185,8 @@ class DrawingPanel(wx.Panel):
         self.render_cache_pan = None
         self.render_cache_zoom = None
         self.render_cache_state = None
+        self.render_cache_size = None
+        self.render_cache_padding = None
 
     def rebuild_after_zoom(self):
         self.zoom_rebuild_timer = None
@@ -190,17 +199,46 @@ class DrawingPanel(wx.Panel):
         if width < 1 or height < 1:
             return
 
-        self.stitch_render_cache = wx.Bitmap(width, height)
+        content_scale_factor = self.GetContentScaleFactor()
+        padding = (self.RENDER_CACHE_PADDING, self.RENDER_CACHE_PADDING)
+        cache_size = (width + 2 * padding[0], height + 2 * padding[1])
+        bitmap_size = tuple(map(int, (cache_size[0] * content_scale_factor, cache_size[1] * content_scale_factor)))
+
+        self.stitch_render_cache = wx.Bitmap(*bitmap_size)
         memory_dc = wx.MemoryDC(self.stitch_render_cache)
         memory_dc.SetBackground(wx.Brush(self.GetBackgroundColour()))
         memory_dc.Clear()
         canvas = wx.GraphicsContext.Create(memory_dc)
+        transform = canvas.GetTransform()
+        transform.Scale(content_scale_factor, content_scale_factor)
+        transform.Translate(*padding)
+        canvas.SetTransform(transform)
         self.draw_stitches(canvas)
         del canvas
         del memory_dc
         self.render_cache_pan = self.pan
         self.render_cache_zoom = self.zoom
         self.render_cache_state = self.get_stitch_render_cache_state()
+        self.render_cache_size = cache_size
+        self.render_cache_padding = padding
+
+    def get_stitch_render_cache_transform(self):
+        cache_scale = self.zoom / self.render_cache_zoom
+        cache_offset = (
+            self.pan[0] - cache_scale * (self.render_cache_pan[0] + self.render_cache_padding[0]),
+            self.pan[1] - cache_scale * (self.render_cache_pan[1] + self.render_cache_padding[1])
+        )
+        return cache_offset, cache_scale
+
+    def stitch_render_cache_covers_viewport(self, cache_offset, cache_scale):
+        width, height = self.GetClientSize()
+        cache_width, cache_height = self.render_cache_size
+        return (
+            cache_offset[0] <= 0
+            and cache_offset[1] <= 0
+            and cache_offset[0] + cache_width * cache_scale >= width
+            and cache_offset[1] + cache_height * cache_scale >= height
+        )
 
     def get_stitch_render_cache_state(self):
         return (
@@ -211,7 +249,8 @@ class DrawingPanel(wx.Panel):
             global_settings['simulator_npp_size'],
             global_settings['simulator_crosshair_radius'],
             global_settings['simulator_crosshair_thickness'],
-            global_settings['simulator_crosshair_colour']
+            global_settings['simulator_crosshair_colour'],
+            self.GetContentScaleFactor()
         )
 
     def draw_page(self, canvas):
@@ -280,7 +319,8 @@ class DrawingPanel(wx.Panel):
         x, y = transform.TransformPoint(float(x), float(y))
         canvas.SetTransform(canvas.CreateMatrix())
         crosshair_radius = global_settings['simulator_crosshair_radius']
-        crosshair_pen = wx.Pen(wx.Colour(global_settings['simulator_crosshair_colour']), width=global_settings['simulator_crosshair_thickness'])
+        crosshair_width = round(global_settings['simulator_crosshair_thickness'] * self.GetContentScaleFactor())
+        crosshair_pen = wx.Pen(wx.Colour(global_settings['simulator_crosshair_colour']), width=crosshair_width)
         canvas.SetPen(crosshair_pen)
         canvas.StrokeLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
         canvas.StrokeLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
