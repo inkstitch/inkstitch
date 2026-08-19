@@ -119,7 +119,6 @@ class DrawingPanel(wx.Panel):
         self.speed = global_settings['simulator_speed']
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
-        self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_background)
         self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
@@ -127,9 +126,6 @@ class DrawingPanel(wx.Panel):
 
         if self.stitch_plan is not None:
             self.load(self.stitch_plan)
-
-    def on_erase_background(self, event):
-        pass
 
     def on_resize(self, event):
         self.choose_zoom_and_pan(event)
