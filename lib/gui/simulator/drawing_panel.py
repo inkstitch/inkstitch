@@ -39,6 +39,9 @@ class DrawingPanel(wx.Panel):
     # image until the viewport approaches its edge.
     RENDER_CACHE_PADDING = 200
 
+    # Render circles once their shape is visible instead of using fast squares.
+    CIRCLE_MARKER_MIN_SCREEN_SIZE = 4
+
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -391,7 +394,7 @@ class DrawingPanel(wx.Panel):
                 # Use winding fill so overlapping markers remain filled.
                 path = canvas.CreatePath()
                 for x, y in stitches:
-                    if marker_screen_size >= 6.0:
+                    if marker_screen_size >= self.CIRCLE_MARKER_MIN_SCREEN_SIZE:
                         path.AddEllipse(x - half_size, y - half_size, square_size, square_size)
                     else:
                         path.AddRectangle(x - half_size, y - half_size, square_size, square_size)
