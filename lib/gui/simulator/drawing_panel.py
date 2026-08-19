@@ -66,10 +66,10 @@ class DrawingPanel(wx.Panel):
         self.page_specs = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
-        self.stitch_buffer = None
-        self.buffer_pan = None
-        self.buffer_zoom = None
-        self.buffer_state = None
+        self.stitch_render_cache = None
+        self.render_cache_pan = None
+        self.render_cache_zoom = None
+        self.render_cache_state = None
         self.zoom_rebuild_timer = None
 
         # Set initial values as they may be accessed before a stitch plan is available
@@ -92,7 +92,7 @@ class DrawingPanel(wx.Panel):
 
     def on_resize(self, event):
         self.choose_zoom_and_pan(event)
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
         event.Skip()
 
@@ -147,22 +147,22 @@ class DrawingPanel(wx.Panel):
         if not self.loaded:
             return
 
-        if self.stitch_buffer is None or self.buffer_state != self.get_buffer_state():
-            self.invalidate_stitch_buffer()
-            self.rebuild_stitch_buffer()
+        if self.stitch_render_cache is None or self.render_cache_state != self.get_stitch_render_cache_state():
+            self.invalidate_stitch_render_cache()
+            self.rebuild_stitch_render_cache()
 
-        if self.stitch_buffer is None:
+        if self.stitch_render_cache is None:
             return
 
         buffer_offset = (
-            int(self.pan[0] - self.zoom / self.buffer_zoom * self.buffer_pan[0]),
-            int(self.pan[1] - self.zoom / self.buffer_zoom * self.buffer_pan[1])
+            int(self.pan[0] - self.zoom / self.render_cache_zoom * self.render_cache_pan[0]),
+            int(self.pan[1] - self.zoom / self.render_cache_zoom * self.render_cache_pan[1])
         )
-        buffer_scale = self.zoom / self.buffer_zoom
+        buffer_scale = self.zoom / self.render_cache_zoom
         width, height = self.GetClientSize()
         canvas = wx.GraphicsContext.Create(dc)
         canvas.DrawBitmap(
-            self.stitch_buffer,
+            self.stitch_render_cache,
             *buffer_offset,
             int(width * buffer_scale),
             int(height * buffer_scale)
@@ -170,39 +170,39 @@ class DrawingPanel(wx.Panel):
 
         self.draw_scale(canvas)
 
-    def invalidate_stitch_buffer(self):
+    def invalidate_stitch_render_cache(self):
         if self.zoom_rebuild_timer is not None:
             self.zoom_rebuild_timer.Stop()
             self.zoom_rebuild_timer = None
-        self.stitch_buffer = None
-        self.buffer_pan = None
-        self.buffer_zoom = None
-        self.buffer_state = None
+        self.stitch_render_cache = None
+        self.render_cache_pan = None
+        self.render_cache_zoom = None
+        self.render_cache_state = None
 
     def rebuild_after_zoom(self):
         self.zoom_rebuild_timer = None
-        self.invalidate_stitch_buffer()
-        self.rebuild_stitch_buffer()
+        self.invalidate_stitch_render_cache()
+        self.rebuild_stitch_render_cache()
         self.Refresh()
 
-    def rebuild_stitch_buffer(self):
+    def rebuild_stitch_render_cache(self):
         width, height = self.GetClientSize()
         if width < 1 or height < 1:
             return
 
-        self.stitch_buffer = wx.Bitmap(width, height)
-        memory_dc = wx.MemoryDC(self.stitch_buffer)
+        self.stitch_render_cache = wx.Bitmap(width, height)
+        memory_dc = wx.MemoryDC(self.stitch_render_cache)
         memory_dc.SetBackground(wx.Brush(self.GetBackgroundColour()))
         memory_dc.Clear()
         canvas = wx.GraphicsContext.Create(memory_dc)
         self.draw_stitches(canvas)
         del canvas
         del memory_dc
-        self.buffer_pan = self.pan
-        self.buffer_zoom = self.zoom
-        self.buffer_state = self.get_buffer_state()
+        self.render_cache_pan = self.pan
+        self.render_cache_zoom = self.zoom
+        self.render_cache_state = self.get_stitch_render_cache_state()
 
-    def get_buffer_state(self):
+    def get_stitch_render_cache_state(self):
         return (
             int(self.current_stitch),
             self.view_panel.btnNpp.GetValue(),
@@ -368,11 +368,11 @@ class DrawingPanel(wx.Panel):
 
     def clear(self):
         self.loaded = False
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def load(self, stitch_plan):
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.current_stitch = 1
         self.direction = 1
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
@@ -403,13 +403,13 @@ class DrawingPanel(wx.Panel):
     def set_page_specs(self, page_specs):
         self.SetBackgroundColour(page_specs['desk_color'])
         self.page_specs = page_specs
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def set_background_color(self, color):
         self.background_color = color
         self._update_background_color()
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def _update_background_color(self):
@@ -424,7 +424,7 @@ class DrawingPanel(wx.Panel):
     def set_show_page(self, show_page):
         self.show_page = show_page
         self._update_background_color()
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def choose_zoom_and_pan(self, event=None):
@@ -471,7 +471,7 @@ class DrawingPanel(wx.Panel):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
         for pen in self.pens:
             pen.SetWidth(int(line_width))
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def parse_stitch_plan(self, stitch_plan):
@@ -545,7 +545,7 @@ class DrawingPanel(wx.Panel):
         statusbar = self.GetTopLevelParent().statusbar
         statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def restart(self):
@@ -567,8 +567,8 @@ class DrawingPanel(wx.Panel):
             self.CaptureMouse()
             self.drag_start = event.GetPosition()
             self.drag_original_pan = self.pan
-            if self.stitch_buffer is None:
-                self.rebuild_stitch_buffer()
+            if self.stitch_render_cache is None:
+                self.rebuild_stitch_render_cache()
             self.Bind(wx.EVT_MOTION, self.on_drag)
             self.Bind(wx.EVT_MOUSE_CAPTURE_LOST, self.on_drag_end)
             self.Bind(wx.EVT_LEFT_UP, self.on_drag_end)
@@ -584,7 +584,7 @@ class DrawingPanel(wx.Panel):
         if self.HasCapture():
             self.ReleaseMouse()
 
-        self.invalidate_stitch_buffer()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
         self.Unbind(wx.EVT_MOTION)
