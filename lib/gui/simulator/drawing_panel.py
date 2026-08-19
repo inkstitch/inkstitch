@@ -76,7 +76,7 @@ class DrawingPanel(wx.Panel):
         self.render_cache_state = None
         self.render_cache_size = None
         self.render_cache_padding = None
-        self.zoom_rebuild_timer = None
+        self.render_cache_rebuild_timer = None
 
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
@@ -161,10 +161,6 @@ class DrawingPanel(wx.Panel):
             return
 
         cache_offset, cache_scale = self.get_stitch_render_cache_transform()
-        if not self.stitch_render_cache_covers_viewport(cache_offset, cache_scale):
-            self.rebuild_stitch_render_cache()
-            cache_offset, cache_scale = self.get_stitch_render_cache_transform()
-
         cache_width, cache_height = self.render_cache_size
         cache_offset = tuple(map(int, cache_offset))
         canvas = wx.GraphicsContext.Create(dc)
@@ -178,9 +174,9 @@ class DrawingPanel(wx.Panel):
         self.draw_scale(canvas)
 
     def invalidate_stitch_render_cache(self):
-        if self.zoom_rebuild_timer is not None:
-            self.zoom_rebuild_timer.Stop()
-            self.zoom_rebuild_timer = None
+        if self.render_cache_rebuild_timer is not None:
+            self.render_cache_rebuild_timer.Stop()
+            self.render_cache_rebuild_timer = None
         self.stitch_render_cache = None
         self.render_cache_pan = None
         self.render_cache_zoom = None
@@ -188,8 +184,13 @@ class DrawingPanel(wx.Panel):
         self.render_cache_size = None
         self.render_cache_padding = None
 
-    def rebuild_after_zoom(self):
-        self.zoom_rebuild_timer = None
+    def schedule_stitch_render_cache_rebuild(self):
+        if self.render_cache_rebuild_timer is not None:
+            self.render_cache_rebuild_timer.Stop()
+        self.render_cache_rebuild_timer = wx.CallLater(150, self.rebuild_stitch_render_cache_after_motion)
+
+    def rebuild_stitch_render_cache_after_motion(self):
+        self.render_cache_rebuild_timer = None
         self.invalidate_stitch_render_cache()
         self.rebuild_stitch_render_cache()
         self.Refresh()
@@ -229,16 +230,6 @@ class DrawingPanel(wx.Panel):
             self.pan[1] - cache_scale * (self.render_cache_pan[1] + self.render_cache_padding[1])
         )
         return cache_offset, cache_scale
-
-    def stitch_render_cache_covers_viewport(self, cache_offset, cache_scale):
-        width, height = self.GetClientSize()
-        cache_width, cache_height = self.render_cache_size
-        return (
-            cache_offset[0] <= 0
-            and cache_offset[1] <= 0
-            and cache_offset[0] + cache_width * cache_scale >= width
-            and cache_offset[1] + cache_height * cache_scale >= height
-        )
 
     def get_stitch_render_cache_state(self):
         return (
@@ -397,14 +388,14 @@ class DrawingPanel(wx.Panel):
             marker_screen_size = square_size * self.zoom / self.PIXEL_DENSITY
 
             if stitches:
-                # Batch draw all markers as a single filled path to reduce draw calls.
+                # Use winding fill so overlapping markers remain filled.
                 path = canvas.CreatePath()
                 for x, y in stitches:
                     if marker_screen_size >= 6.0:
                         path.AddEllipse(x - half_size, y - half_size, square_size, square_size)
                     else:
                         path.AddRectangle(x - half_size, y - half_size, square_size, square_size)
-                canvas.FillPath(path)
+                canvas.FillPath(path, fillStyle=wx.WINDING_RULE)
 
     def clear(self):
         self.loaded = False
@@ -618,6 +609,7 @@ class DrawingPanel(wx.Panel):
             delta = event.GetPosition()
             offset = (delta[0] - self.drag_start[0], delta[1] - self.drag_start[1])
             self.pan = (self.drag_original_pan[0] + offset[0], self.drag_original_pan[1] + offset[1])
+            self.schedule_stitch_render_cache_rebuild()
             self.Refresh()
 
     def on_drag_end(self, event):
@@ -670,7 +662,5 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
-        if self.zoom_rebuild_timer is not None:
-            self.zoom_rebuild_timer.Stop()
-        self.zoom_rebuild_timer = wx.CallLater(150, self.rebuild_after_zoom)
+        self.schedule_stitch_render_cache_rebuild()
         self.Refresh()
