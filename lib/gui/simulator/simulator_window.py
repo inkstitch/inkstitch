@@ -37,16 +37,19 @@ class SimulatorWindow(wx.Frame):
 
         self.SetMinSize(self.sizer.CalcMin())
 
-        if self.is_child:
-            self.Bind(wx.EVT_CLOSE, self.on_close)
-        else:
+        self.Bind(wx.EVT_CLOSE, self.on_close)
+        if not self.is_child:
             self.Maximize()
 
     def detach_simulator_panel(self):
         self.sizer.Detach(self.panel)
 
     def on_close(self, event):
-        self.parent.attach_simulator()
+        self.panel.stop()
+        if self.is_child:
+            self.parent.attach_simulator()
+        else:
+            event.Skip()
 
     def load(self, stitch_plan):
         self.panel.load(stitch_plan)
