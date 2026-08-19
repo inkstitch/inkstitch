@@ -67,7 +67,8 @@ class SimulatorPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_SPACE, self.cp.play_or_pause),
             (wx.ACCEL_NORMAL, wx.WXK_PAGEDOWN, self.cp.animation_one_command_backward),
             (wx.ACCEL_NORMAL, wx.WXK_PAGEUP, self.cp.animation_one_command_forward),
-            (wx.ACCEL_NORMAL, ord('o'), self.vp.on_toggle_npp_shortcut)
+            (wx.ACCEL_NORMAL, ord('o'), self.vp.on_toggle_npp_shortcut),
+            (wx.ACCEL_NORMAL, wx.WXK_ESCAPE, self.dp.show_all_stitches)
         ]
 
         self.accel_entries = []

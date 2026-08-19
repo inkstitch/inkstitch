@@ -482,6 +482,13 @@ class DrawingPanel(wx.Panel):
         self.timer.Stop()
         self.control_panel.on_stop()
 
+    def show_all_stitches(self, event=None):
+        if not self.loaded:
+            return
+
+        self.stop()
+        self.set_current_stitch(self.num_stitches)
+
     def go(self):
         if not self.loaded:
             return
