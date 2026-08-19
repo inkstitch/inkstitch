@@ -8,12 +8,13 @@ import json
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
-from typing import Any, Callable, List, Optional, TypeVar
+from typing import Any, Callable, List, Optional, TypeVar, Iterable, overload
 
 import inkex
 import numpy as np
-from inkex import BaseElement, Color, bezier
-from shapely import Point as ShapelyPoint
+import shapely
+from inkex import BaseElement, Color, bezier, Path
+from shapely import Point as ShapelyPoint, Geometry
 from shapely.ops import nearest_points
 
 from ..commands import Command, find_commands
@@ -33,6 +34,7 @@ from ..svg.tags import INKSCAPE_LABEL, INKSTITCH_ATTRIBS
 from ..utils import DotDict, Point, cache
 from ..utils.cache import (CacheKeyGenerator, get_stitch_plan_cache,
                            is_cache_disabled)
+from .validation import ValidationError, ValidationWarning
 
 
 class Param(object):
@@ -56,8 +58,14 @@ class Param(object):
         return "Param(%s)" % vars(self)
 
 
+TParam = TypeVar('TParam')
+TDictKey = TypeVar('TDictKey')
+TDictValue = TypeVar('TDictValue')
+
 # See https://mypy.readthedocs.io/en/stable/generics.html#declaring-decorators
 F = TypeVar('F', bound=Callable[..., Any])
+
+BasePath = list[tuple[float, float]]
 
 
 # Decorate a member function or property with information about
@@ -82,7 +90,7 @@ class EmbroideryElement(object):
         return self.node.get('id')
 
     @classmethod
-    def get_params(cls):
+    def get_params(cls) -> list[Param]:
         params = []
         for attr in dir(cls):
             prop = getattr(cls, attr)
@@ -93,43 +101,65 @@ class EmbroideryElement(object):
                     params.append(fget.param)
         return params
 
+    @overload
+    def get_param(self, param_id: str, default: TParam) -> str | TParam: ...
+    @overload
+    def get_param(self, param_id: str, default: None) -> Optional[str]: ...
+
     @cache
-    def get_param(self, param, default):
-        value = self.node.get(INKSTITCH_ATTRIBS[param], "").strip()
+    def get_param(self, param_id: str, default: Optional[TParam]) -> str | Optional[TParam]:
+        value = self.node.get(INKSTITCH_ATTRIBS[param_id], "").strip()
         return value or default
 
     @cache
-    def get_boolean_param(self, param, default=None):
-        value = self.get_param(param, default)
+    def get_boolean_param(self, param_id: str, default: Optional[bool] = None) -> bool:
+        value = self.get_param(param_id, default)
 
         if isinstance(value, bool):
             return value
         else:
-            return value and (value.lower() in ('yes', 'y', 'true', 't', '1'))
+            # have to wrap in bool() since falsy `value` would return None or an empty string
+            return bool(value and (value.lower() in ('yes', 'y', 'true', 't', '1')))
+
+    @overload
+    def get_float_param(self, param_id: str, default: float) -> float: ...
+    @overload
+    def get_float_param(self, param_id: str, default: None = None) -> Optional[float]: ...
 
     @cache
-    def get_float_param(self, param, default=None):
+    def get_float_param(self, param_id: str, default: Optional[float] = None) -> Optional[float]:
+        value = None
         try:
-            value = float(self.get_param(param, default))
+            value_raw = self.get_param(param_id, default)
+            if value_raw is not None:
+                value = float(value_raw)
         except (TypeError, ValueError):
             value = default
 
         if value is None:
             return value
 
-        if param.endswith('_mm'):
+        if param_id.endswith('_mm'):
             value = value * PIXELS_PER_MM
 
         return value
 
+    @overload
+    def get_int_param(self, param_id: str, default: int) -> int: ...
+    @overload
+    def get_int_param(self, param_id: str, default: None = None) -> Optional[int]: ...
+
     @cache
-    def get_int_param(self, param, default=None):
+    def get_int_param(self, param_id: str, default: Optional[int] = None) -> Optional[int]:
         try:
-            value = int(self.get_param(param, default))
+            value_raw = self.get_param(param_id, default)
+            if value_raw is None:
+                return default
+            value = int(value_raw)
         except (TypeError, ValueError):
             return default
 
-        if param.endswith('_mm'):
+        if param_id.endswith('_mm'):
             value = int(value * PIXELS_PER_MM)
 
         return value
@@ -137,11 +167,11 @@ class EmbroideryElement(object):
     # returns 2 float values as a numpy array
     # if a single number is given in the param, it will apply to both returned values.
     # Not cached the cache will crash if the default is a numpy array.
-    # The ppoperty calling this will need to cache itself and can safely do so since it has no parameters
-    def get_split_float_param(self, param, default=(0, 0)):
-        default = np.array(default)  # type coersion in case the default is a tuple
+    # The property calling this will need to cache itself and can safely do so since it has no parameters
+    def get_split_float_param(self, param_id, default: tuple[float, float] | np.typing.NDArray[np.float64] = (0, 0)) -> np.typing.NDArray[np.float64]:
+        default = np.array(default)
 
-        raw = self.get_param(param, "")
+        raw = self.get_param(param_id, "")
         parts = raw.split()
         try:
             if len(parts) == 0:
@@ -157,60 +187,63 @@ class EmbroideryElement(object):
             return default
 
     # not cached
-    def get_split_mm_param_as_px(self, param, default):
-        return self.get_split_float_param(param, default) * PIXELS_PER_MM
+    def get_split_mm_param_as_px(self, param_id: str, default):
+        return self.get_split_float_param(param_id, default) * PIXELS_PER_MM
 
     # returns an array of multiple space separated int values
     @cache
-    def get_multiple_int_param(self, param, default="0"):
-        params = self.get_param(param, default).split(" ")
+    def get_multiple_int_param(self, param_id: str, default: str = "0"):
         try:
-            params = [int(param) for param in params if param]
+            value_parts_raw = self.get_param(param_id, default).split(" ")
+            value_parts = [int(value) for value in value_parts_raw if value]
         except (TypeError, ValueError):
-            params = [int(default)]
+            value_parts = [int(default)]
 
-        if param.endswith('_mm'):
-            params = [value * PIXELS_PER_MM for value in params]
+        if param_id.endswith('_mm'):
+            value_parts = [value * PIXELS_PER_MM for value in value_parts]
 
-        return params
+        return value_parts
 
     # returns an array of multiple space separated float values
     @cache
-    def get_multiple_float_param(self, param, default="0"):
-        params = self.get_param(param, default).split(" ")
+    def get_multiple_float_param(self, param_id: str, default: str = "0"):
         try:
-            params = [float(param) for param in params if param]
+            value_parts_raw = self.get_param(param_id, default).split(" ")
+            value_parts = [float(value) for value in value_parts_raw if value]
         except (TypeError, ValueError):
-            params = [float(default)]
+            value_parts = [float(default)]
 
-        if param.endswith('_mm'):
-            params = [value * PIXELS_PER_MM for value in params]
+        if param_id.endswith('_mm'):
+            value_parts = [value * PIXELS_PER_MM for value in value_parts]
 
-        return params
+        return value_parts
 
-    def get_json_param(self, param, default=None):
-        json_value = self.get_param(param, None)
+    def get_json_param(self, param_id: str, default: Optional[dict[TDictKey, TDictValue]] = None) -> dict[TDictKey, TDictValue]:
+        json_value = self.get_param(param_id, None)
         try:
-            return json.loads(json_value, object_hook=DotDict)
+            if json_value is not None:
+                return json.loads(json_value, object_hook=DotDict)
         except (json.JSONDecodeError, TypeError):
-            if default is None:
-                return DotDict()
-            else:
-                return DotDict(default)
+            pass
 
-    def set_json_param(self, param, value):
+        if default is None:
+            return DotDict()
+        else:
+            return DotDict(default)
+
+    def set_json_param(self, param_id: str, value: Any):
         json_value = json.dumps(value)
-        self.set_param(param, json_value)
+        self.set_param(param_id, json_value)
 
-    def set_param(self, name, value):
+    def set_param(self, name: str, value: Any):
         # Sets a param on the node backing this element. Used by params dialog.
         # After calling, this element is invalid due to caching and must be re-created to use the new value.
-        param = INKSTITCH_ATTRIBS[name]
-        self.node.set(param, str(value))
+        param_id = INKSTITCH_ATTRIBS[name]
+        self.node.set(param_id, str(value))
 
-    def remove_param(self, name):
-        param = INKSTITCH_ATTRIBS[name]
-        del self.node.attrib[param]
+    def remove_param(self, name: str):
+        param_id = INKSTITCH_ATTRIBS[name]
+        del self.node.attrib[param_id]
 
     @cache
     def _get_specified_style(self):
@@ -224,19 +257,19 @@ class EmbroideryElement(object):
             style = None
         return style
 
-    def _get_color(self, node, color_location, default=None):
+    def _get_color(self, node: BaseElement, color_location: Any, default=None) -> Optional[Color]:
         try:
             color = node.get_computed_style(color_location)
             if isinstance(color, inkex.LinearGradient) and len(color.stops) == 1:
                 # Inkscape swatches set as a linear gradient with only one stop color
                 # Ink/Stitch should render the color correctly
-                color = self._get_color(color.stops[0], "stop-color", default)
+                return self._get_color(color.stops[0], "stop-color", default)
+            return color
         except (inkex.ColorError, ValueError):
             # A color error could show up, when an element has an unrecognized color name
             # A value error could show up, when for example when an element links to a non-existent gradient
             # TODO: This will also apply to currentcolor and alike which will not render
-            color = default
-        return color
+            return default
 
     @cache
     def get_inkstitch_metadata(self):
@@ -277,18 +310,18 @@ class EmbroideryElement(object):
         # vector completely cancels out the rotation, scale, and skew components.
         zero = (0, 0)
         zero = inkex.Transform.apply_to_point(node_transform, zero)
-        translate = Point(*zero)
+        translate = Point.from_vector2d(zero)
 
         # Next, see how the transform affects unit vectors in the X and Y axes.  We
         # need to subtract off the translation or it will affect the magnitude of
         # the resulting vector, which we don't want.
         unit_x = (1, 0)
         unit_x = inkex.Transform.apply_to_point(node_transform, unit_x)
-        sx = (Point(*unit_x) - translate).length()
+        sx = (Point.from_vector2d(unit_x) - translate).length()
 
         unit_y = (0, 1)
         unit_y = inkex.Transform.apply_to_point(node_transform, unit_y)
-        sy = (Point(*unit_y) - translate).length()
+        sy = (Point.from_vector2d(unit_y) - translate).length()
 
         # Take the average as a best guess.
         node_scale = (sx + sy) / 2.0
@@ -363,7 +396,7 @@ class EmbroideryElement(object):
            options=LOCK_DEFAULTS['start'],
            sort_index=204)
     def lock_start(self):
-        return self.get_param('lock_start', "half_stitch")
+        return self.get_param('lock_start', 'half_stitch')
 
     @property
     @param('lock_custom_start',
@@ -536,11 +569,11 @@ class EmbroideryElement(object):
 
     @property
     @cache
-    def paths(self):
+    def paths(self) -> list[BasePath]:
         return self.flatten(self.parse_path())
 
     @property
-    def shape(self):
+    def shape(self) -> Geometry:
         raise NotImplementedError("INTERNAL ERROR: %s must implement shape()", self.__class__)
 
     @property
@@ -596,10 +629,10 @@ class EmbroideryElement(object):
         # ignore multiple anchor lines
         return anchor_lines["stroke"][0].geoms[0]
 
-    def strip_control_points(self, subpath):
+    def strip_control_points(self, subpath: list[tuple[Any, tuple[float, float], Any]]) -> BasePath:
         return [point for control_before, point, control_after in subpath]
 
-    def flatten(self, path):
+    def flatten(self, path: Path) -> list[BasePath]:
         """approximate a path containing beziers with a series of points"""
 
         path = deepcopy(path)
@@ -691,8 +724,8 @@ class EmbroideryElement(object):
 
     def get_params_and_values(self):
         params = {}
-        for param in self.get_params():
-            params[param.name] = self.get_param(param.name, param.default)
+        for param_definition in self.get_params():
+            params[param_definition.name] = self.get_param(param_definition.name, param_definition.default)
 
         return params
 
@@ -721,7 +754,7 @@ class EmbroideryElement(object):
         return gradient
 
     def _get_tartan_key_data(self):
-        return (self.node.get('inkstitch:tartan', None))
+        return self.node.get('inkstitch:tartan', None)
 
     def get_cache_key_data(self, previous_stitch, next_element):
         return []
@@ -781,8 +814,8 @@ class EmbroideryElement(object):
         debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
         return stitch_groups
 
-    def next_stitch(self, next_element):
-        next_stitch = None
+    def next_stitch(self, next_element: Optional[EmbroideryElement]) -> Optional[shapely.Point]:
+        next_stitch: Optional[shapely.Point] = None
         if next_element is not None and self.uses_next_element():
             # in fact we really only try an approximation to the next stitch
             if next_element.uses_previous_stitch():
@@ -792,7 +825,9 @@ class EmbroideryElement(object):
                     pass
             else:
                 try:
-                    next_stitch = nearest_points(next_element.first_stitch, self.shape)[1]
+                    next_first_stitch = next_element.first_stitch
+                    if next_first_stitch is not None:
+                        next_stitch = nearest_points(next_first_stitch, self.shape)[1]
                 except (ValueError, AttributeError):
                     pass
         return next_stitch
@@ -802,15 +837,18 @@ class EmbroideryElement(object):
     def clip_shape(self):
         return get_clip_path(self.node)
 
-    def fatal(self, message, point_to_troubleshoot=False):
+    def fatal(self, message: Optional[str], point_to_troubleshoot: bool = False):
         label = self.node.get(INKSCAPE_LABEL)
-        id = self.node.get("id")
+        node_id = self.node.get("id")
         if label:
-            name = "%s (%s)" % (label, id)
+            name = "%s (%s)" % (label, node_id)
         else:
-            name = id
+            name = node_id
 
-        error_msg = f"{name}: {message}"
+        error_msg = name
+        if message:
+            error_msg += f": {message}"
+
         if point_to_troubleshoot:
             error_msg += "\n\n%s" % _("Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. "
                                       "This will show you the exact location of the problem.")
@@ -832,7 +870,7 @@ class EmbroideryElement(object):
 
             raise InkstitchException(format_uncaught_exception())
 
-    def validation_errors(self):
+    def validation_errors(self) -> Iterable[ValidationError]:
         """Return a list of errors with this Element.
 
         Validation errors will prevent the Element from being stitched.
@@ -841,7 +879,7 @@ class EmbroideryElement(object):
         """
         return []
 
-    def validation_warnings(self):
+    def validation_warnings(self) -> Iterable[ValidationWarning]:
         """Return a list of warnings about this Element.
 
         Validation warnings don't prevent the Element from being stitched but
@@ -852,11 +890,7 @@ class EmbroideryElement(object):
         return []
 
     def is_valid(self):
-        # We have to iterate since it could be a generator.
-        for error in self.validation_errors():
-            return False
-
-        return True
+        return len(list(self.validation_errors())) == 0
 
     def validate(self):
         """Print an error message and exit if this Element is invalid."""

@@ -46,10 +46,9 @@ class AutoRun(CommandsExtension):
         return self.get_command_point("autoroute_end")
 
     def get_command_point(self, command_type: str) -> Optional[Vector2d]:
-        command = None
         for stroke in self.elements:
             command = stroke.get_command(command_type)
-            # return the first occurence directly
+            # return the first occurrence directly
             if command:
                 return command.target_point
         return None

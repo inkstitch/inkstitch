@@ -5,6 +5,7 @@
 
 import math
 from itertools import chain
+from typing import Optional
 
 import inkex
 import networkx as nx
@@ -30,18 +31,24 @@ from .utils.autoroute import (add_elements_to_group, add_jumps,
                               preserve_original_groups,
                               remove_original_elements)
 
+# start/end can be a tuple/Point falling somewhere on the satin column, OR a floating point specifying a normalized
+# projection of a distance along the satin (0.0 to 1.0 inclusive).
+SatinSegmentPortionInput = tuple[float, float] | InkstitchPoint | float | int
+
 
 class SatinSegment(object):
-    """A portion of SatinColumn.
+    """A portion of a SatinColumn."""
 
-    Attributes:
-        satin -- the SatinColumn instance
-        start -- how far along the satin this graph edge starts (a float from 0.0 to 1.0)
-        end -- how far along the satin this graph edge ends (a float from 0.0 to 1.0)
-        reverse -- if True, reverse the direction of the satin
-    """
+    satin: SatinColumn
+    # How far along the satin this graph edge starts (from 0.0 to 1.0)
+    start: float
+    # How far along the satin this graph edge ends (from 0.0 to 1.0)
+    end: float
+    reverse: bool
+    original_satin: SatinColumn
 
-    def __init__(self, satin, start=0.0, end=1.0, reverse=False, original_satin=None):
+    def __init__(self, satin: SatinColumn, start: SatinSegmentPortionInput = 0.0, end: SatinSegmentPortionInput = 1.0,
+                 reverse: bool = False, original_satin: Optional[SatinColumn] = None):
         """Initialize a SatinEdge.
 
         Arguments:
@@ -58,20 +65,21 @@ class SatinSegment(object):
         self.reverse = reverse
 
         # start and end are stored as normalized projections
-        self.start = self._parse_init_param(start)
-        self.end = self._parse_init_param(end)
+        self.start = self._parse_portion_input(start)
+        self.end = self._parse_portion_input(end)
 
         if self.start > self.end:
             self.end, self.start = self.start, self.end
             self.reverse = True
 
-    def _parse_init_param(self, param):
-        if isinstance(param, (float, int)):
-            return param
-        elif isinstance(param, (tuple, InkstitchPoint, ShapelyPoint)):
-            return self.satin.center.project(ShapelyPoint(param), normalized=True)
+    def _parse_portion_input(self, portion: SatinSegmentPortionInput) -> float | int:
+        if isinstance(portion, (float, int)):
+            return portion
+        elif isinstance(portion, (tuple, InkstitchPoint, ShapelyPoint)):
+            return self.satin.center_line.project(ShapelyPoint(portion), normalized=True)
+        raise ValueError("Unrecognized portion type %s" % type(portion))
 
-    def to_satin(self):
+    def to_satin(self) -> Optional[SatinColumn]:
         satin = self.satin
 
         # get cut points before actually cutting the satin to avoid
@@ -89,7 +97,7 @@ class SatinSegment(object):
 
         # the cut operation can lead to a NoneType element
         if satin is None:
-            return
+            return None
 
         if self.reverse:
             satin = satin.reverse()
@@ -109,11 +117,11 @@ class SatinSegment(object):
     def to_running_stitch(self):
         return RunningStitch(self.center_line, self.original_satin)
 
-    def break_up(self, segment_size):
+    def break_up(self, segment_size: float) -> list['SatinSegment']:
         """Break this SatinSegment up into SatinSegments of the specified size."""
 
         num_segments = int(math.ceil(self.center_line.length / segment_size))
-        segments = []
+        segments: list[SatinSegment] = []
         for i in range(num_segments):
             segments.append(SatinSegment(self.satin,
                                          float(i) / num_segments,
@@ -317,7 +325,8 @@ class RunningStitch(object):
         return RunningStitch(new_path, self.original_element)
 
 
-def auto_satin(elements, preserve_order=False, starting_point=None, ending_point=None, trim=False, keep_originals=False, parent=None, index=None):
+def auto_satin(elements: list[SatinColumn], preserve_order: bool = False, starting_point: Optional[InkstitchPoint] = None,
+               ending_point: Optional[InkstitchPoint] = None, trim: bool = False, keep_originals: bool = False, parent=None, index=None):
     """Find an optimal order to stitch a list of SatinColumns.
 
     Add running stitch and jump stitches as necessary to construct a stitch
@@ -388,7 +397,7 @@ def auto_satin(elements, preserve_order=False, starting_point=None, ending_point
     path = find_path(graph, starting_node, ending_node)
     operations = path_to_operations(graph, path)
     operations = collapse_sequential_segments(operations)
-    new_elements, trims, original_parents = operations_to_elements_and_trims(operations, preserve_order)
+    new_elements, trims, original_parents = operations_to_elements_and_trims(operations)
 
     if not keep_originals:
         remove_original_elements(elements)
@@ -436,7 +445,7 @@ def _route_single_satin(elements, starting_point, keep_originals):
         remove_original_elements([satin], True)
 
 
-def convert_stroke_width(element):
+def convert_stroke_width(element: SatinColumn) -> float:
     document_unit = element.node.getroottree().getroot().document_unit
     stroke_width = convert_unit(element.stroke_width, document_unit)
     return stroke_width
@@ -540,7 +549,7 @@ def collapse_sequential_segments(old_operations):
     return new_operations
 
 
-def operations_to_elements_and_trims(operations, preserve_order):
+def operations_to_elements_and_trims(operations):
     """Convert a list of operations to Elements and locations of trims.
 
     Returns:
@@ -614,13 +623,13 @@ def name_elements(new_elements, preserve_order):
             index += 1
 
 
-def _ensure_even_repeats(element):
+def _ensure_even_repeats(element: SatinColumn):
     # center underlay can have an odd number of repeats, this would cause jumps in auto route satin
     # so let's set it to an even number of repeats, but not lower than 2
     center_walk_underlay_repeats = element.get_int_param('center_walk_underlay_repeats', 2)
     if center_walk_underlay_repeats % 2 == 1:
         repeats = max(center_walk_underlay_repeats - 1, 2)
-        element.node.set(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'], repeats)
+        element.node.set(INKSTITCH_ATTRIBS['center_walk_underlay_repeats'], str(repeats))
 
 
 def add_trims(elements, trim_indices):
