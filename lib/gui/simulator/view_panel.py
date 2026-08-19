@@ -202,6 +202,7 @@ class ViewPanel(ScrolledPanel):
         self.btnInfo.SetValue(False)
 
     def settings_panel_closed(self, event):
+        self.settings_panel.restore_initial_settings()
         self.settings_panel.Destroy()
         self.settings_panel = None
         self.btnSettings.SetValue(False)
