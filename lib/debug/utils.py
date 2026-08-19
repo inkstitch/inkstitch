@@ -170,6 +170,7 @@ def find_python_interpreter() -> str:
 #   2) a .venv next to this script (Linux/macOS or Windows layout)
 #   3) python3 / py / python found in PATH
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# "
 if [ -x "$SCRIPT_PYTHON" ]; then
     INKSTITCH_PYTHON="$SCRIPT_PYTHON"
 elif [ -x "$SCRIPT_DIR/.venv/bin/python" ]; then
