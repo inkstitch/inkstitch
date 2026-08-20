@@ -175,7 +175,7 @@ def activate_for_development(ini: dict, SCRIPTDIR: Path):
     logger.debug(f"Logging configuration: {devel_config=}")
 
 
-def _caused_by_permission_error(error: BaseException) -> bool:
+def _caused_by_permission_error(error: BaseException | None) -> bool:
     while error is not None:
         if isinstance(error, PermissionError):
             return True

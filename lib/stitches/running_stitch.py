@@ -23,7 +23,7 @@ def lerp(a, b, t: float) -> float:
     return (1 - t) * a + t * b
 
 
-def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.list[shgeo.Point]:
+def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> list[shgeo.Point]:
     """Split a segment into n even parts, optionally with jitter."""
     if segments <= 1:
         return []
@@ -215,7 +215,7 @@ def take_stitch(
     idx: int,
     stitch_length: float,
     tolerance: float,
-) -> typing.tuple[typing.Optional[Point], typing.Optional[int]]:
+) -> tuple[typing.Optional[Point], typing.Optional[int]]:
     """Take a single stitch based on the Zhao-Saalfeld curve simplification algorithm.
 
     Based on: https://cartogis.org/docs/proceedings/archive/auto-carto-13/pdf/
@@ -252,7 +252,7 @@ def stitch_curve_evenly_strict(  # noqa C901
     min_stitch_length: float,
     stitch_length_pos: int = 0,
     stitch_distance_passed: float = 0,
-) -> typing.tuple[list[Point], int, float]:
+) -> tuple[list[Point], int, float]:
     """Split a curve into even-length stitches while handling curves correctly.
 
     Adapts stitch lengths to the distance that already has been passed,
@@ -348,7 +348,7 @@ def stitch_curve_randomly(
     stitch_length_sigma: float,
     random_seed: str,
     stitch_length_pos: int = 0,
-) -> typing.tuple[list[Point], int]:
+) -> tuple[list[Point], int]:
     """Split a curve into stitches of random length within a range.
 
     Attempts to randomize phase so distribution doesn't depend on direction.
