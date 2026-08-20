@@ -166,6 +166,8 @@ def activate_for_development(ini: dict, SCRIPTDIR: Path):
         print(f"WARNING: Cannot write logs to '{SCRIPTDIR}'. Using '{fallback_dir}' instead.", file=sys.stderr)
         fallback_vars = dict(vars)
         fallback_vars['SCRIPTDIR'] = fallback_dir
+        if 'logfilename' in fallback_vars:
+            fallback_vars['logfilename'] = fallback_dir / Path(fallback_vars['logfilename']).name
         configure_logging(deepcopy(original_config), ini, fallback_vars)
 
     logger.info("Running in development mode")
