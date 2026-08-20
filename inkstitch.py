@@ -5,6 +5,7 @@
 
 import os
 import sys
+import tempfile
 from pathlib import Path  # to work with paths as objects
 from argparse import ArgumentParser  # to parse arguments and remove --extension
 
@@ -41,7 +42,20 @@ else:
 # --------------------------------------------------------------------------------------------
 
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
-running_from_readonly_filesystem = not os.access(SCRIPTDIR, os.W_OK)  # check if running from read-only filesystem
+
+
+def _can_write_to_directory(path: Path) -> bool:
+    """Return True only if creating and deleting a temp file in the directory succeeds."""
+    try:
+        fd, probe_path = tempfile.mkstemp(prefix=".inkstitch-write-test-", dir=path)
+        os.close(fd)
+        os.unlink(probe_path)
+        return True
+    except OSError:
+        return False
+
+
+running_from_readonly_filesystem = not _can_write_to_directory(SCRIPTDIR)
 
 # override runnig_as_frozen if read-only filesystem is detected
 if running_from_readonly_filesystem:
