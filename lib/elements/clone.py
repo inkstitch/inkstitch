@@ -5,7 +5,7 @@
 
 from contextlib import contextmanager
 from math import degrees
-from typing import Dict, Generator, List, Optional, Tuple, Any, cast
+from typing import Generator, Optional, Any, cast
 
 from inkex import BaseElement, Title, Transform, Vector2d
 from lxml.etree import _Comment
@@ -69,12 +69,12 @@ class Clone(EmbroideryElement):
     def flip_angle(self) -> bool:
         return self.get_boolean_param('flip_angle', False)
 
-    def get_cache_key_data(self, previous_stitch: Any, next_element: EmbroideryElement) -> List[str]:
+    def get_cache_key_data(self, previous_stitch: Any, next_element: EmbroideryElement) -> list[str]:
         source_node = self.node.href
         source_elements = self.clone_to_elements(source_node)
         return [element.get_cache_key(previous_stitch, next_element) for element in source_elements]
 
-    def clone_to_elements(self, node: BaseElement) -> List[EmbroideryElement]:
+    def clone_to_elements(self, node: BaseElement) -> list[EmbroideryElement]:
         # Only used in get_cache_key_data, actual embroidery uses nodes_to_elements+iterate_nodes
         from .utils.nodes import node_to_elements
         elements = []
@@ -85,7 +85,7 @@ class Clone(EmbroideryElement):
                 elements.extend(self.clone_to_elements(child))
         return elements
 
-    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> list[StitchGroup]:
         if not self.clone:
             return []
 
@@ -96,7 +96,7 @@ class Clone(EmbroideryElement):
 
             next_elements = [next_element]
             if len(elements) > 1:
-                next_elements = cast(List[Optional[EmbroideryElement]], elements[1:]) + next_elements
+                next_elements = cast(list[Optional[EmbroideryElement]], elements[1:]) + next_elements
             for element, next_element in zip(elements, next_elements):
                 # Using `embroider` here to get trim/stop after commands, etc.
                 element_stitch_groups = element.embroider(last_stitch_group, next_element)
@@ -134,14 +134,14 @@ class Clone(EmbroideryElement):
         return False
 
     @cache
-    def first_and_last_element(self) -> Tuple[Optional[EmbroideryElement], Optional[EmbroideryElement]]:
+    def first_and_last_element(self) -> tuple[Optional[EmbroideryElement], Optional[EmbroideryElement]]:
         with self.clone_elements() as elements:
             if len(elements):
                 return elements[0], elements[-1]
         return None, None
 
     @contextmanager
-    def clone_elements(self) -> Generator[List[EmbroideryElement], None, None]:
+    def clone_elements(self) -> Generator[list[EmbroideryElement], None, None]:
         """
         A context manager method which yields a set of elements representing the cloned element(s) href'd by this clone's element.
         Cleans up after itself afterwards.
@@ -161,7 +161,7 @@ class Clone(EmbroideryElement):
             for cloned_node in cloned_nodes:
                 cloned_node.delete()
 
-    def resolve_clone(self, recursive: bool = True) -> List[BaseElement]:
+    def resolve_clone(self, recursive: bool = True) -> list[BaseElement]:
         """
         "Resolve" this clone element by copying the node it hrefs as if unlinking the clone in Inkscape.
         The node will be added as a sibling of this element's node, with its transform and style applied.
@@ -185,7 +185,7 @@ class Clone(EmbroideryElement):
             if is_clone(cloned_node):
                 cloned_node = cloned_node.replace_with(Clone(cloned_node).resolve_clone()[0])
             else:
-                clones: List[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
+                clones: list[BaseElement] = [n for n in cloned_node.iterdescendants() if is_clone(n)]
                 for clone in clones:
                     clone.replace_with(Clone(clone).resolve_clone()[0])
 
@@ -296,7 +296,7 @@ def clone_with_fixup(parent: BaseElement, node: BaseElement) -> BaseElement:
     references in the cloned subtree to point to elements from the clone subtree.
     """
     # A map of "#id" -> "#corresponding-id-in-the-cloned-subtree"
-    id_map: Dict[str, str] = {}
+    id_map: dict[str, str] = {}
 
     def clone_children(parent: BaseElement, node: BaseElement) -> BaseElement:
         # Copy the node without copying its children.

@@ -5,7 +5,7 @@
 
 import gettext
 import os
-from typing import Callable, Tuple
+from typing import Callable
 
 from .utils import cache, get_resource_dir
 
@@ -18,7 +18,7 @@ def N_(message: str) -> str:
     return message
 
 
-def localize(languages=None) -> Tuple[Callable[[str], str], gettext.NullTranslations]:
+def localize(languages=None) -> tuple[Callable[[str], str], gettext.NullTranslations]:
     locale_dir = get_resource_dir('locales')
 
     global translation, _

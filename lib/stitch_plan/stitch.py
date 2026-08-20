@@ -6,7 +6,7 @@
 from __future__ import annotations  # Needed for using the Stitch type as a constructor arg
 
 from math import cos, radians, sin
-from typing import Any, Dict, Iterable, Optional, Set, Type, Union, overload
+from typing import Any, Iterable, Optional, Type, Union, overload
 
 from shapely import geometry as shgeo
 
@@ -23,7 +23,7 @@ class Stitch(Point):
     trim: bool
     color_change: bool
     min_stitch_length: Optional[float]
-    tags: Set[str]
+    tags: set[str]
 
     @overload
     def __init__(
@@ -214,12 +214,12 @@ class Stitch(Point):
         out.y = offset_y + sin_rad * adjusted_x + cos_rad * adjusted_y
         return out
 
-    def __json__(self) -> Dict[str, Any]:
+    def __json__(self) -> dict[str, Any]:
         attributes = dict(vars(self))
         attributes['tags'] = list(attributes['tags'])
         return attributes
 
-    def __getstate__(self) -> Dict[str, Any]:
+    def __getstate__(self) -> dict[str, Any]:
         # This is used by pickle.  We want to sort the tag list so that the
         # pickled representation is stable, since it's used to generate cache
         # keys.

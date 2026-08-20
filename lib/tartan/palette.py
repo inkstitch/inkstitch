@@ -5,7 +5,7 @@
 # Additional credits to: https://github.com/clsn/pyTartan
 
 import re
-from typing import TYPE_CHECKING, List, cast
+from typing import TYPE_CHECKING, cast
 
 import wx
 from inkex import Color, ColorError
@@ -22,7 +22,7 @@ class Palette:
     def __init__(
         self,
         palette_code: str = '',
-        palette_stripes: List[list] = [[], []],
+        palette_stripes: list[list] = [[], []],
         symmetry: bool = True,
         equal_warp_weft: bool = True,
         tt_unit: float = 0.5
@@ -47,7 +47,7 @@ class Palette:
         self.symmetry = symmetry
         self.update_code()
 
-    def update_from_stripe_sizer(self, sizers: List[wx.BoxSizer], symmetry: bool = True, equal_warp_weft: bool = True) -> None:
+    def update_from_stripe_sizer(self, sizers: list[wx.BoxSizer], symmetry: bool = True, equal_warp_weft: bool = True) -> None:
         """
         Update palette code from stripes (customize panel)
 

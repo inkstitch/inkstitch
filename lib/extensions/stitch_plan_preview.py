@@ -7,7 +7,7 @@ import sys
 from base64 import b64encode
 from re import findall
 from tempfile import TemporaryDirectory
-from typing import Optional, Tuple
+from typing import Optional
 
 from inkex import BaseElement, Boolean, Image, errormsg
 
@@ -69,7 +69,7 @@ class StitchPlanPreview(InkstitchExtension):
         self.translate(svg, layer)
         self.set_needle_points(layer)
 
-    def parse_mode(self) -> Tuple[bool, Optional[int]]:
+    def parse_mode(self) -> tuple[bool, Optional[int]]:
         """
         Parse the "mode" option and return a tuple of a bool indicating if realistic rendering should be used,
         and an optional int indicating the dpi value to use for rasterization, or None if rasterization should not be used.

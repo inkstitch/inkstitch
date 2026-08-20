@@ -2,7 +2,7 @@
 #
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-from typing import Optional, Tuple, Union, List
+from typing import Optional, Union
 
 import colorsys
 
@@ -12,7 +12,7 @@ from pystitch.EmbThread import EmbThread
 
 
 class ThreadColor(object):
-    rgb: Tuple[int, int, int]
+    rgb: tuple[int, int, int]
     name: Optional[str]
     number: Optional[str]
     manufacturer: Optional[str]
@@ -21,14 +21,14 @@ class ThreadColor(object):
 
     def __init__(  # noqa: C901
         self,
-        color: Optional[Union[str, Color, EmbThread, Tuple[int, int, int], List[int]]],
+        color: Optional[Union[str, Color, EmbThread, tuple[int, int, int], list[int]]],
         name: Optional[str] = None,
         number: Optional[str] = None,
         manufacturer: Optional[str] = None,
         description: Optional[str] = None,
         chart: Optional[str] = None
     ):
-        rgb: Optional[Tuple[int, int, int]] = None
+        rgb: Optional[tuple[int, int, int]] = None
 
         if isinstance(color, str) and color.lower().startswith(('url', 'currentcolor', 'context')):
             '''

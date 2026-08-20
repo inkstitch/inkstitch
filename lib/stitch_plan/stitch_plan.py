@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from sys import exit
-from typing import List
 
 from inkex import errormsg
 
@@ -224,7 +223,7 @@ class StitchPlan(object):
         else:
             return None
 
-    def make_offsets(self, offsets: List[Point]):
+    def make_offsets(self, offsets: list[Point]):
         out = StitchPlan()
         out.color_blocks = [block.make_offsets(offsets) for block in self]
         return out

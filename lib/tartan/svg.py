@@ -7,7 +7,7 @@ import time
 from collections import defaultdict
 from copy import copy
 from itertools import chain
-from typing import List, Optional, Tuple, Union, cast
+from typing import Optional, Union, cast
 
 from inkex import BaseElement, Group, Path, PathElement
 from networkx import MultiGraph, is_empty
@@ -156,8 +156,8 @@ class TartanSvgGroup:
     def _get_routed_shapes(
         self,
         geometry_type: str,
-        polygons: Optional[List[Polygon]],
-        lines: Optional[List[LineString]],
+        polygons: Optional[list[Polygon]],
+        lines: Optional[list[LineString]],
         outline_shape: MultiPolygon,
         weft: bool
     ):
@@ -193,9 +193,9 @@ class TartanSvgGroup:
 
     def _path_to_shapes(
         self,
-        path: List[PathEdge],
+        path: list[PathEdge],
         fill_stitch_graph: MultiGraph,
-        polygons: Optional[List[Polygon]],
+        polygons: Optional[list[Polygon]],
         geometry_type: str,
         outline_shape: MultiPolygon
     ) -> list:
@@ -249,7 +249,7 @@ class TartanSvgGroup:
         edge: PathEdge,
         geometry_type: str,
         fill_stitch_graph: MultiGraph,
-        polygons: Optional[List[Polygon]]
+        polygons: Optional[list[Polygon]]
     ) -> list:
         """
         Turns an edge back into an element
@@ -262,7 +262,7 @@ class TartanSvgGroup:
             Polygons are wrapped in dictionaries to preserve information about start and end point.
         """
         start, end = edge
-        routed: List[Union[dict, LineString]] = []
+        routed: list[Union[dict, LineString]] = []
         if geometry_type == 'polygon' and polygons is not None:
             polygon = self._find_polygon(polygons, Point(start))
             if polygon:
@@ -280,7 +280,7 @@ class TartanSvgGroup:
         return routed
 
     @staticmethod
-    def _get_shortest_travel(start: Tuple[float, float], outline: LineString, travel_linestring: LineString) -> LineString:
+    def _get_shortest_travel(start: tuple[float, float], outline: LineString, travel_linestring: LineString) -> LineString:
         """
         Replace travel_linestring with a shorter travel line if possible
 
@@ -299,7 +299,7 @@ class TartanSvgGroup:
         return travel_linestring
 
     @staticmethod
-    def _find_polygon(polygons: List[Polygon], point: Point) -> Optional[Polygon]:
+    def _find_polygon(polygons: list[Polygon], point: Point) -> Optional[Polygon]:
         """
         Find the polygon for a given point
 
@@ -404,7 +404,7 @@ class TartanSvgGroup:
             path_element.set('inkstitch:flip', True)
         return path_element
 
-    def _combine_shapes(self, warp: defaultdict, weft: defaultdict, outline: MultiPolygon) -> Tuple[defaultdict, defaultdict]:
+    def _combine_shapes(self, warp: defaultdict, weft: defaultdict, outline: MultiPolygon) -> tuple[defaultdict, defaultdict]:
         """
         Combine warp and weft elements into color groups, but separated into polygons and linestrings
 
@@ -447,7 +447,7 @@ class TartanSvgGroup:
         return polygons, linestrings
 
     @staticmethod
-    def _get_travel(start: Tuple[float, float], end: Tuple[float, float], outline: LineString) -> LineString:
+    def _get_travel(start: tuple[float, float], end: tuple[float, float], outline: LineString) -> LineString:
         """
         Returns a travel line from start point to end point along the outline
 
@@ -465,7 +465,7 @@ class TartanSvgGroup:
         else:
             return result
 
-    def _get_dimensions(self, outline: MultiPolygon) -> Tuple[Tuple[float, float, float, float], Point]:
+    def _get_dimensions(self, outline: MultiPolygon) -> tuple[tuple[float, float, float, float], Point]:
         """
         Calculates the dimensions for the tartan pattern.
         Make sure it is big enough for pattern rotations.
@@ -497,8 +497,8 @@ class TartanSvgGroup:
         polygon: Polygon,
         weft: bool,
         transform: str,
-        start: Optional[Tuple[float, float]] = None,
-        end: Optional[Tuple[float, float]] = None
+        start: Optional[tuple[float, float]] = None,
+        end: Optional[tuple[float, float]] = None
     ) -> PathElement:
         """
         Convert a polygon to an svg path element

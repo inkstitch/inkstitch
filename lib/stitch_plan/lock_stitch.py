@@ -1,6 +1,6 @@
 import re
 from math import degrees
-from typing import List, Optional
+from typing import Optional
 
 from inkex import DirectedLineSegment, Path
 from shapely.geometry import LineString
@@ -22,7 +22,7 @@ class LockStitchDefinition:
     def __repr__(self) -> str:
         return "LockStitchDefinition(%s, %s, %s, %s)" % (self.id, self.name, self._path, self.preview_image)
 
-    def stitches(self, stitches, pos, scale) -> List[Stitch]:
+    def stitches(self, stitches, pos, scale) -> list[Stitch]:
         raise NotImplementedError(f"{self.__class__.__name__} must implement stitches()")
 
 

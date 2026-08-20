@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import Iterable, List, Optional
+from typing import Iterable, Optional
 
 from inkex import BaseElement
 from lxml.etree import Comment
@@ -26,7 +26,7 @@ from ..stroke import Stroke
 from ..text import TextObject
 
 
-def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  # noqa: C901
+def node_to_elements(node, clone_to_element=False) -> list[EmbroideryElement]:  # noqa: C901
     if node.style('display') == 'none':
         return []
     if is_clone(node) and not clone_to_element:
@@ -40,7 +40,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         return [MarkerObject(node)]
 
     elif node.tag in EMBROIDERABLE_TAGS or is_clone(node):
-        elements: List[EmbroideryElement] = []
+        elements: list[EmbroideryElement] = []
 
         from ...sew_stack import SewStack
         sew_stack = SewStack(node)
@@ -72,7 +72,7 @@ def node_to_elements(node, clone_to_element=False) -> List[EmbroideryElement]:  
         return []
 
 
-def nodes_to_elements(nodes: Iterable[BaseElement]) -> List[EmbroideryElement]:
+def nodes_to_elements(nodes: Iterable[BaseElement]) -> list[EmbroideryElement]:
     elements = []
     for node in nodes:
         elements.extend(node_to_elements(node))
@@ -81,11 +81,11 @@ def nodes_to_elements(nodes: Iterable[BaseElement]) -> List[EmbroideryElement]:
 
 
 def iterate_nodes(node: BaseElement,  # noqa: C901
-                  selection: Optional[List[BaseElement]] = None,
-                  troubleshoot=False) -> List[BaseElement]:
+                  selection: Optional[list[BaseElement]] = None,
+                  troubleshoot=False) -> list[BaseElement]:
     # Postorder traversal of selected nodes and their descendants.
     # Returns all nodes if there is no selection.
-    def walk(node: BaseElement, selected: bool) -> List[BaseElement]:
+    def walk(node: BaseElement, selected: bool) -> list[BaseElement]:
         nodes = []
 
         # lxml-stubs types are wrong, node.tag can be Comment.

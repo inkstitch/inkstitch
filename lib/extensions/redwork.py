@@ -2,7 +2,6 @@
 #
 # Copyright (c) 2024 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
-from typing import List
 
 import networkx as nx
 from inkex import Boolean, Group, Path, PathElement, errormsg
@@ -81,8 +80,8 @@ class Redwork(InkstitchExtension):
         if not self.options.keep_originals:
             self._delete_original_elements(elements)
 
-    def _group_by_colors(self, elements: list[Stroke]) -> dict[str, List[Stroke]]:
-        color_groups: dict[str, List[Stroke]] = {}
+    def _group_by_colors(self, elements: list[Stroke]) -> dict[str, list[Stroke]]:
+        color_groups: dict[str, list[Stroke]] = {}
 
         if self.options.redwork_split_colors:
             for element in elements:

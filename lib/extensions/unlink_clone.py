@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import List, Tuple, cast
+from typing import cast
 
 from inkex import BaseElement, Boolean, Group, errormsg
 
@@ -32,7 +32,7 @@ class UnlinkClone(InkstitchExtension):
 
         # Two passes here: One to resolve all clones, and then another to replace those clones with their resolved versions.
         # This way we don't accidentally remove a node that another clone refers to.
-        clones_resolved: List[Tuple[BaseElement, BaseElement]] = []
+        clones_resolved: list[tuple[BaseElement, BaseElement]] = []
         for element in self.elements:
             if isinstance(element, Clone):
                 resolved = element.resolve_clone(recursive=recursive)

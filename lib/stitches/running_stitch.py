@@ -23,7 +23,7 @@ def lerp(a, b, t: float) -> float:
     return (1 - t) * a + t * b
 
 
-def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
+def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> typing.list[shgeo.Point]:
     """Split a segment into n even parts, optionally with jitter."""
     if segments <= 1:
         return []
@@ -40,14 +40,14 @@ def split_segment_even_n(a, b, segments: int, jitter_sigma: float = 0.0, random_
     return [line.interpolate(x, normalized=True) for x in splits]
 
 
-def split_segment_even_dist(a: Point, b: Point, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> typing.List[shgeo.Point]:
+def split_segment_even_dist(a: Point, b: Point, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> list[shgeo.Point]:
     """Split a segment into even parts with maximum length."""
     distance = shgeo.Point(a).distance(shgeo.Point(b))
     segments = math.ceil(distance / max_length)
     return split_segment_even_n(a, b, segments, jitter_sigma, random_seed)
 
 
-def split_segment_random_phase(a: Point, b: Point, length: float, length_sigma: float, random_seed: str) -> typing.List[shgeo.Point]:
+def split_segment_random_phase(a: Point, b: Point, length: float, length_sigma: float, random_seed: str) -> list[shgeo.Point]:
     """Split a segment with randomized phase and length variation."""
     line = shgeo.LineString([a, b])
     progress = length * prng.uniform_floats(random_seed, "phase")[0]
@@ -71,7 +71,7 @@ def split_segment_stagger_phase(
     this_segment_num: int,
     min_val=0,
     max_val=None,
-) -> typing.List[shgeo.Point]:
+) -> list[shgeo.Point]:
     """Split a segment with staggered phase for pattern alignment."""
     line = shgeo.LineString([a, b])
     distance = line.length
@@ -215,7 +215,7 @@ def take_stitch(
     idx: int,
     stitch_length: float,
     tolerance: float,
-) -> typing.Tuple[typing.Optional[Point], typing.Optional[int]]:
+) -> typing.tuple[typing.Optional[Point], typing.Optional[int]]:
     """Take a single stitch based on the Zhao-Saalfeld curve simplification algorithm.
 
     Based on: https://cartogis.org/docs/proceedings/archive/auto-carto-13/pdf/
@@ -247,12 +247,12 @@ def take_stitch(
 
 def stitch_curve_evenly_strict(  # noqa C901
     points: typing.Sequence[Point],
-    stitch_length: typing.List[float],
+    stitch_length: list[float],
     tolerance: float,
     min_stitch_length: float,
     stitch_length_pos: int = 0,
     stitch_distance_passed: float = 0,
-) -> typing.Tuple[typing.List[Point], int, float]:
+) -> typing.tuple[list[Point], int, float]:
     """Split a curve into even-length stitches while handling curves correctly.
 
     Adapts stitch lengths to the distance that already has been passed,
@@ -264,7 +264,7 @@ def stitch_curve_evenly_strict(  # noqa C901
         return [], stitch_length_pos, stitch_distance_passed
     i: typing.Optional[int] = 1
     last = points[0]
-    stitches: typing.List[Point] = []
+    stitches: list[Point] = []
     while i is not None and i < len(points):
         stitch_len = stitch_length[stitch_length_pos]
 
@@ -306,10 +306,10 @@ def stitch_curve_evenly_strict(  # noqa C901
 
 def stitch_curve_evenly(
     points: typing.Sequence[Point],
-    stitch_length: typing.List[float],
+    stitch_length: list[float],
     tolerance: float,
     stitch_length_pos: int = 0,
-) -> typing.Tuple[typing.List[Point], int]:
+) -> tuple[list[Point], int]:
     """Split a curve into even-length stitches while handling curves correctly.
 
     Includes end point but not start point.
@@ -322,7 +322,7 @@ def stitch_curve_evenly(
 
     i: typing.Optional[int] = 1
     last = points[0]
-    stitches: typing.List[Point] = []
+    stitches: list[Point] = []
     while i is not None and i < len(points):
         d = last.distance(points[i]) + dist_left[i]
         if d == 0:
@@ -343,12 +343,12 @@ def stitch_curve_evenly(
 
 def stitch_curve_randomly(
     points: typing.Sequence[Point],
-    stitch_length: typing.List[float],
+    stitch_length: list[float],
     tolerance: float,
     stitch_length_sigma: float,
     random_seed: str,
     stitch_length_pos: int = 0,
-) -> typing.Tuple[typing.List[Point], int]:
+) -> typing.tuple[list[Point], int]:
     """Split a curve into stitches of random length within a range.
 
     Attempts to randomize phase so distribution doesn't depend on direction.
@@ -388,7 +388,7 @@ def stitch_curve_randomly(
     return stitches, stitch_length_pos
 
 
-def path_to_curves(points: typing.List[Point], min_len: float):
+def path_to_curves(points: list[Point], min_len: float):
     """Split a path at obvious corner points so they get stitched exactly.
 
     min_len controls the minimum length after splitting for which it won't

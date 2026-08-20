@@ -2,7 +2,6 @@ from ..utils import get_bundled_dir, get_user_dir
 
 import os
 import json
-from typing import List
 
 
 def get_custom_font_cfg_file() -> str:
@@ -23,7 +22,7 @@ def get_custom_font_dir() -> str:
     return ""
 
 
-def get_font_paths() -> List[str]:
+def get_font_paths() -> list[str]:
     font_paths = [
         os.path.join(get_bundled_dir("fonts"), "src"),
         os.path.expanduser("~/.inkstitch/fonts/"),

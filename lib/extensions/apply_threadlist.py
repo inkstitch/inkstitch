@@ -6,7 +6,7 @@
 import os
 import re
 import sys
-from typing import List, Optional
+from typing import Optional
 
 import inkex
 
@@ -81,7 +81,7 @@ class ApplyThreadlist(InkstitchExtension):
             inkex.errormsg(_("The filepath specified is not a file but a dictionary.\nPlease choose a threadlist file to import."))
             sys.exit(1)
 
-    def verify_colors(self, colors: List[List[Optional[str]]], method: int) -> None:
+    def verify_colors(self, colors: list[list[Optional[str]]], method: int) -> None:
         if all(c is None for c in colors):
             inkex.errormsg(_("Couldn't find any matching colors in the file."))
             if method == 1:
@@ -90,7 +90,7 @@ class ApplyThreadlist(InkstitchExtension):
                 inkex.errormsg(_("Please chose an other color palette for your design."))
             sys.exit(1)
 
-    def parse_inkstitch_threadlist(self, path: str) -> List[List[Optional[str]]]:
+    def parse_inkstitch_threadlist(self, path: str) -> list[list[Optional[str]]]:
         colors = []
         with open(path) as threadlist:
             for line in threadlist:
@@ -103,7 +103,7 @@ class ApplyThreadlist(InkstitchExtension):
                         colors.append([None, None])
         return colors
 
-    def parse_color_format(self, path: str) -> List[List[Optional[str]]]:
+    def parse_color_format(self, path: str) -> list[list[Optional[str]]]:
         colors = []
         threads = pystitch.read(path).threadlist
         for color in threads:
@@ -114,7 +114,7 @@ class ApplyThreadlist(InkstitchExtension):
                 colors.append([color.hex_color(), None])
         return colors
 
-    def parse_threadlist_by_catalog_number(self, path: str) -> List[List[Optional[str]]]:
+    def parse_threadlist_by_catalog_number(self, path: str) -> list[list[Optional[str]]]:
         palette_name = self.options.palette
         palette = ThreadCatalog().get_palette_by_name(palette_name)
 

@@ -6,7 +6,7 @@
 import os
 from collections import defaultdict
 from unicodedata import normalize, category
-from typing import List, Dict, Optional
+from typing import Optional
 import lzma
 
 import inkex
@@ -63,7 +63,7 @@ class FontVariant(object):
         self.path = font_path
         self.variant = variant
         self.default_glyph = default_glyph
-        self.glyphs: Dict[str, Glyph] = {}
+        self.glyphs: dict[str, Glyph] = {}
         self._load_glyphs()
 
     def _load_glyphs(self) -> None:
@@ -93,7 +93,7 @@ class FontVariant(object):
                 except (AttributeError, ValueError):
                     pass
 
-    def _get_variant_file_paths(self, legacy=False) -> List[str]:
+    def _get_variant_file_paths(self, legacy=False) -> list[str]:
         variant = self.variant
         if legacy:
             variant = self.LEGACY_VARIANT_CONVERSION_DICT[variant]

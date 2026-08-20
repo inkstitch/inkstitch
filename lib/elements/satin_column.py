@@ -6,7 +6,7 @@
 import itertools
 from copy import deepcopy
 from itertools import chain
-from typing import List, Tuple, Optional, Sequence, overload
+from typing import Optional, Sequence, overload
 
 import numpy as np
 from inkex import Path, Vector2d
@@ -671,7 +671,7 @@ class SatinColumn(EmbroideryElement):
         else:
             return rails
 
-    def _get_compensated_line_string_rails(self, start: float, end: float) -> List[shgeo.Point | shgeo.LineString]:
+    def _get_compensated_line_string_rails(self, start: float, end: float) -> list[shgeo.Point | shgeo.LineString]:
         """Apply push compensation on rails"""
         return [self._apply_push_comp(rail, start, end) for rail in self.line_string_rails]
 
@@ -1245,7 +1245,7 @@ class SatinColumn(EmbroideryElement):
     @debug.time
     def plot_points_on_rails(self, spacing: float | int, offset_px: tuple[float, float] = (0, 0),
                              offset_proportional: tuple[float, float] = (0, 0), use_random: bool = False,
-                             ) -> List[Tuple[Point, Point]]:
+                             ) -> list[tuple[Point, Point]]:
         # Take a section from each rail in turn, and plot out an equal number
         # of points on both rails.  Return the points plotted. The points will
         # be contracted or expanded by offset using self.offset_points().

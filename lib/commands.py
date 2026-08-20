@@ -7,7 +7,7 @@ import os
 import sys
 from copy import deepcopy
 from random import random
-from typing import List, Optional, cast
+from typing import Optional, cast
 
 import inkex
 from shapely import geometry as shgeo
@@ -225,7 +225,7 @@ def point_command_symbols_up(node: inkex.BaseElement) -> None:
             point_upwards(use)
 
 
-def find_commands(node: inkex.BaseElement) -> List[Command]:
+def find_commands(node: inkex.BaseElement) -> list[Command]:
     """Find the symbols this node is connected to and return them as Commands"""
 
     # find all paths that have this object as a connection

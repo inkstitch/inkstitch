@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import Any, List, Optional, Union
+from typing import Any, Optional, Union
 
 from inkex import Boolean, Group, Vector2d, errormsg
 
@@ -53,7 +53,7 @@ class AutoRun(CommandsExtension):
                 return command.target_point
         return None
 
-    def check_selection(self) -> List[Union[Stroke, Any]]:
+    def check_selection(self) -> list[Union[Stroke, Any]]:
         if not self.svg.selection:
             # L10N auto-route running stitch columns extension
             errormsg(_("Please select one or more stroke elements."))

@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import Optional, List
+from typing import Optional
 from shapely.geometry import Point as ShapelyPoint
 
 from ..utils import Point as InkstitchPoint
@@ -24,7 +24,7 @@ class ValidationMessage(object):
     # Subclasses will fill these in.
     name: Optional[str] = None
     description: Optional[str] = None
-    steps_to_solve: List[str] = []
+    steps_to_solve: list[str] = []
 
     def __init__(self, position=None, label=""):
         if isinstance(position, ShapelyPoint):

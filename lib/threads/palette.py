@@ -3,8 +3,6 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from collections.abc import Set
-
 from colormath2.color_conversions import convert_color
 from colormath2.color_diff import delta_e_cie1994
 from colormath2.color_objects import LabColor, sRGBColor
@@ -17,7 +15,7 @@ def compare_thread_colors(color1, color2):
     return delta_e_cie1994(color1, color2, K_L=2)
 
 
-class ThreadPalette(Set):
+class ThreadPalette(set):
     """Holds a set of ThreadColors all from the same manufacturer."""
 
     def __init__(self, palette_file):

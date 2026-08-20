@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from copy import copy
-from typing import List, Sequence
+from typing import Sequence
 
 from inkex import Path, errormsg
 from shapely import make_valid
@@ -69,7 +69,7 @@ class BreakApart(InkstitchExtension):
             if recombined_polygons:
                 self.polygons_to_nodes(recombined_polygons, element)
 
-    def break_apart_paths(self, paths: Sequence[Sequence[Sequence[float]]]) -> List[Polygon]:
+    def break_apart_paths(self, paths: Sequence[Sequence[Sequence[float]]]) -> list[Polygon]:
         polygons = []
         for path in paths:
             if len(path) < 3:
@@ -84,7 +84,7 @@ class BreakApart(InkstitchExtension):
                 polygons.append(polygon)
         return polygons
 
-    def combine_overlapping_polygons(self, polygons: List[Polygon]) -> List[Polygon]:
+    def combine_overlapping_polygons(self, polygons: list[Polygon]) -> list[Polygon]:
         for polygon in polygons:
             for other in polygons:
                 if polygon == other:
@@ -106,10 +106,10 @@ class BreakApart(InkstitchExtension):
         valid = geom.is_valid
         return valid
 
-    def ensure_minimum_size(self, polygons: List[Polygon]) -> List[Polygon]:
+    def ensure_minimum_size(self, polygons: list[Polygon]) -> list[Polygon]:
         return [polygon for polygon in polygons if polygon.area > self.minimum_size]
 
-    def recombine_polygons(self, polygons: List[Polygon]) -> List[List[Polygon]]:
+    def recombine_polygons(self, polygons: list[Polygon]) -> list[list[Polygon]]:
         polygons.sort(key=lambda polygon: polygon.area, reverse=True)
         multipolygons = []
         holes = []
@@ -134,7 +134,7 @@ class BreakApart(InkstitchExtension):
             multipolygons.append(polygon_list)
         return multipolygons
 
-    def polygons_to_nodes(self, polygon_list: List[List[Polygon]], element: EmbroideryElement) -> None:
+    def polygons_to_nodes(self, polygon_list: list[list[Polygon]], element: EmbroideryElement) -> None:
         # reverse the list of polygons, we don't want to cover smaller shapes
         polygon_list = polygon_list[::-1]
         parent = element.node.getparent()

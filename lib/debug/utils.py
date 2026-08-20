@@ -11,7 +11,7 @@ import os
 import sys
 from pathlib import Path  # to work with paths as objects
 import logging
-from typing import List, TYPE_CHECKING
+from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from ..extensions.base import InkstitchExtension
 
@@ -254,7 +254,7 @@ def resolve_profiler_type(ini: dict) -> str:
 # - pyinstrument - profiler with nice html output
 
 
-def profile(profiler_type, profile_dir: Path, ini: dict, extension: 'InkstitchExtension', remaining_args: List[str]) -> None:
+def profile(profiler_type, profile_dir: Path, ini: dict, extension: 'InkstitchExtension', remaining_args: list[str]) -> None:
     '''
     profile with a profiler (e.g. cProfile, profile or pyinstrument)
     '''
@@ -281,7 +281,7 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension: 'InkstitchEx
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
 
-def with_cprofile(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path):
+def with_cprofile(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path):
     '''
     profile with cProfile
     '''
@@ -304,7 +304,7 @@ def with_cprofile(extension: 'InkstitchExtension', remaining_args: List[str], pr
               file=sys.stderr)
 
 
-def with_profile(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_profile(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     '''
     profile with profile
     '''
@@ -324,7 +324,7 @@ def with_profile(extension: 'InkstitchExtension', remaining_args: List[str], pro
               file=sys.stderr)
 
 
-def with_pyinstrument(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_pyinstrument(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     '''
     profile with pyinstrument
     '''
@@ -343,7 +343,7 @@ def with_pyinstrument(extension: 'InkstitchExtension', remaining_args: List[str]
         print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
 
 
-def with_time(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_time(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     """
     A simple profiler that gives you similar information to running `time`.
     Low overhead, but of course only provides a high-level picture.
@@ -359,7 +359,7 @@ def with_time(extension: 'InkstitchExtension', remaining_args: List[str], profil
         print(f"Profiler: Time: real: {wall:.2f}s, proc (user+sys): {proc:.2f}s", file=sys.stderr)
 
 
-def with_monkeytype(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_monkeytype(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     '''
     'profile' with monkeytype to get type information. This may be handy for anyone who wants to
     add type annotations to older parts of our code that don't have them.

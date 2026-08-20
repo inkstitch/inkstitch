@@ -6,7 +6,7 @@
 import json
 from collections import defaultdict
 from copy import copy
-from typing import List, Optional, Tuple, Union
+from typing import Optional, Union
 
 from inkex import BaseElement
 from shapely import LineString, MultiPolygon, Point, Polygon, unary_union
@@ -19,8 +19,8 @@ from .palette import Palette
 
 
 def stripes_to_shapes(
-    stripes: List[dict],
-    dimensions: Tuple[float, float, float, float],
+    stripes: list[dict],
+    dimensions: tuple[float, float, float, float],
     outline: Union[MultiPolygon, Polygon],
     rotation: float,
     rotation_center: Point,
@@ -84,11 +84,11 @@ def stripes_to_shapes(
 
 
 def _stripes_to_sett(
-    stripes: List[dict],
+    stripes: list[dict],
     symmetry: bool,
     scale: int,
     min_stripe_width: float,
-) -> List[dict]:
+) -> list[dict]:
     """
     Builds a full sett for easier conversion into elements
 
@@ -151,7 +151,7 @@ def _stripes_to_sett(
     return sett
 
 
-def _get_last_fill_color(stripes: List[dict], scale: int, min_stripe_width: float, symmetry: bool,) -> Optional[str]:
+def _get_last_fill_color(stripes: list[dict], scale: int, min_stripe_width: float, symmetry: bool,) -> Optional[str]:
     '''
     Returns the first fill color of a pattern to substitute spaces if the pattern starts with strokes or
     stripes with render mode 2
@@ -194,8 +194,8 @@ def _merge_polygons(
     """
     shapes_copy = copy(shapes)
     for color, shape_group in shapes_copy.items():
-        polygons: List[Polygon] = []
-        lines: List[LineString] = []
+        polygons: list[Polygon] = []
+        lines: list[LineString] = []
         for shape in shape_group:
             if not shape.intersects(outline):
                 continue
@@ -212,7 +212,7 @@ def _merge_polygons(
     return shapes
 
 
-def _get_polygon(dimensions: List[float], rotation: float, rotation_center: Point, weft: bool) -> Polygon:
+def _get_polygon(dimensions: list[float], rotation: float, rotation_center: Point, weft: bool) -> Polygon:
     """
     Generates a rotated polygon with the given dimensions
 
@@ -234,10 +234,10 @@ def _get_polygon(dimensions: List[float], rotation: float, rotation_center: Poin
 
 def _get_linestrings(
     outline: Union[MultiPolygon, Polygon],
-    dimensions: List[float],
+    dimensions: list[float],
     rotation: float,
     rotation_center: Point, weft: bool
-) -> List[LineString]:
+) -> list[LineString]:
     """
     Generates a rotated linestrings with the given dimension (outline intersection)
 
@@ -262,7 +262,7 @@ def _get_linestrings(
     return linestrings
 
 
-def sort_fills_and_strokes(fills: defaultdict, strokes: defaultdict) -> Tuple[defaultdict, defaultdict]:
+def sort_fills_and_strokes(fills: defaultdict, strokes: defaultdict) -> tuple[defaultdict, defaultdict]:
     """
     Lines should be stitched out last, so they won't be covered by following fill elements.
     However, if we find lines of the same color as one of the polygon groups, we can make
@@ -325,7 +325,7 @@ def get_palette_width(settings: dict, direction: int = 0) -> float:
     return palette.get_palette_width(settings['scale'], settings['min_stripe_width'], direction)
 
 
-def get_tartan_stripes(settings: dict) -> Tuple[list, list]:
+def get_tartan_stripes(settings: dict) -> tuple[list, list]:
     """
     Get tartan stripes
 

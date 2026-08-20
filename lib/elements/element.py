@@ -8,7 +8,7 @@ import json
 import sys
 from contextlib import contextmanager
 from copy import deepcopy
-from typing import Any, Callable, List, Optional, TypeVar, Iterable, overload
+from typing import Any, Callable, Optional, TypeVar, Iterable, overload
 
 import inkex
 import numpy as np
@@ -584,11 +584,11 @@ class EmbroideryElement(object):
 
     @property
     @cache
-    def commands(self) -> List[Command]:
+    def commands(self) -> list[Command]:
         return find_commands(self.node)
 
     @cache
-    def get_commands(self, command: str) -> List[Command]:
+    def get_commands(self, command: str) -> list[Command]:
         return [c for c in self.commands if c.command == command]
 
     @cache
@@ -662,7 +662,7 @@ class EmbroideryElement(object):
 
         return lock_start, lock_end
 
-    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> List[StitchGroup]:
+    def to_stitch_groups(self, last_stitch_group: Optional[StitchGroup], next_element: Optional[EmbroideryElement] = None) -> list[StitchGroup]:
         raise NotImplementedError("%s must implement to_stitch_groups()" % self.__class__.__name__)
 
     def color(self):
@@ -782,7 +782,7 @@ class EmbroideryElement(object):
 
         return cache_key
 
-    def embroider(self, last_stitch_group: Optional[StitchGroup], next_element=None) -> List[StitchGroup]:
+    def embroider(self, last_stitch_group: Optional[StitchGroup], next_element=None) -> list[StitchGroup]:
         debug.log(f"starting {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
 
         with self.handle_unexpected_exceptions():
