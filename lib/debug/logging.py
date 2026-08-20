@@ -68,6 +68,7 @@
 # --------------------------------------------------------------------------------------------
 import os
 import sys
+from copy import deepcopy
 from pathlib import Path
 from typing import Dict, Any
 
@@ -154,11 +155,38 @@ def activate_for_development(ini: dict, SCRIPTDIR: Path):
         vars['logfilename'] = SCRIPTDIR / "inkstitch.log"  # log file is created in current directory
         devel_config = development_config   # get TOML configuration from module
 
-    configure_logging(devel_config, ini, vars)  # initialize and activate logging configuration
+    original_config = deepcopy(devel_config)
+    try:
+        configure_logging(deepcopy(original_config), ini, vars)  # initialize and activate logging configuration
+    except (OSError, ValueError) as error:
+        if not _caused_by_permission_error(error):
+            raise
+
+        fallback_dir = _get_fallback_log_dir()
+        print(f"WARNING: Cannot write logs to '{SCRIPTDIR}'. Using '{fallback_dir}' instead.", file=sys.stderr)
+        fallback_vars = dict(vars)
+        fallback_vars['SCRIPTDIR'] = fallback_dir
+        configure_logging(deepcopy(original_config), ini, fallback_vars)
 
     logger.info("Running in development mode")
     logger.info(f"Using logging configuration from file: {logging_config_file}")
     logger.debug(f"Logging configuration: {devel_config=}")
+
+
+def _caused_by_permission_error(error: BaseException) -> bool:
+    while error is not None:
+        if isinstance(error, PermissionError):
+            return True
+        error = error.__cause__
+    return False
+
+
+def _get_fallback_log_dir() -> Path:
+    from lib.utils.paths import get_user_dir
+
+    fallback_dir = Path(get_user_dir())
+    fallback_dir.mkdir(parents=True, exist_ok=True)
+    return fallback_dir
 
 
 # --------------------------------------------------------------------------------------------
