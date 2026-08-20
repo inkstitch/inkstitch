@@ -20,6 +20,22 @@ EXCLUDED_DIRS = {
     "venv",
     "node_modules",
 }
+EXCLUDED_PATH_PARTS = {
+    "site-packages",
+    "dist-packages",
+}
+
+
+def _find_virtualenv_roots(root: Path) -> set[Path]:
+    return {path.parent.resolve() for path in root.rglob("pyvenv.cfg")}
+
+
+VIRTUALENV_ROOTS = _find_virtualenv_roots(REPO_ROOT)
+
+
+def _is_in_virtualenv(path: Path) -> bool:
+    resolved = path.resolve()
+    return any(resolved.is_relative_to(env_root) for env_root in VIRTUALENV_ROOTS)
 
 # PEP 585: collection-style typing aliases from typing are deprecated in favor
 # of built-in generics (list[str], dict[str, int], type[Foo], ...).
@@ -109,6 +125,10 @@ def _iter_python_files(root: Path) -> list[Path]:
     files: list[Path] = []
     for path in root.rglob("*.py"):
         if any(part in EXCLUDED_DIRS for part in path.parts):
+            continue
+        if any(part in EXCLUDED_PATH_PARTS for part in path.parts):
+            continue
+        if _is_in_virtualenv(path):
             continue
         files.append(path)
 
