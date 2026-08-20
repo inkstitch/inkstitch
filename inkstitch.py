@@ -5,7 +5,6 @@
 
 import os
 import sys
-import tempfile
 from pathlib import Path  # to work with paths as objects
 from argparse import ArgumentParser  # to parse arguments and remove --extension
 
@@ -43,57 +42,7 @@ else:
 
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
 
-
-def _can_write_to_directory(path: Path) -> bool:
-    """Return True only if creating and deleting a temp file in the directory succeeds."""
-    try:
-        fd, probe_path = tempfile.mkstemp(prefix=".inkstitch-write-test-", dir=path)
-        os.close(fd)
-        os.unlink(probe_path)
-        return True
-    except OSError:
-        return False
-
-
-def _modules_referencing_module(target_module: object) -> list[tuple[str, str]]:
-    refs: list[tuple[str, str]] = []
-    for module_name, module in sys.modules.items():
-        module_dict = getattr(module, '__dict__', None)
-        if not isinstance(module_dict, dict):
-            continue
-
-        for attr_name, attr_value in module_dict.items():
-            if attr_value is target_module:
-                refs.append((module_name, attr_name))
-                break
-
-    return sorted(refs)
-
-
-def _assert_inkex_not_imported_before_path_setup() -> None:
-    inkex_module = sys.modules.get('inkex')
-    if inkex_module is None:
-        return
-
-    inkex_file = getattr(inkex_module, '__file__', '<unknown>')
-    refs = _modules_referencing_module(inkex_module)
-    refs_msg = ', '.join([f"{module}.{attr}" for module, attr in refs[:10]])
-    if len(refs) > 10:
-        refs_msg += ', ...'
-
-    print(
-        "ERROR: 'inkex' was imported before sys.path setup. "
-        "This can select the wrong inkex installation when multiple versions are available.\n"
-        f"Loaded inkex module: {inkex_file}\n"
-        f"First modules referencing inkex: {refs_msg or '<none>'}\n"
-        "Fix: delay imports that depend on inkex until after reorder_sys_path().",
-        file=sys.stderr,
-    )
-    sys.exit(1)
-
-# ------------------------------------------------------------
-
-running_from_readonly_filesystem = not _can_write_to_directory(SCRIPTDIR)
+running_from_readonly_filesystem = not debug_utils.can_write_to_directory(SCRIPTDIR)
 
 # override runnig_as_frozen if read-only filesystem is detected
 if running_from_readonly_filesystem:
@@ -172,7 +121,7 @@ if not running_as_frozen:  # debugging/profiling only in development mode
                                 "prefer_pip_inkex",
                                 default=True)
     if prefer_pip_inkex and 'PYTHONPATH' in os.environ:
-        _assert_inkex_not_imported_before_path_setup()
+        debug_utils.assert_inkex_not_imported_before_path_setup()
         debug_utils.reorder_sys_path()
 
 # enabling of debug depends on value of debug_type in DEBUG.toml file

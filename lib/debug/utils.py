@@ -9,6 +9,7 @@
 
 import os
 import sys
+import tempfile
 from pathlib import Path  # to work with paths as objects
 import logging
 from typing import TYPE_CHECKING
@@ -32,6 +33,54 @@ def safe_get(dictionary: dict, *keys, default=None):
             return default
         dictionary = dictionary[key]
     return dictionary
+
+
+def can_write_to_directory(path: Path) -> bool:
+    """Return True only if creating and deleting a temp file in the directory succeeds."""
+    try:
+        fd, probe_path = tempfile.mkstemp(prefix=".inkstitch-write-test-", dir=path)
+        os.close(fd)
+        os.unlink(probe_path)
+        return True
+    except OSError:
+        return False
+
+
+def _modules_referencing_module(target_module: object) -> list[tuple[str, str]]:
+    refs: list[tuple[str, str]] = []
+    for module_name, module in sys.modules.items():
+        module_dict = getattr(module, '__dict__', None)
+        if not isinstance(module_dict, dict):
+            continue
+
+        for attr_name, attr_value in module_dict.items():
+            if attr_value is target_module:
+                refs.append((module_name, attr_name))
+                break
+
+    return sorted(refs)
+
+
+def assert_inkex_not_imported_before_path_setup() -> None:
+    inkex_module = sys.modules.get('inkex')
+    if inkex_module is None:
+        return
+
+    inkex_file = getattr(inkex_module, '__file__', '<unknown>')
+    refs = _modules_referencing_module(inkex_module)
+    refs_msg = ', '.join([f"{module}.{attr}" for module, attr in refs[:10]])
+    if len(refs) > 10:
+        refs_msg += ', ...'
+
+    print(
+        "ERROR: 'inkex' was imported before sys.path setup. "
+        "This can select the wrong inkex installation when multiple versions are available.\n"
+        f"Loaded inkex module: {inkex_file}\n"
+        f"First modules referencing inkex: {refs_msg or '<none>'}\n"
+        "Fix: delay imports that depend on inkex until after reorder_sys_path().",
+        file=sys.stderr,
+    )
+    sys.exit(1)
 
 
 def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
@@ -58,7 +107,7 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
         print("WARN: input svg file is same as output svg file. No script created in write debug script.", file=sys.stderr)
         return
 
-    if not os.access(debug_script_dir, os.W_OK):
+    if not can_write_to_directory(debug_script_dir):
         logger.warning(f"No write permission to '{debug_script_dir}'. No script created in write debug script.")
         return
 
