@@ -6,9 +6,10 @@ from __future__ import annotations
 
 import json
 import sys
+from collections.abc import Callable, Iterable
 from contextlib import contextmanager
 from copy import deepcopy
-from typing import Any, Callable, Optional, TypeVar, Iterable, overload
+from typing import Any, Optional, TypeVar, overload
 
 import inkex
 import numpy as np

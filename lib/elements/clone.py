@@ -5,7 +5,8 @@
 
 from contextlib import contextmanager
 from math import degrees
-from typing import Generator, Optional, Any, cast
+from collections.abc import Generator
+from typing import Optional, Any, cast
 
 from inkex import BaseElement, Title, Transform, Vector2d
 from lxml.etree import _Comment

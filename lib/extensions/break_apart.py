@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from copy import copy
-from typing import Sequence
+from collections.abc import Sequence
 
 from inkex import Path, errormsg
 from shapely import make_valid

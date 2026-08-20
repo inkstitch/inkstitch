@@ -5,8 +5,9 @@
 
 import itertools
 from copy import deepcopy
+from collections.abc import Sequence
 from itertools import chain
-from typing import Optional, Sequence, overload
+from typing import Optional, overload
 
 import numpy as np
 from inkex import Path, Vector2d

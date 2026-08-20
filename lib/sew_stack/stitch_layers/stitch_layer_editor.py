@@ -1,5 +1,5 @@
 import re
-from typing import Callable
+from collections.abc import Callable
 
 import wx.html
 import wx.propgrid

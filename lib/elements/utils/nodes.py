@@ -3,7 +3,8 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from typing import Iterable, Optional
+from collections.abc import Iterable
+from typing import Optional
 
 from inkex import BaseElement
 from lxml.etree import Comment

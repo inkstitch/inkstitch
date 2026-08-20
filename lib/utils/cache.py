@@ -7,7 +7,8 @@ import hashlib
 import os
 import pickle
 import sqlite3
-from typing import TypeVar, Callable, Any, cast
+from collections.abc import Callable
+from typing import TypeVar, Any, cast
 
 import diskcache  # type: ignore[import-untyped]
 

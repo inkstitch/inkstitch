@@ -5,8 +5,9 @@
 
 import math
 import typing
+from collections.abc import Iterable, Iterator
 from itertools import groupby
-from typing import Iterable, Iterator, overload, NoReturn, TypeAlias
+from typing import overload, NoReturn, TypeAlias
 
 import numpy
 from inkex import Vector2d

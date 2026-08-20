@@ -5,7 +5,7 @@
 """Utility functions to produce running stitches."""
 
 import math
-import typing
+from collections.abc import Sequence
 from copy import copy
 from math import tau
 
@@ -211,11 +211,11 @@ def cut_segment_with_circle(origin: Point, r: float, a: Point, b: Point) -> Poin
 
 def take_stitch(
     start: Point,
-    points: typing.Sequence[Point],
+    points: Sequence[Point],
     idx: int,
     stitch_length: float,
     tolerance: float,
-) -> tuple[typing.Optional[Point], typing.Optional[int]]:
+) -> tuple[Point | None, int | None]:
     """Take a single stitch based on the Zhao-Saalfeld curve simplification algorithm.
 
     Based on: https://cartogis.org/docs/proceedings/archive/auto-carto-13/pdf/
@@ -246,7 +246,7 @@ def take_stitch(
 
 
 def stitch_curve_evenly_strict(  # noqa C901
-    points: typing.Sequence[Point],
+    points: Sequence[Point],
     stitch_length: list[float],
     tolerance: float,
     min_stitch_length: float,
@@ -262,7 +262,7 @@ def stitch_curve_evenly_strict(  # noqa C901
     """
     if len(points) < 2:
         return [], stitch_length_pos, stitch_distance_passed
-    i: typing.Optional[int] = 1
+    i: int | None = 1
     last = points[0]
     stitches: list[Point] = []
     while i is not None and i < len(points):
@@ -305,7 +305,7 @@ def stitch_curve_evenly_strict(  # noqa C901
 
 
 def stitch_curve_evenly(
-    points: typing.Sequence[Point],
+    points: Sequence[Point],
     stitch_length: list[float],
     tolerance: float,
     stitch_length_pos: int = 0,
@@ -320,7 +320,7 @@ def stitch_curve_evenly(
     for j in reversed(range(0, len(points) - 1)):
         dist_left[j] = dist_left[j + 1] + points[j].distance(points[j + 1])
 
-    i: typing.Optional[int] = 1
+    i: int | None = 1
     last = points[0]
     stitches: list[Point] = []
     while i is not None and i < len(points):
@@ -342,7 +342,7 @@ def stitch_curve_evenly(
 
 
 def stitch_curve_randomly(
-    points: typing.Sequence[Point],
+    points: Sequence[Point],
     stitch_length: list[float],
     tolerance: float,
     stitch_length_sigma: float,
@@ -361,7 +361,7 @@ def stitch_curve_randomly(
     min_stitch_length = max(0, stitch_length[stitch_length_pos] * (1 - stitch_length_sigma))
     max_stitch_length = stitch_length[stitch_length_pos] * (1 + stitch_length_sigma)
 
-    i: typing.Optional[int] = 1
+    i: int | None = 1
     last = points[0]
     last_shortened = 0.0
     stitches = []

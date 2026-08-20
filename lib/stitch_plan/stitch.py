@@ -5,8 +5,9 @@
 
 from __future__ import annotations  # Needed for using the Stitch type as a constructor arg
 
+from collections.abc import Iterable
 from math import cos, radians, sin
-from typing import Any, Iterable, Optional, Type, Union, overload
+from typing import Any, Optional, Union, overload
 
 from shapely import geometry as shgeo
 
@@ -129,7 +130,7 @@ class Stitch(Point):
             raise ValueError("Coordinates must have at least 2 elements")
         return cls(coords[0], coords[1])
 
-    def __new__(cls: Type[Stitch], *args, **kwargs) -> Stitch:
+    def __new__(cls: type[Stitch], *args, **kwargs) -> Stitch:
         instance = super().__new__(cls)
 
         # Set default values for any new attributes here (see note in __init__() above)

@@ -7,7 +7,7 @@
 
 import math
 from itertools import chain, groupby
-from typing import Iterator
+from collections.abc import Iterator
 
 import networkx
 from shapely import geometry as shgeo

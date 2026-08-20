@@ -5,7 +5,7 @@
 
 import gettext
 import os
-from typing import Callable
+from collections.abc import Callable
 
 from .utils import cache, get_resource_dir
 
