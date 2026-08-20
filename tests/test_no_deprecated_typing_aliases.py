@@ -37,6 +37,7 @@ def _is_in_virtualenv(path: Path) -> bool:
     resolved = path.resolve()
     return any(resolved.is_relative_to(env_root) for env_root in VIRTUALENV_ROOTS)
 
+
 # PEP 585: collection-style typing aliases from typing are deprecated in favor
 # of built-in generics (list[str], dict[str, int], type[Foo], ...).
 DEPRECATED_TYPING_ALIASES = {
