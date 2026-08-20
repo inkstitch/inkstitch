@@ -41,6 +41,12 @@ else:
 # --------------------------------------------------------------------------------------------
 
 running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
+running_from_readonly_filesystem = not os.access(SCRIPTDIR, os.W_OK)  # check if running from read-only filesystem
+
+# override runnig_as_frozen if read-only filesystem is detected
+if running_from_readonly_filesystem:
+    running_as_frozen = True
+
 
 if not running_as_frozen:  # override running_as_frozen from DEBUG.toml - for testing
     if safe_get(ini, "DEBUG", "force_frozen", default=False):
