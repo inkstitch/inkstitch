@@ -66,82 +66,149 @@
 #
 
 # --------------------------------------------------------------------------------------------
+import logging           # to configure logging
+import logging.config    # to configure logging from dict
 import os
 import sys
+import tomllib           # built-in in Python 3.11+
+import warnings          # to control python warnings
+
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
-if sys.version_info >= (3, 11):
-    import tomllib      # built-in in Python 3.11+
-else:
-    import tomli as tomllib
-
-import warnings          # to control python warnings
-import logging           # to configure logging
-import logging.config    # to configure logging from dict
-
 from .utils import safe_get     # mimic get method of dict with default value
+from . import utils as debug_utils
 
 logger = logging.getLogger('inkstitch')
-
-
-# --------------------------------------------------------------------------------------------
-# activate_logging - configure logging for inkstitch application
-def activate_logging(running_as_frozen: bool, ini: dict, SCRIPTDIR: Path):
-    if running_as_frozen:                          # in release mode
-        activate_for_frozen()
-    else:                                          # in development
-        activate_for_development(ini, SCRIPTDIR)
-
-
-# Configure logging in frozen (release) mode of application:
-# in release mode normally we want to ignore all warnings and logging, but we can enable it by setting environment variables
-#  - INKSTITCH_LOGLEVEL - logging level:
-#       'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'
-#  - PYTHONWARNINGS, -W - warnings action controlled by python
-#       actions: 'error', 'ignore', 'always', 'default', 'module', 'once'
-def activate_for_frozen():
-    if frozen_debug_active():
-        loglevel = os.environ.get('INKSTITCH_LOGLEVEL')  # read log level from environment variable or None
-        docpath = os.environ.get('DOCUMENT_PATH')  # read document path from environment variable (set by inkscape) or None
-
-        # The end user enabled logging and warnings are redirected to the input_svg.inkstitch.log file.
-
-        vars = {
-            'loglevel': loglevel.upper(),
-            'logfilename': Path(docpath).with_suffix('.inkstitch.log')  # log file is created in document path
-        }
-        config = expand_variables(frozen_config, vars)
-
-        # dictConfig has access to top level variables, dict contains: ext://__main__.var
-        #   - restriction: variable must be last token in string - very limited functionality, avoid using it
-
-        # After this operation, logging will be activated, so we can use the logger.
-        logging.config.dictConfig(config)  # configure root logger from dict
-
-        logging.captureWarnings(True)                           # capture all warnings to log file with level WARNING
-    else:
-        logging.disable()                # globally disable all logging of all loggers
-        disable_warnings()
-
-
-def frozen_debug_active():
-    loglevel = os.environ.get('INKSTITCH_LOGLEVEL')  # read log level from environment variable or None
-    docpath = os.environ.get('DOCUMENT_PATH')  # read document path from environment variable (set by inkscape) or None
-    if docpath is not None and loglevel is not None and loglevel.upper() in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
-        return True
-    return False
-
 
 def disable_warnings():
     warnings.simplefilter('ignore')  # ignore all warnings
 
 
+def resolve_log_dir(development_mode: bool, log_location: str, SCRIPTDIR: Path) -> Path | None:
+    log_dir = _resolve_log_dir(development_mode, log_location, SCRIPTDIR)
+    if log_dir is None:
+        return None
+
+    # Try to create the directory if it does not exist
+    if not log_dir.exists():
+        try:
+            log_dir.mkdir(parents=True, exist_ok=True)
+        except (OSError, PermissionError) as e:
+            print(f"DEBUG: Failed to create log directory '{log_dir}': {e}", file=sys.stderr)
+            return None
+
+    # Check if directory is writable
+    if not debug_utils.can_write_to_directory(log_dir):
+        print(f"DEBUG: Log directory is not writable: '{log_dir}'", file=sys.stderr)
+        return None
+
+    return log_dir
+
+# Resolve log directory based on development mode, log location, and environment variables
+# Returns directory path, may not exist or is writable
+#         None if logging is disabled (regular user mode)
+
+def _resolve_log_dir(development_mode: bool, log_location: str, SCRIPTDIR: Path) -> Path | None:
+    # Master override via environment variable (works for dev and regular users)
+    if env_path := os.environ.get("INKSTITCH_LOG_DIR"):
+        raw_path = Path(env_path).expanduser().resolve()
+        return raw_path.parent if raw_path.is_file() else raw_path
+
+    # Regular user mode without ENV -> no file logging
+    if not development_mode:
+        return None
+
+    # Handle absolute paths directly
+    raw_path = Path(log_location).expanduser()
+    if raw_path.is_absolute():
+        return raw_path.parent if raw_path.is_file() else raw_path
+
+    # Handle keywords
+    match log_location.lower():
+        case "script":
+            return SCRIPTDIR
+
+        case "document" | "doc":
+            if doc_env := os.environ.get("DOCUMENT_PATH"): # full name eg: .../x.svg
+                doc_path = Path(doc_env).expanduser().resolve()
+                return doc_path.parent if doc_path.is_file() else doc_path
+            print("DEBUG: DOCUMENT_PATH environment variable not set. Disabling logging.", file=sys.stderr)
+            return None
+
+        case "user" | "usr":
+            from lib.utils.paths import get_user_dir  # this loads inkex
+            return Path(get_user_dir())
+
+        case "temp" | "tmp":
+            import tempfile
+            return Path(tempfile.gettempdir()) / "inkstitch_logs"
+
+        case _:
+            print(f"DEBUG: Unrecognized log_location '{log_location}'. Disabling logging.", file=sys.stderr)
+            return None
+
+# --------------------------------------------------------------------------------------------
+# activate_logging - configure logging for inkstitch application
+def activate_logging(development_mode: bool, log_location: str,
+                     ini: dict, SCRIPTDIR: Path) -> Path:
+    # Resolve logging directory
+    LOGDIR = resolve_log_dir(development_mode, log_location, SCRIPTDIR)
+
+    if LOGDIR is None:
+        logging.disable()                # globally disable all logging of all loggers
+        disable_warnings()
+    elif development_mode:
+        activate_for_development(ini, LOGDIR)
+    else:
+        activate_for_production(ini, LOGDIR)
+
+    return LOGDIR  # return the directory where logs are written
+
+
+# Configure logging in frozen (release) mode of application:
+# in release mode normally we want to ignore all warnings and logging,
+# but we can enable it by setting environment variables
+#  - INKSTITCH_LOGLEVEL - logging level:
+#       'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'
+#  - PYTHONWARNINGS, -W - warnings action controlled by python
+#       actions: 'error', 'ignore', 'always', 'default', 'module', 'once'
+
+VALID_LOG_LEVELS = {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
+
+def activate_for_production(ini: dict, LOGDIR: Path):
+    loglevel = os.environ.get('INKSTITCH_LOGLEVEL')
+    docpath = os.environ.get('DOCUMENT_PATH') # full path to input SVG file or None
+
+    if not loglevel or loglevel.upper() not in VALID_LOG_LEVELS:
+        loglevel = "WARNING"  # default log level for production mode
+
+    if docpath:
+        doc_name = Path(docpath).name
+    else:
+        doc_name = Path("unknown_document")
+
+    # The end user enabled logging and warnings are redirected to the input_svg.inkstitch.log file.
+
+    vars = {
+        'loglevel': loglevel.upper(),
+        'logfilename': LOGDIR / doc_name.with_suffix('.inkstitch.log')
+    }
+    config = expand_variables(deepcopy(frozen_config), vars)
+
+    # dictConfig has access to top level variables, dict contains: ext://__main__.var
+    #   - restriction: variable must be last token in string - very limited functionality, avoid using it
+
+    # After this operation, logging will be activated, so we can use the logger.
+    logging.config.dictConfig(config)  # configure root logger from dict
+    logging.captureWarnings(True) # capture all warnings to log file with level WARNING
+
+
 # in development mode we want to use configuration from some LOGGING.toml file
-def activate_for_development(ini: dict, SCRIPTDIR: Path):
+def activate_for_development(ini: dict, LOGDIR: Path):
     logging_config_file = safe_get(ini, "LOGGING", "log_config_file", default=None)
-    vars: dict[str, Any] = {'SCRIPTDIR': SCRIPTDIR}        # dynamic data for logging configuration
+    vars: dict[str, Any] = {'LOGDIR': LOGDIR, 'SCRIPTDIR': LOGDIR}  # dynamic data for logging configuration
 
     if logging_config_file is not None:
         logging_config_file = Path(logging_config_file)
@@ -152,46 +219,18 @@ def activate_for_development(ini: dict, SCRIPTDIR: Path):
             raise FileNotFoundError(f"{logging_config_file} file not found")
     else:                                   # if LOGGING.toml file does not exist, use default logging configuration
         vars['loglevel'] = 'DEBUG'          # set log level to DEBUG
-        vars['logfilename'] = SCRIPTDIR / "inkstitch.log"  # log file is created in current directory
+        vars['logfilename'] = LOGDIR / "inkstitch.log"  # log file is created in current directory
         devel_config = development_config   # get TOML configuration from module
 
-    original_config = deepcopy(devel_config)
-    try:
-        configure_logging(deepcopy(original_config), ini, vars)  # initialize and activate logging configuration
-    except (OSError, ValueError) as error:
-        if not _caused_by_permission_error(error):
-            raise
-
-        fallback_dir = _get_fallback_log_dir()
-        print(f"WARNING: Cannot write logs to '{SCRIPTDIR}'. Using '{fallback_dir}' instead.", file=sys.stderr)
-        fallback_vars = dict(vars)
-        fallback_vars['SCRIPTDIR'] = fallback_dir
-        if 'logfilename' in fallback_vars:
-            fallback_vars['logfilename'] = fallback_dir / Path(fallback_vars['logfilename']).name
-        configure_logging(deepcopy(original_config), ini, fallback_vars)
+    configure_logging(deepcopy(devel_config), ini, vars)  # initialize and activate logging configuration
 
     logger.info("Running in development mode")
     logger.info(f"Using logging configuration from file: {logging_config_file}")
     logger.debug(f"Logging configuration: {devel_config=}")
 
 
-def _caused_by_permission_error(error: BaseException | None) -> bool:
-    while error is not None:
-        if isinstance(error, PermissionError):
-            return True
-        error = error.__cause__
-    return False
-
-
-def _get_fallback_log_dir() -> Path:
-    from lib.utils.paths import get_user_dir
-
-    fallback_dir = Path(get_user_dir())
-    fallback_dir.mkdir(parents=True, exist_ok=True)
-    return fallback_dir
-
-
 # --------------------------------------------------------------------------------------------
+
 # configure logging from dictionary:
 #  - capture all warnings to log file with level WARNING - depends on warnings_capture
 #  - set action for warnings: 'error', 'ignore', 'always', 'default', 'module', 'once' - depends on warnings_action
@@ -246,13 +285,20 @@ def expand_variables(cfg: dict, vars: dict):
     return cfg
 
 
-def startup_info(logger: logging.Logger, SCRIPTDIR: Path, running_as_frozen: bool, running_from_inkscape: bool,
+def startup_info(logger: logging.Logger, SCRIPTDIR: Path, LOGDIR: Path,
+                 development_mode: bool,
+                 log_location: str,
+                 running_from_inkscape: bool,
                  debug_active: bool, debug_type: str, profiler_type: str):
-    logger.info(f"Running as frozen: {running_as_frozen}")
     logger.info(f"Running from inkscape: {running_from_inkscape}")
+    logger.info(f"Log location: {log_location}")
     logger.info(f"Debugger active: {debug_active}")
     logger.info(f"Debugger type: {debug_type!r}")
     logger.info(f"Profiler type: {profiler_type!r}")
+    logger.info(f"Development mode: {development_mode}")
+    logger.info(f"Script directory: {SCRIPTDIR}")
+    logger.info(f"Log directory: {LOGDIR}")
+
 
     # log Python version, platform, command line arguments, sys.path
     import sys

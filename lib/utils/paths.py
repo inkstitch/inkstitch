@@ -7,14 +7,9 @@ import os
 import sys
 from os.path import dirname, realpath
 from pathlib import Path
+import tomllib
 
 import platformdirs
-
-if sys.version_info >= (3, 11):
-    import tomllib  # built-in in Python 3.11+
-else:
-    import tomli as tomllib
-
 
 def get_bundled_dir(name=None):
     if getattr(sys, 'frozen', None) is not None:
