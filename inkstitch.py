@@ -55,6 +55,44 @@ def _can_write_to_directory(path: Path) -> bool:
         return False
 
 
+def _modules_referencing_module(target_module: object) -> list[tuple[str, str]]:
+    refs: list[tuple[str, str]] = []
+    for module_name, module in sys.modules.items():
+        module_dict = getattr(module, '__dict__', None)
+        if not isinstance(module_dict, dict):
+            continue
+
+        for attr_name, attr_value in module_dict.items():
+            if attr_value is target_module:
+                refs.append((module_name, attr_name))
+                break
+
+    return sorted(refs)
+
+
+def _assert_inkex_not_imported_before_path_setup() -> None:
+    inkex_module = sys.modules.get('inkex')
+    if inkex_module is None:
+        return
+
+    inkex_file = getattr(inkex_module, '__file__', '<unknown>')
+    refs = _modules_referencing_module(inkex_module)
+    refs_msg = ', '.join([f"{module}.{attr}" for module, attr in refs[:10]])
+    if len(refs) > 10:
+        refs_msg += ', ...'
+
+    print(
+        "ERROR: 'inkex' was imported before sys.path setup. "
+        "This can select the wrong inkex installation when multiple versions are available.\n"
+        f"Loaded inkex module: {inkex_file}\n"
+        f"First modules referencing inkex: {refs_msg or '<none>'}\n"
+        "Fix: delay imports that depend on inkex until after reorder_sys_path().",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
+# ------------------------------------------------------------
+
 running_from_readonly_filesystem = not _can_write_to_directory(SCRIPTDIR)
 
 # override runnig_as_frozen if read-only filesystem is detected
@@ -105,24 +143,36 @@ if not running_as_frozen:  # debugging/profiling only in development mode
     # specify debugger type
     #   but if script was already started from debugger then don't read debug type from ini file or cmd line
     if not debug_active:
-        debug_type = debug_utils.resolve_debug_type(ini)  # read debug type from ini file or cmd line
+        debug_type = debug_utils.resolve_debug_type(
+            ini)  # read debug type from ini file or cmd line
 
-    profiler_type = debug_utils.resolve_profiler_type(ini)  # read profile type from ini file or cmd line
+    profiler_type = debug_utils.resolve_profiler_type(
+        ini)  # read profile type from ini file or cmd line
 
     if running_from_inkscape:
         # process creation of the Bash script - should be done before sys.path is modified, see below in prefer_pip_inkex
-        if safe_get(ini, "DEBUG", "create_bash_script", default=False):  # create script only if enabled in DEBUG.toml
+        if safe_get(
+                ini, "DEBUG", "create_bash_script",
+                default=False):  # create script only if enabled in DEBUG.toml
             debug_utils.write_offline_debug_script(SCRIPTDIR, ini)
 
         # disable debugger when running from inkscape
-        disable_from_inkscape = safe_get(ini, "DEBUG", "disable_from_inkscape", default=False)
+        disable_from_inkscape = safe_get(ini,
+                                         "DEBUG",
+                                         "disable_from_inkscape",
+                                         default=False)
         if disable_from_inkscape:
             debug_type = 'none'  # do not start debugger when running from inkscape
 
     # prefer pip installed inkex over inkscape bundled inkex, pip version is bundled with Inkstitch
     # - must be be done before importing inkex
-    prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
+
+    prefer_pip_inkex = safe_get(ini,
+                                "LIBRARY",
+                                "prefer_pip_inkex",
+                                default=True)
     if prefer_pip_inkex and 'PYTHONPATH' in os.environ:
+        _assert_inkex_not_imported_before_path_setup()
         debug_utils.reorder_sys_path()
 
 # enabling of debug depends on value of debug_type in DEBUG.toml file
