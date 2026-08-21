@@ -183,7 +183,7 @@ uv-linux:
 	wxpython_url="https://extras.wxpython.org/wxPython4/extras/linux/gtk3/$$WXPYTHON_PLATFORM"; \
 	echo "wxPython find-links URL: $$wxpython_url"; \
 	uv pip install -f "$$wxpython_url" "wxPython==$(WXPYTHON_VERSION)"; \
-	uv lock --find-links "$$wxpython_url"; \
+	uv lock --find-links "$$wxpython_url" --exclude-newer-package wxpython=2025-12-01; \
 	uv sync --find-links "$$wxpython_url"
 
 
