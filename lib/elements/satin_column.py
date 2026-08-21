@@ -1828,13 +1828,16 @@ class SatinColumn(EmbroideryElement):
 
         return stitch_group
 
-    def get_split_points(self, *args, **kwargs):
+    def get_split_points(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0,
+                         random_phase=False, min_split_length=None, seed=None, row_num=0, from_end=False):
         if self.split_method == "default":
-            return self._get_split_points_default(*args, **kwargs)
+            return self._get_split_points_default(
+                a, b, a_short, b_short, length, count, length_sigma,
+                random_phase, min_split_length, seed)
         elif self.split_method == "simple":
-            return self._get_split_points_simple(*args, **kwargs), None
+            return self._get_split_points_simple(a, b, a_short, b_short, length, row_num, from_end), None
         elif self.split_method == "staggered":
-            return self._get_split_points_staggered(*args, **kwargs), None
+            return self._get_split_points_staggered(a, b, a_short, b_short, length, row_num, from_end), None
 
     def _get_split_points_default(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
                                   seed=None):
@@ -1860,8 +1863,8 @@ class SatinColumn(EmbroideryElement):
             points = running_stitch.split_segment_even_dist(a, b, length, length_sigma, seed)
             return (points, len(points) + 1)
 
-    def _get_split_points_simple(self, *args, **kwargs):
-        return self._get_split_points_staggered(*args, **kwargs, _staggers=1)
+    def _get_split_points_simple(self, a, b, a_short, b_short, length, row_num=0, from_end=False):
+        return self._get_split_points_staggered(a, b, a_short, b_short, length, row_num, from_end, 1)
 
     def _get_split_points_staggered(self, a, b, a_short, b_short, length, row_num=0, from_end=False, _staggers=None):
         if not length or a.distance(b) <= length:
