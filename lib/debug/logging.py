@@ -82,6 +82,7 @@ from . import utils as debug_utils
 
 logger = logging.getLogger('inkstitch')
 
+
 def disable_warnings():
     warnings.simplefilter('ignore')  # ignore all warnings
 
@@ -105,6 +106,7 @@ def resolve_log_dir(development_mode: bool, log_location: str, SCRIPTDIR: Path) 
         return None
 
     return log_dir
+
 
 # Resolve log directory based on development mode, log location, and environment variables
 # Returns directory path, may not exist or is writable
@@ -131,7 +133,7 @@ def _resolve_log_dir(development_mode: bool, log_location: str, SCRIPTDIR: Path)
             return SCRIPTDIR
 
         case "document" | "doc":
-            if doc_env := os.environ.get("DOCUMENT_PATH"): # full name eg: .../x.svg
+            if doc_env := os.environ.get("DOCUMENT_PATH"):  # full name eg: .../x.svg
                 doc_path = Path(doc_env).expanduser().resolve()
                 return doc_path.parent if doc_path.is_file() else doc_path
             print("DEBUG: DOCUMENT_PATH environment variable not set. Disabling logging.", file=sys.stderr)
@@ -149,10 +151,11 @@ def _resolve_log_dir(development_mode: bool, log_location: str, SCRIPTDIR: Path)
             print(f"DEBUG: Unrecognized log_location '{log_location}'. Disabling logging.", file=sys.stderr)
             return None
 
+
 # --------------------------------------------------------------------------------------------
 # activate_logging - configure logging for inkstitch application
 def activate_logging(development_mode: bool, log_location: str,
-                     ini: dict, SCRIPTDIR: Path) -> Path:
+                     ini: dict, SCRIPTDIR: Path) -> Path | None:
     # Resolve logging directory
     LOGDIR = resolve_log_dir(development_mode, log_location, SCRIPTDIR)
 
@@ -177,15 +180,16 @@ def activate_logging(development_mode: bool, log_location: str,
 
 VALID_LOG_LEVELS = {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"}
 
+
 def activate_for_production(ini: dict, LOGDIR: Path):
     loglevel = os.environ.get('INKSTITCH_LOGLEVEL')
-    docpath = os.environ.get('DOCUMENT_PATH') # full path to input SVG file or None
+    docpath = os.environ.get('DOCUMENT_PATH')  # full path to input SVG file or None
 
     if not loglevel or loglevel.upper() not in VALID_LOG_LEVELS:
         loglevel = "WARNING"  # default log level for production mode
 
     if docpath:
-        doc_name = Path(docpath).name
+        doc_name = Path(Path(docpath).name)
     else:
         doc_name = Path("unknown_document")
 
@@ -202,7 +206,7 @@ def activate_for_production(ini: dict, LOGDIR: Path):
 
     # After this operation, logging will be activated, so we can use the logger.
     logging.config.dictConfig(config)  # configure root logger from dict
-    logging.captureWarnings(True) # capture all warnings to log file with level WARNING
+    logging.captureWarnings(True)  # capture all warnings to log file with level WARNING
 
 
 # in development mode we want to use configuration from some LOGGING.toml file
@@ -285,7 +289,7 @@ def expand_variables(cfg: dict, vars: dict):
     return cfg
 
 
-def startup_info(logger: logging.Logger, SCRIPTDIR: Path, LOGDIR: Path,
+def startup_info(logger: logging.Logger, SCRIPTDIR: Path, LOGDIR: Path | None,
                  development_mode: bool,
                  log_location: str,
                  running_from_inkscape: bool,
@@ -298,7 +302,6 @@ def startup_info(logger: logging.Logger, SCRIPTDIR: Path, LOGDIR: Path,
     logger.info(f"Development mode: {development_mode}")
     logger.info(f"Script directory: {SCRIPTDIR}")
     logger.info(f"Log directory: {LOGDIR}")
-
 
     # log Python version, platform, command line arguments, sys.path
     import sys

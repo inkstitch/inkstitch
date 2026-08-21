@@ -173,7 +173,6 @@ else:
     from lib.i18n import _      # Gettext translation function
     from lib.utils import restore_stderr, save_stderr  # Suppress GTK/C-level warning noise
 
-
     save_stderr()  # Suppress GTK warning noise
     try:
         extension.run(args=remaining_args)
@@ -194,4 +193,3 @@ else:
         restore_stderr()
 
     sys.exit(0)
-

@@ -11,6 +11,7 @@ import tomllib
 
 import platformdirs
 
+
 def get_bundled_dir(name=None):
     if getattr(sys, 'frozen', None) is not None:
         if sys.platform == "darwin":
