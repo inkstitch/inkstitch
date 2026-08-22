@@ -73,6 +73,9 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+      - name: Frozen inkex import test
+        shell: bash
+        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
       - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-linux64
@@ -135,6 +138,9 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+      - name: Frozen inkex import test
+        shell: bash
+        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
       - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-linuxarm64
