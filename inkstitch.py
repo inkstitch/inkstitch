@@ -147,6 +147,7 @@ if debug_imports:
     debug_import("  sys.path:")
     for path in sys.path:
         debug_import(f"    {path}")
+    sys.exit(0)
 
 # -------------------------------------------------------------------------------------------
 
