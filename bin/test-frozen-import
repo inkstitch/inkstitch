@@ -9,7 +9,7 @@ FAKE_INKSCAPE_PATH="$(mktemp -d)"
 mkdir -p "$(dirname "$REPORT")"
 : >"$REPORT"
 set +e
-PYTHONPATH="$FAKE_INKSCAPE_PATH" INKSTITCH_DEBUG_IMPORTS=1 INKSTITCH_DEBUG_IMPORTS_FILE="$REPORT" "$EXECUTABLE" --extension __import_debug_probe__
+PYTHONPATH="$FAKE_INKSCAPE_PATH" INKSTITCH_DEBUG_IMPORTS_FILE="$REPORT" "$EXECUTABLE" --extension __import_debug_probe__
 STATUS=$?
 set -e
 

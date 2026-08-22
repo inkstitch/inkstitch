@@ -110,8 +110,8 @@ if development_mode:
 #  WARNING: Must be executed before importing inkex
 # Prioritize pip-installed inkex over Inkscape's bundled version
 prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
-debug_imports = os.environ.get("INKSTITCH_DEBUG_IMPORTS", "").lower() in YES_VALUES
 debug_imports_file = os.environ.get("INKSTITCH_DEBUG_IMPORTS_FILE")
+debug_imports = bool(debug_imports_file)
 
 
 def debug_import(message: str) -> None:
