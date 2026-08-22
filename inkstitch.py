@@ -111,18 +111,27 @@ if development_mode:
 # Prioritize pip-installed inkex over Inkscape's bundled version
 prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
 debug_imports = os.environ.get("INKSTITCH_DEBUG_IMPORTS", "").lower() in YES_VALUES
+debug_imports_file = os.environ.get("INKSTITCH_DEBUG_IMPORTS_FILE")
+
+
+def debug_import(message: str) -> None:
+    if sys.stderr is not None:
+        print(message, file=sys.stderr)
+    if debug_imports_file:
+        with open(debug_imports_file, "a", encoding="utf-8") as report:
+            print(message, file=report)
 
 if debug_imports:
     import importlib.util
 
     inkex_spec = importlib.util.find_spec("inkex")
-    print("INKEX IMPORT DEBUG: before reorder", file=sys.stderr)
-    print(f"  sys.frozen={getattr(sys, 'frozen', False)}", file=sys.stderr)
-    print(f"  spec.origin={inkex_spec.origin if inkex_spec else None}", file=sys.stderr)
-    print(f"  sys.modules.loaded={'inkex' in sys.modules}", file=sys.stderr)
-    print("  sys.path:", file=sys.stderr)
+    debug_import("INKEX IMPORT DEBUG: before reorder")
+    debug_import(f"  sys.frozen={getattr(sys, 'frozen', False)}")
+    debug_import(f"  spec.origin={inkex_spec.origin if inkex_spec else None}")
+    debug_import(f"  sys.modules.loaded={'inkex' in sys.modules}")
+    debug_import("  sys.path:")
     for path in sys.path:
-        print(f"    {path}", file=sys.stderr)
+        debug_import(f"    {path}")
 
 if prefer_pip_inkex and "PYTHONPATH" in os.environ:
     debug_utils.assert_inkex_not_imported_before_path_setup()
@@ -131,13 +140,13 @@ if prefer_pip_inkex and "PYTHONPATH" in os.environ:
 if debug_imports:
     import inkex
 
-    print("INKEX IMPORT DEBUG: after reorder", file=sys.stderr)
-    print(f"  sys.frozen={getattr(sys, 'frozen', False)}", file=sys.stderr)
-    print(f"  inkex.__file__={inkex.__file__}", file=sys.stderr)
-    print(f"  sys.modules.loaded={'inkex' in sys.modules}", file=sys.stderr)
-    print("  sys.path:", file=sys.stderr)
+    debug_import("INKEX IMPORT DEBUG: after reorder")
+    debug_import(f"  sys.frozen={getattr(sys, 'frozen', False)}")
+    debug_import(f"  inkex.__file__={inkex.__file__}")
+    debug_import(f"  sys.modules.loaded={'inkex' in sys.modules}")
+    debug_import("  sys.path:")
     for path in sys.path:
-        print(f"    {path}", file=sys.stderr)
+        debug_import(f"    {path}")
 
 # -------------------------------------------------------------------------------------------
 
