@@ -77,6 +77,7 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
+from .config import find_legacy_logging_placeholders
 from .utils import safe_get     # mimic get method of dict with default value
 from . import utils as debug_utils
 
@@ -165,8 +166,8 @@ def _resolve_log_dir(development_mode: bool, log_location: str,
             return logdir
 
         case "":
-            print("DEBUG: Empty log_location. Disabling logging.",
-                  file=sys.stderr)
+            # intentionally no output - otherwise dialog box is shown in inkscape
+            # print("DEBUG: Empty log_location. Disabling logging.", file=sys.stderr)
             return None
 
         case _:
@@ -243,6 +244,13 @@ def activate_for_development(ini: dict, LOGDIR: Path):
         if logging_config_file.exists():
             with open(logging_config_file, "rb") as f:
                 devel_config = tomllib.load(f)   # -> dict
+            if legacy_paths := find_legacy_logging_placeholders(devel_config):
+                print(
+                    "DEBUG: LOGGING.toml uses deprecated %(SCRIPTDIR)s at "
+                    f"{', '.join(legacy_paths)}. It currently resolves to LOGDIR; "
+                    "replace it with %(LOGDIR)s.",
+                    file=sys.stderr,
+                )
         else:
             raise FileNotFoundError(f"{logging_config_file} file not found")
     else:                                   # if LOGGING.toml file does not exist, use default logging configuration
