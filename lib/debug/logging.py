@@ -132,7 +132,7 @@ def _resolve_log_dir(development_mode: bool, log_location: str,
     # Handle keywords
     match log_location.lower():
         case "script":
-            logdir = SCRIPTDIR
+            logdir = SCRIPTDIR / "log"
             print(f"DEBUG: Using script directory for logging: {logdir}",
                   file=sys.stderr)
             return logdir
@@ -159,7 +159,7 @@ def _resolve_log_dir(development_mode: bool, log_location: str,
 
         case "temp" | "tmp":
             import tempfile
-            logdir = Path(tempfile.gettempdir()) / "inkstitch"
+            logdir = Path(tempfile.gettempdir()) / "inkstitch" / "log"
             print(f"DEBUG: Using temporary directory for logging: {logdir}",
                   file=sys.stderr)
             return logdir
