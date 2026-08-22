@@ -6,8 +6,9 @@
 import atexit  # to save svg file on exit
 import time    # to measure time of code block, use time.monotonic() instead of time.time()
 import traceback
+from collections.abc import Callable
 from datetime import datetime
-from typing import TypeVar, Callable, Any, cast
+from typing import TypeVar, Any, cast
 
 from contextlib import contextmanager  # to measure time of with block
 from pathlib import Path  # to work with paths as objects

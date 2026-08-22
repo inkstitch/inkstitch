@@ -30,19 +30,19 @@ disable_existing_loggers = false
 [handlers.file_inkstitch]
     class = "logging.FileHandler"
     formatter = "simple"
-    filename = "%(SCRIPTDIR)s/logs/inkstitch.log"
+    filename = "%(LOGDIR)s/inkstitch.log"
     mode = "w"
 
 [handlers.file_inkstitch_debug]
     class = "logging.FileHandler"
     formatter = "debug"
-    filename = "%(SCRIPTDIR)s/logs/inkstitch_debug.log"
+    filename = "%(LOGDIR)s/inkstitch_debug.log"
     mode = "w"
 
 [handlers.file_root]
     class = "logging.FileHandler"
     formatter = "simple"
-    filename = "%(SCRIPTDIR)s/logs/inkstitch_root.log"
+    filename = "%(LOGDIR)s/inkstitch_root.log"
     mode = "w"
 
 
