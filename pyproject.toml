@@ -33,9 +33,11 @@ dependencies = [
 [dependency-groups]
 dev = [
     "debugpy",
-    "mypy==1.19.1",
-    "flake8==7.3.0",
+    "mypy",
+    "flake8",
     "pytest",
+    "PyYAML",
+    "pyinstrument",
     "types-wxpython",
     "types-appdirs",
     "types-shapely",
