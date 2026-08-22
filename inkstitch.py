@@ -18,6 +18,7 @@ from pathlib import Path
 
 import lib.debug.logging as debug_logging
 import lib.debug.utils as debug_utils
+from lib.debug.config import resolve_development_config
 from lib.debug.import_diagnostics import ImportDiagnostics
 from lib.debug.utils import safe_get    # mimic get method of dict with default value
 
@@ -62,7 +63,7 @@ if debug_toml.exists():
 else:
     ini = {}
 # --------------------------------------------------------------------------------------------
-development_mode = safe_get(ini, "DEBUG", "development_mode", default=False)
+development_mode, ini = resolve_development_config(ini)
 log_location = ""
 if development_mode:
     log_location = safe_get(ini, "LOGGING", "log_location", default="")
