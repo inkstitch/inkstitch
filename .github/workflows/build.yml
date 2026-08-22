@@ -80,6 +80,10 @@ jobs:
         with:
           name: inkstitch-linux64
           path: artifacts
+      - uses: actions/upload-artifact@v7
+        with:
+          name: inkstitch-linux64-frozen-import-report
+          path: artifacts/frozen-import-report.txt
   linuxarm64:
     runs-on: ubuntu-22.04-arm
     steps:
@@ -145,6 +149,10 @@ jobs:
         with:
           name: inkstitch-linuxarm64
           path: artifacts
+      - uses: actions/upload-artifact@v7
+        with:
+          name: inkstitch-linuxarm64-frozen-import-report
+          path: artifacts/frozen-import-report.txt
   linux32:
     # Node required for actions, install follows 
     # https://github.com/actions/upload-artifact/issues/616
@@ -243,6 +251,9 @@ jobs:
           deactivate
         env:
           BUILD: linux32
+      - name: Frozen inkex import test
+        shell: bash
+        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - name: Replace `node` with an i386 version
         shell: bash
@@ -257,6 +268,10 @@ jobs:
         with:
           name: inkstitch-linux32
           path: artifacts
+      - uses: actions/upload-artifact@v7
+        with:
+          name: inkstitch-linux32-frozen-import-report
+          path: artifacts/frozen-import-report.txt
   windows64:
     runs-on: windows-2022
     steps:
@@ -294,6 +309,12 @@ jobs:
           make dist
         env:
           BUILD: windows
+      - name: Frozen inkex import test
+        shell: bash
+        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch.exe test-reports/frozen-import-report.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: inkstitch-windows64-frozen-import-report
       - name: Set siging policy to release
         if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         shell: bash
@@ -410,6 +431,12 @@ jobs:
           INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
           NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+      - name: Frozen inkex import test
+        shell: bash
+        run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: inkstitch-mac-x86-frozen-import-report
 
       - uses: actions/upload-artifact@v7
         with:
@@ -466,6 +493,12 @@ jobs:
         env:
           BUILD: osx
           MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+      - name: Frozen inkex import test
+        shell: bash
+        run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: inkstitch-mac-arm64-frozen-import-report
           MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
           KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
           INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
@@ -549,3 +582,6 @@ jobs:
             artifacts/*.zip
             signed-artifacts/*.exe
             signed-artifacts/*.zip
+      - name: Frozen inkex import test
+        shell: bash
+        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
