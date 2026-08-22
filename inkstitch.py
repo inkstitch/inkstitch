@@ -3,19 +3,20 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+# only Python 3.11+ is officially supported
+import sys
+if sys.version_info < (3, 11):  # noqa: UP036
+    print("ERROR: Python 3.11 or later is required.", file=sys.stderr)
+    sys.exit(1)
+
 import logging
 import os
-import sys
-if sys.version_info >= (3, 11):
-    import tomllib
-else:
-    import tomli as tomllib
+import tomllib
 from argparse import ArgumentParser
 from pathlib import Path
 
 import lib.debug.logging as debug_logging
 import lib.debug.utils as debug_utils
-from lib.debug.config import resolve_development_config
 from lib.debug.utils import safe_get    # mimic get method of dict with default value
 
 # --------------------------------------------------------------------------------------------
@@ -31,18 +32,6 @@ SCRIPTDIR = Path(__file__).parent.absolute()
 
 # Create main 'inkstitch' logger
 logger = logging.getLogger("inkstitch")
-
-# TODO --- temporary --- catch legacy DEBUG.ini file and inform user to reformat it to DEBUG.toml
-#      --- since 2024-03-20
-legacy_debug_ini = SCRIPTDIR / "DEBUG.ini"
-if legacy_debug_ini.exists():
-    print(
-        "ERROR: legacy DEBUG.ini exists. "
-        "Please reformat its contents to DEBUG.toml and remove DEBUG.ini.",
-        file=sys.stderr,
-    )
-    sys.exit(1)
-# --- end of temporary ---
 
 
 def main() -> None:  # noqa: C901
@@ -72,7 +61,7 @@ def main() -> None:  # noqa: C901
     else:
         ini = {}
     # --------------------------------------------------------------------------------------------
-    development_mode, ini = resolve_development_config(ini)
+    development_mode = safe_get(ini, "DEBUG", "development_mode", default=False)
     log_location = ""
     if development_mode:
         log_location = safe_get(ini, "LOGGING", "log_location", default="")
