@@ -45,6 +45,11 @@ if len(sys.argv) < 2:
 
 SCRIPTDIR = Path(__file__).parent.absolute()
 
+# running_from_readonly_filesystem = not debug_utils.can_write_to_directory(SCRIPTDIR)
+
+# pyinstaller bundle
+# running_as_frozen = getattr(sys, 'frozen', None) is not None
+
 # Create main 'inkstitch' logger
 logger = logging.getLogger("inkstitch")
 
@@ -60,10 +65,6 @@ development_mode = safe_get(ini, "DEBUG", "development_mode", default=False)
 log_location = ""
 if development_mode:
     log_location = safe_get(ini, "LOGGING", "log_location", default="")
-
-
-# running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
-# running_from_readonly_filesystem = not debug_utils.can_write_to_directory(SCRIPTDIR)
 
 
 # Initialize logging before any log calls
@@ -102,13 +103,19 @@ if development_mode:
         if safe_get(ini, "DEBUG", "disable_from_inkscape", default=False):
             debug_type = "none"
 
-    # Prioritize pip-installed inkex over Inkscape's bundled version
-    # WARNING: Must be executed before importing inkex
-    prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
 
-    if prefer_pip_inkex and "PYTHONPATH" in os.environ:
-        debug_utils.assert_inkex_not_imported_before_path_setup()
-        debug_utils.reorder_sys_path()
+# -------------------------------------------------------------------------------------------
+#  INKEX:
+
+#  WARNING: Must be executed before importing inkex
+# Prioritize pip-installed inkex over Inkscape's bundled version
+prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
+
+if prefer_pip_inkex and "PYTHONPATH" in os.environ:
+    debug_utils.assert_inkex_not_imported_before_path_setup()
+    debug_utils.reorder_sys_path()
+
+# -------------------------------------------------------------------------------------------
 
 if debug_type != "none":
     from lib.debug.debugger import init_debugger
@@ -161,7 +168,8 @@ extension = getattr(extensions, extension_class_name)()
 
 # Execute extension in debug/profile mode vs. normal mode
 if profiler_type != "none":
-    debug_utils.profile(profiler_type, SCRIPTDIR, ini, extension, remaining_args)
+    debug_utils.profile(profiler_type, SCRIPTDIR, ini, extension,
+                        remaining_args)
 elif debug_active:
     extension.run(args=remaining_args)
 else:
@@ -170,7 +178,7 @@ else:
     from inkex import errormsg  # Display UI error popups in Inkscape
     from lxml.etree import XMLSyntaxError  # Catch malformed or non-standard SVG input
     from lib.exceptions import InkstitchException, format_uncaught_exception
-    from lib.i18n import _      # Gettext translation function
+    from lib.i18n import _  # Gettext translation function
     from lib.utils import restore_stderr, save_stderr  # Suppress GTK/C-level warning noise
 
     save_stderr()  # Suppress GTK warning noise
@@ -182,8 +190,8 @@ else:
         errormsg(
             _("Ink/Stitch cannot read your SVG file. "
               "This is often the case when you use a file which has been created with Adobe Illustrator.\n\n"
-              "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)")
-        )
+              "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)"
+              ))
     except InkstitchException as exc:
         errormsg(str(exc))
     except Exception:
