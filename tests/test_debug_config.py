@@ -2,7 +2,7 @@ from lib.debug.config import resolve_development_config
 
 
 def test_user_mode_discards_debug_toml_settings():
-    source_config = {
+    source_config: dict[str, dict[str, object]] = {
         "DEBUG": {"development_mode": False, "debug_enable": True},
         "LIBRARY": {"prefer_pip_inkex": False},
         "LOGGING": {"log_location": "script"},
@@ -17,7 +17,7 @@ def test_user_mode_discards_debug_toml_settings():
 
 
 def test_development_mode_keeps_debug_toml_settings():
-    source_config = {
+    source_config: dict[str, dict[str, object]] = {
         "DEBUG": {"development_mode": True},
         "LIBRARY": {"prefer_pip_inkex": False},
     }
