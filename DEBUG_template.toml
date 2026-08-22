@@ -5,17 +5,30 @@
 # prefer_pip_inkex = false
 
 [LOGGING]
+### Specifies where log files are written in developer mode.
+### Options: "script" (SCRIPTDIR),
+###          "document" "doc" (active SVG folder),
+###          "user" "usr" (user log directory),
+###          "temp" "tmp" (system temp)
+###          "abs_path" (eg. ~/inkstitch_log)
+###           "" (default - disables logging)
+### Note: For regular users (development_mode = false), file logging is
+### completely DISABLED unless override via INKSTITCH_LOG_DIR env variable.
+# log_location = "script"
+
 ### logging configuration file, default: none - use implicit DEBUG logging to inkstitch.log
 ### we may have multiple configurations: LOGGING.toml, LOGGING1.toml, LOGGING2.toml, etc.
 # log_config_file = "LOGGING.toml"
 
-### disable globally logging: default: false - using logging.disable()
-### reenable logging.disable(0)
+### Disable all logging globally using logging.disable().
+### Note: This does NOT suppress warnings (e.g., from the 'warnings' module).
+### To re-enable logging, call: logging.disable(0)
 # disable_logging = true
 
 [DEBUG]
-### simulate frozen mode, overwrite running_as_frozen in inkstitch.py, default: false
-# force_frozen = true
+### Enable developer mode (enables debug tools, profiling, and file logging).
+### Default: false
+# development_mode = true
 
 ### select one active debug_type, default: "none"
 # debug_type = "vscode"
@@ -49,5 +62,5 @@
 # profile_enable = true
 
 ### base name for profile output files, default: "debug_profile"
-# profile_file_base = "logs/debug_profile"
+# profile_file_base = "log/debug_profile"
 

@@ -21,6 +21,7 @@ locales/
 
 # debug and profile files
 logs/
+log/
 /DEBUG.toml
 /LOGGING.toml
 /LOGGING[0-9]*.toml
