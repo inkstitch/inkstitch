@@ -44,7 +44,8 @@ dev = [
     "types-networkx",
     "types-lxml",
     "types-pywin32",
-    "pyinstaller>=6.20.0",
+    "pyinstaller",
+    "pytest-cov",
 ]
 
 [tool.pytest.ini_options]
