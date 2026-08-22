@@ -437,6 +437,7 @@ jobs:
             - uses: actions/upload-artifact@v7
               with:
                   name: inkstitch-mac-x86-frozen-import-report
+                  path: test-reports/frozen-import-report.txt
 
             - uses: actions/upload-artifact@v7
               with:
@@ -493,18 +494,19 @@ jobs:
               env:
                   BUILD: osx
                   MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
-            - name: Frozen inkex import test
-              shell: bash
-              run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
-            - uses: actions/upload-artifact@v7
-              with:
-                  name: inkstitch-mac-arm64-frozen-import-report
                   MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
                   KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
                   INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
                   INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
                   NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
                   NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-mac-arm64-frozen-import-report
+                  path: test-reports/frozen-import-report.txt
 
             - uses: actions/upload-artifact@v7
               with:
@@ -582,6 +584,3 @@ jobs:
                       artifacts/*.zip
                       signed-artifacts/*.exe
                       signed-artifacts/*.zip
-            - name: Frozen inkex import test
-              shell: bash
-              run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
