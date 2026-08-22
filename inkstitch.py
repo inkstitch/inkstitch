@@ -18,6 +18,7 @@ from pathlib import Path
 
 import lib.debug.logging as debug_logging
 import lib.debug.utils as debug_utils
+from lib.debug.import_diagnostics import ImportDiagnostics
 from lib.debug.utils import safe_get    # mimic get method of dict with default value
 
 # --------------------------------------------------------------------------------------------
@@ -110,43 +111,17 @@ if development_mode:
 #  WARNING: Must be executed before importing inkex
 # Prioritize pip-installed inkex over Inkscape's bundled version
 prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
-debug_imports_file = os.environ.get("INKSTITCH_DEBUG_IMPORTS_FILE")
-debug_imports = bool(debug_imports_file)
+import_diagnostics = ImportDiagnostics(os.environ.get("INKSTITCH_DEBUG_IMPORTS_FILE"))
 
-
-def debug_import(message: str) -> None:
-    if sys.stderr is not None:
-        print(message, file=sys.stderr)
-    if debug_imports_file:
-        with open(debug_imports_file, "a", encoding="utf-8") as report:
-            print(message, file=report)
-
-if debug_imports:
-    import importlib.util
-
-    inkex_spec = importlib.util.find_spec("inkex")
-    debug_import("INKEX IMPORT DEBUG: before reorder")
-    debug_import(f"  sys.frozen={getattr(sys, 'frozen', False)}")
-    debug_import(f"  spec.origin={inkex_spec.origin if inkex_spec else None}")
-    debug_import(f"  sys.modules.loaded={'inkex' in sys.modules}")
-    debug_import("  sys.path:")
-    for path in sys.path:
-        debug_import(f"    {path}")
+if import_diagnostics.enabled:
+    import_diagnostics.before_reorder()
 
 if prefer_pip_inkex and "PYTHONPATH" in os.environ:
     debug_utils.assert_inkex_not_imported_before_path_setup()
     debug_utils.reorder_sys_path()
 
-if debug_imports:
-    import inkex
-
-    debug_import("INKEX IMPORT DEBUG: after reorder")
-    debug_import(f"  sys.frozen={getattr(sys, 'frozen', False)}")
-    debug_import(f"  inkex.__file__={inkex.__file__}")
-    debug_import(f"  sys.modules.loaded={'inkex' in sys.modules}")
-    debug_import("  sys.path:")
-    for path in sys.path:
-        debug_import(f"    {path}")
+if import_diagnostics.enabled:
+    import_diagnostics.after_reorder()
     sys.exit(0)
 
 # -------------------------------------------------------------------------------------------
