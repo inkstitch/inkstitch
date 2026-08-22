@@ -3,134 +3,150 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-import os
+# only Python 3.11+ is officially supported
 import sys
-from pathlib import Path  # to work with paths as objects
-from argparse import ArgumentParser  # to parse arguments and remove --extension
-
-if sys.version_info >= (3, 11):
-    import tomllib      # built-in in Python 3.11+
-else:
-    import tomli as tomllib
+if sys.version_info < (3, 11):  # noqa: UP036
+    print("ERROR: Python 3.11 or later is required.", file=sys.stderr)
+    sys.exit(1)
 
 import logging
+import os
+import tomllib
+from argparse import ArgumentParser
+from pathlib import Path
 
-import lib.debug.utils as debug_utils
+
 import lib.debug.logging as debug_logging
+import lib.debug.utils as debug_utils
 from lib.debug.utils import safe_get    # mimic get method of dict with default value
+
+# --------------------------------------------------------------------------------------------
+
+if len(sys.argv) < 2:
+    from textwrap import dedent
+    # No CLI arguments provided - script was likely executed directly by double-clicking
+    msg = dedent("""
+        No arguments given, exiting!
+        Ink/Stitch is an Inkscape extension.
+        Please enter arguments or run Ink/Stitch through the Inkscape extensions menu.
+    """).strip()
+
+    try:
+        import wx
+        app = wx.App()
+        wx.MessageBox(msg, "Ink/Stitch", wx.OK | wx.ICON_ERROR)
+    except ImportError:
+        print(msg, file=sys.stderr)
+
+    sys.exit(1)
+
 
 # --------------------------------------------------------------------------------------------
 
 SCRIPTDIR = Path(__file__).parent.absolute()
 
-logger = logging.getLogger("inkstitch")   # create module logger with name 'inkstitch'
+# Create main 'inkstitch' logger
+logger = logging.getLogger("inkstitch")
 
-# TODO --- temporary --- catch old DEBUG.ini file and inform user to reformat it to DEBUG.toml
-old_debug_ini = SCRIPTDIR / "DEBUG.ini"
-if old_debug_ini.exists():
-    print("ERROR: old DEBUG.ini exists, please reformat it to DEBUG.toml and remove DEBUG.ini file", file=sys.stderr)
-    sys.exit(1)
-# --- end of temporary ---
-
+# Load DEBUG.toml if present; fallback to defaults
 debug_toml = SCRIPTDIR / "DEBUG.toml"
 if debug_toml.exists():
     with debug_toml.open("rb") as f:
-        ini = tomllib.load(f)  # read DEBUG.toml file if exists, otherwise use default values in ini object
+        ini = tomllib.load(f)
 else:
     ini = {}
 # --------------------------------------------------------------------------------------------
+development_mode = safe_get(ini, "DEBUG", "development_mode", default=False)
+log_location = ""
+if development_mode:
+    log_location = safe_get(ini, "LOGGING", "log_location", default="")
 
-running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
 
-if not running_as_frozen:  # override running_as_frozen from DEBUG.toml - for testing
-    if safe_get(ini, "DEBUG", "force_frozen", default=False):
-        running_as_frozen = True
+# running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
+# running_from_readonly_filesystem = not debug_utils.can_write_to_directory(SCRIPTDIR)
 
-if len(sys.argv) < 2:
-    # no arguments - prevent accidentally running this script
-    msg = "No arguments given, exiting!"  # without gettext localization see _()
-    msg += "\n\n"
-    msg += "Ink/Stitch is an Inkscape extension."
-    msg += "\n\n"
-    msg += "Please enter arguments or run Ink/Stitch through the Inkscape extensions menu."
-    if running_as_frozen:  # we show dialog only when running from pyinstaller bundle - using wx
-        try:
-            import wx
-            app = wx.App()
-            dlg = wx.MessageDialog(None, msg, "Inkstitch", wx.OK | wx.ICON_ERROR)
-            dlg.ShowModal()
-            dlg.Destroy()
-        except ImportError:
-            print(msg, file=sys.stderr)
-    else:
-        print(msg, file=sys.stderr)
-    sys.exit(1)
 
-# activate logging - must be done before any logging is done
-debug_logging.activate_logging(running_as_frozen, ini, SCRIPTDIR)
+# Initialize logging before any log calls
+LOGDIR = debug_logging.activate_logging(
+    development_mode,
+    log_location,
+    ini,
+    SCRIPTDIR
+)
 # --------------------------------------------------------------------------------------------
 
-# check if running from inkscape, given by environment variable
-if os.environ.get('INKSTITCH_OFFLINE_SCRIPT', '').lower() in ['true', '1', 'yes', 'y']:
-    running_from_inkscape = False
-else:
-    running_from_inkscape = True
+# Prevent recursive script creation in CLI/BASH mode
+YES_VALUES = {"true", "1", "yes", "y"}
+running_from_inkscape = os.environ.get("INKSTITCH_OFFLINE_SCRIPT", "").lower() not in YES_VALUES
 
-# initialize debug and profiler type
-debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())  # check if debugger is active on startup
+# -------------------------------------------------------------------------------------------
+# Initialize debug and profiling modes
+debug_active = sys.gettrace() is not None     # check if debugger is active on startup
 debug_type = 'none'
 profiler_type = 'none'
 
-if not running_as_frozen:  # debugging/profiling only in development mode
-    # specify debugger type
-    #   but if script was already started from debugger then don't read debug type from ini file or cmd line
+if development_mode:
+    # Fallback to INI settings if no debugger is attached
     if not debug_active:
-        debug_type = debug_utils.resolve_debug_type(ini)  # read debug type from ini file or cmd line
+        debug_type = debug_utils.resolve_debug_type(ini)
 
-    profiler_type = debug_utils.resolve_profiler_type(ini)  # read profile type from ini file or cmd line
+    # Resolve profiler type from INI file or CLI arguments
+    profiler_type = debug_utils.resolve_profiler_type(ini)
 
     if running_from_inkscape:
-        # process creation of the Bash script - should be done before sys.path is modified, see below in prefer_pip_inkex
-        if safe_get(ini, "DEBUG", "create_bash_script", default=False):  # create script only if enabled in DEBUG.toml
+        # Generate offline script before sys.path modifications (see inkex below)
+        if safe_get(ini, "DEBUG", "create_bash_script", default=False):
             debug_utils.write_offline_debug_script(SCRIPTDIR, ini)
 
-        # disable debugger when running from inkscape
-        disable_from_inkscape = safe_get(ini, "DEBUG", "disable_from_inkscape", default=False)
-        if disable_from_inkscape:
-            debug_type = 'none'  # do not start debugger when running from inkscape
+        # Optionally disable debugger when running inside Inkscape
+        if safe_get(ini, "DEBUG", "disable_from_inkscape", default=False):
+            debug_type = "none"
 
-    # prefer pip installed inkex over inkscape bundled inkex, pip version is bundled with Inkstitch
-    # - must be be done before importing inkex
+    # Prioritize pip-installed inkex over Inkscape's bundled version
+    # WARNING: Must be executed before importing inkex
     prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
-    if prefer_pip_inkex and 'PYTHONPATH' in os.environ:
+
+    if prefer_pip_inkex and "PYTHONPATH" in os.environ:
+        debug_utils.assert_inkex_not_imported_before_path_setup()
         debug_utils.reorder_sys_path()
 
-# enabling of debug depends on value of debug_type in DEBUG.toml file
-if debug_type != 'none':
+if debug_type != "none":
     from lib.debug.debugger import init_debugger
+
     init_debugger(debug_type, ini)
-    # check if debugger is really activated
-    debug_active = bool((gettrace := getattr(sys, 'gettrace')) and gettrace())
+    debug_active = sys.gettrace() is not None
 
-# activate logging for svg
-# we need to import only after possible modification of sys.path, we disable here flake8 E402
-from lib.debug.debug import debug  # noqa: E402  # import global variable debug - don't import whole module
-debug.enable()  # perhaps it would be better to find a more relevant name; in fact, it's about logging and svg creation.
 
-# log startup info
-debug_logging.startup_info(logger, SCRIPTDIR, running_as_frozen, running_from_inkscape, debug_active, debug_type, profiler_type)
+# Enable debug logging (must be imported after sys.path setup)
+from lib.debug.debug import debug as debug_logger  # noqa: E402
+
+debug_logger.enable()
+
+debug_logging.startup_info(
+    logger,
+    SCRIPTDIR,
+    LOGDIR,
+    development_mode,
+    log_location,
+    running_from_inkscape,
+    debug_active,
+    debug_type,
+    profiler_type,
+)
 
 # --------------------------------------------------------------------------------------------
 
-# pop '--extension' from arguments and generate extension class name from extension name
-#   example:  --extension=params will instantiate Params() class from lib.extensions.
+# Extract '--extension' argument and dynamically load the corresponding extension class
+# NOTE: Must be imported after sys.path setup
+from lib import extensions  # noqa: E402
 
-# we need to import only after possible modification of sys.path, we disable here flake8 E402
-from lib import extensions  # noqa: E402  # import all supported extensions of institch
 
-# TODO: if we run this earlier the warnings ignore filter for releases will not work properly
-if running_as_frozen and not debug_logging.frozen_debug_active():
+# WARN: Do not move up; running earlier breaks release warning suppression.
+logging_active = development_mode or LOGDIR is not None
+if not logging_active:
     debug_logging.disable_warnings()
+
+# --------------------------------------------------------------------------------------------
 
 parser = ArgumentParser()
 parser.add_argument("--extension")
@@ -141,37 +157,33 @@ extension_name = my_args.extension
 # example: foo_bar_baz -> FooBarBaz
 extension_class_name = extension_name.title().replace("_", "")
 
-extension_class = getattr(extensions, extension_class_name)
-extension = extension_class()  # create instance of extension class - call __init__ method
+extension = getattr(extensions, extension_class_name)()
 
-# extension run(), we differentiate between debug and normal mode
-# - in debug or profile mode we debug or profile extension.run() method
-# - in normal mode we run extension.run() in try/except block to catch all exceptions and hide GTK spam
-if debug_active or profiler_type != "none":  # if debug or profile mode
-    if profiler_type == 'none':             # only debugging
-        extension.run(args=remaining_args)
-    else:                                  # do profiling
-        debug_utils.profile(profiler_type, SCRIPTDIR, ini, extension, remaining_args)
+# Execute extension in debug/profile mode vs. normal mode
+if profiler_type != "none":
+    debug_utils.profile(profiler_type, SCRIPTDIR, ini, extension, remaining_args)
+elif debug_active:
+    extension.run(args=remaining_args)
+else:
+    # Normal execution: catch exceptions and suppress GTK output
 
-else:   # if not debug nor profile mode
+    from inkex import errormsg  # Display UI error popups in Inkscape
+    from lxml.etree import XMLSyntaxError  # Catch malformed or non-standard SVG input
     from lib.exceptions import InkstitchException, format_uncaught_exception
-    from inkex import errormsg  # to show error message in inkscape
-    from lxml.etree import XMLSyntaxError  # to catch XMLSyntaxError from inkex
-    from lib.i18n import _      # see gettext translation function _()
-    from lib.utils import restore_stderr, save_stderr  # to hide GTK spam
+    from lib.i18n import _      # Gettext translation function
+    from lib.utils import restore_stderr, save_stderr  # Suppress GTK/C-level warning noise
 
-    save_stderr()  # hide GTK spam
-    exception = None
+    save_stderr()  # Suppress GTK warning noise
     try:
         extension.run(args=remaining_args)
     except (SystemExit, KeyboardInterrupt):
         raise
     except XMLSyntaxError:
-        msg = _("Ink/Stitch cannot read your SVG file. "
-                "This is often the case when you use a file which has been created with Adobe Illustrator.")
-        msg += "\n\n"
-        msg += _("Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)")
-        errormsg(msg)
+        errormsg(
+            _("Ink/Stitch cannot read your SVG file. "
+              "This is often the case when you use a file which has been created with Adobe Illustrator.\n\n"
+              "Try to import the file into Inkscape through 'File > Import...' (Ctrl+I)")
+        )
     except InkstitchException as exc:
         errormsg(str(exc))
     except Exception:
