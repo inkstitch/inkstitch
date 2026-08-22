@@ -1,587 +1,587 @@
 name: Build
 on:
-  push:
-    branches-ignore:
-      - master
-      - main
-    tags:
-      - "v*.*.*"
-  workflow_dispatch:
-      inputs:
-          TEST_SIGNING:
-              description: 'Sign windows binaries'
-              required: true
-              type: boolean
-              default: false
+    push:
+        branches-ignore:
+            - master
+            - main
+        tags:
+            - "v*.*.*"
+    workflow_dispatch:
+        inputs:
+            TEST_SIGNING:
+                description: "Sign windows binaries"
+                required: true
+                type: boolean
+                default: false
 jobs:
-  linux64:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          submodules: recursive
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.11.x'
-          cache: 'pip'
-      - name: install dependencies
-        shell: bash
-        run: |
-          sudo apt-get update
-          sudo gem install fpm
-          python -m pip install --upgrade pip
-          python -m pip install wheel
+    linux64:
+        runs-on: ubuntu-22.04
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  submodules: recursive
+            - uses: actions/setup-python@v6
+              with:
+                  python-version: "3.11.x"
+                  cache: "pip"
+            - name: install dependencies
+              shell: bash
+              run: |
+                  sudo apt-get update
+                  sudo gem install fpm
+                  python -m pip install --upgrade pip
+                  python -m pip install wheel
 
-          sudo apt-get install gettext
+                  sudo apt-get install gettext
 
-          # for wxPython
-          sudo apt install libnotify4
-          sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
+                  # for wxPython
+                  sudo apt install libnotify4
+                  sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
 
-          # for PyGObject
-          sudo apt install libgirepository1.0-dev libcairo2-dev
+                  # for PyGObject
+                  sudo apt install libgirepository1.0-dev libcairo2-dev
 
-          # for shapely
-          sudo apt install build-essential libgtk-3-dev cmake
+                  # for shapely
+                  sudo apt install build-essential libgtk-3-dev cmake
 
-          # for numpy
-          sudo apt install  gfortran libopenblas-dev liblapack-dev pkg-config
+                  # for numpy
+                  sudo apt install  gfortran libopenblas-dev liblapack-dev pkg-config
 
-          uname -a
-          python --version
-          python -m pip --version
-          python -m pip debug
+                  uname -a
+                  python --version
+                  python -m pip --version
+                  python -m pip debug
 
-          python -m pip install pycairo
-          python -m pip install PyGObject==3.50.0
-          python -m pip install numpy --no-binary numpy
+                  python -m pip install pycairo
+                  python -m pip install PyGObject==3.50.0
+                  python -m pip install numpy --no-binary numpy
 
-          python -m pip install https://github.com/inkstitch/build-libs/releases/download/v0.1/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
+                  python -m pip install https://github.com/inkstitch/build-libs/releases/download/v0.1/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
 
-          python -m pip install -r requirements.txt
+                  python -m pip install -r requirements.txt
 
-          python -m pip install pyinstaller
+                  python -m pip install pyinstaller
 
-          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-      - name: Tests
-        shell: bash
-        run: |
-          pytest
-      - shell: bash
-        run: |
-          make dist
+                  echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+            - name: Tests
+              shell: bash
+              run: |
+                  pytest
+            - shell: bash
+              run: |
+                  make dist
+              env:
+                  BUILD: linux
+                  INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-linux64
+                  path: artifacts
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-linux64-frozen-import-report
+                  path: artifacts/frozen-import-report.txt
+    linuxarm64:
+        runs-on: ubuntu-22.04-arm
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  submodules: recursive
+            - uses: actions/setup-python@v6
+              with:
+                  python-version: "3.11.x"
+                  cache: "pip"
+            - name: install dependencies
+              shell: bash
+              run: |
+                  sudo apt-get update
+                  sudo gem install fpm
+                  python -m pip install --upgrade pip
+                  python -m pip install wheel
+
+                  sudo apt-get install gettext
+
+                  # for wxPython
+                  sudo apt install libnotify4
+                  sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
+
+                  # for PyGObject
+                  sudo apt install libgirepository1.0-dev libcairo2-dev
+
+                  # for shapely
+                  sudo apt install build-essential libgtk-3-dev cmake
+
+                  # for numpy
+                  sudo apt install  gfortran libopenblas-dev liblapack-dev pkg-config
+
+                  uname -a
+                  python --version
+                  python -m pip --version
+                  python -m pip debug
+
+                  python -m pip install pycairo
+                  python -m pip install PyGObject==3.50.0
+                  python -m pip install numpy --no-binary numpy
+                  python -m pip install wxPython==4.2.5 --no-binary wxPython
+
+                  python -m pip install -r requirements.txt
+
+                  python -m pip install pyinstaller
+
+                  echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+            - name: Tests
+              shell: bash
+              run: |
+                  pytest
+            - shell: bash
+              run: |
+                  make dist
+              env:
+                  BUILD: linux
+                  INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-linuxarm64
+                  path: artifacts
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-linuxarm64-frozen-import-report
+                  path: artifacts/frozen-import-report.txt
+    linux32:
+        # Node required for actions, install follows
+        # https://github.com/actions/upload-artifact/issues/616
+        # 2026-04-28: Github is deprecating Node 20 as it's going EoL. We can't update node on this runner easily because
+        # unofficial-builds.nodejs.org stops providing x86 binaries after 21.x due to "toolchain incomaptibilities".
+        # (Indeed, node.js dropped official builds for x86 with 10.x, long ago...)
+        # That may become a problem when Github fully deprecates Node 20 in 2026, or maybe not because we're providing our own anyway?
+        # We can't update the actions for this one because newer versions expect to use Node 24 at `/__e/node24/bin/node`.
+        # Perhaps this will need to be replaced with an x64 image that builds this with an x86 toolchain with x86 python?
+        runs-on: ubuntu-latest
+        # Fix for linux32 build
+        # Allow runners to contunue to use node20 until fall of 2026
         env:
-          BUILD: linux
-          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-linux64
-          path: artifacts
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-linux64-frozen-import-report
-          path: artifacts/frozen-import-report.txt
-  linuxarm64:
-    runs-on: ubuntu-22.04-arm
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          submodules: recursive
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.11.x'
-          cache: 'pip'
-      - name: install dependencies
-        shell: bash
-        run: |
-          sudo apt-get update
-          sudo gem install fpm
-          python -m pip install --upgrade pip
-          python -m pip install wheel
+            ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+        container:
+            image: linuxmintd/lmde6-i386
+            volumes:
+                - ${{ github.workspace }}:/__e/node20
+        steps:
+            - name: Replace `node` with an i386 version
+              shell: bash
+              run: |
+                  apt-get install -y curl
+                  ls -lar /__e/node20 &&
+                  curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
+                  cd /__e/node20 &&
+                  tar -x --strip-components=1 -f /tmp/node.tar.gz
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  submodules: recursive
+            # Permissions problem that prevents caching
+            # https://github.com/actions/setup-python/issues/816
+            - name: Change ownership of /github/home
+              run: sudo chown -R $(whoami) /github/home
+            - name: Replace `node` with an i386 version
+              shell: bash
+              run: |
+                  apt-get install -y curl
+                  ls -lar /__e/node20 &&
+                  curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
+                  cd /__e/node20 &&
+                  tar -x --strip-components=1 -f /tmp/node.tar.gz
+            - uses: actions/cache@v4
+              id: build-venv-cache
+              with:
+                  path: virtualenv
+                  key: ${{ runner.os }}-latest-venv-${{ hashFiles('**/bin/build-linux32-venv') }}
+                  restore-keys: |
+                      ${{ runner.os }}-latest-venv-
+            - name: install os dependencies
+              shell: bash
+              run: |
+                  apt-get update -y
+                  apt-get install -y python3-dev python3-pip pipx ruby-full
+                  gem install fpm
+                  apt-get install -y python3-wheel
+                  apt-get install -y gettext
 
-          sudo apt-get install gettext
+                  # for wxPython
+                  apt-get install -y libnotify4
+                  apt-get install -y glib-networking libsdl2-dev libsdl2-2.0-0
 
-          # for wxPython
-          sudo apt install libnotify4
-          sudo apt install glib-networking libsdl2-dev libsdl2-2.0-0
+                  # for PyGObject
+                  apt-get install -y libgirepository1.0-dev libcairo2-dev
 
-          # for PyGObject
-          sudo apt install libgirepository1.0-dev libcairo2-dev
+                  # for shapely
+                  apt-get install -y build-essential libgtk-3-dev cmake
 
-          # for shapely
-          sudo apt install build-essential libgtk-3-dev cmake
+                  # for numpy
+                  apt-get install -y libopenblas-dev liblapack-dev
 
-          # for numpy
-          sudo apt install  gfortran libopenblas-dev liblapack-dev pkg-config
+                  # for signing rpm
+                  apt-get install -y rpm
+            - name: build shapely
+              shell: bash
+              run: |
+                  bin/build-linux
+            - name: install/build python dependencies
+              if: steps.build-venv-cache.outputs.cache-hit != 'true'
+              shell: bash
+              run: |
+                  bash bin/build-linux32-venv
+            - name: test
+              shell: bash
+              run: |
+                  source virtualenv/bin/activate
+                  echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+                  pytest
+                  deactivate
+            - name: Package distributable
+              shell: bash
+              run: |
+                  source virtualenv/bin/activate
+                  make dist
+                  deactivate
+              env:
+                  BUILD: linux32
+                  INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
+            - name: Replace `node` with an i386 version
+              shell: bash
+              run: |
+                  apt-get install -y curl
+                  ls -lar /__e/node20 &&
+                  curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
+                  cd /__e/node20 &&
+                  tar -x --strip-components=1 -f /tmp/node.tar.gz
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: inkstitch-linux32
+                  path: artifacts
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-linux32-frozen-import-report
+                  path: artifacts/frozen-import-report.txt
+    windows64:
+        runs-on: windows-2022
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  submodules: recursive
+            - uses: actions/setup-python@v6
+              with:
+                  python-version: "3.11.x"
+                  architecture: "x64"
+                  cache: "pip"
+            - uses: microsoft/setup-msbuild@v3
+            - name: Setup Git for Windows SDK
+              uses: git-for-windows/setup-git-for-windows-sdk@v2
+              with:
+                  flavor: build-installers
+            - name: install dependencies
+              shell: bash
+              run: |
+                  git config --system core.longpaths true
+                  python -m pip install --upgrade pip
+                  python -m pip install wheel
+                  pip install wxPython==4.2.5
+                  python -m pip install -r requirements.txt
 
-          uname -a
-          python --version
-          python -m pip --version
-          python -m pip debug
+                  python -m pip install pyinstaller
 
-          python -m pip install pycairo
-          python -m pip install PyGObject==3.50.0
-          python -m pip install numpy --no-binary numpy
-          python -m pip install wxPython==4.2.5 --no-binary wxPython
+                  echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
+            - name: Tests
+              shell: bash
+              run: |
+                  pytest
+            - shell: bash
+              run: |
+                  make dist
+              env:
+                  BUILD: windows
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch/bin/inkstitch.exe test-reports/frozen-import-report.txt
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-windows64-frozen-import-report
+            - name: Set siging policy to release
+              if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
+              shell: bash
+              run: |
+                  echo release_policy="release-signing" >> $GITHUB_ENV
+            - name: upload-unsigned-exe
+              if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
+              id: upload-unsigned-exe
+              uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-windows64-exe
+                  path: |
+                      dist/inkstitch/bin/inkstitch.exe
+            - name: Sign-exe
+              if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
+              id: Sign-exe
+              uses: signpath/github-action-submit-signing-request@v1.1
+              with:
+                  api-token: "${{ secrets.SIGNPATH_API_TOKEN }}"
+                  organization-id: "6b880880-2af8-4cf3-a8e7-1b4977c593df"
+                  project-slug: "inkstitch"
+                  signing-policy-slug: "${{ env.release_policy }}"
+                  github-artifact-id: "${{ steps.upload-unsigned-exe.outputs.artifact-id }}"
+                  wait-for-completion: true
+                  output-artifact-directory: "signed-artifacts"
+            - name: Copy signed exe to dist
+              if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
+              shell: bash
+              run: |
+                  mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
+            - shell: bash
+              run: |
+                  bash bin/build-windows-installer
+              env:
+                  BUILD: windows
+            - name: upload-unsigned-installer
+              if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
+              id: upload-unsigned-installer
+              uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-windows64-installer
+                  path: signed-artifacts
+            - name: Sign-installer
+              if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
+              id: Sign-installer
+              uses: signpath/github-action-submit-signing-request@v1.1
+              with:
+                  api-token: "${{ secrets.SIGNPATH_API_TOKEN }}"
+                  organization-id: "6b880880-2af8-4cf3-a8e7-1b4977c593df"
+                  project-slug: "inkstitch"
+                  signing-policy-slug: "${{ env.release_policy }}"
+                  artifact-configuration-slug: "windows-installer-config"
+                  github-artifact-id: "${{ steps.upload-unsigned-installer.outputs.artifact-id }}"
+                  wait-for-completion: true
+                  output-artifact-directory: "signed-artifacts"
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-windows64
+                  path: signed-artifacts
+    macx86:
+        runs-on: macos-15-intel
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  submodules: recursive
+            - uses: actions/setup-python@v6
+              with:
+                  python-version: "3.11.x"
+                  cache: "pip"
+            - name: install dependencies
+              shell: bash
+              run: |
+                  brew update
 
-          python -m pip install -r requirements.txt
+                  brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
 
-          python -m pip install pyinstaller
+                  # These exports of libiconv to build wxpython
+                  # inkscape libiconv has issues with wxpython pip wheel
+                  export PATH="/usr/local/opt/libiconv/bin:$PATH"
+                  export LDFLAGS="-L/usr/local/opt/libiconv/lib"
+                  export CPPFLAGS="-I/usr/local/opt/libiconv/include"
 
-          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-      - name: Tests
-        shell: bash
-        run: |
-          pytest
-      - shell: bash
-        run: |
-          make dist
-        env:
-          BUILD: linux
-          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-linuxarm64
-          path: artifacts
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-linuxarm64-frozen-import-report
-          path: artifacts/frozen-import-report.txt
-  linux32:
-    # Node required for actions, install follows 
-    # https://github.com/actions/upload-artifact/issues/616
-    # 2026-04-28: Github is deprecating Node 20 as it's going EoL. We can't update node on this runner easily because
-    # unofficial-builds.nodejs.org stops providing x86 binaries after 21.x due to "toolchain incomaptibilities".
-    # (Indeed, node.js dropped official builds for x86 with 10.x, long ago...)
-    # That may become a problem when Github fully deprecates Node 20 in 2026, or maybe not because we're providing our own anyway?
-    # We can't update the actions for this one because newer versions expect to use Node 24 at `/__e/node24/bin/node`.
-    # Perhaps this will need to be replaced with an x64 image that builds this with an x86 toolchain with x86 python?
-    runs-on: ubuntu-latest
-    # Fix for linux32 build
-    # Allow runners to contunue to use node20 until fall of 2026
-    env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-    container:
-      image: linuxmintd/lmde6-i386
-      volumes:
-      - ${{ github.workspace }}:/__e/node20
-    steps:
-      - name: Replace `node` with an i386 version
-        shell: bash
-        run: |
-          apt-get install -y curl
-          ls -lar /__e/node20 &&
-          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
-          cd /__e/node20 &&
-          tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      # Permissions problem that prevents caching
-      # https://github.com/actions/setup-python/issues/816
-      - name: Change ownership of /github/home
-        run: sudo chown -R $(whoami) /github/home    
-      - name: Replace `node` with an i386 version
-        shell: bash
-        run: |
-          apt-get install -y curl
-          ls -lar /__e/node20 &&
-          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
-          cd /__e/node20 &&
-          tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - uses: actions/cache@v4
-        id: build-venv-cache
-        with:
-          path: virtualenv
-          key: ${{ runner.os }}-latest-venv-${{ hashFiles('**/bin/build-linux32-venv') }}
-          restore-keys: |
-            ${{ runner.os }}-latest-venv-
-      - name: install os dependencies
-        shell: bash
-        run: |
-          apt-get update -y
-          apt-get install -y python3-dev python3-pip pipx ruby-full
-          gem install fpm
-          apt-get install -y python3-wheel
-          apt-get install -y gettext
+                  export LDFLAGS="-L/usr/local/opt/libffi/lib"
+                  export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
-          # for wxPython
-          apt-get install -y libnotify4
-          apt-get install -y glib-networking libsdl2-dev libsdl2-2.0-0
+                  # for msgfmt
+                  echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
 
-          # for PyGObject
-          apt-get install -y libgirepository1.0-dev libcairo2-dev
+                  echo "GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/" >> $GITHUB_ENV
 
-          # for shapely
-          apt-get install -y build-essential libgtk-3-dev cmake
+                  pip install --upgrade pip
+                  pip --version
+                  pip install wheel
+                  pip install PyGObject
+                  pip install wxPython==4.2.5 --no-binary wxPython
+                  pip install -r requirements.txt
 
-          # for numpy
-          apt-get install -y libopenblas-dev liblapack-dev
+                  pip install pyinstaller
 
-          # for signing rpm
-          apt-get install -y rpm
-      - name: build shapely
-        shell: bash
-        run: |
-          bin/build-linux
-      - name: install/build python dependencies
-        if: steps.build-venv-cache.outputs.cache-hit != 'true'
-        shell: bash
-        run: |
-          bash bin/build-linux32-venv
-      - name: test    
-        shell: bash
-        run: |
-          source virtualenv/bin/activate
-          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-          pytest
-          deactivate 
-      - name: Package distributable    
-        shell: bash
-        run: |
-          source virtualenv/bin/activate
-          make dist
-          deactivate
-        env:
-          BUILD: linux32
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
-          INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Replace `node` with an i386 version
-        shell: bash
-        run: |
-          apt-get install -y curl
-          ls -lar /__e/node20 &&
-          curl -Lo /tmp/node.tar.gz https://unofficial-builds.nodejs.org/download/release/v20.17.0/node-v20.17.0-linux-x86.tar.gz &&
-          cd /__e/node20 &&
-          tar -x --strip-components=1 -f /tmp/node.tar.gz
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: inkstitch-linux32
-          path: artifacts
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-linux32-frozen-import-report
-          path: artifacts/frozen-import-report.txt
-  windows64:
-    runs-on: windows-2022
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          submodules: recursive
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.11.x'
-          architecture: 'x64'
-          cache: 'pip'
-      - uses: microsoft/setup-msbuild@v3
-      - name: Setup Git for Windows SDK
-        uses: git-for-windows/setup-git-for-windows-sdk@v2
-        with:
-          flavor: build-installers
-      - name: install dependencies
-        shell: bash
-        run: |
-          git config --system core.longpaths true
-          python -m pip install --upgrade pip
-          python -m pip install wheel
-          pip install wxPython==4.2.5
-          python -m pip install -r requirements.txt
+                  echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
+            - name: Tests
+              shell: bash
+              run: |
+                  pytest
+            - shell: bash
+              run: |
+                  make dist
+              env:
+                  BUILD: osx
+                  MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+                  MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+                  KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+                  INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+                  INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+                  NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+                  NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-mac-x86-frozen-import-report
 
-          python -m pip install pyinstaller
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-mac-x86
+                  path: artifacts
+    macarm64:
+        runs-on: macos-14
+        steps:
+            - uses: actions/checkout@v6
+              with:
+                  submodules: recursive
+            - uses: actions/setup-python@v6
+              with:
+                  python-version: "3.11.x"
+                  cache: "pip"
+            - name: install dependencies
+              shell: bash
+              run: |
+                  brew update
 
-          echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-      - name: Tests
-        shell: bash
-        run: |
-          pytest
-      - shell: bash
-        run: |
-          make dist
-        env:
-          BUILD: windows
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch.exe test-reports/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-windows64-frozen-import-report
-      - name: Set siging policy to release
-        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
-        shell: bash
-        run: |
-          echo release_policy="release-signing" >> $GITHUB_ENV
-      - name: upload-unsigned-exe
-        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
-        id: upload-unsigned-exe
-        uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-windows64-exe
-          path: |
-            dist/inkstitch/bin/inkstitch.exe
-      - name: Sign-exe
-        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
-        id: Sign-exe
-        uses: signpath/github-action-submit-signing-request@v1.1
-        with:
-          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
-          organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
-          project-slug: 'inkstitch'
-          signing-policy-slug: '${{ env.release_policy }}'
-          github-artifact-id: '${{ steps.upload-unsigned-exe.outputs.artifact-id }}'
-          wait-for-completion: true
-          output-artifact-directory: 'signed-artifacts'
-      - name: Copy signed exe to dist
-        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
-        shell: bash
-        run: |
-            mv  -f signed-artifacts/inkstitch.exe dist/inkstitch/bin/inkstitch.exe
-      - shell: bash
-        run: |
-          bash bin/build-windows-installer
-        env:
-          BUILD: windows
-      - name: upload-unsigned-installer
-        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
-        id: upload-unsigned-installer
-        uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-windows64-installer
-          path: signed-artifacts
-      - name: Sign-installer
-        if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
-        id: Sign-installer
-        uses: signpath/github-action-submit-signing-request@v1.1
-        with:
-          api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
-          organization-id: '6b880880-2af8-4cf3-a8e7-1b4977c593df'
-          project-slug: 'inkstitch'
-          signing-policy-slug: '${{ env.release_policy }}'
-          artifact-configuration-slug: 'windows-installer-config'
-          github-artifact-id: '${{ steps.upload-unsigned-installer.outputs.artifact-id }}'
-          wait-for-completion: true
-          output-artifact-directory: 'signed-artifacts'
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-windows64
-          path: signed-artifacts
-  macx86:
-    runs-on: macos-15-intel
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          submodules: recursive
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.11.x'
-          cache: 'pip'
-      - name: install dependencies
-        shell: bash
-        run: |
-          brew update
+                  brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
 
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
+                  # These exports of libiconv to build wxpython
+                  # inkscape libiconv has issues with wxpython pip wheel
+                  export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
+                  export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
+                  export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
 
-          # These exports of libiconv to build wxpython
-          # inkscape libiconv has issues with wxpython pip wheel
-          export PATH="/usr/local/opt/libiconv/bin:$PATH"
-          export LDFLAGS="-L/usr/local/opt/libiconv/lib"
-          export CPPFLAGS="-I/usr/local/opt/libiconv/include"
+                  export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+                  export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
 
-          export LDFLAGS="-L/usr/local/opt/libffi/lib"
-          export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+                  # for msgfmt
+                  echo "/opt/homebrew/opt/gettext/bin" >> $GITHUB_PATH
 
-          # for msgfmt
-          echo "/usr/local/opt/gettext/bin" >> $GITHUB_PATH
+                  echo "GI_TYPELIB_PATH=/opt/homebrew/lib/girepository-1.0/" >> $GITHUB_ENV
 
-          echo "GI_TYPELIB_PATH=/usr/local/lib/girepository-1.0/" >> $GITHUB_ENV
+                  pip install --upgrade pip
+                  pip --version
+                  pip install wheel
+                  pip install PyGObject
+                  pip install wxPython==4.2.5 --no-binary wxPython
+                  pip install -r requirements.txt
 
-          pip install --upgrade pip
-          pip --version
-          pip install wheel
-          pip install PyGObject
-          pip install wxPython==4.2.5 --no-binary wxPython
-          pip install -r requirements.txt
+                  pip install pyinstaller
 
-          pip install pyinstaller
+                  echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
+            - name: Tests
+              shell: bash
+              run: |
+                  pytest
+            - shell: bash
+              run: |
+                  make dist
+              env:
+                  BUILD: osx
+                  MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-mac-arm64-frozen-import-report
+                  MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
+                  KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
+                  INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
+                  INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+                  NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
+                  NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
-          echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
-      - name: Tests
-        shell: bash
-        run: |
-          pytest
-      - shell: bash
-        run: |
-          make dist
-        env:
-          BUILD: osx
-          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
-          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
-          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
-          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
-          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
-          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
-          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-mac-x86-frozen-import-report
+            - uses: actions/upload-artifact@v7
+              with:
+                  name: inkstitch-mac-arm64
+                  path: artifacts
 
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-mac-x86
-          path: artifacts
-  macarm64:
-    runs-on: macos-14
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          submodules: recursive
-      - uses: actions/setup-python@v6
-        with:
-          python-version: '3.11.x'
-          cache: 'pip'
-      - name: install dependencies
-        shell: bash
-        run: |
-          brew update
-
-          brew install gtk+3 pkg-config gobject-introspection geos libffi gettext jq gnu-getopt libiconv || true
-
-          # These exports of libiconv to build wxpython
-          # inkscape libiconv has issues with wxpython pip wheel
-          export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
-          export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
-          export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
-
-          export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
-          export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
-
-          # for msgfmt
-          echo "/opt/homebrew/opt/gettext/bin" >> $GITHUB_PATH
-
-          echo "GI_TYPELIB_PATH=/opt/homebrew/lib/girepository-1.0/" >> $GITHUB_ENV
-
-          pip install --upgrade pip
-          pip --version
-          pip install wheel
-          pip install PyGObject
-          pip install wxPython==4.2.5 --no-binary wxPython
-          pip install -r requirements.txt
-
-          pip install pyinstaller
-
-          echo "${{ env.pythonLocation }}/bin" >> $GITHUB_PATH
-      - name: Tests
-        shell: bash
-        run: |
-          pytest
-      - shell: bash
-        run: |
-          make dist
-        env:
-          BUILD: osx
-          MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-mac-arm64-frozen-import-report
-          MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
-          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
-          INSTALLER_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE }}
-          INSTALLER_PWD: ${{ secrets.INKSTITCH_APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
-          NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
-          NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
-
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-mac-arm64
-          path: artifacts
-
-  release:
-    runs-on: ubuntu-latest
-    needs: [linux32, linux64, linuxarm64, windows64, macx86, macarm64]
-    if: always()
-    steps:
-      - name: determine release info
-        shell: bash
-        run: |
-          if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ ]]; then
-            tag="${GITHUB_REF#refs/tags/}"
-            echo "release_tag=${tag}" >> $GITHUB_ENV
-            echo "prerelease=false" >> $GITHUB_ENV
-            echo "title=${tag}" >> $GITHUB_ENV
-          else
-            branch="${GITHUB_REF#refs/heads/}"
-            tag="dev-build-$(echo $branch | tr / -)"
-            echo "release_tag=${tag}" >> $GITHUB_ENV
-            echo "prerelease=true" >> $GITHUB_ENV
-            echo "title=development build of $branch" >> $GITHUB_ENV
-          fi
-      - name: download linux64
-        uses: actions/download-artifact@v8
-        with:
-          name: 'inkstitch-linux64'
-          path: 'artifacts/'
-      - name: download linuxarm64
-        uses: actions/download-artifact@v8
-        with:
-          name: 'inkstitch-linuxarm64'
-          path: 'artifacts/'
-      - name: download linux32
-        uses: actions/download-artifact@v8
-        with:
-          name: 'inkstitch-linux32'
-          path: 'artifacts/'
-      - name: download windows64
-        uses: actions/download-artifact@v8
-        with:
-          name: 'inkstitch-windows64'
-          path: 'signed-artifacts/'
+    release:
+        runs-on: ubuntu-latest
+        needs: [linux32, linux64, linuxarm64, windows64, macx86, macarm64]
         if: always()
-      - name: download macx86
-        uses: actions/download-artifact@v8
-        with:
-          name: 'inkstitch-mac-x86'
-          path: 'artifacts/'
-        if: always()
-      - name: download macarm64
-        uses: actions/download-artifact@v8
-        with:
-          name: 'inkstitch-mac-arm64'
-          path: 'artifacts/'
-        if: always()
-      - name: create/update release
-        uses: softprops/action-gh-release@v3
-        if: always()
-        with:
-          token: "${{secrets.GITHUB_TOKEN}}"
-          tag_name: "${{env.release_tag}}"
-          prerelease: "${{env.prerelease}}"
-          name: "${{env.title}}"
-          files: |
-            artifacts/*.exe
-            artifacts/*.pkg
-            artifacts/*.deb
-            artifacts/*.rpm
-            artifacts/*.tar.xz
-            artifacts/*.sh
-            artifacts/*.zip
-            signed-artifacts/*.exe
-            signed-artifacts/*.zip
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
+        steps:
+            - name: determine release info
+              shell: bash
+              run: |
+                  if [[ "${GITHUB_REF}" =~ ^refs/tags/v[0-9.]+$ ]]; then
+                    tag="${GITHUB_REF#refs/tags/}"
+                    echo "release_tag=${tag}" >> $GITHUB_ENV
+                    echo "prerelease=false" >> $GITHUB_ENV
+                    echo "title=${tag}" >> $GITHUB_ENV
+                  else
+                    branch="${GITHUB_REF#refs/heads/}"
+                    tag="dev-build-$(echo $branch | tr / -)"
+                    echo "release_tag=${tag}" >> $GITHUB_ENV
+                    echo "prerelease=true" >> $GITHUB_ENV
+                    echo "title=development build of $branch" >> $GITHUB_ENV
+                  fi
+            - name: download linux64
+              uses: actions/download-artifact@v8
+              with:
+                  name: "inkstitch-linux64"
+                  path: "artifacts/"
+            - name: download linuxarm64
+              uses: actions/download-artifact@v8
+              with:
+                  name: "inkstitch-linuxarm64"
+                  path: "artifacts/"
+            - name: download linux32
+              uses: actions/download-artifact@v8
+              with:
+                  name: "inkstitch-linux32"
+                  path: "artifacts/"
+            - name: download windows64
+              uses: actions/download-artifact@v8
+              with:
+                  name: "inkstitch-windows64"
+                  path: "signed-artifacts/"
+              if: always()
+            - name: download macx86
+              uses: actions/download-artifact@v8
+              with:
+                  name: "inkstitch-mac-x86"
+                  path: "artifacts/"
+              if: always()
+            - name: download macarm64
+              uses: actions/download-artifact@v8
+              with:
+                  name: "inkstitch-mac-arm64"
+                  path: "artifacts/"
+              if: always()
+            - name: create/update release
+              uses: softprops/action-gh-release@v3
+              if: always()
+              with:
+                  token: "${{secrets.GITHUB_TOKEN}}"
+                  tag_name: "${{env.release_tag}}"
+                  prerelease: "${{env.prerelease}}"
+                  name: "${{env.title}}"
+                  files: |
+                      artifacts/*.exe
+                      artifacts/*.pkg
+                      artifacts/*.deb
+                      artifacts/*.rpm
+                      artifacts/*.tar.xz
+                      artifacts/*.sh
+                      artifacts/*.zip
+                      signed-artifacts/*.exe
+                      signed-artifacts/*.zip
+            - name: Frozen inkex import test
+              shell: bash
+              run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
