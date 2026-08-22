@@ -110,10 +110,34 @@ if development_mode:
 #  WARNING: Must be executed before importing inkex
 # Prioritize pip-installed inkex over Inkscape's bundled version
 prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
+debug_imports = os.environ.get("INKSTITCH_DEBUG_IMPORTS", "").lower() in YES_VALUES
+
+if debug_imports:
+    import importlib.util
+
+    inkex_spec = importlib.util.find_spec("inkex")
+    print("INKEX IMPORT DEBUG: before reorder", file=sys.stderr)
+    print(f"  sys.frozen={getattr(sys, 'frozen', False)}", file=sys.stderr)
+    print(f"  spec.origin={inkex_spec.origin if inkex_spec else None}", file=sys.stderr)
+    print(f"  sys.modules.loaded={'inkex' in sys.modules}", file=sys.stderr)
+    print("  sys.path:", file=sys.stderr)
+    for path in sys.path:
+        print(f"    {path}", file=sys.stderr)
 
 if prefer_pip_inkex and "PYTHONPATH" in os.environ:
     debug_utils.assert_inkex_not_imported_before_path_setup()
     debug_utils.reorder_sys_path()
+
+if debug_imports:
+    import inkex
+
+    print("INKEX IMPORT DEBUG: after reorder", file=sys.stderr)
+    print(f"  sys.frozen={getattr(sys, 'frozen', False)}", file=sys.stderr)
+    print(f"  inkex.__file__={inkex.__file__}", file=sys.stderr)
+    print(f"  sys.modules.loaded={'inkex' in sys.modules}", file=sys.stderr)
+    print("  sys.path:", file=sys.stderr)
+    for path in sys.path:
+        print(f"    {path}", file=sys.stderr)
 
 # -------------------------------------------------------------------------------------------
 
