@@ -315,6 +315,7 @@ jobs:
             - uses: actions/upload-artifact@v7
               with:
                   name: inkstitch-windows64-frozen-import-report
+                  path: test-reports/frozen-import-report.txt
             - name: Set siging policy to release
               if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
               shell: bash
