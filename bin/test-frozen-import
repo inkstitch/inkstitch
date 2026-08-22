@@ -23,8 +23,8 @@ grep -q "inkex.__file__=" "$REPORT"
 
 rm -rf "$FAKE_INKSCAPE_PATH"
 
-if [[ "$STATUS" -eq 0 ]]; then
-    echo "ERROR: probe unexpectedly completed successfully" >&2
+if [[ "$STATUS" -ne 0 ]]; then
+    echo "ERROR: frozen import test failed with exit status $STATUS" >&2
     exit 1
 fi
 

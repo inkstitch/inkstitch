@@ -144,6 +144,7 @@ def main() -> None:  # noqa: C901
         debug_import("  sys.path:")
         for path in sys.path:
             debug_import(f"    {path}")
+        sys.exit(0)
 
     # -------------------------------------------------------------------------------------------
 
