@@ -13,8 +13,6 @@ PYTHONPATH="$FAKE_INKSCAPE_PATH" INKSTITCH_DEBUG_IMPORTS_FILE="$REPORT" "$EXECUT
 STATUS=$?
 set -e
 
-cat "$REPORT"
-
 grep -q "sys.frozen=True" "$REPORT"
 grep -q "INKEX IMPORT DEBUG: before reorder" "$REPORT"
 grep -q "INKEX IMPORT DEBUG: after reorder" "$REPORT"
