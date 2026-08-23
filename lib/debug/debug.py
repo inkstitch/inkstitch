@@ -67,7 +67,7 @@ def unwrap_arguments(func):
     return decorated
 
 
-class Debug(object):
+class Debug:
     """Tools to help debug Ink/Stitch
 
     This class contains methods to log strings and SVG elements.  Strings are
@@ -156,7 +156,7 @@ class Debug(object):
     @unwrap_arguments
     def log(self, message, *args):
         if self.last_log_time:
-            message = "(+%s) %s" % (datetime.now() - self.last_log_time, message)
+            message = f"(+{datetime.now() - self.last_log_time}) {message}"
 
         self.raw_log(message, *args)
 
