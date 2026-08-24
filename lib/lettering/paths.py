@@ -2,7 +2,7 @@ from ..utils import get_bundled_dir, get_user_dir
 
 import os
 import json
-import inkstitch_fonts
+import inkstitch_fonts  # type: ignore[import-untyped]
 
 
 def get_custom_font_cfg_file() -> str:
