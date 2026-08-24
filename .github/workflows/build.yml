@@ -140,7 +140,7 @@ jobs:
           name: inkstitch-linuxarm64
           path: artifacts
   linux32:
-    # Node required for actions, install follows 
+    # Node required for actions, install follows
     # https://github.com/actions/upload-artifact/issues/616
     # 2026-04-28: Github is deprecating Node 20 as it's going EoL. We can't update node on this runner easily because
     # unofficial-builds.nodejs.org stops providing x86 binaries after 21.x due to "toolchain incomaptibilities".
@@ -173,7 +173,7 @@ jobs:
       # Permissions problem that prevents caching
       # https://github.com/actions/setup-python/issues/816
       - name: Change ownership of /github/home
-        run: sudo chown -R $(whoami) /github/home    
+        run: sudo chown -R $(whoami) /github/home
       - name: Replace `node` with an i386 version
         shell: bash
         run: |
@@ -222,14 +222,14 @@ jobs:
         shell: bash
         run: |
           bash bin/build-linux32-venv
-      - name: test    
+      - name: test
         shell: bash
         run: |
           source virtualenv/bin/activate
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-          pytest
-          deactivate 
-      - name: Package distributable    
+          python -m pytest
+          deactivate
+      - name: Package distributable
         shell: bash
         run: |
           source virtualenv/bin/activate
