@@ -2,7 +2,7 @@ from ..utils import get_bundled_dir, get_user_dir
 
 import os
 import json
-import importlib
+import inkstitch_fonts
 
 
 def get_custom_font_cfg_file() -> str:
@@ -24,8 +24,7 @@ def get_custom_font_dir() -> str:
 
 
 def get_font_paths() -> list[str]:
-    # bundled fonts shipped via the inkstitch_fonts PyPI package
-    pkg_root = os.path.dirname(importlib.import_module("inkstitch_fonts").__file__)
+    pkg_root = os.path.dirname(inkstitch_fonts.get_fonts_dir())
     font_paths = [
         os.path.join(pkg_root, "fonts"),
         os.path.join(get_bundled_dir("fonts"), "src"),
