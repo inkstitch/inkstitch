@@ -186,7 +186,9 @@ jobs:
         id: build-venv-cache
         with:
           path: virtualenv
-          key: ${{ runner.os }}-latest-venv-${{ hashFiles('**/bin/build-linux32-venv') }}
+          key: ${{ runner.os }}-latest-venv-${{ hashFiles('**/bin/build-linux32-venv', 'requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-latest-venv-
           restore-keys: |
             ${{ runner.os }}-latest-venv-
       - name: install os dependencies
@@ -227,7 +229,7 @@ jobs:
         run: |
           source virtualenv/bin/activate
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
-          python -m pytest
+          pytest
           deactivate
       - name: Package distributable
         shell: bash
