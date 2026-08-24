@@ -29,6 +29,7 @@ dependencies = [
     "pywinutils ; sys_platform == 'win32'",
     "pywin32 ; sys_platform == 'win32'",
     "inkstitch-fonts>=0.1.0",
+    "xxhash>=4.0.1",
 ]
 
 [dependency-groups]
