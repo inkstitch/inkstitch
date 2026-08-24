@@ -189,8 +189,6 @@ jobs:
           key: ${{ runner.os }}-latest-venv-${{ hashFiles('**/bin/build-linux32-venv', 'requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-latest-venv-
-          restore-keys: |
-            ${{ runner.os }}-latest-venv-
       - name: install os dependencies
         shell: bash
         run: |
