@@ -153,39 +153,5 @@ ignored:
 	@git ls-files --others --ignored --exclude-standard | grep -v .venv
 
 
-# --------------------------------------------------------------------------------------------------------
-# example of how to use uv to create a venv and install wxPython on Linux
-# - installs wxPython explicitly via pip instead of relying on pyproject.toml
-#   pinning it with "==", since that pin can be missing or later removed
-# - detects the distro to pick the right extras.wxpython.org find-links page
-WXPYTHON_VERSION := 4.2.5
-
-.PHONY: uv-linux
-uv-linux:
-	uv python pin 3.12
-	uv venv
-	. /etc/os-release; \
-	case "$$ID" in \
-		ubuntu) WXPYTHON_PLATFORM="ubuntu-$$VERSION_ID" ;; \
-		linuxmint) case "$$UBUNTU_CODENAME" in \
-			noble) WXPYTHON_PLATFORM=ubuntu-24.04 ;; \
-			jammy) WXPYTHON_PLATFORM=ubuntu-22.04 ;; \
-			focal) WXPYTHON_PLATFORM=ubuntu-20.04 ;; \
-			*) WXPYTHON_PLATFORM= ;; \
-		esac ;; \
-		centos|debian|fedora|rocky) WXPYTHON_PLATFORM="$$ID-$${VERSION_ID%%.*}" ;; \
-		*) WXPYTHON_PLATFORM= ;; \
-	esac; \
-	if [ -z "$$WXPYTHON_PLATFORM" ]; then \
-		echo "Unsupported Linux distribution: $${ID:-unknown} $${VERSION_ID:-}" >&2; \
-		exit 1; \
-	fi; \
-	wxpython_url="https://extras.wxpython.org/wxPython4/extras/linux/gtk3/$$WXPYTHON_PLATFORM"; \
-	echo "wxPython find-links URL: $$wxpython_url"; \
-	uv pip install -f "$$wxpython_url" "wxPython==$(WXPYTHON_VERSION)"; \
-	uv lock --find-links "$$wxpython_url" --exclude-newer-package wxpython=2025-12-01; \
-	uv sync --find-links "$$wxpython_url"
-
-
 
 
