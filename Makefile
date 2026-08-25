@@ -42,7 +42,16 @@ ifneq ($(VIRTUAL_ENV),)
 	ACTIVE_PYTHON := $(VIRTUAL_ENV)/$(VENV_BIN)/$(PYTHON_EXE)
 endif
 
-LOCAL_VENV_PYTHON := $(firstword $(wildcard .venv/$(VENV_BIN)/$(PYTHON_EXE) venv/$(VENV_BIN)/$(PYTHON_EXE)))
+# Common local virtual environment directory names used by venv, virtualenv,
+# Poetry, PDM, pipenv, hatch, uv, conda, and hand-rolled setups.
+LOCAL_VENV_PYTHON := $(firstword $(wildcard \
+    .venv/$(VENV_BIN)/$(PYTHON_EXE) \
+    venv/$(VENV_BIN)/$(PYTHON_EXE) \
+    env/$(VENV_BIN)/$(PYTHON_EXE) \
+    .env/$(VENV_BIN)/$(PYTHON_EXE) \
+    virtualenv/$(VENV_BIN)/$(PYTHON_EXE) \
+    .virtualenv/$(VENV_BIN)/$(PYTHON_EXE) \
+))
 SYSTEM_PYTHON := $(shell command -v python3 2>/dev/null || command -v python 2>/dev/null || command -v py 2>/dev/null)
 
 # Allow an explicitly supplied interpreter to take precedence over auto-detection.
