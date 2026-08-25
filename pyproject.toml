@@ -10,9 +10,7 @@ dependencies = [
     # For Linux users it may be tricky to install wxPython from sources.
     # Prebuilt packages: https://wxpython.org/pages/downloads/index.html
     #                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
-    # "wxPython>=4.1.1,<4.3.0",
-    "wxPython==4.2.5; sys_platform == 'linux'", # latest precompiled version for Linux
-    "wxPython>=4.1.1; sys_platform!= 'linux'",
+    "wxPython>=4.1.1",
     "networkx",
     "shapely>=2.0.0",
     "lxml",
