@@ -70,7 +70,10 @@ import logging           # to configure logging
 import logging.config    # to configure logging from dict
 import os
 import sys
-import tomllib           # built-in in Python 3.11+
+if sys.version_info >= (3, 11):
+    import tomllib           # built-in in Python 3.11+
+else:
+    import tomli as tomllib
 import warnings          # to control python warnings
 
 from copy import deepcopy

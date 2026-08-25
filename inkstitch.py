@@ -3,15 +3,13 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-# only Python 3.11+ is officially supported
-import sys
-if sys.version_info < (3, 11):  # noqa: UP036
-    print("ERROR: Python 3.11 or later is required.", file=sys.stderr)
-    sys.exit(1)
-
 import logging
 import os
-import tomllib
+import sys
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
+    import tomli as tomllib
 from argparse import ArgumentParser
 from pathlib import Path
 
