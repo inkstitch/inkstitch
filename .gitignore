@@ -41,3 +41,6 @@ env/
 ENV/
 .python-version
 
+# Excluded from git: cross-platform conflicts due to wxPython Linux wheels
+uv.lock
+
