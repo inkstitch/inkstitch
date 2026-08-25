@@ -17,7 +17,6 @@ dependencies = [
     "platformdirs",
     "numpy==2.2.6",
     "jinja2>2.9",
-    "requests",
     # tomllib is built into Python 3.11+; tomli needed only for older versions
     "tomli ; python_version < '3.11'",
     "colormath2",
@@ -25,7 +24,8 @@ dependencies = [
     "fonttools",
     "trimesh>=3.15.2",
     "diskcache",
-    "flask-cors",
+    # trimesh uses xxhash for faster hashing
+    "xxhash>=4.0.1",
     "pywinutils ; sys_platform == 'win32'",
     "pywin32 ; sys_platform == 'win32'",
 ]
