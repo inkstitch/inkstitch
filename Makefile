@@ -65,6 +65,8 @@ else
 endif
 endif
 
+# pybabel may live in the same venv as PYTHON_EXECUTABLE or be a system tool.
+PYBABEL_EXECUTABLE := $(firstword $(wildcard $(dir $(PYTHON_EXECUTABLE))pybabel) $(shell command -v pybabel 2>/dev/null) $(shell command -v pybabel3 2>/dev/null))
 
 # default target - debugging info
 .PHONY: default
@@ -113,16 +115,16 @@ messages.po: inx
 
 	# There seems to be no proper way to set the charset to utf-8
 	sed -i 's/charset=CHARSET/charset=UTF-8/g' messages-inx.po
-	bin/pystitch-gettext > pystitch-format-descriptions.py
-	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
-	bin/inkstitch-tiles-gettext > inkstitch-tiles-metadata.py
+	$(PYTHON_EXECUTABLE) bin/pystitch-gettext > pystitch-format-descriptions.py
+	$(PYTHON_EXECUTABLE) bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
+	$(PYTHON_EXECUTABLE) bin/inkstitch-tiles-gettext > inkstitch-tiles-metadata.py
 
 	# NOTE: The old `rm -rf src/` step was removed. It used to delete a
 	# temporary build-time directory to stop babel from scanning it, but `src/`
 	# is never created by `make inx` or the current build scripts. Keeping it
 	# would be dangerous for the planned refactor, where `src/` will hold the
 	# main Python source tree.
-	pybabel extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
+	$(PYBABEL_EXECUTABLE) extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
 	rm pystitch-format-descriptions.py inkstitch-fonts-metadata.py inkstitch-tiles-metadata.py
 	msgcat -o messages.po messages-babel.po messages-inx.po
 
