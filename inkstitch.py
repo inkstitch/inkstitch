@@ -53,6 +53,18 @@ SCRIPTDIR = Path(__file__).parent.absolute()
 # Create main 'inkstitch' logger
 logger = logging.getLogger("inkstitch")
 
+# TODO --- temporary --- catch legacy DEBUG.ini file and inform user to reformat it to DEBUG.toml
+#      --- since 2024-03-20
+legacy_debug_ini = SCRIPTDIR / "DEBUG.ini"
+if legacy_debug_ini.exists():
+    print(
+        "ERROR: legacy DEBUG.ini exists. "
+        "Please reformat its contents to DEBUG.toml and remove DEBUG.ini.",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+# --- end of temporary ---
+
 # Load DEBUG.toml if present; fallback to defaults
 debug_toml = SCRIPTDIR / "DEBUG.toml"
 if debug_toml.exists():
