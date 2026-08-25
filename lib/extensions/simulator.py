@@ -6,7 +6,7 @@
 import wx
 
 from ..gui.simulator import SimulatorWindow
-from ..stitch_plan import stitch_groups_to_stitch_plan
+from ..stitch_plan import stitch_groups_to_stitch_plan, StitchPlan
 from ..svg import convert_length
 from ..utils.svg_data import get_pagecolor
 from .base import InkstitchExtension
@@ -20,11 +20,6 @@ class Simulator(InkstitchExtension):
         if not self.get_elements():
             return
 
-        metadata = self.get_inkstitch_metadata()
-        collapse_len = metadata['collapse_len_mm']
-        min_stitch_len = metadata['min_stitch_len_mm']
-        stitch_groups = self.elements_to_stitch_groups(self.elements)
-        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
         background_color = get_pagecolor(self.svg.namedview)
 
         app = wx.App()
@@ -37,12 +32,20 @@ class Simulator(InkstitchExtension):
         wx.CallLater(100, simulator.Centre)
         app.SetTopWindow(simulator)
         simulator.Show()
-        simulator.load(stitch_plan)
-        simulator.set_page_specs(self.get_page_specs(stitch_plan))
+        simulator.panel.set_render_fn(self.render)
+        simulator.panel.render()
+        simulator.set_page_specs(self.get_page_specs())
         simulator.go()
         app.MainLoop()
 
-    def get_page_specs(self, stitch_plan):
+    def render(self) -> StitchPlan:
+        metadata = self.get_inkstitch_metadata()
+        collapse_len = metadata['collapse_len_mm']
+        min_stitch_len = metadata['min_stitch_len_mm']
+        stitch_groups = self.elements_to_stitch_groups(self.elements)
+        return stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, min_stitch_len=min_stitch_len)
+
+    def get_page_specs(self):
         svg = self.document.getroot()
         width = svg.get('width', 0)
         height = svg.get('height', 0)
@@ -61,8 +64,6 @@ class Simulator(InkstitchExtension):
         return {
             "width": convert_length(width),
             "height": convert_length(height),
-            "x": stitch_plan.bounding_box[0],
-            "y": stitch_plan.bounding_box[1],
             "page_color": page_color,
             "desk_color": desk_color,
             "border_color": border_color,

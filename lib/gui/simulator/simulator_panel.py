@@ -12,7 +12,7 @@ from ...stitch_plan import StitchPlan
 
 class SimulatorPanel(wx.Panel):
     """"""
-    def __init__(self, parent, stitch_plan=None, background_color='white', target_duration=5, stitches_per_second=16, detach_callback=None):
+    def __init__(self, parent, stitch_plan=None, background_color='white', target_duration=5, stitches_per_second=16, detach_callback=None) -> None:
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
@@ -84,7 +84,7 @@ class SimulatorPanel(wx.Panel):
         self.accel_table = wx.AcceleratorTable(self.accel_entries)
         self.SetAcceleratorTable(self.accel_table)
 
-        self.render_fn: Callable[[], Optional[StitchPlan]] = None
+        self.render_fn: Optional[Callable[[], Optional[StitchPlan]]] = None
 
     def go(self):
         self.dp.go()
@@ -113,7 +113,7 @@ class SimulatorPanel(wx.Panel):
         self.dp.set_loading(True)
         self.preview_renderer.update()
 
-    def _call_render(self) -> None:
+    def _call_render(self) -> Optional[StitchPlan]:
         if self.render_fn is None:
             return None
 
@@ -129,4 +129,3 @@ class SimulatorPanel(wx.Panel):
         except RuntimeError:
             # this can happen when they close the window at a bad time
             pass
-
