@@ -3,7 +3,7 @@
     <name>InkSim</name>
     <id>org.{{ id_inkstitch }}.ink_sim</id>
     <param name="extension" type="string" gui-hidden="true">ink_sim</param>
-    <effect implements-custom-gui="true" show-stderr="true">
+    <effect>
         <object-type>all</object-type>
         <icon>{{ icon_path }}inx/ink_sim.svg</icon>
         <effects-menu>
