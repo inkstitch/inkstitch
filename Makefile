@@ -126,7 +126,11 @@ messages.po: inx
 	# main Python source tree.
 	$(PYBABEL_EXECUTABLE) extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
 	rm pystitch-format-descriptions.py inkstitch-fonts-metadata.py inkstitch-tiles-metadata.py
+
+	# msgcat merges the Python/Jinja2 strings (messages-babel.po) and the
+	# INX strings (messages-inx.po) into a single messages.po catalog.
 	msgcat -o messages.po messages-babel.po messages-inx.po
+	rm -f messages-babel.po messages-inx.po
 
 %.po: %.mo
 	msgunfmt -o $@ $<
