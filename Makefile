@@ -146,6 +146,11 @@ type-check mypy:
 test:
 	$(PYTHON_EXECUTABLE) -m pytest
 
+# run all checks: tests, style and type-check
+# order matters: cheapest first so failures show up quickly
+.PHONY: check
+check: style type-check test
+
 # show all files in the repo that are ignored by git
 # - skip .venv folder
 .PHONY: ignored
