@@ -108,9 +108,11 @@ messages.po: inx
 	bin/inkstitch-fonts-gettext > inkstitch-fonts-metadata.py
 	bin/inkstitch-tiles-gettext > inkstitch-tiles-metadata.py
 
-	# After the inx files are finished building, we don't need the src/ folder anymore.
-	# We don't want babel to grab possible translation strings from that folder, so let's remove it
-	rm -rf src/
+	# NOTE: The old `rm -rf src/` step was removed. It used to delete a
+	# temporary build-time directory to stop babel from scanning it, but `src/`
+	# is never created by `make inx` or the current build scripts. Keeping it
+	# would be dangerous for the planned refactor, where `src/` will hold the
+	# main Python source tree.
 	pybabel extract -o messages-babel.po -F babel.conf --add-location=full --add-comments=l10n,L10n,L10N --sort-by-file --strip-comments -k N_ -k '$$gettext' .
 	rm pystitch-format-descriptions.py inkstitch-fonts-metadata.py inkstitch-tiles-metadata.py
 	msgcat -o messages.po messages-babel.po messages-inx.po
