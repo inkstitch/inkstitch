@@ -23,19 +23,8 @@ from .base import InkstitchExtension
 class InkSim(InkstitchExtension):
     def __init__(self):
         InkstitchExtension.__init__(self)
-        self.arg_parser.add_argument(
-            "-p", "--play", dest="play", type=inkex.Boolean, default=False,
-            help="Start simulation playback immediately",
-        )
-        self.arg_parser.add_argument(
-            "-o", "--options", dest="options", type=str, default="",
-            help="Active notebook page (unused, required by Inkscape INX)",
-        )
-        self.arg_parser.add_argument(
-            "-i", "--info", dest="help", type=str, default="",
-            help="Help page marker (unused, required by Inkscape INX)",
-        )
         self.logger = logging.getLogger("inkstitch")
+        self._play = True
 
     def effect(self):
         if not self.get_elements():
@@ -76,9 +65,6 @@ class InkSim(InkstitchExtension):
         if not server_running:
             self._run_inksim(temp_file_name)
 
-        if self.options.play:
-            self._send_play_command()
-
         self._log(f"InkSim: total time {time.time() - start_time:.2f}s")
 
         # Prevent inkex from writing the SVG back to stdout; we produced no
@@ -112,6 +98,7 @@ class InkSim(InkstitchExtension):
             "command": "open_and_delete",
             "path": csv_path,
             "focus": True,
+            "autoplay": True,
         }
         command = base_command + [
             "--send-command",
@@ -171,7 +158,7 @@ class InkSim(InkstitchExtension):
             command = [ink_sim]
 
         command += ["--server", "--delete-input"]
-        if self.options.play:
+        if self._play:
             command.append("--play")
         command.append(csv_path)
 
@@ -181,28 +168,3 @@ class InkSim(InkstitchExtension):
                            stderr=subprocess.DEVNULL,
                            start_new_session=True)
 
-    def _send_play_command(self):
-        """Send a play command to a running inksim server."""
-        ink_sim_env = os.environ.get("INKSIM_EXE")
-        if ink_sim_env:
-            base_command = shlex.split(ink_sim_env)
-        else:
-            ink_sim = shutil.which("inksim")
-            if ink_sim is None:
-                return
-            base_command = [ink_sim]
-
-        command = base_command + [
-            "--send-command",
-            json.dumps({"command": "play"}),
-        ]
-        self._log(f"InkSim: sending play command")
-        try:
-            subprocess.run(
-                command,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                timeout=3,
-            )
-        except (OSError, subprocess.TimeoutExpired) as ex:
-            self._log(f"InkSim: play command failed ({ex})")
