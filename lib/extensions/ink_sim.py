@@ -23,6 +23,18 @@ from .base import InkstitchExtension
 class InkSim(InkstitchExtension):
     def __init__(self):
         InkstitchExtension.__init__(self)
+        self.arg_parser.add_argument(
+            "-p", "--play", dest="play", type=inkex.Boolean, default=False,
+            help="Start simulation playback immediately",
+        )
+        self.arg_parser.add_argument(
+            "-o", "--options", dest="options", type=str, default="",
+            help="Active notebook page (unused, required by Inkscape INX)",
+        )
+        self.arg_parser.add_argument(
+            "-i", "--info", dest="help", type=str, default="",
+            help="Help page marker (unused, required by Inkscape INX)",
+        )
         self.logger = logging.getLogger("inkstitch")
 
     def effect(self):
@@ -60,8 +72,12 @@ class InkSim(InkstitchExtension):
         # Try to reuse a running inksim server; otherwise start a new one.
         # In both cases the temp CSV is deleted by inksim after it has been
         # loaded, so we do not leave temporary files behind.
-        if not self._send_to_server(temp_file_name):
+        server_running = self._send_to_server(temp_file_name)
+        if not server_running:
             self._run_inksim(temp_file_name)
+
+        if self.options.play:
+            self._send_play_command()
 
         self._log(f"InkSim: total time {time.time() - start_time:.2f}s")
 
@@ -143,7 +159,7 @@ class InkSim(InkstitchExtension):
         """
         ink_sim_env = os.environ.get("INKSIM_EXE")
         if ink_sim_env:
-            command = shlex.split(ink_sim_env) + ["--server", "--delete-input", csv_path]
+            command = shlex.split(ink_sim_env)
         else:
             ink_sim = shutil.which("inksim")
             if ink_sim is None:
@@ -152,10 +168,41 @@ class InkSim(InkstitchExtension):
                     "or add inksim to PATH."
                 )
                 sys.exit(1)
-            command = [ink_sim, "--server", "--delete-input", csv_path]
+            command = [ink_sim]
+
+        command += ["--server", "--delete-input"]
+        if self.options.play:
+            command.append("--play")
+        command.append(csv_path)
 
         self._log(f"InkSim: launching {' '.join(command)}")
         subprocess.Popen(command,
                            stdout=subprocess.DEVNULL,
                            stderr=subprocess.DEVNULL,
                            start_new_session=True)
+
+    def _send_play_command(self):
+        """Send a play command to a running inksim server."""
+        ink_sim_env = os.environ.get("INKSIM_EXE")
+        if ink_sim_env:
+            base_command = shlex.split(ink_sim_env)
+        else:
+            ink_sim = shutil.which("inksim")
+            if ink_sim is None:
+                return
+            base_command = [ink_sim]
+
+        command = base_command + [
+            "--send-command",
+            json.dumps({"command": "play"}),
+        ]
+        self._log(f"InkSim: sending play command")
+        try:
+            subprocess.run(
+                command,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                timeout=3,
+            )
+        except (OSError, subprocess.TimeoutExpired) as ex:
+            self._log(f"InkSim: play command failed ({ex})")
