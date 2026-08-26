@@ -12,12 +12,21 @@ import subprocess
 import sys
 import tempfile
 import time
+from pathlib import Path
 
 import inkex
 
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from .base import InkstitchExtension
+
+
+def _resolve_document_path():
+    """Return the Inkscape document path or the current working directory."""
+    document_path = os.environ.get("DOCUMENT_PATH")
+    if document_path:
+        return document_path
+    return str(Path.cwd())
 
 
 class InkSim(InkstitchExtension):
@@ -99,6 +108,7 @@ class InkSim(InkstitchExtension):
             "path": csv_path,
             "focus": True,
             "autoplay": True,
+            "document_path": _resolve_document_path(),
         }
         command = base_command + [
             "--send-command",
@@ -160,6 +170,7 @@ class InkSim(InkstitchExtension):
         command += ["--server", "--delete-input"]
         if self._play:
             command.append("--play")
+        command += ["--document-path", _resolve_document_path()]
         command.append(csv_path)
 
         self._log(f"InkSim: launching {' '.join(command)}")
