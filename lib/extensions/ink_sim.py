@@ -8,7 +8,6 @@ import logging
 import os
 import shutil
 import shlex
-import socket
 import subprocess
 import sys
 import tempfile
@@ -19,9 +18,6 @@ import inkex
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
 from .base import InkstitchExtension
-
-INKSIM_IPC_SOCKET = "/tmp/inksim-local"
-INKSIM_IPC_TIMEOUT_S = 1.0
 
 
 class InkSim(InkstitchExtension):
@@ -82,29 +78,55 @@ class InkSim(InkstitchExtension):
     def _send_to_server(self, csv_path):
         """Ask a running inksim server to open (and delete) the CSV.
 
-        Returns True when the server accepted the command.  A short timeout is
-        used so that Inkscape does not freeze when no server is running.
+        Returns True when the server accepted the command.  The request is sent
+        by invoking ``inksim --send-command`` so that Ink/Stitch does not need
+        to know the platform-specific IPC transport used by Qt (named pipes on
+        Windows, local sockets on Unix).
         """
-        if not os.path.exists(INKSIM_IPC_SOCKET):
-            return False
+        ink_sim_env = os.environ.get("INKSIM_EXE")
+        if ink_sim_env:
+            base_command = shlex.split(ink_sim_env)
+        else:
+            ink_sim = shutil.which("inksim")
+            if ink_sim is None:
+                return False
+            base_command = [ink_sim]
+
+        command_payload = {
+            "command": "open_and_delete",
+            "path": csv_path,
+            "focus": True,
+        }
+        command = base_command + [
+            "--send-command",
+            json.dumps(command_payload),
+        ]
+        self._log(f"InkSim: forwarding to server with {' '.join(command)}")
         try:
-            with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:
-                sock.settimeout(INKSIM_IPC_TIMEOUT_S)
-                sock.connect(INKSIM_IPC_SOCKET)
-                command = {
-                    "command": "open_and_delete",
-                    "path": csv_path,
-                    "focus": True,
-                }
-                sock.sendall((json.dumps(command) + "\n").encode("utf-8"))
-                response = sock.recv(4096).decode("utf-8").strip()
-                if response:
-                    parsed = json.loads(response)
-                    if parsed.get("ok"):
-                        self._log(f"InkSim: forwarded {csv_path} to running server")
-                        return True
-        except (OSError, json.JSONDecodeError) as ex:
+            result = subprocess.run(
+                command,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                timeout=3,
+            )
+        except (OSError, subprocess.TimeoutExpired) as ex:
             self._log(f"InkSim: server probe failed ({ex})")
+            return False
+
+        if result.returncode != 0:
+            # No server running or command rejected; the stderr usually
+            # contains a brief message which we keep in the log only.
+            self._log(f"InkSim: server probe exited {result.returncode}")
+            return False
+
+        try:
+            response = json.loads(result.stdout.decode("utf-8"))
+        except json.JSONDecodeError:
+            return False
+
+        if response.get("ok"):
+            self._log("InkSim: forwarded CSV to running server")
+            return True
         return False
 
     def _run_inksim(self, csv_path):
