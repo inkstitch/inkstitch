@@ -12,19 +12,6 @@
             </submenu>
         </effects-menu>
     </effect>
-    <param name="options" type="notebook">
-      <page name="options" gui-text="InkSim Options">
-          <spacer />
-          <param name="play" type="boolean" gui-text="Play automatically">false</param>
-          <spacer />
-      </page>
-      <page name="help" gui-text="Help">
-          <label appearance="header">InkSim</label>
-          <label>Open the selected embroidery design in the external InkSim viewer.</label>
-          <spacer />
-          <label>Enable &quot;Play automatically&quot; to start the simulation as soon as the design loads.</label>
-      </page>
-    </param>
     <script>
         {{ command_tag | safe }}
     </script>
