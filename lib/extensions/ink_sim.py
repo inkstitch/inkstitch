@@ -6,8 +6,8 @@
 import json
 import logging
 import os
-import shutil
 import shlex
+import shutil
 import subprocess
 import sys
 import tempfile
