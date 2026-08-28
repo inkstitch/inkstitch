@@ -17,7 +17,7 @@ If you chose a local value as default, it will set the glocal value to the local
 
 If a jump between two consecutive paths is shorter than this value, lock stitches at ending of first path and tack stiches at starting point of second path are only created if *Force lock stitches* is enabled in the corresponding path.  If the jump is longer, lock stitches and tack stitches are true to their settings.
 
-Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/doc/params).
+Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/docs/params).
 
 ### Minimum stitch length (mm)
 
@@ -33,7 +33,7 @@ These are  the results of simulation for 1.5mm *running stitch length* running s
 
 When *Minimum stitch length* is set to 2mm, except for lock stitchs, every other stitch  is dropped,  as  1.5 is smaller than 2 and 1.5+1.5 is larger than 2. The number of stitches is divided by two. Should we set *minimum stitch length* to 3.1, then we would get  4.5mm running stitches.
 
-Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/doc/params).
+Up from v 3.1.0 it is possible to overwrite the global value for single elements in the [params dialog](/docs/params).
 
 #### Effect on embroidery
 
