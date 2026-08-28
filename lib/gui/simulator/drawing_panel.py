@@ -112,13 +112,15 @@ class DrawingPanel(wx.Panel):
             self.current_stitch = self.num_stitches
 
     def stop_if_at_end(self):
-        if ((self.direction == -1 and self.current_stitch == 1)
-                or (self.direction == 1 and self.current_stitch == self.num_stitches)):
+        if self.direction == -1 and self.current_stitch == 1:
+            self.stop()
+        elif self.direction == 1 and self.current_stitch == self.num_stitches:
             self.stop()
 
     def start_if_not_at_end(self):
-        if ((self.direction == -1 and self.current_stitch > 1)
-                or (self.direction == 1 and self.current_stitch < self.num_stitches)):
+        if self.direction == -1 and self.current_stitch > 1:
+            self.go()
+        elif self.direction == 1 and self.current_stitch < self.num_stitches:
             self.go()
 
     def animate(self, event=None):
