@@ -20,7 +20,7 @@ Par exemple si cette valeur est à 2 mm, chaque fois qu'il y a un saut de fil  d
 
 Pour les sauts de fils plus longs que 2 mm, le paramétrage des points de sureté est respecté.
 
-A partir de la version  v 3.1.0 il  est possible de surcharger la valeur globale pour des éléments particuliers dan [le dialogue de paramétrage](/doc/params).
+A partir de la version  v 3.1.0 il  est possible de surcharger la valeur globale pour des éléments particuliers dans [le dialogue de paramétrage](/fr/docs/params).
 
 ### Longueur minimum de points (mm)
 
