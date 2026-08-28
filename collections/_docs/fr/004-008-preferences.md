@@ -40,7 +40,7 @@ Quand la *Longueur minimum de points* vaut 2 mm, un point sur deux est sauté (�
 
 Si la valeur de  *Longueur minimum de points* avait été 3.1 mm, on aurait obtenu des points de 4.5mm
 
-A partir de la version  v 3.1.0 il  est possible de surcharger la valeur globale pour des éléments particuliers dan [le dialogue de paramétrage](/doc/params).
+A partir de la version  v 3.1.0 il  est possible de surcharger la valeur globale pour des éléments particuliers dan [le dialogue de paramétrage](/fr/docs/params).
 
 #### Quel effet sur la broderie ?
 
