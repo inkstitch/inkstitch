@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import json
@@ -6,11 +6,46 @@ import json
 # generate fake python code containing the names and descriptions of all built-
 # in fonts as gettext calls so that pybabel will extract them into messages.po
 
-fonts_dir = os.path.join(os.path.dirname(__file__), "..", "fonts", "src")
+# Walk the bundled fonts directory recursively and collect metadata from every
+# font.json (or font.json.xz) found.  This works for any font layout:
+# fonts/src, fonts/fonts, fonts/<font>, or nested structures used by future
+# dynamic font download locations.
+base_dir = os.path.join(os.path.dirname(__file__), "..", "fonts")
 
-for font in sorted(os.listdir(fonts_dir)):
-	with open(os.path.join(fonts_dir, font, "font.json")) as font_json:
-		font_metadata = json.load(font_json)
-		
-		print("# L10N description of font in fonts/%s" % font)
-		print("_(%s)" % repr(font_metadata.get("description", "")))
+
+def iter_font_metadata(fonts_dir):
+    for root, dirs, files in os.walk(fonts_dir):
+        # Determine the metadata file to read (prefer uncompressed).
+        metadata_path = None
+        if "font.json" in files:
+            metadata_path = os.path.join(root, "font.json")
+        elif "font.json.xz" in files:
+            metadata_path = os.path.join(root, "font.json.xz")
+
+        if metadata_path is None:
+            continue
+
+        # Get the font directory name relative to the fonts root.
+        rel_dir = os.path.relpath(root, fonts_dir)
+        if rel_dir == ".":
+            continue
+
+        if metadata_path.endswith(".xz"):
+            import lzma
+            with lzma.open(metadata_path, "rt", encoding="utf-8-sig") as font_json:
+                font_metadata = json.load(font_json)
+        else:
+            with open(metadata_path, encoding="utf-8-sig") as font_json:
+                font_metadata = json.load(font_json)
+
+        yield rel_dir, font_metadata
+
+
+seen = set()
+if os.path.isdir(base_dir):
+    for rel_dir, font_metadata in sorted(iter_font_metadata(base_dir)):
+        if rel_dir in seen:
+            continue
+        print("# L10N description of font in fonts/%s" % rel_dir)
+        print("_(%s)" % repr(font_metadata.get("description", "")))
+        seen.add(rel_dir)
