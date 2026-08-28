@@ -1,3 +1,4 @@
 [submodule "fonts"]
 	path = fonts
-	url = https://github.com/inkstitch/embroidery-fonts
+	url = https://github.com/karnigen/embroidery-fonts.git
+	branch = kgn/refactor/move-fonts-from-src

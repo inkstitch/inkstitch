@@ -7,9 +7,8 @@ import json
 # in fonts as gettext calls so that pybabel will extract them into messages.po
 
 # Walk the bundled fonts directory recursively and collect metadata from every
-# font.json (or font.json.xz) found.  This works for any font layout:
-# fonts/src, fonts/fonts, fonts/<font>, or nested structures used by future
-# dynamic font download locations.
+# font.json (or font.json.xz) found.  This works for both supported submodule
+# layouts: fonts/fonts/<font> (refactored) and fonts/src/<font> (legacy).
 base_dir = os.path.join(os.path.dirname(__file__), "..", "fonts")
 
 

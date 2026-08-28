@@ -47,10 +47,9 @@ def _is_font_root(path: str) -> bool:
 def _get_bundled_font_dir() -> str:
     """Return the bundled fonts directory for the active submodule layout.
 
-    The fonts submodule has been laid out in three different ways over time:
-      - fonts/fonts/<font> : intermediate layout
+    The fonts submodule has been laid out in two ways:
+      - fonts/fonts/<font> : intermediate layout used by the refactored submodule
       - fonts/src/<font>   : legacy layout
-      - fonts/<font>       : refactored layout
 
     In the refactored layout Python source code may live under fonts/src, so
     we cannot simply check for directory existence.  We detect the actual font
@@ -60,12 +59,11 @@ def _get_bundled_font_dir() -> str:
     candidates = [
         os.path.join(fonts_root, "fonts"),
         os.path.join(fonts_root, "src"),
-        fonts_root,
     ]
     for candidate in candidates:
         if _is_font_root(candidate):
             return candidate
-    return fonts_root
+    return os.path.join(fonts_root, "fonts")
 
 
 def get_font_paths() -> List[str]:
