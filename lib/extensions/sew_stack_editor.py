@@ -454,9 +454,9 @@ class SewStackPanel(wx.Panel):
             for sew_stack in self.sew_stacks:
                 if self.single_layer_preview_button.GetValue():
                     layer = sew_stack.layers[self.layer_list.GetFirstSelected()]
-                    stitch_groups.extend(layer.embroider(None))
+                    stitch_groups.extend(layer.embroider(None, None))
                 else:
-                    stitch_groups.extend(sew_stack.embroider(stitch_groups[-1] if stitch_groups else None))
+                    stitch_groups.extend(sew_stack.embroider(stitch_groups[-1] if stitch_groups else None, None))
 
                 check_stop_flag()
 

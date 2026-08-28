@@ -8,12 +8,18 @@ import wx
 
 from ...debug.debug import debug
 from ...utils.threading import ExitThread
+from ...stitch_plan import StitchPlan
+from typing import Callable
 
 
 class PreviewRenderer(Thread):
     """Render stitch plan in a background thread."""
 
-    def __init__(self, render_stitch_plan_hook, rendering_completed_hook):
+    def __init__(
+            self,
+            render_stitch_plan_hook: Callable[[], StitchPlan | None],
+            rendering_completed_hook: Callable[[StitchPlan | None], None]
+            ) -> None:
         super(PreviewRenderer, self).__init__()
         self.daemon = True
         self.refresh_needed = Event()
@@ -25,7 +31,7 @@ class PreviewRenderer(Thread):
         # generation.
         self.stop = Event()
 
-    def update(self):
+    def update(self) -> None:
         """Request to render a new stitch plan.
 
         self.render_stitch_plan_hook() will be called in a background thread, and then
@@ -38,7 +44,7 @@ class PreviewRenderer(Thread):
         self.stop.set()
         self.refresh_needed.set()
 
-    def run(self):
+    def run(self) -> None:
         while True:
             self.refresh_needed.wait()
             self.refresh_needed.clear()
@@ -46,20 +52,13 @@ class PreviewRenderer(Thread):
 
             try:
                 debug.log("update_patches")
-                self.render_stitch_plan()
+
+                stitch_plan = self.render_stitch_plan_hook()
+                # rendering_completed() will be called in the main thread.
+                wx.CallAfter(self.rendering_completed_hook, stitch_plan)
+
             except ExitThread:
                 debug.log("ExitThread caught")
-                self.stop.clear()
-
-    def render_stitch_plan(self):
-        stitch_plan = None
-        try:
-            stitch_plan = self.render_stitch_plan_hook()
-        except ExitThread:
-            raise
-        except:  # noqa: E722
-            import traceback
-            debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())
-        finally:
-            # rendering_completed() will be called in the main thread.
-            wx.CallAfter(self.rendering_completed_hook, stitch_plan)
+            except:  # noqa: E722
+                import traceback
+                debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())
