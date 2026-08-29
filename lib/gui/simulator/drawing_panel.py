@@ -9,6 +9,7 @@ import wx
 from numpy import split
 from typing import Optional, Tuple
 
+from ...stitch_plan import StitchPlan
 from ...debug.debug import debug
 from ...i18n import _
 from ...stitch_plan import StitchPlan
@@ -100,8 +101,6 @@ class DrawingPanel(wx.Panel):
         self.direction = 1
         self.current_stitch = 0
         self.black_pen = wx.Pen((128, 128, 128))
-        self.width = 0
-        self.height = 0
         self.page_specs: dict = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
@@ -342,30 +341,11 @@ class DrawingPanel(wx.Panel):
         self.stitch_plan = stitch_plan
         self.current_stitch = 1
         self.direction = 1
-        minx, miny, maxx, maxy = stitch_plan.bounding_box
-        self.width = maxx - minx
-        self.height = maxy - miny
-        self.dimensions_mm = stitch_plan.dimensions_mm
         self.num_stitches = stitch_plan.num_stitches
-        self.num_trims = stitch_plan.num_trims
-        self.num_color_changes = stitch_plan.num_color_blocks - 1
-        self.num_stops = stitch_plan.num_stops
-        self.num_jumps = stitch_plan.num_jumps - 1
         self.parse_stitch_plan(stitch_plan)
         self.choose_zoom_and_pan()
         self.set_current_stitch(0)
-        # Detangling the DrawingPanel-> SimulatorWindow.statusbar dependency can wait for now
-        statusbar = self.GetTopLevelParent().statusbar  # type:ignore[attr-defined]
-        statusbar.SetStatusText(
-            _("Dimensions: {:.2f} x {:.2f}").format(
-                stitch_plan.dimensions_mm[0],
-                stitch_plan.dimensions_mm[1]
-            ),
-            1
-        )
         self.go()
-        if hasattr(self.view_panel, 'info_panel') and self.view_panel.info_panel is not None:
-            self.view_panel.info_panel.update()
 
     def set_page_specs(self, page_specs):
         self.SetBackgroundColour(page_specs['desk_color'])
