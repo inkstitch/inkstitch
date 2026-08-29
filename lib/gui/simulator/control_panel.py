@@ -7,29 +7,35 @@ from sys import platform
 
 import wx
 from wx.lib.intctrl import IntCtrl
+from typing import TYPE_CHECKING
 
+from ...stitch_plan import StitchPlan
 from ...debug.debug import debug
 from ...i18n import _
 from ...utils import get_resource_dir
 from ...utils.settings import global_settings
 from . import SimulatorSlider
 
+if TYPE_CHECKING:
+    from .simulator_panel import SimulatorPanel
+    from .drawing_panel import DrawingPanel
+
 
 class ControlPanel(wx.Panel):
     """"""
 
     @debug.time
-    def __init__(self, parent, *args, **kwargs):
+    def __init__(self, parent, *args, **kwargs) -> None:
         """"""
-        self.parent = parent
-        self.stitch_plan = kwargs.pop('stitch_plan', None)
+        self.parent: 'SimulatorPanel' = parent
+        self.stitch_plan: StitchPlan | None = kwargs.pop('stitch_plan', None)
         self.detach_callback = kwargs.pop('detach_callback', None)
         self.target_stitches_per_second = kwargs.pop('stitches_per_second')
         self.target_duration = kwargs.pop('target_duration')
         kwargs['style'] = wx.BORDER_SUNKEN
         wx.Panel.__init__(self, parent, *args, **kwargs)
 
-        self.drawing_panel = None
+        self.drawing_panel: DrawingPanel | None = None
         self.num_stitches = 0
         self.current_stitch = 0
         self.speed = global_settings['simulator_speed']

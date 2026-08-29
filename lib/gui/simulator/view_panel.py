@@ -4,7 +4,9 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
+from typing import TYPE_CHECKING
 
+from ...stitch_plan import StitchPlan
 from ...debug.debug import debug
 from ...i18n import _
 from . import SimulatorPreferenceDialog
@@ -16,16 +18,18 @@ class ViewPanel(ScrolledPanel):
     """"""
 
     @debug.time
-    def __init__(self, parent, detach_callback):
+    def __init__(self, parent, detach_callback, stitch_plan: StitchPlan | None) -> None:
         """"""
         self.parent = parent
         self.detach_callback = detach_callback
+        self.stitch_plan: StitchPlan | None = stitch_plan
         ScrolledPanel.__init__(self, parent)
         self.SetupScrolling(scroll_y=True, scroll_x=False)
 
         self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
 
         self.control_panel = parent.cp
+        self.info_panel: DesignInfoDialog | None = None
 
         self.npp_button_status = global_settings['npp_button_status']
         self.jump_button_status = global_settings['jump_button_status']
@@ -145,6 +149,11 @@ class ViewPanel(ScrolledPanel):
     def set_drawing_panel(self, drawing_panel):
         self.drawing_panel = drawing_panel
 
+    def load(self, stitch_plan: StitchPlan | None):
+        self.stitch_plan = stitch_plan
+        if self.info_panel is not None:
+            self.info_panel.load(stitch_plan)
+
     def on_update_background_color(self, event):
         color = event.Colour
         self.set_background_color(color)
@@ -190,7 +199,7 @@ class ViewPanel(ScrolledPanel):
 
     def on_info_button(self, event):
         if event.GetEventObject().GetValue():
-            self.info_panel = DesignInfoDialog(self, title=_('Design Info'))
+            self.info_panel = DesignInfoDialog(self, self.stitch_plan)
             self.info_panel.Bind(wx.EVT_CLOSE, self.info_panel_closed)
             self.info_panel.Show()
         else:
