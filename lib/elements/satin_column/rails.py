@@ -1,11 +1,15 @@
+from typing import Sequence, TYPE_CHECKING
+
 from shapely import geometry as shgeo
 
-from .satin_column import SatinColumn
 from .satin_processor import SatinProcessor
 from ..element import PIXELS_PER_MM
 from ...debug.debug import debug
-from ...utils.geometry import Point
+from ...utils import Point, cut
 from ...utils.threading import check_stop_flag
+
+if TYPE_CHECKING:
+    from .satin_column import SatinColumn
 
 
 def get_rails_to_reverse(choice: str, rails: list[list[tuple[float, float]]]) -> tuple[bool, bool]:
@@ -43,6 +47,7 @@ def get_rails_to_reverse(choice: str, rails: list[list[tuple[float, float]]]) ->
 
     return False, False
 
+
 def _stitch_distance(pos0: Point, pos1: Point, previous_pos0: Point, previous_pos1: Point) -> float:
     """Return the distance from one stitch to the next."""
 
@@ -64,6 +69,7 @@ def _stitch_distance(pos0: Point, pos1: Point, previous_pos0: Point, previous_po
         d0 = pos0 - previous_pos0
         d1 = pos1 - previous_pos1
         return max(abs(d0 * normal), abs(d1 * normal))
+
 
 @debug.time
 def plot_points_on_rails(satin: 'SatinColumn', spacing: float | int, offset_px: tuple[float, float] = (0, 0),
@@ -177,3 +183,41 @@ def plot_points_on_rails(satin: 'SatinColumn', spacing: float | int, offset_px: 
             pairs.append(processor.process_points(section0[-1], section1[-1]))
 
     return pairs
+
+
+def cut_rails(satin: 'SatinColumn', cut_points: Sequence[Point | shgeo.Point]) -> tuple[list[shgeo.LineString], list[shgeo.LineString]]:
+    """Cut the rails of this satin at the specified points.
+
+    cut_points is a list of two elements, corresponding to the cut points
+    for each rail in order.
+
+    Returns: A list of two elements, corresponding to the two new sets of
+      rails.  Each element is a list of two rails of type LineString.
+    """
+
+    rails = [shgeo.LineString(rail) for rail in satin.rails]
+
+    path_lists: tuple[list[shgeo.LineString], list[shgeo.LineString]] = ([], [])
+
+    rails_to_reverse = get_rails_to_reverse(satin.reverse_rails, satin.rails)
+
+    if rails_to_reverse[0] == rails_to_reverse[1]:
+        for i, rail in enumerate(rails):
+            before, after = cut(rail, rail.project(shgeo.Point(cut_points[i])))
+            path_lists[0].append(before)
+            path_lists[1].append(after)
+    else:
+        # rails have opposite direction
+        rail = rails[0]
+        before, after = cut(rail, rail.project(shgeo.Point(cut_points[0])))
+        path_lists[0].append(before)
+        path_lists[1].append(after)
+        rail = rails[1]
+        before, after = cut(rail, rail.project(shgeo.Point(cut_points[1])))
+        path_lists[1].append(before)
+        path_lists[0].append(after)
+
+    if rails_to_reverse[0]:
+        path_lists = (path_lists[1], path_lists[0])
+
+    return path_lists

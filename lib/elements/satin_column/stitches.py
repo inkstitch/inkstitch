@@ -1,10 +1,13 @@
 import itertools
+from typing import TYPE_CHECKING
 
-from elements import SatinColumn
-from elements.satin_column.rails import plot_points_on_rails
-from stitch_plan import StitchGroup
-from utils import prng
-from utils.threading import check_stop_flag
+from .rails import plot_points_on_rails
+from ...stitch_plan import StitchGroup
+from ...utils import prng
+from ...utils.threading import check_stop_flag
+
+if TYPE_CHECKING:
+    from .satin_column import SatinColumn
 
 
 def _do_e_stitch(satin: 'SatinColumn'):
@@ -166,6 +169,7 @@ def _do_zigzag(satin: 'SatinColumn'):
 
     return stitch_group
 
+
 def _do_satin(satin: 'SatinColumn'):
     # satin: do a zigzag pattern, alternating between the paths.  The
     # zigzag looks like this to make the satin stitches look perpendicular
@@ -221,6 +225,7 @@ def _do_satin(satin: 'SatinColumn'):
         stitch_group.stitches = list(reversed(stitch_group.stitches))
 
     return stitch_group
+
 
 def do_top_layer_stitch_group(satin: 'SatinColumn'):
     if satin.satin_method == 'e_stitch':

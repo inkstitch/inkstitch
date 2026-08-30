@@ -1,7 +1,11 @@
+from typing import TYPE_CHECKING
+
 import numpy as np
 
-from .satin_column import SatinColumn
 from ...utils import prng, Point, offset_points
+
+if TYPE_CHECKING:
+    from .satin_column import SatinColumn
 
 
 class SatinProcessor:
