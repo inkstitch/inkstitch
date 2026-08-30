@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-info_year=$( date "+%Y" )
+info_year=$(date "+%Y")
 ARCH="$(uname -m)"
 # PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
 pyinstaller_args+="--contents-directory . "
@@ -11,6 +11,9 @@ pyinstaller_args+="--log-level DEBUG "
 
 # Erroneous dependencies
 pyinstaller_args+="--exclude-module sphinx " # Pulled in by scipy docscrape if present.
+
+# Add inkstitch-fonts
+pyinstaller_args="--collect-data inkstitch-fonts "
 
 # Setting up pyinstaller arguments for each OS.
 # This adds bundle identifier in reverse DSN format for macos
@@ -31,24 +34,24 @@ elif [ "$BUILD" = "linux32" ]; then
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libnsl.so.1:. "
 elif [ "$BUILD" = "windows" ]; then
-	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
-		# setting the file and product version for release
-		# Code to remove the periods in the version number
-		ENT=.
-		SAL=${VERSION#v}$ENT
-		INFO_VERSION=()
-		while [[ $SAL ]]; do
-			INFO_VERSION+=( "${SAL%%"$ENT"*}" );
-			SAL=${SAL#*"$ENT"};
-		done;
-		sed -i'' 's/3, 2, 1,/'"${INFO_VERSION[0]}, ${INFO_VERSION[1]}, ${INFO_VERSION[2]},"'/' installer_scripts/file_version_info.txt
-	fi
-		# set year and version in version_info
-	sed -i'' 's/1.1.1/'"${VERSION#v}"'/' installer_scripts/file_version_info.txt
-	sed -i'' 's/1234/'"${info_year}"'/' installer_scripts/file_version_info.txt
-  	# sets icon to inkstitch.exe
-	pyinstaller_args+="-i images/inkstitch/win/inkstitch.ico "
-	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
+    if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+        # setting the file and product version for release
+        # Code to remove the periods in the version number
+        ENT=.
+        SAL=${VERSION#v}$ENT
+        INFO_VERSION=()
+        while [[ $SAL ]]; do
+            INFO_VERSION+=("${SAL%%"$ENT"*}")
+            SAL=${SAL#*"$ENT"}
+        done
+        sed -i'' 's/3, 2, 1,/'"${INFO_VERSION[0]}, ${INFO_VERSION[1]}, ${INFO_VERSION[2]},"'/' installer_scripts/file_version_info.txt
+    fi
+    # set year and version in version_info
+    sed -i'' 's/1.1.1/'"${VERSION#v}"'/' installer_scripts/file_version_info.txt
+    sed -i'' 's/1234/'"${info_year}"'/' installer_scripts/file_version_info.txt
+    # sets icon to inkstitch.exe
+    pyinstaller_args+="-i images/inkstitch/win/inkstitch.ico "
+    pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
 fi
 
 # Finally we build for windows and macOS with the finalized settings
@@ -59,8 +62,8 @@ fi
 ${PYTHON:-python} -m PyInstaller $pyinstaller_args inkstitch.py
 
 if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
-	# Delete some GTK icons that pyinstaller shouldn't have pulled in
-	rm -rf dist/inkstitch/bin/share/icons
+    # Delete some GTK icons that pyinstaller shouldn't have pulled in
+    rm -rf dist/inkstitch/bin/share/icons
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
