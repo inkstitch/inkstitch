@@ -27,7 +27,7 @@ from ..utils.stroke_to_satin import convert_path_to_satin, set_first_node
 from .validation_models import (NotStitchableError, ClosedPathWarning, DanglingRungWarning, NoRungWarning,
                                 TooManyIntersectionsWarning, StrokeSatinWarning, NarrowSatinWarning,
                                 TwoRungsWarning, UnequalPointsWarning)
-from .rails import get_rails_to_reverse, plot_points_on_rails, cut_rails
+from .rails import cut_rails, get_rails_to_reverse, plot_points_on_rails as _plot_points_on_rails
 from .stitches import do_top_layer_stitch_group
 
 ListOfPairs = list[tuple[Point, Point]]
@@ -516,8 +516,7 @@ class SatinColumn(EmbroideryElement):
     @property
     @cache
     def compensated_shape(self):
-        pairs = plot_points_on_rails(
-            self,
+        pairs = self.plot_points_on_rails(
             self.zigzag_spacing,
             self.pull_compensation_px,
             self.pull_compensation_percent/100,
@@ -601,7 +600,7 @@ class SatinColumn(EmbroideryElement):
         """The rails, as LineStrings."""
         paths = [set_precision(shgeo.LineString(rail), 0.00001) for rail in self.rails]
 
-        rails_to_reverse = get_rails_to_reverse(self.reverse_rails, self.rails)
+        rails_to_reverse = self._get_rails_to_reverse()
         if paths and rails_to_reverse is not None:
             for i, reverse in enumerate(rails_to_reverse):
                 if reverse:
@@ -649,7 +648,7 @@ class SatinColumn(EmbroideryElement):
         # check for unequal length of rails
         equal_length = len(rails[0]) == len(rails[1])
 
-        rails_to_reverse = get_rails_to_reverse(self.reverse_rails, self.rails)
+        rails_to_reverse = self._get_rails_to_reverse()
         for i, points in enumerate(rails):
 
             if rails_to_reverse[i]:
@@ -934,7 +933,7 @@ class SatinColumn(EmbroideryElement):
         """
 
         # like in do_satin()
-        points: list[Point] = list(chain.from_iterable(plot_points_on_rails(self, self.zigzag_spacing)))
+        points: list[Point] = list(chain.from_iterable(self.plot_points_on_rails(self.zigzag_spacing)))
 
         if isinstance(split_point, float):
             index_of_closest_stitch = int(round(len(points) * split_point))
@@ -991,7 +990,7 @@ class SatinColumn(EmbroideryElement):
 
     def _add_rung(self, path_list, position, normalized=False):
         rung_start = path_list[0].interpolate(position, normalized=normalized)
-        rails_to_reverse = get_rails_to_reverse(self.reverse_rails, self.rails)
+        rails_to_reverse = self._get_rails_to_reverse()
         if rails_to_reverse[0] == rails_to_reverse[1]:
             rung_end = path_list[1].interpolate(position, normalized=normalized)
         else:
@@ -1035,11 +1034,19 @@ class SatinColumn(EmbroideryElement):
                 filtered_rungs.append(list(rung.coords))
         return filtered_rungs
 
+    def _get_rails_to_reverse(self) -> tuple[bool, bool]:
+        return get_rails_to_reverse(self.reverse_rails, self.rails)
+
+    def plot_points_on_rails(self, spacing: float | int, offset_px: tuple[float, float] = (0, 0),
+                             offset_proportional: tuple[float, float] = (0, 0), use_random: bool = False,
+                             ) -> list[tuple[Point, Point]]:
+        return _plot_points_on_rails(self, spacing, offset_px, offset_proportional, use_random)
+
     @property
     @cache
     def center_line(self):
         # similar technique to do_center_walk()
-        center_walk = [p[0] for p in plot_points_on_rails(self, self.zigzag_spacing, (0, 0), (-0.5, -0.5))]
+        center_walk = [p[0] for p in self.plot_points_on_rails(self.zigzag_spacing, (0, 0), (-0.5, -0.5))]
         if len(center_walk) < 2:
             center_walk = [center_walk[0], center_walk[0]]
         return shgeo.LineString(center_walk)
@@ -1057,7 +1064,7 @@ class SatinColumn(EmbroideryElement):
             stitch_length = self.running_stitch_length
 
         # Do it like contour underlay, but inset all the way to the center.
-        pairs = plot_points_on_rails(self, self.running_stitch_tolerance, (0, 0), inset_prop)
+        pairs = self.plot_points_on_rails(self.running_stitch_tolerance, (0, 0), inset_prop)
 
         points = [points[0] for points in pairs]
         stitches = running_stitch.even_running_stitch(points, [stitch_length], self.running_stitch_tolerance)
@@ -1132,8 +1139,7 @@ class SatinColumn(EmbroideryElement):
         # other. if the two sides are far away, adding a running stitch to travel
         # in between avoids a long jump or a trim.
 
-        pairs = plot_points_on_rails(
-            self,
+        pairs = self.plot_points_on_rails(
             self.contour_underlay_stitch_tolerance,
             -self.contour_underlay_inset_px, -self.contour_underlay_inset_percent/100)
 
@@ -1256,10 +1262,10 @@ class SatinColumn(EmbroideryElement):
 
         stitch_groups = []
 
-        pairs = plot_points_on_rails(self,
-                                     self.zigzag_underlay_spacing / 2.0,
-                                     -self.zigzag_underlay_inset_px,
-                                     -self.zigzag_underlay_inset_percent/100)
+        pairs = self.plot_points_on_rails(
+            self.zigzag_underlay_spacing / 2.0,
+            -self.zigzag_underlay_inset_px,
+            -self.zigzag_underlay_inset_percent/100)
 
         if self.center_walk_is_odd():
             pairs = list(reversed(pairs))

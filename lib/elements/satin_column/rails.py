@@ -20,8 +20,8 @@ def get_rails_to_reverse(choice: str, rails: list[list[tuple[float, float]]]) ->
     elif choice == 'both':
         return True, True
     elif choice == 'automatic':
-        rails = [shgeo.LineString(rail) for rail in rails]
-        if len(rails) == 2:
+        rail_lines = [shgeo.LineString(rail) for rail in rails]
+        if len(rail_lines) == 2:
             # Sample ten points along the rails.  Compare the distance
             # between corresponding points on both rails with and without
             # one rail reversed.  If the average distance between points
@@ -32,9 +32,9 @@ def get_rails_to_reverse(choice: str, rails: list[list[tuple[float, float]]]) ->
 
             for i in range(10):
                 distance = i / 10
-                point0 = rails[0].interpolate(distance, normalized=True)
-                point1 = rails[1].interpolate(distance, normalized=True)
-                point1_reverse = rails[1].interpolate(1 - distance, normalized=True)
+                point0 = rail_lines[0].interpolate(distance, normalized=True)
+                point1 = rail_lines[1].interpolate(distance, normalized=True)
+                point1_reverse = rail_lines[1].interpolate(1 - distance, normalized=True)
 
                 lengths.append(point0.distance(point1))
                 lengths_reverse.append(point0.distance(point1_reverse))
