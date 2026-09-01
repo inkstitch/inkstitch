@@ -3,11 +3,12 @@ from secrets import randbelow
 
 import wx.propgrid
 
-from .protocol import LayerProtocol, with_protocol
-from ..stitch_layer_editor import Category, Property
 from ....i18n import _
+from ....stitch_plan.stitch import Stitch
 from ....svg import PIXELS_PER_MM
 from ....utils import get_resource_dir, prng
+from ..stitch_layer_editor import Category, Property
+from .protocol import LayerProtocol, with_protocol
 
 editor_instance = None
 
@@ -82,7 +83,7 @@ class RandomizationMixin(with_protocol(LayerProtocol)):
         else:
             return seed
 
-    def offset_stitches(self, stitches):
+    def apply_random_stitch_offset(self, stitches: list[Stitch]) -> None:
         """Randomly move stitches by modifying a list of stitches in-place."""
 
         if not stitches:
