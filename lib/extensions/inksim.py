@@ -156,7 +156,8 @@ class Inksim(InkstitchExtension):
         while inksim is visible.  The binary is resolved in this order:
 
         1. The ``INKSIM_EXE`` environment variable, if set.
-        2. The ``inksim`` executable found on ``PATH``.
+        2. The Windows ``inksim-gui`` executable, or ``inksim`` on other
+           platforms, found on ``PATH``.
 
         Setting ``INKSIM_EXE`` allows developers to point Ink/Stitch at a local
         inksim checkout without installing it globally.
@@ -165,11 +166,12 @@ class Inksim(InkstitchExtension):
         if ink_sim_env:
             command = shlex.split(ink_sim_env)
         else:
-            ink_sim = shutil.which("inksim")
+            launcher = "inksim-gui" if sys.platform == "win32" else "inksim"
+            ink_sim = shutil.which(launcher)
             if ink_sim is None:
                 inkex.errormsg(
-                    "inksim not found. Set the INKSIM_EXE environment variable "
-                    "or add inksim to PATH."
+                    f"{launcher} not found. Set the INKSIM_EXE environment variable "
+                    f"or add {launcher} to PATH."
                 )
                 sys.exit(1)
             command = [ink_sim]
