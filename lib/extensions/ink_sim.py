@@ -115,12 +115,19 @@ class InkSim(InkstitchExtension):
             json.dumps(command_payload),
         ]
         self._log(f"InkSim: forwarding to server with {' '.join(command)}")
+        kwargs = {}
+        if sys.platform == "win32":
+            # Avoid creating a console window on Windows when running the
+            # packaged inksim binary.
+            kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
+
         try:
             result = subprocess.run(
                 command,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 timeout=3,
+                **kwargs,
             )
         except (OSError, subprocess.TimeoutExpired) as ex:
             self._log(f"InkSim: server probe failed ({ex})")
@@ -174,8 +181,13 @@ class InkSim(InkstitchExtension):
         command.append(csv_path)
 
         self._log(f"InkSim: launching {' '.join(command)}")
+        kwargs = {"start_new_session": True}
+        if sys.platform == "win32":
+            # Avoid creating a console window on Windows when running the
+            # packaged inksim binary.
+            kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
         subprocess.Popen(command,
-                           stdout=subprocess.DEVNULL,
-                           stderr=subprocess.DEVNULL,
-                           start_new_session=True)
+                         stdout=subprocess.DEVNULL,
+                         stderr=subprocess.DEVNULL,
+                         **kwargs)
 
