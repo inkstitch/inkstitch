@@ -29,7 +29,7 @@ def _resolve_document_path():
     return str(Path.cwd())
 
 
-class InkSim(InkstitchExtension):
+class Inksim(InkstitchExtension):
     def __init__(self):
         InkstitchExtension.__init__(self)
         self.logger = logging.getLogger("inkstitch")
