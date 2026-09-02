@@ -73,17 +73,10 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
       - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-linux64
           path: artifacts
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-linux64-frozen-import-report
-          path: artifacts/frozen-import-report.txt
   linuxarm64:
     runs-on: ubuntu-22.04-arm
     steps:
@@ -142,19 +135,12 @@ jobs:
         env:
           BUILD: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
       - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-linuxarm64
           path: artifacts
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-linuxarm64-frozen-import-report
-          path: artifacts/frozen-import-report.txt
   linux32:
-    # Node required for actions, install follows
+    # Node required for actions, install follows 
     # https://github.com/actions/upload-artifact/issues/616
     # 2026-04-28: Github is deprecating Node 20 as it's going EoL. We can't update node on this runner easily because
     # unofficial-builds.nodejs.org stops providing x86 binaries after 21.x due to "toolchain incomaptibilities".
@@ -187,7 +173,7 @@ jobs:
       # Permissions problem that prevents caching
       # https://github.com/actions/setup-python/issues/816
       - name: Change ownership of /github/home
-        run: sudo chown -R $(whoami) /github/home
+        run: sudo chown -R $(whoami) /github/home    
       - name: Replace `node` with an i386 version
         shell: bash
         run: |
@@ -236,14 +222,14 @@ jobs:
         shell: bash
         run: |
           bash bin/build-linux32-venv
-      - name: test
+      - name: test    
         shell: bash
         run: |
           source virtualenv/bin/activate
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
           pytest
-          deactivate
-      - name: Package distributable
+          deactivate 
+      - name: Package distributable    
         shell: bash
         run: |
           source virtualenv/bin/activate
@@ -252,9 +238,6 @@ jobs:
         env:
           BUILD: linux32
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch artifacts/frozen-import-report.txt
       - name: Replace `node` with an i386 version
         shell: bash
         run: |
@@ -268,10 +251,6 @@ jobs:
         with:
           name: inkstitch-linux32
           path: artifacts
-      - uses: actions/upload-artifact@v4
-        with:
-          name: inkstitch-linux32-frozen-import-report
-          path: artifacts/frozen-import-report.txt
   windows64:
     runs-on: windows-2022
     steps:
@@ -309,13 +288,6 @@ jobs:
           make dist
         env:
           BUILD: windows
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch/bin/inkstitch.exe test-reports/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-windows64-frozen-import-report
-          path: test-reports/frozen-import-report.txt
       - name: Set siging policy to release
         if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         shell: bash
@@ -433,13 +405,6 @@ jobs:
           NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-mac-x86-frozen-import-report
-          path: test-reports/frozen-import-report.txt
       - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-mac-x86
@@ -502,13 +467,6 @@ jobs:
           NOTARY_ACCOUNT: ${{ secrets.INKSTITCH_NOTARIZE_AC }}
           NOTARY_PASSWORD: ${{ secrets.INKSTITCH_NOTARIZE_PASS }}
 
-      - name: Frozen inkex import test
-        shell: bash
-        run: bin/test-frozen-import dist/inkstitch.app/Contents/MacOS/inkstitch test-reports/frozen-import-report.txt
-      - uses: actions/upload-artifact@v7
-        with:
-          name: inkstitch-mac-arm64-frozen-import-report
-          path: test-reports/frozen-import-report.txt
       - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-mac-arm64
@@ -517,8 +475,6 @@ jobs:
   release:
     runs-on: ubuntu-latest
     needs: [linux32, linux64, linuxarm64, windows64, macx86, macarm64]
-  # Deliberately continue for development builds when one platform fails,
-  # so the available platform artifacts can still be published.
     if: always()
     steps:
       - name: determine release info

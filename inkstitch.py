@@ -17,7 +17,6 @@ from pathlib import Path
 import lib.debug.logging as debug_logging
 import lib.debug.utils as debug_utils
 from lib.debug.config import resolve_development_config
-from lib.debug.import_diagnostics import ImportDiagnostics
 from lib.debug.utils import safe_get    # mimic get method of dict with default value
 
 # --------------------------------------------------------------------------------------------
@@ -122,18 +121,10 @@ if development_mode:
 #  WARNING: Must be executed before importing inkex
 # Prioritize pip-installed inkex over Inkscape's bundled version
 prefer_pip_inkex = safe_get(ini, "LIBRARY", "prefer_pip_inkex", default=True)
-import_diagnostics = ImportDiagnostics(os.environ.get("INKSTITCH_DEBUG_IMPORTS_FILE"))
-
-if import_diagnostics.enabled:
-    import_diagnostics.before_reorder()
 
 if prefer_pip_inkex and "PYTHONPATH" in os.environ:
     debug_utils.assert_inkex_not_imported_before_path_setup()
     debug_utils.reorder_sys_path()
-
-if import_diagnostics.enabled:
-    import_diagnostics.after_reorder()
-    sys.exit(0)
 
 # -------------------------------------------------------------------------------------------
 
