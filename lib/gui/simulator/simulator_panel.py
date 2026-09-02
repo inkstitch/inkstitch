@@ -6,7 +6,7 @@ import wx
 from typing import Callable, Optional
 
 from . import ControlPanel, DrawingPanel, ViewPanel
-from .simulator_renderer import PreviewRenderer
+from .simulator_renderer import PreviewRenderer, RenderFunction
 from ...stitch_plan import StitchPlan
 
 
@@ -16,7 +16,7 @@ class SimulatorPanel(wx.Panel):
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
-        self.preview_renderer = PreviewRenderer(self._call_render, self.on_stitch_plan_rendered)
+        self.preview_renderer: PreviewRenderer | None = None
 
         self.cp = ControlPanel(
             self,
@@ -84,40 +84,35 @@ class SimulatorPanel(wx.Panel):
         self.accel_table = wx.AcceleratorTable(self.accel_entries)
         self.SetAcceleratorTable(self.accel_table)
 
-        self.render_fn: Optional[Callable[[], Optional[StitchPlan]]] = None
-
-    def go(self):
+    def go(self) -> None:
         self.dp.go()
 
-    def stop(self):
+    def stop(self) -> None:
         self.dp.stop()
 
-    def load(self, stitch_plan):
+    def load(self, stitch_plan: StitchPlan) -> None:
         self.dp.load(stitch_plan)
         self.cp.load(stitch_plan)
 
-    def clear(self):
+    def clear(self) -> None:
         self.dp.clear()
         self.cp.clear()
 
-    def set_page_specs(self, page_specs):
+    def set_page_specs(self, page_specs: dict) -> None:
         self.dp.set_page_specs(page_specs)
 
-    def set_render_fn(self, render_fn: Callable[[], Optional[StitchPlan]]) -> None:
-        self.render_fn = render_fn
+    def set_render_fn(self, render_fn: RenderFunction) -> None:
+        self.preview_renderer = PreviewRenderer(
+            render_stitch_plan=render_fn, 
+            rendering_completed=self.on_stitch_plan_rendered
+        )
 
     def render(self) -> None:
-        if self.render_fn is None:
+        if self.preview_renderer is None:
             return
 
         self.dp.set_loading(True)
         self.preview_renderer.update()
-
-    def _call_render(self) -> Optional[StitchPlan]:
-        if self.render_fn is None:
-            return None
-
-        return self.render_fn()
 
     def on_stitch_plan_rendered(self, stitch_plan: Optional[StitchPlan]) -> None:
         try:

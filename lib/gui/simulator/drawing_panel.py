@@ -26,7 +26,7 @@ COLOR_CHANGE = 4
 
 class LoadingIndicator:
     """ Loading indicator that looks kind of like the one used in Half-Life 2 """
-    RENDERING = _("Rendering...")
+    RENDERING = _("Stitching...")
     PADDING = 10  # Padding around the text in px
     CORNER_RADIUS = 10  # px
 
@@ -48,8 +48,8 @@ class LoadingIndicator:
         canvas.SetPen(wx.TRANSPARENT_PEN)  # type:ignore[attr-defined]
         canvas.SetBrush(self.bg_brush)
         canvas.DrawRoundedRectangle(
-            (panel_width-w)/2-self.PADDING,
-            (panel_height-h)/2-self.PADDING,
+            ((panel_width-w)/2)-self.PADDING,
+            ((panel_height-h)/2)-self.PADDING,
             w+2*self.PADDING,
             h+2*self.PADDING,
             self.CORNER_RADIUS

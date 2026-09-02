@@ -9,23 +9,24 @@ import wx
 from ...debug.debug import debug
 from ...utils.threading import ExitThread
 from ...stitch_plan import StitchPlan
-from typing import Callable
+from typing import Callable, Optional
 
+RenderFunction = Callable[[], Optional[StitchPlan]]
 
 class PreviewRenderer(Thread):
     """Render stitch plan in a background thread."""
 
     def __init__(
             self,
-            render_stitch_plan_hook: Callable[[], StitchPlan | None],
-            rendering_completed_hook: Callable[[StitchPlan | None], None]
+            render_stitch_plan: RenderFunction,
+            rendering_completed: Callable[[StitchPlan | None], None]
             ) -> None:
         super(PreviewRenderer, self).__init__()
         self.daemon = True
         self.refresh_needed = Event()
 
-        self.render_stitch_plan_hook = render_stitch_plan_hook
-        self.rendering_completed_hook = rendering_completed_hook
+        self.render_stitch_plan = render_stitch_plan
+        self.rendering_completed = rendering_completed
 
         # This is read by utils.threading.check_stop_flag() to abort stitch plan
         # generation.
@@ -34,8 +35,8 @@ class PreviewRenderer(Thread):
     def update(self) -> None:
         """Request to render a new stitch plan.
 
-        self.render_stitch_plan_hook() will be called in a background thread, and then
-        self.rendering_completed_hook() will be called with the resulting stitch plan.
+        self.render_stitch_plan() will be called in a background thread, and then
+        self.rendering_completed() will be called with the resulting stitch plan.
         """
 
         if not self.is_alive():
@@ -53,9 +54,9 @@ class PreviewRenderer(Thread):
             try:
                 debug.log("update_patches")
 
-                stitch_plan = self.render_stitch_plan_hook()
+                stitch_plan = self.render_stitch_plan()
                 # rendering_completed() will be called in the main thread.
-                wx.CallAfter(self.rendering_completed_hook, stitch_plan)
+                wx.CallAfter(self.rendering_completed, stitch_plan)
 
             except ExitThread:
                 debug.log("ExitThread caught")
