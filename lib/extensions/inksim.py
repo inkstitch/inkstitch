@@ -116,9 +116,6 @@ class Inksim(InkstitchExtension):
         ]
         self._log(f"InkSim: forwarding to server with {' '.join(command)}")
         kwargs = {}
-        probe_log = str(Path(csv_path).with_suffix(".inksim-probe.log"))
-        environment = os.environ.copy()
-        environment["INKSIM_LOG"] = probe_log
         if sys.platform == "win32":
             # Avoid creating a console window on Windows when running the
             # packaged inksim binary.
@@ -130,18 +127,17 @@ class Inksim(InkstitchExtension):
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 timeout=3,
-                env=environment,
                 **kwargs,
             )
         except (OSError, subprocess.TimeoutExpired) as ex:
-            self._log(f"InkSim: server probe failed ({ex}); log: {probe_log}")
+            self._log(f"InkSim: server probe failed ({ex})")
             return False
 
         stdout = result.stdout.decode("utf-8", errors="replace").strip()
         stderr = result.stderr.decode("utf-8", errors="replace").strip()
         self._log(
             f"InkSim: server probe exited {result.returncode}; "
-            f"stdout={stdout!r}; stderr={stderr!r}; log: {probe_log}"
+            f"stdout={stdout!r}; stderr={stderr!r}"
         )
 
         if result.returncode != 0:
@@ -192,10 +188,7 @@ class Inksim(InkstitchExtension):
         command += ["--document-path", _resolve_document_path()]
         command.append(csv_path)
 
-        server_log = str(Path(csv_path).with_suffix(".inksim-server.log"))
-        command += ["--log", server_log]
-
-        self._log(f"InkSim: launching {' '.join(command)}; log: {server_log}")
+        self._log(f"InkSim: launching {' '.join(command)}")
         kwargs = {"start_new_session": True}
         if sys.platform == "win32":
             # Avoid creating a console window on Windows when running the
