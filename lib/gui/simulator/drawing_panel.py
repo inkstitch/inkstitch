@@ -35,6 +35,13 @@ class DrawingPanel(wx.Panel):
     # corresponding amount during rendering.
     PIXEL_DENSITY = 10
 
+    # Render beyond the visible area so that panning can reuse the cached
+    # image until the viewport approaches its edge.
+    RENDER_CACHE_PADDING = 200
+
+    # Render circles once their shape is visible instead of using fast squares.
+    CIRCLE_MARKER_MIN_SCREEN_SIZE = 4
+
     def __init__(self, parent, *args, **kwargs):
         """"""
         self.parent = parent
@@ -50,6 +57,7 @@ class DrawingPanel(wx.Panel):
         # to allow the status bar and control panel to get squished.
         self.SetMinSize((300, 300))
         self.SetBackgroundColour('#FFFFFF')
+        self.SetBackgroundStyle(wx.BG_STYLE_PAINT)
         self.SetDoubleBuffered(True)
 
         self.animating = False
@@ -65,6 +73,13 @@ class DrawingPanel(wx.Panel):
         self.page_specs = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
+        self.stitch_render_cache = None
+        self.render_cache_pan = None
+        self.render_cache_zoom = None
+        self.render_cache_state = None
+        self.render_cache_size = None
+        self.render_cache_padding = None
+        self.render_cache_rebuild_timer = None
 
         # Set initial values as they may be accessed before a stitch plan is available
         # for example through a focus action on the stitch box
@@ -75,10 +90,9 @@ class DrawingPanel(wx.Panel):
         self.speed = global_settings['simulator_speed']
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
-        self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
+        self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
-        self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_TIMER, self.animate)
 
         # wait for layouts so that panel size is set
@@ -86,8 +100,10 @@ class DrawingPanel(wx.Panel):
             wx.CallLater(50, self.load, self.stitch_plan)
 
     def on_resize(self, event):
-        self.choose_zoom_and_pan()
+        self.choose_zoom_and_pan(event)
+        self.invalidate_stitch_render_cache()
         self.Refresh()
+        event.Skip()
 
     def clamp_current_stitch(self):
         if self.current_stitch < 1:
@@ -133,16 +149,134 @@ class DrawingPanel(wx.Panel):
         self.set_current_stitch(self.current_stitch + self.direction * stitch_increment)
 
     def OnPaint(self, e):
-        dc = wx.PaintDC(self)
+        dc = wx.AutoBufferedPaintDC(self)
+        dc.SetBackground(wx.Brush(self.GetBackgroundColour()))
+        dc.Clear()
 
         if not self.loaded:
-            dc.Clear()
             return
 
-        canvas = wx.GraphicsContext.Create(dc)
+        if self.stitch_render_cache is None or self.render_cache_state != self.get_stitch_render_cache_state():
+            self.invalidate_stitch_render_cache()
+            self.rebuild_stitch_render_cache()
 
-        self.draw_stitches(canvas)
+        if self.stitch_render_cache is None:
+            return
+
+        cache_offset, cache_scale = self.get_stitch_render_cache_transform()
+        cache_width, cache_height = self.render_cache_size
+        cache_offset = tuple(map(int, cache_offset))
+        canvas = wx.GraphicsContext.Create(dc)
+        canvas.DrawBitmap(
+            self.stitch_render_cache,
+            *cache_offset,
+            int(cache_width * cache_scale),
+            int(cache_height * cache_scale)
+        )
+
         self.draw_scale(canvas)
+
+    def invalidate_stitch_render_cache(self):
+        if self.render_cache_rebuild_timer is not None:
+            self.render_cache_rebuild_timer.Stop()
+            self.render_cache_rebuild_timer = None
+        self.stitch_render_cache = None
+        self.render_cache_pan = None
+        self.render_cache_zoom = None
+        self.render_cache_state = None
+        self.render_cache_size = None
+        self.render_cache_padding = None
+
+    def schedule_stitch_render_cache_rebuild(self):
+        if self.render_cache_rebuild_timer is not None:
+            self.render_cache_rebuild_timer.Stop()
+        self.render_cache_rebuild_timer = wx.CallLater(150, self.rebuild_stitch_render_cache_after_motion)
+
+    def rebuild_stitch_render_cache_after_motion(self):
+        self.render_cache_rebuild_timer = None
+        self.invalidate_stitch_render_cache()
+        self.rebuild_stitch_render_cache()
+        self.Refresh()
+
+    def rebuild_stitch_render_cache(self):
+        width, height = self.GetClientSize()
+        if width < 1 or height < 1:
+            return
+
+        content_scale_factor = self.GetContentScaleFactor()
+        padding = (self.RENDER_CACHE_PADDING, self.RENDER_CACHE_PADDING)
+        cache_size = (width + 2 * padding[0], height + 2 * padding[1])
+        bitmap_size = tuple(map(int, (cache_size[0] * content_scale_factor, cache_size[1] * content_scale_factor)))
+
+        # Build into a local bitmap first so the old cached image stays on
+        # screen until the new one is ready, avoiding a blank flash.
+        stitch_render_cache = wx.Bitmap(*bitmap_size)
+        memory_dc = wx.MemoryDC(stitch_render_cache)
+        memory_dc.SetBackground(wx.Brush(self.GetBackgroundColour()))
+        memory_dc.Clear()
+        canvas = wx.GraphicsContext.Create(memory_dc)
+        transform = canvas.GetTransform()
+        transform.Scale(content_scale_factor, content_scale_factor)
+        transform.Translate(*padding)
+        canvas.SetTransform(transform)
+        self.draw_stitches(canvas)
+        del canvas
+        del memory_dc
+        self.stitch_render_cache = stitch_render_cache
+        self.render_cache_pan = self.pan
+        self.render_cache_zoom = self.zoom
+        self.render_cache_state = self.get_stitch_render_cache_state()
+        self.render_cache_size = cache_size
+        self.render_cache_padding = padding
+
+    def get_stitch_render_cache_transform(self):
+        cache_scale = self.zoom / self.render_cache_zoom
+        cache_offset = (
+            self.pan[0] - cache_scale * (self.render_cache_pan[0] + self.render_cache_padding[0]),
+            self.pan[1] - cache_scale * (self.render_cache_pan[1] + self.render_cache_padding[1])
+        )
+        return cache_offset, cache_scale
+
+    def _viewport_inside_cache(self):
+        if self.stitch_render_cache is None or self.render_cache_size is None:
+            return False
+        width, height = self.GetClientSize()
+        cache_offset, cache_scale = self.get_stitch_render_cache_transform()
+        cache_width = self.render_cache_size[0] * cache_scale
+        cache_height = self.render_cache_size[1] * cache_scale
+        return (
+            cache_offset[0] <= 0 and
+            cache_offset[1] <= 0 and
+            cache_offset[0] + cache_width >= width and
+            cache_offset[1] + cache_height >= height
+        )
+
+    def _update_cache_after_navigation(self, event):
+        # Ctrl+mouse uses the fast bitmap-only mode (existing behaviour):
+        # cache is only rebuilt after motion stops.  Without Ctrl the cache
+        # is rebuilt immediately as soon as the viewport would reach the edge
+        # of the cached image, preventing cut-off edges.
+        if event.ControlDown():
+            self.schedule_stitch_render_cache_rebuild()
+        elif not self._viewport_inside_cache():
+            self.invalidate_stitch_render_cache()
+            self.rebuild_stitch_render_cache()
+        else:
+            self.schedule_stitch_render_cache_rebuild()
+        self.Refresh()
+
+    def get_stitch_render_cache_state(self):
+        return (
+            int(self.current_stitch),
+            self.view_panel.btnNpp.GetValue(),
+            self.view_panel.btnJump.GetValue(),
+            self.view_panel.btnCursor.GetValue(),
+            global_settings['simulator_npp_size'],
+            global_settings['simulator_crosshair_radius'],
+            global_settings['simulator_crosshair_thickness'],
+            global_settings['simulator_crosshair_colour'],
+            self.GetContentScaleFactor()
+        )
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -210,7 +344,8 @@ class DrawingPanel(wx.Panel):
         x, y = transform.TransformPoint(float(x), float(y))
         canvas.SetTransform(canvas.CreateMatrix())
         crosshair_radius = global_settings['simulator_crosshair_radius']
-        crosshair_pen = wx.Pen(wx.Colour(global_settings['simulator_crosshair_colour']), width=global_settings['simulator_crosshair_thickness'])
+        crosshair_width = round(global_settings['simulator_crosshair_thickness'] * self.GetContentScaleFactor())
+        crosshair_pen = wx.Pen(wx.Colour(global_settings['simulator_crosshair_colour']), width=crosshair_width)
         canvas.SetPen(crosshair_pen)
         canvas.StrokeLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
         canvas.StrokeLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
@@ -279,14 +414,30 @@ class DrawingPanel(wx.Panel):
             npp_size = global_settings['simulator_npp_size'] * PIXELS_PER_MM * self.PIXEL_DENSITY
             npp_brush = canvas.CreateBrush(wx.Brush(pen.GetColour()))
             canvas.SetBrush(npp_brush)
-            for stitch in stitches:
-                canvas.DrawEllipse(stitch[0]-(npp_size / 2), stitch[1]-(npp_size / 2), npp_size, npp_size)
+            # Drawing thousands of ellipses is expensive. Use fast squares by
+            # default and only switch to circles when heavily zoomed in.
+            canvas.SetPen(wx.TRANSPARENT_PEN)
+            square_size = max(1.0, float(npp_size))
+            half_size = square_size / 2.0
+            marker_screen_size = square_size * self.zoom / self.PIXEL_DENSITY
+
+            if stitches:
+                # Use winding fill so overlapping markers remain filled.
+                path = canvas.CreatePath()
+                for x, y in stitches:
+                    if marker_screen_size >= self.CIRCLE_MARKER_MIN_SCREEN_SIZE:
+                        path.AddEllipse(x - half_size, y - half_size, square_size, square_size)
+                    else:
+                        path.AddRectangle(x - half_size, y - half_size, square_size, square_size)
+                canvas.FillPath(path, fillStyle=wx.WINDING_RULE)
 
     def clear(self):
         self.loaded = False
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def load(self, stitch_plan):
+        self.invalidate_stitch_render_cache()
         self.current_stitch = 1
         self.direction = 1
         self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
@@ -317,10 +468,14 @@ class DrawingPanel(wx.Panel):
     def set_page_specs(self, page_specs):
         self.SetBackgroundColour(page_specs['desk_color'])
         self.page_specs = page_specs
+        self.invalidate_stitch_render_cache()
+        self.Refresh()
 
     def set_background_color(self, color):
         self.background_color = color
         self._update_background_color()
+        self.invalidate_stitch_render_cache()
+        self.Refresh()
 
     def _update_background_color(self):
         if not self.page_specs:
@@ -334,6 +489,8 @@ class DrawingPanel(wx.Panel):
     def set_show_page(self, show_page):
         self.show_page = show_page
         self._update_background_color()
+        self.invalidate_stitch_render_cache()
+        self.Refresh()
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
@@ -355,6 +512,13 @@ class DrawingPanel(wx.Panel):
         self.animating = False
         self.timer.Stop()
         self.control_panel.on_stop()
+
+    def show_all_stitches(self, event=None):
+        if not self.loaded:
+            return
+
+        self.stop()
+        self.set_current_stitch(self.num_stitches)
 
     def go(self):
         if not self.loaded:
@@ -379,6 +543,8 @@ class DrawingPanel(wx.Panel):
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
         for pen in self.pens:
             pen.SetWidth(int(line_width))
+        self.invalidate_stitch_render_cache()
+        self.Refresh()
 
     def parse_stitch_plan(self, stitch_plan):
         self.pens = []
@@ -451,6 +617,7 @@ class DrawingPanel(wx.Panel):
         statusbar = self.GetTopLevelParent().statusbar
         statusbar.SetStatusText(_("Command: %s") % COMMAND_NAMES[command], 2)
         self.stop_if_at_end()
+        self.invalidate_stitch_render_cache()
         self.Refresh()
 
     def restart(self):
@@ -472,6 +639,8 @@ class DrawingPanel(wx.Panel):
             self.CaptureMouse()
             self.drag_start = event.GetPosition()
             self.drag_original_pan = self.pan
+            if self.stitch_render_cache is None:
+                self.rebuild_stitch_render_cache()
             self.Bind(wx.EVT_MOTION, self.on_drag)
             self.Bind(wx.EVT_MOUSE_CAPTURE_LOST, self.on_drag_end)
             self.Bind(wx.EVT_LEFT_UP, self.on_drag_end)
@@ -481,11 +650,14 @@ class DrawingPanel(wx.Panel):
             delta = event.GetPosition()
             offset = (delta[0] - self.drag_start[0], delta[1] - self.drag_start[1])
             self.pan = (self.drag_original_pan[0] + offset[0], self.drag_original_pan[1] + offset[1])
-            self.Refresh()
+            self._update_cache_after_navigation(event)
 
     def on_drag_end(self, event):
         if self.HasCapture():
             self.ReleaseMouse()
+
+        self.invalidate_stitch_render_cache()
+        self.Refresh()
 
         self.Unbind(wx.EVT_MOTION)
         self.Unbind(wx.EVT_MOUSE_CAPTURE_LOST)
@@ -530,4 +702,4 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
-        self.Refresh()
+        self._update_cache_after_navigation(event)

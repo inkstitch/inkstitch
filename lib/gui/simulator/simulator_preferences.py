@@ -6,12 +6,21 @@
 import wx
 
 from ...i18n import _
-from ...utils.settings import global_settings
+from ...utils.settings import DEFAULT_SETTINGS, global_settings
 
 
 class SimulatorPreferenceDialog(wx.Dialog):
     """A dialog to set simulator preferences
     """
+
+    SETTINGS_KEYS = (
+        'simulator_adaptive_speed',
+        'simulator_line_width',
+        'simulator_npp_size',
+        'simulator_crosshair_radius',
+        'simulator_crosshair_thickness',
+        'simulator_crosshair_colour'
+    )
 
     def __init__(self, *args, **kwargs):
         super(SimulatorPreferenceDialog, self).__init__(*args, **kwargs)
@@ -20,6 +29,8 @@ class SimulatorPreferenceDialog(wx.Dialog):
         self.view_panel = self.GetParent()
         self.drawing_panel = self.view_panel.drawing_panel
         self.control_panel = self.view_panel.control_panel
+        self.initial_settings = {key: global_settings[key] for key in self.SETTINGS_KEYS}
+        self.applied = False
 
         self.adaptive_speed_value = global_settings['simulator_adaptive_speed']
         self.line_width_value = global_settings['simulator_line_width']
@@ -72,9 +83,12 @@ class SimulatorPreferenceDialog(wx.Dialog):
         button_sizer = wx.BoxSizer(wx.HORIZONTAL)
         btn_cancel = wx.Button(self, id=wx.ID_CANCEL, label=_('Cancel'))
         btn_cancel.Bind(wx.EVT_BUTTON, self.on_cancel)
+        btn_defaults = wx.Button(self, label=_('Restore defaults'))
+        btn_defaults.Bind(wx.EVT_BUTTON, self.on_restore_defaults)
         btn_apply = wx.Button(self, id=wx.ID_OK, label=_('Apply'))
         btn_apply.Bind(wx.EVT_BUTTON, self.on_apply)
         button_sizer.Add(btn_cancel, 0, wx.RIGHT, 10)
+        button_sizer.Add(btn_defaults, 0, wx.RIGHT, 10)
         button_sizer.Add(btn_apply, 0, wx.RIGHT, 10)
 
         sizer.Add(settings_sizer, 1, wx.ALL, 10)
@@ -98,16 +112,43 @@ class SimulatorPreferenceDialog(wx.Dialog):
         self.control_panel.Refresh()
 
     def save_settings(self):
+        global_settings['simulator_adaptive_speed'] = self.adaptive_speed.GetValue()
         global_settings['simulator_line_width'] = self.line_width.GetValue()
         global_settings['simulator_npp_size'] = self.npp_size.GetValue()
+        global_settings['simulator_crosshair_radius'] = self.crosshair_radius.GetValue()
+        global_settings['simulator_crosshair_thickness'] = self.crosshair_thickness.GetValue()
+        global_settings['simulator_crosshair_colour'] = self.crosshair_colour.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
+
+    def refresh_preview(self):
+        if self.drawing_panel.loaded:
+            self.drawing_panel.update_pen_size()
+        self.control_panel.choose_speed()
+        self.control_panel.Refresh()
+        self.drawing_panel.Refresh()
+
+    def restore_initial_settings(self):
+        if self.applied:
+            return
+
+        for key, value in self.initial_settings.items():
+            global_settings[key] = value
+        self.refresh_preview()
+
+    def on_restore_defaults(self, event):
+        self.adaptive_speed.SetValue(DEFAULT_SETTINGS['simulator_adaptive_speed'])
+        self.line_width.SetValue(DEFAULT_SETTINGS['simulator_line_width'])
+        self.npp_size.SetValue(DEFAULT_SETTINGS['simulator_npp_size'])
+        self.crosshair_radius.SetValue(DEFAULT_SETTINGS['simulator_crosshair_radius'])
+        self.crosshair_thickness.SetValue(DEFAULT_SETTINGS['simulator_crosshair_thickness'])
+        self.crosshair_colour.SetColour(wx.Colour(DEFAULT_SETTINGS['simulator_crosshair_colour']))
+        self.save_settings()
+        self.refresh_preview()
 
     def on_apply(self, event):
         self.save_settings()
+        self.applied = True
         self.Close()
 
     def on_cancel(self, event):
-        self.save_settings()
-        if self.drawing_panel.loaded:
-            self.drawing_panel.update_pen_size()
-            self.drawing_panel.Refresh()
+        self.restore_initial_settings()
         self.Close()
