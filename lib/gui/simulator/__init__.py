@@ -10,6 +10,5 @@ from .control_panel import ControlPanel
 from .view_panel import ViewPanel
 from .drawing_panel import DrawingPanel
 from .simulator_panel import SimulatorPanel
-from .simulator_renderer import PreviewRenderer
 from .simulator_window import SimulatorWindow
 from .split_simulator_window import SplitSimulatorWindow

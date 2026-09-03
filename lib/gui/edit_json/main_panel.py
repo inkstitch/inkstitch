@@ -25,7 +25,7 @@ from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import SVG_GROUP_TAG, SVG_PATH_TAG
 from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
-from .. import PreviewRenderer, WarningPanel
+from .. import WarningPanel
 from . import HelpPanel, SettingsPanel
 
 LETTER_CASE = {0: '', 1: 'upper', 2: 'lower'}
@@ -60,7 +60,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         # preview
-        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
+        self.simulator.set_render_fn(self.render_stitch_plan)
 
         # warning
         self.warning_panel = WarningPanel(self)
@@ -484,7 +484,7 @@ class LetteringEditJsonPanel(wx.Panel):
         self.GetTopLevelParent().Close()
 
     def update_preview(self, event=None):
-        self.preview_renderer.update()
+        self.simulator.render()
 
     def update_lettering(self):
         del self.layer[:]
@@ -615,8 +615,3 @@ class LetteringEditJsonPanel(wx.Panel):
             wx.CallAfter(self._show_warning, str(exc))
         except Exception:
             wx.CallAfter(self._show_warning, format_uncaught_exception())
-
-    def on_stitch_plan_rendered(self, stitch_plan):
-        self.simulator.stop()
-        self.simulator.load(stitch_plan)
-        self.simulator.go()

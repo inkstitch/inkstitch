@@ -21,7 +21,7 @@ from ..elements import (Clone, EmbroideryElement, FillStitch, SatinColumn,
                         Stroke, nodes_to_elements)
 from ..elements.clone import is_clone
 from ..exceptions import InkstitchException, format_uncaught_exception
-from ..gui import PresetsPanel, PreviewRenderer, WarningPanel
+from ..gui import PresetsPanel, WarningPanel
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..stitch_plan import stitch_groups_to_stitch_plan
@@ -563,9 +563,9 @@ class SettingsPanel(wx.Panel):
         self.simulator = simulator
         self.parent = parent
 
-        super().__init__(self.parent, wx.ID_ANY)
+        self.simulator.set_render_fn(self.render_stitch_plan)
 
-        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
+        super().__init__(self.parent, wx.ID_ANY)
 
         self.notebook = wx.Notebook(self, wx.ID_ANY)
         self.tabs = self.tabs_factory(self.notebook)
@@ -593,8 +593,7 @@ class SettingsPanel(wx.Panel):
 
     def update_preview(self, tab=None):
         self.simulator.stop()
-        self.simulator.clear()
-        self.preview_renderer.update()
+        self.simulator.render()
 
     def render_stitch_plan(self):
 
@@ -634,15 +633,6 @@ class SettingsPanel(wx.Panel):
         if stroke_index:
             tabs.append(tabs.pop(stroke_index[0]))
         return tabs
-
-    def on_stitch_plan_rendered(self, stitch_plan):
-        try:
-            self.simulator.stop()
-            self.simulator.load(stitch_plan)
-            self.simulator.go()
-        except RuntimeError:
-            # this can happen when they close the window at a bad time
-            pass
 
     def _hide_warning(self):
         self.warning_panel.clear()

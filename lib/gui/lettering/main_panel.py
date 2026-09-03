@@ -20,7 +20,7 @@ from ...svg.tags import INKSTITCH_LETTERING
 from ...utils import DotDict, cache
 from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
-from .. import PresetsPanel, PreviewRenderer, info_dialog
+from .. import PresetsPanel, info_dialog
 from . import LetteringHelpPanel, LetteringOptionsPanel
 
 
@@ -38,7 +38,7 @@ class LetteringPanel(wx.Panel):
 
         outer_sizer = wx.BoxSizer(wx.VERTICAL)
 
-        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
+        self.simulator.set_render_fn(self.render_stitch_plan)
 
         # notebook
         self.notebook = wx.Notebook(self, wx.ID_ANY)
@@ -302,7 +302,7 @@ class LetteringPanel(wx.Panel):
         self.Layout()
 
     def update_preview(self, event=None):
-        self.preview_renderer.update()
+        self.simulator.render()
 
     def update_lettering(self, raise_error=False):
         # return if there is no font in the font list (possibly due to a font size filter)
@@ -371,11 +371,6 @@ class LetteringPanel(wx.Panel):
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
             pass
-
-    def on_stitch_plan_rendered(self, stitch_plan):
-        self.simulator.stop()
-        self.simulator.load(stitch_plan)
-        self.simulator.go()
 
     def get_preset_data(self):
         # called by self.presets_panel

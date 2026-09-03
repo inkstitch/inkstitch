@@ -7,6 +7,7 @@ import math
 
 import wx
 from numpy import split
+from typing import Optional, Tuple
 
 from ...debug.debug import debug
 from ...i18n import _
@@ -21,6 +22,39 @@ JUMP = 1
 TRIM = 2
 STOP = 3
 COLOR_CHANGE = 4
+
+
+class LoadingIndicator:
+    """ Loading indicator that looks kind of like the one used in Half-Life 2 """
+    RENDERING = _("Stitching...")
+    PADDING = 10  # Padding around the text in px
+    CORNER_RADIUS = 10  # px
+
+    def __init__(self) -> None:
+        self.font = wx.Font(30, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
+        self.bg_brush = wx.Brush(wx.Colour(0, 0, 0, alpha=100))
+        self.bounds: Optional[Tuple[float, float]] = None
+
+    def paint(self, canvas: wx.GraphicsContext) -> None:
+        panel_width, panel_height = canvas.GetSize()
+
+        canvas.SetFont(self.font, wx.WHITE)
+        if self.bounds is None:
+            t_w, t_h, t_d, t_el = canvas.GetFullTextExtent(self.RENDERING)
+            self.bounds = (t_w, t_h)
+
+        w, h = self.bounds
+        # TRANSPARENT_PEN is there, but it's not in the types for some reason.
+        canvas.SetPen(wx.TRANSPARENT_PEN)  # type:ignore[attr-defined]
+        canvas.SetBrush(self.bg_brush)
+        canvas.DrawRoundedRectangle(
+            ((panel_width-w)/2)-self.PADDING,
+            ((panel_height-h)/2)-self.PADDING,
+            w+2*self.PADDING,
+            h+2*self.PADDING,
+            self.CORNER_RADIUS
+        )
+        canvas.DrawText(self.RENDERING, (panel_width-w)/2, (panel_height-h)/2)
 
 
 class DrawingPanel(wx.Panel):
@@ -51,6 +85,9 @@ class DrawingPanel(wx.Panel):
         self.SetMinSize((300, 300))
         self.SetBackgroundColour('#FFFFFF')
         self.SetDoubleBuffered(True)
+
+        self.loading = False
+        self.loading_indicator = LoadingIndicator()
 
         self.animating = False
         self.timer = wx.Timer(self)
@@ -134,15 +171,16 @@ class DrawingPanel(wx.Panel):
 
     def OnPaint(self, e):
         dc = wx.PaintDC(self)
+        canvas = wx.GraphicsContext.Create(dc)
 
         if not self.loaded:
             dc.Clear()
-            return
+        else:
+            self.draw_stitches(canvas)
+            self.draw_scale(canvas)
 
-        canvas = wx.GraphicsContext.Create(dc)
-
-        self.draw_stitches(canvas)
-        self.draw_scale(canvas)
+        if self.loading:
+            self.loading_indicator.paint(canvas)
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -156,7 +194,7 @@ class DrawingPanel(wx.Panel):
                 canvas.SetPen(wx.TRANSPARENT_PEN)
                 canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(border_color.Red(), border_color.Green(), border_color.Blue(), alpha=65))))
                 canvas.DrawRoundedRectangle(
-                    (-self.page_specs['x'] + 4) * self.PIXEL_DENSITY, (-self.page_specs['y'] + 4) * self.PIXEL_DENSITY,
+                    4 * self.PIXEL_DENSITY, 4 * self.PIXEL_DENSITY,
                     self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY,
                     1 * self.PIXEL_DENSITY
                 )
@@ -168,7 +206,7 @@ class DrawingPanel(wx.Panel):
             canvas.SetBrush(wx.Brush(wx.Colour(self.background_color or self.page_specs['page_color'])))
 
             canvas.DrawRectangle(
-                -self.page_specs['x'] * self.PIXEL_DENSITY, -self.page_specs['y'] * self.PIXEL_DENSITY,
+                0.0, 0.0,
                 self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY
             )
 
@@ -287,11 +325,12 @@ class DrawingPanel(wx.Panel):
         self.Refresh()
 
     def load(self, stitch_plan):
+        self.stitch_plan = stitch_plan
         self.current_stitch = 1
         self.direction = 1
-        self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
-        self.width = self.maxx - self.minx
-        self.height = self.maxy - self.miny
+        minx, miny, maxx, maxy = stitch_plan.bounding_box
+        self.width = maxx - minx
+        self.height = maxy - miny
         self.dimensions_mm = stitch_plan.dimensions_mm
         self.num_stitches = stitch_plan.num_stitches
         self.num_trims = stitch_plan.num_trims
@@ -337,19 +376,22 @@ class DrawingPanel(wx.Panel):
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
-        if not self.width and not self.height and event is not None:
+        if self.stitch_plan is None:
             return
 
+        minx, miny, maxx, maxy = self.stitch_plan.bounding_box
+        width = maxx-minx
+        height = maxy-miny
         panel_width, panel_height = self.GetClientSize()
 
         # add some padding to make stitches at the edge more visible
-        width_ratio = panel_width / float(self.width + 10)
-        height_ratio = panel_height / float(self.height + 10)
+        width_ratio = panel_width / float(width + 10)
+        height_ratio = panel_height / float(height + 10)
         self.zoom = max(min(width_ratio, height_ratio), 0.01)
 
         # center the design
-        self.pan = ((panel_width - self.zoom * self.width) / 2.0,
-                    (panel_height - self.zoom * self.height) / 2.0)
+        self.pan = ((panel_width - self.zoom * (minx + maxx)) / 2.0,
+                    (panel_height - self.zoom * (miny + maxy)) / 2.0)
 
     def stop(self):
         self.animating = False
@@ -395,10 +437,9 @@ class DrawingPanel(wx.Panel):
             stitch_index = 0
 
             for stitch in color_block:
-                # trim any whitespace on the left and top and scale to the
-                # pixel density
-                stitch_block.append((self.PIXEL_DENSITY * (stitch.x - self.minx),
-                                     self.PIXEL_DENSITY * (stitch.y - self.miny)))
+                # scale to the pixel density
+                stitch_block.append((self.PIXEL_DENSITY * (stitch.x),
+                                     self.PIXEL_DENSITY * (stitch.y)))
 
                 if stitch.trim:
                     self.commands.append(TRIM)
@@ -530,4 +571,8 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
+        self.Refresh()
+
+    def set_loading(self, loading: bool) -> None:
+        self.loading = loading
         self.Refresh()
