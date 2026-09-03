@@ -208,8 +208,10 @@ class DrawingPanel(wx.Panel):
         cache_size = (width + 2 * padding[0], height + 2 * padding[1])
         bitmap_size = tuple(map(int, (cache_size[0] * content_scale_factor, cache_size[1] * content_scale_factor)))
 
-        self.stitch_render_cache = wx.Bitmap(*bitmap_size)
-        memory_dc = wx.MemoryDC(self.stitch_render_cache)
+        # Build into a local bitmap first so the old cached image stays on
+        # screen until the new one is ready, avoiding a blank flash.
+        stitch_render_cache = wx.Bitmap(*bitmap_size)
+        memory_dc = wx.MemoryDC(stitch_render_cache)
         memory_dc.SetBackground(wx.Brush(self.GetBackgroundColour()))
         memory_dc.Clear()
         canvas = wx.GraphicsContext.Create(memory_dc)
@@ -220,6 +222,7 @@ class DrawingPanel(wx.Panel):
         self.draw_stitches(canvas)
         del canvas
         del memory_dc
+        self.stitch_render_cache = stitch_render_cache
         self.render_cache_pan = self.pan
         self.render_cache_zoom = self.zoom
         self.render_cache_state = self.get_stitch_render_cache_state()
@@ -233,6 +236,34 @@ class DrawingPanel(wx.Panel):
             self.pan[1] - cache_scale * (self.render_cache_pan[1] + self.render_cache_padding[1])
         )
         return cache_offset, cache_scale
+
+    def _viewport_inside_cache(self):
+        if self.stitch_render_cache is None or self.render_cache_size is None:
+            return False
+        width, height = self.GetClientSize()
+        cache_offset, cache_scale = self.get_stitch_render_cache_transform()
+        cache_width = self.render_cache_size[0] * cache_scale
+        cache_height = self.render_cache_size[1] * cache_scale
+        return (
+            cache_offset[0] <= 0 and
+            cache_offset[1] <= 0 and
+            cache_offset[0] + cache_width >= width and
+            cache_offset[1] + cache_height >= height
+        )
+
+    def _update_cache_after_navigation(self, event):
+        # Ctrl+mouse uses the fast bitmap-only mode (existing behaviour):
+        # cache is only rebuilt after motion stops.  Without Ctrl the cache
+        # is rebuilt immediately as soon as the viewport would reach the edge
+        # of the cached image, preventing cut-off edges.
+        if event.ControlDown():
+            self.schedule_stitch_render_cache_rebuild()
+        elif not self._viewport_inside_cache():
+            self.invalidate_stitch_render_cache()
+            self.rebuild_stitch_render_cache()
+        else:
+            self.schedule_stitch_render_cache_rebuild()
+        self.Refresh()
 
     def get_stitch_render_cache_state(self):
         return (
@@ -619,8 +650,7 @@ class DrawingPanel(wx.Panel):
             delta = event.GetPosition()
             offset = (delta[0] - self.drag_start[0], delta[1] - self.drag_start[1])
             self.pan = (self.drag_original_pan[0] + offset[0], self.drag_original_pan[1] + offset[1])
-            self.schedule_stitch_render_cache_rebuild()
-            self.Refresh()
+            self._update_cache_after_navigation(event)
 
     def on_drag_end(self, event):
         if self.HasCapture():
@@ -672,5 +702,4 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
-        self.schedule_stitch_render_cache_rebuild()
-        self.Refresh()
+        self._update_cache_after_navigation(event)
