@@ -3,7 +3,7 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import wx
-from typing import Callable, Optional
+from typing import Optional
 
 from . import ControlPanel, DrawingPanel, ViewPanel
 from .simulator_renderer import PreviewRenderer, RenderFunction
@@ -103,7 +103,7 @@ class SimulatorPanel(wx.Panel):
 
     def set_render_fn(self, render_fn: RenderFunction) -> None:
         self.preview_renderer = PreviewRenderer(
-            render_stitch_plan=render_fn, 
+            render_stitch_plan=render_fn,
             rendering_completed=self.on_stitch_plan_rendered
         )
 

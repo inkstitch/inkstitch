@@ -13,6 +13,7 @@ from typing import Callable, Optional
 
 RenderFunction = Callable[[], Optional[StitchPlan]]
 
+
 class PreviewRenderer(Thread):
     """Render stitch plan in a background thread."""
 
