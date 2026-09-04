@@ -131,6 +131,7 @@ class Inksim(InkstitchExtension):
             "focus": True,
             "autoplay": True,
             "document_path": _resolve_document_path(),
+            "snap": "inkstitch",
         }
         command = base_command + [
             "--send-command",
@@ -205,6 +206,7 @@ class Inksim(InkstitchExtension):
             command = [ink_sim]
 
         command += ["--server", "--delete-input"]
+        command += ["--snap", "inkstitch"]
         if self._play:
             command.append("--play")
         command += ["--document-path", _resolve_document_path()]
