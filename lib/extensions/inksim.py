@@ -15,6 +15,7 @@ import time
 from pathlib import Path
 
 import inkex
+import wx
 
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
@@ -39,42 +40,63 @@ class Inksim(InkstitchExtension):
         if not self.get_elements():
             sys.exit(0)
 
+        # Show a lightweight progress dialog so the user sees something is
+        # happening while we build the stitch plan and launch inksim.
+        app = wx.App()
+        progress = wx.ProgressDialog(
+            "InkSim",
+            "Preparing embroidery data...",
+            maximum=100,
+            parent=None,
+            style=wx.PD_APP_MODAL | wx.PD_AUTO_HIDE | wx.PD_SMOOTH,
+        )
+        progress.CenterOnScreen()
+        progress.Pulse()
+
         start_time = time.time()
         self._log("InkSim: preparing embroidery data...")
 
-        metadata = self.get_inkstitch_metadata()
-        collapse_len = metadata['collapse_len_mm']
-        min_stitch_len = metadata['min_stitch_len_mm']
+        try:
+            metadata = self.get_inkstitch_metadata()
+            collapse_len = metadata['collapse_len_mm']
+            min_stitch_len = metadata['min_stitch_len_mm']
 
-        t0 = time.time()
-        stitch_groups = self.elements_to_stitch_groups(self.elements)
-        self._log(f"InkSim: built {len(stitch_groups)} stitch group(s) in {time.time() - t0:.2f}s")
+            progress.Update(10, "Building stitch groups...")
+            t0 = time.time()
+            stitch_groups = self.elements_to_stitch_groups(self.elements)
+            self._log(f"InkSim: built {len(stitch_groups)} stitch group(s) in {time.time() - t0:.2f}s")
 
-        t0 = time.time()
-        stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, disable_ties=False,
-                                                   min_stitch_len=min_stitch_len)
-        stitch_count = sum(len(block) for block in stitch_plan)
-        self._log(f"InkSim: generated stitch plan ({len(stitch_plan)} block(s), {stitch_count} stitch(es)) in {time.time() - t0:.2f}s")
+            progress.Update(40, "Generating stitch plan...")
+            t0 = time.time()
+            stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, disable_ties=False,
+                                                       min_stitch_len=min_stitch_len)
+            stitch_count = sum(len(block) for block in stitch_plan)
+            self._log(f"InkSim: generated stitch plan ({len(stitch_plan)} block(s), {stitch_count} stitch(es)) in {time.time() - t0:.2f}s")
 
-        # Skip palette matching: inksim only needs the raw RGB colors from the
-        # stitch plan.  This saves the time spent loading and scanning thread
-        # palettes (~1.5s on a typical design).
+            # Skip palette matching: inksim only needs the raw RGB colors from the
+            # stitch plan.  This saves the time spent loading and scanning thread
+            # palettes (~1.5s on a typical design).
 
-        with tempfile.NamedTemporaryFile(suffix=".csv", delete=False) as temp_file:
-            temp_file_name = temp_file.name
+            with tempfile.NamedTemporaryFile(suffix=".csv", delete=False) as temp_file:
+                temp_file_name = temp_file.name
 
-        t0 = time.time()
-        write_embroidery_file(temp_file_name, stitch_plan, self.document.getroot())
-        self._log(f"InkSim: wrote CSV in {time.time() - t0:.2f}s")
+            progress.Update(70, "Writing CSV file...")
+            t0 = time.time()
+            write_embroidery_file(temp_file_name, stitch_plan, self.document.getroot())
+            self._log(f"InkSim: wrote CSV in {time.time() - t0:.2f}s")
 
-        # Try to reuse a running inksim server; otherwise start a new one.
-        # In both cases the temp CSV is deleted by inksim after it has been
-        # loaded, so we do not leave temporary files behind.
-        server_running = self._send_to_server(temp_file_name)
-        if not server_running:
-            self._run_inksim(temp_file_name)
+            # Try to reuse a running inksim server; otherwise start a new one.
+            # In both cases the temp CSV is deleted by inksim after it has been
+            # loaded, so we do not leave temporary files behind.
+            progress.Update(90, "Starting InkSim simulator...")
+            server_running = self._send_to_server(temp_file_name)
+            if not server_running:
+                self._run_inksim(temp_file_name)
 
-        self._log(f"InkSim: total time {time.time() - start_time:.2f}s")
+            self._log(f"InkSim: total time {time.time() - start_time:.2f}s")
+        finally:
+            progress.Destroy()
+            app.Destroy()
 
         # Prevent inkex from writing the SVG back to stdout; we produced no
         # output that Inkscape should consume.
