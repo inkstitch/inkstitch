@@ -222,4 +222,3 @@ class Inksim(InkstitchExtension):
                          stdout=subprocess.DEVNULL,
                          stderr=subprocess.DEVNULL,
                          **kwargs)
-
