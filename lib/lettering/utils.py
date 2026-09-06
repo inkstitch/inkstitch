@@ -7,7 +7,7 @@ import os
 
 from ..lettering import Font
 from ..utils.settings import global_settings
-from .paths import get_font_paths
+from .paths import get_custom_font_dir, get_font_paths
 
 # Hard cap on the font search depth, to prevent runaway recursion into
 # arbitrary directory trees.  The user-configurable value is clamped to this.
@@ -87,24 +87,31 @@ def get_fonts_by_id(font_id, show_font_path_warning=True):
     Matches the exact id (or marked_custom_font_id) first.  If none match,
     falls back to matching the directory basename, so that a font moved into
     a subdirectory is still found by the id stored in older SVG documents.
-    """
-    exact = []
-    for font_dir, relative_id in _iter_all_font_dirs():
-        font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
-        if font and font_id in [font.id, font.marked_custom_font_id]:
-            exact.append(font)
-    if exact:
-        return exact
 
-    # Compare the basename of the stored id against the basename of each font
-    # directory.  This finds a font whether it was moved between subdirectories
-    # (e.g. "cat1/foo" -> "cat2/foo") or from a top-level directory.
+    The exact match compares the relative directory path (which is the font
+    id) without constructing a Font object, so a single lookup does not parse
+    every font's metadata.
+    """
+    custom_dir = get_custom_font_dir()
+
+    # Exact match on the relative path (== font.id).  A custom font's
+    # marked_custom_font_id is the relative path plus a trailing '*'.
+    for font_dir, relative_id in _iter_all_font_dirs():
+        is_custom = bool(custom_dir) and custom_dir in font_dir
+        if font_id == relative_id or (is_custom and font_id == relative_id + '*'):
+            font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
+            if font:
+                return [font]
+
+    # Fall back to the directory basename, so that a font moved into a
+    # subdirectory is still found by the id stored in older SVG documents.
     basename = os.path.basename(font_id.rstrip('*'))
     matches = []
     for font_dir, relative_id in _iter_all_font_dirs():
-        font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
-        if font and os.path.basename(font.path) == basename:
-            matches.append(font)
+        if os.path.basename(relative_id) == basename:
+            font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
+            if font:
+                matches.append(font)
     return matches
 
 
