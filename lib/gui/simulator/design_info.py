@@ -58,7 +58,7 @@ class DesignInfoDialog(wx.Dialog):
         self.update()
 
     def update(self):
-        if not self.drawing_panel.loaded:
+        if self.drawing_panel.stitch_plan is None:
             return
         self.dimensions.SetLabel("{:.2f} x {:.2f}".format(self.drawing_panel.dimensions_mm[0], self.drawing_panel.dimensions_mm[1]))
         self.num_stitches.SetLabel(f"{self.drawing_panel.num_stitches}")

@@ -415,6 +415,9 @@ class DrawingPanel(wx.Panel):
         return wx.Pen(list(map(int, color.visible_on_background(background_color).rgb)), int(line_width))
 
     def update_pen_size(self):
+        if self.stitch_plan is None:
+            return  # Pens are only valid after a stitch plan is loaded
+
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
         for pen in self.pens:
             pen.SetWidth(int(line_width))
