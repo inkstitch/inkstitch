@@ -41,7 +41,7 @@ def test_basic(call_after_called, call_after_mock):
         pass
 
     # Exercise
-    renderer = PreviewRenderer(render_plan, on_rendered)
+    renderer = PreviewRenderer(render_stitch_plan=render_plan, rendering_completed=on_rendered)
     renderer.update()
 
     # Verify
@@ -65,7 +65,7 @@ def test_no_on_render_on_cancel(call_after_called, call_after_mock):
         pass
 
     # Exercise
-    renderer = PreviewRenderer(render_plan, on_rendered)
+    renderer = PreviewRenderer(render_stitch_plan=render_plan, rendering_completed=on_rendered)
 
     # Run an update, wait for entry
     renderer.update()
@@ -80,7 +80,7 @@ def test_no_on_render_on_cancel(call_after_called, call_after_mock):
     call_after_mock.assert_called_once_with(on_rendered, sentinel.rendered_plan)
 
 
-def test_exception_does_not_loop(call_after_called, call_after_mock):
+def test_exception_does_not_loop(call_after_mock):
     """ PreviewRenderer does not retry when the render function throws. """
     render_plan = MagicMock()
     render_plan.side_effect = RuntimeError("Oops")
@@ -89,7 +89,7 @@ def test_exception_does_not_loop(call_after_called, call_after_mock):
         pass
 
     # Exercise
-    renderer = PreviewRenderer(render_plan, on_rendered)
+    renderer = PreviewRenderer(render_stitch_plan=render_plan, rendering_completed=on_rendered)
     renderer.update()
 
     # Wait a moment. Not ideal but we can't otherwise prove a negative.

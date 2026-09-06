@@ -35,7 +35,6 @@ class Simulator(InkstitchExtension):
         simulator.panel.set_render_fn(self.render)
         simulator.panel.render()
         simulator.set_page_specs(self.get_page_specs())
-        simulator.go()
         app.MainLoop()
 
     def render(self) -> StitchPlan:
