@@ -4,7 +4,6 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import wx
 from wx.lib.scrolledpanel import ScrolledPanel
-from typing import TYPE_CHECKING
 
 from ...stitch_plan import StitchPlan
 from ...debug.debug import debug

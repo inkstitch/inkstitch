@@ -8,7 +8,6 @@ from typing import Optional
 from . import ControlPanel, DrawingPanel, ViewPanel
 from .simulator_renderer import PreviewRenderer, RenderFunction
 from ...stitch_plan import StitchPlan
-from ...i18n import _
 
 
 class SimulatorPanel(wx.Panel):
@@ -18,11 +17,6 @@ class SimulatorPanel(wx.Panel):
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
         self.preview_renderer: Optional[PreviewRenderer] = None
-
-        self.statusbar: Optional[wx.StatusBar] = None
-        tlp = self.GetTopLevelParent()
-        if isinstance(tlp, wx.Frame):  # This should probably always be true, but for type safety's sake...
-            self.statusbar = tlp.GetStatusBar()
 
         self.cp = ControlPanel(
             self,
@@ -99,21 +93,14 @@ class SimulatorPanel(wx.Panel):
         self.dp.stop()
 
     def load(self, stitch_plan: StitchPlan) -> None:
-        if self.statusbar:
-            status_text = _("Dimensions: {:.2f} x {:.2f}").format(
-                *stitch_plan.dimensions_mm,
-            )
-
-            self.statusbar.SetStatusText(status_text, 1)
-
-        self.dp.load(stitch_plan)
         self.cp.load(stitch_plan)
         self.vp.load(stitch_plan)
+        self.dp.load(stitch_plan)
 
     def clear(self) -> None:
-        self.dp.clear()
         self.cp.clear()
         self.vp.clear()
+        self.dp.clear()
 
     def set_page_specs(self, page_specs: dict) -> None:
         self.dp.set_page_specs(page_specs)
