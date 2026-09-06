@@ -13,7 +13,7 @@ import re
 
 from ...elements import iterate_nodes, nodes_to_elements
 from ...i18n import _
-from ...lettering import FontError, get_font_list
+from ...lettering import FontError, get_font_list, get_fonts_by_id
 from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import INKSTITCH_LETTERING
@@ -182,16 +182,44 @@ class LetteringPanel(wx.Panel):
     def set_initial_font(self, font_id):
         if font_id:
             if font_id not in self.fonts_by_id:
-                message = '''This text was created using the font "%s", but Ink/Stitch can't find that font.  ''' \
-                          '''A default font will be substituted.'''
-                info_dialog(self, _(message) % font_id)
-        try:
-            font = self.fonts_by_id[font_id].marked_custom_font_name
-        except KeyError:
-            font = self.default_font.marked_custom_font_name
-        self.options_panel.font_chooser.SetValue(font)
+                # The exact id is not in the (possibly filtered) list.  Look up
+                # all matching fonts to handle fonts that were moved into a
+                # subdirectory (id changed) or that collide on a basename.
+                candidates = get_fonts_by_id(font_id, False)
+                if len(candidates) > 1:
+                    font = self._choose_font(candidates)
+                elif len(candidates) == 1:
+                    font = candidates[0]
+                else:
+                    message = '''This text was created using the font "%s", but Ink/Stitch can't find that font.  ''' \
+                              '''A default font will be substituted.'''
+                    info_dialog(self, _(message) % font_id)
+                    font = self.default_font
+            else:
+                font = self.fonts_by_id[font_id]
+        else:
+            font = self.default_font
 
+        self.options_panel.font_chooser.SetValue(font.marked_custom_font_name)
         self.on_font_changed()
+
+    def _choose_font(self, candidates):
+        """Ask the user to pick among multiple fonts matching the stored id."""
+        # Show the id (relative path) alongside the name, so that fonts with
+        # the same display name can still be told apart.
+        names = [f"{font.marked_custom_font_name} ({font.marked_custom_font_id})" for font in candidates]
+        dlg = wx.SingleChoiceDialog(
+            self,
+            _("Multiple fonts match the one used in this text. Please choose one:"),
+            _("Choose font"),
+            names,
+        )
+        if dlg.ShowModal() == wx.ID_OK:
+            choice = dlg.GetSelection()
+            dlg.Destroy()
+            return candidates[choice]
+        dlg.Destroy()
+        return self.default_font
 
     @property
     def default_font(self):

@@ -35,13 +35,20 @@ def get_font_search_depth():
     return max(1, min(depth, MAX_FONT_SEARCH_DEPTH))
 
 
-def _iter_font_dirs(font_path, max_depth):
-    """Yield font directory paths under font_path, up to max_depth levels deep.
+def _iter_font_dirs(font_path, max_depth, root=None):
+    """Yield (font_dir, relative_id) under font_path, up to max_depth deep.
 
     A directory is a font directory if it contains font.json or font.json.xz.
     We do not descend into a font directory (a font cannot contain another
     font), which also prevents deep recursion.
+
+    relative_id is the font directory path relative to the font root, so that
+    fonts nested in subdirectories get a unique id (e.g. "category/foo")
+    instead of a bare basename that could collide with another font.
     """
+    if root is None:
+        root = font_path
+
     try:
         entries = sorted(os.listdir(font_path))
     except OSError:
@@ -54,9 +61,9 @@ def _iter_font_dirs(font_path, max_depth):
         if not os.path.isdir(path):
             continue
         if is_font_dir(path):
-            yield path
+            yield path, os.path.relpath(path, root)
         elif max_depth > 1:
-            yield from _iter_font_dirs(path, max_depth - 1)
+            yield from _iter_font_dirs(path, max_depth - 1, root)
 
 
 def _iter_all_font_dirs():
@@ -66,31 +73,57 @@ def _iter_all_font_dirs():
 
 def get_font_list(show_font_path_warning=True):
     fonts = []
-    for font_dir in _iter_all_font_dirs():
-        font = _get_font_from_path(font_dir, show_font_path_warning)
+    for font_dir, relative_id in _iter_all_font_dirs():
+        font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
         if not font or font.marked_custom_font_name == "" or font.marked_custom_font_id == "":
             continue
         fonts.append(font)
     return fonts
 
 
-def get_font_by_id(font_id, show_font_path_warning=True):
-    for font_dir in _iter_all_font_dirs():
-        font = _get_font_from_path(font_dir, show_font_path_warning)
+def get_fonts_by_id(font_id, show_font_path_warning=True):
+    """Return all fonts matching font_id.
+
+    Matches the exact id (or marked_custom_font_id) first.  If none match,
+    falls back to matching the directory basename, so that a font moved into
+    a subdirectory is still found by the id stored in older SVG documents.
+    """
+    exact = []
+    for font_dir, relative_id in _iter_all_font_dirs():
+        font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
         if font and font_id in [font.id, font.marked_custom_font_id]:
-            return font
+            exact.append(font)
+    if exact:
+        return exact
+
+    # Compare the basename of the stored id against the basename of each font
+    # directory.  This finds a font whether it was moved between subdirectories
+    # (e.g. "cat1/foo" -> "cat2/foo") or from a top-level directory.
+    basename = os.path.basename(font_id.rstrip('*'))
+    matches = []
+    for font_dir, relative_id in _iter_all_font_dirs():
+        font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
+        if font and os.path.basename(font.path) == basename:
+            matches.append(font)
+    return matches
+
+
+def get_font_by_id(font_id, show_font_path_warning=True):
+    matches = get_fonts_by_id(font_id, show_font_path_warning)
+    if len(matches) == 1:
+        return matches[0]
     return None
 
 
 def get_font_by_name(font_name, show_font_path_warning=True):
-    for font_dir in _iter_all_font_dirs():
-        font = _get_font_from_path(font_dir, show_font_path_warning)
+    for font_dir, relative_id in _iter_all_font_dirs():
+        font = _get_font_from_path(font_dir, relative_id, show_font_path_warning)
         if font and font_name in [font.name, font.marked_custom_font_name]:
             return font
     return None
 
 
-def _get_font_from_path(font_dir, show_font_path_warning=True):
+def _get_font_from_path(font_dir, relative_id, show_font_path_warning=True):
     if not is_font_dir(font_dir):
         return
-    return Font(font_dir, show_font_path_warning)
+    return Font(font_dir, show_font_path_warning, font_id=relative_id)

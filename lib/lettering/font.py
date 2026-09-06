@@ -83,11 +83,15 @@ class Font(object):
       variants -- A dict of FontVariants, with keys in FontVariant.VARIANT_TYPES.
     """
 
-    def __init__(self, font_path, show_font_path_warning=True):
+    def __init__(self, font_path, show_font_path_warning=True, font_id=None):
         self.path = font_path
         self.metadata = {}
         self.license = None
         self.variants = {}
+        # Optional explicit id (path relative to the font root).  When not
+        # given, the id falls back to the directory basename, which keeps
+        # top-level fonts backward-compatible with existing SVG documents.
+        self._font_id = font_id
 
         self._load_metadata(show_font_path_warning)
         self._load_license()
@@ -203,6 +207,8 @@ class Font(object):
 
     @property
     def id(self):
+        if self._font_id is not None:
+            return self._font_id
         return os.path.basename(self.path)
 
     @property
