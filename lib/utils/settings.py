@@ -37,6 +37,8 @@ DEFAULT_SETTINGS = {
     "stitch_layer_editor_sash_position": -200,
     # lettering (all lettering applications)
     "last_font": "Ink/Stitch Small Font",
+    # how many directory levels deep to search for fonts (clamped to a safe max)
+    "font_search_depth": 2,
     # lettering
     "lettering_align_text": 0,
     "lettering_trim_option": 0,
