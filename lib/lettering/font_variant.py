@@ -20,13 +20,12 @@ from ..utils.cache import (CacheKeyGenerator, get_font_cache, hash_file,
 from .glyph import Glyph
 
 
-# Bump this whenever the serialization format of cached glyphs changes, so
-# that stale cache entries are invalidated.
+# Bump when the cached glyph serialization format changes.
 FONT_CACHE_VERSION = 1
 
 
 def _serialize_glyph(glyph):
-    """Convert a Glyph into a picklable dict (lxml nodes are not picklable)."""
+    """Convert a Glyph into a picklable dict."""
     return {
         'name': glyph.name,
         'baseline': glyph.baseline,
@@ -39,17 +38,15 @@ def _serialize_glyph(glyph):
 
 
 def _deserialize_glyph(data):
-    """Rebuild a Glyph from the dict produced by _serialize_glyph."""
+    """Rebuild a Glyph from _serialize_glyph's dict."""
     glyph = Glyph.__new__(Glyph)
     glyph.name = data['name']
     glyph.baseline = data['baseline']
     glyph.width = data['width']
     glyph.min_x = data['min_x']
     glyph.commands = data['commands']
-    # Use inkex.SVG_PARSER so that elements are wrapped in inkex's element
-    # classes (Group, PathElement, ...).  Plain etree.fromstring() would
-    # produce bare lxml elements that cannot resolve namespaced attributes
-    # such as "inkstitch:letter-group".
+    # inkex.SVG_PARSER wraps elements in inkex classes that resolve namespaced
+    # attributes (e.g. "inkstitch:letter-group"); plain fromstring does not.
     glyph.node = etree.fromstring(data['node'], parser=inkex.SVG_PARSER)
     glyph.clips = defaultdict(list)
     for node_id, clips in data['clips'].items():
