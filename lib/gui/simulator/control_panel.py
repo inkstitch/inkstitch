@@ -7,7 +7,7 @@ from sys import platform
 
 import wx
 from wx.lib.intctrl import IntCtrl
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, cast
 
 from ...stitch_plan import StitchPlan
 from ...debug.debug import debug
@@ -45,7 +45,7 @@ class ControlPanel(wx.Panel):
         self.icons_dir = get_resource_dir("icons")
 
         # Widgets
-        self.button_size = self.GetTextExtent("M").y * 2
+        self.button_size = cast(wx.Size, self.GetTextExtent("M")).Height * 2
         self.button_style = wx.BU_EXACTFIT | wx.BU_NOTEXT
         self.btnMinus = wx.Button(self, -1, style=self.button_style)
         self.btnMinus.Bind(wx.EVT_BUTTON, self.animation_slow_down)
@@ -262,11 +262,11 @@ class ControlPanel(wx.Panel):
 
         self.parent.SetFocus()
 
-    def on_current_stitch(self, stitch, command):
+    def on_current_stitch(self, stitch: int, animating: bool) -> None:
+        self.btnPlay.SetValue(animating)
         if self.current_stitch != stitch:
             self.current_stitch = stitch
             self.slider.SetValue(stitch)
-            stitch = min(self.stitchBox.GetMax(), stitch)
             self.stitchBox.SetValue(stitch)
 
     def on_stitch_box_focus(self, event):
