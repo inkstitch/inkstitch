@@ -161,6 +161,14 @@ class Font(object):
                     # we'll deal with missing variants when we apply lettering
                     pass
 
+    def is_cached(self) -> bool:
+        """True if the default variant's glyphs are already cached."""
+        try:
+            variant = self.default_variant
+        except FontError:
+            return False
+        return FontVariant.is_variant_cached(self.path, variant)
+
     name = font_metadata('name', '')
     description = localized_font_metadata('description', '')
     untranslated_description = font_metadata('description', '')
