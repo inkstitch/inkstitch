@@ -107,15 +107,15 @@ class FontVariant(object):
         self._load_glyphs()
 
     def _load_glyphs(self) -> None:
-        variant_file_paths = self._get_variant_file_paths()
+        variant_file_paths = self._get_variant_file_paths(self.path, self.variant)
         if not variant_file_paths:
             # need to check for legacy file names
-            variant_file_paths = self._get_variant_file_paths(True)
+            variant_file_paths = self._get_variant_file_paths(self.path, self.variant, legacy=True)
 
         if not variant_file_paths:
             return
 
-        cache_key = self._get_cache_key(variant_file_paths)
+        cache_key = self._get_cache_key(self.variant, variant_file_paths)
         if self._load_glyphs_from_cache(cache_key):
             return
 
@@ -159,37 +159,50 @@ class FontVariant(object):
                 return inkex.load_svg(compressed_stream)
         return inkex.load_svg(svg_path)
 
-    def _get_cache_key(self, variant_file_paths):
-        """Build a cache key from the variant's file contents.
-
-        Hashing the raw file bytes (rather than paths or mtimes) means the
-        cache stays valid when fonts are symlinked or moved, and is
-        invalidated automatically when a font's content changes.  The
-        Ink/Stitch SVG version and a format version are also mixed in so that
-        code changes invalidate stale entries.
-        """
+    @staticmethod
+    def _get_cache_key(variant, variant_file_paths):
+        """Cache key from file contents (path/mtime-independent)."""
         generator = CacheKeyGenerator()
         generator.update(FONT_CACHE_VERSION)
         generator.update(INKSTITCH_SVG_VERSION)
-        generator.update(self.variant)
+        generator.update(variant)
         for path in sorted(variant_file_paths):
             generator.update(hash_file(path))
         return generator.get_cache_key()
 
-    def _get_variant_file_paths(self, legacy=False) -> List[str]:
-        variant = self.variant
+    def is_cached(self) -> bool:
+        """True if this variant's glyphs are already cached."""
+        return self.is_variant_cached(self.path, self.variant)
+
+    @classmethod
+    def is_variant_cached(cls, font_path, variant) -> bool:
+        """True if the variant's glyphs are cached (no parsing)."""
+        if is_cache_disabled():
+            return False
+
+        variant_file_paths = cls._get_variant_file_paths(font_path, variant)
+        if not variant_file_paths:
+            variant_file_paths = cls._get_variant_file_paths(font_path, variant, legacy=True)
+        if not variant_file_paths:
+            return False
+
+        cache_key = cls._get_cache_key(variant, variant_file_paths)
+        return cache_key in get_font_cache()
+
+    @classmethod
+    def _get_variant_file_paths(cls, font_path, variant, legacy=False) -> List[str]:
         if legacy:
-            variant = self.LEGACY_VARIANT_CONVERSION_DICT[variant]
+            variant = cls.LEGACY_VARIANT_CONVERSION_DICT[variant]
 
         file_paths = []
-        direct_path = os.path.join(self.path, "%s.svg" % variant)
-        direct_path_compressed = os.path.join(self.path, "%s.svg.xz" % variant)
+        direct_path = os.path.join(font_path, "%s.svg" % variant)
+        direct_path_compressed = os.path.join(font_path, "%s.svg.xz" % variant)
         if os.path.isfile(direct_path):
             file_paths.append(direct_path)
         if os.path.isfile(direct_path_compressed):
             file_paths.append(direct_path_compressed)
-        if os.path.isdir(os.path.join(self.path, variant)):
-            path = os.path.join(self.path, variant)
+        if os.path.isdir(os.path.join(font_path, variant)):
+            path = os.path.join(font_path, variant)
             file_paths.extend([os.path.join(path, f) for f in os.listdir(path) if f.endswith(('.svg', '.svg.xz'))])
         return file_paths
 
