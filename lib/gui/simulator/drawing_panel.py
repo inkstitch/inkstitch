@@ -294,18 +294,21 @@ class DrawingPanel(wx.Panel):
             cache_offset[1] + cache_height >= height
         )
 
+    def _fast_bitmap_navigation_requested(self, event):
+        return event.ControlDown() or wx.GetKeyState(wx.WXK_CONTROL)
+
     def _update_cache_after_navigation(self, event):
         # Ctrl+mouse uses the fast bitmap-only mode (existing behaviour):
         # cache is only rebuilt after motion stops.  Without Ctrl the cache
         # is rebuilt immediately as soon as the viewport would reach the edge
         # of the cached image, preventing cut-off edges.
-        if event.ControlDown():
+        if self._viewport_inside_cache():
+            pass
+        elif self._fast_bitmap_navigation_requested(event):
             self.schedule_stitch_render_cache_rebuild()
-        elif not self._viewport_inside_cache():
+        else:
             self.invalidate_stitch_render_cache()
             self.rebuild_stitch_render_cache()
-        else:
-            self.schedule_stitch_render_cache_rebuild()
         self.Refresh()
 
     def get_stitch_render_cache_state(self):
