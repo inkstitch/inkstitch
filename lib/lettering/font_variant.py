@@ -10,11 +10,51 @@ from typing import List, Dict, Optional
 import lzma
 
 import inkex
+from lxml import etree
 
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG)
-from ..update import update_inkstitch_document
+from ..update import update_inkstitch_document, INKSTITCH_SVG_VERSION
+from ..utils.cache import (CacheKeyGenerator, get_font_cache, hash_file,
+                           is_cache_disabled)
 from .glyph import Glyph
+
+
+# Bump this whenever the serialization format of cached glyphs changes, so
+# that stale cache entries are invalidated.
+FONT_CACHE_VERSION = 1
+
+
+def _serialize_glyph(glyph):
+    """Convert a Glyph into a picklable dict (lxml nodes are not picklable)."""
+    return {
+        'name': glyph.name,
+        'baseline': glyph.baseline,
+        'width': glyph.width,
+        'min_x': glyph.min_x,
+        'commands': glyph.commands,
+        'node': etree.tostring(glyph.node),
+        'clips': {node_id: [etree.tostring(c) for c in clips] for node_id, clips in glyph.clips.items()},
+    }
+
+
+def _deserialize_glyph(data):
+    """Rebuild a Glyph from the dict produced by _serialize_glyph."""
+    glyph = Glyph.__new__(Glyph)
+    glyph.name = data['name']
+    glyph.baseline = data['baseline']
+    glyph.width = data['width']
+    glyph.min_x = data['min_x']
+    glyph.commands = data['commands']
+    # Use inkex.SVG_PARSER so that elements are wrapped in inkex's element
+    # classes (Group, PathElement, ...).  Plain etree.fromstring() would
+    # produce bare lxml elements that cannot resolve namespaced attributes
+    # such as "inkstitch:letter-group".
+    glyph.node = etree.fromstring(data['node'], parser=inkex.SVG_PARSER)
+    glyph.clips = defaultdict(list)
+    for node_id, clips in data['clips'].items():
+        glyph.clips[node_id] = [etree.fromstring(c, parser=inkex.SVG_PARSER) for c in clips]
+    return glyph
 
 
 class FontVariant(object):
@@ -71,13 +111,33 @@ class FontVariant(object):
         if not variant_file_paths:
             # need to check for legacy file names
             variant_file_paths = self._get_variant_file_paths(True)
-        for svg_path in variant_file_paths:
 
-            if svg_path.endswith(".svg.xz"):
-                with lzma.open(svg_path, "rb") as compressed_stream:
-                    document = inkex.load_svg(compressed_stream)
-            else:
-                document = inkex.load_svg(svg_path)
+        if not variant_file_paths:
+            return
+
+        cache_key = self._get_cache_key(variant_file_paths)
+        if self._load_glyphs_from_cache(cache_key):
+            return
+
+        self._parse_glyphs(variant_file_paths)
+
+        if not is_cache_disabled():
+            get_font_cache()[cache_key] = {name: _serialize_glyph(glyph) for name, glyph in self.glyphs.items()}
+
+    def _load_glyphs_from_cache(self, cache_key) -> bool:
+        if is_cache_disabled():
+            return False
+
+        cached = get_font_cache().get(cache_key)
+        if cached is None:
+            return False
+
+        self.glyphs = {name: _deserialize_glyph(data) for name, data in cached.items()}
+        return True
+
+    def _parse_glyphs(self, variant_file_paths) -> None:
+        for svg_path in variant_file_paths:
+            document = self._load_svg(svg_path)
 
             update_inkstitch_document(document, warn_unversioned=False)
             svg = document.getroot()
@@ -93,6 +153,29 @@ class FontVariant(object):
                 except (AttributeError, ValueError):
                     pass
 
+    def _load_svg(self, svg_path):
+        if svg_path.endswith(".svg.xz"):
+            with lzma.open(svg_path, "rb") as compressed_stream:
+                return inkex.load_svg(compressed_stream)
+        return inkex.load_svg(svg_path)
+
+    def _get_cache_key(self, variant_file_paths):
+        """Build a cache key from the variant's file contents.
+
+        Hashing the raw file bytes (rather than paths or mtimes) means the
+        cache stays valid when fonts are symlinked or moved, and is
+        invalidated automatically when a font's content changes.  The
+        Ink/Stitch SVG version and a format version are also mixed in so that
+        code changes invalidate stale entries.
+        """
+        generator = CacheKeyGenerator()
+        generator.update(FONT_CACHE_VERSION)
+        generator.update(INKSTITCH_SVG_VERSION)
+        generator.update(self.variant)
+        for path in sorted(variant_file_paths):
+            generator.update(hash_file(path))
+        return generator.get_cache_key()
+
     def _get_variant_file_paths(self, legacy=False) -> List[str]:
         variant = self.variant
         if legacy:
@@ -105,8 +188,8 @@ class FontVariant(object):
             file_paths.append(direct_path)
         if os.path.isfile(direct_path_compressed):
             file_paths.append(direct_path_compressed)
-        elif os.path.isdir(os.path.join(self.path, variant)):
-            path = os.path.join(self.path, self.variant)
+        if os.path.isdir(os.path.join(self.path, variant)):
+            path = os.path.join(self.path, variant)
             file_paths.extend([os.path.join(path, f) for f in os.listdir(path) if f.endswith(('.svg', '.svg.xz'))])
         return file_paths
 
