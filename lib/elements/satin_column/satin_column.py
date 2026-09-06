@@ -1024,16 +1024,6 @@ class SatinColumn(EmbroideryElement):
 
         return SatinColumn(node)
 
-    def _get_filtered_rungs(self, rails, rungs):
-        # returns a filtered list of rungs which do intersect the rails exactly twice
-        rails = shgeo.MultiLineString(rails)
-        filtered_rungs = []
-        for rung in shgeo.MultiLineString(rungs).geoms:
-            intersection = rung.intersection(rails)
-            if intersection.geom_type == "MultiPoint" and len(intersection.geoms) == 2:
-                filtered_rungs.append(list(rung.coords))
-        return filtered_rungs
-
     def _get_rails_to_reverse(self) -> tuple[bool, bool]:
         return get_rails_to_reverse(self.reverse_rails, self.rails)
 
@@ -1330,70 +1320,6 @@ class SatinColumn(EmbroideryElement):
         stitch_group1.stitches = [Stitch(*point) for point in start.coords]
         top_layer_stitch_groups = [stitch_group1, stitch_group2]
         return top_layer_stitch_groups
-
-    def get_split_points(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0,
-                         random_phase=False, min_split_length=None, seed=None, row_num=0, from_end=False):
-        if self.split_method == "default":
-            return self._get_split_points_default(
-                a, b, a_short, b_short, length, count, length_sigma,
-                random_phase, min_split_length, seed)
-        elif self.split_method == "simple":
-            return self._get_split_points_simple(a, b, a_short, b_short, length, row_num, from_end), None
-        elif self.split_method == "staggered":
-            return self._get_split_points_staggered(a, b, a_short, b_short, length, row_num, from_end), None
-
-    def _get_split_points_default(self, a, b, a_short, b_short, length, count=None, length_sigma=0.0, random_phase=False, min_split_length=None,
-                                  seed=None):
-        if not length:
-            return ([], None)
-        if min_split_length is None:
-            min_split_length = length
-        distance = a.distance(b)
-        if distance <= min_split_length:
-            return ([], 1)
-        if random_phase:
-            points = running_stitch.split_segment_random_phase(a_short, b_short, length, length_sigma, seed)
-            # avoid hard stitches: do not insert split stitches near the end points
-            if len(points) > 1 and points[0].distance(shgeo.Point(a)) <= self.min_stitch_len:
-                del points[0]
-            if len(points) > 1 and points[-1].distance(shgeo.Point(b)) <= self.min_stitch_len:
-                del points[-1]
-            return (points, None)
-        elif count is not None:
-            points = running_stitch.split_segment_even_n(a, b, count, length_sigma, seed)
-            return (points, count)
-        else:
-            points = running_stitch.split_segment_even_dist(a, b, length, length_sigma, seed)
-            return (points, len(points) + 1)
-
-    def _get_split_points_simple(self, a, b, a_short, b_short, length, row_num=0, from_end=False):
-        return self._get_split_points_staggered(a, b, a_short, b_short, length, row_num, from_end, 1)
-
-    def _get_split_points_staggered(self, a, b, a_short, b_short, length, row_num=0, from_end=False, _staggers=None):
-        if not length or a.distance(b) <= length:
-            return []
-
-        if _staggers is None:
-            # This is only here to allow _get_split_points_simple to override
-            _staggers = self.split_staggers
-
-        if from_end:
-            a, b = b, a
-            a_short, b_short = b_short, a_short
-
-        line = shgeo.LineString((a, b))
-        a_short_projection = line.project(shgeo.Point(a_short))
-        b_short_projection = line.project(shgeo.Point(b_short))
-        split_points = running_stitch.split_segment_stagger_phase(
-            a, b, length,
-            _staggers, row_num,
-            min_val=a_short_projection,
-            max_val=b_short_projection)
-
-        if from_end:
-            split_points = list(reversed(split_points))
-
-        return split_points
 
     def inset_short_stitches_sawtooth(self, pairs):
         max_stitch_length = None if self.random_split_phase else self.max_stitch_length_px
