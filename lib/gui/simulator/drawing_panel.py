@@ -297,13 +297,14 @@ class DrawingPanel(wx.Panel):
     def _fast_bitmap_navigation_requested(self, event):
         return event.ControlDown() or wx.GetKeyState(wx.WXK_CONTROL)
 
-    def _update_cache_after_navigation(self, event):
+    def _update_cache_after_navigation(self, event, rebuild_after_motion=False):
         # Ctrl+mouse uses the fast bitmap-only mode (existing behaviour):
         # cache is only rebuilt after motion stops.  Without Ctrl the cache
         # is rebuilt immediately as soon as the viewport would reach the edge
         # of the cached image, preventing cut-off edges.
         if self._viewport_inside_cache():
-            pass
+            if rebuild_after_motion:
+                self.schedule_stitch_render_cache_rebuild()
         elif self._fast_bitmap_navigation_requested(event):
             self.schedule_stitch_render_cache_rebuild()
         else:
@@ -756,7 +757,7 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
-        self._update_cache_after_navigation(event)
+        self._update_cache_after_navigation(event, rebuild_after_motion=True)
 
     def set_loading(self, loading: bool) -> None:
         self.loading = loading
