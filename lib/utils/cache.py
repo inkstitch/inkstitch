@@ -58,6 +58,55 @@ def is_cache_disabled():
     return not global_settings['cache_size']
 
 
+def hash_file(path):
+    """Return a SHA1 digest of a file's contents.
+
+    Hashing the raw bytes (rather than relying on path or mtime) makes the
+    cache robust against symlinked fonts and re-arranged font directories:
+    the same content always produces the same key.
+    """
+    hasher = hashlib.sha1()
+    with open(path, 'rb') as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b''):
+            hasher.update(chunk)
+    return hasher.digest()
+
+
+__font_cache = None
+
+
+def get_font_cache():
+    """Return a diskcache.Cache used to store parsed font glyphs.
+
+    Parsing the (potentially very large) font SVG files is the dominant cost
+    when opening the lettering dialog.  We cache the fully-parsed glyphs so
+    that subsequent loads only need to deserialize them.
+    """
+    global __font_cache
+
+    if __font_cache is None:
+        cache_dir = get_user_dir('cache')
+        font_dir = os.path.join(cache_dir, 'font_glyphs')
+        size_limit = global_settings['cache_size'] * 1024 * 1024
+        try:
+            __font_cache = diskcache.Cache(font_dir, size=size_limit)
+        except (sqlite3.DatabaseError, sqlite3.OperationalError):
+            # reset cache database file if it couldn't parse correctly
+            cache_file = os.path.join(font_dir, 'cache.db')
+            if os.path.exists(cache_file):
+                os.remove(cache_file)
+            __font_cache = diskcache.Cache(font_dir, size=size_limit)
+        __font_cache.size_limit = size_limit
+
+        # reset cache if warnings appear within the files
+        warnings = __font_cache.check()
+        if warnings:
+            __font_cache.clear()
+
+        atexit.register(__font_cache.close)
+    return __font_cache
+
+
 class CacheKeyGenerator(object):
     """Generate cache keys given arbitrary data.
 
