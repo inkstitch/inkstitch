@@ -88,9 +88,7 @@ class Font(object):
         self.metadata = {}
         self.license = None
         self.variants = {}
-        # Optional explicit id (path relative to the font root).  When not
-        # given, the id falls back to the directory basename, which keeps
-        # top-level fonts backward-compatible with existing SVG documents.
+        # Optional id (path relative to font root); falls back to basename.
         self._font_id = font_id
 
         self._load_metadata(show_font_path_warning)
