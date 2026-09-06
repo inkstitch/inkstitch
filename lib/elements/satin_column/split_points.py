@@ -11,7 +11,8 @@ if TYPE_CHECKING:
 def get_split_points(satin: 'SatinColumn', a, b, a_short, b_short, length, count=None, length_sigma=0.0,
                      random_phase=False, min_split_length=None, seed=None, row_num=0, from_end=False):
     if satin.split_method == "default":
-        return _get_split_points_default(satin,
+        return _get_split_points_default(
+            satin,
             a, b, a_short, b_short, length, count, length_sigma,
             random_phase, min_split_length, seed)
     elif satin.split_method == "simple":

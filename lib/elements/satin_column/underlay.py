@@ -12,6 +12,7 @@ from .rails import plot_points_on_rails
 if TYPE_CHECKING:
     from .satin_column import SatinColumn
 
+
 def do_underlay_stitch_groups(satin: 'SatinColumn', top_layer: StitchGroup, end_point: Optional[Point]) -> list[StitchGroup]:
     stitch_groups: list[StitchGroup] = []
     if satin.center_walk_underlay:
@@ -25,6 +26,7 @@ def do_underlay_stitch_groups(satin: 'SatinColumn', top_layer: StitchGroup, end_
 
     return stitch_groups
 
+
 def _to_stitch_group(satin: 'SatinColumn', linestring: LineString, tags, reverse: bool = False) -> StitchGroup:
     if reverse:
         linestring = linestring.reverse()
@@ -33,6 +35,7 @@ def _to_stitch_group(satin: 'SatinColumn', linestring: LineString, tags, reverse
         tags=tags,
         stitches=[Stitch.from_coordinates(coord) for coord in linestring.coords]
     )
+
 
 def _do_contour_underlay(satin: 'SatinColumn', top_layer: StitchGroup, end_point: Optional[Point]):
     # "contour walk" underlay: do stitches up one side and down the
@@ -100,11 +103,13 @@ def _do_contour_underlay(satin: 'SatinColumn', top_layer: StitchGroup, end_point
     stitch_group.stitches += second_side
     return [stitch_group]
 
+
 def _get_peak(stitches: list[Stitch], peak: str) -> Stitch | None:
     for stitch in stitches:
         if peak in stitch.tags:
             return stitch
     return None
+
 
 def _shorten_contour_underlay_for_zigzag(rail: list[Point], end_point: Optional[Point], cut_end: bool = False) -> list[Point]:
     if not end_point:
@@ -117,6 +122,7 @@ def _shorten_contour_underlay_for_zigzag(rail: list[Point], end_point: Optional[
         start = line.project(shgeo.Point(end_point))
         shortened_line = apply_push_comp(line, start, 0)
     return [Point(*point) for point in shortened_line.coords]
+
 
 def _do_center_walk(satin: 'SatinColumn', end_point: Optional[Point]):
     # Center walk underlay is just a running stitch down and back on the
@@ -150,6 +156,7 @@ def _do_center_walk(satin: 'SatinColumn', end_point: Optional[Point]):
                 stitch_group.stitches += stitch_group.stitches[:stitch_count]
     return stitch_groups
 
+
 def _do_zigzag_underlay(satin: 'SatinColumn', end_point: Optional[Point]):
     # zigzag underlay, usually done at a much lower density than the
     # satin itself.  It looks like this:
@@ -174,7 +181,10 @@ def _do_zigzag_underlay(satin: 'SatinColumn', end_point: Optional[Point]):
 
     # This organizes the points in each side in the order that they'll be visited.
     # take a point, from each side in turn, then go backed over the other points
-    point_groups: tuple[list[Point], list[Point]] = [pair[i % 2] for i, pair in enumerate(pairs)], list(reversed([pair[i % 2] for i, pair in enumerate(pairs, 1)]))
+    point_groups: tuple[list[Point], list[Point]] = (
+        [pair[i % 2] for i, pair in enumerate(pairs)],
+        list(reversed([pair[i % 2] for i, pair in enumerate(pairs, 1)])),
+    )
 
     start_groups = []
     end_groups = []
@@ -193,6 +203,7 @@ def _do_zigzag_underlay(satin: 'SatinColumn', end_point: Optional[Point]):
         stitch_groups.append(satin.connect_and_add(start_groups[-1], end_groups[0]))
 
     return stitch_groups
+
 
 def _generate_zigzag_stitch_group(satin: 'SatinColumn', points: list[Point] | list[Stitch]) -> StitchGroup:
     max_len = satin.zigzag_underlay_max_stitch_length

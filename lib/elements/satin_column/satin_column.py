@@ -5,7 +5,7 @@
 
 from copy import deepcopy
 from itertools import chain
-from typing import List, Optional, Sequence, overload
+from typing import Optional, Sequence, overload
 
 import numpy as np
 from inkex import Path, Vector2d
@@ -1063,7 +1063,6 @@ class SatinColumn(EmbroideryElement):
             tags=("satin_column",),
             stitches=[Point(*end_point)]
         )
-
 
     def split_linestring_at_end_point(self, linestring: LineString, end_point: Point):
         split_line = set_precision(shgeo.LineString(self.find_cut_points(end_point)), 0.00001)

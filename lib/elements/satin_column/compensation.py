@@ -25,7 +25,12 @@ def _extend_line(linestring: shgeo.LineString, value: float, at_end: bool = Fals
         extended_line = extended_line.reverse()
     return extended_line
 
-def get_compensated_line_string_rails(line_string_rails: Sequence[shgeo.LineString], start: float, end: float) -> list[shgeo.Point | shgeo.LineString]:
+
+def get_compensated_line_string_rails(
+    line_string_rails: Sequence[shgeo.LineString],
+    start: float,
+    end: float,
+) -> list[shgeo.Point | shgeo.LineString]:
     """Apply push compensation on rails"""
     return [apply_push_comp(rail, start, end) for rail in line_string_rails]
 
