@@ -59,12 +59,7 @@ def is_cache_disabled():
 
 
 def hash_file(path):
-    """Return a SHA1 digest of a file's contents.
-
-    Hashing the raw bytes (rather than relying on path or mtime) makes the
-    cache robust against symlinked fonts and re-arranged font directories:
-    the same content always produces the same key.
-    """
+    """SHA1 digest of a file's contents (path/mtime-independent)."""
     hasher = hashlib.sha1()
     with open(path, 'rb') as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b''):
@@ -76,12 +71,7 @@ __font_cache = None
 
 
 def get_font_cache():
-    """Return a diskcache.Cache used to store parsed font glyphs.
-
-    Parsing the (potentially very large) font SVG files is the dominant cost
-    when opening the lettering dialog.  We cache the fully-parsed glyphs so
-    that subsequent loads only need to deserialize them.
-    """
+    """diskcache.Cache for parsed font glyphs."""
     global __font_cache
 
     if __font_cache is None:

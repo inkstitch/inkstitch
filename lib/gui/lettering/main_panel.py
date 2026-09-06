@@ -52,7 +52,7 @@ class LetteringPanel(wx.Panel):
         self.presets_panel = PresetsPanel(self)
         outer_sizer.Add(self.presets_panel, 0, wx.EXPAND | wx.ALL, 10)
 
-        # rendering indicator (shows a message while the preview is being rendered)
+        # rendering indicator (shown while the preview renders)
         self.rendering_indicator = wx.StaticText(self, wx.ID_ANY, "")
         outer_sizer.Add(self.rendering_indicator, 0, wx.ALIGN_CENTER | wx.ALL, 5)
 
@@ -186,9 +186,8 @@ class LetteringPanel(wx.Panel):
     def set_initial_font(self, font_id):
         if font_id:
             if font_id not in self.fonts_by_id:
-                # The exact id is not in the (possibly filtered) list.  Look up
-                # all matching fonts to handle fonts that were moved into a
-                # subdirectory (id changed) or that collide on a basename.
+                # Look up all matches to handle fonts moved into a subdir or
+                # colliding on a basename.
                 candidates = get_fonts_by_id(font_id, False)
                 if len(candidates) > 1:
                     font = self._choose_font(candidates)
@@ -208,9 +207,8 @@ class LetteringPanel(wx.Panel):
         self.on_font_changed()
 
     def _choose_font(self, candidates):
-        """Ask the user to pick among multiple fonts matching the stored id."""
-        # Show the id (relative path) alongside the name, so that fonts with
-        # the same display name can still be told apart.
+        """Ask the user to pick among multiple matching fonts."""
+        # Show the id alongside the name so same-named fonts can be told apart.
         names = [f"{font.marked_custom_font_name} ({font.marked_custom_font_id})" for font in candidates]
         dlg = wx.SingleChoiceDialog(
             self,
@@ -338,8 +336,7 @@ class LetteringPanel(wx.Panel):
         self.simulator.render()
 
     def _show_rendering_indicator(self):
-        # Distinguish the (potentially slow) first-time font parse from the
-        # regular stitch-plan rendering, so the user knows what is happening.
+        # Distinguish first-time font parse from regular rendering.
         font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
         if font.is_cached():
             self.rendering_indicator.SetLabel(_("Rendering…"))
@@ -418,7 +415,7 @@ class LetteringPanel(wx.Panel):
             # satins or division by zero caused by incorrect param values.
             pass
 
-        # No stitch plan was produced (e.g. empty text); hide the indicator.
+        # No stitch plan produced (e.g. empty text); hide the indicator.
         wx.CallAfter(self._hide_rendering_indicator)
         return None
 
