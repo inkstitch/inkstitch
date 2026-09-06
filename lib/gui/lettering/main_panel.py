@@ -52,6 +52,10 @@ class LetteringPanel(wx.Panel):
         self.presets_panel = PresetsPanel(self)
         outer_sizer.Add(self.presets_panel, 0, wx.EXPAND | wx.ALL, 10)
 
+        # rendering indicator (shows a message while the preview is being rendered)
+        self.rendering_indicator = wx.StaticText(self, wx.ID_ANY, "")
+        outer_sizer.Add(self.rendering_indicator, 0, wx.ALIGN_CENTER | wx.ALL, 5)
+
         # buttons
         self.apply_button = wx.Button(self, wx.ID_ANY, _("Apply and Quit"))
         self.apply_button.Bind(wx.EVT_BUTTON, self.apply)
@@ -330,7 +334,20 @@ class LetteringPanel(wx.Panel):
         self.Layout()
 
     def update_preview(self, event=None):
+        self._show_rendering_indicator()
         self.simulator.render()
+
+    def _show_rendering_indicator(self):
+        # Distinguish the (potentially slow) first-time font parse from the
+        # regular stitch-plan rendering, so the user knows what is happening.
+        font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
+        if font.is_cached():
+            self.rendering_indicator.SetLabel(_("Rendering…"))
+        else:
+            self.rendering_indicator.SetLabel(_("Caching font…"))
+
+    def _hide_rendering_indicator(self):
+        self.rendering_indicator.SetLabel("")
 
     def update_lettering(self, raise_error=False):
         # return if there is no font in the font list (possibly due to a font size filter)
@@ -385,6 +402,7 @@ class LetteringPanel(wx.Panel):
                     last_stitch_group = stitch_groups[-1]
 
             if stitch_groups:
+                wx.CallAfter(self._hide_rendering_indicator)
                 return stitch_groups_to_stitch_plan(
                     stitch_groups,
                     collapse_len=self.metadata['collapse_len_mm'],
@@ -399,6 +417,10 @@ class LetteringPanel(wx.Panel):
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
             pass
+
+        # No stitch plan was produced (e.g. empty text); hide the indicator.
+        wx.CallAfter(self._hide_rendering_indicator)
+        return None
 
     def get_preset_data(self):
         # called by self.presets_panel
