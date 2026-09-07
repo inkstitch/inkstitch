@@ -30,6 +30,20 @@ def _resolve_document_path() -> str:
     return str(Path.cwd())
 
 
+def _windows_startupinfo():
+    """Return a STARTUPINFO that hides the console window on Windows, else None.
+
+    CREATE_NO_WINDOW alone is not always enough to suppress the brief console
+    flash, so we also set STARTF_USESHOWWINDOW with SW_HIDE.
+    """
+    if sys.platform != "win32":
+        return None
+    startupinfo = getattr(subprocess, "STARTUPINFO")()
+    startupinfo.dwFlags |= getattr(subprocess, "STARTF_USESHOWWINDOW")
+    startupinfo.wShowWindow = getattr(subprocess, "SW_HIDE")
+    return startupinfo
+
+
 class Inksim(InkstitchExtension):
     def __init__(self) -> None:
         InkstitchExtension.__init__(self)
@@ -156,6 +170,7 @@ class Inksim(InkstitchExtension):
                 errors="replace",
                 timeout=3,
                 creationflags=creationflags,
+                startupinfo=_windows_startupinfo(),
             )
         except (OSError, subprocess.TimeoutExpired) as ex:
             self._log(f"InkSim: server probe failed ({ex})")
@@ -231,4 +246,5 @@ class Inksim(InkstitchExtension):
             stderr=subprocess.DEVNULL,
             start_new_session=True,
             creationflags=creationflags,
+            startupinfo=_windows_startupinfo(),
         )
