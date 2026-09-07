@@ -22,7 +22,7 @@ from ..stitch_plan import stitch_groups_to_stitch_plan
 from .base import InkstitchExtension
 
 
-def _resolve_document_path():
+def _resolve_document_path() -> str:
     """Return the Inkscape document path or the current working directory."""
     document_path = os.environ.get("DOCUMENT_PATH")
     if document_path:
@@ -31,12 +31,12 @@ def _resolve_document_path():
 
 
 class Inksim(InkstitchExtension):
-    def __init__(self):
+    def __init__(self) -> None:
         InkstitchExtension.__init__(self)
         self.logger = logging.getLogger("inkstitch")
         self._play = True
 
-    def effect(self):
+    def effect(self) -> None:
         if not self.get_elements():
             sys.exit(0)
 
@@ -102,13 +102,13 @@ class Inksim(InkstitchExtension):
         # output that Inkscape should consume.
         sys.exit(0)
 
-    def _log(self, message):
+    def _log(self, message: str) -> None:
         # Use the Ink/Stitch logger so messages follow the configured logging
         # backend instead of being written to stderr (which Inkscape shows in
         # a modal error dialog).
         self.logger.info(message)
 
-    def _send_to_server(self, csv_path):
+    def _send_to_server(self, csv_path: str) -> bool:
         """Ask a running inksim server to open (and delete) the CSV.
 
         Returns True when the server accepted the command.  The request is sent
@@ -178,7 +178,7 @@ class Inksim(InkstitchExtension):
             return True
         return False
 
-    def _run_inksim(self, csv_path):
+    def _run_inksim(self, csv_path: str) -> None:
         """Launch the external inksim binary in server mode with the CSV.
 
         The process is started asynchronously so that Inkscape is not blocked
