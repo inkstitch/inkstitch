@@ -134,11 +134,11 @@ class Inksim(InkstitchExtension):
         if ink_sim_env:
             base_command = shlex.split(ink_sim_env)
         else:
-            # Use the console ``inksim`` binary here (not ``inksim-gui``): we
-            # read the JSON response from stdout, and a GUI-subsystem
-            # executable on Windows has no attached console and produces no
-            # stdout.  The console window is suppressed via CREATE_NO_WINDOW.
-            ink_sim = shutil.which("inksim")
+            # On Windows use the GUI-subsystem launcher and read the JSON
+            # response from a file (see --output below); elsewhere the console
+            # binary's stdout carries the JSON response.
+            launcher = "inksim-gui" if sys.platform == "win32" else "inksim"
+            ink_sim = shutil.which(launcher)
             if ink_sim is None:
                 return False
             base_command = [ink_sim]
@@ -155,6 +155,16 @@ class Inksim(InkstitchExtension):
             "--send-command",
             json.dumps(command_payload),
         ]
+
+        # On Windows the GUI launcher has no stdout, so we ask inksim to write
+        # its JSON response to a temporary file and read it back from there.
+        output_path = None
+        if sys.platform == "win32" and not ink_sim_env:
+            output_path = tempfile.NamedTemporaryFile(
+                suffix=".json", delete=False
+            ).name
+            command += ["--output", output_path]
+
         self._log(f"InkSim: forwarding to server with {' '.join(command)}")
         # Avoid creating a console window on Windows when running the
         # packaged inksim binary.  On other platforms the attribute does not
@@ -162,41 +172,53 @@ class Inksim(InkstitchExtension):
         creationflags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
         try:
-            result = subprocess.run(
-                command,
-                capture_output=True,
-                text=True,
-                encoding="utf-8",
-                errors="replace",
-                timeout=3,
-                creationflags=creationflags,
-                startupinfo=_windows_startupinfo(),
+            try:
+                result = subprocess.run(
+                    command,
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    timeout=3,
+                    creationflags=creationflags,
+                    startupinfo=_windows_startupinfo(),
+                )
+            except (OSError, subprocess.TimeoutExpired) as ex:
+                self._log(f"InkSim: server probe failed ({ex})")
+                return False
+
+            stdout = (result.stdout or "").strip()
+            stderr = (result.stderr or "").strip()
+            self._log(
+                f"InkSim: server probe exited {result.returncode}; "
+                f"stdout={stdout!r}; stderr={stderr!r}"
             )
-        except (OSError, subprocess.TimeoutExpired) as ex:
-            self._log(f"InkSim: server probe failed ({ex})")
+
+            if result.returncode != 0:
+                # No server running or command rejected; the stderr usually
+                # contains a brief message which we keep in the log only.
+                return False
+
+            if output_path is not None:
+                response_text = Path(output_path).read_text(encoding="utf-8")
+            else:
+                response_text = stdout
+
+            try:
+                response = json.loads(response_text)
+            except json.JSONDecodeError:
+                return False
+
+            if response.get("ok"):
+                self._log("InkSim: forwarded CSV to running server")
+                return True
             return False
-
-        stdout = (result.stdout or "").strip()
-        stderr = (result.stderr or "").strip()
-        self._log(
-            f"InkSim: server probe exited {result.returncode}; "
-            f"stdout={stdout!r}; stderr={stderr!r}"
-        )
-
-        if result.returncode != 0:
-            # No server running or command rejected; the stderr usually
-            # contains a brief message which we keep in the log only.
-            return False
-
-        try:
-            response = json.loads(stdout)
-        except json.JSONDecodeError:
-            return False
-
-        if response.get("ok"):
-            self._log("InkSim: forwarded CSV to running server")
-            return True
-        return False
+        finally:
+            if output_path is not None:
+                try:
+                    os.unlink(output_path)
+                except OSError:
+                    pass
 
     def _run_inksim(self, csv_path: str) -> None:
         """Launch the external inksim binary in server mode with the CSV.
