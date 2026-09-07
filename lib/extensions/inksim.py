@@ -82,7 +82,7 @@ class Inksim(InkstitchExtension):
 
             progress.Update(70, "Writing CSV file...")
             t0 = time.time()
-            write_embroidery_file(temp_file_name, stitch_plan, self.document.getroot())
+            write_embroidery_file(temp_file_name, stitch_plan, self.document.getroot())  # type: ignore
             self._log(f"InkSim: wrote CSV in {time.time() - t0:.2f}s")
 
             # Try to reuse a running inksim server; otherwise start a new one.
@@ -142,26 +142,27 @@ class Inksim(InkstitchExtension):
             json.dumps(command_payload),
         ]
         self._log(f"InkSim: forwarding to server with {' '.join(command)}")
-        kwargs = {}
-        if sys.platform == "win32":
-            # Avoid creating a console window on Windows when running the
-            # packaged inksim binary.
-            kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
+        # Avoid creating a console window on Windows when running the
+        # packaged inksim binary.  On other platforms the attribute does not
+        # exist, so getattr falls back to 0 (no flags).
+        creationflags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
         try:
             result = subprocess.run(
                 command,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
                 timeout=3,
-                **kwargs,
+                creationflags=creationflags,
             )
         except (OSError, subprocess.TimeoutExpired) as ex:
             self._log(f"InkSim: server probe failed ({ex})")
             return False
 
-        stdout = result.stdout.decode("utf-8", errors="replace").strip()
-        stderr = result.stderr.decode("utf-8", errors="replace").strip()
+        stdout = (result.stdout or "").strip()
+        stderr = (result.stderr or "").strip()
         self._log(
             f"InkSim: server probe exited {result.returncode}; "
             f"stdout={stdout!r}; stderr={stderr!r}"
@@ -220,12 +221,14 @@ class Inksim(InkstitchExtension):
         command.append(csv_path)
 
         self._log(f"InkSim: launching {' '.join(command)}")
-        kwargs = {"start_new_session": True}
-        if sys.platform == "win32":
-            # Avoid creating a console window on Windows when running the
-            # packaged inksim binary.
-            kwargs["creationflags"] = subprocess.CREATE_NO_WINDOW
-        subprocess.Popen(command,
-                         stdout=subprocess.DEVNULL,
-                         stderr=subprocess.DEVNULL,
-                         **kwargs)
+        # Avoid creating a console window on Windows when running the
+        # packaged inksim binary.  On other platforms the attribute does not
+        # exist, so getattr falls back to 0 (no flags).
+        creationflags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+        subprocess.Popen(
+            command,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True,
+            creationflags=creationflags,
+        )
