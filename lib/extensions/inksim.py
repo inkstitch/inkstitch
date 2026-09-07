@@ -179,7 +179,7 @@ class Inksim(InkstitchExtension):
                     text=True,
                     encoding="utf-8",
                     errors="replace",
-                    timeout=3,
+                    timeout=10,
                     creationflags=creationflags,
                     startupinfo=_windows_startupinfo(),
                 )
