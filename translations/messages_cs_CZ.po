@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-07-26 17:53+0000\n"
-"PO-Revision-Date: 2026-07-26 17:54\n"
+"POT-Creation-Date: 2026-09-07 03:29+0000\n"
+"PO-Revision-Date: 2026-09-07 03:30\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-26 17:53+0000\n"
+"POT-Creation-Date: 2026-09-07 03:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1263,126 +1263,126 @@ msgstr "Úhel převrácení"
 msgid "Flip automatically calculated angle if it appears to be wrong."
 msgstr "Převrátit automaticky vypočítaný úhel, pokud se zdá, že je nesprávný."
 
-#: lib/elements/element.py:307 lib/gui/preferences.py:61
+#: lib/elements/element.py:340 lib/gui/preferences.py:61
 #: lib/gui/preferences.py:152
 msgid "Minimum stitch length"
 msgstr "Minimální délka stehu"
 
-#: lib/elements/element.py:308
+#: lib/elements/element.py:341
 msgid "Overwrite global minimum stitch length setting. Shorter stitches than that will be removed."
 msgstr "Přepsat globální nastavení minimální délky stehu. Kratší stehy budou odstraněny."
 
-#: lib/elements/element.py:319 lib/gui/preferences.py:42
+#: lib/elements/element.py:352 lib/gui/preferences.py:42
 msgid "Minimum jump stitch length"
 msgstr "Minimální délka skokového stehu"
 
-#: lib/elements/element.py:320
+#: lib/elements/element.py:353
 msgid "Overwrite global minimum jump stitch length setting. Shorter distances to the next object will have no lock stitches."
 msgstr "Přepsat globální nastavení minimální délky skokového stehu. Kratší vzdálenosti k dalšímu objektu nebudou mít vázané stehy."
 
-#: lib/elements/element.py:331
+#: lib/elements/element.py:364
 msgid "Allow lock stitches"
 msgstr "Povolit vázané stehy"
 
-#: lib/elements/element.py:332
+#: lib/elements/element.py:365
 msgid "Tie thread at the beginning and/or end of this object. Manual stitch will only add lock stitches if force lock stitched is checked."
 msgstr "Uvažte nit na začátku a/nebo konci tohoto předmětu. Ruční steh přidá vázané stehy pouze v případě, že je zaškrtnuto vázané stehování."
 
 #. options to allow lock stitch before and after objects
-#: lib/elements/element.py:337
+#: lib/elements/element.py:370
 msgid "Both"
 msgstr "Oba"
 
-#: lib/elements/element.py:337
+#: lib/elements/element.py:370
 msgid "Before"
 msgstr "Před"
 
-#: lib/elements/element.py:337
+#: lib/elements/element.py:370
 msgid "After"
 msgstr "Po"
 
-#: lib/elements/element.py:337
+#: lib/elements/element.py:370
 msgid "Neither"
 msgstr "Ani"
 
-#: lib/elements/element.py:346
+#: lib/elements/element.py:379
 #: inx/inkstitch_lettering_force_lock_stitches.inx:3
 msgid "Force lock stitches"
 msgstr "Nucené vázané stehování"
 
-#: lib/elements/element.py:347
+#: lib/elements/element.py:380
 msgid "Sew lock stitches after sewing this element, even if the distance to the next object is shorter than defined by the minimum jump stitch length value in the Ink/Stitch preferences."
 msgstr "Po ušití tohoto prvku šijte vázací stehy, i když je vzdálenost k dalšímu objektu kratší, než je definováno hodnotou minimální délky skokového stehu v předvolbách Inkoust/Stitch."
 
-#: lib/elements/element.py:359
+#: lib/elements/element.py:392
 msgid "Tack stitch"
 msgstr "Zajišťovací steh"
 
-#: lib/elements/element.py:360
+#: lib/elements/element.py:393
 msgid "Tack down stitch type"
 msgstr "Typ dokončovacího stehu"
 
-#: lib/elements/element.py:370 lib/elements/element.py:416
+#: lib/elements/element.py:403 lib/elements/element.py:449
 msgid "Custom path"
 msgstr "Vlastní cesta"
 
-#: lib/elements/element.py:371
+#: lib/elements/element.py:404
 msgid "Enter a custom path. For svg paths The last node will not be embroidered, but represents the first stitch of the element."
 msgstr "Zadejte vlastní cestu. Pro svg cesty Poslední uzel nebude vyšívaný, ale představuje první steh prvku."
 
-#: lib/elements/element.py:381 lib/elements/element.py:393
+#: lib/elements/element.py:414 lib/elements/element.py:426
 msgid "Scale tack stitch"
 msgstr "Měřítko zajišťovacího stehu"
 
-#: lib/elements/element.py:382
+#: lib/elements/element.py:415
 msgid "Set stitch length. A 1 in a custom path equals this values."
 msgstr "Nastavte délku stehu. Hodnota 1 ve vlastní cestě se rovná těmto hodnotám."
 
-#: lib/elements/element.py:394
+#: lib/elements/element.py:427
 msgid "Scale tack stitch by this percentage."
 msgstr "Zmenšit zajišťovací steh o toto procento."
 
-#: lib/elements/element.py:405
+#: lib/elements/element.py:438
 msgid "Lock stitch"
 msgstr "Vázací steh"
 
-#: lib/elements/element.py:406
+#: lib/elements/element.py:439
 msgid "Lock stitch type"
 msgstr "Typ vázacího stehu"
 
-#: lib/elements/element.py:417
+#: lib/elements/element.py:450
 msgid "Enter a custom path. For svg paths the first node will not be embroidered, but represents the last stitch of the element."
 msgstr "Zadejte vlastní cestu. Pro svg cesty nebude první uzel vyšívaný, ale představuje poslední steh prvku."
 
-#: lib/elements/element.py:427 lib/elements/element.py:439
+#: lib/elements/element.py:460 lib/elements/element.py:472
 msgid "Scale lock stitch"
 msgstr "Měřítko vázacího stehu"
 
-#: lib/elements/element.py:428
+#: lib/elements/element.py:461
 msgid "Set length of lock stitches (mm)."
 msgstr "Nastavte délku vázacího stehů (mm)."
 
-#: lib/elements/element.py:440
+#: lib/elements/element.py:473
 msgid "Scale lock stitch by this percentage."
 msgstr "Zmenšit vázací steh o toto procento."
 
-#: lib/elements/element.py:456
+#: lib/elements/element.py:489
 msgid "Trim After"
 msgstr "Oříznout Po"
 
-#: lib/elements/element.py:457
+#: lib/elements/element.py:490
 msgid "Add a TRIM command after stitching this object."
 msgstr "Po sešití tohoto objektu přidejte příkaz OŘÍZNUTÍ."
 
-#: lib/elements/element.py:466
+#: lib/elements/element.py:499
 msgid "Stop After"
 msgstr "Zastavit po"
 
-#: lib/elements/element.py:467
+#: lib/elements/element.py:500
 msgid "Add a STOP command after stitching this object."
 msgstr "Po sešití tohoto objektu přidejte příkaz STOP."
 
-#: lib/elements/element.py:815
+#: lib/elements/element.py:853
 msgid "Please run Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects. This will show you the exact location of the problem."
 msgstr "Spusťte prosím Rozšíření > Ink/Stitch > Odstraňování problémů > Odstraňování problémů s objekty. To vám ukáže přesné místo problému."
 
@@ -1813,7 +1813,8 @@ msgstr ""
 msgid "Stagger rows this many times before repeating"
 msgstr "Než to zopakujete, několikrát to rozložte"
 
-#: lib/elements/fill_stitch.py:417 lib/elements/satin_column.py:227
+#: lib/elements/fill_stitch.py:417
+#: lib/elements/satin_column/satin_column.py:152
 msgid "Length of the cycle by which successive stitch rows are staggered. Fractional values are allowed and can have less visible diagonals than integer values."
 msgstr "Délka cyklu, o kterou se po sobě jdoucí řady stehů střídají. Zlomkové hodnoty jsou povoleny a mohou mít méně viditelné úhlopříčky než celočíselné hodnoty."
 
@@ -1857,8 +1858,8 @@ msgstr "Podšívka"
 msgid "Travel inside the shape when moving from section to section.  Underpath stitches avoid traveling in the direction of the row angle so that they are not visible.  This gives them a jagged appearance."
 msgstr "Při přesunu ze sekce do sekce se pohybujte uvnitř tvaru. Spodní stehy se vyhýbají pohybu ve směru úhlu řádku, takže nejsou viditelné. To jim dává zubatý vzhled."
 
-#: lib/elements/fill_stitch.py:500 lib/elements/satin_column.py:389
-#: lib/elements/stroke.py:156
+#: lib/elements/fill_stitch.py:500
+#: lib/elements/satin_column/satin_column.py:277 lib/elements/stroke.py:156
 msgid "Running stitch length"
 msgstr "Délka předního stehu"
 
@@ -1866,11 +1867,13 @@ msgstr "Délka předního stehu"
 msgid "Length of stitches around the outline of the fill region used when moving from section to section. Also used for meander and circular fill."
 msgstr "Délka stehů kolem obrysu výplňové oblasti použité při přechodu ze sekce do sekce. Používá se také pro meandrové a kruhové výplně."
 
-#: lib/elements/fill_stitch.py:518 lib/elements/satin_column.py:400
+#: lib/elements/fill_stitch.py:518
+#: lib/elements/satin_column/satin_column.py:288
 msgid "Running stitch tolerance"
 msgstr "Tolerance předního stehu"
 
-#: lib/elements/fill_stitch.py:519 lib/elements/satin_column.py:401
+#: lib/elements/fill_stitch.py:519
+#: lib/elements/satin_column/satin_column.py:289
 msgid "Determines how hard Ink/Stitch tries to avoid stitching outside the shape.Lower numbers are less likely to stitch outside the shape but require more stitches."
 msgstr "Určuje, jak silně se Ink/Stitch snaží vyhnout sešívání mimo tvar. U nižších čísel je méně pravděpodobné, že sešívají mimo tvar, ale vyžadují více stehů."
 
@@ -1890,8 +1893,8 @@ msgstr "Nahodilý pohyb délky stehu"
 msgid "Amount to vary the length of each stitch by when randomizing."
 msgstr "Maximální procento odchylky v délce použitého stehu, pokud je délka náhodná."
 
-#: lib/elements/fill_stitch.py:570 lib/elements/satin_column.py:525
-#: lib/elements/stroke.py:99
+#: lib/elements/fill_stitch.py:570
+#: lib/elements/satin_column/satin_column.py:413 lib/elements/stroke.py:99
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:33
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:35
 msgid "Repeats"
@@ -1912,8 +1915,8 @@ msgid "Backtrack each stitch this many times.  A value of 1 would triple each st
 msgstr "Tento krok opakujte mnohokrát. Hodnota 1 by ztrojnásobila každý steh (dopředu, dozadu, dopředu). Hodnota 2 by pětinásobila každý steh atd.\n\n"
 "Vzor s různým opakováním lze vytvořit se seznamem hodnot oddělených mezerou."
 
-#: lib/elements/fill_stitch.py:601 lib/elements/satin_column.py:264
-#: lib/elements/stroke.py:256
+#: lib/elements/fill_stitch.py:601
+#: lib/elements/satin_column/satin_column.py:189 lib/elements/stroke.py:256
 msgid "Zig-zag spacing (peak-to-peak)"
 msgstr "Cik-cak mezery (od vrcholu k vrcholu)"
 
@@ -1945,8 +1948,8 @@ msgstr "Šířka rybí kosti"
 msgid "Defines width of a herringbone pattern. Use 0 for regular rows."
 msgstr "Definuje šířku vzoru rybí kosti. Pro běžné řádky použijte 0."
 
-#: lib/elements/fill_stitch.py:653 lib/elements/satin_column.py:292
-#: lib/elements/stroke.py:272
+#: lib/elements/fill_stitch.py:653
+#: lib/elements/satin_column/satin_column.py:217 lib/elements/stroke.py:272
 msgid "Pull compensation"
 msgstr "Kompenzace tahu"
 
@@ -1954,13 +1957,16 @@ msgstr "Kompenzace tahu"
 msgid "Fill stitch can pull the fabric together, resulting in a shape narrower than you draw in Inkscape. This setting expands each row of stitches outward from the center of the row by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Výplňový steh může přitáhnout látku k sobě, což má za následek užší tvar, než jaký kreslíte v Inkscape. Toto nastavení rozšíří každou řadu stehů směrem ven ze středu řady o pevnou délku. Dvě hodnoty oddělené mezerou lze použít pro asymetrický efekt."
 
-#: lib/elements/fill_stitch.py:658 lib/elements/satin_column.py:296
-#: lib/elements/satin_column.py:318 lib/elements/satin_column.py:470
-#: lib/elements/satin_column.py:564 lib/elements/stroke.py:278
+#: lib/elements/fill_stitch.py:658
+#: lib/elements/satin_column/satin_column.py:221
+#: lib/elements/satin_column/satin_column.py:243
+#: lib/elements/satin_column/satin_column.py:358
+#: lib/elements/satin_column/satin_column.py:452 lib/elements/stroke.py:278
 msgid "mm (each side)"
 msgstr "mm (každá strana)"
 
-#: lib/elements/fill_stitch.py:669 lib/elements/satin_column.py:277
+#: lib/elements/fill_stitch.py:669
+#: lib/elements/satin_column/satin_column.py:202
 msgid "Pull compensation percentage"
 msgstr "Procento kompenzace tahu"
 
@@ -1968,9 +1974,11 @@ msgstr "Procento kompenzace tahu"
 msgid "Additional pull compensation which varies as a percentage of row width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Dodatečná kompenzace tahu, která se mění jako procento šířky řádku. Dvě hodnoty oddělené mezerou lze použít pro asymetrický efekt."
 
-#: lib/elements/fill_stitch.py:673 lib/elements/satin_column.py:144
-#: lib/elements/satin_column.py:154 lib/elements/satin_column.py:280
-#: lib/elements/satin_column.py:485 lib/elements/satin_column.py:584
+#: lib/elements/fill_stitch.py:673 lib/elements/satin_column/satin_column.py:68
+#: lib/elements/satin_column/satin_column.py:78
+#: lib/elements/satin_column/satin_column.py:205
+#: lib/elements/satin_column/satin_column.py:373
+#: lib/elements/satin_column/satin_column.py:472
 msgid "% (each side)"
 msgstr "% (každá strana)"
 
@@ -2016,14 +2024,15 @@ msgstr "výchozí: rovná se maximální délce stehu výplně"
 msgid "Shrink the shape before doing underlay, to prevent underlay from showing around the outside of the fill."
 msgstr "Zmenší tvar před vytvořením podkladu, aby se zabránilo zobrazení podkladu mimo výplň."
 
-#: lib/elements/fill_stitch.py:772 lib/elements/satin_column.py:606
-#: lib/elements/stroke.py:620 lib/gui/satin_multicolor/colorize_panel.py:62
+#: lib/elements/fill_stitch.py:772
+#: lib/elements/satin_column/satin_column.py:494 lib/elements/stroke.py:620
+#: lib/gui/satin_multicolor/colorize_panel.py:62
 #: lib/sew_stack/stitch_layers/mixins/randomization.py:55
 msgid "Random seed"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:773 lib/elements/satin_column.py:607
-#: lib/elements/stroke.py:621
+#: lib/elements/fill_stitch.py:773
+#: lib/elements/satin_column/satin_column.py:495 lib/elements/stroke.py:621
 msgid "Use a specific seed for randomized attributes. Uses the element ID if empty."
 msgstr "Toto nastavte, když potřebujete opravit vzor pro náhodně určené atributy. Pokud je prázdné, použije se ID prvku."
 
@@ -2138,8 +2147,9 @@ msgstr ""
 msgid "Percentage of overlap for each cross with the fill area"
 msgstr ""
 
-#: lib/elements/fill_stitch.py:911 lib/elements/satin_column.py:185
-#: lib/elements/satin_column.py:595
+#: lib/elements/fill_stitch.py:911
+#: lib/elements/satin_column/satin_column.py:109
+#: lib/elements/satin_column/satin_column.py:483
 msgid "Maximum stitch length"
 msgstr "Maximální délka stehu"
 
@@ -2187,436 +2197,414 @@ msgstr "* Přejděte na kartu Styl tahu"
 msgid "* Under \"Markers\" choose the first (empty) option in the first dropdown list."
 msgstr "* V části \"Značky\" vyberte první (prázdnou) možnost v prvním rozevíracím seznamu."
 
-#: lib/elements/satin_column.py:34
-msgid "Not stitchable satin column"
-msgstr "Saténový sloupek nelze sešít"
-
-#: lib/elements/satin_column.py:35
-msgid "A satin column can be build from a single stroke or consists of two rails and optional rungs. This satin column has a different setup."
-msgstr ""
-
-#: lib/elements/satin_column.py:38
-msgid "Make sure your satin column is not a combination of multiple satin columns."
-msgstr "Ujistěte se, že saténový sloupek není kombinací více saténových sloupků."
-
-#: lib/elements/satin_column.py:39
-msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
-msgstr "Přejděte na náš web a zjistěte, jak se konstruují saténové sloupy: https://inkstitch.org/de/docs/stitches/satin-column/"
-
-#: lib/elements/satin_column.py:43
-msgid "Each rung should intersect both rails once."
-msgstr "Každá vrstva stehu by měla jednou protnout obě vnější linie."
-
-#: lib/elements/satin_column.py:47
-msgid "Rail is a closed path"
-msgstr "Vnější obrys je uzavřená dráha"
-
-#: lib/elements/satin_column.py:48
-msgid "Rail is a closed path without a definite starting and ending point."
-msgstr "Vnější obrys je uzavřená dráha bez předem definovaného počátečního a koncového bodu."
-
-#: lib/elements/satin_column.py:50
-msgid "* Select the node where you want the satin to start."
-msgstr "* Vyberte uzel, kde má saténový sloupec začínat."
-
-#: lib/elements/satin_column.py:51
-msgid "* Click on: Break path at selected nodes."
-msgstr "* Klikněte na: Rozdělit cestu ve vybraných uzlech."
-
-#: lib/elements/satin_column.py:56
-msgid "Rung doesn't intersect rails"
-msgstr "Poloha stehu nepřekračuje vnější čáru"
-
-#: lib/elements/satin_column.py:57
-msgid "Satin column: A rung doesn't intersect both rails."
-msgstr "Saténový sloupec: Vrstva stehu neprotíná obě vnější linie."
-
-#: lib/elements/satin_column.py:61
-msgid "Satin has no rungs"
-msgstr "Satén nemá žádné příčky"
-
-#: lib/elements/satin_column.py:62
-msgid "Rungs control the stitch direction in satin columns. It is best pratice to use them."
-msgstr "Vodicí linie řídí směr stehu saténového sloupku. Doporučuje se je používat."
-
-#: lib/elements/satin_column.py:64 lib/elements/satin_column.py:96
-#: lib/elements/satin_column.py:107
-msgid "* With the selected object press \"P\" to activate the pencil tool."
-msgstr "* S vybraným objektem stiskněte \"P\" pro aktivaci nástroje tužka."
-
-#: lib/elements/satin_column.py:65 lib/elements/satin_column.py:97
-msgid "* Hold \"Shift\" while drawing a rung."
-msgstr "* Při kreslení příček podržte \"Shift\"."
-
-#: lib/elements/satin_column.py:70
-msgid "Rung intersects too many times"
-msgstr ""
-
-#: lib/elements/satin_column.py:71
-msgid "Satin column: A rung intersects a rail more than once."
-msgstr "Saténový sloupec: Vrstva stehu několikrát protíná obrysovou čáru."
-
-#: lib/elements/satin_column.py:75
-msgid "Simple Satin"
-msgstr ""
-
-#: lib/elements/satin_column.py:78
-msgid "* Select the satin path"
-msgstr ""
-
-#: lib/elements/satin_column.py:79
-msgid "* Run Extensions > Ink/Stitch > Tools: Satin > Stroke to Satin"
-msgstr ""
-
-#: lib/elements/satin_column.py:84
-msgid "Narrow Satin"
-msgstr ""
-
-#: lib/elements/satin_column.py:85
-msgid "This element renders as a satin, but it is too narrow."
-msgstr ""
-
-#: lib/elements/satin_column.py:87 lib/elements/stroke.py:41
-msgid "* Increase stroke width."
-msgstr ""
-
-#: lib/elements/satin_column.py:88
-msgid "Ink/Stitch will not register elements with a stroke width underneath 0.3 mm as satin, but it is recommended to stay above 1mm."
-msgstr ""
-
-#: lib/elements/satin_column.py:93
-msgid "Satin has exactly two rungs"
-msgstr "Satén má rovnou dvě příčky"
-
-#: lib/elements/satin_column.py:94
-msgid "There are exactly two rungs. This may lead to false rail/rung detection."
-msgstr "Příčky jsou přesně dvě. To může vést k falešné detekci obrysových čár/příčky."
-
-#: lib/elements/satin_column.py:102
-msgid "Unequal number of points"
-msgstr "Nestejný počet bodů"
-
-#: lib/elements/satin_column.py:103
-msgid "Satin column: There are no rungs and rails have an unequal number of points."
-msgstr "Saténový sloup: Nejsou zde žádné příčky a obrysové čáry mají nestejný počet bodů."
-
-#: lib/elements/satin_column.py:105
-msgid "The easiest way to solve this issue is to add one or more rungs. "
-msgstr "Nejjednodušší způsob, jak tento problém vyřešit, je přidat jednu nebo více příček. "
-
-#: lib/elements/satin_column.py:106
-msgid "Rungs control the stitch direction in satin columns."
-msgstr "Příčky řídí směr stehu v saténových sloupcích."
-
-#: lib/elements/satin_column.py:108
-msgid "* Hold \"Shift\" while drawing the rung."
-msgstr "* Při kreslení příčky podržte \"Shift\"."
-
-#: lib/elements/satin_column.py:114 lib/elements/satin_column.py:124
+#: lib/elements/satin_column/satin_column.py:38
+#: lib/elements/satin_column/satin_column.py:48
 #: inx/inkstitch_select_elements.inx:31
 msgid "Satin Column"
 msgstr "Saténový sloupec"
 
-#: lib/elements/satin_column.py:120
+#: lib/elements/satin_column/satin_column.py:44
 msgid "Custom satin column"
 msgstr "Vlastní saténový sloup"
 
-#: lib/elements/satin_column.py:125
+#: lib/elements/satin_column/satin_column.py:49
 msgid "\"E\" Stitch"
 msgstr "\"E\" Steh"
 
-#: lib/elements/satin_column.py:126
+#: lib/elements/satin_column/satin_column.py:50
 msgid "\"S\" Stitch"
 msgstr "\"S\" Steh"
 
-#: lib/elements/satin_column.py:127 lib/stitch_plan/lock_stitch.py:222
+#: lib/elements/satin_column/satin_column.py:51
+#: lib/stitch_plan/lock_stitch.py:222
 msgid "Zig-zag"
 msgstr "Cik-Cak"
 
-#: lib/elements/satin_column.py:131 lib/elements/stroke.py:86
-#: inx/inkstitch_break_apart.inx:9
-msgid "Method"
-msgstr "Metoda"
-
-#: lib/elements/satin_column.py:141
+#: lib/elements/satin_column/satin_column.py:65
 msgid "Random percentage of satin width decrease"
 msgstr "Náhodné procento zmenšení saténové šířky"
 
-#: lib/elements/satin_column.py:142
+#: lib/elements/satin_column/satin_column.py:66
 msgid "shorten stitch across rails at most this percent. Two values separated by a space may be used for an asymmetric effect."
 msgstr "zkraťte steh přes obrysovou čáru nanejvýš o toto procento. Pro asymetrický efekt lze použít dvě hodnoty oddělené mezerou."
 
-#: lib/elements/satin_column.py:151
+#: lib/elements/satin_column/satin_column.py:75
 msgid "Random percentage of satin width increase"
 msgstr "Náhodné procento zvětšení saténové šířky"
 
-#: lib/elements/satin_column.py:152
+#: lib/elements/satin_column/satin_column.py:76
 msgid "lengthen stitch across rails at most this percent. Two values separated by a space may be used for an asymmetric effect."
 msgstr "prodlužte steh přes obrysovou čáru nejvýše o toto procento. Pro asymetrický efekt lze použít dvě hodnoty oddělené mezerou."
 
-#: lib/elements/satin_column.py:161
+#: lib/elements/satin_column/satin_column.py:85
 msgid "Random zig-zag spacing percentage"
 msgstr "Procento náhodných cik-cak mezer"
 
-#: lib/elements/satin_column.py:162
+#: lib/elements/satin_column/satin_column.py:86
 msgid "Amount of random jitter added to zigzag spacing."
 msgstr "Množství náhodného chvění přidané do cikcak mezer."
 
-#: lib/elements/satin_column.py:168
+#: lib/elements/satin_column/satin_column.py:92
 msgid "Default"
 msgstr "Výchozí"
 
-#: lib/elements/satin_column.py:169 lib/stitch_plan/lock_stitch.py:220
-#: inx/inkstitch_break_apart.inx:10
+#: lib/elements/satin_column/satin_column.py:93
+#: lib/stitch_plan/lock_stitch.py:220 inx/inkstitch_break_apart.inx:10
 msgid "Simple"
 msgstr "Jednoduchý"
 
-#: lib/elements/satin_column.py:170
+#: lib/elements/satin_column/satin_column.py:94
 msgid "Staggered"
 msgstr "Rozložené"
 
-#: lib/elements/satin_column.py:174
+#: lib/elements/satin_column/satin_column.py:98
 msgid "Split Method"
 msgstr "Metoda rozdělení"
 
-#: lib/elements/satin_column.py:176
+#: lib/elements/satin_column/satin_column.py:100
 msgid "Display needle penetration points in simulator to see the effect of each split method."
 msgstr "Zobrazte body průniku jehly v simulátoru, abyste viděli účinek každé metody rozdělení."
 
-#: lib/elements/satin_column.py:186
+#: lib/elements/satin_column/satin_column.py:110
 msgid "Maximum stitch length for split stitches."
 msgstr "Maximální délka stehu pro perličkový steh."
 
-#: lib/elements/satin_column.py:195
+#: lib/elements/satin_column/satin_column.py:119
 msgid "Random jitter for split stitches"
 msgstr "Náhodné chvění pro perličkový steh"
 
-#: lib/elements/satin_column.py:196
+#: lib/elements/satin_column/satin_column.py:120
 msgid "Randomizes split stitch length if random phase is enabled, stitch position if disabled."
 msgstr "Náhodně upraví délku perličkového stehu, pokud je povoleno plně náhodné řezání stehu. Jinak se náhodný pohyb řezání provádí kolem jeho normální polohy."
 
-#: lib/elements/satin_column.py:204
+#: lib/elements/satin_column/satin_column.py:128
 msgid "Random phase for split stitches"
 msgstr "Náhodné body pro perličkový steh"
 
-#: lib/elements/satin_column.py:205
+#: lib/elements/satin_column/satin_column.py:129
 msgid "Controls whether split stitches are centered or with a random phase (which may increase stitch count)."
 msgstr "Řídí, zda je perličkový steh zcela náhodný (což může změnit počet bodů) nebo zda zůstává vystředěné."
 
-#: lib/elements/satin_column.py:213
+#: lib/elements/satin_column/satin_column.py:137
 msgid "Minimum length for random-phase split"
 msgstr "Minimální délka stehu pro náhodné mezistehy"
 
-#: lib/elements/satin_column.py:214
+#: lib/elements/satin_column/satin_column.py:138
 msgid "Defaults to maximum stitch length. Smaller values allow for a transition between single-stitch and split-stitch."
 msgstr "Pokud je prázdné, použije se hodnota pro maximální délku stehu. Menší hodnoty umožňují přechod z jednoho stehu na částečný steh."
 
-#: lib/elements/satin_column.py:224
+#: lib/elements/satin_column/satin_column.py:149
 msgid "Stagger split stitches this many times before repeating"
 msgstr "Rozdělte stehy mnohokrát před opakováním"
 
-#: lib/elements/satin_column.py:236
+#: lib/elements/satin_column/satin_column.py:161
 msgid "Short stitch inset"
 msgstr "Krátká vsadka stehu"
 
-#: lib/elements/satin_column.py:237
+#: lib/elements/satin_column/satin_column.py:162
 msgid "Stitches in areas with high density will be inset by this amount.Two values separated by a space define inset levels if there are multiple consecutive short stitches."
 msgstr ""
 
-#: lib/elements/satin_column.py:249
+#: lib/elements/satin_column/satin_column.py:174
 msgid "Short stitch distance"
 msgstr "Krátká vzdálenost stehů"
 
-#: lib/elements/satin_column.py:250
+#: lib/elements/satin_column/satin_column.py:175
 msgid "Inset stitches if the distance between stitches is smaller than this."
 msgstr "Pokud je vzdálenost mezi stehy menší než tato, vložte stehy."
 
-#: lib/elements/satin_column.py:265
+#: lib/elements/satin_column/satin_column.py:190
 msgid "Peak-to-peak distance between zig-zags. This is double the mm/stitch measurement used by most mechanical machines."
 msgstr "Vzdálenost od vrcholu k vrcholu mezi cik-cak body. To je dvojnásobek měření mm/steh, které používá většina mechanických strojů."
 
-#: lib/elements/satin_column.py:278
+#: lib/elements/satin_column/satin_column.py:203
 msgid "Additional pull compensation which varies as a percentage of stitch width. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Dodatečná kompenzace tahu, která se mění v procentech šířky stehu. Pro asymetrický efekt lze použít dvě hodnoty oddělené mezerou."
 
-#: lib/elements/satin_column.py:293
+#: lib/elements/satin_column/satin_column.py:218
 msgid "Satin stitches pull the fabric together, resulting in a column narrower than you draw in Inkscape. This setting expands each pair of needle penetrations outward from the center of the satin column by a fixed length. Two values separated by a space may be used for an asymmetric effect."
 msgstr "Saténové stehy přitahují látku k sobě, což má za následek užší sloupec, než jaký kreslíte v Inkscape. Toto nastavení rozšiřuje každý pár průniků jehel směrem ven ze středu saténového sloupce o pevnou délku. Pro asymetrický efekt lze použít dvě hodnoty oddělené mezerou."
 
-#: lib/elements/satin_column.py:307 lib/elements/stroke.py:473
-msgid "Automatic"
-msgstr "Automaticky"
-
-#: lib/elements/satin_column.py:308 lib/elements/stroke.py:474
-msgid "Don't reverse"
-msgstr "Nevracet"
-
-#: lib/elements/satin_column.py:309 lib/elements/stroke.py:475
-msgid "Reverse first rail"
-msgstr "Otočit první obrysovou čáru"
-
-#: lib/elements/satin_column.py:310 lib/elements/stroke.py:476
-msgid "Reverse second rail"
-msgstr "Otočit druhou obrysovou čáru"
-
-#: lib/elements/satin_column.py:311 lib/elements/stroke.py:477
-msgid "Reverse both rails"
-msgstr "Otočit obě obrysové čáry"
-
-#: lib/elements/satin_column.py:316
+#: lib/elements/satin_column/satin_column.py:241
 msgid "Push compensation"
 msgstr ""
 
-#: lib/elements/satin_column.py:317
+#: lib/elements/satin_column/satin_column.py:242
 msgid "Shrinks the column at start and/or end."
 msgstr ""
 
-#: lib/elements/satin_column.py:328 lib/elements/stroke.py:483
-msgid "Reverse rails"
-msgstr "Otočit obrysové čáry"
-
-#: lib/elements/satin_column.py:329
+#: lib/elements/satin_column/satin_column.py:254
 msgid "This may help if your satin renders very strangely.  Default: automatically detect and fix a reversed rail."
 msgstr "To může pomoci, pokud se váš satén vykreslí velmi podivně. Výchozí: automaticky detekuje a opraví obrácenou obrysovou čáru."
 
-#: lib/elements/satin_column.py:378 lib/elements/stroke.py:498
-msgid "Swap rails"
-msgstr "Vyměnit obrysové čáry"
-
-#: lib/elements/satin_column.py:379
+#: lib/elements/satin_column/satin_column.py:267
 msgid "Swaps the first and second rails of the satin column, affecting which side the thread finished on as well as any sided properties"
 msgstr "Prohodí první a druhou obrysovou čáru saténového sloupku a ovlivní, na které straně je nit ukončena, stejně jako případné stranové vlastnosti"
 
-#: lib/elements/satin_column.py:390
+#: lib/elements/satin_column/satin_column.py:278
 msgid "Length of stitches for start and end point connections."
 msgstr "Délka stehů pro spojení počátečního a koncového bodu."
 
-#: lib/elements/satin_column.py:412
+#: lib/elements/satin_column/satin_column.py:300
 msgid "Running Stitch Position"
 msgstr "Pozice rovného stehu"
 
-#: lib/elements/satin_column.py:413
+#: lib/elements/satin_column/satin_column.py:301
 #, python-format
 msgid "Position of running stitches between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Pozice rovného stehu mezi vodicími linkami. 0 % je podél první vodicí linky, 50 % je uprostřed, 100 % je podél druhé vodicí linky."
 
-#: lib/elements/satin_column.py:421
+#: lib/elements/satin_column/satin_column.py:309
 msgid "Start at nearest point"
 msgstr "Začněte v nejbližším bodě"
 
-#: lib/elements/satin_column.py:422
+#: lib/elements/satin_column/satin_column.py:310
 msgid "Start at nearest point to previous element. A start position command will overwrite this setting."
 msgstr "Začněte v nejbližším bodě k předchozímu prvku. Příkaz počáteční pozice toto nastavení přepíše."
 
-#: lib/elements/satin_column.py:429
+#: lib/elements/satin_column/satin_column.py:317
 msgid "End at nearest point"
 msgstr "Konec v nejbližším bodě"
 
-#: lib/elements/satin_column.py:430
+#: lib/elements/satin_column/satin_column.py:318
 msgid "End at nearest point to the next element. An end position command will overwrite this setting."
 msgstr "Konec v nejbližším bodě k dalšímu prvku. Příkaz koncové polohy toto nastavení přepíše."
 
-#: lib/elements/satin_column.py:436 inx/inkstitch_fill_to_satin.inx:16
+#: lib/elements/satin_column/satin_column.py:324
+#: inx/inkstitch_fill_to_satin.inx:16
 msgid "Contour underlay"
 msgstr "Konturová podšívka"
 
-#: lib/elements/satin_column.py:436 lib/elements/satin_column.py:443
-#: lib/elements/satin_column.py:457 lib/elements/satin_column.py:469
-#: lib/elements/satin_column.py:484
+#: lib/elements/satin_column/satin_column.py:324
+#: lib/elements/satin_column/satin_column.py:331
+#: lib/elements/satin_column/satin_column.py:345
+#: lib/elements/satin_column/satin_column.py:357
+#: lib/elements/satin_column/satin_column.py:372
 msgid "Contour Underlay"
 msgstr "Konturová Podšívka"
 
-#: lib/elements/satin_column.py:443 lib/elements/satin_column.py:500
+#: lib/elements/satin_column/satin_column.py:331
+#: lib/elements/satin_column/satin_column.py:388
 #: lib/sew_stack/stitch_layers/running_stitch/running_stitch_layer.py:20
 #: inx/inkstitch_knockdown_fill.inx:18
 msgid "Stitch length"
 msgstr "Délka stehu"
 
-#: lib/elements/satin_column.py:450 lib/elements/satin_column.py:507
-#: lib/elements/stroke.py:178
-msgid "Stitch tolerance"
-msgstr "Tolerance stehu"
-
-#: lib/elements/satin_column.py:452
+#: lib/elements/satin_column/satin_column.py:340
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. "
 msgstr "Všechny stehy se musí nacházet v této vzdálenosti od cesty. Nižší tolerance znamená, že stehy budou blíže k sobě. Vyšší tolerance znamená, že ostré rohy mohou být zaoblené. "
 
-#: lib/elements/satin_column.py:467
+#: lib/elements/satin_column/satin_column.py:355
 msgid "Inset distance (fixed)"
 msgstr "Vzdálenost vsazení (pevná)"
 
-#: lib/elements/satin_column.py:468
+#: lib/elements/satin_column/satin_column.py:356
 msgid "Shrink the outline by a fixed length, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Zkraťte obrys o pevnou délku, aby se podložka neobjevila na vnější straně saténového sloupku."
 
-#: lib/elements/satin_column.py:481
+#: lib/elements/satin_column/satin_column.py:369
 msgid "Inset distance (proportional)"
 msgstr "Vzdálenost vsazení (proporcionální)"
 
-#: lib/elements/satin_column.py:482
+#: lib/elements/satin_column/satin_column.py:370
 msgid "Shrink the outline by a proportion of the column width, to prevent the underlay from showing around the outside of the satin column."
 msgstr "Zmenšete obrys o poměrnou část šířky sloupku, aby se podložka neobjevila kolem vnější strany saténového sloupku."
 
-#: lib/elements/satin_column.py:493 inx/inkstitch_fill_to_satin.inx:15
+#: lib/elements/satin_column/satin_column.py:381
+#: inx/inkstitch_fill_to_satin.inx:15
 msgid "Center-walk underlay"
 msgstr "Středová podšívka"
 
-#: lib/elements/satin_column.py:493 lib/elements/satin_column.py:500
-#: lib/elements/satin_column.py:515 lib/elements/satin_column.py:528
-#: lib/elements/satin_column.py:538
+#: lib/elements/satin_column/satin_column.py:381
+#: lib/elements/satin_column/satin_column.py:388
+#: lib/elements/satin_column/satin_column.py:403
+#: lib/elements/satin_column/satin_column.py:416
+#: lib/elements/satin_column/satin_column.py:426
 msgid "Center-Walk Underlay"
 msgstr "Středová podšívka"
 
-#: lib/elements/satin_column.py:509
+#: lib/elements/satin_column/satin_column.py:397
 msgid "All stitches must be within this distance from the path. A lower tolerance means stitches will be closer together. A higher tolerance means sharp corners may be rounded. Defaults to stitch length."
 msgstr "Všechny stehy musí být v této vzdálenosti od cesty. Nižší tolerance znamená, že stehy budou blíže k sobě. Vyšší tolerance znamená, že ostré rohy mohou být zaoblené. Výchozí délka stehu."
 
-#: lib/elements/satin_column.py:526
+#: lib/elements/satin_column/satin_column.py:414
 msgid "For an odd number of repeats, this will reverse the direction the satin column is stitched, causing stitching to both begin and end at the start point."
 msgstr "Pro lichý počet opakování se tím obrátí směr prošívání saténového sloupku, což způsobí, že šití začíná i končí v počátečním bodě."
 
-#: lib/elements/satin_column.py:536 lib/gui/tartan/customize_panel.py:38
+#: lib/elements/satin_column/satin_column.py:424
+#: lib/gui/tartan/customize_panel.py:38
 msgid "Position"
 msgstr "Poloha"
 
-#: lib/elements/satin_column.py:537
+#: lib/elements/satin_column/satin_column.py:425
 #, python-format
 msgid "Position of underlay from between the rails. 0% is along the first rail, 50% is centered, 100% is along the second rail."
 msgstr "Poloha podšívky mezi kolejnicemi. 0 % je podél první kolejnice, 50 % je vystředěno, 100 % je podél druhé kolejnice."
 
-#: lib/elements/satin_column.py:545 inx/inkstitch_fill_to_satin.inx:17
+#: lib/elements/satin_column/satin_column.py:433
+#: inx/inkstitch_fill_to_satin.inx:17
 msgid "Zig-zag underlay"
 msgstr "Cik-cak podšívka"
 
-#: lib/elements/satin_column.py:545 lib/elements/satin_column.py:554
-#: lib/elements/satin_column.py:565 lib/elements/satin_column.py:585
-#: lib/elements/satin_column.py:598
+#: lib/elements/satin_column/satin_column.py:433
+#: lib/elements/satin_column/satin_column.py:442
+#: lib/elements/satin_column/satin_column.py:453
+#: lib/elements/satin_column/satin_column.py:473
+#: lib/elements/satin_column/satin_column.py:486
 msgid "Zig-zag Underlay"
 msgstr "Cik-cak Podšívka"
 
-#: lib/elements/satin_column.py:551
+#: lib/elements/satin_column/satin_column.py:439
 msgid "Zig-Zag spacing (peak-to-peak)"
 msgstr "Rozestup cik-cak (od vrcholu k vrcholu)"
 
-#: lib/elements/satin_column.py:552
+#: lib/elements/satin_column/satin_column.py:440
 msgid "Distance between peaks of the zig-zags."
 msgstr "Vzdálenost mezi vrcholy cik-cak bodů."
 
-#: lib/elements/satin_column.py:562
+#: lib/elements/satin_column/satin_column.py:450
 msgid "Inset amount (fixed)"
 msgstr "Odsazení (pevné)"
 
-#: lib/elements/satin_column.py:563 lib/elements/satin_column.py:583
+#: lib/elements/satin_column/satin_column.py:451
+#: lib/elements/satin_column/satin_column.py:471
 msgid "default: half of contour underlay inset"
 msgstr "výchozí: polovina odsazení obrysu podložení"
 
-#: lib/elements/satin_column.py:582
+#: lib/elements/satin_column/satin_column.py:470
 msgid "Inset amount (proportional)"
 msgstr "Odsazení (proporcionální)"
 
-#: lib/elements/satin_column.py:596
+#: lib/elements/satin_column/satin_column.py:484
 msgid "Split stitch if distance of maximum stitch length is exceeded"
 msgstr "Rozdělte steh, pokud je překročena vzdálenost maximální délky stehu"
+
+#: lib/elements/satin_column/validation_models.py:4
+msgid "Each rung should intersect both rails once."
+msgstr "Každá vrstva stehu by měla jednou protnout obě vnější linie."
+
+#: lib/elements/satin_column/validation_models.py:8
+msgid "Not stitchable satin column"
+msgstr "Saténový sloupek nelze sešít"
+
+#: lib/elements/satin_column/validation_models.py:9
+msgid "A satin column can be build from a single stroke or consists of two rails and optional rungs. This satin column has a different setup."
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:12
+msgid "Make sure your satin column is not a combination of multiple satin columns."
+msgstr "Ujistěte se, že saténový sloupek není kombinací více saténových sloupků."
+
+#: lib/elements/satin_column/validation_models.py:13
+msgid "Go to our website and read how a satin column should look like https://inkstitch.org/docs/stitches/satin-column/"
+msgstr "Přejděte na náš web a zjistěte, jak se konstruují saténové sloupy: https://inkstitch.org/de/docs/stitches/satin-column/"
+
+#: lib/elements/satin_column/validation_models.py:18
+msgid "Rail is a closed path"
+msgstr "Vnější obrys je uzavřená dráha"
+
+#: lib/elements/satin_column/validation_models.py:19
+msgid "Rail is a closed path without a definite starting and ending point."
+msgstr "Vnější obrys je uzavřená dráha bez předem definovaného počátečního a koncového bodu."
+
+#: lib/elements/satin_column/validation_models.py:21
+msgid "* Select the node where you want the satin to start."
+msgstr "* Vyberte uzel, kde má saténový sloupec začínat."
+
+#: lib/elements/satin_column/validation_models.py:22
+msgid "* Click on: Break path at selected nodes."
+msgstr "* Klikněte na: Rozdělit cestu ve vybraných uzlech."
+
+#: lib/elements/satin_column/validation_models.py:27
+msgid "Rung doesn't intersect rails"
+msgstr "Poloha stehu nepřekračuje vnější čáru"
+
+#: lib/elements/satin_column/validation_models.py:28
+msgid "Satin column: A rung doesn't intersect both rails."
+msgstr "Saténový sloupec: Vrstva stehu neprotíná obě vnější linie."
+
+#: lib/elements/satin_column/validation_models.py:32
+msgid "Satin has no rungs"
+msgstr "Satén nemá žádné příčky"
+
+#: lib/elements/satin_column/validation_models.py:33
+msgid "Rungs control the stitch direction in satin columns. It is best practice to use them."
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:35
+#: lib/elements/satin_column/validation_models.py:67
+#: lib/elements/satin_column/validation_models.py:78
+msgid "* With the selected object press \"P\" to activate the pencil tool."
+msgstr "* S vybraným objektem stiskněte \"P\" pro aktivaci nástroje tužka."
+
+#: lib/elements/satin_column/validation_models.py:36
+#: lib/elements/satin_column/validation_models.py:68
+msgid "* Hold \"Shift\" while drawing a rung."
+msgstr "* Při kreslení příček podržte \"Shift\"."
+
+#: lib/elements/satin_column/validation_models.py:41
+msgid "Rung intersects too many times"
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:42
+msgid "Satin column: A rung intersects a rail more than once."
+msgstr "Saténový sloupec: Vrstva stehu několikrát protíná obrysovou čáru."
+
+#: lib/elements/satin_column/validation_models.py:46
+msgid "Simple Satin"
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:47
+msgid "If you need more control over the stitch directions within this satin column, convert it to a real satin path"
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:49
+msgid "* Select the satin path"
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:50
+msgid "* Run Extensions > Ink/Stitch > Tools: Satin > Stroke to Satin"
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:55
+msgid "Narrow Satin"
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:56
+msgid "This element renders as a satin, but it is too narrow."
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:59
+msgid "Ink/Stitch will not register elements with a stroke width underneath 0.3 mm as satin, but it is recommended to stay above 1mm."
+msgstr ""
+
+#: lib/elements/satin_column/validation_models.py:64
+msgid "Satin has exactly two rungs"
+msgstr "Satén má rovnou dvě příčky"
+
+#: lib/elements/satin_column/validation_models.py:65
+msgid "There are exactly two rungs. This may lead to false rail/rung detection."
+msgstr "Příčky jsou přesně dvě. To může vést k falešné detekci obrysových čár/příčky."
+
+#: lib/elements/satin_column/validation_models.py:73
+msgid "Unequal number of points"
+msgstr "Nestejný počet bodů"
+
+#: lib/elements/satin_column/validation_models.py:74
+msgid "Satin column: There are no rungs and rails have an unequal number of points."
+msgstr "Saténový sloup: Nejsou zde žádné příčky a obrysové čáry mají nestejný počet bodů."
+
+#: lib/elements/satin_column/validation_models.py:76
+msgid "The easiest way to solve this issue is to add one or more rungs. "
+msgstr "Nejjednodušší způsob, jak tento problém vyřešit, je přidat jednu nebo více příček. "
+
+#: lib/elements/satin_column/validation_models.py:77
+msgid "Rungs control the stitch direction in satin columns."
+msgstr "Příčky řídí směr stehu v saténových sloupcích."
+
+#: lib/elements/satin_column/validation_models.py:79
+msgid "* Hold \"Shift\" while drawing the rung."
+msgstr "* Při kreslení příčky podržte \"Shift\"."
 
 #: lib/elements/stroke.py:38
 msgid "Too narrow satin"
@@ -2625,6 +2613,10 @@ msgstr ""
 #: lib/elements/stroke.py:39
 msgid "This element renders as running stitch while it has a satin column parameter."
 msgstr "Tento prvek se vykresluje jako přední steh, zatímco má parametr saténový sloupec."
+
+#: lib/elements/satin_column/validation_models.py:58 lib/elements/stroke.py:41
+msgid "* Increase stroke width."
+msgstr ""
 
 #: lib/elements/stroke.py:42
 msgid "Whether or not a stroke can be rendered as a satin, depends on the stroke width and the preference value for the minimum satin stroke width. The stroke width has to be wider than the preference setting, otherwise this element will be treated as a running stitch. To not produce hard stitches, it is recommended to only use satins wider than 1mm."
@@ -2656,6 +2648,11 @@ msgstr "CikCak Steh"
 msgid "Manual Stitch"
 msgstr "Manuální Steh"
 
+#: lib/elements/satin_column/satin_column.py:55 lib/elements/stroke.py:86
+#: inx/inkstitch_break_apart.inx:9
+msgid "Method"
+msgstr "Metoda"
+
 #: lib/elements/stroke.py:142
 msgid "Manual stitch placement"
 msgstr "Ruční umístění stehu"
@@ -2668,6 +2665,11 @@ msgstr "K původnímu vzoru zvlnění nebudou přidány žádné další stehy a
 msgid "Length of stitches. Stitches can be shorter according to the stitch tolerance setting.\n"
 "It is possible to create stitch length patterns by adding multiple values separately."
 msgstr ""
+
+#: lib/elements/satin_column/satin_column.py:338
+#: lib/elements/satin_column/satin_column.py:395 lib/elements/stroke.py:178
+msgid "Stitch tolerance"
+msgstr "Tolerance stehu"
 
 #: lib/elements/stroke.py:180
 msgid "All stitches must be within this distance from the path.  A lower tolerance means stitches will be closer together.  A higher tolerance means sharp corners may be rounded."
@@ -2781,9 +2783,37 @@ msgstr "Naopak"
 msgid "Flip start and end point"
 msgstr "Překlopit počáteční a koncový bod"
 
+#: lib/elements/satin_column/satin_column.py:232 lib/elements/stroke.py:473
+msgid "Automatic"
+msgstr "Automaticky"
+
+#: lib/elements/satin_column/satin_column.py:233 lib/elements/stroke.py:474
+msgid "Don't reverse"
+msgstr "Nevracet"
+
+#: lib/elements/satin_column/satin_column.py:234 lib/elements/stroke.py:475
+msgid "Reverse first rail"
+msgstr "Otočit první obrysovou čáru"
+
+#: lib/elements/satin_column/satin_column.py:235 lib/elements/stroke.py:476
+msgid "Reverse second rail"
+msgstr "Otočit druhou obrysovou čáru"
+
+#: lib/elements/satin_column/satin_column.py:236 lib/elements/stroke.py:477
+msgid "Reverse both rails"
+msgstr "Otočit obě obrysové čáry"
+
+#: lib/elements/satin_column/satin_column.py:253 lib/elements/stroke.py:483
+msgid "Reverse rails"
+msgstr "Otočit obrysové čáry"
+
 #: lib/elements/stroke.py:484
 msgid "Reverse satin ripple rails. Default: automatically detect and fix a reversed rail."
 msgstr ""
+
+#: lib/elements/satin_column/satin_column.py:266 lib/elements/stroke.py:498
+msgid "Swap rails"
+msgstr "Vyměnit obrysové čáry"
 
 #: lib/elements/stroke.py:499
 msgid "Swaps the first and second rails of a satin ripple, affecting which side the thread finished on as well as any sided properties"
@@ -2883,7 +2913,7 @@ msgstr "* Text: Vytvořte si vlastní písmena nebo vyzkoušejte nástroj pro ps
 msgid "- Extensions > Ink/Stitch > Lettering"
 msgstr "- Rozšíření > Ink/Stitch > Písmo"
 
-#: lib/elements/utils/stroke_to_satin.py:97
+#: lib/elements/utils/stroke_to_satin.py:99
 msgid "Ink/Stitch cannot convert your stroke into a satin column. Please break up your path and try again."
 msgstr "Ink/Stitch nemůže převést váš tah na saténový sloupec. Přerušte si cestu a zkuste to znovu."
 
@@ -2951,15 +2981,15 @@ msgid "Please chose an other color palette for your design."
 msgstr "Vyberte si prosím jinou barevnou paletu pro svůj design."
 
 #. auto-route running stitch columns extension
-#: lib/extensions/auto_run.py:60 lib/extensions/cutwork_segmentation.py:45
+#: lib/extensions/auto_run.py:59 lib/extensions/cutwork_segmentation.py:45
 msgid "Please select one or more stroke elements."
 msgstr "Vyberte jeden nebo více prvků tahu."
 
-#: lib/extensions/auto_run.py:65
+#: lib/extensions/auto_run.py:64
 msgid "Please select at least one stroke element."
 msgstr "Vyberte prosím alespoň jeden prvek tahu."
 
-#: lib/extensions/auto_run.py:76 lib/stitches/auto_satin.py:399
+#: lib/extensions/auto_run.py:75 lib/stitches/auto_satin.py:408
 msgid "Auto-Route"
 msgstr "Automatická trasa"
 
@@ -5478,14 +5508,14 @@ msgstr "Automatická trasa podšívky %d"
 
 #. Label for a satin column created by Auto-Route Satin Columns and Lettering
 #. extensions
-#: lib/stitches/auto_satin.py:609
+#: lib/stitches/auto_satin.py:618
 #, python-format
 msgid "AutoSatin %d"
 msgstr "Automaticky vyplnit satén %d"
 
 #. Label for running stitch (underpathing) created by Auto-Route Satin Columns
 #. amd Lettering extensions
-#: lib/stitches/auto_satin.py:612
+#: lib/stitches/auto_satin.py:621
 #, python-format
 msgid "AutoSatin Running Stitch %d"
 msgstr "AutoSatén předního stehu %d"
