@@ -120,6 +120,10 @@ class Inksim(InkstitchExtension):
         if ink_sim_env:
             base_command = shlex.split(ink_sim_env)
         else:
+            # Use the console ``inksim`` binary here (not ``inksim-gui``): we
+            # read the JSON response from stdout, and a GUI-subsystem
+            # executable on Windows has no attached console and produces no
+            # stdout.  The console window is suppressed via CREATE_NO_WINDOW.
             ink_sim = shutil.which("inksim")
             if ink_sim is None:
                 return False
@@ -195,6 +199,9 @@ class Inksim(InkstitchExtension):
         if ink_sim_env:
             command = shlex.split(ink_sim_env)
         else:
+            # Use the GUI launcher on Windows so no console window pops up;
+            # unlike _send_to_server we discard output here (DEVNULL), so we
+            # do not need the console binary's stdout.
             launcher = "inksim-gui" if sys.platform == "win32" else "inksim"
             ink_sim = shutil.which(launcher)
             if ink_sim is None:
