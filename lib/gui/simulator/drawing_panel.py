@@ -7,9 +7,11 @@ import math
 
 import wx
 from numpy import split
+from typing import Optional, Tuple
 
 from ...debug.debug import debug
 from ...i18n import _
+from ...stitch_plan import StitchPlan
 from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
 
@@ -21,6 +23,39 @@ JUMP = 1
 TRIM = 2
 STOP = 3
 COLOR_CHANGE = 4
+
+
+class LoadingIndicator:
+    """ Loading indicator that is shown while generating the stitch plan """
+    RENDERING = _("Stitching...")
+    PADDING = 10  # Padding around the text in px
+    CORNER_RADIUS = 10  # px
+
+    def __init__(self) -> None:
+        self.font = wx.Font(30, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
+        self.bg_brush = wx.Brush(wx.Colour(0, 0, 0, alpha=100))
+        self.bounds: Optional[Tuple[float, float]] = None
+
+    def paint(self, canvas: wx.GraphicsContext) -> None:
+        panel_width, panel_height = canvas.GetSize()
+
+        canvas.SetFont(self.font, wx.WHITE)
+        if self.bounds is None:
+            t_w, t_h, t_d, t_el = canvas.GetFullTextExtent(self.RENDERING)
+            self.bounds = (t_w, t_h)
+
+        w, h = self.bounds
+        # TRANSPARENT_PEN is there, but it's not in the types for some reason.
+        canvas.SetPen(wx.TRANSPARENT_PEN)  # type:ignore[attr-defined]
+        canvas.SetBrush(self.bg_brush)
+        canvas.DrawRoundedRectangle(
+            ((panel_width-w)/2)-self.PADDING,
+            ((panel_height-h)/2)-self.PADDING,
+            w+2*self.PADDING,
+            h+2*self.PADDING,
+            self.CORNER_RADIUS
+        )
+        canvas.DrawText(self.RENDERING, (panel_width-w)/2, (panel_height-h)/2)
 
 
 class DrawingPanel(wx.Panel):
@@ -35,10 +70,10 @@ class DrawingPanel(wx.Panel):
     # corresponding amount during rendering.
     PIXEL_DENSITY = 10
 
-    def __init__(self, parent, *args, **kwargs):
+    def __init__(self, parent, *args, **kwargs) -> None:
         """"""
         self.parent = parent
-        self.stitch_plan = kwargs.pop('stitch_plan', None)
+        self.stitch_plan: Optional[StitchPlan] = kwargs.pop('stitch_plan', None)
         kwargs['style'] = wx.BORDER_SUNKEN
 
         wx.Panel.__init__(self, parent, *args, **kwargs)
@@ -52,6 +87,9 @@ class DrawingPanel(wx.Panel):
         self.SetBackgroundColour('#FFFFFF')
         self.SetDoubleBuffered(True)
 
+        self.loading = False
+        self.loading_indicator = LoadingIndicator()
+
         self.animating = False
         self.timer = wx.Timer(self)
         self.last_frame_start = 0
@@ -61,8 +99,7 @@ class DrawingPanel(wx.Panel):
         self.black_pen = wx.Pen((128, 128, 128))
         self.width = 0
         self.height = 0
-        self.loaded = False
-        self.page_specs = {}
+        self.page_specs: dict = {}
         self.show_page = global_settings['toggle_page_button_status']
         self.background_color = None
 
@@ -81,9 +118,8 @@ class DrawingPanel(wx.Panel):
         self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_TIMER, self.animate)
 
-        # wait for layouts so that panel size is set
-        if self.stitch_plan:
-            wx.CallLater(50, self.load, self.stitch_plan)
+        if self.stitch_plan is not None:
+            self.load(self.stitch_plan)
 
     def on_resize(self, event):
         self.choose_zoom_and_pan()
@@ -134,15 +170,14 @@ class DrawingPanel(wx.Panel):
 
     def OnPaint(self, e):
         dc = wx.PaintDC(self)
-
-        if not self.loaded:
-            dc.Clear()
-            return
-
         canvas = wx.GraphicsContext.Create(dc)
 
-        self.draw_stitches(canvas)
-        self.draw_scale(canvas)
+        if self.stitch_plan is not None:
+            self.draw_stitches(canvas)
+            self.draw_scale(canvas)
+
+        if self.loading:
+            self.loading_indicator.paint(canvas)
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -156,7 +191,7 @@ class DrawingPanel(wx.Panel):
                 canvas.SetPen(wx.TRANSPARENT_PEN)
                 canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(border_color.Red(), border_color.Green(), border_color.Blue(), alpha=65))))
                 canvas.DrawRoundedRectangle(
-                    (-self.page_specs['x'] + 4) * self.PIXEL_DENSITY, (-self.page_specs['y'] + 4) * self.PIXEL_DENSITY,
+                    4 * self.PIXEL_DENSITY, 4 * self.PIXEL_DENSITY,
                     self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY,
                     1 * self.PIXEL_DENSITY
                 )
@@ -168,7 +203,7 @@ class DrawingPanel(wx.Panel):
             canvas.SetBrush(wx.Brush(wx.Colour(self.background_color or self.page_specs['page_color'])))
 
             canvas.DrawRectangle(
-                -self.page_specs['x'] * self.PIXEL_DENSITY, -self.page_specs['y'] * self.PIXEL_DENSITY,
+                0.0, 0.0,
                 self.page_specs['width'] * self.PIXEL_DENSITY, self.page_specs['height'] * self.PIXEL_DENSITY
             )
 
@@ -283,15 +318,16 @@ class DrawingPanel(wx.Panel):
                 canvas.DrawEllipse(stitch[0]-(npp_size / 2), stitch[1]-(npp_size / 2), npp_size, npp_size)
 
     def clear(self):
-        self.loaded = False
+        self.stitch_plan = None
         self.Refresh()
 
-    def load(self, stitch_plan):
+    def load(self, stitch_plan: StitchPlan) -> None:
+        self.stitch_plan = stitch_plan
         self.current_stitch = 1
         self.direction = 1
-        self.minx, self.miny, self.maxx, self.maxy = stitch_plan.bounding_box
-        self.width = self.maxx - self.minx
-        self.height = self.maxy - self.miny
+        minx, miny, maxx, maxy = stitch_plan.bounding_box
+        self.width = maxx - minx
+        self.height = maxy - miny
         self.dimensions_mm = stitch_plan.dimensions_mm
         self.num_stitches = stitch_plan.num_stitches
         self.num_trims = stitch_plan.num_trims
@@ -301,7 +337,8 @@ class DrawingPanel(wx.Panel):
         self.parse_stitch_plan(stitch_plan)
         self.choose_zoom_and_pan()
         self.set_current_stitch(0)
-        statusbar = self.GetTopLevelParent().statusbar
+        # Detangling the DrawingPanel-> SimulatorWindow.statusbar dependency can wait for now
+        statusbar = self.GetTopLevelParent().statusbar  # type:ignore[attr-defined]
         statusbar.SetStatusText(
             _("Dimensions: {:.2f} x {:.2f}").format(
                 stitch_plan.dimensions_mm[0],
@@ -309,7 +346,6 @@ class DrawingPanel(wx.Panel):
             ),
             1
         )
-        self.loaded = True
         self.go()
         if hasattr(self.view_panel, 'info_panel') and self.view_panel.info_panel is not None:
             self.view_panel.info_panel.update()
@@ -337,19 +373,22 @@ class DrawingPanel(wx.Panel):
 
     def choose_zoom_and_pan(self, event=None):
         # ignore if EVT_SIZE fired before we load the stitch plan
-        if not self.width and not self.height and event is not None:
+        if self.stitch_plan is None:
             return
 
+        minx, miny, maxx, maxy = self.stitch_plan.bounding_box
+        width = maxx-minx
+        height = maxy-miny
         panel_width, panel_height = self.GetClientSize()
 
         # add some padding to make stitches at the edge more visible
-        width_ratio = panel_width / float(self.width + 10)
-        height_ratio = panel_height / float(self.height + 10)
+        width_ratio = panel_width / float(width + 10)
+        height_ratio = panel_height / float(height + 10)
         self.zoom = max(min(width_ratio, height_ratio), 0.01)
 
         # center the design
-        self.pan = ((panel_width - self.zoom * self.width) / 2.0,
-                    (panel_height - self.zoom * self.height) / 2.0)
+        self.pan = ((panel_width - self.zoom * (minx + maxx)) / 2.0,
+                    (panel_height - self.zoom * (miny + maxy)) / 2.0)
 
     def stop(self):
         self.animating = False
@@ -357,7 +396,7 @@ class DrawingPanel(wx.Panel):
         self.control_panel.on_stop()
 
     def go(self):
-        if not self.loaded:
+        if self.stitch_plan is None:
             return
 
         if not self.animating:
@@ -376,6 +415,9 @@ class DrawingPanel(wx.Panel):
         return wx.Pen(list(map(int, color.visible_on_background(background_color).rgb)), int(line_width))
 
     def update_pen_size(self):
+        if self.stitch_plan is None:
+            return  # Pens are only valid after a stitch plan is loaded
+
         line_width = global_settings['simulator_line_width'] * PIXELS_PER_MM * self.PIXEL_DENSITY
         for pen in self.pens:
             pen.SetWidth(int(line_width))
@@ -395,10 +437,9 @@ class DrawingPanel(wx.Panel):
             stitch_index = 0
 
             for stitch in color_block:
-                # trim any whitespace on the left and top and scale to the
-                # pixel density
-                stitch_block.append((self.PIXEL_DENSITY * (stitch.x - self.minx),
-                                     self.PIXEL_DENSITY * (stitch.y - self.miny)))
+                # scale to the pixel density
+                stitch_block.append((self.PIXEL_DENSITY * (stitch.x),
+                                     self.PIXEL_DENSITY * (stitch.y)))
 
                 if stitch.trim:
                     self.commands.append(TRIM)
@@ -468,7 +509,7 @@ class DrawingPanel(wx.Panel):
         self.set_current_stitch(self.current_stitch - 1)
 
     def on_left_mouse_button_down(self, event):
-        if self.loaded:
+        if self.stitch_plan is not None:
             self.CaptureMouse()
             self.drag_start = event.GetPosition()
             self.drag_original_pan = self.pan
@@ -530,4 +571,8 @@ class DrawingPanel(wx.Panel):
 
         self.zoom *= zoom_delta
 
+        self.Refresh()
+
+    def set_loading(self, loading: bool) -> None:
+        self.loading = loading
         self.Refresh()

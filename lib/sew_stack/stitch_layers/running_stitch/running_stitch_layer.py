@@ -101,7 +101,7 @@ class RunningStitchLayer(StitchLayer, RandomizationMixin, PathMixin):
 
             stitches.extend(running_stitch(
                 this_path,
-                self.config.stitch_length * PIXELS_PER_MM,
+                [self.config.stitch_length * PIXELS_PER_MM],
                 self.config.tolerance * PIXELS_PER_MM,
                 (self.config.stitch_length_jitter_percent > 0),
                 self.config.stitch_length_jitter_percent,

@@ -4,22 +4,28 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import wx
+from typing import TYPE_CHECKING, cast
 
 from ...i18n import _
 from ...utils.settings import global_settings
+
+if TYPE_CHECKING:
+    from .drawing_panel import DrawingPanel
+    from .control_panel import ControlPanel
+    from .view_panel import ViewPanel
 
 
 class SimulatorPreferenceDialog(wx.Dialog):
     """A dialog to set simulator preferences
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs) -> None:
         super(SimulatorPreferenceDialog, self).__init__(*args, **kwargs)
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
-        self.view_panel = self.GetParent()
-        self.drawing_panel = self.view_panel.drawing_panel
-        self.control_panel = self.view_panel.control_panel
+        self.view_panel = cast('ViewPanel', self.GetParent())
+        self.drawing_panel: 'DrawingPanel' = self.view_panel.drawing_panel
+        self.control_panel: 'ControlPanel' = self.view_panel.control_panel
 
         self.adaptive_speed_value = global_settings['simulator_adaptive_speed']
         self.line_width_value = global_settings['simulator_line_width']
@@ -83,7 +89,7 @@ class SimulatorPreferenceDialog(wx.Dialog):
 
     def on_change(self, attribute, event):
         global_settings[attribute] = event.EventObject.GetValue()
-        if self.drawing_panel.loaded and attribute == 'simulator_line_width':
+        if attribute == 'simulator_line_width':
             self.drawing_panel.update_pen_size()
         self.drawing_panel.Refresh()
 
@@ -107,7 +113,6 @@ class SimulatorPreferenceDialog(wx.Dialog):
 
     def on_cancel(self, event):
         self.save_settings()
-        if self.drawing_panel.loaded:
-            self.drawing_panel.update_pen_size()
-            self.drawing_panel.Refresh()
+        self.drawing_panel.update_pen_size()
+        self.drawing_panel.Refresh()
         self.Close()

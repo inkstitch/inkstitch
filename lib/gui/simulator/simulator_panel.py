@@ -3,16 +3,20 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import wx
+from typing import Optional
 
 from . import ControlPanel, DrawingPanel, ViewPanel
+from .simulator_renderer import PreviewRenderer, RenderFunction
+from ...stitch_plan import StitchPlan
 
 
 class SimulatorPanel(wx.Panel):
     """"""
-
-    def __init__(self, parent, stitch_plan=None, background_color='white', target_duration=5, stitches_per_second=16, detach_callback=None):
+    def __init__(self, parent, stitch_plan=None, background_color='white', target_duration=5, stitches_per_second=16, detach_callback=None) -> None:
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
+
+        self.preview_renderer: PreviewRenderer | None = None
 
         self.cp = ControlPanel(
             self,
@@ -80,19 +84,43 @@ class SimulatorPanel(wx.Panel):
         self.accel_table = wx.AcceleratorTable(self.accel_entries)
         self.SetAcceleratorTable(self.accel_table)
 
-    def go(self):
+    def go(self) -> None:
         self.dp.go()
 
-    def stop(self):
+    def stop(self) -> None:
         self.dp.stop()
 
-    def load(self, stitch_plan):
+    def load(self, stitch_plan: StitchPlan) -> None:
         self.dp.load(stitch_plan)
         self.cp.load(stitch_plan)
 
-    def clear(self):
+    def clear(self) -> None:
         self.dp.clear()
         self.cp.clear()
 
-    def set_page_specs(self, page_specs):
+    def set_page_specs(self, page_specs: dict) -> None:
         self.dp.set_page_specs(page_specs)
+
+    def set_render_fn(self, render_fn: RenderFunction) -> None:
+        self.preview_renderer = PreviewRenderer(
+            render_stitch_plan=render_fn,
+            rendering_completed=self.on_stitch_plan_rendered
+        )
+
+    def render(self) -> None:
+        if self.preview_renderer is None:
+            return
+
+        self.dp.set_loading(True)
+        self.preview_renderer.update()
+
+    def on_stitch_plan_rendered(self, stitch_plan: Optional[StitchPlan]) -> None:
+        try:
+            self.dp.set_loading(False)
+            if stitch_plan is not None:
+                self.stop()
+                self.load(stitch_plan)
+                self.go()
+        except RuntimeError:
+            # this can happen when they close the window at a bad time
+            pass

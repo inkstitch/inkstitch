@@ -12,7 +12,7 @@ from wx.lib.splitter import MultiSplitterWindow  # type:ignore[import-untyped]
 from .base import InkstitchExtension
 from ..debug.debug import debug
 from ..exceptions import InkstitchException, format_uncaught_exception
-from ..gui import PreviewRenderer, WarningPanel, confirm_dialog
+from ..gui import WarningPanel, confirm_dialog
 from ..gui.simulator import SplitSimulatorWindow
 from ..i18n import _
 from ..sew_stack import SewStack
@@ -110,7 +110,7 @@ class SewStackPanel(wx.Panel):
         # self.layer_list.Bind(ulc.EVT_LIST_ITEM_DESELECTED, self.on_layer_selection_changed)
         self.Bind(wx.EVT_CHECKBOX, self.on_checkbox)
 
-        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
+        self.simulator.set_render_fn(self.render_stitch_plan)
 
         self.warning_panel = WarningPanel(self)
         self.warning_panel.Hide()
@@ -440,8 +440,7 @@ class SewStackPanel(wx.Panel):
 
     def update_preview(self):
         self.simulator.stop()
-        self.simulator.clear()
-        self.preview_renderer.update()
+        self.simulator.render()
 
     def render_stitch_plan(self):
         try:
@@ -455,9 +454,9 @@ class SewStackPanel(wx.Panel):
             for sew_stack in self.sew_stacks:
                 if self.single_layer_preview_button.GetValue():
                     layer = sew_stack.layers[self.layer_list.GetFirstSelected()]
-                    stitch_groups.extend(layer.embroider(None))
+                    stitch_groups.extend(layer.embroider(None, None))
                 else:
-                    stitch_groups.extend(sew_stack.embroider(stitch_groups[-1] if stitch_groups else None))
+                    stitch_groups.extend(sew_stack.embroider(stitch_groups[-1] if stitch_groups else None, None))
 
                 check_stop_flag()
 
@@ -473,15 +472,6 @@ class SewStackPanel(wx.Panel):
             wx.CallAfter(self._show_warning, str(exc))
         except Exception:
             wx.CallAfter(self._show_warning, format_uncaught_exception())
-
-    def on_stitch_plan_rendered(self, stitch_plan):
-        try:
-            self.simulator.stop()
-            self.simulator.load(stitch_plan)
-            self.simulator.go()
-        except RuntimeError:
-            # this can happen when they close the window at a bad time
-            pass
 
     def _hide_warning(self):
         self.warning_panel.clear()

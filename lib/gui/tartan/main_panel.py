@@ -19,7 +19,7 @@ from ...tartan.palette import Palette
 from ...tartan.svg import TartanSvgGroup
 from ...utils import DotDict
 from ...utils.threading import ExitThread, check_stop_flag
-from .. import PresetsPanel, PreviewRenderer, WarningPanel
+from .. import PresetsPanel, WarningPanel
 from . import CodePanel, CustomizePanel, EmbroideryPanel, HelpPanel
 
 
@@ -38,7 +38,7 @@ class TartanMainPanel(wx.Panel):
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
 
         # preview
-        self.preview_renderer = PreviewRenderer(self.render_stitch_plan, self.on_stitch_plan_rendered)
+        self.simulator.set_render_fn(self.render_stitch_plan)
         # presets
         self.presets_panel = PresetsPanel(self)
         # warnings
@@ -183,7 +183,7 @@ class TartanMainPanel(wx.Panel):
         self.Layout()
 
     def update_preview(self, event=None):
-        self.preview_renderer.update()
+        self.simulator.render()
 
     def apply_preset_data(self, preset_data):
         settings = DotDict(preset_data)
@@ -271,8 +271,3 @@ class TartanMainPanel(wx.Panel):
                 TartanSvgGroup(self.settings).generate(node)
             else:
                 prepare_tartan_fill_element(node)
-
-    def on_stitch_plan_rendered(self, stitch_plan):
-        self.simulator.stop()
-        self.simulator.load(stitch_plan)
-        self.simulator.go()
