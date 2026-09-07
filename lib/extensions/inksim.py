@@ -104,8 +104,12 @@ class Inksim(InkstitchExtension):
             # loaded, so we do not leave temporary files behind.
             progress.Update(90, "Starting InkSim simulator...")
             server_running = self._send_to_server(temp_file_name)
-            if not server_running:
-                self._run_inksim(temp_file_name)
+            if not server_running and not self._run_inksim(temp_file_name):
+                try:
+                    os.unlink(temp_file_name)
+                except OSError:
+                    pass
+                sys.exit(1)
 
             self._log(f"InkSim: total time {time.time() - start_time:.2f}s")
         finally:
@@ -121,6 +125,20 @@ class Inksim(InkstitchExtension):
         # backend instead of being written to stderr (which Inkscape shows in
         # a modal error dialog).
         self.logger.info(message)
+
+    @staticmethod
+    def _read_server_response(result, output_path):
+        if result.returncode != 0:
+            return None
+        response_text = (
+            Path(output_path).read_text(encoding="utf-8")
+            if output_path is not None
+            else (result.stdout or "").strip()
+        )
+        try:
+            return json.loads(response_text)
+        except json.JSONDecodeError:
+            return None
 
     def _send_to_server(self, csv_path: str) -> bool:
         """Ask a running inksim server to open (and delete) the CSV.
@@ -194,19 +212,9 @@ class Inksim(InkstitchExtension):
                 f"stdout={stdout!r}; stderr={stderr!r}"
             )
 
-            if result.returncode != 0:
-                # No server running or command rejected; the stderr usually
-                # contains a brief message which we keep in the log only.
-                return False
-
-            if output_path is not None:
-                response_text = Path(output_path).read_text(encoding="utf-8")
-            else:
-                response_text = stdout
-
-            try:
-                response = json.loads(response_text)
-            except json.JSONDecodeError:
+            response = self._read_server_response(result, output_path)
+            if response is None:
+                # No server running, command rejected, or malformed response.
                 return False
 
             if response.get("ok"):
@@ -220,7 +228,7 @@ class Inksim(InkstitchExtension):
                 except OSError:
                     pass
 
-    def _run_inksim(self, csv_path: str) -> None:
+    def _run_inksim(self, csv_path: str) -> bool:
         """Launch the external inksim binary in server mode with the CSV.
 
         The process is started asynchronously so that Inkscape is not blocked
@@ -247,7 +255,7 @@ class Inksim(InkstitchExtension):
                     f"{launcher} not found. Set the INKSIM_EXE environment variable "
                     f"or add {launcher} to PATH."
                 )
-                sys.exit(1)
+                return False
             command = [ink_sim]
 
         command += ["--server", "--delete-input"]
@@ -262,11 +270,16 @@ class Inksim(InkstitchExtension):
         # packaged inksim binary.  On other platforms the attribute does not
         # exist, so getattr falls back to 0 (no flags).
         creationflags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
-        subprocess.Popen(
-            command,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            start_new_session=True,
-            creationflags=creationflags,
-            startupinfo=_windows_startupinfo(),
-        )
+        try:
+            subprocess.Popen(
+                command,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                start_new_session=True,
+                creationflags=creationflags,
+                startupinfo=_windows_startupinfo(),
+            )
+        except OSError as ex:
+            self._log(f"InkSim: launch failed ({ex})")
+            return False
+        return True
