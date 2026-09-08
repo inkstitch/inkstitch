@@ -19,7 +19,6 @@ class Animator:
     TARGET_FPS = 30
 
     def __init__(self, stitch_plan: Optional[StitchPlan]) -> None:
-        self.stitch_plan = stitch_plan
         self.animating = False
 
         self.callbacks: Set[AnimatorCallback] = set()
@@ -37,6 +36,8 @@ class Animator:
         self.timer = wx.Timer()
         self.timer.Bind(wx.EVT_TIMER, self._animate)
 
+        self.set_stitch_plan(stitch_plan)
+
     def set_stitch_plan(self, stitch_plan: Optional[StitchPlan]):
         self.stitch_plan = stitch_plan
         self.current_stitch = 1.0
@@ -49,6 +50,7 @@ class Animator:
 
     def add_callback(self, callback: AnimatorCallback) -> None:
         self.callbacks.add(callback)
+        callback(int(self.current_stitch), self.animating)
 
     def remove_callback(self, callback: AnimatorCallback) -> None:
         self.callbacks.remove(callback)
