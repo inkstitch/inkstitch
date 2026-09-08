@@ -235,6 +235,11 @@ class DrawingPanel(wx.Panel):
             self.render_cache_rebuild_timer.Stop()
         self.render_cache_rebuild_timer = wx.CallLater(150, self.rebuild_stitch_render_cache_after_motion)
 
+    def cancel_stitch_render_cache_rebuild(self):
+        if self.render_cache_rebuild_timer is not None:
+            self.render_cache_rebuild_timer.Stop()
+            self.render_cache_rebuild_timer = None
+
     def rebuild_stitch_render_cache_after_motion(self):
         self.render_cache_rebuild_timer = None
         self.invalidate_stitch_render_cache()
@@ -294,22 +299,32 @@ class DrawingPanel(wx.Panel):
             cache_offset[1] + cache_height >= height
         )
 
-    def _fast_bitmap_navigation_requested(self, event):
-        return event.ControlDown() or wx.GetKeyState(wx.WXK_CONTROL)
+    def _fast_bitmap_navigation_requested(self, event=None):
+        # Use the global keyboard state as the authoritative source: mouse
+        # events may not carry modifier key state reliably (e.g. mouse wheel).
+        # event.ControlDown() is kept only as a fallback for platforms where
+        # it works.
+        return wx.GetKeyState(wx.WXK_CONTROL) or (event is not None and event.ControlDown())
 
     def _update_cache_after_navigation(self, event, rebuild_after_motion=False):
-        # Ctrl+mouse uses the fast bitmap-only mode (existing behaviour):
-        # cache is only rebuilt after motion stops.  Without Ctrl the cache
-        # is rebuilt immediately as soon as the viewport would reach the edge
-        # of the cached image, preventing cut-off edges.
-        if self._viewport_inside_cache():
-            if rebuild_after_motion:
-                self.schedule_stitch_render_cache_rebuild()
-        elif self._fast_bitmap_navigation_requested(event):
+        # Ctrl+mouse uses the fast bitmap-only mode: the cache is never rebuilt
+        # while the user is panning/zooming, so motion stays smooth.  For mouse
+        # wheel zoom (a discrete event with no "end" signal) we schedule a
+        # deferred rebuild so the image catches up once zooming stops.  For
+        # drag, on_drag_end schedules the rebuild instead.
+        # Without Ctrl the cache is rebuilt immediately when the viewport would
+        # reach the edge of the cached image, preventing cut-off edges.
+        if self._fast_bitmap_navigation_requested(event):
+            # Ctrl mode: never rebuild immediately.  Schedule a deferred
+            # rebuild instead; the timer resets on every motion event, so it
+            # only fires once motion has actually stopped (no button release
+            # required).
             self.schedule_stitch_render_cache_rebuild()
-        else:
+        elif not self._viewport_inside_cache():
             self.invalidate_stitch_render_cache()
             self.rebuild_stitch_render_cache()
+        elif rebuild_after_motion:
+            self.schedule_stitch_render_cache_rebuild()
         self.Refresh()
 
     def get_stitch_render_cache_state(self):
@@ -711,7 +726,13 @@ class DrawingPanel(wx.Panel):
         if self.HasCapture():
             self.ReleaseMouse()
 
-        self.invalidate_stitch_render_cache()
+        # If we were dragging with Ctrl, the cached image may no longer cover
+        # the viewport.  Rebuild it (deferred so the drag-end itself is fast).
+        if self._fast_bitmap_navigation_requested():
+            self.schedule_stitch_render_cache_rebuild()
+        else:
+            self.invalidate_stitch_render_cache()
+            self.rebuild_stitch_render_cache()
         self.Refresh()
 
         self.Unbind(wx.EVT_MOTION)
