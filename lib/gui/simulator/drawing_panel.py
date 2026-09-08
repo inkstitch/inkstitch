@@ -16,7 +16,6 @@ from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
 from .camera import Camera
 from .animator import Animator
-from .status_bar_updater import StatusBarUpdater
 
 
 class LoadingIndicator:
@@ -64,20 +63,16 @@ class DrawingPanel(wx.Panel):
     # Render circles once their shape is visible instead of using fast squares.
     CIRCLE_MARKER_MIN_SCREEN_SIZE = 4
 
-    def __init__(self, parent, *args, **kwargs) -> None:
+    def __init__(self, parent, animator: Animator, stitch_plan: Optional[StitchPlan] = None) -> None:
         """"""
         self.parent = parent
-        self.stitch_plan: Optional[StitchPlan] = kwargs.pop('stitch_plan', None)
-        kwargs['style'] = wx.BORDER_SUNKEN
+        self.animator = animator
+        self.stitch_plan = stitch_plan
 
-        wx.Panel.__init__(self, parent, *args, **kwargs)
+        wx.Panel.__init__(self, parent, style=wx.BORDER_SUNKEN)
 
-        self.control_panel = parent.cp
         self.view_panel = parent.vp
 
-        # Drawing panel can really be any size, but without this wxpython likes
-        # to allow the status bar and control panel to get squished.
-        self.SetMinSize((300, 300))
         self.SetBackgroundColour('#FFFFFF')
         self.SetDoubleBuffered(True)
 
@@ -93,9 +88,6 @@ class DrawingPanel(wx.Panel):
         self.stitch_blocks: List[List[Tuple[float, float]]] = []
         self.jumps: List[List[int]] = []
 
-        self.animator = Animator(self.stitch_plan)
-        self.animator.add_callback(self._on_current_stitch)
-        self.status_bar_updater = StatusBarUpdater(self, self.animator)
         self.camera = Camera(self, self.stitch_plan)
 
         if self.stitch_plan is not None:
@@ -103,9 +95,10 @@ class DrawingPanel(wx.Panel):
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
 
+        self.animator.add_callback(self._on_current_stitch)
+
     def _on_current_stitch(self, current_stitch: int, animating: bool) -> None:
         self.current_stitch = current_stitch
-        self.control_panel.on_current_stitch(self.current_stitch, animating)
 
         self.Refresh()
 
@@ -280,17 +273,12 @@ class DrawingPanel(wx.Panel):
     def clear(self) -> None:
         self.stitch_plan = None
         self.camera.set_stitch_plan(None)
-        self.animator.set_stitch_plan(None)
         self.Refresh()
 
     def load(self, stitch_plan: StitchPlan) -> None:
         self.stitch_plan = stitch_plan
         self.camera.set_stitch_plan(stitch_plan)
-        self.status_bar_updater.set_stitch_plan(stitch_plan)
         self.parse_stitch_plan(stitch_plan)
-        # Animator has to be last, because all other parts will need to have loaded the stitch plan first
-        self.animator.set_stitch_plan(stitch_plan)
-        self.animator.go()
 
     def set_page_specs(self, page_specs: dict) -> None:
         self.SetBackgroundColour(page_specs['desk_color'])
@@ -360,31 +348,3 @@ class DrawingPanel(wx.Panel):
     def set_loading(self, loading: bool) -> None:
         self.loading = loading
         self.Refresh()
-
-    # Exposed animator methods
-    def stop(self) -> None:
-        self.animator.stop()
-
-    def go(self) -> None:
-        self.animator.go()
-
-    def forward(self) -> None:
-        self.animator.forward()
-
-    def reverse(self) -> None:
-        self.animator.reverse()
-
-    def set_current_stitch(self, stitch: int) -> None:
-        self.animator.set_current_stitch(stitch)
-
-    def restart(self) -> None:
-        self.animator.restart()
-
-    def one_stitch_forward(self) -> None:
-        self.animator.one_stitch_forward()
-
-    def one_stitch_backward(self) -> None:
-        self.animator.one_stitch_backward()
-
-    def set_speed(self, speed: int) -> None:
-        self.animator.set_speed(speed)
