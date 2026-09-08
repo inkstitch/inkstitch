@@ -32,16 +32,22 @@ class LoadingIndicator:
     CORNER_RADIUS = 10  # px
 
     def __init__(self) -> None:
+        self.message = self.RENDERING
         self.font = wx.Font(30, wx.DEFAULT, wx.NORMAL, wx.NORMAL)
         self.bg_brush = wx.Brush(wx.Colour(0, 0, 0, alpha=100))
         self.bounds: Optional[Tuple[float, float]] = None
+
+    def set_message(self, message: str) -> None:
+        if message != self.message:
+            self.message = message
+            self.bounds = None
 
     def paint(self, canvas: wx.GraphicsContext) -> None:
         panel_width, panel_height = canvas.GetSize()
 
         canvas.SetFont(self.font, wx.WHITE)
         if self.bounds is None:
-            t_w, t_h, t_d, t_el = canvas.GetFullTextExtent(self.RENDERING)
+            t_w, t_h, t_d, t_el = canvas.GetFullTextExtent(self.message)
             self.bounds = (t_w, t_h)
 
         w, h = self.bounds
@@ -55,7 +61,7 @@ class LoadingIndicator:
             h+2*self.PADDING,
             self.CORNER_RADIUS
         )
-        canvas.DrawText(self.RENDERING, (panel_width-w)/2, (panel_height-h)/2)
+        canvas.DrawText(self.message, (panel_width-w)/2, (panel_height-h)/2)
 
 
 class DrawingPanel(wx.Panel):
@@ -575,4 +581,8 @@ class DrawingPanel(wx.Panel):
 
     def set_loading(self, loading: bool) -> None:
         self.loading = loading
+        self.Refresh()
+
+    def set_loading_message(self, message: str) -> None:
+        self.loading_indicator.set_message(message)
         self.Refresh()
