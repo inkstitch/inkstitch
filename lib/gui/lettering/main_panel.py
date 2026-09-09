@@ -20,6 +20,7 @@ from ...svg.tags import INKSTITCH_LETTERING
 from ...utils import DotDict, cache
 from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
+from ...debug.debug import debug
 from .. import PresetsPanel, info_dialog
 from . import LetteringHelpPanel, LetteringOptionsPanel
 
@@ -369,6 +370,7 @@ class LetteringPanel(wx.Panel):
         if destination_group.get('transform', None) is None:
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
+    @debug.time
     def render_stitch_plan(self):
         stitch_groups = []
 
