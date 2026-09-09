@@ -22,7 +22,7 @@ from .glyph import Glyph
 
 
 # Bump when the cached glyph serialization format changes.
-FONT_CACHE_VERSION = 1
+FONT_CACHE_VERSION = 2
 
 
 def _serialize_glyph(glyph):
@@ -34,7 +34,7 @@ def _serialize_glyph(glyph):
         'min_x': glyph.min_x,
         'commands': glyph.commands,
         'node': etree.tostring(glyph.node),
-        'clips': {node_id: [etree.tostring(c) for c in clips] for node_id, clips in glyph.clips.items()},
+        'clips': {node_id: etree.tostring(clip) for node_id, clip in glyph.clips.items()},
     }
 
 
@@ -50,8 +50,8 @@ def _deserialize_glyph(data):
     # attributes (e.g. "inkstitch:letter-group"); plain fromstring does not.
     glyph.node = etree.fromstring(data['node'], parser=inkex.SVG_PARSER)
     glyph.clips = defaultdict(list)
-    for node_id, clips in data['clips'].items():
-        glyph.clips[node_id] = [etree.fromstring(c, parser=inkex.SVG_PARSER) for c in clips]
+    for node_id, clip in data['clips'].items():
+        glyph.clips[node_id] = etree.fromstring(clip, parser=inkex.SVG_PARSER)
     return glyph
 
 
