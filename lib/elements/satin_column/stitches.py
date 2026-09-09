@@ -1,6 +1,7 @@
 import itertools
 from typing import TYPE_CHECKING
 
+from .split_points import get_split_points
 from .rails import plot_points_on_rails
 from ...stitch_plan import StitchGroup
 from ...utils import prng
@@ -37,14 +38,14 @@ def _do_e_stitch(satin: 'SatinColumn'):
     # a point from the first and second rail respectively
     for i, (left, right), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
         check_stop_flag()
-        split_points, _ = satin.get_split_points(
-            left, right, a_short, b_short, max_stitch_length,
+        split_points, _ = get_split_points(
+            satin, left, right, a_short, b_short, max_stitch_length,
             None, length_sigma, random_phase, min_split_length,
             prng.join_args(seed, 'satin-split', 2 * i + 1), 2 * i + 1)
 
         # zigzag spacing is wider than stitch length, subdivide
         if last_point is not None and max_stitch_length is not None and satin.zigzag_spacing > max_stitch_length:
-            points, _ = satin.get_split_points(last_point, left, last_point, left, max_stitch_length)
+            points, _ = get_split_points(satin, last_point, left, last_point, left, max_stitch_length)
             stitch_group.add_stitches(points)
 
         stitch_group.add_stitch(a_short, ("edge", "left"))
@@ -88,8 +89,8 @@ def _do_s_stitch(satin: 'SatinColumn'):
     for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
         check_stop_flag()
         points = [a_short]
-        split_points, _ = satin.get_split_points(
-            a, b, a_short, b_short, max_stitch_length,
+        split_points, _ = get_split_points(
+            satin, a, b, a_short, b_short, max_stitch_length,
             None, length_sigma, random_phase, min_split_length,
             prng.join_args(seed, 'satin-split', i), i)
         points.extend(split_points)
@@ -100,7 +101,7 @@ def _do_s_stitch(satin: 'SatinColumn'):
 
         # zigzag spacing is wider than stitch length, subdivide
         if last_point is not None and max_stitch_length is not None and satin.zigzag_spacing > max_stitch_length:
-            initial_points, _ = satin.get_split_points(last_point, points[0], last_point, points[0], max_stitch_length)
+            initial_points, _ = get_split_points(satin, last_point, points[0], last_point, points[0], max_stitch_length)
 
         stitch_group.add_stitches(points)
         last_point = points[-1]
@@ -145,16 +146,16 @@ def _do_zigzag(satin: 'SatinColumn'):
     last_point_short = None
     for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
         if last_point:
-            split_points, _ = satin.get_split_points(
-                last_point, a, last_point_short, a_short, max_stitch_length, None,
+            split_points, _ = get_split_points(
+                satin, last_point, a, last_point_short, a_short, max_stitch_length, None,
                 length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=2 * i,
                 from_end=True)
             stitch_group.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
 
         stitch_group.add_stitch(a_short, ("satin_column", "peak_a", "peak_stitch"))
 
-        split_points, _ = satin.get_split_points(
-            a, b, a_short, b_short, max_stitch_length, None,
+        split_points, _ = get_split_points(
+            satin, a, b, a_short, b_short, max_stitch_length, None,
             length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1),
             row_num=2 * i + 1)
         stitch_group.add_stitches(split_points, ("satin_column", "zigzag_split_stitch"))
@@ -203,16 +204,16 @@ def _do_satin(satin: 'SatinColumn'):
     last_count = None
     for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
         if last_point is not None:
-            split_points, _ = satin.get_split_points(
-                last_point, a, last_short_point, a_short, max_stitch_length, last_count,
+            split_points, _ = get_split_points(
+                satin, last_point, a, last_short_point, a_short, max_stitch_length, last_count,
                 length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=2 * i, from_end=True)
             stitch_group.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
 
         stitch_group.add_stitch(a_short)
         stitch_group.stitches[-1].add_tags(("satin_column", "satin_column_edge"))
 
-        split_points, last_count = satin.get_split_points(
-            a, b, a_short, b_short, max_stitch_length, None,
+        split_points, last_count = get_split_points(
+            satin, a, b, a_short, b_short, max_stitch_length, None,
             length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i + 1), row_num=2 * i + 1)
         stitch_group.add_stitches(split_points, ("satin_column", "satin_split_stitch"))
 
