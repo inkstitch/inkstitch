@@ -26,6 +26,7 @@ from .flip import Flip
 from .generate_palette import GeneratePalette
 from .global_commands import GlobalCommands
 from .gradient_blocks import GradientBlocks
+from .inksim import Inksim
 from .input import Input
 from .install import Install
 from .install_custom_palette import InstallCustomPalette
@@ -106,6 +107,7 @@ extensions = [
     GeneratePalette,
     GlobalCommands,
     GradientBlocks,
+    Inksim,
     Input,
     Install,
     InstallCustomPalette,
