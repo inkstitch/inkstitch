@@ -9,9 +9,10 @@
 
 import os
 import sys
+import tempfile
 from pathlib import Path  # to work with paths as objects
 import logging
-from typing import List, TYPE_CHECKING
+from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from ..extensions.base import InkstitchExtension
 
@@ -32,6 +33,54 @@ def safe_get(dictionary: dict, *keys, default=None):
             return default
         dictionary = dictionary[key]
     return dictionary
+
+
+def can_write_to_directory(path: Path) -> bool:
+    """Return True only if creating and deleting a temp file in the directory succeeds."""
+    try:
+        fd, probe_path = tempfile.mkstemp(prefix=".inkstitch-write-test-", dir=path)
+        os.close(fd)
+        os.unlink(probe_path)
+        return True
+    except OSError:
+        return False
+
+
+def _modules_referencing_module(target_module: object) -> list[tuple[str, str]]:
+    refs: list[tuple[str, str]] = []
+    for module_name, module in sys.modules.items():
+        module_dict = getattr(module, '__dict__', None)
+        if not isinstance(module_dict, dict):
+            continue
+
+        for attr_name, attr_value in module_dict.items():
+            if attr_value is target_module:
+                refs.append((module_name, attr_name))
+                break
+
+    return sorted(refs)
+
+
+def assert_inkex_not_imported_before_path_setup() -> None:
+    inkex_module = sys.modules.get('inkex')
+    if inkex_module is None:
+        return
+
+    inkex_file = getattr(inkex_module, '__file__', '<unknown>')
+    refs = _modules_referencing_module(inkex_module)
+    refs_msg = ', '.join([f"{module}.{attr}" for module, attr in refs[:10]])
+    if len(refs) > 10:
+        refs_msg += ', ...'
+
+    print(
+        "ERROR: 'inkex' was imported before sys.path setup. "
+        "This can select the wrong inkex installation when multiple versions are available.\n"
+        f"Loaded inkex module: {inkex_file}\n"
+        f"First modules referencing inkex: {refs_msg or '<none>'}\n"
+        "Fix: delay imports that depend on inkex until after reorder_sys_path().",
+        file=sys.stderr,
+    )
+    sys.exit(1)
 
 
 def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
@@ -58,16 +107,31 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
         print("WARN: input svg file is same as output svg file. No script created in write debug script.", file=sys.stderr)
         return
 
+    if not can_write_to_directory(debug_script_dir):
+        logger.warning(f"No write permission to '{debug_script_dir}'. No script created in write debug script.")
+        return
+
     import shutil  # to copy svg file
     bash_file = debug_script_dir / bash_name
 
+    try:
+        _write_offline_debug_script(bash_file, bash_svg, svg_file, debug_script_dir, shutil)
+    except OSError as e:
+        logger.error(f"Failed to write offline debug script to '{debug_script_dir}': {e}")
+
+
+def _write_offline_debug_script(bash_file: Path, bash_svg: Path, svg_file: Path, debug_script_dir: Path, shutil) -> None:
     with open(bash_file, 'w') as f:  # "w" text mode, automatic conversion of \n to os.linesep
         f.write('#!/usr/bin/env bash\n')
 
         # cmd line arguments for debugging and profiling
-        f.write(bash_parser())  # parse cmd line arguments: -d -p
+        f.write(bash_arg_parser())  # parse cmd line arguments: -d -p
 
         f.write(f'# python version: {sys.version}\n')   # python version
+
+        # python interpreter that generated this script (used as first choice at runtime)
+        f.write(f'export SCRIPT_PYTHON="{sys.executable}"\n')
+        f.write(find_python_interpreter())  # fall back to venv/python3/py/python if SCRIPT_PYTHON is gone
 
         myargs = " ".join(sys.argv[1:])
         f.write(f'# script: {sys.argv[0]}  arguments: {myargs}\n')  # script name and arguments
@@ -80,13 +144,11 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
 
         # python module path
         f.write('# python sys.path:\n')
-        for p in sys.path:
-            f.write(f'#   {p}\n')
+        f.writelines(f'#   {p}\n' for p in sys.path)
 
         # see static void set_extensions_env() in inkscape/src/inkscape-main.cpp
         f.write('# PYTHONPATH:\n')
-        for p in os.environ.get('PYTHONPATH', '').split(os.pathsep):  # PYTHONPATH to list
-            f.write(f'#   {p}\n')
+        f.writelines(f'#   {p}\n' for p in os.environ.get('PYTHONPATH', '').split(os.pathsep))  # PYTHONPATH to list
 
         f.write(f'# copy {svg_file} to {bash_svg}\n#\n')
         shutil.copy(svg_file, debug_script_dir / bash_svg)  # copy file to bash_svg
@@ -108,25 +170,33 @@ def write_offline_debug_script(debug_script_dir: Path, ini: dict) -> None:
         f.write('export INKSTITCH_OFFLINE_SCRIPT="True"\n')
 
         f.write('# call inkstitch\n')
-        f.write(f'python3 inkstitch.py {myargs}\n')
+        f.write(f'"$INKSTITCH_PYTHON" inkstitch.py {myargs}\n')
     bash_file.chmod(0o0755)  # make file executable, hopefully ignored on Windows
 
 
-def bash_parser() -> str:
+def bash_arg_parser() -> str:
     return r'''
 set -e   #  exit on error
 
 # parse cmd line arguments:
 #   -d enable debugging
 #   -p enable profiling
+#   -h show help and exit
 #             ":..." - silent error reporting
-while getopts ":dp" opt; do
+while getopts ":dph" opt; do
   case $opt in
     d)
         export INKSTITCH_DEBUG_ENABLE="True"
         ;;
     p)
         export INKSTITCH_PROFILE_ENABLE="True"
+        ;;
+    h)
+        echo "Usage: $(basename "$0") [-d] [-p] [-h]"
+        echo "  -d  enable debugging"
+        echo "  -p  enable profiling"
+        echo "  -h  show this help and exit"
+        exit 0
         ;;
     \?)
         echo "Invalid option: -$OPTARG" >&2
@@ -138,6 +208,34 @@ while getopts ":dp" opt; do
         ;;
   esac
 done
+
+'''
+
+
+def find_python_interpreter() -> str:
+    return r'''
+# pick python interpreter to run inkstitch.py:
+#   1) SCRIPT_PYTHON - the interpreter that generated this script, if it still exists
+#   2) a .venv next to this script (Linux/macOS or Windows layout)
+#   3) python3 / py / python found in PATH
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# "
+if [ -x "$SCRIPT_PYTHON" ]; then
+    INKSTITCH_PYTHON="$SCRIPT_PYTHON"
+elif [ -x "$SCRIPT_DIR/.venv/bin/python" ]; then
+    INKSTITCH_PYTHON="$SCRIPT_DIR/.venv/bin/python"
+elif [ -x "$SCRIPT_DIR/.venv/Scripts/python.exe" ]; then
+    INKSTITCH_PYTHON="$SCRIPT_DIR/.venv/Scripts/python.exe"
+elif command -v python3 >/dev/null 2>&1; then
+    INKSTITCH_PYTHON="python3"
+elif command -v py >/dev/null 2>&1; then
+    INKSTITCH_PYTHON="py"
+elif command -v python >/dev/null 2>&1; then
+    INKSTITCH_PYTHON="python"
+else
+    echo "ERROR: no python interpreter found (tried SCRIPT_PYTHON, .venv, python3, py, python)" >&2
+    exit 1
+fi
 
 '''
 
@@ -205,7 +303,7 @@ def resolve_profiler_type(ini: dict) -> str:
 # - pyinstrument - profiler with nice html output
 
 
-def profile(profiler_type, profile_dir: Path, ini: dict, extension: 'InkstitchExtension', remaining_args: List[str]) -> None:
+def profile(profiler_type, profile_dir: Path, ini: dict, extension: 'InkstitchExtension', remaining_args: list[str]) -> None:
     '''
     profile with a profiler (e.g. cProfile, profile or pyinstrument)
     '''
@@ -232,7 +330,7 @@ def profile(profiler_type, profile_dir: Path, ini: dict, extension: 'InkstitchEx
         raise ValueError(f"unknown profiler type: '{profiler_type}'")
 
 
-def with_cprofile(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path):
+def with_cprofile(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path):
     '''
     profile with cProfile
     '''
@@ -255,7 +353,7 @@ def with_cprofile(extension: 'InkstitchExtension', remaining_args: List[str], pr
               file=sys.stderr)
 
 
-def with_profile(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_profile(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     '''
     profile with profile
     '''
@@ -275,7 +373,7 @@ def with_profile(extension: 'InkstitchExtension', remaining_args: List[str], pro
               file=sys.stderr)
 
 
-def with_pyinstrument(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_pyinstrument(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     '''
     profile with pyinstrument
     '''
@@ -294,7 +392,7 @@ def with_pyinstrument(extension: 'InkstitchExtension', remaining_args: List[str]
         print(f"Profiler: pyinstrument, stats written to '{profile_file_path.name}'. Use browser to see it.", file=sys.stderr)
 
 
-def with_time(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_time(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     """
     A simple profiler that gives you similar information to running `time`.
     Low overhead, but of course only provides a high-level picture.
@@ -310,7 +408,7 @@ def with_time(extension: 'InkstitchExtension', remaining_args: List[str], profil
         print(f"Profiler: Time: real: {wall:.2f}s, proc (user+sys): {proc:.2f}s", file=sys.stderr)
 
 
-def with_monkeytype(extension: 'InkstitchExtension', remaining_args: List[str], profile_file_path: Path) -> None:
+def with_monkeytype(extension: 'InkstitchExtension', remaining_args: list[str], profile_file_path: Path) -> None:
     '''
     'profile' with monkeytype to get type information. This may be handy for anyone who wants to
     add type annotations to older parts of our code that don't have them.
