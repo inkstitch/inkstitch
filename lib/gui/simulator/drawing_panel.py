@@ -70,6 +70,9 @@ class DrawingPanel(wx.Panel):
     # corresponding amount during rendering.
     PIXEL_DENSITY = 10
 
+    # Render circles once their shape is visible instead of using fast squares.
+    CIRCLE_MARKER_MIN_SCREEN_SIZE = 4
+
     def __init__(self, parent, *args, **kwargs) -> None:
         """"""
         self.parent = parent
@@ -88,6 +91,7 @@ class DrawingPanel(wx.Panel):
         self.SetDoubleBuffered(True)
 
         self.loading = False
+        self.loaded = False
         self.loading_indicator = LoadingIndicator()
 
         self.animating = False
@@ -112,10 +116,9 @@ class DrawingPanel(wx.Panel):
         self.speed = global_settings['simulator_speed']
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
-        self.Bind(wx.EVT_SIZE, self.choose_zoom_and_pan)
+        self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
-        self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_TIMER, self.animate)
 
         if self.stitch_plan is not None:
@@ -245,7 +248,8 @@ class DrawingPanel(wx.Panel):
         x, y = transform.TransformPoint(float(x), float(y))
         canvas.SetTransform(canvas.CreateMatrix())
         crosshair_radius = global_settings['simulator_crosshair_radius']
-        crosshair_pen = wx.Pen(wx.Colour(global_settings['simulator_crosshair_colour']), width=global_settings['simulator_crosshair_thickness'])
+        crosshair_width = round(global_settings['simulator_crosshair_thickness'] * self.GetContentScaleFactor())
+        crosshair_pen = wx.Pen(wx.Colour(global_settings['simulator_crosshair_colour']), width=crosshair_width)
         canvas.SetPen(crosshair_pen)
         canvas.StrokeLines(((x - crosshair_radius, y), (x + crosshair_radius, y)))
         canvas.StrokeLines(((x, y - crosshair_radius), (x, y + crosshair_radius)))
@@ -314,11 +318,26 @@ class DrawingPanel(wx.Panel):
             npp_size = global_settings['simulator_npp_size'] * PIXELS_PER_MM * self.PIXEL_DENSITY
             npp_brush = canvas.CreateBrush(wx.Brush(pen.GetColour()))
             canvas.SetBrush(npp_brush)
-            for stitch in stitches:
-                canvas.DrawEllipse(stitch[0]-(npp_size / 2), stitch[1]-(npp_size / 2), npp_size, npp_size)
+            # Drawing thousands of ellipses is expensive. Use fast squares by
+            # default and only switch to circles when heavily zoomed in.
+            canvas.SetPen(wx.TRANSPARENT_PEN)
+            square_size = max(1.0, float(npp_size))
+            half_size = square_size / 2.0
+            marker_screen_size = square_size * self.zoom / self.PIXEL_DENSITY
+
+            if stitches:
+                # Use winding fill so overlapping markers remain filled.
+                path = canvas.CreatePath()
+                for x, y in stitches:
+                    if marker_screen_size >= self.CIRCLE_MARKER_MIN_SCREEN_SIZE:
+                        path.AddEllipse(x - half_size, y - half_size, square_size, square_size)
+                    else:
+                        path.AddRectangle(x - half_size, y - half_size, square_size, square_size)
+                canvas.FillPath(path, fillStyle=wx.WINDING_RULE)
 
     def clear(self):
         self.stitch_plan = None
+        self.loaded = False
         self.Refresh()
 
     def load(self, stitch_plan: StitchPlan) -> None:
@@ -346,6 +365,7 @@ class DrawingPanel(wx.Panel):
             ),
             1
         )
+        self.loaded = True
         self.go()
         if hasattr(self.view_panel, 'info_panel') and self.view_panel.info_panel is not None:
             self.view_panel.info_panel.update()
@@ -394,6 +414,13 @@ class DrawingPanel(wx.Panel):
         self.animating = False
         self.timer.Stop()
         self.control_panel.on_stop()
+
+    def show_all_stitches(self, event=None):
+        if not self.loaded:
+            return
+
+        self.stop()
+        self.set_current_stitch(self.num_stitches)
 
     def go(self):
         if self.stitch_plan is None:
