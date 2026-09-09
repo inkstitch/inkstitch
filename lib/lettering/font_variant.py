@@ -15,6 +15,7 @@ from lxml import etree
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG)
 from ..update import update_inkstitch_document, INKSTITCH_SVG_VERSION
+from ..debug.debug import debug
 from ..utils.cache import (CacheKeyGenerator, get_font_cache, hash_file,
                            is_cache_disabled)
 from .glyph import Glyph
@@ -103,6 +104,7 @@ class FontVariant(object):
         self.glyphs: Dict[str, Glyph] = {}
         self._load_glyphs()
 
+    @debug.time
     def _load_glyphs(self) -> None:
         variant_file_paths = self._get_variant_file_paths(self.path, self.variant)
         if not variant_file_paths:
