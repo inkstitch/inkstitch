@@ -1,0 +1,114 @@
+#!/usr/bin/env bash
+# Install Ink/Stitch as a uv tool.
+# On Linux we route wxPython through extras.wxpython.org because there is no
+# generic manylinux wheel; the required distro-specific wheel must come from
+# there.
+
+set -euo pipefail
+
+PYTHON_VERSION="${INKSTITCH_PYTHON_VERSION:-3.12}"
+WXPYTHON_VERSION="${INKSTITCH_WXPYTHON_VERSION:-4.2.5}"
+FORCE=false
+
+usage() {
+    cat <<EOF
+Usage: $0 [OPTIONS]
+
+Install or upgrade Ink/Stitch as a uv tool.
+
+Options:
+  -y, --yes            Skip confirmation prompt
+  --py VERSION         Python version for the tool environment (default: $PYTHON_VERSION)
+  --wx VERSION         wxPython version to pin (default: $WXPYTHON_VERSION)
+  -h, --help           Show this help
+
+Environment variables:
+  INKSTITCH_PYTHON_VERSION   default Python version
+  INKSTITCH_WXPYTHON_VERSION default wxPython version
+EOF
+}
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+    -y | --yes)
+        FORCE=true
+        shift
+        ;;
+    --py)
+        PYTHON_VERSION="$2"
+        shift 2
+        ;;
+    --py=*)
+        PYTHON_VERSION="${1#*=}"
+        shift
+        ;;
+    --wx)
+        WXPYTHON_VERSION="$2"
+        shift 2
+        ;;
+    --wx=*)
+        WXPYTHON_VERSION="${1#*=}"
+        shift
+        ;;
+    -h | --help)
+        usage
+        exit 0
+        ;;
+    *)
+        echo "Unknown option: $1" >&2
+        usage >&2
+        exit 1
+        ;;
+    esac
+done
+
+if ! command -v uv >/dev/null 2>&1; then
+    echo "uv is required (https://docs.astral.sh/uv/getting-started/installation/)" >&2
+    exit 1
+fi
+
+WXPYTHON_URL=""
+FIND_LINKS=()
+
+if [[ "$(uname -s)" == Linux ]]; then
+    if [[ -f /etc/os-release ]]; then
+        source /etc/os-release
+    fi
+
+    case "${ID:-}" in
+    ubuntu) platform="ubuntu-${VERSION_ID}" ;;
+    linuxmint)
+        case "${UBUNTU_CODENAME:-}" in
+        noble) platform=ubuntu-24.04 ;;
+        jammy) platform=ubuntu-22.04 ;;
+        focal) platform=ubuntu-20.04 ;;
+        esac
+        ;;
+    debian) platform="debian-${VERSION_ID%%.*}" ;;
+    fedora) platform="fedora-${VERSION_ID}" ;;
+    centos | rocky) platform="${ID}-${VERSION_ID%%.*}" ;;
+    esac
+
+    if [[ -n "${platform:-}" ]]; then
+        WXPYTHON_URL="https://extras.wxpython.org/wxPython4/extras/linux/gtk3/${platform}"
+        FIND_LINKS=(--find-links "$WXPYTHON_URL")
+        echo "Using wxPython wheels for ${platform} from ${WXPYTHON_URL}"
+    else
+        echo "Warning: unsupported Linux distro '${ID:-unknown}'; wxPython may need manual installation" >&2
+    fi
+fi
+
+echo "Will install: Python ${PYTHON_VERSION}, wxPython ${WXPYTHON_VERSION}${WXPYTHON_URL:+, find-links ${WXPYTHON_URL}}"
+
+if [[ "$FORCE" != true ]]; then
+    read -r -p "Proceed? [Y/n] " answer
+    [[ "$answer" =~ ^[Nn]$ ]] && exit 0
+fi
+
+# Pin the Python version for the tool environment to match available wheels.
+uv tool install --python "$PYTHON_VERSION" \
+    "${FIND_LINKS[@]}" \
+    "wxPython==$WXPYTHON_VERSION" \
+    inkstitch
+
+echo "Ink/Stitch installed. Run 'inkstitch --extension about' to test."
