@@ -3,7 +3,9 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import gzip
 import os
+import pickle
 from collections import defaultdict
 from unicodedata import normalize, category
 from typing import List, Dict, Optional
@@ -17,12 +19,12 @@ from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_GROUP_TAG,
 from ..update import update_inkstitch_document, INKSTITCH_SVG_VERSION
 from ..debug.debug import debug
 from ..utils.cache import (CacheKeyGenerator, get_font_cache, hash_file,
-                           is_cache_disabled)
+                           is_font_cache_disabled)
 from .glyph import Glyph
 
 
 # Bump when the cached glyph serialization format changes.
-FONT_CACHE_VERSION = 2
+FONT_CACHE_VERSION = 3
 
 
 def _serialize_glyph(glyph):
@@ -53,6 +55,19 @@ def _deserialize_glyph(data):
     for node_id, clip in data['clips'].items():
         glyph.clips[node_id] = etree.fromstring(clip, parser=inkex.SVG_PARSER)
     return glyph
+
+
+def _serialize_glyphs(glyphs):
+    """Compress glyph dict for diskcache storage."""
+    data = pickle.dumps({name: _serialize_glyph(glyph) for name, glyph in glyphs.items()}, protocol=pickle.HIGHEST_PROTOCOL)
+    return gzip.compress(data)
+
+
+def _deserialize_glyphs(compressed):
+    """Decompress glyph dict from diskcache storage."""
+    data = gzip.decompress(compressed)
+    cached = pickle.loads(data)
+    return {name: _deserialize_glyph(data) for name, data in cached.items()}
 
 
 class FontVariant(object):
@@ -120,18 +135,18 @@ class FontVariant(object):
 
         self._parse_glyphs(variant_file_paths)
 
-        if not is_cache_disabled():
-            get_font_cache()[cache_key] = {name: _serialize_glyph(glyph) for name, glyph in self.glyphs.items()}
+        if not is_font_cache_disabled():
+            get_font_cache()[cache_key] = _serialize_glyphs(self.glyphs)
 
     def _load_glyphs_from_cache(self, cache_key) -> bool:
-        if is_cache_disabled():
+        if is_font_cache_disabled():
             return False
 
         cached = get_font_cache().get(cache_key)
         if cached is None:
             return False
 
-        self.glyphs = {name: _deserialize_glyph(data) for name, data in cached.items()}
+        self.glyphs = _deserialize_glyphs(cached)
         return True
 
     def _parse_glyphs(self, variant_file_paths) -> None:
@@ -176,7 +191,7 @@ class FontVariant(object):
     @classmethod
     def is_variant_cached(cls, font_path, variant) -> bool:
         """True if the variant's glyphs are cached (no parsing)."""
-        if is_cache_disabled():
+        if is_font_cache_disabled():
             return False
 
         variant_file_paths = cls._get_variant_file_paths(font_path, variant)
