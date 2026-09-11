@@ -55,7 +55,7 @@ py-modules = ["inkstitch"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "inkstitch.py" = "inkstitch.py"
-"inx" = "lib/assets/inx"
+"inx-installed" = "lib/assets/inx"
 "templates" = "lib/assets/templates"
 "icons" = "lib/assets/icons"
 "symbols" = "lib/assets/symbols"
