@@ -114,6 +114,9 @@ class SimulatorPanel(wx.Panel):
         self.dp.set_loading(True)
         self.preview_renderer.update()
 
+    def set_loading_message(self, message: str) -> None:
+        self.dp.set_loading_message(message)
+
     def on_stitch_plan_rendered(self, stitch_plan: Optional[StitchPlan]) -> None:
         try:
             self.dp.set_loading(False)

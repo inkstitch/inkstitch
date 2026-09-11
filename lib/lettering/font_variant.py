@@ -3,18 +3,71 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
+import gzip
 import os
+import pickle
 from collections import defaultdict
 from unicodedata import normalize, category
 from typing import List, Dict, Optional
 import lzma
 
 import inkex
+from lxml import etree
 
 from ..svg.tags import (INKSCAPE_GROUPMODE, INKSCAPE_LABEL, SVG_GROUP_TAG,
                         SVG_PATH_TAG, SVG_USE_TAG)
-from ..update import update_inkstitch_document
+from ..update import update_inkstitch_document, INKSTITCH_SVG_VERSION
+from ..debug.debug import debug
+from ..utils.cache import (CacheKeyGenerator, get_font_cache, hash_file,
+                           is_font_cache_disabled)
 from .glyph import Glyph
+
+
+# Bump when the cached glyph serialization format changes.
+FONT_CACHE_VERSION = 3
+
+
+def _serialize_glyph(glyph):
+    """Convert a Glyph into a picklable dict."""
+    return {
+        'name': glyph.name,
+        'baseline': glyph.baseline,
+        'width': glyph.width,
+        'min_x': glyph.min_x,
+        'commands': glyph.commands,
+        'node': etree.tostring(glyph.node),
+        'clips': {node_id: etree.tostring(clip) for node_id, clip in glyph.clips.items()},
+    }
+
+
+def _deserialize_glyph(data):
+    """Rebuild a Glyph from _serialize_glyph's dict."""
+    glyph = Glyph.__new__(Glyph)
+    glyph.name = data['name']
+    glyph.baseline = data['baseline']
+    glyph.width = data['width']
+    glyph.min_x = data['min_x']
+    glyph.commands = data['commands']
+    # inkex.SVG_PARSER wraps elements in inkex classes that resolve namespaced
+    # attributes (e.g. "inkstitch:letter-group"); plain fromstring does not.
+    glyph.node = etree.fromstring(data['node'], parser=inkex.SVG_PARSER)
+    glyph.clips = defaultdict(list)
+    for node_id, clip in data['clips'].items():
+        glyph.clips[node_id] = etree.fromstring(clip, parser=inkex.SVG_PARSER)
+    return glyph
+
+
+def _serialize_glyphs(glyphs):
+    """Compress glyph dict for diskcache storage."""
+    data = pickle.dumps({name: _serialize_glyph(glyph) for name, glyph in glyphs.items()}, protocol=pickle.HIGHEST_PROTOCOL)
+    return gzip.compress(data)
+
+
+def _deserialize_glyphs(compressed):
+    """Decompress glyph dict from diskcache storage."""
+    data = gzip.decompress(compressed)
+    cached = pickle.loads(data)
+    return {name: _deserialize_glyph(data) for name, data in cached.items()}
 
 
 class FontVariant(object):
@@ -66,18 +119,39 @@ class FontVariant(object):
         self.glyphs: Dict[str, Glyph] = {}
         self._load_glyphs()
 
+    @debug.time
     def _load_glyphs(self) -> None:
-        variant_file_paths = self._get_variant_file_paths()
+        variant_file_paths = self._get_variant_file_paths(self.path, self.variant)
         if not variant_file_paths:
             # need to check for legacy file names
-            variant_file_paths = self._get_variant_file_paths(True)
-        for svg_path in variant_file_paths:
+            variant_file_paths = self._get_variant_file_paths(self.path, self.variant, legacy=True)
 
-            if svg_path.endswith(".svg.xz"):
-                with lzma.open(svg_path, "rb") as compressed_stream:
-                    document = inkex.load_svg(compressed_stream)
-            else:
-                document = inkex.load_svg(svg_path)
+        if not variant_file_paths:
+            return
+
+        cache_key = self._get_cache_key(self.variant, variant_file_paths)
+        if self._load_glyphs_from_cache(cache_key):
+            return
+
+        self._parse_glyphs(variant_file_paths)
+
+        if not is_font_cache_disabled():
+            get_font_cache()[cache_key] = _serialize_glyphs(self.glyphs)
+
+    def _load_glyphs_from_cache(self, cache_key) -> bool:
+        if is_font_cache_disabled():
+            return False
+
+        cached = get_font_cache().get(cache_key)
+        if cached is None:
+            return False
+
+        self.glyphs = _deserialize_glyphs(cached)
+        return True
+
+    def _parse_glyphs(self, variant_file_paths) -> None:
+        for svg_path in variant_file_paths:
+            document = self._load_svg(svg_path)
 
             update_inkstitch_document(document, warn_unversioned=False)
             svg = document.getroot()
@@ -93,20 +167,56 @@ class FontVariant(object):
                 except (AttributeError, ValueError):
                     pass
 
-    def _get_variant_file_paths(self, legacy=False) -> List[str]:
-        variant = self.variant
+    def _load_svg(self, svg_path):
+        if svg_path.endswith(".svg.xz"):
+            with lzma.open(svg_path, "rb") as compressed_stream:
+                return inkex.load_svg(compressed_stream)
+        return inkex.load_svg(svg_path)
+
+    @staticmethod
+    def _get_cache_key(variant, variant_file_paths):
+        """Cache key from file contents (path/mtime-independent)."""
+        generator = CacheKeyGenerator()
+        generator.update(FONT_CACHE_VERSION)
+        generator.update(INKSTITCH_SVG_VERSION)
+        generator.update(variant)
+        for path in sorted(variant_file_paths):
+            generator.update(hash_file(path))
+        return generator.get_cache_key()
+
+    def is_cached(self) -> bool:
+        """True if this variant's glyphs are already cached."""
+        return self.is_variant_cached(self.path, self.variant)
+
+    @classmethod
+    def is_variant_cached(cls, font_path, variant) -> bool:
+        """True if the variant's glyphs are cached (no parsing)."""
+        if is_font_cache_disabled():
+            return False
+
+        variant_file_paths = cls._get_variant_file_paths(font_path, variant)
+        if not variant_file_paths:
+            variant_file_paths = cls._get_variant_file_paths(font_path, variant, legacy=True)
+        if not variant_file_paths:
+            return False
+
+        cache_key = cls._get_cache_key(variant, variant_file_paths)
+        return cache_key in get_font_cache()
+
+    @classmethod
+    def _get_variant_file_paths(cls, font_path, variant, legacy=False) -> List[str]:
         if legacy:
-            variant = self.LEGACY_VARIANT_CONVERSION_DICT[variant]
+            variant = cls.LEGACY_VARIANT_CONVERSION_DICT[variant]
 
         file_paths = []
-        direct_path = os.path.join(self.path, "%s.svg" % variant)
-        direct_path_compressed = os.path.join(self.path, "%s.svg.xz" % variant)
+        direct_path = os.path.join(font_path, "%s.svg" % variant)
+        direct_path_compressed = os.path.join(font_path, "%s.svg.xz" % variant)
         if os.path.isfile(direct_path):
             file_paths.append(direct_path)
         if os.path.isfile(direct_path_compressed):
             file_paths.append(direct_path_compressed)
-        elif os.path.isdir(os.path.join(self.path, variant)):
-            path = os.path.join(self.path, self.variant)
+        if os.path.isdir(os.path.join(font_path, variant)):
+            path = os.path.join(font_path, variant)
             file_paths.extend([os.path.join(path, f) for f in os.listdir(path) if f.endswith(('.svg', '.svg.xz'))])
         return file_paths
 
