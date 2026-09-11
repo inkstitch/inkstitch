@@ -16,14 +16,35 @@ else:
     import tomli as tomllib
 
 
-def get_bundled_dir(name=None):
+def _runtime_base_dir():
+    """Return the directory containing runtime assets.
+
+    The layout depends on how Ink/Stitch is run:
+
+    * PyInstaller bundle: assets live next to the frozen binary (via sys._MEIPASS).
+    * Installed wheel (uv/pip): ``lib/`` is installed as a package and its data
+      are bundled inside ``lib/assets/``.  The module file itself is at
+      ``lib/utils/paths.py``.
+    * Development checkout: the repository root contains ``lib/``, ``icons/``,
+      ``fonts/``, etc.  The module file is at ``lib/utils/paths.py``.
+    """
     if getattr(sys, 'frozen', None) is not None:
         if sys.platform == "darwin":
-            path = os.path.join(sys._MEIPASS, "..", 'Resources')
-        else:
-            path = os.path.join(sys._MEIPASS, "..")
-    else:
-        path = os.path.join(dirname(realpath(__file__)), '..', '..')
+            return realpath(os.path.join(sys._MEIPASS, "..", 'Resources'))
+        return realpath(os.path.join(sys._MEIPASS, ".."))
+
+    module_dir = dirname(realpath(__file__))
+    # In an installed wheel data are shipped inside lib/assets/.
+    wheel_assets = realpath(os.path.join(module_dir, '..', 'assets'))
+    if os.path.isdir(wheel_assets):
+        return wheel_assets
+
+    # Otherwise we are in a development checkout: lib/utils/paths.py -> repo root.
+    return realpath(os.path.join(module_dir, '..', '..'))
+
+
+def get_bundled_dir(name=None):
+    path = _runtime_base_dir()
 
     if name is not None:
         path = os.path.join(path, name)
@@ -32,13 +53,7 @@ def get_bundled_dir(name=None):
 
 
 def get_resource_dir(name):
-    if getattr(sys, 'frozen', None) is not None:
-        if sys.platform == "darwin":
-            return realpath(os.path.join(sys._MEIPASS, "..", 'Resources', name))
-        else:
-            return realpath(os.path.join(sys._MEIPASS, name))
-    else:
-        return realpath(os.path.join(dirname(realpath(__file__)), '..', '..', name))
+    return realpath(os.path.join(_runtime_base_dir(), name))
 
 
 def get_user_dir(name=None, create=True):

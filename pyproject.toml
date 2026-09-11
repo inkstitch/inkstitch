@@ -4,12 +4,7 @@ version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
     "pystitch",
-    # For macOS and Windows our installer bundles the version specified here.
-    # Some Linux distros package Ink/Stitch depending on the inkex bundled with Inkscape.
     "inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.4.1",
-    # For Linux users it may be tricky to install wxPython from sources.
-    # Prebuilt packages: https://wxpython.org/pages/downloads/index.html
-    #                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
     "wxPython>=4.1.1",
     "networkx",
     "shapely>=2.0.0",
@@ -18,7 +13,6 @@ dependencies = [
     "numpy==2.2.6",
     "jinja2>2.9",
     "requests",
-    # tomllib is built into Python 3.11+; tomli needed only for older versions
     "tomli ; python_version < '3.11'",
     "colormath2",
     "flask>=2.2.0",
@@ -29,6 +23,9 @@ dependencies = [
     "pywinutils ; sys_platform == 'win32'",
     "pywin32 ; sys_platform == 'win32'",
 ]
+
+[project.scripts]
+inkstitch = "inkstitch:main"
 
 [dependency-groups]
 dev = [
@@ -45,20 +42,43 @@ dev = [
     "pyinstaller>=6.20.0",
 ]
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["lib"]
+py-modules = ["inkstitch"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"inkstitch.py" = "inkstitch.py"
+"inx" = "lib/assets/inx"
+"templates" = "lib/assets/templates"
+"icons" = "lib/assets/icons"
+"symbols" = "lib/assets/symbols"
+"fonts" = "lib/assets/fonts"
+"palettes" = "lib/assets/palettes"
+"tiles" = "lib/assets/tiles"
+"print" = "lib/assets/print"
+"locales" = "lib/assets/locales"
+"translations" = "lib/assets/translations"
+"addons" = "lib/assets/addons"
+"dbus" = "lib/assets/dbus"
+"VERSION" = "lib/assets/VERSION"
+"LICENSE" = "lib/assets/LICENSE"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
 [tool.mypy]
 files = ["lib/**/*.py", "tests/**/*.py"]
-
-# We use class properties, which mypy considers an error, probably because it's going to be deprecated.
-# Ignore that for now.
 disable_error_code = ["misc"]
-
 warn_unused_configs = true
 warn_redundant_casts = true
 warn_unused_ignores = true
-
 strict_equality = true
 extra_checks = true
 disallow_subclassing_any = true
@@ -74,7 +94,6 @@ disallow_untyped_defs = true
 module = "tests.*"
 check_untyped_defs = true
 
-# Libraries missing type information
 [[tool.mypy.overrides]]
 module = "colormath2.*"
 ignore_missing_imports = true
