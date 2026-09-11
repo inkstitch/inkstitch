@@ -15,6 +15,7 @@ DEFAULT_METADATA = {
 DEFAULT_SETTINGS = {
     # Ink/Stitch preferences
     "cache_size": 100,
+    "font_cache_size": 500,
     "pop_out_simulator": False,
     # simulator
     "simulator_adaptive_speed": True,
