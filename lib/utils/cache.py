@@ -58,6 +58,10 @@ def is_cache_disabled():
     return not global_settings['cache_size']
 
 
+def is_font_cache_disabled():
+    return not global_settings['font_cache_size']
+
+
 def hash_file(path):
     """SHA1 digest of a file's contents (path/mtime-independent)."""
     hasher = hashlib.sha1()
@@ -77,7 +81,7 @@ def get_font_cache():
     if __font_cache is None:
         cache_dir = get_user_dir('cache')
         font_dir = os.path.join(cache_dir, 'font_glyphs')
-        size_limit = global_settings['cache_size'] * 1024 * 1024
+        size_limit = global_settings['font_cache_size'] * 1024 * 1024
         try:
             __font_cache = diskcache.Cache(font_dir, size=size_limit)
         except (sqlite3.DatabaseError, sqlite3.OperationalError):
