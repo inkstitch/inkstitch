@@ -9,16 +9,16 @@ name = "inkstitch"
 version = "0.1.0"
 description = "An open-source machine embroidery design platform based on Inkscape"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "pystitch",
 
     ### wxPython:
     ### - "uv pip install wxpython @ https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxpython-4.2.3-cp311-cp311-linux_x86_64.whl"
-    "wxpython",
+    "wxpython==4.2.5",
 
     ### Linux or Darwin GObject introspection (pygobject > 3.50 depends on gir2)
-    "pygobject<=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'",
+    "pygobject", # <=3.50 ; sys_platform == 'linux' or sys_platform == 'darwin'",
 
 
     # For macOS and Windows our installer bundles the version specified here
