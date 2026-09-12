@@ -40,7 +40,8 @@ else:
     ini = {}
 # --------------------------------------------------------------------------------------------
 
-def main() -> None:
+
+def main() -> None:  # noqa: C901
     running_as_frozen = getattr(sys, 'frozen', None) is not None  # check if running from pyinstaller bundle
 
     if not running_as_frozen:  # override running_as_frozen from DEBUG.toml - for testing
@@ -57,7 +58,7 @@ def main() -> None:
         if running_as_frozen:  # we show dialog only when running from pyinstaller bundle - using wx
             try:
                 import wx
-                app = wx.App()
+                wx.App()
                 dlg = wx.MessageDialog(None, msg, "Inkstitch", wx.OK | wx.ICON_ERROR)
                 dlg.ShowModal()
                 dlg.Destroy()
@@ -162,7 +163,6 @@ def main() -> None:
         from lib.utils import restore_stderr, save_stderr  # to hide GTK spam
 
         save_stderr()  # hide GTK spam
-        exception = None
         try:
             extension.run(args=remaining_args)
         except (SystemExit, KeyboardInterrupt):
