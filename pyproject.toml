@@ -1,7 +1,7 @@
 [project]
 name = "inkstitch"
 version = "0.1.0"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "pystitch",
     # For macOS and Windows our installer bundles the version specified here.
@@ -17,7 +17,6 @@ dependencies = [
     "platformdirs",
     "numpy==2.2.6",
     "jinja2>2.9",
-    "requests",
     # tomllib is built into Python 3.11+; tomli needed only for older versions
     "tomli ; python_version < '3.11'",
     "colormath2",
@@ -25,7 +24,8 @@ dependencies = [
     "fonttools",
     "trimesh>=3.15.2",
     "diskcache",
-    "flask-cors",
+    # trimesh uses xxhash for faster hashing
+    "xxhash>=4.0.1",
     "pywinutils ; sys_platform == 'win32'",
     "pywin32 ; sys_platform == 'win32'",
 ]
@@ -33,16 +33,19 @@ dependencies = [
 [dependency-groups]
 dev = [
     "debugpy",
-    "mypy==1.19.1",
-    "flake8==7.3.0",
+    "mypy",
+    "flake8",
     "pytest",
+    "PyYAML",
+    "pyinstrument",
     "types-wxpython",
     "types-appdirs",
     "types-shapely",
     "types-networkx",
     "types-lxml",
     "types-pywin32",
-    "pyinstaller>=6.20.0",
+    "pyinstaller",
+    "pytest-cov",
 ]
 
 [tool.pytest.ini_options]
