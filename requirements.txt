@@ -17,10 +17,6 @@ platformdirs
 numpy==2.2.6
 jinja2>2.9
 
-# toml release 0.10.2 still buggy for heterogenous arrays
-# tomli is built as tomllib in python 3.11 and higher
-tomli
-
 colormath2
 flask>=2.2.0
 fonttools
@@ -29,6 +25,9 @@ diskcache
 
 pywinutils ; sys_platform == 'win32'
 pywin32 ; sys_platform == 'win32'
+
+inkstitch-fonts>=0.1.0
+xxhash>=4.0.1
 
 # Dev dependencies
 # It should be okay to include these here because this list isn't the one used for bundling dependencies.
