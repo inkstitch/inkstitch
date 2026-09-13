@@ -1,5 +1,33 @@
 ### customize this file and save as DEBUG.toml
 
+### ===========================================================================
+### DEVELOPER CONFIGURATION
+### ===========================================================================
+### This file is for Ink/Stitch developers only. Regular users do not need it.
+###
+### Master switch - until it is enabled, every option below is ignored:
+###
+###     [DEBUG]
+###     development_mode = true
+###
+### Options developers need most often:
+###     [LOGGING] log_location        where the log file is written
+###     [DEBUG]   create_bash_script  generate debug_inkstitch.sh for offline runs
+###
+### development_mode is opt-in and is never enabled automatically.
+### It used to be inferred from "not running as a frozen (pyinstaller) build",
+### so anybody who installed Ink/Stitch by simply unpacking an archive instead
+### of using a release build silently ended up in developer mode. The log was
+### then written next to inkstitch.py, which fails on a read-only installation
+### directory - and the whole extension refused to start. Because developer
+### mode is now explicit, a regular user never writes into the installation
+### directory.
+###
+### When you do enable it, pick a log_location you can actually write to.
+### "script" writes into the installation directory and therefore fails on
+### read-only installs; "user" or an absolute path is safer.
+### ===========================================================================
+
 [LIBRARY]
 ### use the pip installed version of inkex.py, default: true
 # prefer_pip_inkex = false
@@ -10,8 +38,12 @@
 ###          "document" "doc" (active SVG folder),
 ###          "user" "usr" (user log directory),
 ###          "temp" "tmp" (system temp)
-###          "abs_path" (eg. ~/inkstitch_log)
+###          an absolute path, e.g. "/home/user/inkstitch_log" or "~/inkstitch_log"
 ###           "" (default - disables logging)
+### An absolute path needs no keyword - it is detected automatically and
+### "~" is expanded to the home directory. A path to an existing file is
+### also accepted, in which case its parent directory is used.
+### Note: As any TOML string, the value must be quoted.
 ### Note: For regular users (development_mode = false), file logging is
 ### completely DISABLED unless override via INKSTITCH_LOG_DIR env variable.
 # log_location = "script"
