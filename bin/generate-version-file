@@ -1,15 +1,22 @@
 #!/bin/bash
 
+# Legacy compatibility: BUILD was renamed to PLATFORM. Accept the old name so
+# that existing scripts and CI configurations keep working.
+if [[ -z "${PLATFORM}" ]] && [[ -n "${BUILD}" ]]; then
+    echo "Warning: BUILD is deprecated, use PLATFORM instead" >&2
+    PLATFORM="${BUILD}"
+fi
+
 VERSION="${GITHUB_REF##*/}"
-OS="${BUILD:-$(uname)}"
+OS="${PLATFORM:-$(uname)}"
 ARCH="$(uname -m)"
 DATE=$(date +"%Y-%m-%d %H:%M")
 if [[ "$VERSION" == "" ]]; then
-  VERSION="Manual Install"
+    VERSION="Manual Install"
 fi
 
-if [[ "$BUILD" = "linux32" ]]; then
-	echo "${VERSION} (${OS}-i386) ${DATE}" > VERSION
+if [[ "$PLATFORM" = "linux32" ]]; then
+    echo "${VERSION} (${OS}-i386) ${DATE}" >VERSION
 else
-	echo "${VERSION} (${OS}-${ARCH}) ${DATE}" > VERSION
+    echo "${VERSION} (${OS}-${ARCH}) ${DATE}" >VERSION
 fi

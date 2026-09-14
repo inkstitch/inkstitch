@@ -15,19 +15,37 @@ else                    # otherwise OS is not set
 	DETECTED_OS := $(shell uname -s | tr '[:upper:]' '[:lower:]')
 endif
 
-# if BUILD variable is not set, then set it based on current OS
-ifndef BUILD
-	ifeq ($(DETECTED_OS),darwin)
-		BUILD := osx
-	else ifeq ($(DETECTED_OS),linux)
-		BUILD := linux
+# The target platform (linux, linux32, osx, or windows). It is derived from the
+# detected OS when not supplied explicitly and is exported for the bin/ scripts
+# and for CI. PLATFORM only says what we are building for - it does not select
+# the INX layout, that is what BUILD_DIST is for.
+#
+# BUILD used to carry these two meanings at once. It is retired now: if someone
+# still passes it (for example `BUILD=linux32 make distlocal` or, equivalently,
+# in the environment), we warn and use it as the platform so that old scripts
+# keep working instead of silently building for the wrong target.
+ifneq ($(BUILD),)
+ifeq ($(MAKELEVEL),0)
+$(warning BUILD is deprecated, use PLATFORM instead (got BUILD=$(BUILD)))
+endif
+endif
+
+ifndef PLATFORM
+	ifeq ($(BUILD),)
+		ifeq ($(DETECTED_OS),darwin)
+			PLATFORM := osx
+		else ifeq ($(DETECTED_OS),linux)
+			PLATFORM := linux
+		else
+			PLATFORM := windows
+		endif
 	else
-		BUILD := windows
+		PLATFORM := $(BUILD)
 	endif
 endif
-# Keep BUILD available to shell build scripts and standalone targets such as
-# BUILD=linux32 make version. INX mode is controlled separately by BUILD_DIST.
-export BUILD
+# Keep PLATFORM available to shell build scripts and standalone targets such as
+# PLATFORM=linux32 make version. INX mode is controlled separately by BUILD_DIST.
+export PLATFORM
 
 # Detect Python using standard virtual environment conventions.
 ifeq ($(OS),Windows_NT)
@@ -74,13 +92,13 @@ default:
 	@echo "***************************"
 	@echo "SHELL: ${SHELL}"
 	@echo "Operating System: ${DETECTED_OS}"
-	@echo "BUILD: ${BUILD}"
+	@echo "PLATFORM: ${PLATFORM}"
 	@echo "SYSTEM_PYTHON: ${SYSTEM_PYTHON}"
 	@echo "PYTHON_EXECUTABLE: ${PYTHON_EXECUTABLE}"
 
-# BUILD identifies the target platform (linux, osx, or windows) and is also used
-# by build scripts. It must not select the INX layout: make inx is a development
-# operation, even when BUILD is set automatically.
+# PLATFORM identifies the target platform (linux, osx, or windows) and is also
+# used by build scripts. It must not select the INX layout: make inx is a
+# development operation, even when PLATFORM is set automatically.
 # BUILD_DIST is a separate flag for distribution builds. It makes INX generation
 # use packaged paths (../bin/...) and excludes development-only extensions.
 # This separation was introduced because testing BUILD alone made every regular

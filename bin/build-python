@@ -1,7 +1,15 @@
 #!/bin/bash
 
 set -e
-info_year=$( date "+%Y" )
+
+# Legacy compatibility: BUILD was renamed to PLATFORM. Accept the old name so
+# that existing scripts and CI configurations keep working.
+if [[ -z "${PLATFORM}" ]] && [[ -n "${BUILD}" ]]; then
+    echo "Warning: BUILD is deprecated, use PLATFORM instead" >&2
+    PLATFORM="${BUILD}"
+fi
+
+info_year=$(date "+%Y")
 ARCH="$(uname -m)"
 # PyInstaller v6.x rearranges folder configuration causing broken builds, This re-enables old onedir layout.
 pyinstaller_args+="--contents-directory . "
@@ -14,7 +22,7 @@ pyinstaller_args+="--exclude-module sphinx " # Pulled in by scipy docscrape if p
 
 # Setting up pyinstaller arguments for each OS.
 # This adds bundle identifier in reverse DSN format for macos
-if [ "$BUILD" = "osx" ]; then
+if [ "$PLATFORM" = "osx" ]; then
     pyinstaller_args+="--osx-bundle-identifier org.inkstitch.app "
     pyinstaller_args+="-i images/inkstitch/mac/inkstitch.icns "
     if [[ -z ${GITHUB_REF} ]]; then
@@ -22,45 +30,45 @@ if [ "$BUILD" = "osx" ]; then
     else
         bash bin/import-macos-keys
     fi
-elif [ "$BUILD" = "linux" ]; then
+elif [ "$PLATFORM" = "linux" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
     pyinstaller_args+="--add-binary /lib/${ARCH}-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/${ARCH}-linux-gnu/libnsl.so.1:. "
-elif [ "$BUILD" = "linux32" ]; then
+elif [ "$PLATFORM" = "linux32" ]; then
     pyinstaller_args+="--hidden-import gi.repository.Gtk "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libcrypt.so.1:. "
     pyinstaller_args+="--add-binary /lib/i386-linux-gnu/libnsl.so.1:. "
-elif [ "$BUILD" = "windows" ]; then
-	if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
-		# setting the file and product version for release
-		# Code to remove the periods in the version number
-		ENT=.
-		SAL=${VERSION#v}$ENT
-		INFO_VERSION=()
-		while [[ $SAL ]]; do
-			INFO_VERSION+=( "${SAL%%"$ENT"*}" );
-			SAL=${SAL#*"$ENT"};
-		done;
-		sed -i'' 's/3, 2, 1,/'"${INFO_VERSION[0]}, ${INFO_VERSION[1]}, ${INFO_VERSION[2]},"'/' installer_scripts/file_version_info.txt
-	fi
-		# set year and version in version_info
-	sed -i'' 's/1.1.1/'"${VERSION#v}"'/' installer_scripts/file_version_info.txt
-	sed -i'' 's/1234/'"${info_year}"'/' installer_scripts/file_version_info.txt
-  	# sets icon to inkstitch.exe
-	pyinstaller_args+="-i images/inkstitch/win/inkstitch.ico "
-	pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
+elif [ "$PLATFORM" = "windows" ]; then
+    if [[ "$VERSION" =~ ^v[0-9][.0-9]+$ ]]; then
+        # setting the file and product version for release
+        # Code to remove the periods in the version number
+        ENT=.
+        SAL=${VERSION#v}$ENT
+        INFO_VERSION=()
+        while [[ $SAL ]]; do
+            INFO_VERSION+=("${SAL%%"$ENT"*}")
+            SAL=${SAL#*"$ENT"}
+        done
+        sed -i'' 's/3, 2, 1,/'"${INFO_VERSION[0]}, ${INFO_VERSION[1]}, ${INFO_VERSION[2]},"'/' installer_scripts/file_version_info.txt
+    fi
+    # set year and version in version_info
+    sed -i'' 's/1.1.1/'"${VERSION#v}"'/' installer_scripts/file_version_info.txt
+    sed -i'' 's/1234/'"${info_year}"'/' installer_scripts/file_version_info.txt
+    # sets icon to inkstitch.exe
+    pyinstaller_args+="-i images/inkstitch/win/inkstitch.ico "
+    pyinstaller_args+="--version-file  installer_scripts/file_version_info.txt "
 fi
 
 # Finally we build for windows and macOS with the finalized settings
-if [ "$BUILD" = "osx" -o "$BUILD" = "windows" ]; then
+if [ "$PLATFORM" = "osx" -o "$PLATFORM" = "windows" ]; then
     pyinstaller_args+="--windowed "
 fi
 # Run command to build the inkstich program
 ${PYTHON:-python} -m PyInstaller $pyinstaller_args inkstitch.py
 
-if [ "$BUILD" = "linux" ] || [ "$BUILD" = "linux32" ]; then
-	# Delete some GTK icons that pyinstaller shouldn't have pulled in
-	rm -rf dist/inkstitch/bin/share/icons
+if [ "$PLATFORM" = "linux" ] || [ "$PLATFORM" = "linux32" ]; then
+    # Delete some GTK icons that pyinstaller shouldn't have pulled in
+    rm -rf dist/inkstitch/bin/share/icons
 fi
 
 # pyinstaller put a whole mess of libraries under dist/inkstitch.  We'd like
