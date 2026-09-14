@@ -249,7 +249,7 @@ class Font(object):
            os.path.isfile(os.path.join(self.path, "%s.svg.xz" % variant))):
             return True
         elif (os.path.isdir(os.path.join(self.path, variant)) and
-                [svg for svg in os.listdir(os.path.join(self.path, variant)) if svg.endswith(('.svg', '.svg.xz'))]):
+                [svg for svg in sorted(os.listdir(os.path.join(self.path, variant))) if svg.endswith(('.svg', '.svg.xz'))]):
             return True
         else:
             return False
