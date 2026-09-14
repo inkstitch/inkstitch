@@ -100,7 +100,7 @@ def _do_contour_underlay(satin: 'SatinColumn', top_layer: StitchGroup, end_point
     )
 
     satin.add_running_stitches(first_side[-1], second_side[0], stitch_group)
-    stitch_group.stitches += second_side
+    stitch_group.add_stitches(second_side)
     return [stitch_group]
 
 

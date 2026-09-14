@@ -95,7 +95,7 @@ def _get_split_points_simple(params: SplitPointParams) -> list[Point]:
     return _get_split_points_staggered(params, staggers=1)
 
 
-def _get_split_points_staggered(params: SplitPointParams, staggers=None) -> list[Point]:
+def _get_split_points_staggered(params: SplitPointParams, staggers: int | None = None) -> list[Point]:
     if not params.length or params.a.distance(params.b) <= params.length:
         return []
 

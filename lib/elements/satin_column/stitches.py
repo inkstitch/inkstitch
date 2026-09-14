@@ -11,7 +11,7 @@ if TYPE_CHECKING:
     from .satin_column import SatinColumn
 
 
-def _do_e_stitch(satin: 'SatinColumn'):
+def _do_e_stitch(satin: 'SatinColumn') -> StitchGroup:
     # e stitch: do a pattern that looks like the letter "E".  It looks like
     # this:
     #
@@ -63,7 +63,7 @@ def _do_e_stitch(satin: 'SatinColumn'):
     return stitch_group
 
 
-def _do_s_stitch(satin: 'SatinColumn'):
+def _do_s_stitch(satin: 'SatinColumn') -> StitchGroup:
     # S stitch: do a pattern that looks like the letter "S".  It looks like
     # this:
     #   _   _   _   _   _   _
@@ -113,7 +113,7 @@ def _do_s_stitch(satin: 'SatinColumn'):
     return stitch_group
 
 
-def _do_zigzag(satin: 'SatinColumn'):
+def _do_zigzag(satin: 'SatinColumn') -> StitchGroup:
     stitch_group = StitchGroup(color=satin.color)
 
     # calculate pairs at double the requested density
@@ -171,7 +171,7 @@ def _do_zigzag(satin: 'SatinColumn'):
     return stitch_group
 
 
-def _do_satin(satin: 'SatinColumn'):
+def _do_satin(satin: 'SatinColumn') -> StitchGroup:
     # satin: do a zigzag pattern, alternating between the paths.  The
     # zigzag looks like this to make the satin stitches look perpendicular
     # to the column:
@@ -228,7 +228,7 @@ def _do_satin(satin: 'SatinColumn'):
     return stitch_group
 
 
-def do_top_layer_stitch_group(satin: 'SatinColumn'):
+def do_top_layer_stitch_group(satin: 'SatinColumn') -> StitchGroup:
     if satin.satin_method == 'e_stitch':
         return _do_e_stitch(satin)
     elif satin.satin_method == 's_stitch':
