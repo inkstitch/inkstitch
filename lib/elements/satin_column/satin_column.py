@@ -1105,7 +1105,8 @@ class SatinColumn(EmbroideryElement):
 
         return shortened
 
-    def _get_offset_px(self, point: Point, other_point: Point, last_point: Point | None, inset_index: int, max_stitch_length: float | None) -> tuple[float, Point, int]:
+    def _get_offset_px(self, point: Point, other_point: Point, last_point: Point | None,
+                       inset_index: int, max_stitch_length: float | None) -> tuple[float, Point, int]:
         if inset_index >= len(self.short_stitch_inset):
             inset_index = 0
 

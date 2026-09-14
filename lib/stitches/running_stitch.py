@@ -23,7 +23,7 @@ def lerp(a: float, b: float, t: float) -> float:
     return (1 - t) * a + t * b
 
 
-def split_segment_even_n(a: Point, b: Point, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> list[shgeo.Point]:
+def split_segment_even_n(a: Point, b: Point, segments: int, jitter_sigma: float = 0.0, random_seed=None) -> list[Point]:
     """Split a segment into n even parts, optionally with jitter."""
     if segments <= 1:
         return []
@@ -37,17 +37,17 @@ def split_segment_even_n(a: Point, b: Point, segments: int, jitter_sigma: float 
     # sort the splits in case a bad roll transposes any of them
     splits.sort()
 
-    return [line.interpolate(x, normalized=True) for x in splits]
+    return [Point.from_shapely_point(line.interpolate(x, normalized=True)) for x in splits]
 
 
-def split_segment_even_dist(a: Point, b: Point, max_length: float, jitter_sigma: float = 0.0, random_seed=None) -> list[shgeo.Point]:
+def split_segment_even_dist(a: Point, b: Point, max_length: float, jitter_sigma: float = 0.0, random_seed: str | None = None) -> list[Point]:
     """Split a segment into even parts with maximum length."""
-    distance = shgeo.Point(a).distance(shgeo.Point(b))
+    distance = a.distance(b)
     segments = math.ceil(distance / max_length)
     return split_segment_even_n(a, b, segments, jitter_sigma, random_seed)
 
 
-def split_segment_random_phase(a: Point, b: Point, length: float, length_sigma: float, random_seed: str | None) -> list[shgeo.Point]:
+def split_segment_random_phase(a: Point, b: Point, length: float, length_sigma: float, random_seed: str | None) -> list[Point]:
     """Split a segment with randomized phase and length variation."""
     line = shgeo.LineString([a, b])
     progress = length * prng.uniform_floats(random_seed, "phase")[0]
@@ -60,7 +60,7 @@ def split_segment_random_phase(a: Point, b: Point, length: float, length_sigma: 
         if progress >= distance:
             break
         splits.append(progress)
-    return [line.interpolate(x, normalized=False) for x in splits]
+    return [Point.from_shapely_point(line.interpolate(x, normalized=False)) for x in splits]
 
 
 def split_segment_stagger_phase(
@@ -71,7 +71,7 @@ def split_segment_stagger_phase(
     this_segment_num: int,
     min_val=0,
     max_val=None,
-) -> list[shgeo.Point]:
+) -> list[Point]:
     """Split a segment with staggered phase for pattern alignment."""
     line = shgeo.LineString([a, b])
     distance = line.length
@@ -86,7 +86,7 @@ def split_segment_stagger_phase(
         if progress > min_val and progress < max_val:
             splits.append(progress)
         progress += segment_length
-    return [line.interpolate(x, normalized=False) for x in splits]
+    return [Point.from_shapely_point(line.interpolate(x, normalized=False)) for x in splits]
 
 
 class AngleInterval:

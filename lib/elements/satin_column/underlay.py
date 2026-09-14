@@ -1,4 +1,4 @@
-from typing import Optional, TYPE_CHECKING, Sequence
+from typing import TYPE_CHECKING, Sequence
 
 from shapely import LineString
 from shapely import geometry as shgeo

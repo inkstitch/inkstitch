@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
@@ -33,13 +35,13 @@ def get_split_points(satin: 'SatinColumn',
                      a_short: Point,
                      b_short: Point,
                      length: float | None,
-                     count: int | None=None,
-                     length_sigma: float=0.0,
-                     random_phase: bool=False,
-                     min_split_length: float | None=None,
-                     seed: str | None=None,
-                     row_num: int=0,
-                     from_end: bool=False) -> tuple[list[Point], int | None]:
+                     count: int | None = None,
+                     length_sigma: float = 0.0,
+                     random_phase: bool = False,
+                     min_split_length: float | None = None,
+                     seed: str | None = None,
+                     row_num: int = 0,
+                     from_end: bool = False) -> tuple[list[Point], int | None]:
     # todo: have callers pass this instead of constructing here
     params = SplitPointParams(
         satin,
@@ -76,9 +78,9 @@ def _get_split_points_default(params: SplitPointParams) -> tuple[list[Point], in
     if params.random_phase:
         points = running_stitch.split_segment_random_phase(params.a_short, params.b_short, params.length, params.length_sigma, params.seed)
         # avoid hard stitches: do not insert split stitches near the end points
-        if len(points) > 1 and points[0].distance(shgeo.Point(params.a)) <= params.satin.min_stitch_len:
+        if len(points) > 1 and points[0].distance(params.a) <= params.satin.min_stitch_len:
             del points[0]
-        if len(points) > 1 and points[-1].distance(shgeo.Point(params.b)) <= params.satin.min_stitch_len:
+        if len(points) > 1 and points[-1].distance(params.b) <= params.satin.min_stitch_len:
             del points[-1]
         return (points, None)
     elif params.count is not None:
