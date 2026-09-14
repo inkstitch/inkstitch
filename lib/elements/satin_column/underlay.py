@@ -1,4 +1,4 @@
-from typing import Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING, Sequence
 
 from shapely import LineString
 from shapely import geometry as shgeo
@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from .satin_column import SatinColumn
 
 
-def do_underlay_stitch_groups(satin: 'SatinColumn', top_layer: StitchGroup, end_point: Optional[Point]) -> list[StitchGroup]:
+def do_underlay_stitch_groups(satin: 'SatinColumn', top_layer: StitchGroup, end_point: Point | None) -> list[StitchGroup]:
     stitch_groups: list[StitchGroup] = []
     if satin.center_walk_underlay:
         stitch_groups.extend(_do_center_walk(satin, end_point))
@@ -27,7 +27,7 @@ def do_underlay_stitch_groups(satin: 'SatinColumn', top_layer: StitchGroup, end_
     return stitch_groups
 
 
-def _to_stitch_group(satin: 'SatinColumn', linestring: LineString, tags, reverse: bool = False) -> StitchGroup:
+def _to_stitch_group(satin: 'SatinColumn', linestring: LineString, tags: Sequence[str], reverse: bool = False) -> StitchGroup:
     if reverse:
         linestring = linestring.reverse()
     return StitchGroup(
@@ -37,7 +37,7 @@ def _to_stitch_group(satin: 'SatinColumn', linestring: LineString, tags, reverse
     )
 
 
-def _do_contour_underlay(satin: 'SatinColumn', top_layer: StitchGroup, end_point: Optional[Point]):
+def _do_contour_underlay(satin: 'SatinColumn', top_layer: StitchGroup, end_point: Point | None) -> list[StitchGroup]:
     # "contour walk" underlay: do stitches up one side and down the
     # other. if the two sides are far away, adding a running stitch to travel
     # in between avoids a long jump or a trim.
@@ -111,7 +111,7 @@ def _get_peak(stitches: list[Stitch], peak: str) -> Stitch | None:
     return None
 
 
-def _shorten_contour_underlay_for_zigzag(rail: list[Point], end_point: Optional[Point], cut_end: bool = False) -> list[Point]:
+def _shorten_contour_underlay_for_zigzag(rail: list[Point], end_point: Point | None, cut_end: bool = False) -> list[Point]:
     if not end_point:
         return rail
     line = shgeo.LineString(rail)
@@ -124,12 +124,12 @@ def _shorten_contour_underlay_for_zigzag(rail: list[Point], end_point: Optional[
     return [Point(*point) for point in shortened_line.coords]
 
 
-def _do_center_walk(satin: 'SatinColumn', end_point: Optional[Point]):
+def _do_center_walk(satin: 'SatinColumn', end_point: Point | None) -> list[StitchGroup]:
     # Center walk underlay is just a running stitch down and back on the
     # center line between the bezier curves.
     repeats = satin.center_walk_underlay_repeats
 
-    stitch_groups = []
+    stitch_groups: list[StitchGroup] = []
     stitches = satin.get_center_line_stitches(satin.center_walk_underlay_position, satin.center_walk_underlay_stitch_length)
     if end_point:
         tags = ("satin_column", "satin_column_underlay", "satin_center_walk")
@@ -157,7 +157,7 @@ def _do_center_walk(satin: 'SatinColumn', end_point: Optional[Point]):
     return stitch_groups
 
 
-def _do_zigzag_underlay(satin: 'SatinColumn', end_point: Optional[Point]):
+def _do_zigzag_underlay(satin: 'SatinColumn', end_point: Point | None) -> list[StitchGroup]:
     # zigzag underlay, usually done at a much lower density than the
     # satin itself.  It looks like this:
     #
@@ -168,7 +168,7 @@ def _do_zigzag_underlay(satin: 'SatinColumn', end_point: Optional[Point]):
     # "German underlay" described here:
     #   http://www.mrxstitch.com/underlay-what-lies-beneath-machine-embroidery/
 
-    stitch_groups = []
+    stitch_groups: list[StitchGroup] = []
 
     pairs = plot_points_on_rails(
         satin,

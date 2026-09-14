@@ -224,7 +224,7 @@ def cut_path(points, length):
     return [Point(*point) for point in subpath.coords]
 
 
-def offset_points(pos1, pos2, offset_px, offset_proportional):
+def offset_points(pos1: 'Point', pos2: 'Point', offset_px: tuple[float, float], offset_proportional: tuple[float, float]) -> tuple['Point', 'Point']:
     """Expand or contract two points about their midpoint.
 
     This is useful for pull compensation and insetting underlay.
@@ -273,15 +273,15 @@ class Point:
         self.y = float(y)
 
     @classmethod
-    def from_shapely_point(cls, point):
+    def from_shapely_point(cls, point: ShapelyPoint) -> typing.Self:
         return cls(point.x, point.y)
 
     @classmethod
-    def from_tuple(cls, point: tuple[CoordinateType, CoordinateType]):
+    def from_tuple(cls, point: tuple[CoordinateType, CoordinateType]) -> typing.Self:
         return cls(point[0], point[1])
 
     @classmethod
-    def from_vector2d(cls, vec: Vector2d):
+    def from_vector2d(cls, vec: Vector2d) -> typing.Self:
         return cls(vec.x, vec.y)
 
     @overload
@@ -289,7 +289,7 @@ class Point:
     def from_other(cls, other: None) -> None: ...
     @overload
     @classmethod
-    def from_other(cls, other: AnyPointType) -> 'Point': ...
+    def from_other(cls, other: AnyPointType) -> typing.Self: ...
     @overload
     @classmethod
     def from_other(cls, other: object) -> NoReturn: ...
