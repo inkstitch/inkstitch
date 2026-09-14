@@ -24,7 +24,7 @@ from .glyph import Glyph
 
 
 # Bump when the cached glyph serialization format changes.
-FONT_CACHE_VERSION = 3
+FONT_CACHE_VERSION = 4
 
 
 def _serialize_glyph(glyph):
@@ -217,7 +217,9 @@ class FontVariant(object):
             file_paths.append(direct_path_compressed)
         if os.path.isdir(os.path.join(font_path, variant)):
             path = os.path.join(font_path, variant)
-            file_paths.extend([os.path.join(path, f) for f in os.listdir(path) if f.endswith(('.svg', '.svg.xz'))])
+            # sorted(): os.listdir order is filesystem-dependent, but a glyph defined in
+            # two files of one variant resolves last-wins, so the order matters.
+            file_paths.extend([os.path.join(path, f) for f in sorted(os.listdir(path)) if f.endswith(('.svg', '.svg.xz'))])
         return file_paths
 
     def _clean_group(self, group):
