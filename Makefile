@@ -123,6 +123,8 @@ manual:
 
 .PHONY: inx
 inx: version locales
+	# If additional python runtimes are added to this Makefile,
+	# They will need their own cases added to lib/inx/utils.py
 	$(PYTHON_EXECUTABLE) bin/generate-inx-files;
 
 # see action: .github/workflows/translations.yml and https://translate.inkstitch.org
