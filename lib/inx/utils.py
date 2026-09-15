@@ -21,7 +21,7 @@ def build_environment():
         extensions=['jinja2.ext.i18n']
     )
 
-    if "BUILD" in os.environ:
+    if "BUILD_DIST" in os.environ:
         # building a ZIP release, with inkstitch packaged as a binary
         # Command tag and icons path
         if sys.platform == "win32":

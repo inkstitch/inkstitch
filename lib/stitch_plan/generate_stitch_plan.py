@@ -73,5 +73,5 @@ def generate_stitch_plan(embroidery_file, import_commands="symbols"):  # noqa: C
 def validate_file_path(path):
     # Check if the file exists
     if not os.path.isfile(path):
-        inkex.errormsg(_('File does not exist and cannot be opened. Please correct the file path and try again.\r%s') % path)
+        inkex.errormsg(_('File does not exist and cannot be opened. Please correct the file path and try again: %s') % path)
         sys.exit(1)

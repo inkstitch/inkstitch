@@ -71,7 +71,7 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: linux
+          PLATFORM: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v7
         with:
@@ -133,14 +133,14 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: linux
+          PLATFORM: linux
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - uses: actions/upload-artifact@v7
         with:
           name: inkstitch-linuxarm64
           path: artifacts
   linux32:
-    # Node required for actions, install follows 
+    # Node required for actions, install follows
     # https://github.com/actions/upload-artifact/issues/616
     # 2026-04-28: Github is deprecating Node 20 as it's going EoL. We can't update node on this runner easily because
     # unofficial-builds.nodejs.org stops providing x86 binaries after 21.x due to "toolchain incomaptibilities".
@@ -173,7 +173,7 @@ jobs:
       # Permissions problem that prevents caching
       # https://github.com/actions/setup-python/issues/816
       - name: Change ownership of /github/home
-        run: sudo chown -R $(whoami) /github/home    
+        run: sudo chown -R $(whoami) /github/home
       - name: Replace `node` with an i386 version
         shell: bash
         run: |
@@ -222,21 +222,21 @@ jobs:
         shell: bash
         run: |
           bash bin/build-linux32-venv
-      - name: test    
+      - name: test
         shell: bash
         run: |
           source virtualenv/bin/activate
           echo "${{ env.pythonLocation }}\bin" >> $GITHUB_PATH
           pytest
-          deactivate 
-      - name: Package distributable    
+          deactivate
+      - name: Package distributable
         shell: bash
         run: |
           source virtualenv/bin/activate
           make dist
           deactivate
         env:
-          BUILD: linux32
+          PLATFORM: linux32
           INKSTITCH_GPG_KEY: ${{ secrets.INKSTITCH_GPG_KEY }}
       - name: Replace `node` with an i386 version
         shell: bash
@@ -287,7 +287,7 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: windows
+          PLATFORM: windows
       - name: Set siging policy to release
         if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         shell: bash
@@ -322,7 +322,7 @@ jobs:
         run: |
           bash bin/build-windows-installer
         env:
-          BUILD: windows
+          PLATFORM: windows
       - name: upload-unsigned-installer
         if: ${{ startsWith(github.event.ref, 'refs/tags/v') || inputs.TEST_SIGNING }}
         id: upload-unsigned-installer
@@ -396,7 +396,7 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: osx
+          PLATFORM: osx
           MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
           MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
           KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
@@ -458,7 +458,7 @@ jobs:
         run: |
           make dist
         env:
-          BUILD: osx
+          PLATFORM: osx
           MACOS_CERTIFICATE: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE }}
           MACOS_CERTIFICATE_PWD: ${{ secrets.INKSTITCH_APPLE_DEVELOPER_CERTIFICATE_PASSWORD }}
           KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PASSWORD }}
