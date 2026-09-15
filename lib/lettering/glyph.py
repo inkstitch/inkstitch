@@ -50,7 +50,7 @@ class Glyph(object):
     def _process_clips(self, group):
         clips = defaultdict(list)
         for node in group.iterdescendants():
-            if node.clip:
+            if node.clip is not None:
                 node_id = node.get_id()
                 clips[node_id] = node.clip
         return clips
