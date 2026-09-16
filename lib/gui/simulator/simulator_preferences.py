@@ -126,7 +126,7 @@ class SimulatorPreferenceDialog(wx.Dialog):
         global_settings['simulator_crosshair_colour'] = self.crosshair_colour.GetColour().GetAsString(wx.C2S_HTML_SYNTAX)
 
     def refresh_preview(self):
-        if self.drawing_panel.loaded:
+        if self.drawing_panel.stitch_plan is not None:
             self.drawing_panel.update_pen_size()
         self.control_panel.choose_speed()
         self.control_panel.Refresh()

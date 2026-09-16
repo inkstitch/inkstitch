@@ -91,7 +91,6 @@ class DrawingPanel(wx.Panel):
         self.SetDoubleBuffered(True)
 
         self.loading = False
-        self.loaded = False
         self.loading_indicator = LoadingIndicator()
 
         self.animating = False
@@ -337,7 +336,6 @@ class DrawingPanel(wx.Panel):
 
     def clear(self):
         self.stitch_plan = None
-        self.loaded = False
         self.Refresh()
 
     def load(self, stitch_plan: StitchPlan) -> None:
@@ -365,7 +363,6 @@ class DrawingPanel(wx.Panel):
             ),
             1
         )
-        self.loaded = True
         self.go()
         if hasattr(self.view_panel, 'info_panel') and self.view_panel.info_panel is not None:
             self.view_panel.info_panel.update()
@@ -416,7 +413,7 @@ class DrawingPanel(wx.Panel):
         self.control_panel.on_stop()
 
     def show_all_stitches(self, event=None):
-        if not self.loaded:
+        if self.stitch_plan is None:
             return
 
         self.stop()
