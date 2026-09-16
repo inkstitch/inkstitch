@@ -145,7 +145,7 @@ def _do_zigzag(satin: 'SatinColumn') -> StitchGroup:
     last_point = None
     last_point_short = None
     for i, (a, b), (a_short, b_short) in zip(itertools.count(0), pairs, short_pairs):
-        if last_point and last_point_short:
+        if last_point is not None and last_point_short is not None:
             split_points, _ = get_split_points(
                 satin, last_point, a, last_point_short, a_short, max_stitch_length, None,
                 length_sigma, random_phase, min_split_length, prng.join_args(seed, 'satin-split', 2 * i), row_num=2 * i,
