@@ -273,15 +273,15 @@ class Point:
         self.y = float(y)
 
     @classmethod
-    def from_shapely_point(cls, point: ShapelyPoint) -> typing.Self:
+    def from_shapely_point(cls, point: ShapelyPoint) -> 'Point':
         return cls(point.x, point.y)
 
     @classmethod
-    def from_tuple(cls, point: tuple[CoordinateType, CoordinateType]) -> typing.Self:
+    def from_tuple(cls, point: tuple[CoordinateType, CoordinateType]) -> 'Point':
         return cls(point[0], point[1])
 
     @classmethod
-    def from_vector2d(cls, vec: Vector2d) -> typing.Self:
+    def from_vector2d(cls, vec: Vector2d) -> 'Point':
         return cls(vec.x, vec.y)
 
     @overload
@@ -289,7 +289,7 @@ class Point:
     def from_other(cls, other: None) -> None: ...
     @overload
     @classmethod
-    def from_other(cls, other: AnyPointType) -> typing.Self: ...
+    def from_other(cls, other: AnyPointType) -> 'Point': ...
     @overload
     @classmethod
     def from_other(cls, other: object) -> NoReturn: ...
