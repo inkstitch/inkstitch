@@ -1,6 +1,6 @@
 # Authors: see git history
 #
-# Copyright (c) 2024 Authors
+# Copyright (c) 2026 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 import wx
 import time
@@ -155,6 +155,13 @@ class Animator:
 
     def one_stitch_backward(self) -> None:
         self.set_current_stitch(self.current_stitch - 1)
+
+    def show_all_stitches(self, event: wx.CommandEvent) -> None:
+        if self.stitch_plan is None:
+            return
+
+        self.stop()
+        self.set_current_stitch(self.stitch_plan.num_stitches)
 
     def set_speed(self, speed: int) -> None:
         self.speed = speed
