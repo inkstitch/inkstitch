@@ -4,6 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 import wx
+from ...stitch_plan import StitchPlan
 
 from ...i18n import _
 
@@ -12,12 +13,9 @@ class DesignInfoDialog(wx.Dialog):
     """A dialog to show design info
     """
 
-    def __init__(self, *args, **kwargs):
-        super(DesignInfoDialog, self).__init__(*args, **kwargs)
+    def __init__(self, parent: wx.Window, stitch_plan: StitchPlan | None) -> None:
+        super(DesignInfoDialog, self).__init__(parent, title=_('Design Info'))
         self.SetWindowStyle(wx.FRAME_FLOAT_ON_PARENT | wx.DEFAULT_FRAME_STYLE)
-
-        self.view_panel = self.GetParent()
-        self.drawing_panel = self.view_panel.drawing_panel
 
         sizer = wx.BoxSizer(wx.VERTICAL)
         info_sizer = wx.FlexGridSizer(6, 2, 5, 5)
@@ -55,15 +53,18 @@ class DesignInfoDialog(wx.Dialog):
 
         sizer.Add(info_sizer, 1, wx.ALL, 10)
         self.SetSizerAndFit(sizer)
-        self.update()
+        self.load(stitch_plan)
 
-    def update(self):
-        if self.drawing_panel.stitch_plan is None:
+    def load(self, stitch_plan: StitchPlan | None) -> None:
+        if stitch_plan is None:
+            for label in [self.dimensions, self.num_stitches, self.num_color_changes, self.num_jumps, self.num_trims, self.num_stops]:
+                label.SetLabel("")
             return
-        self.dimensions.SetLabel("{:.2f} x {:.2f}".format(self.drawing_panel.dimensions_mm[0], self.drawing_panel.dimensions_mm[1]))
-        self.num_stitches.SetLabel(f"{self.drawing_panel.num_stitches}")
-        self.num_color_changes.SetLabel(f"{self.drawing_panel.num_color_changes}")
-        self.num_jumps.SetLabel(f"{self.drawing_panel.num_jumps}")
-        self.num_trims.SetLabel(f"{self.drawing_panel.num_trims}")
-        self.num_stops.SetLabel(f"{self.drawing_panel.num_stops}")
+
+        self.dimensions.SetLabel("{:.2f} x {:.2f}".format(*stitch_plan.dimensions_mm))
+        self.num_stitches.SetLabel(f"{stitch_plan.num_stitches}")
+        self.num_color_changes.SetLabel(f"{stitch_plan.num_color_blocks-1}")
+        self.num_jumps.SetLabel(f"{stitch_plan.num_jumps-1}")
+        self.num_trims.SetLabel(f"{stitch_plan.num_trims}")
+        self.num_stops.SetLabel(f"{stitch_plan.num_stops}")
         self.Fit()

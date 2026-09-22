@@ -4,7 +4,7 @@
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
 from sys import exit
-from typing import List
+from typing import List, Tuple
 
 from inkex import errormsg
 
@@ -213,7 +213,7 @@ class StitchPlan(object):
         return max(-minx, maxx), max(-miny, maxy)
 
     @property
-    def dimensions_mm(self):
+    def dimensions_mm(self) -> Tuple[float, float]:
         dimensions = self.dimensions
         return (dimensions[0] / PIXELS_PER_MM, dimensions[1] / PIXELS_PER_MM)
 
