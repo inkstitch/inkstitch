@@ -29,7 +29,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo gem install fpm
-          python -m pip install --upgrade pip
+          # Temporary: Pin pip at 24.0. Inkex uses a non-standard version specifier (https://github.com/pypa/pip/issues/12063)
+          # that pip 24.1 and later reject. That should be fixed upstream, but for now...
+          python -m pip install --upgrade pip==24.0
           python -m pip install wheel
 
           sudo apt-get install gettext
