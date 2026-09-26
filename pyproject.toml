@@ -6,7 +6,8 @@ dependencies = [
     "pystitch",
     # For macOS and Windows our installer bundles the version specified here.
     # Some Linux distros package Ink/Stitch depending on the inkex bundled with Inkscape.
-    "inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.4.1",
+    # Temp: Use a version with a fixed requirements
+    "inkex @ git+https://gitlab.com/CapellanCitizen/extensions.git@02719bb695039031c17cf476ddb3f2477f524912",
     # For Linux users it may be tricky to install wxPython from sources.
     # Prebuilt packages: https://wxpython.org/pages/downloads/index.html
     #                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
