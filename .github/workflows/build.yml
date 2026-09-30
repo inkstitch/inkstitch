@@ -58,7 +58,7 @@ jobs:
 
           python -m pip install https://github.com/inkstitch/build-libs/releases/download/v0.1/wxPython-4.2.2-cp311-cp311-linux_x86_64.whl
 
-          python -m pip install --build-constraint build-constraint.txt -r requirements.txt
+          python -m pip install -r requirements.txt
 
           python -m pip install pyinstaller
 
@@ -120,7 +120,7 @@ jobs:
           python -m pip install numpy --no-binary numpy
           python -m pip install wxPython==4.2.5 --no-binary wxPython
 
-          python -m pip install --build-constraint build-constraint.txt -r requirements.txt
+          python -m pip install -r requirements.txt
 
           python -m pip install pyinstaller
 
@@ -163,7 +163,7 @@ jobs:
           python -m pip install wheel
           pip install wxPython==4.2.5
 
-          python -m pip install --build-constraint build-constraint.txt -r requirements.txt
+          python -m pip install -r requirements.txt
 
           python -m pip install pyinstaller
 
@@ -273,7 +273,7 @@ jobs:
           pip install PyGObject
           pip install wxPython==4.2.5 --no-binary wxPython
 
-          pip install --build-constraint build-constraint.txt -r requirements.txt
+          pip install -r requirements.txt
 
           pip install pyinstaller
 
@@ -336,7 +336,7 @@ jobs:
           pip install PyGObject
           pip install wxPython==4.2.5 --no-binary wxPython
 
-          pip install --build-constraint build-constraint.txt -r requirements.txt
+          pip install -r requirements.txt
 
           pip install pyinstaller
 

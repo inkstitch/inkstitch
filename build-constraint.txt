@@ -1,4 +1,0 @@
-# Temporary measure: use poetry-core 2.4.1 as poetry-core 2.5.0 causes issues with the non-standard
-# dependency version numbers used in inkex@EXTENSIONS_AT_INKSCAPE_1.4.1.
-# this can be removed if we change versions or upstream fixes the issue.
-poetry_core==2.4.1
