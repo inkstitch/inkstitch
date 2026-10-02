@@ -58,6 +58,49 @@ def is_cache_disabled():
     return not global_settings['cache_size']
 
 
+def is_font_cache_disabled():
+    return not global_settings['font_cache_size']
+
+
+def hash_file(path):
+    """SHA1 digest of a file's contents (path/mtime-independent)."""
+    hasher = hashlib.sha1()
+    with open(path, 'rb') as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b''):
+            hasher.update(chunk)
+    return hasher.digest()
+
+
+__font_cache = None
+
+
+def get_font_cache():
+    """diskcache.Cache for parsed font glyphs."""
+    global __font_cache
+
+    if __font_cache is None:
+        cache_dir = get_user_dir('cache')
+        font_dir = os.path.join(cache_dir, 'font_glyphs')
+        size_limit = global_settings['font_cache_size'] * 1024 * 1024
+        try:
+            __font_cache = diskcache.Cache(font_dir, size=size_limit)
+        except (sqlite3.DatabaseError, sqlite3.OperationalError):
+            # reset cache database file if it couldn't parse correctly
+            cache_file = os.path.join(font_dir, 'cache.db')
+            if os.path.exists(cache_file):
+                os.remove(cache_file)
+            __font_cache = diskcache.Cache(font_dir, size=size_limit)
+        __font_cache.size_limit = size_limit
+
+        # reset cache if warnings appear within the files
+        warnings = __font_cache.check()
+        if warnings:
+            __font_cache.clear()
+
+        atexit.register(__font_cache.close)
+    return __font_cache
+
+
 class CacheKeyGenerator(object):
     """Generate cache keys given arbitrary data.
 
