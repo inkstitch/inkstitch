@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hoop outer wood -->
+  <circle cx="256" cy="256" r="210" fill="#E9C99F" />
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#D2A679" stroke-width="4" opacity="0.4"/>
+  <!-- Inner white fabric -->
+  <circle cx="256" cy="256" r="175" fill="white" stroke="#D2A679" stroke-width="8"/>
+  
+  <!-- X stitches - 4 colorful, thick rounded -->
+  <!-- Top-left Pink -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <line x1="115" y1="140" x2="205" y2="230" stroke="#EA1A8A" stroke-width="32"/>
+    <line x1="205" y1="140" x2="115" y2="230" stroke="#EA1A8A" stroke-width="32"/>
+  </g>
+  <!-- Top-right Yellow -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <line x1="307" y1="140" x2="397" y2="230" stroke="#FFC800" stroke-width="32"/>
+    <line x1="397" y1="140" x2="307" y2="230" stroke="#FFC800" stroke-width="32"/>
+  </g>
+  <!-- Bottom-left Cyan -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <line x1="115" y1="282" x2="205" y2="372" stroke="#00B8E6" stroke-width="32"/>
+    <line x1="205" y1="282" x2="115" y2="372" stroke="#00B8E6" stroke-width="32"/>
+  </g>
+  <!-- Bottom-right Green -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <line x1="307" y1="282" x2="397" y2="372" stroke="#5BC500" stroke-width="32"/>
+    <line x1="397" y1="282" x2="307" y2="372" stroke="#5BC500" stroke-width="32"/>
+  </g>
+</svg>
