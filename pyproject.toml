@@ -9,7 +9,7 @@ dependencies = [
     # "inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.4.1",
     # Temporarily though, we need to use this branch (EXTENSIONS_AT_INKSCAPE_1.4.1 with a fix to the
     # declared dependencies) to fix a build issue with latest poetry-core, see https://github.com/inkstitch/inkstitch/issues/4562
-    "inkex @ git+https://gitlab.com/CapellanCitizen/extensions.git@a887f9d4c8adacd62786e4f46c8ef1467bedc1df",
+    "inkex @ git+https://gitlab.com/CapellanCitizen/extensions.git@0606d1a31f80a38ae8614a23f20dcac1cab5a2d8",
     # For Linux users it may be tricky to install wxPython from sources.
     # Prebuilt packages: https://wxpython.org/pages/downloads/index.html
     #                    https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
