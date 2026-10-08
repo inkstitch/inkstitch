@@ -22,12 +22,13 @@ jinja2>2.9
 
 # toml release 0.10.2 still buggy for heterogenous arrays
 # tomli is built as tomllib in python 3.11 and higher
-tomli
+tomli ; python_version < '3.11'
 
 colormath2
 flask>=2.2.0
 fonttools
 trimesh>=3.15.2
+xxhash>=4.0.1
 diskcache
 
 pywinutils ; sys_platform == 'win32'
