@@ -6,7 +6,7 @@ import math
 
 import wx
 from numpy import split
-from typing import List, Optional, Tuple, cast
+from typing import List, Optional, Tuple, cast, TYPE_CHECKING
 
 from ...stitch_plan import StitchPlan
 from ...threads import ThreadColor
@@ -16,6 +16,9 @@ from ...svg import PIXELS_PER_MM
 from ...utils.settings import global_settings
 from .camera import Camera
 from .animator import Animator
+
+if TYPE_CHECKING:
+    from .simulator_panel import SimulatorPanel
 
 
 class LoadingIndicator:
@@ -39,7 +42,7 @@ class LoadingIndicator:
 
         w, h = self.bounds
         # TRANSPARENT_PEN is there, but it's not in the types for some reason.
-        canvas.SetPen(wx.TRANSPARENT_PEN)  # type:ignore[attr-defined]
+        canvas.SetPen(wx.TRANSPARENT_PEN)  # type: ignore[attr-defined]
         canvas.SetBrush(self.bg_brush)
         canvas.DrawRoundedRectangle(
             ((panel_width-w)/2)-self.PADDING,
@@ -63,9 +66,8 @@ class DrawingPanel(wx.Panel):
     # Render circles once their shape is visible instead of using fast squares.
     CIRCLE_MARKER_MIN_SCREEN_SIZE = 4
 
-    def __init__(self, parent, animator: Animator, stitch_plan: Optional[StitchPlan] = None) -> None:
+    def __init__(self, parent: "SimulatorPanel", animator: Animator, stitch_plan: Optional[StitchPlan] = None) -> None:
         """"""
-        self.parent = parent
         self.animator = animator
         self.stitch_plan = stitch_plan
 
@@ -123,7 +125,7 @@ class DrawingPanel(wx.Panel):
             border_color = wx.Colour(self.page_specs['border_color'])
             if self.page_specs['show_page_shadow']:
                 # TRANSPARENT_PEN is there, but it's not in the types for some reason.
-                canvas.SetPen(wx.TRANSPARENT_PEN)  # type:ignore[attr-defined]
+                canvas.SetPen(wx.TRANSPARENT_PEN)  # type: ignore[attr-defined]
                 canvas.SetBrush(canvas.CreateBrush(wx.Brush(wx.Colour(border_color.Red(), border_color.Green(), border_color.Blue(), alpha=65))))
                 canvas.DrawRoundedRectangle(
                     4 * self.PIXEL_DENSITY, 4 * self.PIXEL_DENSITY,
@@ -255,10 +257,10 @@ class DrawingPanel(wx.Panel):
             canvas.SetBrush(npp_brush)
             # Drawing thousands of ellipses is expensive. Use fast squares by
             # default and only switch to circles when heavily zoomed in.
-            canvas.SetPen(wx.TRANSPARENT_PEN)
+            canvas.SetPen(wx.TRANSPARENT_PEN)  # type:ignore[attr-defined]
             square_size = max(1.0, float(npp_size))
             half_size = square_size / 2.0
-            marker_screen_size = square_size * self.zoom / self.PIXEL_DENSITY
+            marker_screen_size = square_size * self.camera.zoom / self.PIXEL_DENSITY
 
             if stitches:
                 # Use winding fill so overlapping markers remain filled.
