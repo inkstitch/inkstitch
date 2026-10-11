@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension translationdomain="inkstitch" xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <name>Selection to Knockdown Fill</name>
+    <name>Knockdown Fill</name>
     <id>org.{{ id_inkstitch }}.knockdown_fill</id>
     <param name="extension" type="string" gui-hidden="true">knockdown_fill</param>
     <effect>
@@ -19,9 +19,9 @@
         <param name="keep-holes" type="bool" gui-text="Keep holes">true</param>
         <param name="offset" type="float" gui-text="Offset" min="-50" max="50">1</param>
         <param name="join-style" type="optiongroup" appearance="combo" gui-text="Join style">
-           <option value="1">Round</option>
-           <option value="2">Mitre</option>
-           <option value="3">Bevel</option>
+           <option value="round">Round</option>
+           <option value="mitre">Mitre</option>
+           <option value="bevel">Bevel</option>
         </param>
         <param name="mitre-limit" type="float" gui-text="Mitre limit" min="0.1" max="50">5.0</param>
         <spacer />
@@ -37,11 +37,7 @@
         <param name="simple-shape" type="bool" gui-text="Use only shape"
                gui-description="Whether or not the motif should be cut out of the shape.">false</param>
         <param name="shape-offset" type="float" gui-text="Shape offset" min="0" max="50">1</param>
-        <param name="shape-join-style" type="optiongroup" appearance="combo" gui-text="Join style">
-           <option value="1">Round</option>
-           <option value="2">Mitre</option>
-           <option value="3">Bevel</option>
-        </param>
+
       </page>
       <page name="info" gui-text="Help">
         <label appearance="header">This extension generates a knockdown fill area with a specified offset around selected elements.</label>
