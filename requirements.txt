@@ -3,7 +3,10 @@ pystitch
 # For macOS and Windows our installer bundles the version specified here
 # but some Linux distros package Ink/Stitch as depending on the inkex that's bundled with Inkscape.
 # So at least for releases we should use a tagged version here such as EXTENSIONS_AT_INKSCAPE_$version.
-inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.4.1
+# inkex @ git+https://gitlab.com/inkscape/extensions.git@EXTENSIONS_AT_INKSCAPE_1.4.1
+# Temporarily though, we need to use this branch (EXTENSIONS_AT_INKSCAPE_1.4.1 with a fix to the
+# declared dependencies) to fix a build issue with latest poetry-core, see https://github.com/inkstitch/inkstitch/issues/4562
+inkex @ git+https://gitlab.com/CapellanCitizen/extensions.git@a887f9d4c8adacd62786e4f46c8ef1467bedc1df
 
 # for linux user it may be tricky to install wxPython from sources
 # prebuilt packages: https://wxpython.org/pages/downloads/index.html
@@ -19,12 +22,13 @@ jinja2>2.9
 
 # toml release 0.10.2 still buggy for heterogenous arrays
 # tomli is built as tomllib in python 3.11 and higher
-tomli
+tomli ; python_version < '3.11'
 
 colormath2
 flask>=2.2.0
 fonttools
 trimesh>=3.15.2
+xxhash>=4.0.1
 diskcache
 
 pywinutils ; sys_platform == 'win32'
