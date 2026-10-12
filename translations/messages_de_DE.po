@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-09-16 03:52+0000\n"
-"PO-Revision-Date: 2026-09-16 03:52\n"
+"POT-Creation-Date: 2026-09-18 03:45+0000\n"
+"PO-Revision-Date: 2026-10-12 04:54\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-16 03:52+0000\n"
+"POT-Creation-Date: 2026-09-18 03:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2538,7 +2538,7 @@ msgstr "Satinsäule hat keine Führungslinien"
 
 #: lib/elements/satin_column/validation_models.py:33
 msgid "Rungs control the stitch direction in satin columns. It is best practice to use them."
-msgstr ""
+msgstr "Führungslinien kontrollieren die Stichrichtung der Satinsäule. Es empfiehlt sich, sie zu verwenden."
 
 #: lib/elements/satin_column/validation_models.py:35
 #: lib/elements/satin_column/validation_models.py:67
@@ -2565,7 +2565,7 @@ msgstr "Einfache Satinsäule"
 
 #: lib/elements/satin_column/validation_models.py:47
 msgid "If you need more control over the stitch directions within this satin column, convert it to a real satin path"
-msgstr ""
+msgstr "Wenn du mehr Kontrolle über die Stichrichtungen der Satinsäule benötigst, konvertiere sie in eine echte Satinsäule."
 
 #: lib/elements/satin_column/validation_models.py:49
 msgid "* Select the satin path"
@@ -3556,7 +3556,7 @@ msgstr "Dieser Parameter wird gespeichert, wenn man auf \"Übernehmen und beende
 #: lib/gui/cross_stitch_assistant.py:468 lib/gui/edit_json/settings_panel.py:74
 #: lib/gui/lettering/main_panel.py:58 lib/gui/lettering_font_sample.py:70
 #: lib/gui/satin_multicolor/main_panel.py:69 lib/gui/selection_to_pattern.py:87
-#: lib/gui/simulator/simulator_preferences.py:79
+#: lib/gui/simulator/simulator_preferences.py:90
 #: lib/gui/tartan/main_panel.py:67 print/templates/custom-page.html:23
 #: print/templates/custom-page.html:27 print/templates/custom-page.html:33
 #: print/templates/ui.html:101 print/templates/ui.html:105
@@ -3886,7 +3886,7 @@ msgstr "Farbpalette auswählen"
 #: lib/gui/apply_palette.py:44 lib/gui/cross_stitch_assistant.py:470
 #: lib/gui/edit_json/settings_panel.py:76 lib/gui/lettering_font_sample.py:72
 #: lib/gui/satin_multicolor/main_panel.py:71 lib/gui/selection_to_pattern.py:89
-#: lib/gui/simulator/simulator_preferences.py:81
+#: lib/gui/simulator/simulator_preferences.py:94
 #: lib/gui/tartan/main_panel.py:69 lib/gui/test_swatches.py:117
 msgid "Apply"
 msgstr "Anwenden"
@@ -4969,47 +4969,51 @@ msgstr "FARBWECHSEL"
 
 #: lib/gui/simulator/drawing_panel.py:30
 msgid "Stitching..."
-msgstr ""
+msgstr "Sticke..."
 
-#: lib/gui/simulator/drawing_panel.py:343
+#: lib/gui/simulator/drawing_panel.py:360
 #, python-brace-format
 msgid "Dimensions: {:.2f} x {:.2f}"
 msgstr "Maße: {:.2f} x {:.2f}"
 
-#: lib/gui/simulator/drawing_panel.py:493
+#: lib/gui/simulator/drawing_panel.py:517
 #, python-format
 msgid "Command: %s"
 msgstr "Befehl: %s"
 
-#: lib/gui/simulator/simulator_preferences.py:39
+#: lib/gui/simulator/simulator_preferences.py:50
 msgid "Adapt speed to stitch count"
 msgstr "Geschwindigkeit dynamisch an die Sitchanzahl anpassen"
 
-#: lib/gui/simulator/simulator_preferences.py:41
+#: lib/gui/simulator/simulator_preferences.py:52
 msgid "When enabled simulation speed adapts itself to the stitch count."
 msgstr "Ist dies aktiviert, passt sich die Wiedergabe-Geschwindigkeit an die Anzahl der Stiche an."
 
-#: lib/gui/simulator/simulator_preferences.py:44
+#: lib/gui/simulator/simulator_preferences.py:55
 #: inx/inkstitch_fill_to_stroke.inx:21 inx/inkstitch_png_simple.inx:15
 #: inx/inkstitch_zip.inx:53
 msgid "Line width (mm)"
 msgstr "Linienbreite (mm)"
 
-#: lib/gui/simulator/simulator_preferences.py:49
+#: lib/gui/simulator/simulator_preferences.py:60
 msgid "Needle penetration point size (mm)"
 msgstr "Punktgröße für Nadeleinstichstellen (mm)"
 
-#: lib/gui/simulator/simulator_preferences.py:60
+#: lib/gui/simulator/simulator_preferences.py:71
 msgid "Crosshair radius (px)"
 msgstr "Fadenkreuz-Radius (px)"
 
-#: lib/gui/simulator/simulator_preferences.py:64
+#: lib/gui/simulator/simulator_preferences.py:75
 msgid "Crosshair thickness (px)"
 msgstr "Fadenkreuz-Linienbreite (px)"
 
-#: lib/gui/simulator/simulator_preferences.py:72
+#: lib/gui/simulator/simulator_preferences.py:83
 msgid "Crosshair colour"
 msgstr "Fadenkreuz-Farbe"
+
+#: lib/gui/simulator/simulator_preferences.py:92
+msgid "Restore defaults"
+msgstr "Zurücksetzen"
 
 #: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
@@ -5494,7 +5498,7 @@ msgstr "Auf Standard zurücksetzen"
 #: lib/stitch_plan/generate_stitch_plan.py:76
 #, python-format
 msgid "File does not exist and cannot be opened. Please correct the file path and try again: %s"
-msgstr ""
+msgstr "Die Datei kann nicht geöffnet werden. Bitte überprüfe den Dateipfad und versuche es erneut: %s"
 
 #: lib/stitch_plan/lock_stitch.py:35 lib/stitch_plan/lock_stitch.py:223
 msgid "Custom"
