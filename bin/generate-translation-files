@@ -1,27 +1,50 @@
 #!/bin/bash
+set -e
+
+# start from a clean slate to avoid stale/partial output causing race conditions
+rm -rf locales inx
 
 # message files will look like this:
 #   translations/messages_en_US.po
-if ls translations/*.po > /dev/null 2>&1; then
-	for po in translations/*.po; do
-		lang=${po%.*};
-		lang=${lang#*_};
-		mkdir -p locales/$lang/LC_MESSAGES/;
-		msgfmt $po -o locales/$lang/LC_MESSAGES/inkstitch.mo;
-	done;
-else
-	mkdir -p locales;
-fi;
+mkdir -p locales
+if ls translations/*.po >/dev/null 2>&1; then
+    for po in translations/*.po; do
+        lang=${po%.*}
+        lang=${lang#*_}
+        mkdir -p locales/$lang/LC_MESSAGES/
+        msgfmt $po -o locales/$lang/LC_MESSAGES/inkstitch.mo
+    done
+fi
 
 # copy locales also into the inx folder, inkscape needs
-# them to be in exactly that place
-mkdir -p inx;
-cp -r locales/ inx/locale/;
-# for some reason inkscape requires the language folder names
-# as a two letter code ("en" instead of "en_US")
-cd inx/locale;
-for language in */; do
-	if [ ! -d ${language:0:2} ]; then
-		mv -- $language ${language:0:2};
-	fi;
-done;
+# them to be in exactly that place;
+mkdir -p inx/locale
+# trailing "/." copies contents, never nests into inx/locale/locales/
+cp -r locales/. inx/locale/
+
+# gettext's locale fallback only works from a specific locale to a plain
+# language code (xx_XX -> xx), never the other way round, so a plain "xx"
+# folder must exist for LANGUAGE=xx to find any translation at all. If a
+# two letter prefix (e.g. "pt") has only one long-named folder (e.g.
+# "pt_BR"), that folder is simply renamed to the short code. If several
+# long names share the same prefix (e.g. "pt_BR" and "pt_PT"), only the
+# alphabetically first one is renamed to the short code, the others
+# keep their full long name.
+#
+# This mirrors gettext's own locale fallback (xx_XX -> xx), so:
+#   LANGUAGE=pt    inkscape file.svg   -> uses pt      (renamed folder)
+#   LANGUAGE=pt_BR inkscape file.svg   -> uses pt       (pt_BR was renamed
+#                                          to pt, gettext falls back to it)
+#   LANGUAGE=pt_PT inkscape file.svg   -> uses pt_PT    (kept its own
+#                                          long-named folder, not renamed)
+(
+    cd inx/locale
+    for language in $(printf '%s\n' */ | sort); do
+        language=${language%/}
+        short=${language:0:2}
+        [ "$language" = "$short" ] && continue
+        if [ ! -e "$short" ]; then
+            mv "$language" "$short"
+        fi
+    done
+)
