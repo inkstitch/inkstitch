@@ -19,7 +19,7 @@ Schaue den Installationsprozess für <i class="fab fa-apple"></i> [macOS](https:
 {% assign tag_name = tag_name | slice: 1, tag_name.size %}
 
 Unterstützt werden alle macOS versionen ab Monterey (12). Ältere Versionen können wir leider nicht mehr anbieten.
-{. notice--info}
+{: .notice--info}
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Apple Silicon</a></p>
 
@@ -35,11 +35,7 @@ Ink/Stitch ist eine Inkscape Erweiterung, deshalb **muss <span style="text-decor
 Wenn du einen Arm-Prozessor nutzt, stelle sicher, dass Rosetta installiert ist: `softwareupdate --install-rosetta --agree-to-license`
 {: .notice--warning }
 
-**Ventura und höher:** Öffne die heruntergeladene Datei
-
-**High Sierra / Mojave / Catalina / Big Sur / Monterey:** Folge den [Anweisungen für nicht notarisierte Versionen](##xxxx-kann-nicht-geöffnet-werden-da-es-von-einem-nicht-verifizierten-entwickler-stammt)
-
-Klicke auf `Weiter`.
+Öffne die heruntergeladene Datei und klick auf `Weiter`.
 
 ![Install Ink/Stitch](/assets/images/docs/de/macos-install/installer01.png)
 

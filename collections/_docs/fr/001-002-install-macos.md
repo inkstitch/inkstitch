@@ -11,7 +11,7 @@ toc: true
 {% assign tag_name = tag_name | slice: 1, tag_name.size %}
 
 Nous prenons en charge les versions de macOS à partir de Monterey (12). Malheureusement, nous ne pouvons pas proposer de version pour les systèmes macOS plus anciens.
-{. notice--info}
+{: .notice--info }
 
 <p><a href="{{ site.github.releases_url }}/latest/download/inkstitch-v{{ tag_name }}-osx-arm64.pkg" class="btn btn--info btn--large"><i class="fa fa-download " ></i> Apple Silicon</a></p>
 
@@ -31,9 +31,7 @@ Ink/Stitch est une extension pour Inkscape. Téléchargez et installez  [Inkscap
 Si vous avez un processeur arm, vérifiez que Rosetta est installée  (avec `softwareupdate --install-rosetta --agree-to-license`).
 {: .notice--warning }
 
-**Ventura ou plus récent:** Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
-
-**High Sierra / Mojave / Catalina / Big Sur / Monterey:** Suivre les [instructions pour les versions non notarisées](#xxxx-ne-peut-pas-être-ouvert-car-lidentité-du-développeur-ne-peut-pas-être-confirmée)
+Lancez l'installateur en cliquant sur le fichier que vous avez téléchargé.
 
 Cliquez sur `Continuer`.
 
