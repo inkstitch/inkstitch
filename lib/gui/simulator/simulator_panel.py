@@ -8,6 +8,8 @@ from typing import Optional
 from . import ControlPanel, DrawingPanel, ViewPanel
 from .simulator_renderer import PreviewRenderer, RenderFunction
 from ...stitch_plan import StitchPlan
+from .animator import Animator
+from .status_bar_updater import StatusBarUpdater
 
 
 class SimulatorPanel(wx.Panel):
@@ -16,11 +18,15 @@ class SimulatorPanel(wx.Panel):
         """"""
         super().__init__(parent, style=wx.BORDER_SUNKEN)
 
-        self.preview_renderer: PreviewRenderer | None = None
+        self.preview_renderer: Optional[PreviewRenderer] = None
+
+        self.animator = Animator(stitch_plan)
+        self.status_bar_updater = StatusBarUpdater(self, self.animator)
 
         self.cp = ControlPanel(
             self,
             stitch_plan=stitch_plan,
+            animator=self.animator,
             stitches_per_second=stitches_per_second,
             target_duration=target_duration,
             detach_callback=detach_callback
@@ -28,10 +34,14 @@ class SimulatorPanel(wx.Panel):
 
         self.vp = ViewPanel(
             self,
-            detach_callback
+            detach_callback,
+            stitch_plan
         )
-        self.dp = DrawingPanel(self, stitch_plan=stitch_plan)
-        self.cp.set_drawing_panel(self.dp)
+        self.dp = DrawingPanel(self, stitch_plan=stitch_plan, animator=self.animator)
+        # Drawing panel can really be any size, but without this wxpython likes
+        # to allow the status bar and control panel to get squished.
+        self.dp.SetMinSize((300, 300))
+
         self.vp.set_drawing_panel(self.dp)
         self.vp.set_background_color(wx.Colour(background_color))
         self.dp.set_background_color(wx.Colour(background_color))
@@ -72,7 +82,7 @@ class SimulatorPanel(wx.Panel):
             (wx.ACCEL_NORMAL, wx.WXK_PAGEDOWN, self.cp.animation_one_command_backward),
             (wx.ACCEL_NORMAL, wx.WXK_PAGEUP, self.cp.animation_one_command_forward),
             (wx.ACCEL_NORMAL, ord('o'), self.vp.on_toggle_npp_shortcut),
-            (wx.ACCEL_NORMAL, wx.WXK_ESCAPE, self.dp.show_all_stitches)
+            (wx.ACCEL_NORMAL, wx.WXK_ESCAPE, self.animator.show_all_stitches)
         ]
 
         self.accel_entries = []
@@ -86,18 +96,24 @@ class SimulatorPanel(wx.Panel):
         self.SetAcceleratorTable(self.accel_table)
 
     def go(self) -> None:
-        self.dp.go()
+        self.animator.go()
 
     def stop(self) -> None:
-        self.dp.stop()
+        self.animator.stop()
 
     def load(self, stitch_plan: StitchPlan) -> None:
-        self.dp.load(stitch_plan)
+        self.status_bar_updater.set_stitch_plan(stitch_plan)
         self.cp.load(stitch_plan)
+        self.vp.load(stitch_plan)
+        self.dp.load(stitch_plan)
+        self.animator.set_stitch_plan(stitch_plan)
 
     def clear(self) -> None:
-        self.dp.clear()
+        self.status_bar_updater.set_stitch_plan(None)
         self.cp.clear()
+        self.vp.load(None)
+        self.dp.clear()
+        self.animator.set_stitch_plan(None)
 
     def set_page_specs(self, page_specs: dict) -> None:
         self.dp.set_page_specs(page_specs)
