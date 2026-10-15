@@ -13,13 +13,14 @@ import re
 
 from ...elements import iterate_nodes, nodes_to_elements
 from ...i18n import _
-from ...lettering import FontError, get_font_list
+from ...lettering import FontError, get_font_list, get_fonts_by_id
 from ...lettering.categories import FONT_CATEGORIES
 from ...stitch_plan import stitch_groups_to_stitch_plan
 from ...svg.tags import INKSTITCH_LETTERING
 from ...utils import DotDict, cache
 from ...utils.settings import global_settings
 from ...utils.threading import ExitThread, check_stop_flag
+from ...debug.debug import debug
 from .. import PresetsPanel, info_dialog
 from . import LetteringHelpPanel, LetteringOptionsPanel
 
@@ -182,16 +183,42 @@ class LetteringPanel(wx.Panel):
     def set_initial_font(self, font_id):
         if font_id:
             if font_id not in self.fonts_by_id:
-                message = '''This text was created using the font "%s", but Ink/Stitch can't find that font.  ''' \
-                          '''A default font will be substituted.'''
-                info_dialog(self, _(message) % font_id)
-        try:
-            font = self.fonts_by_id[font_id].marked_custom_font_name
-        except KeyError:
-            font = self.default_font.marked_custom_font_name
-        self.options_panel.font_chooser.SetValue(font)
+                # Look up all matches to handle fonts moved into a subdir or
+                # colliding on a basename.
+                candidates = get_fonts_by_id(font_id, False)
+                if len(candidates) > 1:
+                    font = self._choose_font(candidates)
+                elif len(candidates) == 1:
+                    font = candidates[0]
+                else:
+                    message = '''This text was created using the font "%s", but Ink/Stitch can't find that font.  ''' \
+                              '''A default font will be substituted.'''
+                    info_dialog(self, _(message) % font_id)
+                    font = self.default_font
+            else:
+                font = self.fonts_by_id[font_id]
+        else:
+            font = self.default_font
 
+        self.options_panel.font_chooser.SetValue(font.marked_custom_font_name)
         self.on_font_changed()
+
+    def _choose_font(self, candidates):
+        """Ask the user to pick among multiple matching fonts."""
+        # Show the id alongside the name so same-named fonts can be told apart.
+        names = [f"{font.marked_custom_font_name} ({font.marked_custom_font_id})" for font in candidates]
+        dlg = wx.SingleChoiceDialog(
+            self,
+            _("Multiple fonts match the one used in this text. Please choose one:"),
+            _("Choose font"),
+            names,
+        )
+        if dlg.ShowModal() == wx.ID_OK:
+            choice = dlg.GetSelection()
+            dlg.Destroy()
+            return candidates[choice]
+        dlg.Destroy()
+        return self.default_font
 
     @property
     def default_font(self):
@@ -302,6 +329,13 @@ class LetteringPanel(wx.Panel):
         self.Layout()
 
     def update_preview(self, event=None):
+        # Show the phase in the simulator overlay: font caching first, then
+        # stitch-plan generation.
+        font = self.fonts.get(self.options_panel.font_chooser.GetValue(), self.default_font)
+        if font.is_cached():
+            self.simulator.set_loading_message(_("Stitching..."))
+        else:
+            self.simulator.set_loading_message(_("Caching font…"))
         self.simulator.render()
 
     def update_lettering(self, raise_error=False):
@@ -336,11 +370,14 @@ class LetteringPanel(wx.Panel):
         if destination_group.get('transform', None) is None:
             destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
 
+    @debug.time
     def render_stitch_plan(self):
         stitch_groups = []
 
         try:
             self.update_lettering()
+            # Font is now cached; switch the overlay to the stitching phase.
+            wx.CallAfter(self.simulator.set_loading_message, _("Stitching..."))
             nodes = iterate_nodes(self.group)
             elements = nodes_to_elements(nodes)
 
@@ -371,6 +408,8 @@ class LetteringPanel(wx.Panel):
             # Ignore errors.  This can be things like incorrect paths for
             # satins or division by zero caused by incorrect param values.
             pass
+
+        return None
 
     def get_preset_data(self):
         # called by self.presets_panel
