@@ -1261,6 +1261,9 @@ class FillStitch(EmbroideryElement):
                 self.random_seed
             )
 
+        if not stitches:
+            return stitch_groups
+
         if self.bean_stitch_repeats:
             stitches = bean_stitch(stitches, self.bean_stitch_repeats)
 
