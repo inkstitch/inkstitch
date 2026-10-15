@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: inkstitch\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-09-18 03:45+0000\n"
-"PO-Revision-Date: 2026-09-18 03:46\n"
+"PO-Revision-Date: 2026-10-15 03:42\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
@@ -538,7 +538,7 @@ msgstr "Manga Impact is een satijnachtig lettertype dat lijkt op manga."
 #. description of font in fonts/marifenda
 #: inkstitch-fonts-metadata.py:204
 msgid "Medium size font "
-msgstr ""
+msgstr "Lettertype van gemiddelde grootte "
 
 #. description of font in fonts/medium_font
 #: inkstitch-fonts-metadata.py:206
@@ -2536,7 +2536,7 @@ msgstr "Satijn kolom heeft geen sporten"
 
 #: lib/elements/satin_column/validation_models.py:33
 msgid "Rungs control the stitch direction in satin columns. It is best practice to use them."
-msgstr ""
+msgstr "'Rungs' of dwarsbalkjes bepalen de steekrichting in satijn kolommen. Het is raadzaam om ze te gebruiken."
 
 #: lib/elements/satin_column/validation_models.py:35
 #: lib/elements/satin_column/validation_models.py:67
@@ -2563,7 +2563,7 @@ msgstr "Eenvoudig satijn"
 
 #: lib/elements/satin_column/validation_models.py:47
 msgid "If you need more control over the stitch directions within this satin column, convert it to a real satin path"
-msgstr ""
+msgstr "Als je meer controle nodig hebt over de steekrichtingen binnen deze satijn kolom, zet deze dan om in een echt satijn pad"
 
 #: lib/elements/satin_column/validation_models.py:49
 msgid "* Select the satin path"
@@ -4966,7 +4966,7 @@ msgstr "KLEUR WISSEL"
 
 #: lib/gui/simulator/drawing_panel.py:30
 msgid "Stitching..."
-msgstr ""
+msgstr "Borduren..."
 
 #: lib/gui/simulator/drawing_panel.py:360
 #, python-brace-format
@@ -5010,7 +5010,7 @@ msgstr "Kleur van het dradenkruis"
 
 #: lib/gui/simulator/simulator_preferences.py:92
 msgid "Restore defaults"
-msgstr ""
+msgstr "Standaardinstellingen herstellen"
 
 #: lib/gui/simulator/simulator_window.py:14
 msgid "Embroidery Simulation"
@@ -6574,7 +6574,7 @@ msgstr "Verwijdert gebieden die kleiner zijn dan de drempel waarde."
 
 #: inx/inkstitch_cleanup.inx:11
 msgid "Fill area threshold (mm²)"
-msgstr ""
+msgstr "Drempelwaarde voor opvulgebied (mm²)"
 
 #: inx/inkstitch_cleanup.inx:13
 msgid "Remove Small strokes"
@@ -6614,7 +6614,7 @@ msgstr "Geef alleen labels en id's weer van de betrokken elementen en groepen, z
 
 #: inx/inkstitch_cleanup.inx:26
 msgid "Use this extension to remove small objects from the selection. With no selection, small element from the entire document will be removed."
-msgstr ""
+msgstr "Gebruik deze extensie om kleine objecten uit de selectie te verwijderen. Als er geen selectie is, worden kleine elementen uit het volledige document verwijderd."
 
 #: inx/inkstitch_cleanup.inx:30
 msgid "https://inkstitch.org/docs/troubleshoot/#cleanup-document"
@@ -6859,27 +6859,27 @@ msgstr "Heeft minimaal 2 sporten nodig"
 
 #: inx/inkstitch_fill_to_satin.inx:23
 msgid "Keep (do not remove)"
-msgstr ""
+msgstr "Houden (niet verwijderen)"
 
 #: inx/inkstitch_fill_to_satin.inx:23
 msgid "Define which elements from the original selection will be removed after conversion. Fills with no rung interesection are neither converted nor removed."
-msgstr ""
+msgstr "Geef aan welke elementen uit de oorspronkelijke selectie na de conversie worden verwijderd. Opvullingen zonder snijpunt met een sport worden noch geconverteerd, noch verwijderd."
 
 #: inx/inkstitch_fill_to_satin.inx:24
 msgid "None (remove entire selection)"
-msgstr ""
+msgstr "Geen (verwijder gehele selectie)"
 
 #: inx/inkstitch_fill_to_satin.inx:25
 msgid "Fills (remove rungs only)"
-msgstr ""
+msgstr "Vullingen (alleen sporten verwijderen)"
 
 #: inx/inkstitch_fill_to_satin.inx:26
 msgid "Fills and rungs (keep entire selection)"
-msgstr ""
+msgstr "Vullingen en sporten (behoud de volledige selectie)"
 
 #: inx/inkstitch_fill_to_satin.inx:27
 msgid "Unconverted disconnected fill subpaths"
-msgstr ""
+msgstr "Niet geconverteerde, losgekoppelde vul subpaden"
 
 #: inx/inkstitch_fill_to_satin.inx:31
 msgid "This extension takes in a fill and rung elements and converts them into satin(s)."
