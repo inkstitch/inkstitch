@@ -227,7 +227,20 @@ class Debug(object):
             "cx": str(point.x),
             "cy": str(point.y),
             "r": "1",
-            "style": str(inkex.Style({"fill": "#000000"})),
+            "style": str(inkex.Style({"fill": color or "#000000"})),
+            INKSCAPE_LABEL: name,
+        }))
+
+    @check_enabled
+    @unwrap_arguments
+    def log_points_as_line(self, points, name="points", color=None):
+        d = "M "
+        for point in points:
+            d += f'{point[0]}, {point[1]} '
+        self.log_svg_element(etree.Element("path", {
+            "d": d,
+            "style": str(inkex.Style({"stroke": color or "#000000", "stroke-width": "0.3", "fill": None})),
+            INKSCAPE_LABEL: name
         }))
 
     @check_enabled
