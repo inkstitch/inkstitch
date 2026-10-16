@@ -14,7 +14,14 @@ dist: version locales inx
 	bash bin/build-distribution-archives
 
 distclean:
-	rm -rf build dist inx locales artifacts win mac *.spec *.tar.gz *.zip
+	rm -rf build dist inx inx-installed locales artifacts win mac *.spec *.tar.gz *.zip
+
+.PHONY: wheel
+wheel: version locales
+	# Use the pre-built uv venv (my_scripts/020_setup_uv_venv.sh) because
+	# uv run would try to build wxPython from source on Linux.
+	INKSTITCH_INX_MODE=installed .venv/bin/python bin/generate-inx-files
+	uv build --wheel -o dist
 
 distlocal:
 	@case ${OS} in "Darwin") export BUILD=osx ;; "Linux")export BUILD=linux ;; *) export BUILD=windows ;; esac; export VERSION=local-build; make distclean && make dist;

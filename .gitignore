@@ -12,6 +12,7 @@ build/
 locales/
 /inx/
 /inx-installed/
+/lib/assets/inx/*.inx
 .pydevproject
 .project
 /.idea

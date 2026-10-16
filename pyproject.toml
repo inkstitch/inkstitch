@@ -52,10 +52,14 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["lib"]
 py-modules = ["inkstitch"]
+# Generated INX files live under lib/assets/inx/ but are git-ignored.  Treat
+# them as build artifacts so they are still packaged into the wheel.
+artifacts = ["lib/assets/inx/*.inx"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "inkstitch.py" = "inkstitch.py"
-"inx-installed" = "lib/assets/inx"
+# INX files generated into lib/assets/inx are picked up automatically because
+# lib/assets/inx/.gitkeep keeps the directory inside the lib package.
 "templates" = "lib/assets/templates"
 "icons" = "lib/assets/icons"
 "symbols" = "lib/assets/symbols"

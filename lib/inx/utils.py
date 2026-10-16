@@ -35,11 +35,16 @@ def _template_path():
 
 
 def _inx_path():
-    if _resolve_mode() == "installed":
-        # Wheel INX are generated into a separate directory so they do not
-        # overwrite the development INX in inx/.
-        repo_root = dirname(dirname(dirname(realpath(__file__))))
-        return os.path.join(repo_root, "inx-installed")
+    mode = _resolve_mode()
+    if mode == "installed":
+        # In wheel mode INX files must live inside the package data directory
+        # so hatchling packages them.  During the wheel build we run from the
+        # source checkout; in a wheel install we run from site-packages.  In
+        # both cases the canonical location is lib/assets/inx.
+        base = _runtime_base_dir()
+        if os.path.basename(base) == "assets":
+            return os.path.join(base, "inx")
+        return os.path.join(base, "lib", "assets", "inx")
     return os.path.join(_runtime_base_dir(), "inx")
 
 

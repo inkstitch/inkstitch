@@ -1,0 +1,3 @@
+# Keep this directory in git so hatchling force-include has a valid target even
+# when no wheel INX have been generated yet.  Generated .inx files here are
+# ignored by .gitignore; only this placeholder is tracked.

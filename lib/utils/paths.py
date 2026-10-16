@@ -34,10 +34,15 @@ def _runtime_base_dir():
         return realpath(os.path.join(sys._MEIPASS, ".."))
 
     module_dir = dirname(realpath(__file__))
-    # In an installed wheel data are shipped inside lib/assets/.
-    wheel_assets = realpath(os.path.join(module_dir, '..', 'assets'))
-    if os.path.isdir(wheel_assets):
-        return wheel_assets
+    # Editable installs (uv sync, pip install -e) keep the module in the
+    # repository, while wheel installs place it under site-packages.  In the
+    # latter case data are bundled inside lib/assets/.
+    installed_module = ('site-packages' in module_dir
+                        or 'dist-packages' in module_dir)
+    if installed_module:
+        wheel_assets = realpath(os.path.join(module_dir, '..', 'assets'))
+        if os.path.isdir(wheel_assets):
+            return wheel_assets
 
     # Otherwise we are in a development checkout: lib/utils/paths.py -> repo root.
     return realpath(os.path.join(module_dir, '..', '..'))
