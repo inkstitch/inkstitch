@@ -135,6 +135,8 @@ Um die Startposition eines bereits getrennten Pfades zu ändern, wähle einfach 
 
 Jetzt müssen wir noch die **Pfadrichtung** bestimmen. Hierbei ist es hilfreich, wenn du dir [die Pfadrichtung anzeigen lässt](/de/docs/customize/#pfadkonturen--pfadrichtungen). Alternativ kannst du die Pfadrichtung aber auch mit dem Simulator überprüfen.
 
+Ist die Pfadrichtung falsch herum, drehe den Pfad mit `Pfad > Pfadrichtung umkehren` um.
+
 Hier ein Beispiel. Gleiche Einstellungen, aber gegenläufige Pfadrichtungen. Für die Textposition wurde `Mitte` gewählt.
 
 ![Zwei Texte die an jeweils einem Pfad ausgerichtet sind. Einmal geht der Pfad von links nach rechts und der Text sitzt oben auf. Der andere Pfad geht von rechts nach links und der Text hängt unten am Pfad und führt ebenfalls von rechts nach links.](/assets/images/docs/text_along_path_path_direction.jpg)

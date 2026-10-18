@@ -140,6 +140,8 @@ To change the starting position of a path that has already been broken apart, si
 
 Now we need to determine the **path direction**. It is helpful to [display the path direction](/fr/docs/customize/#noeuds-activation-de-la-direction-des-chemins) for this. Alternatively, you can also check the path direction using the simulator.
 
+When the path direction is going the wrong way, adapt it with `Path > Reverse`.
+
 Here is an example: same settings, but opposite path directions. The text position is set to `Center`.
 
 ![Two texts, each aligned to a path. In one case, the path goes from left to right and the text sits on top. The other path goes from right to left, and the text hangs from the bottom of the path, also running from right to left.](/assets/images/docs/text_along_path_path_direction.jpg)
