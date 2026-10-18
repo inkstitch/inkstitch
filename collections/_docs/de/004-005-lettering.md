@@ -87,7 +87,7 @@ Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape Tools verfor
 
 ### Anwendung
 
-* Wähle eine Pfad und eine Ink/Stitch-Text-Gruppierung
+* Wähle einen Pfad und eine Ink/Stitch-Text-Gruppierung
 
   Die Länge des Pfades sollte der Länge des Textes angemessen sein. Dabei ist es wichtig, den Text nicht manuell, sondern mit dem Textwerkzeug zu skalieren. Das Textwerkzeug bietet ebenefalls die Option Textzwischenräume zu erweitern oder zu verkleinern. Das ist besonders hilfreich, wenn der Text nach innen gebogen werden soll.
   {: .notice--info}
@@ -150,19 +150,6 @@ Mit der vertikalen Ausrichtung bestimmst du, ob der Text komplett oberhalb des P
 ## Schrift-Bibliothek
 
 Eine Übersicht über alle verfügbaren Schriftarten findet sich hier [Schrift-Bibliothek](/de/fonts/font-library/)
-
-## Farben sortieren
-
-Werden mehrere mehrfarbige Buchstaben gestickt, kann es sinnvoll sein zu viele Farbwechsel zu vermeiden.
-Hier eine kurze Anleitung wie die Farben mehrfarbiger Ink/Stitch-Schriften schnell und einfach sortiert werden können:
-
-* Wähle einen Buchstaben über den Ebenen und Objekte-Dialog
-* Wähle den zuerst zu stickenden Pfad (der letzte Pfad dieser Gruppe)
-* `Bearbeiten > Das Gleiche auswählen > Konturstil`
-* Gruppiere die so entstandene Auswahl (Strg + G)
-* Verschiebe diese Gruppe nach oben
-
-Wiederhole diesen Prozess bis alle Farben gruppiert sind, wobei immer der zuerst zu stickende Pfad eines Buchstaben auszuwählen ist.
 
 ## Batch Lettering
 

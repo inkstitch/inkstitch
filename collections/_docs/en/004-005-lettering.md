@@ -152,19 +152,6 @@ With vertical alignment, you determine whether the text should be displayed enti
 
 An overview of available fonts can be found it the [font library](/fonts/font-library/).
 
-## Color Sorting
-
-When embroidering several letters, you may wish to color sort to avoid many changes of thread.
-When the colors appear in the same order in every letter and when each color is only used on consecutive paths within a letter (this is true for all multicolor Ink/Stitch fonts, with the exception of Infinipicto) this is how to quickly color sort a lettering:
-
-* Pick a letter in the objects panel
-* Select the first-to-be-embroidered path of this letter (last one for this letter in the objects panel)
-* Edit/Select same/ Same color stroke
-* Group, this group will end up in the last to embroider letter
-* Move this group to the top of  in its letter
-
-repeat until all the colors are grouped, always starting with selecting the last path of a letter.
-
 ## Batch Lettering
 
 Batch lettering allows to easily create multiple text files.
