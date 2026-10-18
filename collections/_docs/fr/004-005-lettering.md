@@ -138,7 +138,7 @@ Your new starting point is now successfully set at the bottom, forcing the text 
 To change the starting position of a path that has already been broken apart, simply select both of the separated nodes, join them back together (`Shift + J`), and break the path at your new desired location.
 {: .notice--info}
 
-Now we need to determine the **path direction**. It is helpful to [display the path direction](/docs/customize/#path-contours--path-directions) for this. Alternatively, you can also check the path direction using the simulator.
+Now we need to determine the **path direction**. It is helpful to [display the path direction](/fr/docs/customize/#noeuds-activation-de-la-direction-des-chemins) for this. Alternatively, you can also check the path direction using the simulator.
 
 Here is an example: same settings, but opposite path directions. The text position is set to `Center`.
 
