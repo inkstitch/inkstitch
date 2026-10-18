@@ -1,7 +1,7 @@
 ---
 title: "Lettering"
 permalink: /docs/lettering/
-last_modified_at: 2025-05-20
+last_modified_at: 2026-10-18
 toc: true
 ---
 ## Lettering Tool
@@ -75,8 +75,6 @@ The text module creates multi-line text. Choose the right font for your project 
 
   When adding trims, use command symbols. Uses the trim param setting otherwise.
 
-* ****
-
 ### Presets
 
 You can save and load your favourite font settings.
@@ -85,18 +83,68 @@ You can save and load your favourite font settings.
 
 Ink/Stitch letters are carefully designed. If you try to transform them with common tools, they may not work as expected. This means placing letters along a path will be a lot of work. Therefore we've created a tool to assist you with that.
 
-![A text aligned along a path while using the various options](/assets/images/docs/text_along_path_alignment.png)
+![curvy text](/assets/images/docs/text_along_path.jpg)
 
 ### Usage
 
 * Select a path and a lettering group
+
+  The length of the path should be appropriate for the length of the text. It is important to scale the text using the text tool rather than by manual transformation.
+  The text tool also provides an option to increase or decrease the spacing between characters—this is particularly useful when the text is being curved inward.
+  {: .notice--info}
 * Run `Extensions > Ink/Stitch > Lettering > Lettering along path ...`
-* If `stretch` is enabled, Ink/Stitch will stretch the spaces in between the letters, so that the text will use the entire path.
-  Otherwise it will keep the distances from the original text.
+* Adjust the options according to your preferences (see below).
 * Click on apply
 
-Lettering will follow the path direction. Reverse the path if needed (`Path > Reverse`).
+Need to modify the path or adjust your options? You can refine them at any time—even after the text has been transformed—simply by reapplying the function.
 {: .notice--info}
+
+### Options
+
+#### Text Position
+
+Ink/Stitch offers several text positioning options to align your lettering along a path:
+* **Left:** Places the text at the absolute beginning of the path.
+* **Center:** Centers the text at the center of the path.
+* **Right:** Aligns the text to the very end of the path.
+* **Stretch:** Exands the spacing between characters to span the entire length of the path.
+
+The exact alignment relies on two critical factors: the **starting point** of the path and the **direction** of the path.
+
+![Text aligned along a path using various options](/assets/images/docs/text_along_path_alignment.png)
+
+**Example: Lettering on a Circle**
+
+A common use case is placing text along a circle or an oval. By default in Inkscape, a closed circular object starts at the top and runs counter-clockwise.
+Running the simulator reveals that the embroidery path follows this exact behavior. Usually this is not the correct setting for your text positioning.
+
+To adjust the circle, you must first convert the object into a path:
+* Go to **Path > Object to Path** (or press `Ctrl + Shift + C`). 
+* This action changes both the path direction and the starting point. 
+* Verify this in the simulator; the embroidery path will now begin on the middle-right and run clockwise.
+
+To position your text at the top of the circle, you need to **adjust the starting point**:
+* Select the Node tool (`N`) and click on the **bottom node**.
+* Break the path at this location by pressing `Shift + B`.
+* To verify the break, click and drag the node slightly (without releasing the mouse button). You will see a second node hidden underneath.
+  Press `Esc` to cancel the move and snap the node back into place. 
+
+Your new starting point is now set at the bottom and the text can be centered at the top.
+
+To change the starting position of a path that has already been broken apart, simply select both of the separated nodes, join them back together (`Shift + J`), and break the path at your new desired location.
+{: .notice--info}
+
+Now we need to determine the **path direction**. It is helpful to [display the path direction](/docs/customize/#path-contours--path-directions) for this. Alternatively, you can also check the path direction using the simulator.
+
+Here is an example: same settings, but opposite path directions. The text position is set to `Center`.
+
+![Two texts, each aligned to a path. In one case, the path goes from left to right and the text sits on top. The other path goes from right to left, and the text hangs from the bottom of the path, also running from right to left.](/assets/images/docs/text_along_path_path_direction.jpg)
+
+#### Vertical Alignment
+
+With vertical alignment, you determine whether the text should be displayed entirely above the path (`top`), whether the path serves as the `baseline`, or whether the text is shown completely below the path (`bottom`). Here is an example where text has been placed on a path using the options in exactly this order.
+
+![A text aligned using the three alignment options. The difference between Top and Baseline is particularly clear here with the letter p. The top option places the text completely above the path, while the baseline option rests the text on the path, causing the descender of the p to cross the line](/assets/images/docs/text_along_path_vertical_alignment.jpg)
 
 ## Font library
 

@@ -1,7 +1,7 @@
 ---
 title: "Text"
 permalink: /de/docs/lettering/
-last_modified_at: 2025-05-20
+last_modified_at: 2026-10-18
 toc: true
 ---
 ## Text-Werkzeug
@@ -79,22 +79,71 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
 Hier kann eine Liste mit den beliebtesten Schriftarten gespeichert und wieder geöffnet werden.
 
-## Schrift entlang Pfad
+## Text entlang Pfad
 
 Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape Tools verformt werden (z.B. um sie in eine Kurve zu bringen) verliert das Ergebnis womöglich an Qualität. Auf der anderen Seite ist es ein langwieriger Prozess, die Buchstaben einzelnd an eine Linie anzupassen. Dieses Werkzeug hilft dir, eine Schrift auf einen Pfad zu legen - ohne die Buchstaben zu verzerren.
 
-![Ein Text der mit den verschiedenen Optionen an einem Pfad ausgerichtet ist](/assets/images/docs/text_along_path_alignment.png)
+![curvy text](/assets/images/docs/text_along_path.jpg)
 
 ### Anwendung
 
 * Wähle eine Pfad und eine Ink/Stitch-Text-Gruppierung
-* Öffne `Erweiterungen > Ink/Stitch > Text > Schrift entlang Pfad ...`
-* Ist `Strecken` aktiviert, wird Ink/Stitch die Buchstaben-Zwischenräume der Pfadlänge anpassen, so dass sich der Schriftzug über den gesamten Pfad erstreckt.
-  Ist diese Option deaktiviert, bleiben die Buchstaben-Abstände unverändert.
+
+  Die Länge des Pfades sollte der Länge des Textes angemessen sein. Dabei ist es wichtig, den Text nicht manuell, sondern mit dem Textwerkzeug zu skalieren. Das Textwerkzeug bietet ebenefalls die Option Textzwischenräume zu erweitern oder zu verkleinern. Das ist besonders hilfreich, wenn der Text nach innen gebogen werden soll.
+  {: .notice--info}
+* Öffne `Erweiterungen > Ink/Stitch > Text > Text entlang Pfad ...`
+* Passe die Optionen deinen Wünschen entsprechend an (siehe unten).
 * Klicke auf `Anwenden`
 
-Die Buchstaben folgen der Pfadrichtung. Kehre den Pfad bei Bedarf mit `Pfad > Richtung umkehren` um.
+Du willst den Pfad noch einmal ändern oder die Optionen anpassen? Das geht auch mit einem bereits transformierten Text. Wende die Funktion einfach noch mal an.
 {: .notice--info}
+
+### Optionen
+
+#### Textposition
+
+Ink/Stitch bietet verschiedene Optionen zur Textpositionierung, um deine Beschriftung am Pfad auszurichten:
+* **Links:** Platziert den Text am absoluten Anfang des Pfades.
+* **Mitte:** Zentriert den Text genau in der Mitte des Pfades.
+* **Rechts:** Richtet den Text am äußersten Ende des Pfades aus.
+* **Ausdehnen:** Streckt die Abstände zwischen den Zeichen, sodass der Text die gesamte Länge des Pfades ausfüllt.
+
+Dabei richtet sich die Positionierung nach zwei wichtigen Faktoren: dem **Startpunkt des Pfades** und der **Pfadrichtung**.
+
+![Ein Text der mit den verschiedenen Optionen an einem Pfad ausgerichtet ist](/assets/images/docs/text_along_path_alignment.png)
+
+**Beispiel: Text auf einem Kreis**
+
+Ein typischer Anwendungsfall ist das Platzieren von Text auf einem Kreises oder Oval. Standardmäßig beginnt der Pfad eines geschlossenen Kreises in Inkscape oben und verläuft gegen den Uhrzeigersinn. 
+Der Simulator zeigt, dass der Stickpfad genau diesem Verhalten folgt. Für deine Textpositionierung ist dies meist nicht die richtige Einstellung.
+
+Um den Kreis anzupassen, musst du das Objekt zuerst in einen Pfad umwandeln:
+* Gehe auf **Pfad > Objekt in Pfad umwandeln** (oder drücke `Strg + Umschalt + C`).
+* Diese Aktion ändert sowohl die Pfadrichtung als auch den Startpunkt.
+* Überprüfe dies im Simulator; der Stickpfad beginnt nun in der Mitte rechts und verläuft im Uhrzeigersinn.
+
+Um deinen Text oben auf dem Kreis zu positionieren, musst du den **Startpunkt anpassen**:
+* Wähle das Knoten-Werkzeug (`N`) und klicke auf den **unteren Knoten**.
+* Trenne den Pfad an dieser Stelle, indem du `Umschalt + B` drückst.
+* Um die Trennung zu überprüfen, klicke auf den Knoten und ziehe ihn ein Stück weg (ohne die Maustaste loszulassen). Du wirst sehen, dass sich darunter ein zweiter Knoten verbirgt.
+  Drücke `Esc`, um die Bewegung abzubrechen und den Knoten wieder einrasten zu lassen.
+
+Dein neuer Startpunkt ist nun der untere Knoten und der Text kann oben zentriert werden.
+
+Um die Startposition eines bereits getrennten Pfades zu ändern, wähle einfach beide getrennten Knoten aus, füge sie wieder zusammen (`Umschalt + J`) und trenne den Pfad an der gewünschten neuen Stelle.
+{: .notice--info}
+
+Jetzt müssen wir noch die **Pfadrichtung** bestimmen. Hierbei ist es hilfreich, wenn du dir [die Pfadrichtung anzeigen lässt](/de/docs/customize/#pfadkonturen--pfadrichtungen). Alternativ kannst du die Pfadrichtung aber auch mit dem Simulator überprüfen.
+
+Hier ein Beispiel. Gleiche Einstellungen, aber gegenläufige Pfadrichtungen. Für die Textposition wurde `Mitte` gewählt.
+
+![Zwei Texte die an jeweils einem Pfad ausgerichtet sind. Einmal geht der Pfad von links nach rechts und der Text sitzt oben auf. Der andere Pfad geht von rechts nach links und der Text hängt unten am Pfad und führt ebenfalls von rechts nach links.](/assets/images/docs/text_along_path_path_direction.jpg)
+
+#### Vertikale Ausrichtung
+
+Mit der vertikalen Ausrichtung bestimmst du, ob der Text komplett oberhalb des Pfades abgebildet werden soll (`oben`), ob der Pfad als `Grundlinie` dient oder ob der Text vollständig unterhalb des Pfades angezeigt wird (`unten`). Hier ein Beispiel, in dem der Text mit den Optionen in genau dieser Reihenfolge auf einen Pfad gelegt wurde.
+
+![Ein Text der mit den drei Ausrichtungsoptinoen ausgerichtet wurde. Der Unterschied zwischen Oben und Grundlinie wird hier besonders bei dem Buchstaben p deutlich. Die Option oben legt den Text komplett über den Pfad, während mit der Option Grundlinie der Text auf dem Pfad aufliegt und der absteigende Teil des p's die Linie kreuzt](/assets/images/docs/text_along_path_vertical_alignment.jpg)
 
 ## Schrift-Bibliothek
 
