@@ -90,8 +90,6 @@ Nutze [Tastenkürzel](/docs/customize/#shortcuts) für beides, `Stichplan-Vorsch
 * Aktiviere die Option `Stichplan-Ebene sperren` um alle Pfade ohne Interferenzen mit dem aktivierten Stichplan verändern zu können.
 * Achte darauf, dass die Option `Letzten Stichplan überschreiben` aktiviert ist. Andernfalls werden sich die Stichpläne auf der Arbeitsfläche häufen.
 
-{% include video id="vyTMwLvkkiw4vgwDcTJS6e" provider="diode" %}
-
 ## Stichplan Vorschau aufheben
 
 Wird der Stichplan über dem Design mit verringerter Deckkraft angezeigt, hilft es eine visuelle Idee zu bekommen, wie das Design am Ende aussehen wird. Manchmal ist es hilfreich, in einen angezeigten Stichplan hineinzuarbeiten. Dies jedoch, kann es schwieriger machen, den Stichplan wieder zu entfernen und da auch die Deckkraft wieder zurückgesetzt werden muss. Mit dieser Erweiterung kann auch der Stichplan nach erfolgten Änderungen am Dokument einfach wieder entfernt werden.

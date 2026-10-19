@@ -93,8 +93,6 @@ Set [shortcut keys](/docs/customize/#shortcuts) for both, `stitch plan preview` 
 * Enable the `lock` option, so you can still acceess every path without interference with the stitch plan element(s).
 * Ensure that the `Override last stitch plan` option is enabled, otherwise you will end up with multiple stitch plans on canvas.
 
-{% include video id="vyTMwLvkkiw4vgwDcTJS6e" provider="diode" %}
-
 ## Undo Stitch Plan
 
 Using a stitch plan overlay with hidden or lower density elements helps to get a visual idea of how the design will look in the end.

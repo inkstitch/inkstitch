@@ -98,8 +98,6 @@ L'extension s'exécutera alors directement (sans passer par la fenêtre de param
 * Activez l'option « Verrouiller » pour pouvoir accéder à tous les tracés sans interférence avec les éléments du plan de broderie.
 * Assurez-vous que l'option « Remplacer le dernier plan de broderie » est activée, sinon plusieurs plans de broderie s'afficheront sur la zone de travail.
 
-{% include video id="vyTMwLvkkiw4vgwDcTJS6e" provider="diode" %}
-
 {% comment %}
 Lancez `Extensions > Ink/Stitch > Visualiser et Exporter  > Simulation du plan de broderie...`.
 
