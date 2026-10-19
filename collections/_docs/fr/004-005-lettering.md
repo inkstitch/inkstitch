@@ -162,6 +162,14 @@ With vertical alignment, you determine whether the text should be displayed enti
 
 ![A text aligned using the three alignment options. The difference between Top and Baseline is particularly clear here with the letter p. The top option places the text completely above the path, while the baseline option rests the text on the path, causing the descender of the p to cross the line](/assets/images/docs/text_along_path_vertical_alignment.jpg)
 
+**Example: Patch**
+
+1. To align text at the top, the path must be split at the bottom. The path direction is clockwise. The text position is set to `Center`, and the vertical alignment is `Top`.
+2. To align text at the bottom, the path must be split at the top. The path direction is counter-clockwise. The text position is set to `Center`, and the vertical alignment is `Bottom`.
+3. Assembled as a patch.
+
+![Text on a circle, positioned at the top and bottom, and assembled as a patch.](/assets/images/docs/text_along_path_patch.jpg)
+
 ## Lettrage par lots {#batch-lettering}
 
 Le lettrage par lot permet de créer facilement des fichiers de texte multiples

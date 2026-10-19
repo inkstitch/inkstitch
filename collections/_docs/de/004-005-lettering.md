@@ -83,7 +83,7 @@ Hier kann eine Liste mit den beliebtesten Schriftarten gespeichert und wieder ge
 
 Eine Übersicht über alle verfügbaren Schriftarten findet sich hier [Schrift-Bibliothek](/de/fonts/font-library/)
 
-## Neue Schriftarten erstellen
+### Neue Schriftarten erstellen
 
 Weitere Infos zu diesem Thema findest du in einem eigenen [Schrifterstellungs Tutorial](/de/tutorials/font-creation/).
 
