@@ -114,7 +114,7 @@ def plot_points_on_rails(satin: 'SatinColumn', spacing: float | int, offset_px: 
         to_travel = (1 - min(distance / spacing, 1.0)) * section_stitch_spacing * spacing_multiple
         debug.log(f"num_points: {num_points}, section_stitch_spacing: {section_stitch_spacing}, distance: {distance}, to_travel: {to_travel}")
 
-        cursor = 0
+        cursor: float = 0
         iterations = 0
         while cursor + to_travel <= 1:
             iterations += 1

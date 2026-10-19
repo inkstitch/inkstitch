@@ -33,7 +33,7 @@ class SatinProcessor:
         a, b = offset_points(pos0, pos1, self.offset_px, offset_prop)
         return a, b
 
-    def get_stitch_spacing_multiple(self):
+    def get_stitch_spacing_multiple(self) -> float:
         if self.use_random:
             roll = prng.uniform_floats(self.seed, self.cycle)
             self.cycle += 1

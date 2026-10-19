@@ -12,6 +12,7 @@ from .stitch import Stitch
 from ..utils import Point
 
 LockStitches = tuple[LockStitch | None, LockStitch | None]
+AllowedStitchInputTypes = Stitch | Point | shgeo.Point
 
 
 class StitchGroup:
@@ -25,7 +26,7 @@ class StitchGroup:
     between them by the stitch plan generation code.
     """
 
-    color: Optional[Color] = None
+    color: Color | None = None
     stitches: list[Stitch]
     min_jump_stitch_length: bool = False
     trim_after: bool = False
@@ -34,14 +35,14 @@ class StitchGroup:
 
     def __init__(
         self,
-        color: Optional[Color] = None,
-        stitches: Optional[list[Stitch]] = None,
+        color: Color | None = None,
+        stitches: Sequence[AllowedStitchInputTypes] | None = None,
         min_jump_stitch_length: bool = False,
         trim_after: bool = False,
         stop_after: bool = False,
-        lock_stitches: Optional[tuple[LockStitch | None, LockStitch | None]] = None,
+        lock_stitches: tuple[LockStitch | None, LockStitch | None] | None = None,
         force_lock_stitches: bool = False,
-        tags: Optional[Sequence[str]] = None
+        tags: Sequence[str] | None = None
     ):
         # DANGER: if you add new attributes, you MUST also set their default
         # values in __new__() below.  Otherwise, cached stitch plans can be
@@ -83,15 +84,15 @@ class StitchGroup:
         # This method allows `len(stitch_group)` and `if stitch_group:
         return len(self.stitches)
 
-    def set_minimum_stitch_length(self, min_stitch_length):
+    def set_minimum_stitch_length(self, min_stitch_length: float) -> None:
         for stitch in self.stitches:
             stitch.min_stitch_length = min_stitch_length
 
-    def add_stitches(self, stitches: Sequence[Stitch | Point | shgeo.Point], tags: Optional[Sequence[str]] = None):
+    def add_stitches(self, stitches: Sequence[AllowedStitchInputTypes], tags: Sequence[str] | None = None) -> None:
         for stitch in stitches:
             self.add_stitch(stitch, tags=tags)
 
-    def add_stitch(self, stitch: Stitch | Point | shgeo.Point, tags: Optional[Sequence[str]] = None):
+    def add_stitch(self, stitch: AllowedStitchInputTypes, tags: Sequence[str] | None = None) -> None:
         if isinstance(stitch, (Point, shgeo.Point)):
             stitch = Stitch(stitch, tags=tags)
         elif not isinstance(stitch, Stitch):
@@ -99,7 +100,7 @@ class StitchGroup:
 
         self.stitches.append(stitch)
 
-    def reverse(self):
+    def reverse(self) -> 'StitchGroup':
         return StitchGroup(self.color, self.stitches[::-1])
 
     def add_tags(self, tags: Sequence[str]) -> None:
