@@ -83,6 +83,16 @@ Le module de lettrage crée du texte sur plusieurs lignes. Choisissez la bonne p
 
 Vous pouvez enregistrer et rouvrir vos paramètres de police préférés.
 
+## Polices
+
+Un aperçu de toutes les polices disponibles se trouve dans la [bibliothèque de polices](/fr/fonts/font-library/).
+
+### Créer de nouvelle polices
+
+Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
+
+Contactez nous  sur  [GitHub](https://github.com/inkstitch/inkstitch/issues) si vous souhaitez publier votre police dans l'outil de lettrage d'Ink/Stitch.
+
 ## Lettrage le long d'un chemin  {#lettering-along-path}
 
 Les lettres d'Ink/Stitch ont été soigneusement dessinées pour une broderie optimale. Si vous essayez de les modifier avec les outils usuels d'inkscape, il se peut que cela ne fonctionne pas comme vous le souhaitez. Placez les lettres le long  d'un chemin est un gros travail. Cet outil va vous aider à le faire.
@@ -152,10 +162,6 @@ With vertical alignment, you determine whether the text should be displayed enti
 
 ![A text aligned using the three alignment options. The difference between Top and Baseline is particularly clear here with the letter p. The top option places the text completely above the path, while the baseline option rests the text on the path, causing the descender of the p to cross the line](/assets/images/docs/text_along_path_vertical_alignment.jpg)
 
-## Bibliothèque de polices
-
-Un aperçu de toutes les polices disponibles se trouve dans la [bibliothèque de polices](/fr/fonts/font-library/).
-
 ## Lettrage par lots {#batch-lettering}
 
 Le lettrage par lot permet de créer facilement des fichiers de texte multiples
@@ -213,12 +219,6 @@ Option             | Type|Valeurs
 `--command_symbols`|bool      |defaut: False
 `--text-align`     |string    |left, center, right, block, letterspacing<br>defaut: gauche
 `--file-formats`   |string    |au minimum un format de sortie valide
-
-
-## Créer de nouvelle polices pour Ink/Stitch
-Lire le [tutoriel de création de police](/fr/tutorials/font-creation/).
-
-Contactez nous  sur  [GitHub](https://github.com/inkstitch/inkstitch/issues) si vous souhaitez publier votre police dans l'outil de lettrage d'Ink/Stitch.
 
 ## Fichiers exemple concernant  le lettrage
 

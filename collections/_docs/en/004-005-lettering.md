@@ -79,6 +79,16 @@ The text module creates multi-line text. Choose the right font for your project 
 
 You can save and load your favourite font settings.
 
+## Fonts
+
+An overview of available fonts can be found it the [font library](/fonts/font-library/).
+
+### Create your own fonts
+
+Read the [font creation tutorial](/tutorials/font-creation/).
+
+Contact us if you are willing to publish your font in the Ink/Stitch lettering tool on [GitHub](https://github.com/inkstitch/inkstitch/issues).
+
 ## Lettering along path
 
 Ink/Stitch letters are carefully designed. If you try to transform them with common tools, they may not work as expected. This means placing letters along a path will be a lot of work. Therefore we've created a tool to assist you with that.
@@ -148,10 +158,6 @@ With vertical alignment, you determine whether the text should be displayed enti
 
 ![A text aligned using the three alignment options. The difference between Top and Baseline is particularly clear here with the letter p. The top option places the text completely above the path, while the baseline option rests the text on the path, causing the descender of the p to cross the line](/assets/images/docs/text_along_path_vertical_alignment.jpg)
 
-## Font library
-
-An overview of available fonts can be found it the [font library](/fonts/font-library/).
-
 ## Batch Lettering
 
 Batch lettering allows to easily create multiple text files.
@@ -205,12 +211,6 @@ Option             |Input Type|Values
 `--command_symbols`|bool      |default: False
 `--text-align`     |string    |left, center, right, block, letterspacing<br>default: left
 `--file-formats`   |string    |must be at least one valid output format
-
-## Create new fonts for Ink/Stitch
-
-Read the [font creation tutorial](/tutorials/font-creation/).
-
-Contact us if you are willing to publish your font in the Ink/Stitch lettering tool on [GitHub](https://github.com/inkstitch/inkstitch/issues).
 
 ## Sample Files Including Lettering
 

@@ -79,6 +79,16 @@ Das Text-Modul erzeugt mehrzeiligen Text. Wähle aus einer großen Vielfalt vord
 
 Hier kann eine Liste mit den beliebtesten Schriftarten gespeichert und wieder geöffnet werden.
 
+## Schriftarten
+
+Eine Übersicht über alle verfügbaren Schriftarten findet sich hier [Schrift-Bibliothek](/de/fonts/font-library/)
+
+## Neue Schriftarten erstellen
+
+Weitere Infos zu diesem Thema findest du in einem eigenen [Schrifterstellungs Tutorial](/de/tutorials/font-creation/).
+
+Kontaktiere uns wenn du deine Schriftart für die nächste Ink/Stitch Version zur Verfügung stellen willst: [GitHub](https://github.com/inkstitch/inkstitch/issues).
+
 ## Text entlang Pfad
 
 Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape Tools verformt werden (z.B. um sie in eine Kurve zu bringen) verliert das Ergebnis womöglich an Qualität. Auf der anderen Seite ist es ein langwieriger Prozess, die Buchstaben einzelnd an eine Linie anzupassen. Dieses Werkzeug hilft dir, eine Schrift auf einen Pfad zu legen - ohne die Buchstaben zu verzerren.
@@ -147,9 +157,13 @@ Mit der vertikalen Ausrichtung bestimmst du, ob der Text komplett oberhalb des P
 
 ![Ein Text der mit den drei Ausrichtungsoptinoen ausgerichtet wurde. Der Unterschied zwischen Oben und Grundlinie wird hier besonders bei dem Buchstaben p deutlich. Die Option oben legt den Text komplett über den Pfad, während mit der Option Grundlinie der Text auf dem Pfad aufliegt und der absteigende Teil des p's die Linie kreuzt](/assets/images/docs/text_along_path_vertical_alignment.jpg)
 
-## Schrift-Bibliothek
+**Beispiel: Patch**
 
-Eine Übersicht über alle verfügbaren Schriftarten findet sich hier [Schrift-Bibliothek](/de/fonts/font-library/)
+1. Um den Text oben auszurichten, muss der Pfad unten aufgebrochen werden. Die Pfadrichtung ist im Uhrzeigersinn. Für die Textposition wurde `Mitte` gewählt, die vertikale Ausrichtung ist `Oben`
+2. Um den Text unten auszurichten, muss der Pfad oben aufgebrochen werden. Die Pfadrichtung verläuft gegen den Uhrzeigersinn. Für die Textposition wurde `Mitte` gewählt, die vertikale Ausrichtung ist `Unten` 
+3. Zusammengesetzt als Patch
+
+![Schrift auf einem Kreis, oben und unten und als Patch zusammengesetzt.](/assets/images/docs/text_along_path_patch.jpg)
 
 ## Batch Lettering
 
@@ -202,12 +216,6 @@ Option             |Eingabetyp|Wert
 `--command_symbols`|bool      |default: False
 `--text-align`     |string    |left, center, right, block, letterspacing<br>default: left
 `--file-formats`   |string    |muss mindestens ein valides Dateiformat enthalten (kommagetrennte Liste)
-
-## Neue Schriftarten für Ink/Stitch erstellen
-
-Weitere Infos zu diesem Thema findest du in einem eigenen [Schrifterstellungs Tutorial](/de/tutorials/font-creation/).
-
-Kontaktiere uns wenn du deine Schriftart für die nächste Ink/Stitch Version zur Verfügung stellen willst: [GitHub](https://github.com/inkstitch/inkstitch/issues).
 
 ## Sample Files Including Lettering
 
