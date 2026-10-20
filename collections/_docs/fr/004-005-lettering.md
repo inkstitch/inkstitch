@@ -101,74 +101,84 @@ Les lettres d'Ink/Stitch ont été soigneusement dessinées pour une broderie op
 
 ### Usage
 
-* Sélectionnez un chemin et un groupe de lettrage 
+* Sélectionnez un chemin et un groupe de lettrage
 
-  The length of the path should be appropriate for the length of the text. It is important to scale the text using the text tool rather than by manual transformation.
-  The text tool also provides an option to increase or decrease the spacing between characters—this is particularly useful when the text is being curved inward.
+La longueur du tracé doit être adaptée à la longueur du texte. Il est important de redimensionner le texte à l'aide de l'outil Lettrage plutôt que par transformation manuelle.
+
+L'outil Lettrage offre également la possibilité d'augmenter ou de diminuer l'espacement entre les caractères ; cette fonction est particulièrement utile lorsque le texte est incurvé vers l'intérieur.
   {: .notice--info}
 * Exécutez `Extensions > Ink/Stitch > Lettrage > Lettrage le long d'un chemin ...`
-* Adjust the options according to your preferences (see below).
+* Ajustez les options selon vos préférences (voir ci-dessous).
 * Cliquez sur 'Appliquer'
 
-Need to modify the path or adjust your options? You can refine them at any time—even after the text has been transformed—simply by reapplying the function.
+Besoin de modifier le tracé ou d'ajuster vos options ? Vous pouvez les affiner à tout moment, même après la transformation du texte, en réappliquant simplement la fonction.
 {: .notice--info}
 
 ### Options
 
-#### Text Position
+#### Position du texte
 
+Ink/Stitch propose plusieurs options de positionnement du texte pour aligner vos lettres le long d'un tracé :
+
+* **Gauche :** Place le texte au tout début du tracé.
+* **Centre :** Centre le texte au milieu du tracé.
+* **Droite :** Aligne le texte à la fin du tracé.
+* **Étirer :** Augmente l'espacement entre les caractères pour occuper toute la longueur du tracé.
 Ink/Stitch offers several text positioning options to align your lettering along a path:
-* **Left:** Places the text at the absolute beginning of the path.
-* **Center:** Centers the text at the center of the path.
-* **Right:** Aligns the text to the very end of the path.
-* **Stretch:** Exands the spacing between characters to span the entire length of the path.
 
-The exact alignment relies on two critical factors: the **starting point** of the path and the **direction** of the path.
+L'alignement précis dépend de deux facteurs essentiels : le **point de départ** du tracé et sa **direction**.
 
-![Text aligned along a path using various options](/assets/images/docs/text_along_path_alignment.png)
+![Texte aligné le long d'un tracé à l'aide de différentes options](/assets/images/docs/text_along_path_alignment.png)
 
-**Example: Lettering on a Circle**
+**Exemple : Lettrage sur un cercle**
 
-A common use case is placing text along a circle or an oval. By default in Inkscape, a closed circular object starts at the top and runs counter-clockwise.
-Running the simulator reveals that the embroidery path follows this exact behavior. Usually this is not the correct setting for your text positioning.
+Un cas d'utilisation courant consiste à placer du texte le long d'un cercle ou d'un ovale. Par défaut, dans Inkscape, un objet circulaire fermé commence en haut et se déploie dans le sens antihoraire.
 
-To adjust the circle, you must first convert the object into a path:
-* Go to **Path > Object to Path** (or press `Ctrl + Shift + C`). 
-* This action changes both the path direction and the starting point. 
-* Verify this in the simulator; the embroidery path will now begin on the middle-right and run clockwise.
+L'exécution du simulateur révèle que le tracé de broderie suit exactement ce comportement. Ce n'est généralement pas le réglage approprié pour le positionnement de votre texte.
 
-To position your text at the top of the circle, you need to **adjust the starting point**:
-* Select the Node tool (`N`) and click on the **bottom node**.
-* Break the path at this location by pressing `Shift + B`.
-* To verify the break, click and drag the node slightly (without releasing the mouse button). You will see a second node hidden underneath.
-  Press `Esc` to cancel the move and snap the node back into place. 
+Pour ajuster le cercle, vous devez d'abord convertir l'objet en tracé :
 
-Your new starting point is now successfully set at the bottom, forcing the text to center at the top.
+* Allez dans **Chemin > Objet en chemin** (ou appuyez sur `Ctrl + Maj + C`).
+* Cette action modifie à la fois la direction et le point de départ du tracé.
+* Vérifiez-le dans le simulateur ; le tracé de broderie commencera désormais au milieu à droite et se déploiera dans le sens horaire.
 
-To change the starting position of a path that has already been broken apart, simply select both of the separated nodes, join them back together (`Shift + J`), and break the path at your new desired location.
+
+Pour positionner votre texte en haut du cercle, vous devez **ajuster le point de départ** :
+* Sélectionnez l’outil Nœud (`N`) et cliquez sur le **nœud inférieur** du cercle.
+* Coupez le tracé à cet endroit en appuyant sur `Maj + B`.
+* Pour vérifier la coupure, cliquez et faites glisser légèrement le nœud (sans relâcher le bouton de la souris). Un deuxième nœud apparaîtra en dessous.
+
+Appuyez sur `Échap` pour annuler le déplacement et remettre le nœud en place.
+
+Votre nouveau point de départ est maintenant défini en bas, ce qui centre le texte en haut.
+
+Pour modifier le point de départ d’un tracé déjà coupé, sélectionnez simplement les deux nœuds séparés, réunissez-les (`Maj + J`) et coupez le tracé à l’endroit souhaité.
+
 {: .notice--info}
 
-Now we need to determine the **path direction**. It is helpful to [display the path direction](/fr/docs/customize/#noeuds-activation-de-la-direction-des-chemins) for this. Alternatively, you can also check the path direction using the simulator.
+Il nous faut maintenant déterminer le **sens du chemin**. Pour cela, il est utile d'[afficher le sens du chemin](/fr/docs/customize/#noeuds-activation-de-la-direction-des-chemins). Vous pouvez également le vérifier à l'aide du simulateur.
 
-When the path direction is going the wrong way, adapt it with `Path > Reverse`.
+Si le sens du chemin est incorrect, corrigez-le avec `Chemin > Inverser`.
 
-Here is an example: same settings, but opposite path directions. The text position is set to `Center`.
+Voici un exemple : mêmes paramètres, mais sens de chemin inversés. La position du texte est définie sur « Centré ».
 
-![Two texts, each aligned to a path. In one case, the path goes from left to right and the text sits on top. The other path goes from right to left, and the text hangs from the bottom of the path, also running from right to left.](/assets/images/docs/text_along_path_path_direction.jpg)
+![Deux textes, chacun aligné sur un chemin. Dans un cas, le chemin va de gauche à droite et le texte est superposé. Dans l'autre cas, le chemin va de droite à gauche et le texte est suspendu en bas du chemin, également de droite à gauche.](/assets/images/docs/text_along_path_path_direction.jpg)
 
-#### Vertical Alignment
+#### Alignement vertical
 
-With vertical alignment, you determine whether the text should be displayed entirely above the path (`top`), whether the path serves as the `baseline`, or whether the text is shown completely below the path (`bottom`). Here is an example where text has been placed on a path using the options in exactly this order.
+L'alignement vertical vous permet de déterminer si le texte doit être affiché entièrement au-dessus du tracé (« haut »), si le tracé sert de ligne de base (« ligne de base ») ou si le texte est affiché entièrement en dessous du tracé (« bas »). Voici un exemple où du texte a été placé sur un tracé en utilisant les options dans cet ordre précis.
 
-![A text aligned using the three alignment options. The difference between Top and Baseline is particularly clear here with the letter p. The top option places the text completely above the path, while the baseline option rests the text on the path, causing the descender of the p to cross the line](/assets/images/docs/text_along_path_vertical_alignment.jpg)
+![Texte aligné à l'aide des trois options d'alignement. La différence entre « haut » et « ligne de base » est particulièrement visible ici avec la lettre « p ». L'option « haut » place le texte entièrement au-dessus du tracé, tandis que l'option « ligne de base » place le texte sur le tracé, ce qui fait que la jambe du « p » dépasse la ligne.](/assets/images/docs/text_along_path_vertical_alignment.jpg)
 
-**Example: Patch**
+**Exemple : Patch**
 
-1. To align text at the top, the path must be split at the bottom. The path direction is clockwise. The text position is set to `Center`, and the vertical alignment is `Top`.
-2. To align text at the bottom, the path must be split at the top. The path direction is counter-clockwise. The text position is set to `Center`, and the vertical alignment is `Bottom`.
-3. Assembled as a patch.
+1. Pour aligner le texte en haut, le chemin doit être ouvert en bas. Le sens du chemin est horaire. La position du texte est définie sur « Centre » et l'alignement vertical sur « Haut ».
 
-![Text on a circle, positioned at the top and bottom, and assembled as a patch.](/assets/images/docs/text_along_path_patch.jpg)
+2. Pour aligner le texte en bas, le chemin doit être ouvert en haut. Le sens du chemin est antihoraire. La position du texte est centrée et l'alignement vertical est sur « Bas ».
+
+3. Assemblé sous forme de patch.
+
+![Texte sur un cercle, positionné en haut et en bas, et assemblé sous forme de patch.](/assets/images/docs/text_along_path_patch.jpg)
 
 ## Lettrage par lots {#batch-lettering}
 
