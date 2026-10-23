@@ -34,6 +34,9 @@ Téléchargez la dernière version disponible pour Linux (Ink/Stitch {{ tag_name
   [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-aarch64.sh),
   [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.aarch64.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_arm64.deb)
+
+Arch linux and NixOS users can also use their package managers:
+
 * Arch linux (externally maintained): <https://aur.archlinux.org/packages/inkstitch>
 * NixOS (externally maintained): <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
 

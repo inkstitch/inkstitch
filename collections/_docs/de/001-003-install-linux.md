@@ -2,7 +2,7 @@
 title: "Installation von Ink/Stitch für Linux"
 permalink: /de/docs/install-linux/
 excerpt: "Wie wird Ink/Stitch installiert."
-last_modified_at: 2025-06-17
+last_modified_at: 2025-10-23
 toc: true
 after_footer_scripts:
   - /assets/js/copy_code.js
@@ -39,6 +39,9 @@ Lade die neueste Version für Linux herunter (Ink/Stitch {{ tag_name }})
   [sh]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-linux-aarch64.sh),
   [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.aarch64.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_arm64.deb)
+
+Für Arch Linux und NixOS Nutzer gibt es außerdem die Möglichkeit der Installation über Package-Manager:
+
 * Arch linux (externally maintained): <https://aur.archlinux.org/packages/inkstitch>
 * NixOS (externally maintained): <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
 
