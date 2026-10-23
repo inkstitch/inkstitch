@@ -1,5 +1,5 @@
 ---
-title: "Installation von Ink/Stitch für Linux"
+title: "Ink/Stitch auf Linux Systemen installieren"
 permalink: /de/docs/install-linux/
 excerpt: "Wie wird Ink/Stitch installiert."
 last_modified_at: 2025-10-23
@@ -40,10 +40,10 @@ Lade die neueste Version für Linux herunter (Ink/Stitch {{ tag_name }})
   [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.aarch64.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_arm64.deb)
 
-Für Arch Linux und NixOS Nutzer gibt es außerdem die Möglichkeit der Installation über Package-Manager:
+Für Arch Linux und NixOS Nutzer gibt es außerdem die Möglichkeit der Installation über Package-Manager (inoffiziell):
 
-* Arch linux (externally maintained): <https://aur.archlinux.org/packages/inkstitch>
-* NixOS (externally maintained): <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
+* Arch linux: <https://aur.archlinux.org/packages/inkstitch>
+* NixOS: <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
 
 **Aktuelle Version:** {{ site.github.latest_release.published_at | date: "%d.%m.%Y" }} [Ink/Stitch {{ site.github.latest_release.tag_name }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -99,12 +99,12 @@ Ink/Stitch befindet sich nun unter `Erweiterungen > Ink/Stitch`.
 
 ## Aktualisierung
 
-## Aktuelle Ink/Stitch Versionen
+### Aktuelle Ink/Stitch Versionen
 
 DEB und RPM Packet Installationen erkennen zuvor installierte Versionen und ersetzen diese automatisch mit der aktuellen Version. Auch das Installationsskript kann alte Versionen erkennen und ersetzen.
 Das gilt jeweils nur, wenn auch die Vorgängerversion auf diese Weise installiert wurde. Ansonsten bitte der Anleitung für ältere Versionen folgen.
 
-## Ink/Stitch Versionen älter als 2.1.0 und tar.xz Version
+### Ink/Stitch Versionen älter als 2.1.0 und tar.xz Version
 
 Lösche zunächst die alte Ink/Stitch Installation. Gehe in das Erweiterungsverzeichnis und entferne alle Dateien und Ordner, die mit inkstitch* beginnen.
 
@@ -112,7 +112,7 @@ Dann folge erneut der Installationsbeschreibung auf dieser Seite.
 
 Die Verzeichnisse für Erweiterungen können unter `Bearbeiten > Einstellungen > System` eingesehen werden.
 
-## Updateinfo
+### Updateinfo
 
 Abonniere den News-Feed-Kanal, um die Aktualisierungen von Ink/Stitch zu verfolgen:<br>
 * <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)

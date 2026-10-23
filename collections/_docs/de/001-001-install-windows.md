@@ -1,5 +1,5 @@
 ---
-title: "Installation von Ink/Stitch für Windows"
+title: "Ink/Stitch auf Windows installieren"
 permalink: /de/docs/install-windows/
 excerpt: "Wie wird Ink/Stitch installiert."
 last_modified_at: 2026-04-28

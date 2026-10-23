@@ -1,5 +1,5 @@
 ---
-title: "Installation von Ink/Stitch für macOS"
+title: "Ink/Stitch auf macOS installieren"
 permalink: /de/docs/install-macos/
 excerpt: "Wie wird Ink/Stitch installiert."
 last_modified_at: 2024-09-28

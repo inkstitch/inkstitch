@@ -35,10 +35,10 @@ Téléchargez la dernière version disponible pour Linux (Ink/Stitch {{ tag_name
   [rpm]({{ site.github.releases_url }}/latest/download/inkstitch-{{ tag_name }}-1.aarch64.rpm),
   [deb]({{ site.github.releases_url }}/latest/download/inkstitch_{{ tag_name }}_arm64.deb)
 
-Arch linux and NixOS users can also use their package managers:
+When you are running Arch Linux or NixOS, you can install an unofficial package through your package manager:
 
-* Arch linux (externally maintained): <https://aur.archlinux.org/packages/inkstitch>
-* NixOS (externally maintained): <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
+* Arch linux: <https://aur.archlinux.org/packages/inkstitch>
+* NixOS: <https://search.nixos.org/packages?channel=unstable&show=inkscape-extensions.inkstitch>
 
 **Dernière version:** [Ink/Stitch {{ site.github.latest_release.tag_name }} ({{ site.github.latest_release.published_at | date: "%Y-%m-%d" }})](https://github.com/inkstitch/inkstitch/releases/latest)
 
@@ -109,7 +109,7 @@ Puis, suivre la procédure ci-dessus.
 
 Les répertoires d'extension peuvent être trouvés dans Inkscape sous <code class="language-plaintext highlighter-rouge">Edition > Préférences > Système</code>.
 
-## Avoir des informations sur les mises à jour
+### Avoir des informations sur les mises à jour
 
 Inscrivez-vous aux news pour avoir connaissance des mises à jour d'Ink/Stitch
 * <i class="fas fa-fw fa-rss-square" aria-hidden="true" style="color: #ffb400;"></i> [GitHub Feed on new Releases](https://github.com/inkstitch/inkstitch/releases.atom)

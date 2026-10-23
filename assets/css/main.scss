@@ -127,9 +127,9 @@ $text-color: #000;
 @import "minimal-mistakes"; // main partials
 
 .page__title {
-  border-bottom: 5px solid #ccc;
-  padding-bottom: 0.5em;
+  padding: 0.5em;
   margin-bottom: 1em;
+  background: #00339910;
 }
 
 .page__content h2, .page__content h3 {
@@ -142,9 +142,8 @@ $text-color: #000;
 }
 
 .page__content h2 {
-  border-bottom: 3px solid #ccc;
-  background: rgb(242, 243, 243);
   padding: 10px;
+  background: linear-gradient(0deg, #00339910, white 50%);
 }
 
 .page__content p, .page__content li, .page__content dl {
@@ -164,8 +163,12 @@ p.notice--info, p.notice--warning {
   margin-bottom: 1em;
 }
 
+.page__footer {
+  background: #00339910;
+}
+
 .notice--info {
-  background-color: #00339910;
+  background-color: #ffb40010;
 }
 
 .notice--info code {
@@ -670,7 +673,7 @@ p.border-shadow {
 
 h2 img {
     float:right;
-    max-height: 50px;
+    max-height: 35px;
 }
 
 a img:hover {
