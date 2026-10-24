@@ -98,6 +98,7 @@ class TextAlongPath:
         self.text_position = text_position
         self.vertical_alignment = vertical_alignment
         self.glyphs: list[Group] = []
+        self.svg_transform = self.svg.equivalent_transform_scale
 
         self.load_settings()
         self.font = get_font_by_id(self.settings.font, False)
@@ -209,11 +210,11 @@ class TextAlongPath:
 
                 left = bbox.left
                 transformed_left = transformed_bbox.left
-                width = convert_unit(transformed_bbox.width, 'px', self.svg.unit)
+                width = transformed_bbox.width * self.svg_transform
 
                 # adjust position
                 if old_bbox:
-                    distance += convert_unit(transformed_left - old_bbox.right, 'px', self.svg.unit) + stretch_space
+                    distance += (transformed_left - old_bbox.right) * self.svg_transform + stretch_space
 
                 new_distance = distance + width
 
