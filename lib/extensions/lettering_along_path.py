@@ -6,8 +6,7 @@
 import json
 from math import atan2, degrees
 
-from inkex import BaseElement, Group, Transform, errormsg
-from inkex.units import convert_unit
+from inkex import BaseElement, BoundingBox, Group, Transform, errormsg
 from shapely.geometry import LineString, Point
 
 from ..elements import Stroke
@@ -176,19 +175,11 @@ class TextAlongPath:
         backwards = self.settings.back_and_forth and iterator % 1 == 1
         text_baseline = self._get_baseline(line, iterator)
 
-        if self.text_position == 'stretch':
-            num_spaces = len(line) - 1
-
-            line_glyphs = [glyph for glyph in line.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
-            total_stretch_spaces = len(line_glyphs) - 1 + num_spaces
-
-            stretch_space = (path.length - text_width) / total_stretch_spaces
-        else:
-            stretch_space = 0
+        stretch_space = self._get_stretch_space(line, path, text_width)
 
         start_position = self.get_start_position(text_width, path.length)
         distance = start_position
-        old_bbox = None
+        prev_bbox = None
 
         words = line.getchildren()
         if backwards:
@@ -202,44 +193,66 @@ class TextAlongPath:
             if self.font.text_direction == "rtl":
                 glyphs.reverse()
             for glyph in glyphs:
-                # dimensions
-                bbox = glyph.bounding_box()
-                transformed_bbox = glyph.bounding_box(word.composed_transform())
-                if not bbox or not transformed_bbox:
-                    continue
-
-                left = bbox.left
-                transformed_left = transformed_bbox.left
-                width = transformed_bbox.width * self.svg_transform
-
-                # adjust position
-                if old_bbox:
-                    distance += (transformed_left - old_bbox.right) * self.svg_transform + stretch_space
-
-                new_distance = distance + width
-
-                # calculate and apply transform
-                first = path.interpolate(distance)
-                last = path.interpolate(new_distance)
-
-                if not first or not last:
-                    # unusable path, nothing we can do
-                    continue
-
-                angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
-                translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_baseline)
-
-                transform = Transform(f"rotate({angle}, {first.x}, {first.y}) translate({translate.x} {translate.y})")
-                correction_transform = Transform(get_correction_transform(glyph))
-                glyph.transform = correction_transform @ transform @ glyph.transform
-
-                self._set_transform_info(glyph, angle, first)
-
-                # set values for next iteration
-                distance = new_distance
-                old_bbox = transformed_bbox
+                distance, prev_bbox = self._apply_glyph_transform(word, glyph, path, text_baseline, stretch_space, prev_bbox, distance)
 
             distance += stretch_space
+
+    def _apply_glyph_transform(
+            self,
+            word: Group,
+            glyph: Group,
+            path: LineString,
+            text_baseline: float,
+            stretch_space: float,
+            prev_bbox: BoundingBox | None,
+            distance: float):
+        # dimensions
+        bbox = glyph.bounding_box()
+        transformed_bbox = glyph.bounding_box(word.composed_transform())
+        if not bbox or not transformed_bbox:
+            return distance, prev_bbox
+
+        left = bbox.left
+        transformed_left = transformed_bbox.left
+        width = transformed_bbox.width * self.svg_transform
+
+        # adjust position
+        if prev_bbox:
+            distance += (transformed_left - prev_bbox.right) * self.svg_transform + stretch_space
+
+        new_distance = distance + width
+
+        # calculate and apply transform
+        first = path.interpolate(distance)
+        last = path.interpolate(new_distance)
+
+        if not first or not last:
+            # unusable path, nothing we can do
+            return distance, prev_bbox
+
+        angle = degrees(atan2(last.y - first.y, last.x - first.x)) % 360
+        translate = InkstitchPoint(first.x, first.y) - InkstitchPoint(left, text_baseline)
+
+        transform = Transform(f"rotate({angle}, {first.x}, {first.y}) translate({translate.x} {translate.y})")
+        correction_transform = Transform(get_correction_transform(glyph))
+        glyph.transform = correction_transform @ transform @ glyph.transform
+
+        self._set_transform_info(glyph, angle, first)
+
+        return new_distance, transformed_bbox
+
+    def _get_stretch_space(self, line: Group, path: LineString, text_width: float) -> float:
+        if self.text_position == 'stretch':
+            num_spaces = len(line) - 1
+
+            line_glyphs = [glyph for glyph in line.iterdescendants(SVG_GROUP_TAG) if glyph.get('inkstitch:letter-group', '') == 'glyph']
+            total_stretch_spaces = len(line_glyphs) - 1 + num_spaces
+
+            stretch_space = (path.length - text_width) / total_stretch_spaces
+        else:
+            stretch_space = 0
+
+        return stretch_space
 
     def _get_baseline(self, line: Group, iterator: int) -> float:
         bbox = line.bounding_box()
@@ -284,7 +297,6 @@ class TextAlongPath:
         if self.text_position == 'right':
             start_position = path_length - text_length
         return start_position
-
 
     def hide_commands(self) -> list[Group]:
         # hide commmands for bounding box calculation
