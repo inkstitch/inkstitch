@@ -108,6 +108,9 @@ Ink/Stitch Schriften sind liebevoll designed. Wenn sie mit Inkscape Tools verfor
 Du willst den Pfad noch einmal ändern oder die Optionen anpassen? Das geht auch mit einem bereits transformierten Text. Wende die Funktion einfach noch mal an.
 {: .notice--info}
 
+In der aktuellen Ink/Stitch Version (3.3.0), gibt es einen Fehler in der Positionierung, wenn das Dokument in den Dokumenteinstellung (`Datei > Dokumenteinstelungen > Skalierung`) skaliert wurde. Bitte beachte, dass der Wert auf 1 gesetzt sein muss.
+{: .notice--warning}
+
 ### Optionen
 
 #### Textposition
