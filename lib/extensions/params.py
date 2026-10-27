@@ -312,8 +312,7 @@ class ParamsTab(ScrolledPanel):
                     if name == "satin_column" and input.Label == _('Running stitch along paths'):
                         value = not value
                     input.SetValue(value)
-                self.changed_inputs.add(self.param_name_to_input[name])
-                self.enable_change_indicator(name)
+                self.param_changed(name)
 
         self.update_toggle_state()
         self.update_enable_widgets()
@@ -669,8 +668,6 @@ class SettingsPanel(wx.Panel):
 
         for tab in self.tabs:
             tab.load_preset(preset_data)
-
-        self.preview_renderer.update()
 
     def _apply(self):
         for tab in self.tabs:
