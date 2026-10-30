@@ -192,6 +192,10 @@ class ControlPanel(wx.Panel):
                 elif stitch.color_change:
                     self.slider.add_marker("color_change", stitch_num)
 
+        # Keep the timeline zoom when the preview reloads (Params re-renders
+        # after every change).
+        self.slider.restore_view()
+
     def is_dark_theme(self):
         return wx.SystemSettings().GetAppearance().IsDark()
 
