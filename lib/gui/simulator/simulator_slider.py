@@ -277,9 +277,13 @@ class SimulatorSlider(wx.Panel):
         width, height = self.GetSize()
         view_start, view_end = self._visible_range()
 
-        def in_view(value):
-            return view_start <= value <= view_end
+        self._draw_color_sections(gc, height, view_start, view_end)
+        self._draw_tab(gc, height, view_start, view_end)
+        self._draw_markers(gc, height, view_start, view_end)
+        if self._view is not None:
+            self._draw_range_labels(gc, width, height, view_start, view_end)
 
+    def _draw_color_sections(self, gc, height, view_start, view_end):
         gc.SetPen(wx.NullPen)
         for color_section in self.color_sections:
             # Cut sections at the edges of the visible range.
@@ -294,6 +298,7 @@ class SimulatorSlider(wx.Panel):
             gc.DrawRectangle(start_x, height * self.color_bar_start,
                              end_x - start_x, height * self.color_bar_thickness)
 
+    def _draw_tab(self, gc, height, view_start, view_end):
         if self.control_panel.is_dark_theme() and sys.platform != "win32":
             gc.SetPen(wx.Pen(wx.Colour(0, 0, 0), 1))
             gc.SetBrush(wx.Brush(wx.Colour(255, 255, 255)))
@@ -301,50 +306,53 @@ class SimulatorSlider(wx.Panel):
             gc.SetPen(wx.Pen(wx.Colour(255, 255, 255), 1))
             gc.SetBrush(wx.Brush(wx.Colour(0, 0, 0)))
 
-        if in_view(self._value):
-            value_x = self.value_to_x(self._value)
-            tab_height = self.tab_height * height
-            tab_width = self.tab_width * height
-            tab_x = value_x - tab_width / 2
-            tab_y = height * self.tab_start
-            self._tab_rect = wx.Rect(round(tab_x), round(tab_y), round(tab_width), round(tab_height))
-            gc.DrawRectangle(
-                value_x - 1.5, 0,
-                3, height * (self.color_bar_start + self.color_bar_thickness))
-            gc.SetPen(wx.NullPen)
-            gc.DrawRectangle(value_x - tab_width/2, height * self.tab_start,
-                             tab_width, tab_height)
-        else:
+        if not view_start <= self._value <= view_end:
             self._tab_rect = None
+            return
 
+        value_x = self.value_to_x(self._value)
+        tab_height = self.tab_height * height
+        tab_width = self.tab_width * height
+        tab_x = value_x - tab_width / 2
+        tab_y = height * self.tab_start
+        self._tab_rect = wx.Rect(round(tab_x), round(tab_y), round(tab_width), round(tab_height))
+        gc.DrawRectangle(
+            value_x - 1.5, 0,
+            3, height * (self.color_bar_start + self.color_bar_thickness))
+        gc.SetPen(wx.NullPen)
+        gc.DrawRectangle(value_x - tab_width/2, height * self.tab_start,
+                         tab_width, tab_height)
+
+    def _draw_markers(self, gc, height, view_start, view_end):
         gc.SetPen(self.marker_pen)
         for marker_list in self.marker_lists.values():
-            if marker_list.enabled:
-                for value in marker_list:
-                    if not in_view(value):
-                        continue
-                    x = self.value_to_x(value)
-                    gc.StrokeLine(
-                        x, height * self.marker_start,
-                        x, height * (self.marker_end + marker_list.offset)
-                    )
-                    gc.DrawBitmap(
-                        marker_list.icon,
-                        x - self.marker_icon_size / 2, height * (self.marker_icon_start + marker_list.offset),
-                        self.marker_icon_size, self.marker_icon_size
-                    )
+            if not marker_list.enabled:
+                continue
+            for value in marker_list:
+                if not view_start <= value <= view_end:
+                    continue
+                x = self.value_to_x(value)
+                gc.StrokeLine(
+                    x, height * self.marker_start,
+                    x, height * (self.marker_end + marker_list.offset)
+                )
+                gc.DrawBitmap(
+                    marker_list.icon,
+                    x - self.marker_icon_size / 2, height * (self.marker_icon_start + marker_list.offset),
+                    self.marker_icon_size, self.marker_icon_size
+                )
 
-        if self._view is not None:
-            # Show which stitches the zoomed timeline covers.
-            font = self.GetFont()
-            font.SetPointSize(max(font.GetPointSize() - 2, 6))
-            gc.SetFont(font, self.label_colour)
-            first = f"{round(view_start)}"
-            last = f"{round(view_end)}"
-            label_y = height * (self.color_bar_start + self.color_bar_thickness) + 2
-            gc.DrawText(first, self.margin, label_y)
-            last_width = gc.GetTextExtent(last)[0]
-            gc.DrawText(last, width - self.margin - last_width, label_y)
+    def _draw_range_labels(self, gc, width, height, view_start, view_end):
+        # Show which stitches the zoomed timeline covers.
+        font = self.GetFont()
+        font.SetPointSize(max(font.GetPointSize() - 2, 6))
+        gc.SetFont(font, self.label_colour)
+        first = f"{round(view_start)}"
+        last = f"{round(view_end)}"
+        label_y = height * (self.color_bar_start + self.color_bar_thickness) + 2
+        gc.DrawText(first, self.margin, label_y)
+        last_width = gc.GetTextExtent(last)[0]
+        gc.DrawText(last, width - self.margin - last_width, label_y)
 
     def on_erase_background(self, event):
         # supposedly this prevents flickering?
