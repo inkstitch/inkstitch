@@ -35,7 +35,7 @@ def get_compensated_line_string_rails(
     return [apply_push_comp(rail, start, end) for rail in line_string_rails]
 
 
-def apply_push_comp_on_point_list(rail: list[Point], start: float, end: float):
+def apply_push_comp_on_point_list(rail: list[Point], start: float, end: float) -> list[Point]:
     line = shgeo.LineString(rail)
     return [Point(*point) for point in apply_push_comp(line, start, end).coords]
 
