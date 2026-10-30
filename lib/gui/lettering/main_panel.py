@@ -24,6 +24,15 @@ from .. import PresetsPanel, info_dialog
 from . import LetteringHelpPanel, LetteringOptionsPanel
 
 
+def _get_original_text_transform(group, scale):
+    transform = inkex.Transform()
+    if group.getchildren():
+        transform = inkex.Transform(group.getchildren()[0].get('transform'))
+        if scale:
+            transform = transform @ inkex.Transform(f'scale({100 / scale})')
+    return transform
+
+
 class LetteringPanel(wx.Panel):
     def __init__(self, parent, simulator, group, metadata=None, background_color='white'):
         self.parent = parent
@@ -70,6 +79,8 @@ class LetteringPanel(wx.Panel):
         self.SetSizerAndFit(outer_sizer)
 
         self.load_settings()
+        self.original_scale = self.settings.scale
+        self.original_text_transform = _get_original_text_transform(self.group, self.original_scale)
         self.apply_settings()
 
     def load_settings(self):
@@ -331,10 +342,7 @@ class LetteringPanel(wx.Panel):
             else:
                 pass
 
-        # the text scaling group label is dependent on the user language, so it would break in international file exchange if we used it
-        # scaling (correction transform) on the parent group is already applied, so let's use that for recognition
-        if destination_group.get('transform', None) is None:
-            destination_group.attrib['transform'] = 'scale(%s)' % (self.settings.scale / 100.0)
+        destination_group.transform = self.original_text_transform @ inkex.Transform(f'scale({self.settings.scale / 100.0})')
 
     def render_stitch_plan(self):
         stitch_groups = []
