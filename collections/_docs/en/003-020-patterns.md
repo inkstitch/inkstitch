@@ -36,6 +36,8 @@ In Ink/Stitch you can generate patterns by either adding stitches or removing st
 
 ## Remove Pattern Marker
 
+### Assisted removal
+
 Remove the pattern marker by running `Extensions > Ink/Stitch > Edit > Selection to Pattern`, select the `Remove pattern marker` option.
 
 ### Manual pattern marker removal

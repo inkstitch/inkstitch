@@ -36,9 +36,12 @@ Dans Ink/Stitch il est possible de générer des textures en ajoutant ou en supp
 
 ## Retirer le marqueur de texture
 
+### Retrait assisté
+
 Supprimez le marqueur de texture en exécutant `Extensions > Ink/Stitch > Edition > Selection vers texture`, puis sélectionnez l'option `Retirer le marqueur de texture`.
 
 ### Suppression manuelle du marqueur de texture
+
 Le marqueur de texture peut être supprimé dans le panneau "Fond et Contour" (`Ctrl+Shift+F`). Ouvrez l'onglet "Style de contour" et choisissez la toute première option (vide) dans le premier menu déroulant. Après suppression du marqueur, le chemin n'est plus une texture, mais un chemin ordinaire.
 
 ![Remove pattern](/assets/images/docs/fr/stitch-type-remove-pattern.png)

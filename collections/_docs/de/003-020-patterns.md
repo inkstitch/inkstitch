@@ -33,6 +33,8 @@ Muster können in Ink/Stitch durch hinzufügen oder entfernen von Stichen aus ei
 
 ## Muster-Knotenmarkierung entfernen
 
+### Assistiertes Entfernen
+
 In `Erweiterungen > Ink/Stitch > Bearbeiten > Auswahl zu Muster` gibt es auch die Möglichkeit die Mustermarkierung wieder zu entfernen. Wähle hierzu die Option `Mustermarkierung entfernen`.
 
 ### Manuelles Enternen der Markierung

@@ -118,6 +118,10 @@ To disable this behavior open the [params dialog](/docs/params/) and disable one
 
 Alternatively add a start or end point manually by attaching a [command](/docs/commands/#attach-commands-to-selected-objects-) to the satin column.
 
+### Patterns
+
+Patterns work the same way for all stitch types. Therefore, the [guide for patterns](/docs/stitches/patterns/) is covered in a separate article.
+
 ## Parameters
 
 Running `Extensions > Ink/Stitch  > Params` will give you the possibility to fine-tune your satin column and to use underlay.

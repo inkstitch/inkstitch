@@ -120,6 +120,10 @@ Dieses Verhalten kann im [Parameterdialog](/docs/params/) durch eine oder beide 
 
 Alternativ kann auch ein manueller Start- und/oder Enpunkt durch [Objektbefehle](/docs/commands/#attach-commands-to-selected-objects-) festgelegt werden.
 
+### Muster
+
+Muster funktionieren für alle Sticharten gleich. Daher ist die [Anleitung für Muster](/de/docs/stitches/patterns/) in einem eigenen Artilel zusammengefasst.
+
 ## Parameter
 
 Der Dialog `Erweiterungen > Ink/Stitch  > Parameter` gibt dir die Möglichkeit die Satinsäule genau zu justieren und entsprechende Unterlagen zu aktivieren.

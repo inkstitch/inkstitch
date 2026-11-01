@@ -136,6 +136,10 @@ Pour désactiver ce comportement, ouvrez le [dialogue de paramétrage](/fr/docs/
 
 Alternativementt, vous pouvez ajouter un point de départ ou d'arrivée manuellement en attachant une [commande](/fr/docs/commands/#attach-commands-to-selected-objects-) à la colonne satin.
 
+### Motifs
+
+Les motifs fonctionnent de la même manière pour tous les types de points. Par conséquent, le [guide des motifs](/fr/docs/stitches/patterns/) fait l'objet d'un article distinct.
+
 ## Paramètres
 
 `Extensions > Ink/Stitch > Paramètres` vous donne la possibilité de parfaire votre colonne de satin et d’utiliser une sous-couche.
