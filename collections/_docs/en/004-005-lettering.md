@@ -106,7 +106,7 @@ Ink/Stitch letters are carefully designed. If you try to transform them with com
 * Adjust the options according to your preferences (see below).
 * Click on apply
 
-Need to modify the path or adjust your options? You can refine them at any time—even after the text has been transformed—simply by reapplying the function.
+Need to modify the path or adjust your options? You can refine them at any time—even after the text has been transformed—simply by reapplying the function. However, this also means that any manual transformations performed previously will be reset.
 {: .notice--info}
 
 In the current version of Ink/Stitch (3.3.0), there is a positioning error if the document has been scaled via the document settings (`File > Document Properties > Scaling`). Please ensure that this value is set to 1.

@@ -111,7 +111,7 @@ L'outil Lettrage offre également la possibilité d'augmenter ou de diminuer l'e
 * Ajustez les options selon vos préférences (voir ci-dessous).
 * Cliquez sur 'Appliquer'
 
-Besoin de modifier le tracé ou d'ajuster vos options? Vous pouvez les affiner à tout moment, même après la transformation du texte, en réappliquant simplement la fonction.
+Besoin de modifier le tracé ou d'ajuster vos options? Vous pouvez les affiner à tout moment, même après la transformation du texte, en réappliquant simplement la fonction. Cela signifie toutefois aussi que les transformations manuelles effectuées précédemment seront annulées.
 {: .notice--info}
 
 Dans la version actuelle d'Ink/Stitch (3.3.0), une erreur de positionnement se produit si le document a été mis à l'échelle via les paramètres du document (`Fichier > Propriétés du document > Échelle`). Veuillez vous assurer que cette valeur est bien définie sur 1.
