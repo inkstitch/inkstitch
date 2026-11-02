@@ -5,13 +5,16 @@
 from threading import Event, Thread
 
 import wx
+from inkex import errormsg
 
 from ...debug.debug import debug
+from ...exceptions import InkstitchException
 from ...utils.threading import ExitThread
 from ...stitch_plan import StitchPlan
 from typing import Callable, Optional
 
 RenderFunction = Callable[[], Optional[StitchPlan]]
+RenderCallback = Callable[[StitchPlan | None, BaseException | None], None]
 
 
 class PreviewRenderer(Thread):
@@ -20,7 +23,7 @@ class PreviewRenderer(Thread):
     def __init__(
             self,
             render_stitch_plan: RenderFunction,
-            rendering_completed: Callable[[StitchPlan | None], None]
+            rendering_completed: RenderCallback
             ) -> None:
         super(PreviewRenderer, self).__init__()
         self.daemon = True
@@ -57,10 +60,13 @@ class PreviewRenderer(Thread):
 
                 stitch_plan = self.render_stitch_plan()
                 # rendering_completed() will be called in the main thread.
-                wx.CallAfter(self.rendering_completed, stitch_plan)
+                wx.CallAfter(self.rendering_completed, stitch_plan, None)
 
             except ExitThread:
                 debug.log("ExitThread caught")
-            except:  # noqa: E722
+            except (Exception, SystemExit) as error:
+                if isinstance(error, InkstitchException):
+                    errormsg(str(error))
                 import traceback
                 debug.log("unhandled exception in PreviewRenderer.render_stitch_plan(): " + traceback.format_exc())
+                wx.CallAfter(self.rendering_completed, None, error)

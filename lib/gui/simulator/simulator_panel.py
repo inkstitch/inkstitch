@@ -5,6 +5,7 @@
 import wx
 from typing import Optional
 
+from ...i18n import _
 from . import ControlPanel, DrawingPanel, ViewPanel
 from .simulator_renderer import PreviewRenderer, RenderFunction
 from ...stitch_plan import StitchPlan
@@ -115,9 +116,20 @@ class SimulatorPanel(wx.Panel):
         self.dp.set_loading(True)
         self.preview_renderer.update()
 
-    def on_stitch_plan_rendered(self, stitch_plan: Optional[StitchPlan]) -> None:
+    def on_stitch_plan_rendered(self, stitch_plan: Optional[StitchPlan], error: BaseException | None) -> None:
         try:
             self.dp.set_loading(False)
+            if error is not None:
+                if isinstance(error, SystemExit):
+                    message = _('Simulator rendering failed. See the error message in Inkscape after closing the simulator.')
+                else:
+                    message = str(error)
+                wx.MessageBox(
+                    message,
+                    _('Simulator rendering failed'),
+                    wx.OK | wx.ICON_ERROR
+                )
+                return
             if stitch_plan is not None:
                 self.stop()
                 self.load(stitch_plan)
