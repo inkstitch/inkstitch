@@ -111,12 +111,16 @@ class DrawingPanel(wx.Panel):
         self.num_stitches = 1
         self.commands = [None]
 
+        # Ctrl + drag draws a box to zoom into: (start point, current point)
+        self.zoom_box = None
+
         # desired simulation speed in stitches per second
         self.speed = global_settings['simulator_speed']
 
         self.Bind(wx.EVT_PAINT, self.OnPaint)
         self.Bind(wx.EVT_SIZE, self.on_resize)
         self.Bind(wx.EVT_LEFT_DOWN, self.on_left_mouse_button_down)
+        self.Bind(wx.EVT_MIDDLE_DOWN, self.on_middle_click)
         self.Bind(wx.EVT_MOUSEWHEEL, self.on_mouse_wheel)
         self.Bind(wx.EVT_TIMER, self.animate)
 
@@ -177,9 +181,19 @@ class DrawingPanel(wx.Panel):
         if self.stitch_plan is not None:
             self.draw_stitches(canvas)
             self.draw_scale(canvas)
+            self.draw_zoom_box(canvas)
 
         if self.loading:
             self.loading_indicator.paint(canvas)
+
+    def draw_zoom_box(self, canvas):
+        if not self.zoom_box:
+            return
+        (x0, y0), (x1, y1) = self.zoom_box
+        canvas.SetTransform(canvas.CreateMatrix())
+        canvas.SetPen(wx.Pen(wx.Colour(0, 120, 215), 1, wx.PENSTYLE_SHORT_DASH))
+        canvas.SetBrush(wx.Brush(wx.Colour(0, 120, 215, 40)))
+        canvas.DrawRectangle(min(x0, x1), min(y0, y1), abs(x1 - x0), abs(y1 - y0))
 
     def draw_page(self, canvas):
         self._update_background_color()
@@ -537,12 +551,18 @@ class DrawingPanel(wx.Panel):
             self.CaptureMouse()
             self.drag_start = event.GetPosition()
             self.drag_original_pan = self.pan
+            if event.ControlDown() or event.CmdDown():
+                # Ctrl + drag: draw a box and zoom into it on release
+                self.zoom_box = (self.drag_start, self.drag_start)
             self.Bind(wx.EVT_MOTION, self.on_drag)
             self.Bind(wx.EVT_MOUSE_CAPTURE_LOST, self.on_drag_end)
             self.Bind(wx.EVT_LEFT_UP, self.on_drag_end)
 
     def on_drag(self, event):
-        if self.HasCapture() and event.Dragging():
+        if self.HasCapture() and event.Dragging() and self.zoom_box:
+            self.zoom_box = (self.zoom_box[0], event.GetPosition())
+            self.Refresh()
+        elif self.HasCapture() and event.Dragging():
             delta = event.GetPosition()
             offset = (delta[0] - self.drag_start[0], delta[1] - self.drag_start[1])
             self.pan = (self.drag_original_pan[0] + offset[0], self.drag_original_pan[1] + offset[1])
@@ -555,6 +575,39 @@ class DrawingPanel(wx.Panel):
         self.Unbind(wx.EVT_MOTION)
         self.Unbind(wx.EVT_MOUSE_CAPTURE_LOST)
         self.Unbind(wx.EVT_LEFT_UP)
+
+        if self.zoom_box:
+            box = self.zoom_box
+            self.zoom_box = None
+            if event.GetEventType() == wx.wxEVT_LEFT_UP:
+                self.zoom_to_box(box[0], event.GetPosition())
+            self.Refresh()
+
+    def zoom_to_box(self, start, end):
+        x0, x1 = sorted((start[0], end[0]))
+        y0, y1 = sorted((start[1], end[1]))
+        # ignore a Ctrl + click or a tiny accidental drag
+        if x1 - x0 < 5 or y1 - y0 < 5:
+            return
+
+        panel_width, panel_height = self.GetClientSize()
+        scale = min(panel_width / (x1 - x0), panel_height / (y1 - y0))
+
+        # the box's center, in design coordinates
+        center_x = ((x0 + x1) / 2.0 - self.pan[0]) / self.zoom
+        center_y = ((y0 + y1) / 2.0 - self.pan[1]) / self.zoom
+
+        self.zoom *= scale
+        # put that point in the middle of the panel
+        self.pan = (panel_width / 2.0 - center_x * self.zoom,
+                    panel_height / 2.0 - center_y * self.zoom)
+        self.Refresh()
+
+    def on_middle_click(self, event):
+        # back to the default view: the whole design, centered
+        if self.stitch_plan is not None:
+            self.choose_zoom_and_pan()
+            self.Refresh()
 
     def on_mouse_wheel(self, event):
         if event.GetWheelRotation() > 0:
