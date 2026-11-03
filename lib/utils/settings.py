@@ -15,6 +15,7 @@ DEFAULT_METADATA = {
 DEFAULT_SETTINGS = {
     # Ink/Stitch preferences
     "cache_size": 100,
+    "font_cache_size": 500,
     "pop_out_simulator": False,
     # simulator
     "simulator_adaptive_speed": True,
@@ -37,6 +38,8 @@ DEFAULT_SETTINGS = {
     "stitch_layer_editor_sash_position": -200,
     # lettering (all lettering applications)
     "last_font": "Ink/Stitch Small Font",
+    # how many directory levels deep to search for fonts (clamped to a safe max)
+    "font_search_depth": 2,
     # lettering
     "lettering_align_text": 0,
     "lettering_trim_option": 0,

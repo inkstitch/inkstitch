@@ -6,7 +6,7 @@
 import wx
 
 from ..i18n import _
-from ..utils.cache import get_stitch_plan_cache
+from ..utils.cache import get_font_cache, get_stitch_plan_cache
 from ..utils.settings import global_settings
 
 
@@ -127,7 +127,7 @@ class PreferencesFrame(wx.Frame):
         # add space above and below to center sizer_4 vertically
         global_margin.Add((0, 20), 1, wx.EXPAND, 0)
 
-        global_grid_sizer = wx.FlexGridSizer(4, 4, 15, 10)
+        global_grid_sizer = wx.FlexGridSizer(0, 4, 15, 10)
         global_margin.Add(global_grid_sizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 20)
 
         # Default minimum jump stitch length
@@ -189,6 +189,7 @@ class PreferencesFrame(wx.Frame):
         self.stitch_plan_cache_size = wx.SpinCtrl(
             self.global_page, wx.ID_ANY,
             value=str(global_settings['cache_size']),
+            min=0, max=10000,
             style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
         )
         self.stitch_plan_cache_size.SetIncrement(10)
@@ -199,6 +200,25 @@ class PreferencesFrame(wx.Frame):
 
         self.clear_cache_button = wx.Button(self.global_page, wx.ID_ANY, _("Clear Stitch Plan Cache"))
         global_grid_sizer.Add(self.clear_cache_button, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        # Font glyph cache size
+        label_font_cache = wx.StaticText(self.global_page, wx.ID_ANY, _("Font cache size (0 to disable cache)"), style=wx.ALIGN_LEFT)
+        global_grid_sizer.Add(label_font_cache, 1, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        self.font_cache_size = wx.SpinCtrl(
+            self.global_page, wx.ID_ANY,
+            value=str(global_settings['font_cache_size']),
+            min=0, max=10000,
+            style=wx.ALIGN_RIGHT | wx.SP_ARROW_KEYS
+        )
+        self.font_cache_size.SetIncrement(10)
+        global_grid_sizer.Add(self.font_cache_size, 0, wx.ALIGN_CENTER_VERTICAL | wx.ALIGN_RIGHT, 0)
+
+        label_font_cache_mb = wx.StaticText(self.global_page, wx.ID_ANY, _("MB"))
+        global_grid_sizer.Add(label_font_cache_mb, 0, wx.ALIGN_CENTER_VERTICAL, 0)
+
+        self.clear_font_cache_button = wx.Button(self.global_page, wx.ID_ANY, _("Clear Font Cache"))
+        global_grid_sizer.Add(self.clear_font_cache_button, 0, wx.ALIGN_CENTER_VERTICAL, 0)
 
         global_margin.Add((0, 0), 1, wx.EXPAND, 0)
 
@@ -231,6 +251,7 @@ class PreferencesFrame(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.set_as_default_minimum_stitch_length, self.button_2)
         self.Bind(wx.EVT_BUTTON, self.set_as_default_min_satin_stroke_width, self.button_3)
         self.Bind(wx.EVT_BUTTON, self.clear_cache, self.clear_cache_button)
+        self.Bind(wx.EVT_BUTTON, self.clear_font_cache, self.clear_font_cache_button)
         self.Bind(wx.EVT_BUTTON, self.cancel_button_clicked, self.cancel_button)
         self.Bind(wx.EVT_BUTTON, self.ok_button_clicked, self.ok_button)
 
@@ -247,6 +268,10 @@ class PreferencesFrame(wx.Frame):
         stitch_plan_cache = get_stitch_plan_cache()
         stitch_plan_cache.clear(retry=True)
 
+    def clear_font_cache(self, event):
+        font_cache = get_font_cache()
+        font_cache.clear(retry=True)
+
     def apply(self):
         metadata = self.extension.get_inkstitch_metadata()
         metadata['min_stitch_len_mm'] = self.minimum_stitch_length.GetValue()
@@ -258,6 +283,7 @@ class PreferencesFrame(wx.Frame):
         global_settings['default_collapse_len_mm'] = self.default_minimum_jump_stitch_length.GetValue()
         global_settings['default_min_satin_stroke_width_mm'] = self.default_min_satin_stroke_width.GetValue()
         global_settings['cache_size'] = self.stitch_plan_cache_size.GetValue()
+        global_settings['font_cache_size'] = self.font_cache_size.GetValue()
 
         # cache size may have changed
         stitch_plan_cache = get_stitch_plan_cache()
@@ -265,6 +291,12 @@ class PreferencesFrame(wx.Frame):
         stitch_plan_cache.cull()
         if not global_settings['cache_size']:
             stitch_plan_cache.clear(retry=True)
+
+        font_cache = get_font_cache()
+        font_cache.size_limit = int(global_settings['font_cache_size'] * 1024 * 1024)
+        font_cache.cull()
+        if not global_settings['font_cache_size']:
+            font_cache.clear(retry=True)
 
     def cancel_button_clicked(self, event):
         self.Destroy()
