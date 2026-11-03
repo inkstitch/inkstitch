@@ -1,4 +1,8 @@
 from lib.gui.simulator.simulator_renderer import PreviewRenderer
+from lib.gui.simulator.simulator_panel import SimulatorPanel
+from lib.exceptions import InkstitchException
+from lib.i18n import _
+from lib.stitch_plan import stitch_groups_to_stitch_plan
 from lib.utils.threading import check_stop_flag
 from lib.stitch_plan import StitchPlan
 
@@ -6,8 +10,8 @@ from typing import Iterator
 from threading import Event
 
 from unittest.mock import MagicMock, patch, sentinel
-import time
 import pytest
+import wx
 
 
 def test_check_stop_flag_on_main():
@@ -37,7 +41,7 @@ def test_basic(call_after_called, call_after_mock):
     def render_plan() -> StitchPlan:
         return sentinel.rendered_plan
 
-    def on_rendered(plan: StitchPlan | None) -> None:
+    def on_rendered(plan: StitchPlan | None, error: BaseException | None) -> None:
         pass
 
     # Exercise
@@ -46,7 +50,7 @@ def test_basic(call_after_called, call_after_mock):
 
     # Verify
     assert call_after_called.wait(10), "wx.call_after was not invoked"
-    call_after_mock.assert_called_once_with(on_rendered, sentinel.rendered_plan)
+    call_after_mock.assert_called_once_with(on_rendered, sentinel.rendered_plan, None)
 
 
 def test_no_on_render_on_cancel(call_after_called, call_after_mock):
@@ -61,7 +65,7 @@ def test_no_on_render_on_cancel(call_after_called, call_after_mock):
 
         return sentinel.rendered_plan
 
-    def on_rendered(plan: StitchPlan | None) -> None:
+    def on_rendered(plan: StitchPlan | None, error: BaseException | None) -> None:
         pass
 
     # Exercise
@@ -77,25 +81,53 @@ def test_no_on_render_on_cancel(call_after_called, call_after_mock):
 
     # Verify, should have only been called once.
     assert call_after_called.wait(10), "wx.call_after was not invoked"
-    call_after_mock.assert_called_once_with(on_rendered, sentinel.rendered_plan)
+    call_after_mock.assert_called_once_with(on_rendered, sentinel.rendered_plan, None)
 
 
-def test_exception_does_not_loop(call_after_mock):
-    """ PreviewRenderer does not retry when the render function throws. """
+def test_exception_reports_error_without_looping(call_after_called, call_after_mock):
+    """ PreviewRenderer reports render failures on the main thread without retrying. """
     render_plan = MagicMock()
-    render_plan.side_effect = RuntimeError("Oops")
+    error = InkstitchException("There is no selected stitchable element.")
+    render_plan.side_effect = error
 
-    def on_rendered(plan: StitchPlan | None) -> None:
+    def on_rendered(plan: StitchPlan | None, render_error: BaseException | None) -> None:
         pass
 
     # Exercise
-    renderer = PreviewRenderer(render_stitch_plan=render_plan, rendering_completed=on_rendered)
-    renderer.update()
+    with patch('lib.gui.simulator.simulator_renderer.errormsg') as error_output:
+        renderer = PreviewRenderer(render_stitch_plan=render_plan, rendering_completed=on_rendered)
+        renderer.update()
 
-    # Wait a moment. Not ideal but we can't otherwise prove a negative.
-    time.sleep(1)
+        assert call_after_called.wait(10), "wx.call_after was not invoked"
+        error_output.assert_called_once_with(str(error))
 
     # Verify - Render should have only been called once and not re-run
     render_plan.assert_called_once()
-    # ...and wx.call_after should never have neen invoked
-    call_after_mock.assert_not_called()
+    call_after_mock.assert_called_once_with(on_rendered, None, error)
+
+
+def test_render_error_clears_loading_and_shows_dialog():
+    panel = MagicMock()
+    error_message = _("There is no selected stitchable element. Please run "
+                      "Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout.")
+    error = InkstitchException(error_message)
+
+    with patch('wx.MessageBox') as message_box:
+        SimulatorPanel.on_stitch_plan_rendered(panel, None, error)
+
+    panel.dp.set_loading.assert_called_once_with(False)
+    message_box.assert_called_once_with(
+        error_message,
+        'Simulator rendering failed',
+        wx.OK | wx.ICON_ERROR
+    )
+
+
+def test_empty_stitch_groups_raise_user_facing_error():
+    expected_error = _("There is no selected stitchable element. Please run "
+                       "Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout.")
+
+    with pytest.raises(InkstitchException) as error:
+        stitch_groups_to_stitch_plan([])
+
+    assert str(error.value) == expected_error

@@ -3,11 +3,9 @@
 # Copyright (c) 2010 Authors
 # Licensed under the GNU GPL version 3.0 or later.  See the file LICENSE for details.
 
-from sys import exit
 from typing import List
 
-from inkex import errormsg
-
+from ..exceptions import InkstitchException
 from ..i18n import _
 from ..svg import PIXELS_PER_MM
 from ..utils.geometry import Point
@@ -25,9 +23,8 @@ def stitch_groups_to_stitch_plan(stitch_groups, collapse_len=None, min_stitch_le
     """
 
     if not stitch_groups:
-        errormsg(_("There is no selected stitchable element. Please run "
-                   "Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."))
-        exit(1)
+        raise InkstitchException(_("There is no selected stitchable element. Please run "
+                                   "Extensions > Ink/Stitch > Troubleshoot > Troubleshoot objects in case you have expected a stitchout."))
 
     if collapse_len is None:
         collapse_len = 3.0
