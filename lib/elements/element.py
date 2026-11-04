@@ -814,8 +814,8 @@ class EmbroideryElement(object):
         debug.log(f"ending {self.node.get('id')} {self.node.get(INKSCAPE_LABEL)}")
         return stitch_groups
 
-    def next_stitch(self, next_element: Optional[EmbroideryElement]) -> Optional[shapely.Point]:
-        next_stitch: Optional[shapely.Point] = None
+    def next_stitch(self, next_element: EmbroideryElement | None) -> shapely.Point | None:
+        next_stitch: shapely.Point | None = None
         if next_element is not None and self.uses_next_element():
             # in fact we really only try an approximation to the next stitch
             if next_element.uses_previous_stitch():

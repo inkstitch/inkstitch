@@ -1088,12 +1088,12 @@ class SatinColumn(EmbroideryElement):
         top_layer_stitch_groups = [stitch_group1, stitch_group2]
         return top_layer_stitch_groups
 
-    def inset_short_stitches_sawtooth(self, pairs):
+    def inset_short_stitches_sawtooth(self, pairs: list[tuple[Point, Point]]) -> list[tuple[Point, Point]]:
         max_stitch_length = None if self.random_split_phase else self.max_stitch_length_px
         if not self.short_stitch_distance or not len(self.short_stitch_inset):
             return pairs
 
-        shortened = []
+        shortened: list[tuple[Point, Point]] = []
         last_a = None
         last_b = None
         inset_a_index = 0
@@ -1101,11 +1101,12 @@ class SatinColumn(EmbroideryElement):
         for a, b in pairs:
             a_offset_px, last_a, inset_a_index = self._get_offset_px(a, b, last_a, inset_a_index, max_stitch_length)
             b_offset_px, last_b, inset_b_index = self._get_offset_px(b, a, last_b, inset_b_index, max_stitch_length)
-            shortened.append(offset_points(a, b, [a_offset_px, b_offset_px], (0, 0)))
+            shortened.append(offset_points(a, b, (a_offset_px, b_offset_px), (0, 0)))
 
         return shortened
 
-    def _get_offset_px(self, point: Point, other_point: Point, last_point: Point, inset_index: int, max_stitch_length: float):
+    def _get_offset_px(self, point: Point, other_point: Point, last_point: Point | None,
+                       inset_index: int, max_stitch_length: float | None) -> tuple[float, Point, int]:
         if inset_index >= len(self.short_stitch_inset):
             inset_index = 0
 
