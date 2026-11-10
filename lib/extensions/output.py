@@ -9,7 +9,6 @@ import tempfile
 
 from ..output import write_embroidery_file
 from ..stitch_plan import stitch_groups_to_stitch_plan
-from ..threads import ThreadCatalog
 from .base import InkstitchExtension
 
 
@@ -57,7 +56,7 @@ class Output(InkstitchExtension):
         stitch_groups = self.elements_to_stitch_groups(self.elements)
         stitch_plan = stitch_groups_to_stitch_plan(stitch_groups, collapse_len=collapse_len, disable_ties=self.settings.get('laser_mode', False),
                                                    min_stitch_len=min_stitch_len)
-        ThreadCatalog().match_and_apply_palette(stitch_plan, self.metadata['thread-palette'])
+        self.apply_thread_palette(stitch_plan)
 
         temp_file = tempfile.NamedTemporaryFile(suffix=".%s" % self.file_extension, delete=False)
 
@@ -82,3 +81,11 @@ class Output(InkstitchExtension):
 
         # don't let inkex output the SVG!
         sys.exit(0)
+
+    def apply_thread_palette(self, stitch_plan):
+        if self.settings.pop('skip_palette', False):
+            return
+
+        from ..threads import ThreadCatalog
+
+        ThreadCatalog().match_and_apply_palette(stitch_plan, self.metadata['thread-palette'])
