@@ -170,6 +170,7 @@ def configure_logging(config: dict, ini: dict, vars: dict):
 
     # After this operation, logging will be activated, so we can use the logger.
     logging.config.dictConfig(config)  # configure loggers from dict - using loglevel, logfilename
+    logging.getLogger("colormath2").setLevel(logging.WARNING)
 
     warnings_capture = config.get('warnings_capture', True)
     logging.captureWarnings(warnings_capture)  # capture warnings to log file with level WARNING

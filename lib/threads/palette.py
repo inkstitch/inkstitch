@@ -12,6 +12,25 @@ from colormath2.color_objects import LabColor, sRGBColor
 from .color import ThreadColor
 
 
+def _normalize_palette_name(name):
+    if name.lower().startswith('name: ink/stitch: '):
+        return name[18:]
+    return name
+
+
+def read_palette_name(palette_file):
+    """Read a GIMP palette's name without parsing its thread colors."""
+    with open(palette_file, encoding='utf8') as palette:
+        try:
+            if palette.readline().strip().lower() != "gimp palette":
+                return None
+            name = palette.readline().strip()
+        except UnicodeDecodeError:
+            return None
+
+    return _normalize_palette_name(name)
+
+
 def compare_thread_colors(color1, color2):
     # K_L=2 indicates textiles
     return delta_e_cie1994(color1, color2, K_L=2)
@@ -52,8 +71,7 @@ class ThreadPalette(Set):
                 return
 
             self.name = palette.readline().strip()
-            if self.name.lower().startswith('name: ink/stitch: '):
-                self.name = self.name[18:]
+            self.name = _normalize_palette_name(self.name)
 
             # number of columns
             palette.readline()

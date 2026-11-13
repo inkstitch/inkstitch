@@ -6,6 +6,10 @@ from threading import Event, Thread
 
 import wx
 
+# wx submodules must first be imported on the main thread
+import wx.html  # noqa: F401
+import wx.propgrid  # noqa: F401
+
 from ...debug.debug import debug
 from ...utils.threading import ExitThread
 from ...stitch_plan import StitchPlan

@@ -8,7 +8,36 @@ from collections.abc import Sequence
 from glob import glob
 
 from ..utils import get_bundled_dir, guess_inkscape_config_path
-from .palette import ThreadPalette
+from .palette import ThreadPalette, read_palette_name
+
+
+def get_palette_paths():
+    """Return user palettes before bundled palettes to preserve precedence."""
+    return [
+        os.path.join(guess_inkscape_config_path(), 'palettes'),
+        get_bundled_dir('palettes'),
+    ]
+
+
+def load_palette_by_name(name):
+    seen = set()
+    for path in get_palette_paths():
+        for palette_file in glob(os.path.join(path, 'InkStitch*.gpl')):
+            palette_basename = os.path.basename(palette_file)
+            if palette_basename in seen:
+                continue
+
+            palette_name = read_palette_name(palette_file)
+            if palette_name is None:
+                continue
+            seen.add(palette_basename)
+
+            if palette_name == name:
+                palette = ThreadPalette(palette_file)
+                if palette.is_gimp_palette:
+                    return palette
+
+    return None
 
 
 class _ThreadCatalog(Sequence):
@@ -16,18 +45,14 @@ class _ThreadCatalog(Sequence):
 
     def __init__(self):
         self.palettes = []
-        self.load_palettes(self.get_palettes_paths())
+        self._palettes_loaded = False
 
     def get_palettes_paths(self):
-        """Creates a list containing the path of two directories:
-        1. Palette directory of Inkscape
-        2. Palette directory of inkstitch
-        """
-        path = [os.path.join(guess_inkscape_config_path(), 'palettes')]
-        inkstitch_path = get_bundled_dir('palettes')
-        path.append(inkstitch_path)
+        return get_palette_paths()
 
-        return path
+    def _ensure_palettes_loaded(self):
+        if not self._palettes_loaded:
+            self.load_palettes(self.get_palettes_paths())
 
     def load_palettes(self, paths):
         palettes = []
@@ -38,16 +63,20 @@ class _ThreadCatalog(Sequence):
                     palette = ThreadPalette(palette_file)
                     if not palette.is_gimp_palette:
                         continue
-                    self.palettes.append(ThreadPalette(palette_file))
+                    self.palettes.append(palette)
                     palettes.append(palette_basename)
+        self._palettes_loaded = True
 
     def palette_names(self):
+        self._ensure_palettes_loaded()
         return list(sorted(palette.name for palette in self))
 
     def __getitem__(self, item):
+        self._ensure_palettes_loaded()
         return self.palettes[item]
 
     def __len__(self):
+        self._ensure_palettes_loaded()
         return len(self.palettes)
 
     def _num_exact_color_matches(self, palette, threads):
@@ -74,6 +103,7 @@ class _ThreadCatalog(Sequence):
         chosen if more than 80% of the thread colors in the stitch plan are
         exact matches for threads in the palette.
         """
+        self._ensure_palettes_loaded()
         if not self.palettes:
             return None
 
@@ -104,6 +134,9 @@ class _ThreadCatalog(Sequence):
             color_block.color.description = nearest.description
 
     def get_palette_by_name(self, name):
+        if not self._palettes_loaded:
+            return load_palette_by_name(name)
+
         for palette in self:
             if palette.name == name:
                 return palette
