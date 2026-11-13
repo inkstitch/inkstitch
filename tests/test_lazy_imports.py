@@ -2,15 +2,15 @@ import subprocess
 import sys
 
 
-def test_importing_output_does_not_import_other_extensions():
+def test_simulator_renderer_preloads_wx_submodules():
+    # wxWidgets C submodules register the importing thread as the main thread on
+    # their first import, so they have to be loaded before the render thread
+    # starts. Otherwise wxWidgets rejects timers on the actual main thread.
     code = (
-        "import importlib, sys; "
-        "extensions = importlib.import_module('lib.extensions'); "
-        "assert 'lib.extensions.print_pdf' not in sys.modules; "
-        "assert extensions.Output.__name__ == 'Output'; "
-        "assert 'lib.extensions.output' in sys.modules; "
-        "assert 'lib.extensions.print_pdf' not in sys.modules; "
-        "assert 'lib.threads.catalog' not in sys.modules"
+        "import sys; "
+        "import lib.gui.simulator.simulator_renderer; "
+        "assert 'wx.html' in sys.modules; "
+        "assert 'wx.propgrid' in sys.modules"
     )
     subprocess.run([sys.executable, "-c", code], check=True)
 
